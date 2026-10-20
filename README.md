@@ -20,16 +20,16 @@
   - **III Anno** (17 incantesimi): *Elementi di Gelo, Trasfigurazione Totale & Liber III (Glacius, Riddikulus, Verto, Adultero, Plasma, Ascendio, Immobulus...)*
   - **IV Anno** (24 incantesimi): *Tattiche di Difesa, Marchiatura, Medimagia & Liber IV (Bombarda, Stupeficium Avanzato, Aguamenti, Episkey, Phi Porta, Dominum, Significo, Plansigno, Fersigno, Detecto...)*
   - **V Anno** (13 incantesimi): *Preparazione ai G.U.F.O., Evanescenza & Liber V (Confringo, Reducto, Evanesco, Ivanesco, Phi Revelio, Colovaria, Alarte Ascendare...)*
-  - **VI Anno — Sesto Anno** (39 incantesimi):
+  - **VI Anno — Sesto Anno** (40 incantesimi):
     - *Incantesimi*: Confundo, Deletrius, Descendo, Silencio, Incantesimo Rallegrante, Carpe Retractum, Obliterato.
-    - *Trasfigurazione Pratica & Circolare*: Crinus Muto, Pullus, Densaugeo, Paperate, Piscofors, Entomorphis, Furitum, Geminio, Inflatus, Obstringo Circulum.
+    - *Trasfigurazione (Pag. 83)*: Incantesimo di Estensione Irriconoscibile (*Adduco Maxima* - Pag. 83), Trasfigurazione Circolare (*Obstringo Circulum*), Crinus Muto, Pullus, Densaugeo, Paperate, Piscofors, Entomorphis, Furitum, Geminio, Inflatus.
     - *D.C.A.O. ("Maledictio" - Y. I. Mortem)*: Titillando, Exulcero, Monstrum, Dismundo, Locomotor Mortis, Locomotor Wibbly, Maledizione di Dolohov (*Dolohoferio*), Maledizione Dissanguante (*Sectumsempra*), Canto Curativo (*Vulnera Sanentur*), Maledizione delle Caccole (*Mucus ad Nauseam*), Maledizione Balbuziente (*Balbutio*), Maledizione Flagrante (*Flagrante*), Maledizione Languelingua, Morsmordre [Teoria], Incanto Patronus (*Expecto Patronum*), Sortilegio dell'Infelicità Eterna, Demone Stalker (*Stalker Convocatus*), Muffliato.
     - *Aritmanzia ("Codex Arithmantiae: Liber Sextus - Spazio e Traslazione" - Z. & G. Hawstein)*: Emineo, Emineo Puteus, Transatio Objecto.
     - *Trasfigurazione Correttiva*: Reparifarge.
-  - **VII Anno — Settimo Anno** (26 incantesimi):
-    - *Incantesimi (Programma Ufficiale & Sortilegi)*: Incantesimo Fidelius (*Fidelius*), Incantesimo Proteus (*Proteus*), Cave Inimicum (*Cave Inimicum*), Prior Incantatio (*Prior Incantatem*), Incantesimo Fendi-Fiamma (*Partis Temporus*), Passaporta (*Portus*), Incantesimo Estensivo Irriconoscibile (*Adduco Maxima*), Cancellazione della Memoria (*Obliviate*), Protezione Totale di Zona (*Protego Totalum*).
+  - **VII Anno — Settimo Anno** (25 incantesimi):
+    - *Incantesimi (Programma Ufficiale & Sortilegi)*: Incantesimo Fidelius (*Fidelius*), Incantesimo Proteus (*Proteus*), Cave Inimicum (*Cave Inimicum*), Prior Incantatio (*Prior Incantatem*), Incantesimo Fendi-Fiamma (*Partis Temporus*), Passaporta (*Portus*), Cancellazione della Memoria (*Obliviate*), Protezione Totale di Zona (*Protego Totalum*).
     - *D.C.A.O. Superiore ("Oltre il Mago" - Y. I. Mortem)*: Anatema che Uccide (*Avada Kedavra*), Maledizione Cruciatus (*Crucio*), Maledizione Imperius (*Imperio*), Maledizione della Fiamma Mutaforma (*Fiendfyre* / Ardemonio), Incanto Patronus Messaggero.
-    - *Trasfigurazione Teoria Animagia*: Animaleus Nobodyx, Homine Reverto.
+    - *Trasfigurazione Teoria Animagia (Pag. 108)*: Animaleus Nobodyx (Pag. 119), Pozione/Controincanto Homine Reverto (Pag. 122).
     - *Aritmanzia ("Codex Arithmantiae: Liber Septimus - Rituali, Sigilli e Trappole" - Z. & G. Hawstein)*: Nodum Solvo, Abscondas, Fermo, In Fine Laqueo, Quae Reversa, Deminatio Gravitas, Magnes Lathos Addicis, Protegis Hoc Incantementum, Rotas Sator, Capio Memoriam.
 
 - **⚔️ Filtro e Valutazione Tattica per il Duello Magico**:

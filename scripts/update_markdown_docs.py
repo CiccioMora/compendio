@@ -31,8 +31,8 @@ year_titles = {
     3: ("III ANNO — GELO, TRASFIGURAZIONE TOTALE & LIBER III", "Magia del ghiaccio, trasfigurazione inanimati-animali e formule elementali di Terra e Fuoco (17 formule)."),
     4: ("IV ANNO — TATTICHE DI DIFESA, MARCHIATURA, MEDIMAGIA & LIBER IV", "Sortilegi da breccia, marchiatura e diagnostica trasfigurativa, varchi proporzionali aurei e difese statiche (24 formule)."),
     5: ("V ANNO — PREPARAZIONE AI G.U.F.O., EVANESCENZA & LIBER V", "Sortilegi esplosivi, formule di evanescenza per inanimati e viventi e crittografia celante aurea (13 formule)."),
-    6: ("VI ANNO (SESTO ANNO) — MALEDIZIONI, TRASFIGURAZIONE CIRCOLARE, INCANTESIMI & LIBER VI", "Didattica avanzata di Sesto Anno: Sortilegi e Incantesimi Non-Verbali, Trasfigurazione pratica e circolare intermittente, D.C.A.O. e traslazione spaziale aritmantica (39 formule)."),
-    7: ("VII ANNO (SETTIMO ANNO) — INCANTESIMI SUPERIORI, D.C.A.O., ANIMAGIA & LIBER VII", "Didattica superiore di Settimo Anno: Incantesimi stazionari ed ermetici (Fidelius, Proteus, Cave Inimicum, Prior Incantatio, Passaporta), D.C.A.O. superiore, teoria dell'Animagia e rituali di sigillo permanente (26 formule).")
+    6: ("VI ANNO (SESTO ANNO) — MALEDIZIONI, TRASFIGURAZIONE (PAG. 83), INCANTESIMI & LIBER VI", "Didattica avanzata di Sesto Anno: Estensione Irriconoscibile (Pag. 83), Trasfigurazione pratica & circolare, Incantesimi Non-Verbali, D.C.A.O. e traslazione spaziale aritmantica (40 formule)."),
+    7: ("VII ANNO (SETTIMO ANNO) — INCANTESIMI SUPERIORI, D.C.A.O., ANIMAGIA (PAG. 108) & LIBER VII", "Didattica superiore di Settimo Anno: Incantesimi stazionari ed ermetici (Fidelius, Proteus, Cave Inimicum, Prior Incantatio, Passaporta), D.C.A.O. superiore, teoria dell'Animagia (Pag. 108) e rituali di sigillo permanente (25 formule).")
 }
 
 year_order = [1, 2, 3, 4, 5, 6, 7]

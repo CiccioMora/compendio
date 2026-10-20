@@ -1,5 +1,5 @@
 // spellsData.js - Archivio Completo dei 154 Incantesimi suddiviso per Anni (I - VII Anno)
-// Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR e Trattati Didattici (Liber I-VII)
+// Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR, Codex Arithmantiae e Manuali Docenti
 
 const SPELLS_DATA = [
   {
@@ -2292,6 +2292,27 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 38 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volta/e."
   },
   {
+    "id": "adduco-maxima",
+    "anno": 6,
+    "annoLabel": "VI Anno",
+    "nome": "Incantesimo di Estensione Irriconoscibile (Adduco Maxima)",
+    "formula": "Adduco Maxima",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Spaziale Avanzata",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello. Crea uno spazio interno dimensionalmente espanso all'interno di un contenitore (es. borse, tende, stanze).",
+    "movimento": "Insieme di più circonferenze concentriche che richiamano l'espansione molecolare interna.",
+    "movimentoSvg": "M 75,75 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0 M 75,75 m -25,0 a 25,25 0 1,1 50,0 a 25,25 0 1,1 -50,0",
+    "descrizione": "Apre il programma didattico di VI Anno nel Manuale di Trasfigurazione (Pagina 83) e trattato nella teoria dei Trasporti di Incantesimi. Sofisticata distorsione dello spazio-tempo: genera una piega dimensionale interna permanente lasciando intatto il perimetro visibile esterno (es. Stanza delle Necessità o borse senza fondo).",
+    "etimologia": "Dal latino adducere (aggiungere, dilatare) e maxima.",
+    "valenza": 1,
+    "sommaLettere": 46,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+  },
+  {
     "id": "inflatus",
     "anno": 6,
     "annoLabel": "VI Anno",
@@ -2941,27 +2962,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
     "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volta/e."
-  },
-  {
-    "id": "adduco-maxima",
-    "anno": 7,
-    "annoLabel": "VII Anno",
-    "nome": "Incantesimo di Estensione Irriconoscibile (Adduco Maxima)",
-    "formula": "Adduco Maxima",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Spaziale Avanzata",
-    "inDuello": false,
-    "duelloNote": "Non utilizzabile in duello. Crea uno spazio interno dimensionalmente espanso all'interno di un contenitore (es. borse, tende, stanze).",
-    "movimento": "Insieme di più circonferenze concentriche che richiamano l'espansione molecolare interna.",
-    "movimentoSvg": "M 75,75 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0 M 75,75 m -25,0 a 25,25 0 1,1 50,0 a 25,25 0 1,1 -50,0",
-    "descrizione": "Incluso nel programma di VII Anno (Incantesimi - Incantesimo Estensivo Irriconoscibile) e studiato come teoria in Trasfigurazione di VI Anno. Sofisticata distorsione dello spazio-tempo: genera una piega dimensionale interna permanente lasciando intatto il perimetro visibile esterno (es. Stanza delle Necessità o borse senza fondo).",
-    "etimologia": "Dal latino adducere (aggiungere, dilatare) e maxima.",
-    "valenza": 1,
-    "sommaLettere": 46,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "fidelius",
