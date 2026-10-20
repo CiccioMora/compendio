@@ -97,9 +97,7 @@ git commit -m "feat: rilascio iniziale del portale della conoscenza degli incant
 git branch -M main
 
 # Aggiungi l'origine remota (sostituisci con il tuo username GitHub)
-git remote add origin https://github.com/<TUO-USERNAME>/portale-incantesimi.git
-
-# Effettua il push
+git remote add origin https://github.com/CiccioMora/compendio.git
 git push -u origin main
 ```
 
@@ -111,7 +109,7 @@ git push -u origin main
    - Seleziona la cartella: `/ (root)`
 3. Clicca su **Save**.
 4. Dopo circa 1-2 minuti, il tuo portale sarà accessibile pubblicamente all'indirizzo:
-   `https://<TUO-USERNAME>.github.io/portale-incantesimi/`
+   👉 **`https://CiccioMora.github.io/compendio/`**
 
 ---
 
@@ -120,8 +118,8 @@ git push -u origin main
 Non è richiesto alcun ambiente Node o build step:
 1. Clona il repository:
    ```bash
-   git clone https://github.com/<TUO-USERNAME>/portale-incantesimi.git
-   cd portale-incantesimi
+   git clone https://github.com/CiccioMora/compendio.git
+   cd compendio
    ```
 2. Fai doppio clic su `index.html` per aprirlo direttamente in qualsiasi browser (Google Chrome, Firefox, Safari, Edge).
 3. In alternativa, puoi utilizzare un qualsiasi server statico locale:
