@@ -8,7 +8,7 @@
 > [!IMPORTANT]
 > **Canone di Associazione Magica (Valenza & Alfabeto Runico)**:  
 > L'associazione tra le rune e gli incantesimi non deriva dalla traslitterazione casuale del nome moderno, bensì dalla rigorosa convergenza tra la **Valenza Magica dell'Incantesimo (1–9)** (calcolata con la Tavola Pitagorica della formula verbale) e la **struttura sacra dell'Alfabeto Runico (Elder Futhark)**:
-> 1. **Posizione Ordinale nell'Alfabeto Runico (1–24 ridotto a 1–9)**: la sequenza fissa e immutabile delle 24 rune consacrate nel Wyrd.
+> 1. **Posizione Ordinale nell'Alfabeto Runico (1–9 = Valenze 1–9)**: la sequenza fissa e immutabile delle prime 9 rune che corrisponde direttamente alle 9 valenze degli incantesimi (Posizione = Valenza).
 > 2. **Valore Acrofonico della Lettera Runica**: il suono/fonema primigenio impresso nel glifo ricondotto alla matrice pitagorica.
 > 3. **Le Triadi dei Triangoli di Thoot (Posizione 1–8 nei Tre Aettir)**: il vincolo di risonanza simmetrica tra *Urd*, *Verdandi* e *Skuld*.
 > 4. **Gli Elementi Fondativi del Codex Arithmantiae**: l'assegnazione rituale canonica dei quattro elementi cardine (*Acqua 1 / Laguz*, *Aria 5 / Hagalaz*, *Terra 6 / Berkana*, *Fuoco 8 / Dagaz*).
@@ -210,43 +210,43 @@ $$\text{Incantesimo} \xrightarrow{\text{Formula verbale}} \text{Valenza Magica }
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
 │              MATRICE SINOTTICA: VALENZA DELL'INCANTESIMO ⟷ ALFABETO RUNICO                       │
 ├─────────┬──────────────────────┬──────────────────────┬─────────────┬──────────┬─────────────────┤
-│ Valenza │ Rune Futhark Ordinali│ Rune Acrofoniche     │ Elemento    │ Opposto  │ Esempi Incanti  │
-│ Magica  │ (Posizione 1–24)     │ (Fonema Pitagorico)  │ Rituale     │ (Simm. 5)│ Associati       │
+│ Valenza │ Runa Futhark Ordinale│ Rune Acrofoniche     │ Elemento    │ Opposto  │ Esempi Incanti  │
+│ Magica  │ (Posizione 1–9)      │ (Fonema Pitagorico)  │ Rituale     │ (Simm. 5)│ Associati       │
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **1**   │ ᚠ Fehu (1ª)          │ ᚨ Ansuz (A = 1)      │ 🌊 Acqua    │ **9**    │ Aguamenti (1),   │
-│         │ ᚾ Nauthiz (10ª)      │ ᛃ Jera (J = 1)       │ (*Coerceo / │          │ Reparo (1),     │
-│         │ ᛖ Ehwaz (19ª)        │ ᛋ Sowilo (S = 1)     │  Laguz*)    │          │ Signo, Colligo  │
+│ **1**   │ ᚠ Fehu (Pos. 1ª)     │ ᚨ Ansuz (A = 1)      │ 🌊 Acqua    │ **9**    │ Aguamenti (1),   │
+│         │                      │ ᛃ Jera (J = 1)       │ (*Coerceo / │          │ Reparo (1),     │
+│         │                      │ ᛋ Sowilo (S = 1)     │  Laguz*)    │          │ Signo, Colligo  │
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **2**   │ ᚢ Uruz (2ª)          │ ᛒ Berkana (B = 2)    │ —           │ **8**    │ Expelliarmus (2)│
-│         │ ᛁ Isa (11ª)          │ ᚲ Kenaz (K = 2)      │             │          │ Innerva (2),    │
-│         │ ᛗ Mannaz (20ª)       │ ᛏ Teiwaz (T = 2)     │             │          │ Fumos, Riddikul.│
+│ **2**   │ ᚢ Uruz (Pos. 2ª)     │ ᛒ Berkana (B = 2)    │ —           │ **8**    │ Expelliarmus (2)│
+│         │                      │ ᚲ Kenaz (K = 2)      │             │          │ Innerva (2),    │
+│         │                      │ ᛏ Teiwaz (T = 2)     │             │          │ Fumos, Riddikul.│
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **3**   │ ᚦ Thurisaz (3ª)      │ ᚲ Kenaz (C = 3)      │ —           │ **7**    │ Arresto Moment. │
-│         │ ᛃ Jera (12ª)         │ ᛚ Laguz (L = 3)      │             │          │ Orchideus (3),  │
-│         │ ᛚ Laguz (21ª)        │ ᚢ Uruz (U = 3)       │             │          │ Incipio, Iungo  │
+│ **3**   │ ᚦ Thurisaz (Pos. 3ª) │ ᚲ Kenaz (C = 3)      │ —           │ **7**    │ Arresto Moment. │
+│         │                      │ ᛚ Laguz (L = 3)      │             │          │ Orchideus (3),  │
+│         │                      │ ᚢ Uruz (U = 3)       │             │          │ Incipio, Iungo  │
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **4**   │ ᚨ Ansuz (4ª)         │ ᛞ Dagaz (D = 4)      │ —           │ **6**    │ Liberacorpus (4)│
-│         │ ᛇ Eihwaz (13ª)       │ ᛗ Mannaz (M = 4)     │             │          │ Diffindo (4),   │
-│         │ ᛜ Inguz (22ª)        │ ᚹ Wunjo (V = 4)      │             │          │ Persigno, Stigma│
+│ **4**   │ ᚨ Ansuz (Pos. 4ª)    │ ᛞ Dagaz (D = 4)      │ —           │ **6**    │ Liberacorpus (4)│
+│         │                      │ ᛗ Mannaz (M = 4)     │             │          │ Diffindo (4),   │
+│         │                      │ ᚹ Wunjo (V = 4)      │             │          │ Persigno, Stigma│
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **5**   │ ᚱ Raido (5ª)         │ ᛖ Ehwaz (E = 5)      │ 🌪️ Aria     │ **5**    │ Levicorpus (5), │
-│         │ ᛈ Perthr (14ª)       │ ᚾ Nauthiz (N = 5)    │ (*Finge /   │          │ Immobilus (5),  │
-│         │ ᛟ Othila (23ª)       │ ᚹ Wunjo (W = 5)      │  Hagalaz*)  │          │ Deleo, Dominium │
+│ **5**   │ ᚱ Raido (Pos. 5ª)    │ ᛖ Ehwaz (E = 5)      │ 🌪️ Aria     │ **5**    │ Levicorpus (5), │
+│         │                      │ ᚾ Nauthiz (N = 5)    │ (*Finge /   │          │ Immobilus (5),  │
+│         │                      │ ᚹ Wunjo (W = 5)      │  Hagalaz*)  │          │ Deleo, Dominium │
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **6**   │ ᚲ Kenaz (6ª)         │ ᚠ Fehu (F = 6)       │ 🌿 Terra    │ **4**    │ Protego (6),    │
-│         │ ᛉ Algiz (15ª)        │ ᛟ Othila (O = 6)     │ (*Adultero /│          │ Verdimillious (6│
-│         │ ᛞ Dagaz (24ª)        │                      │  Berkana*)  │          │ Surge et expandi│
+│ **6**   │ ᚲ Kenaz (Pos. 6ª)    │ ᚠ Fehu (F = 6)       │ 🌿 Terra    │ **4**    │ Protego (6),    │
+│         │                      │ ᛟ Othila (O = 6)     │ (*Adultero /│          │ Verdimillious (6│
+│         │                      │                      │  Berkana*)  │          │ Surge et expandi│
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **7**   │ ᚷ Gebo (7ª)          │ ᚷ Gebo (G = 7)       │ —           │ **3**    │ Stupeficium (7),│
-│         │ ᛋ Sowilo (16ª)       │ ᛈ Perthr (P = 7)     │             │          │ Vulnera Sanentur│
+│ **7**   │ ᚷ Gebo (Pos. 7ª)     │ ᚷ Gebo (G = 7)       │ —           │ **3**    │ Stupeficium (7),│
+│         │                      │ ᛈ Perthr (P = 7)     │             │          │ Vulnera Sanentur│
 │         │                      │ ᛃ Jera (Y = 7)       │             │          │ Exsequor, Inveni│
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **8**   │ ᚹ Wunjo (8ª)         │ ᚺ Hagalaz (H = 8)    │ 🔥 Fuoco    │ **2**    │ Incendio (8),   │
-│         │ ᛏ Teiwaz (17ª)       │ ᛉ Algiz (Z = 8)      │ (*Plasma /  │          │ Lumos (8),      │
+│ **8**   │ ᚹ Wunjo (Pos. 8ª)    │ ᚺ Hagalaz (H = 8)    │ 🔥 Fuoco    │ **2**    │ Incendio (8),   │
+│         │                      │ ᛉ Algiz (Z = 8)      │ (*Plasma /  │          │ Lumos (8),      │
 │         │                      │                      │  Dagaz*)    │          │ Alohomora (8)   │
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **9**   │ ᚺ Hagalaz (9ª)       │ ᛁ Isa (I = 9)        │ —           │ **1**    │ Flipendo (9),   │
-│         │ ᛒ Berkana (18ª)      │ ᚱ Raido (R = 9)      │             │          │ Petrificus (9), │
+│ **9**   │ ᚺ Hagalaz (Pos. 9ª)  │ ᛁ Isa (I = 9)        │ —           │ **1**    │ Flipendo (9),   │
+│         │                      │ ᚱ Raido (R = 9)      │             │          │ Petrificus (9), │
 │         │                      │ ᛜ Inguz (Ing = 9)    │             │          │ Glacius, Compos.│
 └─────────┴──────────────────────┴──────────────────────┴─────────────┴──────────┴─────────────────┘
 ```

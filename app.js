@@ -450,7 +450,7 @@
         modalRunePos.textContent = `Valenza ${spell.valenza}`;
         modalRuneBox.innerHTML = spell.isRune
           ? `<strong>Runa Primaria dell'Alfabeto:</strong> ${spell.nome} (${spell.aett})<br><span class="text-xs text-amber-200/90">Incantesimi in risonanza: ${spell.incantesimiAssociati || spell.runeAssociate}</span>`
-          : `<strong>Rune dell'Alfabeto Associate:</strong> <span class="text-amber-300">${spell.runeAssociate || "—"}</span>`;
+          : `<strong>Runa dell'Alfabeto Associata:</strong> <span class="text-amber-300">${spell.runeAssociate || "—"}</span>`;
       }
 
       // Configura il tracciato del gesto
@@ -601,15 +601,15 @@
     };
 
     const VALENCE_RUNES_MAP = {
-      1: "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
-      2: "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
-      3: "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
-      4: "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)",
-      5: "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
-      6: "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
-      7: "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)",
-      8: "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)",
-      9: "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
+      1: "ᚠ Fehu (Pos. 1ª)",
+      2: "ᚢ Uruz (Pos. 2ª)",
+      3: "ᚦ Thurisaz (Pos. 3ª)",
+      4: "ᚨ Ansuz (Pos. 4ª)",
+      5: "ᚱ Raido (Pos. 5ª)",
+      6: "ᚲ Kenaz (Pos. 6ª)",
+      7: "ᚷ Gebo (Pos. 7ª)",
+      8: "ᚹ Wunjo (Pos. 8ª)",
+      9: "ᚺ Hagalaz (Pos. 9ª)"
     };
 
     // Calculator Tool Logic

@@ -261,7 +261,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 
 ## 2. Tavola Generale dei {total_entries} Incantesimi e Rune
 
-| Anno | Nome Incanto | Formula | Valenza | Opposto | Tipologia | Duello | Rune Associate |
+| Anno | Nome Incanto | Formula | Valenza | Opposto | Tipologia | Duello | Runa Associata |
 |:---:|---|---|:---:|:---:|---|:---:|---|
 """ + "\n".join(table_rows) + "\n\n"
 
