@@ -322,27 +322,133 @@
           : `<strong>Rune dell'Alfabeto Associate:</strong> <span class="text-amber-300">${spell.runeAssociate || "—"}</span>`;
       }
 
-      // Set Wand SVG Path & trigger animation
-      wandPathElement.setAttribute("d", spell.movimentoSvg || "M 30,75 L 120,75");
-      animateWandPath();
+      // Configura il tracciato del gesto
+      const pathData = spell.movimentoSvg || "M 30,75 L 120,75";
+      wandPathElement.setAttribute("d", pathData);
+      const guidePath = document.getElementById("wandGuidePath");
+      if (guidePath) guidePath.setAttribute("d", pathData);
 
-      // Show modal
+      // Mostra prima il modale affinché le dimensioni e il layout siano attivi
       spellModal.classList.remove("hidden");
       setTimeout(() => {
         spellModal.classList.remove("opacity-0");
         modalCard.classList.remove("scale-95");
-      }, 10);
+        
+        // Avvia l'animazione con una breve pausa per sincronizzarsi con l'apertura
+        setTimeout(() => {
+          animateWandPath();
+        }, 120);
+      }, 15);
     };
 
+    let wandAnimId = null;
+
     function animateWandPath() {
-      wandPathElement.classList.remove("wand-path-anim");
-      void wandPathElement.offsetWidth; // trigger reflow
-      wandPathElement.classList.add("wand-path-anim");
+      if (!wandPathElement) return;
+
+      // Cancella eventuale animazione precedente in corso
+      if (wandAnimId) {
+        cancelAnimationFrame(wandAnimId);
+        wandAnimId = null;
+      }
+
+      const spark = document.getElementById("wandSpark");
+      const guidePath = document.getElementById("wandGuidePath");
+      const d = wandPathElement.getAttribute("d");
+
+      if (!d || d.trim() === "") {
+        if (spark) spark.style.opacity = "0";
+        return;
+      }
+
+      if (guidePath) guidePath.setAttribute("d", d);
+
+      // Calcola la lunghezza esatta del tracciato
+      let totalLen = 0;
+      try {
+        totalLen = wandPathElement.getTotalLength();
+      } catch (err) {
+        totalLen = 220;
+      }
+
+      if (!totalLen || totalLen <= 0 || isNaN(totalLen)) {
+        totalLen = 220;
+      }
+
+      // Imposta stroke-dasharray esattamente sulla lunghezza reale
+      wandPathElement.style.strokeDasharray = `${totalLen} ${totalLen}`;
+      wandPathElement.style.strokeDashoffset = `${totalLen}`;
+
+      // Posizione iniziale della scintilla
+      let startPoint = { x: 75, y: 75 };
+      try {
+        startPoint = wandPathElement.getPointAtLength(0);
+      } catch (e) {}
+
+      if (spark) {
+        spark.setAttribute("cx", startPoint.x);
+        spark.setAttribute("cy", startPoint.y);
+        spark.style.transition = "none";
+        spark.style.opacity = "1";
+        spark.setAttribute("r", "6");
+      }
+
+      // Feedback visivo sul pulsante Anima Gesto
+      if (replayWandAnimBtn) {
+        replayWandAnimBtn.classList.add("ring-2", "ring-amber-400", "bg-amber-500/30");
+      }
+
+      // Durata fluida proporzionata (1.2s - 1.8s)
+      const duration = Math.min(Math.max(totalLen * 5.5, 1100), 1800);
+      const startTime = performance.now();
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Curva di accelerazione/decelerazione cubica fluida
+        const ease = progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+        const currentLen = ease * totalLen;
+        wandPathElement.style.strokeDashoffset = `${Math.max(0, totalLen - currentLen)}`;
+
+        if (spark) {
+          try {
+            const pt = wandPathElement.getPointAtLength(Math.min(currentLen, totalLen));
+            spark.setAttribute("cx", pt.x);
+            spark.setAttribute("cy", pt.y);
+          } catch (e) {}
+        }
+
+        if (progress < 1) {
+          wandAnimId = requestAnimationFrame(step);
+        } else {
+          wandAnimId = null;
+          wandPathElement.style.strokeDashoffset = "0";
+          if (spark) {
+            spark.style.transition = "opacity 0.6s ease, transform 0.3s ease";
+            spark.style.opacity = "0.75";
+          }
+          if (replayWandAnimBtn) {
+            replayWandAnimBtn.classList.remove("ring-2", "ring-amber-400", "bg-amber-500/30");
+          }
+        }
+      }
+
+      wandAnimId = requestAnimationFrame(step);
     }
 
-    replayWandAnimBtn.addEventListener("click", animateWandPath);
+    replayWandAnimBtn.addEventListener("click", () => {
+      animateWandPath();
+    });
 
     function closeModal() {
+      if (wandAnimId) {
+        cancelAnimationFrame(wandAnimId);
+        wandAnimId = null;
+      }
       spellModal.classList.add("opacity-0");
       modalCard.classList.add("scale-95");
       setTimeout(() => {

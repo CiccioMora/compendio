@@ -51,15 +51,18 @@
       animation: runeGlow 4s infinite ease-in-out;
     }
 
-    /* Wand trace stroke animation */
-    @keyframes drawPath {
-      0% { stroke-dashoffset: 1000; }
-      100% { stroke-dashoffset: 0; }
+    /* Wand trace glowing effects & spark */
+    #wandPathElement {
+      filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.7));
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
-    .wand-path-anim {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: drawPath 2.4s ease-out forwards;
+    #wandSpark {
+      filter: drop-shadow(0 0 8px #fbbf24) drop-shadow(0 0 14px rgba(245, 158, 11, 0.9));
+      pointer-events: none;
+    }
+    #replayWandAnimBtn:active {
+      transform: scale(0.96);
     }
 
     .glass-panel {

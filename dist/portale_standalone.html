@@ -65,15 +65,18 @@
       animation: runeGlow 4s infinite ease-in-out;
     }
 
-    /* Wand trace stroke animation */
-    @keyframes drawPath {
-      0% { stroke-dashoffset: 1000; }
-      100% { stroke-dashoffset: 0; }
+    /* Wand trace glowing effects & spark */
+    #wandPathElement {
+      filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.7));
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
-    .wand-path-anim {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: drawPath 2.4s ease-out forwards;
+    #wandSpark {
+      filter: drop-shadow(0 0 8px #fbbf24) drop-shadow(0 0 14px rgba(245, 158, 11, 0.9));
+      pointer-events: none;
+    }
+    #replayWandAnimBtn:active {
+      transform: scale(0.96);
     }
 
     .glass-panel {
@@ -426,14 +429,26 @@
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
             <!-- Animated SVG canvas -->
             <div class="sm:col-span-1 bg-slate-950 rounded-lg border border-amber-900/40 p-3 flex flex-col items-center justify-center relative">
-              <svg id="wandSvgCanvas" viewBox="0 0 150 150" class="w-28 h-28">
+              <svg id="wandSvgCanvas" viewBox="0 0 150 150" class="w-32 h-32">
+                <defs>
+                  <radialGradient id="sparkGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="35%" stop-color="#fef08a" />
+                    <stop offset="70%" stop-color="#f59e0b" />
+                    <stop offset="100%" stop-color="rgba(245, 158, 11, 0)" />
+                  </radialGradient>
+                </defs>
                 <!-- Grid background lines -->
                 <circle cx="75" cy="75" r="70" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
                 <circle cx="75" cy="75" r="40" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
                 <line x1="75" y1="5" x2="75" y2="145" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
                 <line x1="5" y1="75" x2="145" y2="75" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
-                <!-- Dynamic Wand Path -->
-                <path id="wandPathElement" d="" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" class="wand-path-anim" />
+                <!-- Guida semitrasparente del percorso completo -->
+                <path id="wandGuidePath" d="" fill="none" stroke="rgba(245, 158, 11, 0.15)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- Traccia dinamica animata -->
+                <path id="wandPathElement" d="" fill="none" stroke="#fbbf24" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- Scintilla della punta della bacchetta -->
+                <circle id="wandSpark" cx="75" cy="75" r="6" fill="url(#sparkGrad)" style="opacity: 0;" />
               </svg>
               <div class="text-[10px] text-slate-400 mt-1 uppercase tracking-wider">Traccia Dinamica</div>
             </div>
@@ -5028,27 +5043,133 @@ const SPELLS_DATA = [
           : `<strong>Rune dell'Alfabeto Associate:</strong> <span class="text-amber-300">${spell.runeAssociate || "—"}</span>`;
       }
 
-      // Set Wand SVG Path & trigger animation
-      wandPathElement.setAttribute("d", spell.movimentoSvg || "M 30,75 L 120,75");
-      animateWandPath();
+      // Configura il tracciato del gesto
+      const pathData = spell.movimentoSvg || "M 30,75 L 120,75";
+      wandPathElement.setAttribute("d", pathData);
+      const guidePath = document.getElementById("wandGuidePath");
+      if (guidePath) guidePath.setAttribute("d", pathData);
 
-      // Show modal
+      // Mostra prima il modale affinché le dimensioni e il layout siano attivi
       spellModal.classList.remove("hidden");
       setTimeout(() => {
         spellModal.classList.remove("opacity-0");
         modalCard.classList.remove("scale-95");
-      }, 10);
+        
+        // Avvia l'animazione con una breve pausa per sincronizzarsi con l'apertura
+        setTimeout(() => {
+          animateWandPath();
+        }, 120);
+      }, 15);
     };
 
+    let wandAnimId = null;
+
     function animateWandPath() {
-      wandPathElement.classList.remove("wand-path-anim");
-      void wandPathElement.offsetWidth; // trigger reflow
-      wandPathElement.classList.add("wand-path-anim");
+      if (!wandPathElement) return;
+
+      // Cancella eventuale animazione precedente in corso
+      if (wandAnimId) {
+        cancelAnimationFrame(wandAnimId);
+        wandAnimId = null;
+      }
+
+      const spark = document.getElementById("wandSpark");
+      const guidePath = document.getElementById("wandGuidePath");
+      const d = wandPathElement.getAttribute("d");
+
+      if (!d || d.trim() === "") {
+        if (spark) spark.style.opacity = "0";
+        return;
+      }
+
+      if (guidePath) guidePath.setAttribute("d", d);
+
+      // Calcola la lunghezza esatta del tracciato
+      let totalLen = 0;
+      try {
+        totalLen = wandPathElement.getTotalLength();
+      } catch (err) {
+        totalLen = 220;
+      }
+
+      if (!totalLen || totalLen <= 0 || isNaN(totalLen)) {
+        totalLen = 220;
+      }
+
+      // Imposta stroke-dasharray esattamente sulla lunghezza reale
+      wandPathElement.style.strokeDasharray = `${totalLen} ${totalLen}`;
+      wandPathElement.style.strokeDashoffset = `${totalLen}`;
+
+      // Posizione iniziale della scintilla
+      let startPoint = { x: 75, y: 75 };
+      try {
+        startPoint = wandPathElement.getPointAtLength(0);
+      } catch (e) {}
+
+      if (spark) {
+        spark.setAttribute("cx", startPoint.x);
+        spark.setAttribute("cy", startPoint.y);
+        spark.style.transition = "none";
+        spark.style.opacity = "1";
+        spark.setAttribute("r", "6");
+      }
+
+      // Feedback visivo sul pulsante Anima Gesto
+      if (replayWandAnimBtn) {
+        replayWandAnimBtn.classList.add("ring-2", "ring-amber-400", "bg-amber-500/30");
+      }
+
+      // Durata fluida proporzionata (1.2s - 1.8s)
+      const duration = Math.min(Math.max(totalLen * 5.5, 1100), 1800);
+      const startTime = performance.now();
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Curva di accelerazione/decelerazione cubica fluida
+        const ease = progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+        const currentLen = ease * totalLen;
+        wandPathElement.style.strokeDashoffset = `${Math.max(0, totalLen - currentLen)}`;
+
+        if (spark) {
+          try {
+            const pt = wandPathElement.getPointAtLength(Math.min(currentLen, totalLen));
+            spark.setAttribute("cx", pt.x);
+            spark.setAttribute("cy", pt.y);
+          } catch (e) {}
+        }
+
+        if (progress < 1) {
+          wandAnimId = requestAnimationFrame(step);
+        } else {
+          wandAnimId = null;
+          wandPathElement.style.strokeDashoffset = "0";
+          if (spark) {
+            spark.style.transition = "opacity 0.6s ease, transform 0.3s ease";
+            spark.style.opacity = "0.75";
+          }
+          if (replayWandAnimBtn) {
+            replayWandAnimBtn.classList.remove("ring-2", "ring-amber-400", "bg-amber-500/30");
+          }
+        }
+      }
+
+      wandAnimId = requestAnimationFrame(step);
     }
 
-    replayWandAnimBtn.addEventListener("click", animateWandPath);
+    replayWandAnimBtn.addEventListener("click", () => {
+      animateWandPath();
+    });
 
     function closeModal() {
+      if (wandAnimId) {
+        cancelAnimationFrame(wandAnimId);
+        wandAnimId = null;
+      }
       spellModal.classList.add("opacity-0");
       modalCard.classList.add("scale-95");
       setTimeout(() => {

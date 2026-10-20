@@ -342,14 +342,26 @@
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
             <!-- Animated SVG canvas -->
             <div class="sm:col-span-1 bg-slate-950 rounded-lg border border-amber-900/40 p-3 flex flex-col items-center justify-center relative">
-              <svg id="wandSvgCanvas" viewBox="0 0 150 150" class="w-28 h-28">
+              <svg id="wandSvgCanvas" viewBox="0 0 150 150" class="w-32 h-32">
+                <defs>
+                  <radialGradient id="sparkGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="35%" stop-color="#fef08a" />
+                    <stop offset="70%" stop-color="#f59e0b" />
+                    <stop offset="100%" stop-color="rgba(245, 158, 11, 0)" />
+                  </radialGradient>
+                </defs>
                 <!-- Grid background lines -->
                 <circle cx="75" cy="75" r="70" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
                 <circle cx="75" cy="75" r="40" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
                 <line x1="75" y1="5" x2="75" y2="145" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
                 <line x1="5" y1="75" x2="145" y2="75" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
-                <!-- Dynamic Wand Path -->
-                <path id="wandPathElement" d="" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" class="wand-path-anim" />
+                <!-- Guida semitrasparente del percorso completo -->
+                <path id="wandGuidePath" d="" fill="none" stroke="rgba(245, 158, 11, 0.15)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- Traccia dinamica animata -->
+                <path id="wandPathElement" d="" fill="none" stroke="#fbbf24" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- Scintilla della punta della bacchetta -->
+                <circle id="wandSpark" cx="75" cy="75" r="6" fill="url(#sparkGrad)" style="opacity: 0;" />
               </svg>
               <div class="text-[10px] text-slate-400 mt-1 uppercase tracking-wider">Traccia Dinamica</div>
             </div>
