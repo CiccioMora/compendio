@@ -26,17 +26,16 @@ for s in spells:
     by_year.setdefault(y, []).append(s)
 
 year_titles = {
-    1: ("I ANNO — FONDAMENTI DI DIFESA, CINETICA E INCANTESIMI GENERALI", "Fondamenti didattici, disarmo, mobilità e sortilegi cardine del primo anno a Hogwarts."),
-    2: ("II ANNO — FATTURE, TRASFIGURAZIONE INANIMATA E CREATURE", "Fatture di impatto, gestione delle creature magiche e trasfigurazioni su oggetti inanimati."),
-    3: ("III ANNO — ELEMENTI DI GELO, IMPATTO E LOCOMOZIONE", "Magia del ghiaccio, locomozione corporea, difesa contro mollicci e orientamento tattico."),
-    4: ("IV ANNO — TATTICHE DI DIFESA, DISTRUZIONE E MEDIMAGIA", "Sortilegi balistici da breccia, estrazione di elementi, rimedi medici d'urgenza ed evocazioni."),
-    5: ("V ANNO — PREPARAZIONE AI G.U.F.O., ESPLOSIVI E TATTICHE AVANZATE", "Approfondimento delle maledizioni da combattimento, sortilegi esplosivi ed esami ministeriali."),
-    6: ("VI ANNO — M.A.G.O. I: INCANTESIMI, TRASFIGURAZIONE, D.C.A.O. (MALEDICTIO) & LIBER SEXTUS", "Didattica ufficiale di VI Anno da 'Arcane GDR' e trattati: Incantesimi (Confundo, Deletrius, Descendo, Silencio, Rallegrante, Carpe Retractum, Obliterato), Trasfigurazione Pratica (Crinus Muto, Pullus, Densaugeo, Paperate, Piscofors, Entomorphis, Furitum, Geminio, Inflatus), D.C.A.O. (Maledictio: Titillando, Exulcero, Monstrum, Dismundo, Locomotor Mortis, Locomotor Wibbly, Dolohov, Sectumsempra, Vulnera Sanentur, Caccole, Balbutio, Flagrante, Morsmordre, Patronus, Languelingua, Infelicità Eterna, Stalker), Reparifarge e Codex Arithmantiae (Liber Sextus: Emineo, Emineo Puteus, Transatio Objecto)."),
-    7: ("VII ANNO — M.A.G.O. II: INCANTESIMI, D.C.A.O. SUPERIORE (OLTRE IL MAGO), ANIMAGIA & LIBER SEPTIMUS", "Didattica ufficiale di VII Anno da 'Arcane GDR' e trattati: Incantesimi (Passaporta / Portus, Prior Incantatio, Incantesimo Proteus, Cave Inimicum, Partis Temporus, Incantesimo Fidelius, Adduco Maxima, Obliviate), D.C.A.O. Superiore (Maledizioni Senza Perdono: Avada Kedavra, Crucio, Imperio; Fiendfyre / Ardemonio, Patronus Messaggero), Trasfigurazione Teoria (Animaleus Nobodyx, Homine Reverto) e Codex Arithmantiae (Liber Septimus: Nodum Solvo, Abscondas, Fermo, In Fine Laqueo, Quae Reversa, Deminatio Gravitas, Magnes Lathos Addicis, Protegis Hoc Incantementum, Rotas Sator, Capio Memoriam)."),
-    0: ("ARITMANZIA OPERATIVA: LIBER I-V & SCIENZE TRASFIGURATIVE", "Grimorio operativo dei trattati di Zeno & Glaphira Hawstein (Signo e le 9 figure, formule elementali Coerceo/Finge/Adultero/Plasma, varchi aurei Phi Porta/Phi Revelio) e Trasfigurazione sistematica di Yashiro Isana Mortem.")
+    1: ("I ANNO — FONDAMENTI DI DIFESA, CINETICA E TRASFIGURAZIONE MORFOLOGICA", "Fondamenti didattici, disarmo, mobilità e trasfigurazione inanimata di base (17 formule)."),
+    2: ("II ANNO — FATTURE, CONTROINCANTI E TRASFIGURAZIONE MATERICA", "Fatture di impatto, controincanti generali e mutazione materica su oggetti (15 formule)."),
+    3: ("III ANNO — GELO, TRASFIGURAZIONE TOTALE E ARITMANZIA BASE", "Magia del ghiaccio, trasfigurazione totale inanimati-animali e inizio dei corsi di Aritmanzia: tracciamento geometrico e formule elementali (18 formule)."),
+    4: ("IV ANNO — TATTICHE DI DIFESA, ARITMANZIA ELEMENTALE E MEDIMAGIA", "Sortilegi da breccia, marchiatura e diagnostica trasfigurativa, controllo avanzato di terra e fuoco, difese perimetrali (25 formule)."),
+    5: ("V ANNO — PREPARAZIONE AI G.U.F.O., EVANESCENZA E VARCHI AUREI", "Sortilegi esplosivi, formule di evanescenza per inanimati e viventi, crittografia magica e varchi proporzionali aurei (14 formule)."),
+    6: ("VI ANNO (SESTO ANNO) — MALEDIZIONI, TRASFIGURAZIONE CIRCOLARE, INCANTESIMI E TRASLAZIONE", "Didattica avanzata di Sesto Anno: Sortilegi e Incantesimi Non-Verbali, Trasfigurazione pratica e circolare intermittente, D.C.A.O. e traslazione spaziale aritmantica (39 formule)."),
+    7: ("VII ANNO (SETTIMO ANNO) — INCANTESIMI SUPERIORI, D.C.A.O., ANIMAGIA E RITUALI SIGILLANTI", "Didattica superiore di Settimo Anno: Incantesimi stazionari ed ermetici (Fidelius, Proteus, Cave Inimicum, Prior Incantatio, Passaporta), D.C.A.O. superiore, teoria dell'Animagia e rituali di sigillo permanente (26 formule).")
 }
 
-year_order = [1, 2, 3, 4, 5, 6, 7, 0]
+year_order = [1, 2, 3, 4, 5, 6, 7]
 
 md = []
 md.append("# Compendium Magicum: Portale della Conoscenza degli Incantesimi")
