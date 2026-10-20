@@ -11,7 +11,91 @@
       document.write('<script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"><\/script>');
     }
   </script>
-  <link rel="stylesheet" href="style.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;600&display=swap');
+
+    :root {
+      --font-serif: 'Cinzel', serif, Georgia;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: #0b0f17;
+      color: #e2e8f0;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(217, 119, 6, 0.07) 0%, transparent 40%),
+        radial-gradient(circle at 85% 25%, rgba(99, 102, 241, 0.07) 0%, transparent 40%),
+        radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .font-magic {
+      font-family: var(--font-serif);
+      letter-spacing: 0.03em;
+    }
+
+    .font-code {
+      font-family: var(--font-mono);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d97706;
+    }
+
+    /* Magical Glowing animation */
+    @keyframes runeGlow {
+      0%, 100% { opacity: 0.6; filter: drop-shadow(0 0 5px rgba(217, 119, 6, 0.4)); }
+      50% { opacity: 1; filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.8)); }
+    }
+    .rune-glow {
+      animation: runeGlow 4s infinite ease-in-out;
+    }
+
+    /* Wand trace stroke animation */
+    @keyframes drawPath {
+      0% { stroke-dashoffset: 1000; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .wand-path-anim {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawPath 2.4s ease-out forwards;
+    }
+
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card {
+      background: rgba(17, 24, 39, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(217, 119, 6, 0.15);
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(245, 158, 11, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.7), 0 0 16px -2px rgba(217, 119, 6, 0.2);
+    }
+
+</style>
 </head>
 <body class="min-h-screen text-slate-200 antialiased selection:bg-amber-500 selection:text-slate-950">
 
@@ -135,13 +219,14 @@
           </label>
           <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
             <option value="ALL">Tutti gli Anni (154)</option>
-            <option value="1">I Anno — Fondamenti, Cinetica & Liber I (19)</option>
-            <option value="2">II Anno — Fatture, Inanimati & Liber II (16)</option>
-            <option value="3">III Anno — Gelo, Creature & Liber III (17)</option>
-            <option value="4">IV Anno — Tattiche, Medimagia & Liber IV (24)</option>
-            <option value="5">V Anno — Esplosivi, G.U.F.O. & Liber V (13)</option>
-            <option value="6">VI Anno — Sesto Anno: Maledizioni, Trasfigurazione & Incantesimi (40)</option>
-            <option value="7">VII Anno — Settimo Anno: Incantesimi Superiori, Difesa & Arti Oscure (25)</option>
+            <option value="1">I Anno — Fondamenti & Cinetica (16)</option>
+            <option value="2">II Anno — Fatture & Inanimati (13)</option>
+            <option value="3">III Anno — Gelo & Locomozione (14)</option>
+            <option value="4">IV Anno — Tattiche & Medimagia (18)</option>
+            <option value="5">V Anno — Esplosivi & G.U.F.O. (10)</option>
+            <option value="6">VI Anno — Sesto Anno: Maledizioni, Trasfigurazione & Incantesimi (38)</option>
+            <option value="7">VII Anno — Settimo Anno: Incantesimi Superiori, Difesa & Arti Oscure (24)</option>
+            <option value="0">Altri — Formule Senza Riferimento d'Anno (21)</option>
           </select>
         </div>
 
@@ -200,25 +285,28 @@
               Tutti (154)
             </button>
             <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              I Anno (19)
+              I Anno (16)
             </button>
             <button data-year="2" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              II Anno (16)
+              II Anno (13)
             </button>
             <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              III Anno (17)
+              III Anno (14)
             </button>
             <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              IV Anno (24)
+              IV Anno (18)
             </button>
             <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              V Anno (13)
+              V Anno (10)
             </button>
             <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VI Anno (40)
+              VI Anno (38)
             </button>
             <button data-year="7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VII Anno (25)
+              VII Anno (24)
+            </button>
+            <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              Altri (21)
             </button>
           </div>
         </div>
@@ -505,8 +593,8 @@
 
   <!-- SCRIPTS: DATABASE & APP LOGIC -->
   <script>
-// spellsData.js - Archivio Completo dei 154 Incantesimi suddiviso per Anni (I - VII Anno)
-// Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR, Codex Arithmantiae e Manuali Docenti
+// spellsData.js - Archivio Completo dei 154 Incantesimi suddiviso per Anni (I - VII Anno e Altri)
+// Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR, Trattati Didattici e Codex Arithmantiae
 
 const SPELLS_DATA = [
   {
@@ -529,27 +617,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "coerceo",
-    "anno": 1,
-    "annoLabel": "I Anno",
-    "nome": "Formula di Controllo dell'Acqua (Coerceo)",
-    "formula": "Coerceo",
-    "ripetibile": false,
-    "tipologia": "Elementale Acqua / Controllo",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello. Plasma torrenti e muri d'acqua per deflettere fiamme, travolgere il rivale o spegnere attacchi incendiari.",
-    "movimento": "Se l'acqua è già presente: scatto secco del polso verso il basso. Se evocata: puntamento fermo appena fuoriesce dalla punta.",
-    "movimentoSvg": "M 75,30 L 75,115 M 55,95 L 75,115 L 95,95",
-    "descrizione": "Formula aritmantica che assoggetta l'elemento naturale dell'Acqua (associato al numero 1 nella T.L.A.). Chi lo padroneggia sente l'acqua come un prolungamento della bacchetta.",
-    "etimologia": "Dal latino coercere (contenere, domare, tenere a freno).",
-    "valenza": 1,
-    "sommaLettere": 37,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "lumos",
@@ -634,27 +701,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "signo",
-    "anno": 1,
-    "annoLabel": "I Anno",
-    "nome": "Incantesimo Segnante / Tracciante (Signo)",
-    "formula": "Signo",
-    "ripetibile": false,
-    "tipologia": "Aritmantico Fondamentale / Tracciamento",
-    "inDuello": false,
-    "duelloNote": "Non utilizzabile in duello. È l'incantesimo cardine con cui gli aritmanti tracciano figure geometriche perfette su pietre, pavimenti o tessuti.",
-    "movimento": "Posizionare la bacchetta perpendicolarmente alla superficie e muoverla per formare la figura geometrica desiderata.",
-    "movimentoSvg": "M 75,25 A 50,50 0 1,1 74,25 Z",
-    "descrizione": "Traccia sul terreno o su qualsiasi superficie figure geometriche luminose (dal cerchio all'ellisse, 1-9) che svaniscono lasciando il segno perfetto impresso nella materia.",
-    "etimologia": "Dal latino signare (tracciare, incidere un sigillo).",
-    "valenza": 1,
-    "sommaLettere": 28,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "incendio",
@@ -888,27 +934,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 69 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte."
   },
   {
-    "id": "transfiguro",
-    "anno": 1,
-    "annoLabel": "I Anno",
-    "nome": "Trasfigurazione Morfologica di Forma (Transfiguro)",
-    "formula": "Transfiguro",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Inanimata di I Livello",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Interviene solo sulla forma esteriore senza mutare il materiale costitutivo.",
-    "movimento": "Delineare la nuova sagoma aerea con la bacchetta mantenendo costante il materiale originario.",
-    "movimentoSvg": "M 40,110 L 75,35 L 110,110",
-    "descrizione": "Forma più elementare di trasfigurazione inanimata: muta esclusivamente l'aspetto geometrico ed esteriore dell'oggetto lasciando intatta la materia interna.",
-    "etimologia": "Dal latino transfigurare (mutare aspetto).",
-    "valenza": 4,
-    "sommaLettere": 58,
-    "valenzaOpposta": 6,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "chartanimus",
     "anno": 2,
     "annoLabel": "II Anno",
@@ -928,48 +953,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "finite-incantatem",
-    "anno": 2,
-    "annoLabel": "II Anno",
-    "nome": "Controincantesimo Generale (Finite Incantatem)",
-    "formula": "Finite Incantatem",
-    "ripetibile": false,
-    "tipologia": "Contro-incantesimo Generale",
-    "inDuello": true,
-    "duelloNote": "Essenziale in ogni duello: annulla all'istante l'effetto di gran parte delle fatture e degli incantesimi in corso su di sé o sui compagni.",
-    "movimento": "Fendente orizzontale secco a tagliare la trama magica dell'incanto avversario.",
-    "movimentoSvg": "M 30,75 L 120,75 M 105,60 L 120,75 L 105,90",
-    "descrizione": "Il controincantesimo per eccellenza. La sua valenza calcolata è 1, ma la grande aritmante Bridget Wenlock dimostrò nel XIII secolo la sua naturale affinità con il numero 7, il più potente serbatoio di opposizione magica.",
-    "etimologia": "Dal latino finire (porre fine) e incantamentum (incantesimo).",
-    "valenza": 1,
-    "sommaLettere": 73,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 73 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "finge",
-    "anno": 2,
-    "annoLabel": "II Anno",
-    "nome": "Formula di Controllo dell'Aria (Finge)",
-    "formula": "Finge",
-    "ripetibile": false,
-    "tipologia": "Elementale Aria / Controllo",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello. Genera potenti vortici e barriere eoliche che deviano dardi magici e proiettili solidi.",
-    "movimento": "Mulinello orizzontale del polso da sinistra a destra con scatto in avanti.",
-    "movimentoSvg": "M 35,75 Q 75,40 115,75 Q 75,110 35,75",
-    "descrizione": "Domina e modella i flussi dell'aria e del vento (associati al numero 5 e all'etere classico nel Codex).",
-    "etimologia": "Dal latino fingere (modellare, dare forma).",
-    "valenza": 5,
-    "sommaLettere": 32,
-    "valenzaOpposta": 5,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "immobilus",
@@ -1119,27 +1102,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 72 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
   },
   {
-    "id": "muto",
-    "anno": 2,
-    "annoLabel": "II Anno",
-    "nome": "Trasfigurazione Materica di Sostanza (Muto)",
-    "formula": "Muto",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Inanimata di II Livello",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Muta il materiale costitutivo lasciando inalterata la forma esteriore.",
-    "movimento": "Tocco fermo al centro della massa dell'oggetto con concentrazione sulla nuova densità molecolare.",
-    "movimentoSvg": "M 75,35 L 75,115 M 40,75 L 110,75",
-    "descrizione": "Modifica la sostanza fisica di un oggetto (es. legno in metallo) mantenendone intatta la sagoma originaria. Non può generare materiali preziosi per la Legge di Gamp.",
-    "etimologia": "Dal latino mutare (cambiare sostanza).",
-    "valenza": 6,
-    "sommaLettere": 15,
-    "valenzaOpposta": 4,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "acutus",
     "anno": 2,
     "annoLabel": "II Anno",
@@ -1243,48 +1205,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "plasma",
-    "anno": 3,
-    "annoLabel": "III Anno",
-    "nome": "Formula di Controllo del Fuoco (Plasma)",
-    "formula": "Plasma",
-    "ripetibile": false,
-    "tipologia": "Elementale Fuoco / Controllo",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello. Plasma fiammate, serpenti di fuoco o scudi termici contro attacchi di gelo o creature della notte.",
-    "movimento": "Sferzata orizzontale arcuata della bacchetta dal basso verso l'alto rilasciando la fiamma.",
-    "movimentoSvg": "M 35,110 C 60,80 60,50 75,35 C 90,50 90,80 115,110 Z",
-    "descrizione": "Controlla le forze del fuoco naturale o magico (associato al numero 8 nella T.L.A.). Richiede notevole padronanza per evitare ritorni di fiamma.",
-    "etimologia": "Dal greco plásma (ciò che viene forgiato o plasmato nel calore).",
-    "valenza": 8,
-    "sommaLettere": 17,
-    "valenzaOpposta": 2,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 17 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "adultero",
-    "anno": 3,
-    "annoLabel": "III Anno",
-    "nome": "Formula di Controllo della Terra (Adultero)",
-    "formula": "Adultero",
-    "ripetibile": false,
-    "tipologia": "Elementale Terra / Controllo",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello. Erige muraglie di pietra o fango per parare colpi nemici o dissesta il suolo sotto i piedi del rivale.",
-    "movimento": "Puntamento secco al terreno seguito da uno strappo verso l'alto con entrambe le mani sulla presa.",
-    "movimentoSvg": "M 40,115 L 75,35 L 110,115",
-    "descrizione": "Governa la stabilità della terra, zolle e pietre (associata al numero 6 nella T.L.A.). Impiegato anche nella creazione della base dei pozzi comunicanti.",
-    "etimologia": "Dal latino adulterare (alterare la natura e lo stato originale della materia).",
-    "valenza": 6,
-    "sommaLettere": 33,
-    "valenzaOpposta": 4,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "riddikulus",
@@ -1539,27 +1459,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
   },
   {
-    "id": "verto",
-    "anno": 3,
-    "annoLabel": "III Anno",
-    "nome": "Trasfigurazione Totale (Verto)",
-    "formula": "Verto",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Inanimata di III Livello",
-    "inDuello": false,
-    "duelloNote": "Non da duello rapido. Muta simultaneamente sia la forma che il materiale costitutivo dell'oggetto.",
-    "movimento": "Tracciamento a doppia elica nello spazio attorno all'oggetto.",
-    "movimentoSvg": "M 45,40 Q 75,75 105,40 Q 75,75 45,110 Q 75,75 105,110",
-    "descrizione": "Il livello più elevato della trasfigurazione applicata agli oggetti: altera congiuntamente conformazione e composizione materica.",
-    "etimologia": "Dal latino vertere (volgere, capovolgere interamente).",
-    "valenza": 8,
-    "sommaLettere": 26,
-    "valenzaOpposta": 2,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 26 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "lapifors",
     "anno": 3,
     "annoLabel": "III Anno",
@@ -1749,27 +1648,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
   },
   {
-    "id": "dominum",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Incantesimo Anti-Furto per Contenitori (Dominum)",
-    "formula": "Dominum",
-    "ripetibile": false,
-    "tipologia": "Difesa Statica di Contenitori",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Impedisce atti di evocazione o evanescenza non autorizzati sugli oggetti racchiusi in uno scrigno o armadio.",
-    "movimento": "Appoggiare la bacchetta sul contenitore e farla vibrare con una serie di picchiettii lungo tutto il perimetro.",
-    "movimentoSvg": "M 40,40 L 110,40 L 110,110 L 40,110 Z M 75,40 L 75,110",
-    "descrizione": "Garantisce che soltanto il legittimo proprietario possa interagire magicamente con il contenuto protetto di un forziere o mobiletto.",
-    "etimologia": "Dal latino dominus (padrone, signore del possesso).",
-    "valenza": 8,
-    "sommaLettere": 35,
-    "valenzaOpposta": 2,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 35 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "episkey",
     "anno": 4,
     "annoLabel": "IV Anno",
@@ -1896,27 +1774,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 22 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
   },
   {
-    "id": "phi-porta",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Incantesimo Proporzionale Aureo (Phi Porta)",
-    "formula": "Phi Porta",
-    "ripetibile": false,
-    "tipologia": "Traslazione / Varchi Aritmantici",
-    "inDuello": false,
-    "duelloNote": "Non utilizzabile in duello. Richiede di disegnare con Signo un rettangolo aureo continuo su una parete prima di aprire il varco.",
-    "movimento": "Disegnare un rettangolo continuo con rapporto lati 1,618 con la bacchetta perpendicolare.",
-    "movimentoSvg": "M 40,35 L 110,35 L 110,115 L 40,115 Z",
-    "descrizione": "Sfrutta la proporzione divina (1,618) del numero d'oro per aprire un passaggio segreto su una parete solida. Il varco deve essere aperto entro due minuti con la parola o gesto stabiliti.",
-    "etimologia": "Dalla lettera greca Phi (simbolo della sezione aurea di Fidia) e porta.",
-    "valenza": 4,
-    "sommaLettere": 49,
-    "valenzaOpposta": 6,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "cicatris",
     "anno": 4,
     "annoLabel": "IV Anno",
@@ -1978,90 +1835,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 8,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
     "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 35 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
-  },
-  {
-    "id": "detecto",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Incanto Diagnostico di Rifrazione (Detecto)",
-    "formula": "Detecto",
-    "ripetibile": false,
-    "tipologia": "Diagnostica Trasfigurativa",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Rivela se un oggetto è naturale o frutto di trasfigurazione mediante rifrazione luminosa.",
-    "movimento": "Puntamento orizzontale a sfioramento della superficie dell'oggetto.",
-    "movimentoSvg": "M 35,75 L 115,75 M 75,40 L 75,110",
-    "descrizione": "Provoca un bagliore luminescente sulla superficie di oggetti, piante o esseri trasfigurati o marchiati, distinguendoli da quelli autenticamente naturali.",
-    "etimologia": "Dal latino detegere / detectum (scoprire, smascherare).",
-    "valenza": 9,
-    "sommaLettere": 27,
-    "valenzaOpposta": 1,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "fersigno",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Marchiatura di Creature ed Entità Viventi (Fersigno)",
-    "formula": "Fersigno",
-    "ripetibile": false,
-    "tipologia": "Marchiatura Vivente",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Marchiatura specifica per animali e viventi (l'uso di formule per inanimati su viventi è letale).",
-    "movimento": "Sfioramento a mezz'aria sopra il dorso della creatura senza contatto diretto.",
-    "movimentoSvg": "M 40,65 Q 75,30 110,65 Q 75,100 40,65 Z",
-    "descrizione": "Formula designata per apporre marchi di riconoscimento su animali trasfigurati rispettando i flussi ematici dell'essere vivente.",
-    "etimologia": "Dal latino fera (animale) e signum.",
-    "valenza": 3,
-    "sommaLettere": 48,
-    "valenzaOpposta": 7,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "plansigno",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Marchiatura di Elementi Vegetali (Plansigno)",
-    "formula": "Plansigno",
-    "ripetibile": false,
-    "tipologia": "Marchiatura Vegetale",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Appone un marchio magico su arbusti o piante trasfigurate.",
-    "movimento": "Tocco delicato sulla foglia o fusto principale con rotazione oraria.",
-    "movimentoSvg": "M 75,115 L 75,55 Q 50,35 75,25 Q 100,35 75,55",
-    "descrizione": "Formula specifica per imprimere il marchio di trasfigurazione su elementi botanici senza alterarne l'apparato linfatico.",
-    "etimologia": "Dal latino planta e signum.",
-    "valenza": 8,
-    "sommaLettere": 44,
-    "valenzaOpposta": 2,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "significo",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Marchiatura di Oggetti Inanimati (Significo)",
-    "formula": "Significo",
-    "ripetibile": false,
-    "tipologia": "Marchiatura Inanimata",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Appone un marchio semitrasparente d'autore su oggetti inanimati trasfigurati.",
-    "movimento": "Pressione perpendicolare della punta concependo mentalmente il simbolo o lettera del marchio.",
-    "movimentoSvg": "M 50,50 L 100,50 L 100,100 L 50,100 Z",
-    "descrizione": "Applica un sigillo d'autore su oggetti inanimati trasfigurati per certificarne l'origine. Non va mai usato su viventi.",
-    "etimologia": "Dal latino significare (imprimere un segno distintivo).",
-    "valenza": 1,
-    "sommaLettere": 55,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "expulso",
@@ -2190,27 +1963,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte."
   },
   {
-    "id": "phi-revelio",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Incantesimo Celante Aureo (Phi Revelio)",
-    "formula": "Phi Revelio",
-    "ripetibile": false,
-    "tipologia": "Occultamento / Crittografia Magica",
-    "inDuello": false,
-    "duelloNote": "Non utilizzabile in duello. Usato per occultare scritture su pergamena leggibili solo con chiave d'accesso.",
-    "movimento": "Tracciamento rettangolo aureo sulla pergamena con Signo e tocco al centro.",
-    "movimentoSvg": "M 45,45 L 105,45 L 105,105 L 45,105 Z M 75,75 L 75,75",
-    "descrizione": "Permette di nascondere un messaggio scritto su pergamena rendendolo invisibile dopo 5 minuti dal tracciamento, riattivabile solo tramite gesto o parola segreta.",
-    "etimologia": "Da Phi e il latino revelare (svelare, togliere il velo).",
-    "valenza": 2,
-    "sommaLettere": 65,
-    "valenzaOpposta": 8,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 65 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "reducto",
     "anno": 5,
     "annoLabel": "V Anno",
@@ -2230,48 +1982,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 5,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
     "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 5 volte."
-  },
-  {
-    "id": "evanesco",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Incantesimo di Evanescenza per Inanimati e Liquidi (Evanesco)",
-    "formula": "Evanesco",
-    "ripetibile": false,
-    "tipologia": "Evanescenza nel Non-Essere",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello: dissolve all'istante pozioni lanciate, veleni, liquidi o entità evocate da incantesimi come Serpensortia o Avis.",
-    "movimento": "Movimento a spirale centrifuga che si allarga dal centro verso l'esterno svanendo nel nulla.",
-    "movimentoSvg": "M 75,75 m -10,0 a 10,10 0 1,1 20,0 a 25,25 0 1,1 -50,0 a 40,40 0 1,1 80,0",
-    "descrizione": "Trasferisce oggetti inanimati e liquidi nel Non-Essere (la dimensione liminale di energia caotica). Opera come opposto speculare dell'evocazione.",
-    "etimologia": "Dal latino evanescere (svanire, dissolversi nel nulla).",
-    "valenza": 3,
-    "sommaLettere": 30,
-    "valenzaOpposta": 7,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "ivanesco",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Incantesimo di Evanescenza per Viventi (Ivanesco)",
-    "formula": "Ivanesco",
-    "ripetibile": false,
-    "tipologia": "Evanescenza di Viventi nel Non-Essere",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello esclusivamente per dissolvere animali o creature precedentemente evocate da formule magiche (es. serpenti di Serpensortia).",
-    "movimento": "Fendente netto a triangolo aperto sopra la creatura evocata.",
-    "movimentoSvg": "M 40,110 L 75,40 L 110,110",
-    "descrizione": "Formula canonica per far svanire nel Non-Essere piante ed esseri viventi precedentemente evocati. Non può essere applicato parzialmente su un essere vivente.",
-    "etimologia": "Variante arcaica di evanescere.",
-    "valenza": 7,
-    "sommaLettere": 34,
-    "valenzaOpposta": 3,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "deprimo",
@@ -2629,27 +2339,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
     "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "muffliato",
-    "anno": 6,
-    "annoLabel": "VI Anno",
-    "nome": "Incantesimo Antiacustico di Zona (Muffliato)",
-    "formula": "Muffliato",
-    "ripetibile": true,
-    "tipologia": "Difensivo Statico di Zona / Acustico",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Crea un ronzio indistinto nelle orecchie di chi si trova all'esterno della zona protetta, nascondendo conversazioni.",
-    "movimento": "Tre onde con il polso dal basso verso l'alto, ridiscese nel verso opposto e braccio spostato da sinistra verso destra.",
-    "movimentoSvg": "M 35,90 Q 50,45 65,90 Q 80,45 95,90 L 125,90",
-    "descrizione": "Impedisce a curiosi o spie di origliare ciò che viene detto all'interno di una stanza o di un campo.",
-    "etimologia": "Dall'inglese to muffle (ovattare, soffocare i suoni).",
-    "valenza": 4,
-    "sommaLettere": 40,
-    "valenzaOpposta": 6,
-    "maxRipetizioni": 4,
-    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
   },
   {
     "id": "obliterato",
@@ -3049,27 +2738,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
     "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 150 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "obstringo-circulum",
-    "anno": 6,
-    "annoLabel": "VI Anno",
-    "nome": "Trasfigurazione Circolare Intermittente (Obstringo Circulum)",
-    "formula": "Obstringo Circulum",
-    "ripetibile": true,
-    "tipologia": "Trasfigurazione Programmata a Cicli",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Programma alternanze cicliche tra trasformazione e detrasfigurazione a orari prefissati.",
-    "movimento": "Tracciare cerchi il cui diametro corrisponde all'intervallo temporale desiderato (es. 5 cm per 5 secondi di ciclo).",
-    "movimentoSvg": "M 75,30 A 45,45 0 1,1 74,30 Z M 75,50 A 25,25 0 1,1 74,50 Z",
-    "descrizione": "Rinnova ciclicamente gli effetti di un incanto trasfigurativo annullandoli e riattivandoli a intervalli regolari, ricaricando l'effetto.",
-    "etimologia": "Dal latino obstringere (vincolare a patto) e circulus (ciclo temporale).",
-    "valenza": 3,
-    "sommaLettere": 84,
-    "valenzaOpposta": 7,
-    "maxRipetizioni": 3,
-    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 84 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte."
   },
   {
     "id": "entomorphis",
@@ -3618,27 +3286,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volta/e."
   },
   {
-    "id": "protego-totalum",
-    "anno": 7,
-    "annoLabel": "VII Anno",
-    "nome": "Protezione Totale di Zona (Protego Totalum)",
-    "formula": "Protego Totalum",
-    "ripetibile": true,
-    "tipologia": "Difensivo Statico di Zona (I.D.S.)",
-    "inDuello": false,
-    "duelloNote": "Non da duello rapido: sortilegio perimetrale di protezione per fortificare una dimora o un accampamento.",
-    "movimento": "Disegnare il simbolo dell'infinito (lemniscata) tenendo la bacchetta sopra la propria testa prima di pronunciare la formula.",
-    "movimentoSvg": "M 40,75 C 40,55 60,55 75,75 C 90,95 110,95 110,75 C 110,55 90,55 75,75 C 60,95 40,95 40,75 Z",
-    "descrizione": "Incantesimo difensivo statico (I.D.S.) che erige una cupola impenetrabile a gran parte degli incantesimi esterni. Potenziato inscrivendo un'ellisse e ripetendo fino a 9 volte ai vertici.",
-    "etimologia": "Dal latino protegere e totalus (difesa totale ad area).",
-    "valenza": 9,
-    "sommaLettere": 63,
-    "valenzaOpposta": 1,
-    "maxRipetizioni": 9,
-    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
-  },
-  {
     "id": "prior-incantatem",
     "anno": 7,
     "annoLabel": "VII Anno",
@@ -3742,6 +3389,447 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
     "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 116 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "finite-incantatem",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Controincantesimo Generale (Finite Incantatem)",
+    "formula": "Finite Incantatem",
+    "ripetibile": false,
+    "tipologia": "Contro-incantesimo Generale",
+    "inDuello": true,
+    "duelloNote": "Essenziale in ogni duello: annulla all'istante l'effetto di gran parte delle fatture e degli incantesimi in corso su di sé o sui compagni.",
+    "movimento": "Fendente orizzontale secco a tagliare la trama magica dell'incanto avversario.",
+    "movimentoSvg": "M 30,75 L 120,75 M 105,60 L 120,75 L 105,90",
+    "descrizione": "Il controincantesimo per eccellenza. La sua valenza calcolata è 1, ma la grande aritmante Bridget Wenlock dimostrò nel XIII secolo la sua naturale affinità con il numero 7, il più potente serbatoio di opposizione magica.",
+    "etimologia": "Dal latino finire (porre fine) e incantamentum (incantesimo).",
+    "valenza": 1,
+    "sommaLettere": 73,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 73 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "plasma",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Formula di Controllo del Fuoco (Plasma)",
+    "formula": "Plasma",
+    "ripetibile": false,
+    "tipologia": "Elementale Fuoco / Controllo",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello. Plasma fiammate, serpenti di fuoco o scudi termici contro attacchi di gelo o creature della notte.",
+    "movimento": "Sferzata orizzontale arcuata della bacchetta dal basso verso l'alto rilasciando la fiamma.",
+    "movimentoSvg": "M 35,110 C 60,80 60,50 75,35 C 90,50 90,80 115,110 Z",
+    "descrizione": "Controlla le forze del fuoco naturale o magico (associato al numero 8 nella T.L.A.). Richiede notevole padronanza per evitare ritorni di fiamma.",
+    "etimologia": "Dal greco plásma (ciò che viene forgiato o plasmato nel calore).",
+    "valenza": 8,
+    "sommaLettere": 17,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 17 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "coerceo",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Formula di Controllo dell'Acqua (Coerceo)",
+    "formula": "Coerceo",
+    "ripetibile": false,
+    "tipologia": "Elementale Acqua / Controllo",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello. Plasma torrenti e muri d'acqua per deflettere fiamme, travolgere il rivale o spegnere attacchi incendiari.",
+    "movimento": "Se l'acqua è già presente: scatto secco del polso verso il basso. Se evocata: puntamento fermo appena fuoriesce dalla punta.",
+    "movimentoSvg": "M 75,30 L 75,115 M 55,95 L 75,115 L 95,95",
+    "descrizione": "Formula aritmantica che assoggetta l'elemento naturale dell'Acqua (associato al numero 1 nella T.L.A.). Chi lo padroneggia sente l'acqua come un prolungamento della bacchetta.",
+    "etimologia": "Dal latino coercere (contenere, domare, tenere a freno).",
+    "valenza": 1,
+    "sommaLettere": 37,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "finge",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Formula di Controllo dell'Aria (Finge)",
+    "formula": "Finge",
+    "ripetibile": false,
+    "tipologia": "Elementale Aria / Controllo",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello. Genera potenti vortici e barriere eoliche che deviano dardi magici e proiettili solidi.",
+    "movimento": "Mulinello orizzontale del polso da sinistra a destra con scatto in avanti.",
+    "movimentoSvg": "M 35,75 Q 75,40 115,75 Q 75,110 35,75",
+    "descrizione": "Domina e modella i flussi dell'aria e del vento (associati al numero 5 e all'etere classico nel Codex).",
+    "etimologia": "Dal latino fingere (modellare, dare forma).",
+    "valenza": 5,
+    "sommaLettere": 32,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "adultero",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Formula di Controllo della Terra (Adultero)",
+    "formula": "Adultero",
+    "ripetibile": false,
+    "tipologia": "Elementale Terra / Controllo",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello. Erige muraglie di pietra o fango per parare colpi nemici o dissesta il suolo sotto i piedi del rivale.",
+    "movimento": "Puntamento secco al terreno seguito da uno strappo verso l'alto con entrambe le mani sulla presa.",
+    "movimentoSvg": "M 40,115 L 75,35 L 110,115",
+    "descrizione": "Governa la stabilità della terra, zolle e pietre (associata al numero 6 nella T.L.A.). Impiegato anche nella creazione della base dei pozzi comunicanti.",
+    "etimologia": "Dal latino adulterare (alterare la natura e lo stato originale della materia).",
+    "valenza": 6,
+    "sommaLettere": 33,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "dominum",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo Anti-Furto per Contenitori (Dominum)",
+    "formula": "Dominum",
+    "ripetibile": false,
+    "tipologia": "Difesa Statica di Contenitori",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Impedisce atti di evocazione o evanescenza non autorizzati sugli oggetti racchiusi in uno scrigno o armadio.",
+    "movimento": "Appoggiare la bacchetta sul contenitore e farla vibrare con una serie di picchiettii lungo tutto il perimetro.",
+    "movimentoSvg": "M 40,40 L 110,40 L 110,110 L 40,110 Z M 75,40 L 75,110",
+    "descrizione": "Garantisce che soltanto il legittimo proprietario possa interagire magicamente con il contenuto protetto di un forziere o mobiletto.",
+    "etimologia": "Dal latino dominus (padrone, signore del possesso).",
+    "valenza": 8,
+    "sommaLettere": 35,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 35 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "muffliato",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo Antiacustico di Zona (Muffliato)",
+    "formula": "Muffliato",
+    "ripetibile": true,
+    "tipologia": "Difensivo Statico di Zona / Acustico",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Crea un ronzio indistinto nelle orecchie di chi si trova all'esterno della zona protetta, nascondendo conversazioni.",
+    "movimento": "Tre onde con il polso dal basso verso l'alto, ridiscese nel verso opposto e braccio spostato da sinistra verso destra.",
+    "movimentoSvg": "M 35,90 Q 50,45 65,90 Q 80,45 95,90 L 125,90",
+    "descrizione": "Impedisce a curiosi o spie di origliare ciò che viene detto all'interno di una stanza o di un campo.",
+    "etimologia": "Dall'inglese to muffle (ovattare, soffocare i suoni).",
+    "valenza": 4,
+    "sommaLettere": 40,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 4,
+    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
+  },
+  {
+    "id": "phi-revelio",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo Celante Aureo (Phi Revelio)",
+    "formula": "Phi Revelio",
+    "ripetibile": false,
+    "tipologia": "Occultamento / Crittografia Magica",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello. Usato per occultare scritture su pergamena leggibili solo con chiave d'accesso.",
+    "movimento": "Tracciamento rettangolo aureo sulla pergamena con Signo e tocco al centro.",
+    "movimentoSvg": "M 45,45 L 105,45 L 105,105 L 45,105 Z M 75,75 L 75,75",
+    "descrizione": "Permette di nascondere un messaggio scritto su pergamena rendendolo invisibile dopo 5 minuti dal tracciamento, riattivabile solo tramite gesto o parola segreta.",
+    "etimologia": "Da Phi e il latino revelare (svelare, togliere il velo).",
+    "valenza": 2,
+    "sommaLettere": 65,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Angolo / Linea (Dualismo)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 65 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "phi-porta",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo Proporzionale Aureo (Phi Porta)",
+    "formula": "Phi Porta",
+    "ripetibile": false,
+    "tipologia": "Traslazione / Varchi Aritmantici",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello. Richiede di disegnare con Signo un rettangolo aureo continuo su una parete prima di aprire il varco.",
+    "movimento": "Disegnare un rettangolo continuo con rapporto lati 1,618 con la bacchetta perpendicolare.",
+    "movimentoSvg": "M 40,35 L 110,35 L 110,115 L 40,115 Z",
+    "descrizione": "Sfrutta la proporzione divina (1,618) del numero d'oro per aprire un passaggio segreto su una parete solida. Il varco deve essere aperto entro due minuti con la parola o gesto stabiliti.",
+    "etimologia": "Dalla lettera greca Phi (simbolo della sezione aurea di Fidia) e porta.",
+    "valenza": 4,
+    "sommaLettere": 49,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "signo",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo Segnante / Tracciante (Signo)",
+    "formula": "Signo",
+    "ripetibile": false,
+    "tipologia": "Aritmantico Fondamentale / Tracciamento",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello. È l'incantesimo cardine con cui gli aritmanti tracciano figure geometriche perfette su pietre, pavimenti o tessuti.",
+    "movimento": "Posizionare la bacchetta perpendicolarmente alla superficie e muoverla per formare la figura geometrica desiderata.",
+    "movimentoSvg": "M 75,25 A 50,50 0 1,1 74,25 Z",
+    "descrizione": "Traccia sul terreno o su qualsiasi superficie figure geometriche luminose (dal cerchio all'ellisse, 1-9) che svaniscono lasciando il segno perfetto impresso nella materia.",
+    "etimologia": "Dal latino signare (tracciare, incidere un sigillo).",
+    "valenza": 1,
+    "sommaLettere": 28,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "evanesco",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo di Evanescenza per Inanimati e Liquidi (Evanesco)",
+    "formula": "Evanesco",
+    "ripetibile": false,
+    "tipologia": "Evanescenza nel Non-Essere",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello: dissolve all'istante pozioni lanciate, veleni, liquidi o entità evocate da incantesimi come Serpensortia o Avis.",
+    "movimento": "Movimento a spirale centrifuga che si allarga dal centro verso l'esterno svanendo nel nulla.",
+    "movimentoSvg": "M 75,75 m -10,0 a 10,10 0 1,1 20,0 a 25,25 0 1,1 -50,0 a 40,40 0 1,1 80,0",
+    "descrizione": "Trasferisce oggetti inanimati e liquidi nel Non-Essere (la dimensione liminale di energia caotica). Opera come opposto speculare dell'evocazione.",
+    "etimologia": "Dal latino evanescere (svanire, dissolversi nel nulla).",
+    "valenza": 3,
+    "sommaLettere": 30,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "ivanesco",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo di Evanescenza per Viventi (Ivanesco)",
+    "formula": "Ivanesco",
+    "ripetibile": false,
+    "tipologia": "Evanescenza di Viventi nel Non-Essere",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello esclusivamente per dissolvere animali o creature precedentemente evocate da formule magiche (es. serpenti di Serpensortia).",
+    "movimento": "Fendente netto a triangolo aperto sopra la creatura evocata.",
+    "movimentoSvg": "M 40,110 L 75,40 L 110,110",
+    "descrizione": "Formula canonica per far svanire nel Non-Essere piante ed esseri viventi precedentemente evocati. Non può essere applicato parzialmente su un essere vivente.",
+    "etimologia": "Variante arcaica di evanescere.",
+    "valenza": 7,
+    "sommaLettere": 34,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "detecto",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incanto Diagnostico di Rifrazione (Detecto)",
+    "formula": "Detecto",
+    "ripetibile": false,
+    "tipologia": "Diagnostica Trasfigurativa",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Rivela se un oggetto è naturale o frutto di trasfigurazione mediante rifrazione luminosa.",
+    "movimento": "Puntamento orizzontale a sfioramento della superficie dell'oggetto.",
+    "movimentoSvg": "M 35,75 L 115,75 M 75,40 L 75,110",
+    "descrizione": "Provoca un bagliore luminescente sulla superficie di oggetti, piante o esseri trasfigurati o marchiati, distinguendoli da quelli autenticamente naturali.",
+    "etimologia": "Dal latino detegere / detectum (scoprire, smascherare).",
+    "valenza": 9,
+    "sommaLettere": 27,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "fersigno",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Marchiatura di Creature ed Entità Viventi (Fersigno)",
+    "formula": "Fersigno",
+    "ripetibile": false,
+    "tipologia": "Marchiatura Vivente",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Marchiatura specifica per animali e viventi (l'uso di formule per inanimati su viventi è letale).",
+    "movimento": "Sfioramento a mezz'aria sopra il dorso della creatura senza contatto diretto.",
+    "movimentoSvg": "M 40,65 Q 75,30 110,65 Q 75,100 40,65 Z",
+    "descrizione": "Formula designata per apporre marchi di riconoscimento su animali trasfigurati rispettando i flussi ematici dell'essere vivente.",
+    "etimologia": "Dal latino fera (animale) e signum.",
+    "valenza": 3,
+    "sommaLettere": 48,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "plansigno",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Marchiatura di Elementi Vegetali (Plansigno)",
+    "formula": "Plansigno",
+    "ripetibile": false,
+    "tipologia": "Marchiatura Vegetale",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Appone un marchio magico su arbusti o piante trasfigurate.",
+    "movimento": "Tocco delicato sulla foglia o fusto principale con rotazione oraria.",
+    "movimentoSvg": "M 75,115 L 75,55 Q 50,35 75,25 Q 100,35 75,55",
+    "descrizione": "Formula specifica per imprimere il marchio di trasfigurazione su elementi botanici senza alterarne l'apparato linfatico.",
+    "etimologia": "Dal latino planta e signum.",
+    "valenza": 8,
+    "sommaLettere": 44,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "significo",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Marchiatura di Oggetti Inanimati (Significo)",
+    "formula": "Significo",
+    "ripetibile": false,
+    "tipologia": "Marchiatura Inanimata",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Appone un marchio semitrasparente d'autore su oggetti inanimati trasfigurati.",
+    "movimento": "Pressione perpendicolare della punta concependo mentalmente il simbolo o lettera del marchio.",
+    "movimentoSvg": "M 50,50 L 100,50 L 100,100 L 50,100 Z",
+    "descrizione": "Applica un sigillo d'autore su oggetti inanimati trasfigurati per certificarne l'origine. Non va mai usato su viventi.",
+    "etimologia": "Dal latino significare (imprimere un segno distintivo).",
+    "valenza": 1,
+    "sommaLettere": 55,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "protego-totalum",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Protezione Totale di Zona (Protego Totalum)",
+    "formula": "Protego Totalum",
+    "ripetibile": true,
+    "tipologia": "Difensivo Statico di Zona (I.D.S.)",
+    "inDuello": false,
+    "duelloNote": "Non da duello rapido: sortilegio perimetrale di protezione per fortificare una dimora o un accampamento.",
+    "movimento": "Disegnare il simbolo dell'infinito (lemniscata) tenendo la bacchetta sopra la propria testa prima di pronunciare la formula.",
+    "movimentoSvg": "M 40,75 C 40,55 60,55 75,75 C 90,95 110,95 110,75 C 110,55 90,55 75,75 C 60,95 40,95 40,75 Z",
+    "descrizione": "Incantesimo difensivo statico (I.D.S.) che erige una cupola impenetrabile a gran parte degli incantesimi esterni. Potenziato inscrivendo un'ellisse e ripetendo fino a 9 volte ai vertici.",
+    "etimologia": "Dal latino protegere e totalus (difesa totale ad area).",
+    "valenza": 9,
+    "sommaLettere": 63,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 9,
+    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+  },
+  {
+    "id": "obstringo-circulum",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Trasfigurazione Circolare Intermittente (Obstringo Circulum)",
+    "formula": "Obstringo Circulum",
+    "ripetibile": true,
+    "tipologia": "Trasfigurazione Programmata a Cicli",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Programma alternanze cicliche tra trasformazione e detrasfigurazione a orari prefissati.",
+    "movimento": "Tracciare cerchi il cui diametro corrisponde all'intervallo temporale desiderato (es. 5 cm per 5 secondi di ciclo).",
+    "movimentoSvg": "M 75,30 A 45,45 0 1,1 74,30 Z M 75,50 A 25,25 0 1,1 74,50 Z",
+    "descrizione": "Rinnova ciclicamente gli effetti di un incanto trasfigurativo annullandoli e riattivandoli a intervalli regolari, ricaricando l'effetto.",
+    "etimologia": "Dal latino obstringere (vincolare a patto) e circulus (ciclo temporale).",
+    "valenza": 3,
+    "sommaLettere": 84,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 84 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte."
+  },
+  {
+    "id": "muto",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Trasfigurazione Materica di Sostanza (Muto)",
+    "formula": "Muto",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Inanimata di II Livello",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Muta il materiale costitutivo lasciando inalterata la forma esteriore.",
+    "movimento": "Tocco fermo al centro della massa dell'oggetto con concentrazione sulla nuova densità molecolare.",
+    "movimentoSvg": "M 75,35 L 75,115 M 40,75 L 110,75",
+    "descrizione": "Modifica la sostanza fisica di un oggetto (es. legno in metallo) mantenendone intatta la sagoma originaria. Non può generare materiali preziosi per la Legge di Gamp.",
+    "etimologia": "Dal latino mutare (cambiare sostanza).",
+    "valenza": 6,
+    "sommaLettere": 15,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "transfiguro",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Trasfigurazione Morfologica di Forma (Transfiguro)",
+    "formula": "Transfiguro",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Inanimata di I Livello",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Interviene solo sulla forma esteriore senza mutare il materiale costitutivo.",
+    "movimento": "Delineare la nuova sagoma aerea con la bacchetta mantenendo costante il materiale originario.",
+    "movimentoSvg": "M 40,110 L 75,35 L 110,110",
+    "descrizione": "Forma più elementare di trasfigurazione inanimata: muta esclusivamente l'aspetto geometrico ed esteriore dell'oggetto lasciando intatta la materia interna.",
+    "etimologia": "Dal latino transfigurare (mutare aspetto).",
+    "valenza": 4,
+    "sommaLettere": 58,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "verto",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Trasfigurazione Totale (Verto)",
+    "formula": "Verto",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Inanimata di III Livello",
+    "inDuello": false,
+    "duelloNote": "Non da duello rapido. Muta simultaneamente sia la forma che il materiale costitutivo dell'oggetto.",
+    "movimento": "Tracciamento a doppia elica nello spazio attorno all'oggetto.",
+    "movimentoSvg": "M 45,40 Q 75,75 105,40 Q 75,75 45,110 Q 75,75 105,110",
+    "descrizione": "Il livello più elevato della trasfigurazione applicata agli oggetti: altera congiuntamente conformazione e composizione materica.",
+    "etimologia": "Dal latino vertere (volgere, capovolgere interamente).",
+    "valenza": 8,
+    "sommaLettere": 26,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 26 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
   }
 ];
 

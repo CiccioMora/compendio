@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Rigenera docs/compendio_incantesimi.md e l'artifact compendio_incantesimi.md
-garantendo la completa sincronizzazione dei 144 incantesimi,
-suddivisi per anno con la specifica:
-- VI Anno: Maledictio (Yashiro Isana Mortem) & Liber Sextus (Hawstein)
-- VII Anno: Oltre il Mago (Yashiro Isana Mortem) & Liber Septimus (Hawstein)
+garantendo la completa sincronizzazione dei 154 incantesimi,
+suddivisi per anno (I-VII Anno) e con la sezione "Altri" per le formule
+senza un riferimento d'anno scolastico specifico.
 """
 
 import json
@@ -26,16 +25,17 @@ for s in spells:
     by_year.setdefault(y, []).append(s)
 
 year_titles = {
-    1: ("I ANNO — FONDAMENTI DI DIFESA, CINETICA, TRASFIGURAZIONE & LIBER I", "Fondamenti didattici, disarmo, mobilità, trasfigurazione inanimata e Aritmanzia elementale base (19 formule)."),
-    2: ("II ANNO — FATTURE, CONTROINCANTI, TRASFIGURAZIONE MATERICA & LIBER II", "Fatture di impatto, controincanti generali, mutazione materica e controllo dell'Aria (16 formule)."),
-    3: ("III ANNO — GELO, TRASFIGURAZIONE TOTALE & LIBER III", "Magia del ghiaccio, trasfigurazione inanimati-animali e formule elementali di Terra e Fuoco (17 formule)."),
-    4: ("IV ANNO — TATTICHE DI DIFESA, MARCHIATURA, MEDIMAGIA & LIBER IV", "Sortilegi da breccia, marchiatura e diagnostica trasfigurativa, varchi proporzionali aurei e difese statiche (24 formule)."),
-    5: ("V ANNO — PREPARAZIONE AI G.U.F.O., EVANESCENZA & LIBER V", "Sortilegi esplosivi, formule di evanescenza per inanimati e viventi e crittografia celante aurea (13 formule)."),
-    6: ("VI ANNO (SESTO ANNO) — MALEDIZIONI, TRASFIGURAZIONE (PAG. 83), INCANTESIMI & LIBER VI", "Didattica avanzata di Sesto Anno: Estensione Irriconoscibile (Pag. 83), Trasfigurazione pratica & circolare, Incantesimi Non-Verbali, D.C.A.O. e traslazione spaziale aritmantica (40 formule)."),
-    7: ("VII ANNO (SETTIMO ANNO) — INCANTESIMI SUPERIORI, D.C.A.O., ANIMAGIA (PAG. 108) & LIBER VII", "Didattica superiore di Settimo Anno: Incantesimi stazionari ed ermetici (Fidelius, Proteus, Cave Inimicum, Prior Incantatio, Passaporta), D.C.A.O. superiore, teoria dell'Animagia (Pag. 108) e rituali di sigillo permanente (25 formule).")
+    1: ("I ANNO — FONDAMENTI DI DIFESA, CINETICA & TRASFIGURAZIONE ELEMENTARE", "Fondamenti didattici, disarmo, mobilità e trasfigurazione inanimata di base."),
+    2: ("II ANNO — FATTURE, TRASFIGURAZIONE MATERICA & GESTIONE CREATURE", "Fatture di impatto, mutazione materica e contrasto creature."),
+    3: ("III ANNO — GELO, CONTRO-MOLLICCI & LOCOMOZIONE AVANZATA", "Magia del ghiaccio, trasfigurazione inanimati-animali e controllo cinetico."),
+    4: ("IV ANNO — TATTICHE DI DIFESA, MEDIMAGIA & CONFINAMENTO", "Sortilegi da breccia, legami vincolanti, guarigione da campo e difese d'area."),
+    5: ("V ANNO — PREPARAZIONE AI G.U.F.O. & INCANTI ESPLOSIVI", "Sortilegi esplosivi, formule distruttive avanzate e animazione litica."),
+    6: ("VI ANNO (SESTO ANNO) — MALEDIZIONI, TRASFIGURAZIONE (PAG. 83), INCANTESIMI & LIBER VI", "Didattica avanzata di Sesto Anno: Estensione Irriconoscibile (Pag. 83), Trasfigurazione pratica, Incantesimi Non-Verbali, D.C.A.O. (Maledictio) e traslazione spaziale aritmantica (Liber Sextus)."),
+    7: ("VII ANNO (SETTIMO ANNO) — INCANTESIMI SUPERIORI, D.C.A.O., ANIMAGIA (PAG. 108) & LIBER VII", "Didattica superiore di Settimo Anno: Incantesimi stazionari ed ermetici (Fidelius, Proteus, Cave Inimicum, Prior Incantatio, Passaporta), D.C.A.O. superiore (Oltre il Mago), teoria dell'Animagia (Pag. 108) e rituali di sigillo permanente (Liber Septimus)."),
+    0: ("ALTRI — FORMULE GENERALI, ELEMENTALI & TRASFIGURAZIONE FONDAMENTALE", "Formule, controincanti e trattati operativi privi di un riferimento legato all'anno accademico (Formule Elementali T.L.A., Aritmanzia fondamentale di Bridget Wenlock/Hawstein, Difese di Zona, Tracciature, Diagnostica ed Evanescenze).")
 }
 
-year_order = [1, 2, 3, 4, 5, 6, 7]
+year_order = [1, 2, 3, 4, 5, 6, 7, 0]
 
 md = []
 md.append("# Compendium Magicum: Portale della Conoscenza degli Incantesimi")
@@ -43,8 +43,9 @@ md.append("*Classificazione Accademica Metodologica per Anni di Studio (Hogwarts
 md.append("> [!NOTE]")
 md.append(f"> Il presente compendio unifica l'intero corpus magico di **{len(spells)} incantesimi catalogati**, integrando le fonti didattiche ufficiali:")
 md.append("> - **Programma di Studio Arcane GDR**: Incantesimi, Trasfigurazione e Difesa Contro le Arti Oscure (*I-VII Anno*).")
-md.append("> - **Codex Arithmantiae** (*Zeno & Glaphira Hawstein*): *Liber I-V* (Aritmanzia di Base), *Liber VI* (Spazio e Traslazione — VI Anno), *Liber VII* (Rituali, Sigilli e Trappole — VII Anno).")
+md.append("> - **Codex Arithmantiae** (*Zeno & Glaphira Hawstein*): *Liber VI* (Spazio e Traslazione — VI Anno), *Liber VII* (Rituali, Sigilli e Trappole — VII Anno) e formule elementali/operative.")
 md.append("> - **Difesa Contro le Arti Oscure** (*Yashiro Isana Mortem*): **Maledictio** (*VI Anno*) e **Oltre il Mago** (*VII Anno*).")
+md.append("> - **Formule Senza Anno (Altri)**: Controincanti generali, difese statiche di zona, trasfigurazione fondamentale e trattati aritmantici non vincolati ad un'annata scolastica.")
 md.append(">\n> 🔗 **[Apri il Portale Web Interattivo Completo (154 Incantesimi)](file:///Users/andreamorachioli/.gemini/antigravity/brain/3a4f7fa7-8206-4f51-b303-aa9b9d9eaf5c/portale_incantesimi.html)** oppure visualizza il progetto in locale: **[index.html](file:///Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi/index.html)**.\n")
 md.append("---\n## 1. Fondamenti del Calcolo Aritmantico della Valenza Magica\n")
 md.append("Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica racchiude un potenziale numerico intrinseco denominato **Valenza Magica**, calcolato tramite la **Tavola Pitagorica**:\n")
@@ -111,7 +112,7 @@ md.append("4. **Classificazione delle Evanescenze**: Evanesco (inanimati e liqui
 md.append("---\n## 4. Strumenti Integrati nel Portale Web\n")
 md.append("- **Visualizzatore Vettoriale SVG**: traccia dinamica e animata in tempo reale della traiettoria di bacchetta.")
 md.append("- **Calcolatore Dinamico di Valenza**: calcola all'istante somma pitagorica, valenza, valenza opposta, figura geometrica operativa ed elemento naturale per qualsiasi formula o nome inserito.")
-md.append("- **Filtri di Ricerca Multidimensionale**: per anno di corso, tipologia, compatibilità al duello e valenza magica da 1 a 9.\n")
+md.append("- **Filtri di Ricerca Multidimensionale**: per anno di corso (I-VII Anno e Altri), tipologia, compatibilità al duello e valenza magica da 1 a 9.\n")
 md.append("> **Accedi ai File:**")
 md.append(f"> - [portale_incantesimi.html](file://{ARTIFACT_DIR}/portale_incantesimi.html) (Versione Artifact)")
 md.append(f"> - [index.html](file://{BASE_DIR}/index.html) (Versione Workspace)")
