@@ -17,6 +17,16 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | J | K | L | M | N | O | P | Q | R |
 | S | T | U | V | W | X | Y | Z |   |
 
+### Struttura in Sette Libri del Codex Arithmantiae (*Zeno & Glaphira Hawstein*):
+Il trattato fondamentale si articola in 7 Libri e appendici operative, integrati nel corso di studi:
+- **Liber I — I Fondamenti dell'Arte**: introduzione teorica, livelli d'azione (T.L.A.), valenza magica pitagorica, numeri speciali e Bridget Wenlock (il sacro numero 7).
+- **Liber II — Numero e Anima**: numerologia, aritmomanzia e onomanzia, archetipi, numero del carattere, destino, cuore e ruota di Pitagora.
+- **Liber III — Incantesimi**: incanti ripetibili e irripetibili, controincanti aritmantici, formule elementali (*Coerceo*, *Finge*, *Adultero*, *Plasma*), difese statiche di zona (*Protego Totalum*, *Muffliato*), piante elementali e incantesimo *Proteus*.
+- **Liber IV — Geometria Magica**: figure geometriche e incantesimo segnante *Signo*, quadrati magici di Agrippa e Sator, sezione aurea e varchi proporzionali (*Phi Porta*, *Phi Revelio*).
+- **Liber V — La Cabala**: sephirot, vie di saggezza ed evoluzione esoterica caldea.
+- **Liber VI — Spazio e Traslazione (Sesto Anno / VI Anno)**: pozzi comunicanti (*Emineo*, *Emineo Puteus*), smaterializzazione, passaporta (*Portus*), triangolo traslatore (*Transatio Objecto*), giratempo e memoria delle bacchette (*Prior Incantatem*).
+- **Liber VII — Rituali, Sigilli e Trappole (Settimo Anno / VII Anno)**: rituali di passaggio e iniziazione, ricordi silenti (*Capio Memoriam*), sigilli aritmantici (*Deminatio Gravitas*, *Magnes Lathos Addicis*, *Protegis Hoc Incantementum*), rottura dei sigilli (*Nodum Solvo*), trappole geometriche (*Abscondas*, *Fermo*, *In Fine Laqueo*, *Quae Reversa*).
+
 ### Regole Fondamentali:
 1. **Calcolo della Valenza**: si sommano i valori numerici delle singole lettere della formula e si riduce a cifra singola (intervallo 1-9).
 2. **Principio di Ripetizione**: un incantesimo ripetibile può essere reiterato efficacemente fino a un numero massimo di volte pari alla sua valenza magica (oltre tale soglia la reiterazione è vana).

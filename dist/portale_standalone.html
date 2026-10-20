@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compendium Magicum - Portale della Conoscenza degli Incantesimi</title>
-  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <!-- Tailwind CSS (CDN pubblico con fallback) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    if (!window.tailwind) {
+      document.write('<script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"><\/script>');
+    }
+  </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;600&display=swap');
 
     :root {
       --font-serif: 'Cinzel', serif, Georgia;
@@ -88,7 +94,8 @@
       transform: translateY(-3px);
       box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.7), 0 0 16px -2px rgba(217, 119, 6, 0.2);
     }
-  </style>
+
+</style>
 </head>
 <body class="min-h-screen text-slate-200 antialiased selection:bg-amber-500 selection:text-slate-950">
 
@@ -211,14 +218,15 @@
             <span>📅</span> Filtro Anno di Corso:
           </label>
           <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Tutti gli Anni (129)</option>
+            <option value="ALL">Tutti gli Anni (142)</option>
             <option value="1">I Anno — Fondamenti & Cinetica (16)</option>
             <option value="2">II Anno — Fatture & Inanimati (14)</option>
             <option value="3">III Anno — Gelo, Impatto & Locomozione (16)</option>
             <option value="4">IV Anno — Tattiche & Medimagia (20)</option>
             <option value="5">V Anno — Umana, Esplosivi & Maledizioni (24)</option>
-            <option value="6,7">M.A.G.O. & Arti Oscure (16)</option>
-            <option value="0">Grimorio Aritmantico (Hawstein) (23)</option>
+            <option value="6">VI Anno — M.A.G.O. I & Liber Sextus (Spazio e Traslazione) (17)</option>
+            <option value="7">VII Anno — M.A.G.O. II & Liber Septimus (Rituali, Sigilli e Trappole) (14)</option>
+            <option value="0">Aritmanzia — Hawstein: Liber I-V & Trattati Operativi (21)</option>
           </select>
         </div>
 
@@ -228,9 +236,9 @@
             <span>⚔️</span> Utilizzo in Duello:
           </label>
           <select id="duelFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Duello: Qualsiasi (129)</option>
-            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (86)</option>
-            <option value="NO">⛔ Non da Duello / Rituale: NO (43)</option>
+            <option value="ALL">Duello: Qualsiasi (142)</option>
+            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (91)</option>
+            <option value="NO">⛔ Non da Duello / Rituale: NO (51)</option>
           </select>
         </div>
 
@@ -270,11 +278,11 @@
         <div>
           <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
             <span>Filtro Rapido per Anno di Corso:</span>
-            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">129 incantesimi trovati</span>
+            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">142 incantesimi trovati</span>
           </div>
           <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
             <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (129)
+              Tutti (142)
             </button>
             <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               I Anno (16)
@@ -291,11 +299,14 @@
             <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               V Anno (24)
             </button>
-            <button data-year="6,7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              M.A.G.O. (16)
+            <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              VI Anno / Liber Sextus (17)
+            </button>
+            <button data-year="7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              VII Anno / Liber Septimus (14)
             </button>
             <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              Aritmanzia & Trattati (23)
+              Aritmanzia / Liber I-V (21)
             </button>
           </div>
         </div>
@@ -307,13 +318,13 @@
             <span class="text-slate-400 font-medium">Duello:</span>
             <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
               <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
-                Tutti (129)
+                Tutti (142)
               </button>
               <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
-                ⚔️ Da Duello: SÌ (86)
+                ⚔️ Da Duello: SÌ (91)
               </button>
               <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
-                ⛔ Non in Duello: NO (43)
+                ⛔ Non in Duello: NO (51)
               </button>
             </div>
           </div>
@@ -583,10 +594,7 @@
   <!-- SCRIPT WITH EMBEDDED SPELLS DATA & APPLICATION LOGIC -->
   <script>
 // spellsData.js - Archivio Completo degli Incantesimi suddiviso per Anni
-// Fonti: Codex Arithmantiae, Manuale di D.C.A.O., Exorcismis Occultis, Maledictio, Oltre il Mago
-
-// spellsData.js - Archivio Completo degli Incantesimi suddiviso per Anni
-// Fonti: Codex Arithmantiae, Manuale di D.C.A.O., Exorcismis Occultis, Maledictio, Manuale di Trasfigurazione, Dispensa Incantesimi
+// Fonti: Codex Arithmantiae (Z. & G. Hawstein), Manuale di D.C.A.O. (G. Mortem), Exorcismis Occultis & Maledictio (Y. I. Mortem), Manuale di Trasfigurazione, Dispensa Incantesimi
 
 const SPELLS_DATA = [
   {
@@ -2985,8 +2993,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "nodum-solvo",
-    "anno": 0,
-    "annoLabel": "Aritmanzia",
+    "anno": 7,
+    "annoLabel": "VII Anno (Liber Septimus)",
     "nome": "Scioglimento dei Sigilli (Nodum Solvo)",
     "formula": "Nodum Solvo",
     "ripetibile": false,
@@ -3002,16 +3010,16 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Trattato in Codex Arithmantiae, Liber Septimus (Cap. VII: La rottura di un sigillo). Valenza 6 (somma 42 ridotta a 6). Valenza opposta: 4. Figura per Signo: Esagono regolare."
   },
   {
     "id": "prior-incantatem",
-    "anno": 0,
-    "annoLabel": "Investigazione",
+    "anno": 6,
+    "annoLabel": "VI Anno (Liber Sextus)",
     "nome": "Rivelazione della Memoria della Bacchetta (Prior Incantatem)",
     "formula": "Prior Incantatem",
     "ripetibile": false,
-    "tipologia": "Rivelazione / Indagine Magica",
+    "tipologia": "Aritmantico / Indagine / Memoria Bacchette",
     "inDuello": false,
     "duelloNote": "Utilizzabile solo in casi rari di connessione tra bacchette gemelle con lo stesso nucleo (Prior Incantatio). Normalmente usato in indagini forensi ministeriali.",
     "movimento": "Giunzione punta a punta con la bacchetta da ispezionare.",
@@ -3023,7 +3031,7 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 77 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Trattato in Codex Arithmantiae, Liber Sextus (Cap. VII: Le bacchette e l'aritmologia). Valenza 5 (somma 77 ridotta a 5). Valenza opposta: 5. Figura per Signo: Pentagono regolare."
   },
   {
     "id": "protego-totalum",
@@ -3297,6 +3305,279 @@ const SPELLS_DATA = [
     "maxRipetizioni": 3,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
     "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 84 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte."
+  },
+  {
+    "id": "emineo",
+    "anno": 6,
+    "annoLabel": "VI Anno (Liber Sextus)",
+    "nome": "Formula dei Pozzi Comunicanti (Emineo)",
+    "formula": "Emineo",
+    "ripetibile": false,
+    "tipologia": "Aritmantico / Traslazione / Pozzi Comunicanti",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello diretto. Formula di attivazione statica del primo pozzo comunicante per la traslazione di oggetti o messaggi.",
+    "movimento": "Rotazione orizzontale in senso orario sul bordo del pozzo seguita da tocco al centro del livello dell'acqua.",
+    "movimentoSvg": "M 75,30 A 45,45 0 1,1 74,30 Z M 75,55 L 75,95 M 55,75 L 95,75",
+    "descrizione": "Attiva la prima estremità di un sistema di pozzi comunicanti aritmantici. Crea una connessione risonante con la terra e l'acqua sotterranea per consentire il transito istantaneo.",
+    "etimologia": "Dal latino eminere (innalzarsi, emergere, spiccare all'esterno).",
+    "valenza": 7,
+    "sommaLettere": 34,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "emineo-puteus",
+    "anno": 6,
+    "annoLabel": "VI Anno (Liber Sextus)",
+    "nome": "Formula di Collegamento Pozzi (Emineo Puteus)",
+    "formula": "Emineo Puteus",
+    "ripetibile": false,
+    "tipologia": "Aritmantico / Traslazione / Pozzi Comunicanti",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello. Formula di chiusura e aggancio che collega il secondo pozzo al primo già attivato.",
+    "movimento": "Discesa verticale della bacchetta all'interno della cavità seguita da una mezzaluna verso l'alto.",
+    "movimentoSvg": "M 75,25 L 75,95 Q 75,120 105,100",
+    "descrizione": "Stabilisce il ponte magico tra il secondo pozzo comunicante e il primo. Una volta completato il collegamento, qualsiasi oggetto immerso nel primo pozzo emerge simultaneamente nel secondo.",
+    "etimologia": "Dal latino eminere e puteus (pozzo, cavità d'acqua).",
+    "valenza": 1,
+    "sommaLettere": 55,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "portus",
+    "anno": 6,
+    "annoLabel": "VI Anno (Liber Sextus)",
+    "nome": "Incantesimo Passaporta (Portus)",
+    "formula": "Portus",
+    "ripetibile": false,
+    "tipologia": "Aritmantico / Traslazione ad Area",
+    "inDuello": false,
+    "duelloNote": "Non da duello d'attacco rapido; utilizzabile per ritirate tattiche d'emergenza predisposte o per evacuare alleati su un oggetto prefissato.",
+    "movimento": "Puntamento fermo e prolungato sull'oggetto con tocco vibrante al termine della formula; rilascia un bagliore azzurro.",
+    "movimentoSvg": "M 40,75 L 110,75 M 90,55 L 110,75 L 90,95 M 75,40 A 35,35 0 0,1 75,110",
+    "descrizione": "Trattato nel Liber Sextus (Cap. IV). Trasforma qualsiasi oggetto comune in una Passaporta abilitata a trasportare chiunque la tocchi a una destinazione e ora prestabilite.",
+    "etimologia": "Dal latino porta (passaggio, varco d'accesso).",
+    "valenza": 1,
+    "sommaLettere": 28,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "transatio-objecto",
+    "anno": 6,
+    "annoLabel": "VI Anno (Liber Sextus)",
+    "nome": "Triangolo Traslatore (Transatio Objecto)",
+    "formula": "Transatio Objecto",
+    "ripetibile": false,
+    "tipologia": "Aritmantico / Traslazione Geometrica",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello strategico avanzato: trasferisce all'istante armi, scudi o trappole tra due aree segnate da triangoli perfetti.",
+    "movimento": "Tracciare due triangoli equilateri concentrici nell'aria ruotati di 180 gradi con stoccata al vertice superiore.",
+    "movimentoSvg": "M 75,30 L 115,105 L 35,105 Z M 75,115 L 35,40 L 115,40 Z",
+    "descrizione": "Trattato nel Liber Sextus (Cap. V). Crea un condotto di traslazione geometrica istantanea fra due triangoli equilateri tracciati con Signo, smaterializzando e rimaterializzando l'oggetto bersaglio.",
+    "etimologia": "Dal latino translatio (trasferimento) e objectum (oggetto posto innanzi).",
+    "valenza": 7,
+    "sommaLettere": 61,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 61 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "abscondas",
+    "anno": 7,
+    "annoLabel": "VII Anno (Liber Septimus)",
+    "nome": "Formula Celante di Trappola (Abscondas)",
+    "formula": "Abscondas",
+    "ripetibile": true,
+    "tipologia": "Aritmantico / Occultamento di Trappola",
+    "inDuello": true,
+    "duelloNote": "Molto efficace in duello tattico e imboscata: cela completamente la runa, il campo d'attivazione e la presenza della trappola magica preparata sul terreno.",
+    "movimento": "Tre cerchi concentrici discendenti tracciati sopra la trappola con dissolvenza finale verso l'esterno.",
+    "movimentoSvg": "M 75,35 A 40,40 0 1,1 74,35 Z M 75,50 A 25,25 0 1,1 74,50 Z M 75,65 A 10,10 0 1,1 74,65 Z",
+    "descrizione": "Trattata nel Liber Septimus (Cap. IX & Glossario). Formula celante delle trappole aritmantiche di valenza sei. Occulta la trama energetica del campo e le cariche legate, rendendola impercettibile alla vista.",
+    "etimologia": "Dal latino abscondere (nascondere, sottrarre alla vista).",
+    "valenza": 6,
+    "sommaLettere": 24,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 6,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 24 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volta/e."
+  },
+  {
+    "id": "fermo",
+    "anno": 7,
+    "annoLabel": "VII Anno (Liber Septimus)",
+    "nome": "Formula di Vincolo e Trappola d'Incanto (Fermo)",
+    "formula": "Fermo",
+    "ripetibile": true,
+    "tipologia": "Aritmantico / Trappola d'Incanto / Vincolo",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello: impone un comando coattivo di blocco su un oggetto animato o genera una trappola d'incanto al suolo. Richiede 7 ripetizioni rituali.",
+    "movimento": "Puntamento fermo e perentorio verso il suolo o l'oggetto animato con colpo secco discendente.",
+    "movimentoSvg": "M 75,30 L 75,115 M 50,115 L 100,115 M 55,75 L 95,75",
+    "descrizione": "Trattata nel Liber Septimus (Cap. XII). Impone un'azione vincolante a un oggetto animato o genera un'area d'incanto pronta a scattare sul primo bersaglio. Va ripetuta esattamente sette volte.",
+    "etimologia": "Dal latino firmare / fermare (rendere saldo, stabilire un vincolo immutabile).",
+    "valenza": 3,
+    "sommaLettere": 30,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volta/e."
+  },
+  {
+    "id": "in-fine-laqueo",
+    "anno": 7,
+    "annoLabel": "VII Anno (Liber Septimus)",
+    "nome": "Interruzione di Trappola Aritmantica (In Fine Laqueo)",
+    "formula": "In Fine Laqueo",
+    "ripetibile": false,
+    "tipologia": "Contro-Trappola Aritmantica",
+    "inDuello": true,
+    "duelloNote": "Fondamentale in duello tattico: disinnesca all'istante una propria trappola attiva per permettere il transito sicuro di compagni o per evitare contraccolpi.",
+    "movimento": "Fendente a forbice dall'esterno verso l'interno che taglia il vincolo del laccio magico.",
+    "movimentoSvg": "M 35,40 L 115,110 M 115,40 L 35,110",
+    "descrizione": "Trattata nel Liber Septimus (Cap. IX). Formula specifica di disinnesco e interruzione delle trappole aritmantiche. Solo chi ha originariamente creato la trappola può pronunciarla con pieno effetto.",
+    "etimologia": "Dal latino in fine (al termine, alla conclusione) e laqueus (laccio, trappola, cappio).",
+    "valenza": 2,
+    "sommaLettere": 65,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Angolo / Linea (Dualismo)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 65 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "quae-reversa",
+    "anno": 7,
+    "annoLabel": "VII Anno (Liber Septimus)",
+    "nome": "Formula di Serrata per Trappole (Quae Reversa)",
+    "formula": "Quae Reversa",
+    "ripetibile": true,
+    "tipologia": "Aritmantico / Sigillo di Trappola",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello: serra e arma i vertici della trappola geometrica. Richiede di essere ripetuta su ciascun vertice del poligono d'innesco.",
+    "movimento": "Movimento a uncino che si chiude su se stesso toccando ciascun vertice della figura geometrica tracciata.",
+    "movimentoSvg": "M 40,75 Q 75,35 110,75 Q 90,115 55,100 L 75,75",
+    "descrizione": "Trattata nel Liber Septimus (Cap. IX & Glossario). Formula di serrata delle trappole geometriche di valenza 6. Da ripetere su ciascun vertice del perimetro per rendere la chiusura irreversibile per gli intrusi.",
+    "etimologia": "Dal latino quae reversa (ciò che è stato rivoltato o serrato indietro).",
+    "valenza": 6,
+    "sommaLettere": 51,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 6,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 51 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volta/e."
+  },
+  {
+    "id": "deminatio-gravitas",
+    "anno": 7,
+    "annoLabel": "VII Anno (Liber Septimus)",
+    "nome": "Sigillo Antigravitazionale (Deminatio Gravitas)",
+    "formula": "Deminatio Gravitas",
+    "ripetibile": false,
+    "tipologia": "Aritmantico / Sigillo Statico di Gravità",
+    "inDuello": false,
+    "duelloNote": "Non da duello rapido. Chiude il Sigillo Antigravitazionale in una stanza o deposito, riducendo la forza gravitazionale da 9.8N a 1.6N.",
+    "movimento": "Tracciare un ettagono regolare al suolo con Signo e imprimere la chiusura con puntamento ascendente.",
+    "movimentoSvg": "M 75,25 L 110,45 L 125,85 L 95,115 L 55,115 L 25,85 L 40,45 Z",
+    "descrizione": "Trattata nel Liber Septimus (Cap. VIII). Formula di serrata del Sigillo Antigravitazionale. Altera la fisica magica dell'area abbattendo la costante di gravità a valori lunari.",
+    "etimologia": "Dal latino deminutio (diminuzione, alleggerimento) e gravitas (peso, gravità terrestre).",
+    "valenza": 7,
+    "sommaLettere": 79,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 79 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "magnes-lathos-addicis",
+    "anno": 7,
+    "annoLabel": "VII Anno (Liber Septimus)",
+    "nome": "Sigillo Elettromagnetizzante (Magnes Lathos Addicis)",
+    "formula": "Magnes Lathos Addicis",
+    "ripetibile": true,
+    "tipologia": "Aritmantico / Sigillo Magnetico",
+    "inDuello": false,
+    "duelloNote": "Non da duello ravvicinato. Sigillo di mezzaluna da ripetere due volte alle estremità per polarizzare metalli e respingere cariche.",
+    "movimento": "Arco a mezzaluna tracciato nell'aria con tocco vibrante alle due cuspidi estreme.",
+    "movimentoSvg": "M 40,40 A 50,50 0 0,0 40,110 A 35,35 0 0,1 40,40 Z",
+    "descrizione": "Trattato nel Liber Septimus (Cap. VIII). Genera un campo magnetico permanente su oggetti o armature metalliche. Blocca l'avvicinamento di lame ferrose e devia dardi polarizzati.",
+    "etimologia": "Dal greco magnes (magnete, calamita) e latino addicere (vincolare a forza).",
+    "valenza": 3,
+    "sommaLettere": 75,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 75 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volta/e."
+  },
+  {
+    "id": "protegis-hoc-incantementum",
+    "anno": 7,
+    "annoLabel": "VII Anno (Liber Septimus)",
+    "nome": "Sigillo di Protezione Caldeo (Protègis Hòc Incanteméntum)",
+    "formula": "Protegis Hoc Incantementum",
+    "ripetibile": false,
+    "tipologia": "Aritmantico / Sigillo Protettivo Superiore",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Sigillo protettivo caldeo di massima complessità per schermare incantesimi statici di lunga durata o Horcrux.",
+    "movimento": "Ottagono tracciato nello spazio con la bacchetta puntata al centro della sfera di protezione.",
+    "movimentoSvg": "M 50,30 L 100,30 L 125,55 L 125,95 L 100,120 L 50,120 L 25,95 L 25,55 Z",
+    "descrizione": "Trattato nel Liber Septimus (Cap. VIII). Il più impenetrabile dei sigilli difensivi noti nel Codex Arithmantiae: protegge un incanto permanente moltiplicandone le difese contro ogni tentativo di scasso.",
+    "etimologia": "Dalla formula arcaica caldea di protezione incantata e vincolo.",
+    "valenza": 8,
+    "sommaLettere": 116,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 116 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "rotas-sator",
+    "anno": 7,
+    "annoLabel": "VII Anno (Liber Septimus)",
+    "nome": "Attivazione del Quadrato di Sator (Rotas Sator)",
+    "formula": "Rotas Opera Tenet Arepo Sator",
+    "ripetibile": true,
+    "tipologia": "Aritmantico / Quadrato Palindromo Magico",
+    "inDuello": false,
+    "duelloNote": "Non da duello rapido. Richiede cinque ripetizioni consecutive nei quattro sensi del quadrato palindromo.",
+    "movimento": "Disegnare un quadrato perfetto suddiviso in cinque fasce con tocco centrale sulla parola TENET.",
+    "movimentoSvg": "M 35,35 L 115,35 L 115,115 L 35,115 Z M 75,35 L 75,115 M 35,75 L 115,75",
+    "descrizione": "Trattata nel Liber IV e Liber VII del Codex Arithmantiae. Attiva il leggendario Quadrato Palindromo magico di Sator creando una barriera di simmetria perfetta che respinge qualsiasi incantesimo dispari.",
+    "etimologia": "Celebre quadrato magico palindromo latino di epoca romana imperiale.",
+    "valenza": 5,
+    "sommaLettere": 113,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 5,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 113 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 5 volta/e."
+  },
+  {
+    "id": "capio-memoriam",
+    "anno": 7,
+    "annoLabel": "VII Anno (Liber Septimus)",
+    "nome": "Duplicazione dei Ricordi (Capio Memoriam)",
+    "formula": "Capio Memoriam",
+    "ripetibile": false,
+    "tipologia": "Aritmantico / Medimagia / Rituale Mentale",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello. Formula del Rituale dei Ricordi Silenti per duplicare ed estrarre memorie senza alterare la mente originale.",
+    "movimento": "Punta della bacchetta a contatto con la tempia, estrazione lenta e continua del filamento argenteo.",
+    "movimentoSvg": "M 40,75 C 60,45 80,105 110,75 L 100,65 M 110,75 L 100,85",
+    "descrizione": "Trattata nel Liber Septimus (Rituale dei Ricordi Silenti & Glossario). Estrae e duplica un ricordo integro dal cervello dell'incantatore per conservarlo in un pensatoio o in una fiala sigillata.",
+    "etimologia": "Dal latino capere (cogliere, accogliere, catturare) e memoria.",
+    "valenza": 5,
+    "sommaLettere": 68,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volta/e."
   }
 ];
 
@@ -3305,7 +3586,9 @@ if (typeof module !== "undefined" && module.exports) {
 }
 
 
-    // --- Application State ---
+// app.js - Logica Applicativa e Interattività del Portale degli Incantesimi
+
+// --- Application State ---
     let activeYear = "ALL";
     let activeType = "ALL";
     let activeDuel = "ALL";
@@ -3853,6 +4136,7 @@ if (typeof module !== "undefined" && module.exports) {
     // Initial boot
     updateStats();
     renderSpells();
+
   </script>
 </body>
 </html>
