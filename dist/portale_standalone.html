@@ -221,15 +221,15 @@
             <span>📅</span> Filtro Anno di Corso:
           </label>
           <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Tutti (200)</option>
-            <option value="1">I Anno (20)</option>
-            <option value="2">II Anno (14)</option>
-            <option value="3">III Anno (15)</option>
-            <option value="4">IV Anno (19)</option>
-            <option value="5">V Anno (12)</option>
+            <option value="ALL">Tutti (202)</option>
+            <option value="1">I Anno (24)</option>
+            <option value="2">II Anno (15)</option>
+            <option value="3">III Anno (18)</option>
+            <option value="4">IV Anno (16)</option>
+            <option value="5">V Anno (13)</option>
             <option value="6">VI Anno (43)</option>
             <option value="7">VII Anno (31)</option>
-            <option value="0">Altri (21)</option>
+            <option value="0">Altri (17)</option>
             <option value="8">Antiche Rune (25)</option>
           </select>
         </div>
@@ -240,8 +240,8 @@
             <span>⚔️</span> Utilizzo in Duello:
           </label>
           <select id="duelFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Duello: Qualsiasi (175)</option>
-            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (98)</option>
+            <option value="ALL">Duello: Qualsiasi (177)</option>
+            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (100)</option>
             <option value="NO">⛔ Non da Duello / Rituale: NO (77)</option>
           </select>
         </div>
@@ -282,26 +282,26 @@
         <div>
           <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
             <span>Filtro Rapido per Anno di Corso:</span>
-            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">200 incantesimi trovati</span>
+            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">202 incantesimi trovati</span>
           </div>
           <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
             <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (200)
+              Tutti (202)
             </button>
             <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              I Anno (20)
+              I Anno (24)
             </button>
             <button data-year="2" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              II Anno (14)
+              II Anno (15)
             </button>
             <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              III Anno (15)
+              III Anno (18)
             </button>
             <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              IV Anno (19)
+              IV Anno (16)
             </button>
             <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              V Anno (12)
+              V Anno (13)
             </button>
             <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               VI Anno (43)
@@ -310,7 +310,7 @@
               VII Anno (31)
             </button>
             <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              Altri (21)
+              Altri (17)
             </button>
             <button data-year="8" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-indigo-950 text-indigo-300 border border-indigo-700/60 hover:bg-indigo-900">
               Antiche Rune (25)
@@ -325,10 +325,10 @@
             <span class="text-slate-400 font-medium">Duello:</span>
             <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
               <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
-                Tutti (175)
+                Tutti (177)
               </button>
               <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
-                ⚔️ Da Duello: SÌ (98)
+                ⚔️ Da Duello: SÌ (100)
               </button>
               <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
                 ⛔ Non da Duello: NO (77)
@@ -626,10 +626,32 @@
 
   <!-- SCRIPTS: DATABASE & APP LOGIC -->
   <script>
-// spellsData.js - Archivio Completo dei 200 Incantesimi e Rune dell'Antico Futhark
+// spellsData.js - Archivio Completo dei 202 Incantesimi e Rune dell'Antico Futhark
 // Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR, Trattati Didattici, Astronomia, Erbologia e Codex Arithmantiae
 
 const SPELLS_DATA = [
+  {
+    "id": "chartanimus",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Animazione di Carta (Chartanimus)",
+    "formula": "Chartanimus",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Animata Elementare",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Primo esercizio didattico per apprendere la trasfigurazione da bidimensionale a tridimensionale.",
+    "movimento": "Tocco leggero agli angoli del foglio di carta e sollevamento spiraleggiante.",
+    "movimentoSvg": "M 40,110 L 75,40 L 110,110 Z M 75,40 L 75,110",
+    "descrizione": "Trasforma un foglio di carta o pergamena in un origami tridimensionale magicamente animato che si muove secondo i comandi del mago.",
+    "etimologia": "Dal latino charta (carta) e animus (soffio vitale, animazione).",
+    "valenza": 1,
+    "sommaLettere": 46,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
+  },
   {
     "id": "liberacorpus",
     "anno": 1,
@@ -1071,26 +1093,70 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
-    "id": "chartanimus",
-    "anno": 2,
-    "annoLabel": "II Anno",
-    "nome": "Animazione di Carta (Chartanimus)",
-    "formula": "Chartanimus",
+    "id": "muto",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Trasfigurazione Materica di Sostanza (Muto)",
+    "formula": "Muto",
     "ripetibile": false,
-    "tipologia": "Trasfigurazione Animata Elementare",
+    "tipologia": "Trasfigurazione Inanimata di II Livello",
     "inDuello": false,
-    "duelloNote": "Non da duello. Primo esercizio didattico per apprendere la trasfigurazione da bidimensionale a tridimensionale.",
-    "movimento": "Tocco leggero agli angoli del foglio di carta e sollevamento spiraleggiante.",
-    "movimentoSvg": "M 40,110 L 75,40 L 110,110 Z M 75,40 L 75,110",
-    "descrizione": "Trasforma un foglio di carta o pergamena in un origami tridimensionale magicamente animato che si muove secondo i comandi del mago.",
-    "etimologia": "Dal latino charta (carta) e animus (soffio vitale, animazione).",
-    "valenza": 1,
-    "sommaLettere": 46,
-    "valenzaOpposta": 9,
+    "duelloNote": "Non da duello. Muta il materiale costitutivo lasciando inalterata la forma esteriore.",
+    "movimento": "Tocco fermo al centro della massa dell'oggetto con concentrazione sulla nuova densità molecolare.",
+    "movimentoSvg": "M 75,35 L 75,115 M 40,75 L 110,75",
+    "descrizione": "Modifica la sostanza fisica di un oggetto (es. legno in metallo) mantenendone intatta la sagoma originaria. Non può generare materiali preziosi per la Legge di Gamp.",
+    "etimologia": "Dal latino mutare (cambiare sostanza).",
+    "valenza": 6,
+    "sommaLettere": 15,
+    "valenzaOpposta": 4,
     "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
+  },
+  {
+    "id": "transfiguro",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Trasfigurazione Morfologica di Forma (Transfiguro)",
+    "formula": "Transfiguro",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Inanimata di I Livello",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Interviene solo sulla forma esteriore senza mutare il materiale costitutivo.",
+    "movimento": "Delineare la nuova sagoma aerea con la bacchetta mantenendo costante il materiale originario.",
+    "movimentoSvg": "M 40,110 L 75,35 L 110,110",
+    "descrizione": "Forma più elementare di trasfigurazione inanimata: muta esclusivamente l'aspetto geometrico ed esteriore dell'oggetto lasciando intatta la materia interna.",
+    "etimologia": "Dal latino transfigurare (mutare aspetto).",
+    "valenza": 4,
+    "sommaLettere": 58,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
+  },
+  {
+    "id": "verto",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Trasfigurazione Totale (Verto)",
+    "formula": "Verto",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Inanimata di III Livello",
+    "inDuello": false,
+    "duelloNote": "Non da duello rapido. Muta simultaneamente sia la forma che il materiale costitutivo dell'oggetto.",
+    "movimento": "Tracciamento a doppia elica nello spazio attorno all'oggetto.",
+    "movimentoSvg": "M 45,40 Q 75,75 105,40 Q 75,75 45,110 Q 75,75 105,110",
+    "descrizione": "Il livello più elevato della trasfigurazione applicata agli oggetti: altera congiuntamente conformazione e composizione materica.",
+    "etimologia": "Dal latino vertere (volgere, capovolgere interamente).",
+    "valenza": 8,
+    "sommaLettere": 26,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 26 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "immobilus",
@@ -1269,6 +1335,50 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
+    "id": "feraverto",
+    "anno": 2,
+    "annoLabel": "II Anno",
+    "nome": "Trasfigurazione Animale in Calice (Feraverto)",
+    "formula": "Feraverto",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Animata-Inanimata",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Pratica fondamentale del terzo anno di Trasfigurazione Animata.",
+    "movimento": "Tre tocchi leggeri con la punta della bacchetta sull'animale seguiti dalla pronuncia della formula.",
+    "movimentoSvg": "M 45,75 L 45,75 M 75,75 L 75,75 M 105,75 L 105,75 M 75,40 L 75,110",
+    "descrizione": "Converte un piccolo animale (come un topo o uccellino) in un calice di cristallo o vetro infrangibile contenente acqua illusoria.",
+    "etimologia": "Dal latino fera (animale selvatico) e vertere (trasformare).",
+    "valenza": 2,
+    "sommaLettere": 47,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Angolo / Linea (Dualismo)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 47 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
+  },
+  {
+    "id": "inferacus",
+    "anno": 2,
+    "annoLabel": "II Anno",
+    "nome": "Trasfigurazione Riccio in Portaspilli (Inferacus)",
+    "formula": "Inferacus",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Animata-Inanimata",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Trasfigurazione didattica avanzata da vivente ad inanimato.",
+    "movimento": "Puntamento fermo e rotazione semicircolare sopra gli aculei.",
+    "movimentoSvg": "M 40,90 C 40,50 110,50 110,90 M 75,50 L 75,25",
+    "descrizione": "Converte un porcospino o riccio in un cuscinetto portaspilli, mutando il corpo in cotone/sughero e gli aculei in aghi metallici appuntiti.",
+    "etimologia": "Dal latino infero (portare) e acus (ago).",
+    "valenza": 6,
+    "sommaLettere": 42,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
+  },
+  {
     "id": "acutus",
     "anno": 2,
     "annoLabel": "II Anno",
@@ -1379,6 +1489,72 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
+    "id": "farfallus-explodit",
+    "anno": 3,
+    "annoLabel": "III Anno",
+    "nome": "Evocazione Farfalle Luminose (Farfallus Explodit)",
+    "formula": "Farfallus Explodit",
+    "ripetibile": true,
+    "tipologia": "Evocazione / Accecamento / Distrazione",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello: libera migliaia di farfalle abbaglianti che accecano e stordiscono la linea di mira del rivale.",
+    "movimento": "Ampio ventaglio orizzontale della bacchetta con rilascio a fiotto.",
+    "movimentoSvg": "M 35,90 Q 75,30 115,90 M 75,30 L 75,110",
+    "descrizione": "Evoca un turbinio di migliaia di farfalle fluorescenti che fluttuano attorno al bersaglio disorientandolo. Non raccomandato per operazioni stealth.",
+    "etimologia": "Dall'italiano farfalla e latino explodere (scoppiare, disperdersi).",
+    "valenza": 3,
+    "sommaLettere": 75,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 75 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
+  },
+  {
+    "id": "avis",
+    "anno": 3,
+    "annoLabel": "III Anno",
+    "nome": "Evocazione di Stormo Uccelli (Avis)",
+    "formula": "Avis",
+    "ripetibile": true,
+    "tipologia": "Evocazione / Distrazione / Offensivo",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello: evoca un piccolo stormo di volatili che si scagliano contro il volto dell'avversario beccando e distraendolo.",
+    "movimento": "Movimento a scudisciata circolare nell'aria terminante con una detonazione come di sparo.",
+    "movimentoSvg": "M 40,75 C 60,35 90,35 110,75 C 90,115 60,115 40,75 Z M 75,75 L 125,50",
+    "descrizione": "Evoca direttamente un piccolo stormo di uccellini dal non-essere. A differenza di Avifors (che trasfigura materia), Avis materializza entità temporanee attraverso la bacchetta.",
+    "etimologia": "Dal latino avis (uccello, volatile).",
+    "valenza": 6,
+    "sommaLettere": 15,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 6,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
+  },
+  {
+    "id": "furunculus",
+    "anno": 3,
+    "annoLabel": "III Anno",
+    "nome": "Fattura dei Foruncoli (Furunculus)",
+    "formula": "Furunculus",
+    "ripetibile": true,
+    "tipologia": "Fattura Offensiva / Debilitante",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello. Causa dolore acuto e gonfiore purulento immediato, costringendo l'avversario a coprirsi il viso e distogliendo la concentrazione.",
+    "movimento": "Doppio tocco aereo rapido a puntura d'ape seguito da affondo verso il bersaglio.",
+    "movimentoSvg": "M 40,75 L 60,55 L 75,75 L 90,55 L 110,75",
+    "descrizione": "Ricopre istantaneamente la pelle e il volto della vittima di enormi e dolorose bolle colme di pus. Le lesioni possono essere alleviate con impacchi di Essenza di Dittamo o incantesimi curativi come Epismendo.",
+    "etimologia": "Dal latino furunculus (ladro meschino, e termine medico per foruncolo).",
+    "valenza": 3,
+    "sommaLettere": 39,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
+  },
+  {
     "id": "lux-perfluo",
     "anno": 3,
     "annoLabel": "III Anno",
@@ -1443,6 +1619,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
     "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
     "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
+  },
+  {
+    "id": "glisseo",
+    "anno": 3,
+    "annoLabel": "III Anno",
+    "nome": "Incantesimo Leviga-Scale (Glisseo)",
+    "formula": "Glisseo",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Ambientale",
+    "inDuello": true,
+    "duelloNote": "Formidabile in duello urbano o su scalinate: trasforma gli scalini sotto i piedi dell'avversario in un piano inclinato scivoloso facendolo rovinare a terra.",
+    "movimento": "Onda discendente che segue il profilo della gradinata.",
+    "movimentoSvg": "M 35,40 L 60,65 L 85,90 L 115,115",
+    "descrizione": "Concepito originariamente dai fondatori di Hogwarts per proteggere i dormitori femminili. Trasforma istantaneamente qualsiasi scalinata in un ripido e levigato scivolo.",
+    "etimologia": "Dal francese glisser (scivolare, rendere sdrucciolevole).",
+    "valenza": 5,
+    "sommaLettere": 32,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "bagaglius",
@@ -1599,6 +1797,28 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
+    "id": "reparifarge",
+    "anno": 3,
+    "annoLabel": "III Anno",
+    "nome": "Incantesimo di Rettifica Trasfigurativa (Reparifarge)",
+    "formula": "Reparifarge",
+    "ripetibile": false,
+    "tipologia": "Detrasfigurazione Correttiva",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Risana trasfigurazioni mal riuscite o parziali (es. calici con piume o zampette residue).",
+    "movimento": "Movimento circolare ampio focalizzando esclusivamente la forma originaria del soggetto.",
+    "movimentoSvg": "M 75,35 A 40,40 0 1,1 74,35",
+    "descrizione": "Incantesimo principe della Detrasfigurazione accademica. Riconduce la materia mal trasfigurata ai suoi parametri corretti.",
+    "etimologia": "Dal latino reparare e radice da effigies / -farge.",
+    "valenza": 5,
+    "sommaLettere": 68,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
+  },
+  {
     "id": "circumrota",
     "anno": 3,
     "annoLabel": "III Anno",
@@ -1619,50 +1839,6 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
     "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
-  },
-  {
-    "id": "feraverto",
-    "anno": 3,
-    "annoLabel": "III Anno",
-    "nome": "Trasfigurazione Animale in Calice (Feraverto)",
-    "formula": "Feraverto",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Animata-Inanimata",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Pratica fondamentale del terzo anno di Trasfigurazione Animata.",
-    "movimento": "Tre tocchi leggeri con la punta della bacchetta sull'animale seguiti dalla pronuncia della formula.",
-    "movimentoSvg": "M 45,75 L 45,75 M 75,75 L 75,75 M 105,75 L 105,75 M 75,40 L 75,110",
-    "descrizione": "Converte un piccolo animale (come un topo o uccellino) in un calice di cristallo o vetro infrangibile contenente acqua illusoria.",
-    "etimologia": "Dal latino fera (animale selvatico) e vertere (trasformare).",
-    "valenza": 2,
-    "sommaLettere": 47,
-    "valenzaOpposta": 8,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 47 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
-  },
-  {
-    "id": "inferacus",
-    "anno": 3,
-    "annoLabel": "III Anno",
-    "nome": "Trasfigurazione Riccio in Portaspilli (Inferacus)",
-    "formula": "Inferacus",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Animata-Inanimata",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Trasfigurazione didattica avanzata da vivente ad inanimato.",
-    "movimento": "Puntamento fermo e rotazione semicircolare sopra gli aculei.",
-    "movimentoSvg": "M 40,90 C 40,50 110,50 110,90 M 75,50 L 75,25",
-    "descrizione": "Converte un porcospino o riccio in un cuscinetto portaspilli, mutando il corpo in cotone/sughero e gli aculei in aghi metallici appuntiti.",
-    "etimologia": "Dal latino infero (portare) e acus (ago).",
-    "valenza": 6,
-    "sommaLettere": 42,
-    "valenzaOpposta": 4,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "lapifors",
@@ -1709,70 +1885,48 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
-    "id": "farfallus-explodit",
+    "id": "draconifors",
     "anno": 4,
     "annoLabel": "IV Anno",
-    "nome": "Evocazione Farfalle Luminose (Farfallus Explodit)",
-    "formula": "Farfallus Explodit",
-    "ripetibile": true,
-    "tipologia": "Evocazione / Accecamento / Distrazione",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello: libera migliaia di farfalle abbaglianti che accecano e stordiscono la linea di mira del rivale.",
-    "movimento": "Ampio ventaglio orizzontale della bacchetta con rilascio a fiotto.",
-    "movimentoSvg": "M 35,90 Q 75,30 115,90 M 75,30 L 75,110",
-    "descrizione": "Evoca un turbinio di migliaia di farfalle fluorescenti che fluttuano attorno al bersaglio disorientandolo. Non raccomandato per operazioni stealth.",
-    "etimologia": "Dall'italiano farfalla e latino explodere (scoppiare, disperdersi).",
-    "valenza": 3,
-    "sommaLettere": 75,
-    "valenzaOpposta": 7,
-    "maxRipetizioni": 3,
-    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 75 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte.",
-    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
-  },
-  {
-    "id": "orchideus",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Evocazione Floreale (Orchideus)",
-    "formula": "Orchideus",
+    "nome": "Animazione Draconica (Draconifors)",
+    "formula": "Draconifors",
     "ripetibile": false,
-    "tipologia": "Evocazione Floreale",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Sortilegio di cortesia, intrattenimento o distrazione leggera.",
-    "movimento": "Gesto a calice della mano verso l'alto con schiocco finale.",
-    "movimentoSvg": "M 75,120 L 75,70 M 50,50 Q 75,70 100,50 Q 75,25 50,50 Z",
-    "descrizione": "Fa scaturire dall'apice della bacchetta un fresco mazzo di orchidee multicolori effimere.",
-    "etimologia": "Dal nome botanico Orchis / Orchidea.",
-    "valenza": 3,
-    "sommaLettere": 48,
-    "valenzaOpposta": 7,
+    "tipologia": "Litotrasfigurazione / Animazione",
+    "inDuello": true,
+    "duelloNote": "Formidabile in duello tattico: trasforma una statua di drago in una creatura vivente capace di sputare fiamme e attaccare il nemico.",
+    "movimento": "Tracciare la sagoma delle ali del drago e terminare con una spinta fiammeggiante.",
+    "movimentoSvg": "M 40,80 Q 75,30 110,80 L 75,110 Z",
+    "descrizione": "Scoperto nella prima metà del Novecento da Harvey Ridgebit (fondatore della Congrega dei Dragologisti in Romania) per contenere draghi selvaggi animando statue.",
+    "etimologia": "Dal latino draco (drago) e -fors.",
+    "valenza": 5,
+    "sommaLettere": 59,
+    "valenzaOpposta": 5,
     "maxRipetizioni": 1,
-    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 59 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
-    "id": "avis",
+    "id": "piertotum-locomotor",
     "anno": 4,
     "annoLabel": "IV Anno",
-    "nome": "Evocazione di Stormo Uccelli (Avis)",
-    "formula": "Avis",
+    "nome": "Animazione di Statue e Armature (Piertotum Locomotor)",
+    "formula": "Piertotum Locomotor",
     "ripetibile": true,
-    "tipologia": "Evocazione / Distrazione / Offensivo",
+    "tipologia": "Trasfigurazione d'Animazione / Difesa Massiva",
     "inDuello": true,
-    "duelloNote": "Utilizzabile in duello: evoca un piccolo stormo di volatili che si scagliano contro il volto dell'avversario beccando e distraendolo.",
-    "movimento": "Movimento a scudisciata circolare nell'aria terminante con una detonazione come di sparo.",
-    "movimentoSvg": "M 40,75 C 60,35 90,35 110,75 C 90,115 60,115 40,75 Z M 75,75 L 125,50",
-    "descrizione": "Evoca direttamente un piccolo stormo di uccellini dal non-essere. A differenza di Avifors (che trasfigura materia), Avis materializza entità temporanee attraverso la bacchetta.",
-    "etimologia": "Dal latino avis (uccello, volatile).",
-    "valenza": 6,
-    "sommaLettere": 15,
-    "valenzaOpposta": 4,
-    "maxRipetizioni": 6,
-    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte.",
-    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
+    "duelloNote": "Utilizzabile in duello difensivo su larga scala: risveglia statue e armature di pietra o metallo guidandole a difesa dell'incantatore.",
+    "movimento": "Ampio gesto solenne a braccia aperte con affondo della bacchetta verso le schiere di statue.",
+    "movimentoSvg": "M 30,50 L 75,25 L 120,50 L 100,120 L 50,120 Z",
+    "descrizione": "Conferisce temporaneamente movimento coordinato, forza e obbedienza a manufatti inanimati pesanti come le armature e statue del castello di Hogwarts.",
+    "etimologia": "Dal latino pie (piamente), totum (tutto), locus (luogo) e motus (movimento).",
+    "valenza": 2,
+    "sommaLettere": 92,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 2,
+    "figuraGeometrica": "Angolo / Linea (Dualismo)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 92 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "conjunctivitus",
@@ -1795,72 +1949,6 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
     "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte.",
     "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
-  },
-  {
-    "id": "melofors",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Fattura della Zucca (Melofors)",
-    "formula": "Melofors",
-    "ripetibile": false,
-    "tipologia": "Fattura Trasfigurativa Irripetibile",
-    "inDuello": true,
-    "duelloNote": "Molto efficace in duello: ingabbia la testa del rivale all'interno di una pesante zucca, togliendogli la vista e disorientandolo.",
-    "movimento": "Arco a cupola sopra la testa dell'avversario con scatto verso il basso.",
-    "movimentoSvg": "M 40,75 C 40,40 110,40 110,75 C 110,110 40,110 40,75 Z M 75,40 L 75,25",
-    "descrizione": "Incantesimo citato nel Codex come classico esempio di incanto irripetibile: manifesta una zucca arancione sulla testa della vittima. Rilanciarlo non produce alcun effetto aggiuntivo.",
-    "etimologia": "Dal greco melon (zucca, melone) e -fors.",
-    "valenza": 4,
-    "sommaLettere": 40,
-    "valenzaOpposta": 6,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
-  },
-  {
-    "id": "incarceramus",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Fattura delle Corde Vincolanti (Incarceramus)",
-    "formula": "Incarceramus",
-    "ripetibile": true,
-    "tipologia": "Fattura Offensiva / Confinamento",
-    "inDuello": true,
-    "duelloNote": "Ottimo in duello: scaglia funi robuste che legano istantaneamente il corpo e le braccia dell'avversario alla vita.",
-    "movimento": "Doppio giro a cappio della bacchetta seguito da un affondo in avanti.",
-    "movimentoSvg": "M 40,50 C 75,20 110,50 90,85 C 70,120 40,85 75,75 L 125,75",
-    "descrizione": "Proietta lunghe e spesse corde magiche intrecciate che si avvinghiano attorno al bersaglio legandolo strettamente.",
-    "etimologia": "Dal latino incarcerare (rinchiudere, imprigionare).",
-    "valenza": 8,
-    "sommaLettere": 53,
-    "valenzaOpposta": 2,
-    "maxRipetizioni": 8,
-    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
-    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
-  },
-  {
-    "id": "epoximise",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Incantesimo Adesivo (Epoximise)",
-    "formula": "Epoximise",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Adesiva / Tattico",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello: incolla istantaneamente le suole delle scarpe dell'avversario al pavimento impedendogli ogni fuga.",
-    "movimento": "Schiocco verso la linea di contatto tra le due superfici da unire.",
-    "movimentoSvg": "M 40,65 L 110,65 M 40,85 L 110,85 M 75,65 L 75,85",
-    "descrizione": "Genera tra due superfici materiali uno strato di potentissima resina collante sintetica inseparabile.",
-    "etimologia": "Dal greco epoxy (resina epossidica adesiva).",
-    "valenza": 7,
-    "sommaLettere": 52,
-    "valenzaOpposta": 3,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "episkey",
@@ -1949,28 +2037,6 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
     "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 72 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
     "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
-  },
-  {
-    "id": "glisseo",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Incantesimo Leviga-Scale (Glisseo)",
-    "formula": "Glisseo",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Ambientale",
-    "inDuello": true,
-    "duelloNote": "Formidabile in duello urbano o su scalinate: trasforma gli scalini sotto i piedi dell'avversario in un piano inclinato scivoloso facendolo rovinare a terra.",
-    "movimento": "Onda discendente che segue il profilo della gradinata.",
-    "movimentoSvg": "M 35,40 L 60,65 L 85,90 L 115,115",
-    "descrizione": "Concepito originariamente dai fondatori di Hogwarts per proteggere i dormitori femminili. Trasforma istantaneamente qualsiasi scalinata in un ripido e levigato scivolo.",
-    "etimologia": "Dal francese glisser (scivolare, rendere sdrucciolevole).",
-    "valenza": 5,
-    "sommaLettere": 32,
-    "valenzaOpposta": 5,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "duro",
@@ -2083,6 +2149,50 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare. Limite di reiterazione: 8 volte."
   },
   {
+    "id": "engorgio",
+    "anno": 4,
+    "annoLabel": "IV Anno",
+    "nome": "Incantesimo di Ingrandimento (Engorgio)",
+    "formula": "Engorgio",
+    "ripetibile": true,
+    "tipologia": "Trasfigurazione / Alterazione Dimensionale",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello per ingigantire ostacoli fisici, scudi di fortuna o disorientare l'avversario alterando le proporzioni del campo di scontro.",
+    "movimento": "Cerchio ascendente tracciato verso l'esterno con puntamento deciso della punta della bacchetta.",
+    "movimentoSvg": "M 75,90 C 55,90 40,75 40,60 C 40,40 60,30 75,30 C 95,30 115,45 115,65 C 115,85 95,105 75,105 L 120,60",
+    "descrizione": "Incluso nel programma didattico di IV Anno (Trasfigurazione - Pratica: Engorgio e Diminuendo). Induce un rigonfiamento volumetrico uniforme del bersaglio inanimato o vivente, accrescendone massa apparente e dimensioni fisiche.",
+    "etimologia": "Dall'inglese arcaico engorge (ingrossare, rigonfiare, saziare).",
+    "valenza": 9,
+    "sommaLettere": 54,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 9,
+    "figuraGeometrica": "Ellisse (Reincarnazione / Totalità)",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)",
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 54 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse. Limite di reiterazione: 9 volte."
+  },
+  {
+    "id": "diminuendo",
+    "anno": 4,
+    "annoLabel": "IV Anno",
+    "nome": "Incantesimo di Rimpicciolimento (Diminuendo)",
+    "formula": "Diminuendo",
+    "ripetibile": true,
+    "tipologia": "Trasfigurazione / Compressione Dimensionale",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello per comprimere proiettili, armi o pericoli fisici in arrivo, o rimpicciolire l'equipaggiamento dell'avversario.",
+    "movimento": "Spirale centripeta contratta verso l'interno terminante con tocco lieve della punta.",
+    "movimentoSvg": "M 115,45 C 115,85 75,115 55,95 C 35,75 45,45 75,45 C 95,45 95,75 75,75",
+    "descrizione": "Incluso nel programma didattico di IV Anno (Trasfigurazione - Pratica: Engorgio e Diminuendo). Sortilegio complementare di Engorgio: comprime volumetricamente la materia del bersaglio riducendone le dimensioni a scala miniaturizzata.",
+    "etimologia": "Dal latino diminuere / italiano musicale diminuendo (decrescere gradualmente di volume).",
+    "valenza": 9,
+    "sommaLettere": 54,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 9,
+    "figuraGeometrica": "Ellisse (Reincarnazione / Totalità)",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)",
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 54 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse. Limite di reiterazione: 9 volte."
+  },
+  {
     "id": "expulso",
     "anno": 4,
     "annoLabel": "IV Anno",
@@ -2127,48 +2237,26 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
-    "id": "draconifors",
+    "id": "orchideus",
     "anno": 5,
     "annoLabel": "V Anno",
-    "nome": "Animazione Draconica (Draconifors)",
-    "formula": "Draconifors",
+    "nome": "Evocazione Floreale (Orchideus)",
+    "formula": "Orchideus",
     "ripetibile": false,
-    "tipologia": "Litotrasfigurazione / Animazione",
-    "inDuello": true,
-    "duelloNote": "Formidabile in duello tattico: trasforma una statua di drago in una creatura vivente capace di sputare fiamme e attaccare il nemico.",
-    "movimento": "Tracciare la sagoma delle ali del drago e terminare con una spinta fiammeggiante.",
-    "movimentoSvg": "M 40,80 Q 75,30 110,80 L 75,110 Z",
-    "descrizione": "Scoperto nella prima metà del Novecento da Harvey Ridgebit (fondatore della Congrega dei Dragologisti in Romania) per contenere draghi selvaggi animando statue.",
-    "etimologia": "Dal latino draco (drago) e -fors.",
-    "valenza": 5,
-    "sommaLettere": 59,
-    "valenzaOpposta": 5,
+    "tipologia": "Evocazione Floreale",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Sortilegio di cortesia, intrattenimento o distrazione leggera.",
+    "movimento": "Gesto a calice della mano verso l'alto con schiocco finale.",
+    "movimentoSvg": "M 75,120 L 75,70 M 50,50 Q 75,70 100,50 Q 75,25 50,50 Z",
+    "descrizione": "Fa scaturire dall'apice della bacchetta un fresco mazzo di orchidee multicolori effimere.",
+    "etimologia": "Dal nome botanico Orchis / Orchidea.",
+    "valenza": 3,
+    "sommaLettere": 48,
+    "valenzaOpposta": 7,
     "maxRipetizioni": 1,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 59 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
-  },
-  {
-    "id": "piertotum-locomotor",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Animazione di Statue e Armature (Piertotum Locomotor)",
-    "formula": "Piertotum Locomotor",
-    "ripetibile": true,
-    "tipologia": "Trasfigurazione d'Animazione / Difesa Massiva",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello difensivo su larga scala: risveglia statue e armature di pietra o metallo guidandole a difesa dell'incantatore.",
-    "movimento": "Ampio gesto solenne a braccia aperte con affondo della bacchetta verso le schiere di statue.",
-    "movimentoSvg": "M 30,50 L 75,25 L 120,50 L 100,120 L 50,120 Z",
-    "descrizione": "Conferisce temporaneamente movimento coordinato, forza e obbedienza a manufatti inanimati pesanti come le armature e statue del castello di Hogwarts.",
-    "etimologia": "Dal latino pie (piamente), totum (tutto), locus (luogo) e motus (movimento).",
-    "valenza": 2,
-    "sommaLettere": 92,
-    "valenzaOpposta": 8,
-    "maxRipetizioni": 2,
-    "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 92 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte.",
-    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "tarantallegra",
@@ -2193,26 +2281,70 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
-    "id": "furunculus",
+    "id": "melofors",
     "anno": 5,
     "annoLabel": "V Anno",
-    "nome": "Fattura dei Foruncoli (Furunculus)",
-    "formula": "Furunculus",
-    "ripetibile": true,
-    "tipologia": "Fattura Offensiva / Debilitante",
+    "nome": "Fattura della Zucca (Melofors)",
+    "formula": "Melofors",
+    "ripetibile": false,
+    "tipologia": "Fattura Trasfigurativa Irripetibile",
     "inDuello": true,
-    "duelloNote": "Utilizzabile in duello. Causa dolore acuto e gonfiore purulento immediato, costringendo l'avversario a coprirsi il viso e distogliendo la concentrazione.",
-    "movimento": "Doppio tocco aereo rapido a puntura d'ape seguito da affondo verso il bersaglio.",
-    "movimentoSvg": "M 40,75 L 60,55 L 75,75 L 90,55 L 110,75",
-    "descrizione": "Ricopre istantaneamente la pelle e il volto della vittima di enormi e dolorose bolle colme di pus. Le lesioni possono essere alleviate con impacchi di Essenza di Dittamo o incantesimi curativi come Epismendo.",
-    "etimologia": "Dal latino furunculus (ladro meschino, e termine medico per foruncolo).",
-    "valenza": 3,
-    "sommaLettere": 39,
-    "valenzaOpposta": 7,
-    "maxRipetizioni": 3,
-    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte.",
-    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
+    "duelloNote": "Molto efficace in duello: ingabbia la testa del rivale all'interno di una pesante zucca, togliendogli la vista e disorientandolo.",
+    "movimento": "Arco a cupola sopra la testa dell'avversario con scatto verso il basso.",
+    "movimentoSvg": "M 40,75 C 40,40 110,40 110,75 C 110,110 40,110 40,75 Z M 75,40 L 75,25",
+    "descrizione": "Incantesimo citato nel Codex come classico esempio di incanto irripetibile: manifesta una zucca arancione sulla testa della vittima. Rilanciarlo non produce alcun effetto aggiuntivo.",
+    "etimologia": "Dal greco melon (zucca, melone) e -fors.",
+    "valenza": 4,
+    "sommaLettere": 40,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
+  },
+  {
+    "id": "incarceramus",
+    "anno": 5,
+    "annoLabel": "V Anno",
+    "nome": "Fattura delle Corde Vincolanti (Incarceramus)",
+    "formula": "Incarceramus",
+    "ripetibile": true,
+    "tipologia": "Fattura Offensiva / Confinamento",
+    "inDuello": true,
+    "duelloNote": "Ottimo in duello: scaglia funi robuste che legano istantaneamente il corpo e le braccia dell'avversario alla vita.",
+    "movimento": "Doppio giro a cappio della bacchetta seguito da un affondo in avanti.",
+    "movimentoSvg": "M 40,50 C 75,20 110,50 90,85 C 70,120 40,85 75,75 L 125,75",
+    "descrizione": "Proietta lunghe e spesse corde magiche intrecciate che si avvinghiano attorno al bersaglio legandolo strettamente.",
+    "etimologia": "Dal latino incarcerare (rinchiudere, imprigionare).",
+    "valenza": 8,
+    "sommaLettere": 53,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
+  },
+  {
+    "id": "epoximise",
+    "anno": 5,
+    "annoLabel": "V Anno",
+    "nome": "Incantesimo Adesivo (Epoximise)",
+    "formula": "Epoximise",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Adesiva / Tattico",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello: incolla istantaneamente le suole delle scarpe dell'avversario al pavimento impedendogli ogni fuga.",
+    "movimento": "Schiocco verso la linea di contatto tra le due superfici da unire.",
+    "movimentoSvg": "M 40,65 L 110,65 M 40,85 L 110,85 M 75,65 L 75,85",
+    "descrizione": "Genera tra due superfici materiali uno strato di potentissima resina collante sintetica inseparabile.",
+    "etimologia": "Dal greco epoxy (resina epossidica adesiva).",
+    "valenza": 7,
+    "sommaLettere": 52,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "reducto",
@@ -2963,28 +3095,6 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
-    "id": "reparifarge",
-    "anno": 6,
-    "annoLabel": "VI Anno",
-    "nome": "Incantesimo di Rettifica Trasfigurativa (Reparifarge)",
-    "formula": "Reparifarge",
-    "ripetibile": false,
-    "tipologia": "Detrasfigurazione Correttiva",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Risana trasfigurazioni mal riuscite o parziali (es. calici con piume o zampette residue).",
-    "movimento": "Movimento circolare ampio focalizzando esclusivamente la forma originaria del soggetto.",
-    "movimentoSvg": "M 75,35 A 40,40 0 1,1 74,35",
-    "descrizione": "Incantesimo principe della Detrasfigurazione accademica. Riconduce la materia mal trasfigurata ai suoi parametri corretti.",
-    "etimologia": "Dal latino reparare e radice da effigies / -farge.",
-    "valenza": 5,
-    "sommaLettere": 68,
-    "valenzaOpposta": 5,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
-  },
-  {
     "id": "expecto-patronum",
     "anno": 6,
     "annoLabel": "VI Anno",
@@ -3181,6 +3291,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
     "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 150 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
     "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
+  },
+  {
+    "id": "obstringo-circulum",
+    "anno": 6,
+    "annoLabel": "VI Anno",
+    "nome": "Trasfigurazione Circolare Intermittente (Obstringo Circulum)",
+    "formula": "Obstringo Circulum",
+    "ripetibile": true,
+    "tipologia": "Trasfigurazione Programmata a Cicli",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Programma alternanze cicliche tra trasformazione e detrasfigurazione a orari prefissati.",
+    "movimento": "Tracciare cerchi il cui diametro corrisponde all'intervallo temporale desiderato (es. 5 cm per 5 secondi di ciclo).",
+    "movimentoSvg": "M 75,30 A 45,45 0 1,1 74,30 Z M 75,50 A 25,25 0 1,1 74,50 Z",
+    "descrizione": "Rinnova ciclicamente gli effetti di un incanto trasfigurativo annullandoli e riattivandoli a intervalli regolari, ricaricando l'effetto.",
+    "etimologia": "Dal latino obstringere (vincolare a patto) e circulus (ciclo temporale).",
+    "valenza": 3,
+    "sommaLettere": 84,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 84 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "entomorphis",
@@ -4391,94 +4523,6 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
     "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
     "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
-  },
-  {
-    "id": "obstringo-circulum",
-    "anno": 0,
-    "annoLabel": "Altri",
-    "nome": "Trasfigurazione Circolare Intermittente (Obstringo Circulum)",
-    "formula": "Obstringo Circulum",
-    "ripetibile": true,
-    "tipologia": "Trasfigurazione Programmata a Cicli",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Programma alternanze cicliche tra trasformazione e detrasfigurazione a orari prefissati.",
-    "movimento": "Tracciare cerchi il cui diametro corrisponde all'intervallo temporale desiderato (es. 5 cm per 5 secondi di ciclo).",
-    "movimentoSvg": "M 75,30 A 45,45 0 1,1 74,30 Z M 75,50 A 25,25 0 1,1 74,50 Z",
-    "descrizione": "Rinnova ciclicamente gli effetti di un incanto trasfigurativo annullandoli e riattivandoli a intervalli regolari, ricaricando l'effetto.",
-    "etimologia": "Dal latino obstringere (vincolare a patto) e circulus (ciclo temporale).",
-    "valenza": 3,
-    "sommaLettere": 84,
-    "valenzaOpposta": 7,
-    "maxRipetizioni": 3,
-    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 84 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte.",
-    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
-  },
-  {
-    "id": "muto",
-    "anno": 0,
-    "annoLabel": "Altri",
-    "nome": "Trasfigurazione Materica di Sostanza (Muto)",
-    "formula": "Muto",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Inanimata di II Livello",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Muta il materiale costitutivo lasciando inalterata la forma esteriore.",
-    "movimento": "Tocco fermo al centro della massa dell'oggetto con concentrazione sulla nuova densità molecolare.",
-    "movimentoSvg": "M 75,35 L 75,115 M 40,75 L 110,75",
-    "descrizione": "Modifica la sostanza fisica di un oggetto (es. legno in metallo) mantenendone intatta la sagoma originaria. Non può generare materiali preziosi per la Legge di Gamp.",
-    "etimologia": "Dal latino mutare (cambiare sostanza).",
-    "valenza": 6,
-    "sommaLettere": 15,
-    "valenzaOpposta": 4,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
-  },
-  {
-    "id": "transfiguro",
-    "anno": 0,
-    "annoLabel": "Altri",
-    "nome": "Trasfigurazione Morfologica di Forma (Transfiguro)",
-    "formula": "Transfiguro",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Inanimata di I Livello",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Interviene solo sulla forma esteriore senza mutare il materiale costitutivo.",
-    "movimento": "Delineare la nuova sagoma aerea con la bacchetta mantenendo costante il materiale originario.",
-    "movimentoSvg": "M 40,110 L 75,35 L 110,110",
-    "descrizione": "Forma più elementare di trasfigurazione inanimata: muta esclusivamente l'aspetto geometrico ed esteriore dell'oggetto lasciando intatta la materia interna.",
-    "etimologia": "Dal latino transfigurare (mutare aspetto).",
-    "valenza": 4,
-    "sommaLettere": 58,
-    "valenzaOpposta": 6,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
-  },
-  {
-    "id": "verto",
-    "anno": 0,
-    "annoLabel": "Altri",
-    "nome": "Trasfigurazione Totale (Verto)",
-    "formula": "Verto",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Inanimata di III Livello",
-    "inDuello": false,
-    "duelloNote": "Non da duello rapido. Muta simultaneamente sia la forma che il materiale costitutivo dell'oggetto.",
-    "movimento": "Tracciamento a doppia elica nello spazio attorno all'oggetto.",
-    "movimentoSvg": "M 45,40 Q 75,75 105,40 Q 75,75 45,110 Q 75,75 105,110",
-    "descrizione": "Il livello più elevato della trasfigurazione applicata agli oggetti: altera congiuntamente conformazione e composizione materica.",
-    "etimologia": "Dal latino vertere (volgere, capovolgere interamente).",
-    "valenza": 8,
-    "sommaLettere": 26,
-    "valenzaOpposta": 2,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 26 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "runa-algiz",
