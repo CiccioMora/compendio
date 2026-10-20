@@ -32,3 +32,6 @@ wheels/
 
 # Logs
 *.log
+
+# Scratch and temporary extracts
+scratch/

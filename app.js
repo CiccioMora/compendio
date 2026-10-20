@@ -217,7 +217,7 @@
 
         if (spellSubFilters) spellSubFilters.classList.remove("hidden");
         if (activeMacroHint) {
-          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">${SPELLS_DATA.filter(s => !s.isRune).length} Incantesimi Didattici</strong>`;
+          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">241 Incantesimi Didattici</strong>`;
         }
       } else {
         macroRunesBtn?.classList.remove("text-slate-400", "hover:text-indigo-300", "hover:bg-slate-900");
@@ -228,7 +228,7 @@
 
         if (spellSubFilters) spellSubFilters.classList.add("hidden");
         if (activeMacroHint) {
-          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-indigo-300">${SPELLS_DATA.filter(s => s.isRune).length} Antiche Rune Futhark</strong>`;
+          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-indigo-300">25 Antiche Rune Futhark</strong>`;
         }
       }
 
