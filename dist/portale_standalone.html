@@ -221,14 +221,14 @@
             <span>📅</span> Filtro Anno di Corso:
           </label>
           <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Tutti (181)</option>
-            <option value="1">I Anno (17)</option>
+            <option value="ALL">Tutti (200)</option>
+            <option value="1">I Anno (20)</option>
             <option value="2">II Anno (14)</option>
-            <option value="3">III Anno (14)</option>
-            <option value="4">IV Anno (18)</option>
-            <option value="5">V Anno (10)</option>
-            <option value="6">VI Anno (38)</option>
-            <option value="7">VII Anno (24)</option>
+            <option value="3">III Anno (15)</option>
+            <option value="4">IV Anno (19)</option>
+            <option value="5">V Anno (12)</option>
+            <option value="6">VI Anno (43)</option>
+            <option value="7">VII Anno (31)</option>
             <option value="0">Altri (21)</option>
             <option value="8">Antiche Rune (25)</option>
           </select>
@@ -240,9 +240,9 @@
             <span>⚔️</span> Utilizzo in Duello:
           </label>
           <select id="duelFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Duello: Qualsiasi (154)</option>
-            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (96)</option>
-            <option value="NO">⛔ Non da Duello / Rituale: NO (58)</option>
+            <option value="ALL">Duello: Qualsiasi (175)</option>
+            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (98)</option>
+            <option value="NO">⛔ Non da Duello / Rituale: NO (77)</option>
           </select>
         </div>
 
@@ -282,32 +282,32 @@
         <div>
           <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
             <span>Filtro Rapido per Anno di Corso:</span>
-            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">154 incantesimi trovati</span>
+            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">200 incantesimi trovati</span>
           </div>
           <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
             <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (181)
+              Tutti (200)
             </button>
             <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              I Anno (17)
+              I Anno (20)
             </button>
             <button data-year="2" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               II Anno (14)
             </button>
             <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              III Anno (14)
+              III Anno (15)
             </button>
             <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              IV Anno (18)
+              IV Anno (19)
             </button>
             <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              V Anno (10)
+              V Anno (12)
             </button>
             <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VI Anno (38)
+              VI Anno (43)
             </button>
             <button data-year="7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VII Anno (24)
+              VII Anno (31)
             </button>
             <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               Altri (21)
@@ -325,13 +325,13 @@
             <span class="text-slate-400 font-medium">Duello:</span>
             <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
               <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
-                Tutti (154)
+                Tutti (175)
               </button>
               <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
-                ⚔️ Da Duello: SÌ (96)
+                ⚔️ Da Duello: SÌ (98)
               </button>
               <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
-                ⛔ Non da Duello: NO (58)
+                ⛔ Non da Duello: NO (77)
               </button>
             </div>
           </div>
@@ -626,8 +626,8 @@
 
   <!-- SCRIPTS: DATABASE & APP LOGIC -->
   <script>
-// spellsData.js - Archivio Completo dei 181 Incantesimi e Rune dell'Antico Futhark
-// Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR, Trattati Didattici e Codex Arithmantiae
+// spellsData.js - Archivio Completo dei 200 Incantesimi e Rune dell'Antico Futhark
+// Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR, Trattati Didattici, Astronomia, Erbologia e Codex Arithmantiae
 
 const SPELLS_DATA = [
   {
@@ -653,6 +653,28 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
+    "id": "apokros",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Controincantesimo di Rifrazione Stellare (Apokros)",
+    "formula": "Apokros",
+    "ripetibile": true,
+    "tipologia": "Controincantesimo Ottico / Ripristino Visivo",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Dissolve istantaneamente le alterazioni ottiche e rifrattive prodotte da Alheia Croma o abbagliamenti da luce concentrata.",
+    "movimento": "Puntamento inverso della bacchetta seguito da fendente orizzontale netto ad allontanare il flusso d'energia.",
+    "movimentoSvg": "M 115,75 L 45,75 M 60,60 L 45,75 L 60,90",
+    "descrizione": "Controincantesimo specifico di Alheia Croma inserito nel programma di Astronomia di I Anno. Ristabilisce la naturale convergenza focale di telescopi e occhi magici, azzerando residui di dispersione cromatica o alterazioni rifrattive.",
+    "etimologia": "Dal greco apokrouo (respingere indietro, respingere con forza, far cessare).",
+    "valenza": 5,
+    "sommaLettere": 32,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 5,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Equilibrio)",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare. Limite di reiterazione: 5 volte."
+  },
+  {
     "id": "lumos",
     "anno": 1,
     "annoLabel": "I Anno",
@@ -673,6 +695,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
     "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 17 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
     "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
+  },
+  {
+    "id": "guidami",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Incantesimo Bussola (Guidami / Point Me)",
+    "formula": "Guidami",
+    "ripetibile": true,
+    "tipologia": "Cinetica / Orientamento Cardinale",
+    "inDuello": false,
+    "duelloNote": "Non idoneo al duello convenzionale. Utilizzato per l'orientamento notturno sul campo, allineare i telescopi e determinare con precisione il meridiano astronomico e il Nord geografico.",
+    "movimento": "Bacchetta appoggiata orizzontale sul palmo della mano aperta con pronuncia ferma della formula; la bacchetta ruota autonomamente fermandosi verso il Nord.",
+    "movimentoSvg": "M 40,75 L 110,75 M 95,60 L 110,75 L 95,90",
+    "descrizione": "Trattato nella dispensa didattica di Astronomia del I Anno. Fa ruotare la bacchetta posta sul palmo della mano del mago fino a indicare stabilmente il Nord geografico/magnetico, permettendo l'orientamento immediato nelle osservazioni notturne.",
+    "etimologia": "Dall'italiano guidare (condurre, orientare la direzione).",
+    "valenza": 1,
+    "sommaLettere": 37,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Unità / Elemento Acqua)",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza. Limite di reiterazione efficace: 1 volta/e."
   },
   {
     "id": "innerva",
@@ -829,6 +873,28 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
+    "id": "aguamenti",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Incantesimo di Evocazione dell'Acqua (Aguamenti)",
+    "formula": "Aguamenti",
+    "ripetibile": true,
+    "tipologia": "Elementale Acqua / Utilità",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello per estinguere fiamme ordinarie o magiche minori, accecare l'avversario con un getto d'acqua pressurizzato o contrastare creature ignee.",
+    "movimento": "Movimento a onda fluida da sinistra verso destra terminante con puntamento deciso della punta.",
+    "movimentoSvg": "M 35,85 C 55,65 70,105 95,75 L 125,75",
+    "descrizione": "Sortilegio elementale dell'Acqua che proietta un getto d'acqua limpida e potabile dalla punta della bacchetta. La valenza è forzata per canone al numero 1 (Elemento Acqua del Codex Arithmantiae, associato alla formula Coerceo e alla runa Laguz).",
+    "etimologia": "Composto dal latino aqua (acqua) e augmentum (accrescimento).",
+    "valenza": 1,
+    "sommaLettere": 37,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Unità / Elemento Acqua)",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
+    "noteAritmantiche": "Valenza Magica forzata a 1 (Elemento Acqua nel Codex Arithmantiae, associato alla formula Coerceo e alla runa Laguz). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza."
+  },
+  {
     "id": "wingardium-leviosa",
     "anno": 1,
     "annoLabel": "I Anno",
@@ -849,6 +915,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 85 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
     "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
+  },
+  {
+    "id": "alheia-croma",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Incantesimo di Rifrazione Stellare (Alheia Croma)",
+    "formula": "Alheia Croma",
+    "ripetibile": true,
+    "tipologia": "Ottico / Rifrazione della Luce",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Sortilegio ottico applicato agli oculari dei telescopi o direttamente al cristallino per la scomposizione cromatica della luce stellare.",
+    "movimento": "Puntare con estrema precisione la punta della bacchetta verso la lente del telescopio o a pochi centimetri dal campo visivo.",
+    "movimentoSvg": "M 45,75 L 75,75 M 75,55 A 20,20 0 1,1 75,95 A 20,20 0 1,1 75,55",
+    "descrizione": "Incluso nel programma di Astronomia del I Anno. Modifica l'indice di rifrazione della luce incidente, separando gli spettri cromatici dei corpi celesti lontani e neutralizzando le distorsioni termiche causate dall'atmosfera terrestre.",
+    "etimologia": "Composto dal greco aleitheia (verità, nitidezza priva di velo) e chroma (colore, spettro visibile).",
+    "valenza": 5,
+    "sommaLettere": 50,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 5,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Equilibrio)",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 50 ridotta a 5). Valenza opposta di simmetria: 5 (simmetria speculare pura). Figura operativa per Signo: Pentagono regolare. Limite di reiterazione: 5 volte."
   },
   {
     "id": "levicorpus",
@@ -983,28 +1071,6 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
-    "id": "aguamenti",
-    "anno": 1,
-    "annoLabel": "I Anno",
-    "nome": "Incantesimo di Evocazione dell'Acqua (Aguamenti)",
-    "formula": "Aguamenti",
-    "ripetibile": true,
-    "tipologia": "Elementale Acqua / Utilità",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello per estinguere fiamme ordinarie o magiche minori, accecare l'avversario con un getto d'acqua pressurizzato o contrastare creature ignee.",
-    "movimento": "Movimento a onda fluida da sinistra verso destra terminante con puntamento deciso della punta.",
-    "movimentoSvg": "M 35,85 C 55,65 70,105 95,75 L 125,75",
-    "descrizione": "Sortilegio elementale dell'Acqua che proietta un getto d'acqua limpida e potabile dalla punta della bacchetta. La valenza è forzata per canone al numero 1 (Elemento Acqua del Codex Arithmantiae, associato alla formula Coerceo e alla runa Laguz).",
-    "etimologia": "Composto dal latino aqua (acqua) e augmentum (accrescimento).",
-    "valenza": 1,
-    "sommaLettere": 37,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Unità / Elemento Acqua)",
-    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
-    "noteAritmantiche": "Valenza Magica forzata a 1 (Elemento Acqua nel Codex Arithmantiae, associato alla formula Coerceo e alla runa Laguz). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza."
-  },
-  {
     "id": "chartanimus",
     "anno": 2,
     "annoLabel": "II Anno",
@@ -1069,6 +1135,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
     "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 20 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte.",
     "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
+  },
+  {
+    "id": "ventus",
+    "anno": 2,
+    "annoLabel": "II Anno",
+    "nome": "Incantesimo del Vento (Ventus)",
+    "formula": "Ventus",
+    "ripetibile": true,
+    "tipologia": "Elementale Aria / Cinetico",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello per deflettere proiettili leggeri, sbilanciare l'avversario con violente raffiche d'aria o disperdere nubi tossiche e coltri fumogene.",
+    "movimento": "Spirale orizzontale oraria tracciata nell'aria con fendente terminale proteso in avanti.",
+    "movimentoSvg": "M 45,75 C 45,45 105,45 105,75 C 105,105 60,105 60,80 L 125,50",
+    "descrizione": "Sortilegio elementale dell'Aria che sprigiona un turbine d'aria impetuoso dalla punta della bacchetta. La valenza è forzata per canone al numero 5 (Elemento Aria del Codex Arithmantiae, associato alla formula Finge e alla runa Hagalaz).",
+    "etimologia": "Dal latino ventus (vento, soffio d'aria, brezza).",
+    "valenza": 5,
+    "sommaLettere": 20,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 5,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Equilibrio)",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Valenza Magica forzata a 5 (Elemento Aria nel Codex Arithmantiae, associato alla formula Finge e alla runa Hagalaz). Valenza opposta di simmetria: 5 (simmetria speculare pura). Figura operativa per Signo: Pentagono regolare."
   },
   {
     "id": "gommosus",
@@ -1291,26 +1379,26 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
-    "id": "ventus",
-    "anno": 2,
-    "annoLabel": "II Anno",
-    "nome": "Incantesimo del Vento (Ventus)",
-    "formula": "Ventus",
+    "id": "lux-perfluo",
+    "anno": 3,
+    "annoLabel": "III Anno",
+    "nome": "Filtro di Luce Stellare (Lux Perfluo)",
+    "formula": "Lux Perfluo",
     "ripetibile": true,
-    "tipologia": "Elementale Aria / Cinetico",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello per deflettere proiettili leggeri, sbilanciare l'avversario con violente raffiche d'aria o disperdere nubi tossiche e coltri fumogene.",
-    "movimento": "Spirale orizzontale oraria tracciata nell'aria con fendente terminale proteso in avanti.",
-    "movimentoSvg": "M 45,75 C 45,45 105,45 105,75 C 105,105 60,105 60,80 L 125,50",
-    "descrizione": "Sortilegio elementale dell'Aria che sprigiona un turbine d'aria impetuoso dalla punta della bacchetta. La valenza è forzata per canone al numero 5 (Elemento Aria del Codex Arithmantiae, associato alla formula Finge e alla runa Hagalaz).",
-    "etimologia": "Dal latino ventus (vento, soffio d'aria, brezza).",
-    "valenza": 5,
-    "sommaLettere": 20,
-    "valenzaOpposta": 5,
-    "maxRipetizioni": 5,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Equilibrio)",
-    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
-    "noteAritmantiche": "Valenza Magica forzata a 5 (Elemento Aria nel Codex Arithmantiae, associato alla formula Finge e alla runa Hagalaz). Valenza opposta di simmetria: 5 (simmetria speculare pura). Figura operativa per Signo: Pentagono regolare."
+    "tipologia": "Manipolazione della Luce / Filtro Anti-Abbaglio",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Crea un filtro diaframmatico che attenua la radiazione luminosa eccessiva consentendo la visione nitida di dettagli cosmici tenui.",
+    "movimento": "Movimento circolare orario tracciato lentamente sopra la lente del telescopio o a mezz'aria davanti allo sguardo.",
+    "movimentoSvg": "M 75,40 A 35,35 0 1,1 74.9,40",
+    "descrizione": "Trattato nel manuale di Astronomia del III Anno. Agisce come diaframma ottico magico polarizzato, schermando il bagliore accecante della luna piena, nubi riflettenti o inquinamento luminoso locale per osservare ammassi stellari e nebulose lontane.",
+    "etimologia": "Dal latino lux (luce) e perfluere (scorrere attraverso, defluire, filtrare).",
+    "valenza": 6,
+    "sommaLettere": 51,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 6,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 51 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare. Limite di reiterazione: 6 volte."
   },
   {
     "id": "riddikulus",
@@ -1973,6 +2061,28 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
+    "id": "herbivicus",
+    "anno": 4,
+    "annoLabel": "IV Anno",
+    "nome": "Incantesimo di Crescita Vegetale Rapida (Herbivicus)",
+    "formula": "Herbivicus",
+    "ripetibile": true,
+    "tipologia": "Incanto Botanico di Crescita / Fisiologia Vegetale",
+    "inDuello": false,
+    "duelloNote": "Non convenzionale per duello, sebbene utilizzabile per far germogliare istantaneamente radici e rovi per creare barriere o intralciare l'avversario.",
+    "movimento": "Spirale ascendente fluida dal colletto radicale verso l'apice del fusto con tocco finale proteso verso l'alto.",
+    "movimentoSvg": "M 75,115 C 50,100 50,85 75,75 C 100,65 100,50 75,35",
+    "descrizione": "Formula cardine dell'Erbologia pratica, introdotta al IV Anno e riassunta al VI Anno (Manuale di Nicholas Kelleher). Stimola intensamente le auxine e le gibberelline vegetali, provocando una rapida proliferazione cellulare che fa sbocciare fiori, allungare fusti e rigenerare fogliame in pochi istanti.",
+    "etimologia": "Composto dal latino herba (erba, pianta) e vivo/vigere (vivere, dare vigore vitale).",
+    "valenza": 8,
+    "sommaLettere": 53,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare. Limite di reiterazione: 8 volte."
+  },
+  {
     "id": "expulso",
     "anno": 4,
     "annoLabel": "IV Anno",
@@ -2193,6 +2303,50 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
+    "id": "astralis-cartae-dominium",
+    "anno": 5,
+    "annoLabel": "V Anno",
+    "nome": "Proiezione della Carta Natale (Astralis Cartae Dominium)",
+    "formula": "Astralis Cartae Dominium",
+    "ripetibile": false,
+    "tipologia": "Proiezione Astrologica / Oroscopo Magico Tridimensionale",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Sortilegio avanzato di calcolo astrale per la materializzazione delle coordinate natali e dei transiti planetari.",
+    "movimento": "Tracciare un cerchio d'argento a mezz'aria seguito da dodici tocchi radiali concentrici verso l'esterno.",
+    "movimentoSvg": "M 75,45 A 30,30 0 1,0 75,105 A 30,30 0 1,0 75,45 M 75,25 L 75,45 M 75,105 L 75,125 M 35,75 L 55,75 M 95,75 L 115,75",
+    "descrizione": "Insegnato nel V Anno di Astronomia e Astrologia comparata. Materializza a mezz'aria un quadrante tridimensionale luminoso d'argento raffigurante le posizioni dei pianeti, gli aspetti celesti e i domicili zodiacali nel momento esatto della nascita di un individuo.",
+    "etimologia": "Dal latino astralis (degli astri), charta (pergamena, mappa) e dominium (padronanza, dominio).",
+    "valenza": 2,
+    "sommaLettere": 92,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Angolo / Linea (Dualismo / Polarità)",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 92 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea. Limite di reiterazione: 1 volta/e."
+  },
+  {
+    "id": "astra-invoco",
+    "anno": 5,
+    "annoLabel": "V Anno",
+    "nome": "Risonanza con le Energie Astrali (Astra Invoco)",
+    "formula": "Astra Invoco",
+    "ripetibile": true,
+    "tipologia": "Risonanza Astrale / Armonizzazione Energetica",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Richiede calma e concentrazione per sintonizzare il canale magico del mago con le frequenze planetarie in transito.",
+    "movimento": "Puntamento bipolare verso la volta celeste con lieve oscillazione della bacchetta; bagliori oro e argento.",
+    "movimentoSvg": "M 75,115 L 75,35 M 55,60 L 75,35 L 95,60",
+    "descrizione": "Introdotto nel V Anno di Astronomia. Fa vibrare l'atmosfera circostante generando minuscoli globi di luce dorata e argentea, sintonizzando l'incantatore con gli allineamenti e le energie astrali del momento per affinare calcoli e divinazioni.",
+    "etimologia": "Dal latino astra (astri, costellazioni) e invocare (chiamare verso di sé, invocare).",
+    "valenza": 2,
+    "sommaLettere": 47,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 2,
+    "figuraGeometrica": "Angolo / Linea (Dualismo / Polarità)",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 47 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea. Limite di reiterazione: 2 volte."
+  },
+  {
     "id": "bombarda",
     "anno": 5,
     "annoLabel": "V Anno",
@@ -2237,6 +2391,50 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
+    "id": "repello-inimicum",
+    "anno": 6,
+    "annoLabel": "VI Anno",
+    "nome": "Allontanamento Parassitario e Disinfestazione (Repello Inimicum)",
+    "formula": "Repello Inimicum",
+    "ripetibile": true,
+    "tipologia": "Disinfestazione Botanica / Frequenza Repulsiva",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Genera micro-onde oscillatorie repulsive per disinfestare le piante senza intossicare i tessuti.",
+    "movimento": "Fendente a ventaglio diretto in avanti dal basso verso l'esterno.",
+    "movimentoSvg": "M 50,75 L 100,75 M 85,55 L 105,75 L 85,95 M 95,45 L 115,75 L 95,105",
+    "descrizione": "Trattato nel VI Anno di Erbologia (Manuale di Nicholas Kelleher). Sprigiona una frequenza oscillatoria repulsiva che costringe acari, afidi e spore micotiche ad abbandonare la pianta, ripulendola in profondità in modo ecologico e privo di agenti caustici.",
+    "etimologia": "Dal latino repellere (scacciare, respingere) e inimicus (nemico, ostile).",
+    "valenza": 3,
+    "sommaLettere": 84,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione / Fuoco)",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 84 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero. Limite di reiterazione: 3 volte."
+  },
+  {
+    "id": "protego-herbivorum",
+    "anno": 6,
+    "annoLabel": "VI Anno",
+    "nome": "Barriera contro la Fauna Fitofaga (Protego Herbivorum)",
+    "formula": "Protego Herbivorum",
+    "ripetibile": false,
+    "tipologia": "Difesa Botanica di Zona / Barriera Fitofaga",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Erige uno scudo selettivo contro parassiti, bruchi giganti e fauna erbivora a protezione delle serre.",
+    "movimento": "Cupola aerea tracciata sopra l'esemplare vegetale con cerchio orario e affondo conclusivo verso il suolo.",
+    "movimentoSvg": "M 35,110 C 35,50 115,50 115,110 M 35,110 L 115,110",
+    "descrizione": "Trattato nel VI Anno di Erbologia (Manuale di Nicholas Kelleher). Proietta un campo di forza invisibile attorno alle specie vegetali coltivate, impenetrabile a insetti xilofagi, parassiti e lumache carnivore senza ostacolare l'assorbimento di luce e umidità.",
+    "etimologia": "Dal latino protegere (riparare, proteggere) e herbivorus (che si nutre di vegetali).",
+    "valenza": 2,
+    "sommaLettere": 101,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Angolo / Linea (Dualismo / Polarità)",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 101 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea. Limite di reiterazione: 1 volta/e."
+  },
+  {
     "id": "vulnera-sanentur",
     "anno": 6,
     "annoLabel": "VI Anno",
@@ -2257,6 +2455,50 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
     "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 61 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 7 volte.",
     "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
+  },
+  {
+    "id": "reparo-herbalis",
+    "anno": 6,
+    "annoLabel": "VI Anno",
+    "nome": "Cicatrizzazione e Rigenerazione Vegetale (Reparo Herbalis)",
+    "formula": "Reparo Herbalis",
+    "ripetibile": true,
+    "tipologia": "Cura Botanica / Cicatrizzazione Linfatica",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Sortilegio curativo per risanare tagli, traumi da potatura e necrosi sui fusti delle piante magiche.",
+    "movimento": "Tracciare una croce armoniosa sopra la ferita della pianta, completando con lieve sfioramento della corteccia.",
+    "movimentoSvg": "M 75,45 L 75,105 M 45,75 L 105,75 M 60,60 C 75,70 75,80 90,90",
+    "descrizione": "Variante specialistica dell'incantesimo Reparo per la botanica magica (VI Anno, Nicholas Kelleher). Rimargina lesioni, innesti mal riusciti o lacerazioni da taglio nei tessuti vegetali, riattivando i vasi cribro-vascolari e azzerando lo stress cellulare.",
+    "etimologia": "Dal latino reparare (risanare, aggiustare) e herbalis (delle piante, erboristico).",
+    "valenza": 3,
+    "sommaLettere": 75,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione / Fuoco)",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 75 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero. Limite di reiterazione: 3 volte."
+  },
+  {
+    "id": "sistamina",
+    "anno": 6,
+    "annoLabel": "VI Anno",
+    "nome": "Conservazione Organica e Blocco del Decadimento (Sistamina)",
+    "formula": "Sistamina",
+    "ripetibile": false,
+    "tipologia": "Conservazione Botanica / Stasi Biologica",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Congela temporaneamente il decadimento e l'ossidazione della materia vegetale fresca appena raccolta.",
+    "movimento": "Puntamento fermo al centro del contenitore con cerchio protettivo tracciato attorno al perimetro.",
+    "movimentoSvg": "M 75,75 m -35,0 a 35,35 0 1,0 70,0 a 35,35 0 1,0 -70,0 M 75,70 L 75,80 M 70,75 L 80,75",
+    "descrizione": "Formula di conservazione biologica del VI Anno di Erbologia (Nicholas Kelleher). Blocca i processi degenerativi enzimatici e la disidratazione spontanea dei campioni botanici freschi appena colti, preservando intatti i principi alchemici attivi per le pozioni.",
+    "etimologia": "Dal latino sistere (arrestare, bloccare, fermare).",
+    "valenza": 6,
+    "sommaLettere": 33,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare. Limite di reiterazione: 1 volta/e."
   },
   {
     "id": "stalker-convocatus",
@@ -2455,6 +2697,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e.",
     "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
+  },
+  {
+    "id": "trimere",
+    "anno": 6,
+    "annoLabel": "VI Anno",
+    "nome": "Formula di Modellatura Botanica (Trimere)",
+    "formula": "Trimere",
+    "ripetibile": true,
+    "tipologia": "Potatura Magica / Modellatura delle Piante",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Permette la rifilatura millimetrica e la sagomatura non traumatica di specie vegetali invasive.",
+    "movimento": "Fendenti brevi e calibrati a zig-zag sopra la chioma della pianta da rifilare.",
+    "movimentoSvg": "M 45,55 L 75,55 L 60,85 L 90,85 L 75,115 L 105,115",
+    "descrizione": "Trattato nel VI Anno di Erbologia (Capitolo Potatura & Gestione, Nicholas Kelleher). Consente di sagomare e rifilare le chiome di siepi e rampicanti magici con chirurgica precisione, arginando crescite anomale senza intaccare la linfa vitale.",
+    "etimologia": "Dall'inglese to trim (rifilare, potare, aggiustare).",
+    "valenza": 7,
+    "sommaLettere": 43,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 7,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 43 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare. Limite di reiterazione: 7 volte."
   },
   {
     "id": "geminio",
@@ -3183,6 +3447,28 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
+    "id": "cometae-vocatum",
+    "anno": 7,
+    "annoLabel": "VII Anno",
+    "nome": "Evocazione della Scia Cometare (Cometae Vocatum)",
+    "formula": "Cometae Vocatum",
+    "ripetibile": false,
+    "tipologia": "Alta Evocazione Simbolica Celeste / Magia Cerimoniale",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Rituale solenne che evoca la scia luminosa di una cometa eterea lungo il firmamento per cerimonie o consacrazioni.",
+    "movimento": "Ampio arco continuo da un estremo all'altro dell'orizzonte tracciato a braccio teso con scatto finale del polso.",
+    "movimentoSvg": "M 25,100 C 45,40 105,40 125,100 M 110,85 L 125,100 L 130,80",
+    "descrizione": "Tra le più suggestive magie cerimoniali del VII Anno di Astronomia. Non attrae corpi rocciosi ma genera un'evocazione simbolica luminosa che proietta nel firmamento il passaggio maestoso di una cometa eterea carica di energia rituale.",
+    "etimologia": "Dal latino cometes (cometa) e vocatum (evocato, richiamato).",
+    "valenza": 4,
+    "sommaLettere": 49,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)",
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato. Limite di reiterazione: 1 volta/e."
+  },
+  {
     "id": "abscondas",
     "anno": 7,
     "annoLabel": "VII Anno",
@@ -3249,6 +3535,28 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
+    "id": "orbis-caeli",
+    "anno": 7,
+    "annoLabel": "VII Anno",
+    "nome": "Globo Tridimensionale del Firmamento (Orbis Caeli)",
+    "formula": "Orbis Caeli",
+    "ripetibile": true,
+    "tipologia": "Evocazione Proiettiva Tridimensionale / Mappa Stellare",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Evoca una mappa celeste olografica tridimensionale manipolabile con le dita per studio e calcolo delle orbite.",
+    "movimento": "Rotazione fluida a spirale centripeta del polso con tocco finale al centro del globo magico.",
+    "movimentoSvg": "M 75,30 A 45,45 0 1,0 75,120 A 45,45 0 1,0 75,30 M 75,55 A 20,20 0 1,1 75,95 A 20,20 0 1,1 75,55",
+    "descrizione": "Sortilegio accademico superiore di Astronomia (VII Anno, Mary C. Silente). Genera un globo luminoso fluttuante raffigurante la volta celeste in scala tridimensionale, interattivo e orientabile per simulare transiti, culminazioni ed eclissi future.",
+    "etimologia": "Dal latino orbis (globo, sfera, cerchio) e caeli (del cielo).",
+    "valenza": 3,
+    "sommaLettere": 48,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione / Fuoco)",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero. Limite di reiterazione: 3 volte."
+  },
+  {
     "id": "cave-inimicum",
     "anno": 7,
     "annoLabel": "VII Anno",
@@ -3291,6 +3599,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
     "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 66 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volta/e.",
     "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
+  },
+  {
+    "id": "caelus-memorium",
+    "anno": 7,
+    "annoLabel": "VII Anno",
+    "nome": "Incantesimo Mnemonico Celeste (Caelus Memorium)",
+    "formula": "Caelus Memorium",
+    "ripetibile": false,
+    "tipologia": "Incanto Mnemonico Celeste / Conservazione Astrometrica",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Cristallizza un preciso allineamento celeste all'interno di un ricettacolo magico (astrolabio o pergamena).",
+    "movimento": "Spirale ascendente verso la costellazione desiderata, seguita da un tocco fermo sull'oggetto ricettore.",
+    "movimentoSvg": "M 75,110 C 95,110 110,95 110,75 C 110,55 90,45 75,45 C 55,45 45,65 55,80 C 65,95 85,85 85,70 L 75,120",
+    "descrizione": "Incluso nel VII Anno di Astronomia (Mary C. Silente). Registra l'esatta conformazione astrale di un istante all'interno di una sfera eterea fluttuante che viene poi assorbita da un astrolabio o pergamena lunare, cristallizzando congiunzioni ed eclissi irripetibili.",
+    "etimologia": "Dal latino caelum (cielo, volta celeste) e memoria (ricordo, memoria).",
+    "valenza": 6,
+    "sommaLettere": 60,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 60 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare. Limite di reiterazione: 1 volta/e."
   },
   {
     "id": "portus",
@@ -3337,6 +3667,28 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
+    "id": "stellaris-obscura",
+    "anno": 7,
+    "annoLabel": "VII Anno",
+    "nome": "Incantesimo di Occultamento Celeste (Stellaris Obscura)",
+    "formula": "Stellaris Obscura",
+    "ripetibile": false,
+    "tipologia": "Occultamento Celeste / Variante Proibita",
+    "inDuello": false,
+    "duelloNote": "Non da duello convenzionale. Incanto clandestino per schermare la porzione di cielo sopra un rituale occultandola ai telescopi.",
+    "movimento": "Arco orizzontale invertito dall'alto con rotazione in senso antiorario a coprire la vista.",
+    "movimentoSvg": "M 35,50 C 55,25 95,25 115,50 C 95,85 55,85 35,50 Z",
+    "descrizione": "Variante proibita di Stellaris Revela trattata nel VII Anno di Astronomia. Crea una zona di distorsione cosmica che cancella la visibilità telescopica e divinatoria di una porzione di cielo, mascherando allineamenti e rituali segreti.",
+    "etimologia": "Dal latino stellaris (degli astri) e obscura (oscurata, celata).",
+    "valenza": 5,
+    "sommaLettere": 59,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Equilibrio)",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 59 ridotta a 5). Valenza opposta di simmetria: 5 (simmetria speculare pura). Figura operativa per Signo: Pentagono regolare. Limite di reiterazione: 1 volta/e."
+  },
+  {
     "id": "fidelius",
     "anno": 7,
     "annoLabel": "VII Anno",
@@ -3357,6 +3709,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volta/e.",
     "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
+  },
+  {
+    "id": "stellaris-revela",
+    "anno": 7,
+    "annoLabel": "VII Anno",
+    "nome": "Incantesimo di Proiezione della Volta Celeste (Stellaris Revela)",
+    "formula": "Stellaris Revela",
+    "ripetibile": true,
+    "tipologia": "Incanto Celeste / Proiezione Ottico-Astronomica",
+    "inDuello": false,
+    "duelloNote": "Non idoneo al duello. Formula di visualizzazione accademica del firmamento che oltrepassa coperture e ostacoli opachi.",
+    "movimento": "Puntamento verticale della bacchetta verso il cielo con flusso magico costante e concentrazione limpida.",
+    "movimentoSvg": "M 75,120 L 75,30 M 60,45 L 75,30 L 90,45",
+    "descrizione": "Sortilegio supremo del VII Anno di Astronomia (Mary C. Silente). Rivela la posizione e la frequenza delle stelle attraverso nuvole fitte, nebbie o soffitti opachi, generando una cupola eterea luminosa attorno all'incantatore con orbite planetarie e spettri di luce.",
+    "etimologia": "Dal latino stellaris (stellare) e revelare (svelare, scoprire).",
+    "valenza": 7,
+    "sommaLettere": 61,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 7,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 61 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare. Limite di reiterazione: 7 volte."
   },
   {
     "id": "animaleus-nobodyx",
@@ -3491,6 +3865,28 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
+    "id": "rituale-meteorio",
+    "anno": 7,
+    "annoLabel": "VII Anno",
+    "nome": "Rituale Celestiale Runico delle Meteore (Rituale Meteorio)",
+    "formula": "Rituale Meteorio",
+    "ripetibile": false,
+    "tipologia": "Alta Invocazione Runico-Celeste / Magia Cerimoniale",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Complesso rituale cerimoniale in 3 fasi che richiede allineamento ottico-magico con meteore reali e tracciatura di glifi Teiwaz e Sowilo.",
+    "movimento": "Tracciamento a terra di doppio triangolo runico orientato con l'azimut celeste e puntamento finale allo zenith.",
+    "movimentoSvg": "M 75,25 L 125,115 L 25,115 Z M 75,125 L 25,35 L 125,35 Z",
+    "descrizione": "Trattato nel VII Anno di Astronomia (Mary C. Silente) in raccordo con le Antiche Rune. Si articola in tre fasi: orientamento runico (Teiwaz e Sowilo tracciate sul terreno), allineamento col passaggio di uno sciame meteorico reale e canalizzazione dell'energia d'impatto cosmico per alimentare incanti e barriere permanenti.",
+    "etimologia": "Dal latino ritualis (attinente ai riti sacri) e dal greco meteōros (sospeso in cielo, celeste).",
+    "valenza": 6,
+    "sommaLettere": 78,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 78 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare. Limite di reiterazione: 1 volta/e."
+  },
+  {
     "id": "prior-incantatem",
     "anno": 7,
     "annoLabel": "VII Anno",
@@ -3599,6 +3995,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
     "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 116 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volta/e.",
     "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
+  },
+  {
+    "id": "sidera-sentio",
+    "anno": 7,
+    "annoLabel": "VII Anno",
+    "nome": "Sintonizzazione e Percezione Astrale (Sidera Sentio)",
+    "formula": "Sidera Sentio",
+    "ripetibile": true,
+    "tipologia": "Percezione Extrasensoriale / Flussi Magici Astrali",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Richiede stato meditativo profondo per avvertire la presenza e le correnti gravitazionali dei corpi celesti.",
+    "movimento": "Movimento ondulatorio e armonico a 45 gradi con bacchetta sollevata e rilassamento corporeo.",
+    "movimentoSvg": "M 40,105 C 55,85 65,115 80,95 C 95,75 105,105 120,60",
+    "descrizione": "Sortilegio di percezione interiore del VII Anno di Astronomia (Mary C. Silente). Apre i recettori magici dell'incantatore permettendogli di percepire l'influsso e la radiazione degli astri anche a occhi chiusi o all'interno di caverne e cripte oscure.",
+    "etimologia": "Dal latino sidera (stelle, astri) e sentire (percepire con i sensi).",
+    "valenza": 3,
+    "sommaLettere": 57,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione / Fuoco)",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 57 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero. Limite di reiterazione: 3 volte."
   },
   {
     "id": "finite-incantatem",
@@ -4063,88 +4481,32 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
-    "id": "runa-fehu",
+    "id": "runa-algiz",
     "isRune": true,
     "anno": 8,
     "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "1ª",
-    "posizioneNum": 1,
-    "aett": "1° Aett (Urd)",
-    "thootPos": "1ª Posizione (con Hagalaz e Teiwaz)",
-    "nome": "Runa Fehu (ᚠ)",
-    "formula": "ᚠ Fehu",
+    "posizioneAlfabeto": "15ª",
+    "posizioneNum": 15,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "7ª Posizione (con Gebo e Othila)",
+    "nome": "Runa Algiz (ᛉ)",
+    "formula": "ᛉ Algiz",
     "ripetibile": true,
     "tipologia": "Antiche Rune / Glifo Sacro",
     "inDuello": false,
     "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Incisione lineare verso l'alto con due aste oblique ascendenti a destra. Tracciabile su materia con Sìgno o nell'etere con Persìgno.",
-    "movimentoSvg": "M 50,125 L 50,25 M 50,55 L 95,30 M 50,85 L 90,60",
-    "descrizione": "1ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 1. Dominio: Inizio, creazione ex-nihilo, energia vitale cosmica, lavoro, ricchezza mobile, spirito primigenio. Corrispondenza di Canone: la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico (Posizione 1 = Valenza 1).",
-    "etimologia": "Dal proto-germanico *fehu (bestiame, ricchezza, energia creatrice del cosmo).",
-    "valenza": 1,
-    "sommaLettere": 1,
-    "valenzaOpposta": 9,
+    "movimento": "Asta verticale eretta con due rami ascendenti divaricati simmetricamente in alto (corna d'alce).",
+    "movimentoSvg": "M 75,25 L 75,125 M 40,35 L 75,65 L 110,35",
+    "descrizione": "15ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 15 (riduzione teosofica: 1+5 = 6). Dominio: Baluardo di difesa inviolabile, scudo arcano assoluto, purezza incontaminata, guardia, allontanamento del pericolo. Corrispondenza di Canone: Posizione 15 -> Valenza 6 (perfetta risonanza con Protego!).",
+    "etimologia": "Dal proto-germanico *algiz (alce, protezione sacra, difesa inviolabile).",
+    "valenza": 6,
+    "sommaLettere": 15,
+    "valenzaOpposta": 4,
     "maxRipetizioni": 8,
-    "figuraGeometrica": "Circonferenza (Unità / Origine / Acqua)",
-    "pietraConsacrata": "Topazio / Luce",
-    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 1ª. Valenza Magica: 1 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 1ª Posizione (con Hagalaz e Teiwaz). Pietra consacrata: Topazio / Luce. Incantesimi di Hogwarts in risonanza: Incendio (1), Reparo (1), Signo (1), Coerceo (1), Colligo (1)."
-  },
-  {
-    "id": "runa-uruz",
-    "isRune": true,
-    "anno": 8,
-    "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "2ª",
-    "posizioneNum": 2,
-    "aett": "1° Aett (Urd)",
-    "thootPos": "2ª Posizione (con Nauthiz e Berkana)",
-    "nome": "Runa Uruz (ᚢ)",
-    "formula": "ᚢ Uruz",
-    "ripetibile": true,
-    "tipologia": "Antiche Rune / Glifo Sacro",
-    "inDuello": false,
-    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Asta verticale sinistra scendente, fendente obliquo a destra e seconda asta verticale scendente più breve.",
-    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 95,50 L 95,125",
-    "descrizione": "2ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 2. Dominio: Incremento, potenza primordiale del toro (uro), salute, vigore muscolare, accrescimento strutturale, tenacia. Corrispondenza di Canone: Posizione 2 = Valenza 2.",
-    "etimologia": "Dal proto-germanico *ūruz (uro, toro primordiale selvaggio, forza tellurica).",
-    "valenza": 2,
-    "sommaLettere": 2,
-    "valenzaOpposta": 8,
-    "maxRipetizioni": 8,
-    "figuraGeometrica": "Angolo / Linea (Dualismo / Forza)",
-    "pietraConsacrata": "Ambra / Quarzo",
-    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 2ª. Valenza Magica: 2 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 2ª Posizione (con Nauthiz e Berkana). Pietra consacrata: Ambra / Quarzo. Incantesimi di Hogwarts in risonanza: Expelliarmus (2), Innerva (2), Fumos (2), Riddikulus (2)."
-  },
-  {
-    "id": "runa-thurisaz",
-    "isRune": true,
-    "anno": 8,
-    "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "3ª",
-    "posizioneNum": 3,
-    "aett": "1° Aett (Urd)",
-    "thootPos": "3ª Posizione (con Isa ed Ehwaz)",
-    "nome": "Runa Thurisaz (ᚦ)",
-    "formula": "ᚦ Thurisaz",
-    "ripetibile": true,
-    "tipologia": "Antiche Rune / Glifo Sacro",
-    "inDuello": false,
-    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Asta verticale centrale con spina triangolare acuta protesa verso destra a metà altezza.",
-    "movimentoSvg": "M 50,25 L 50,125 M 50,50 L 95,75 L 50,100",
-    "descrizione": "3ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 3. Dominio: Spina, dolore lacerante, caos, abbattimento di ostacoli, follia difensiva, liberazione violenta. Corrispondenza di Canone: Posizione 3 = Valenza 3.",
-    "etimologia": "Dal proto-germanico *þurisaz (gigante di ghiaccio, spina acuta).",
-    "valenza": 3,
-    "sommaLettere": 3,
-    "valenzaOpposta": 7,
-    "maxRipetizioni": 8,
-    "figuraGeometrica": "Triangolo equilatero (Caos / Spina)",
-    "pietraConsacrata": "Agata / Ossidiana",
-    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 3ª. Valenza Magica: 3 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 3ª Posizione (con Isa ed Ehwaz). Pietra consacrata: Agata / Ossidiana. Incantesimi di Hogwarts in risonanza: Arresto Momentum (3), Orchideus (3), Incipio (3), Iungo (3)."
+    "figuraGeometrica": "Esagono regolare (Scudo / Purezza)",
+    "pietraConsacrata": "Ossidiana / Protezione",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 15ª. Valenza Magica: 6 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 7ª Posizione (con Gebo e Othila). Pietra consacrata: Ossidiana / Protezione. Incantesimi di Hogwarts in risonanza: Protego (6), Verdimillious (6), Adultero (6), Surge et expandi (6)."
   },
   {
     "id": "runa-ansuz",
@@ -4175,60 +4537,172 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Posizione nell'Alfabeto Runico: 4ª. Valenza Magica: 4 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 4ª Posizione (con Jera e Mannaz). Pietra consacrata: Opale / Aria. Incantesimi di Hogwarts in risonanza: Liberacorpus (4), Diffindo (4), Persigno (4), Stigma Exsequor (4)."
   },
   {
-    "id": "runa-raido",
+    "id": "runa-berkana",
     "isRune": true,
     "anno": 8,
     "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "5ª",
-    "posizioneNum": 5,
-    "aett": "1° Aett (Urd)",
-    "thootPos": "5ª Posizione (con Eihwaz e Laguz)",
-    "nome": "Runa Raido (ᚱ)",
-    "formula": "ᚱ Raido",
+    "posizioneAlfabeto": "18ª",
+    "posizioneNum": 18,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "2ª Posizione (con Uruz e Nauthiz)",
+    "nome": "Runa Berkana (ᛒ)",
+    "formula": "ᛒ Berkana",
     "ripetibile": true,
     "tipologia": "Antiche Rune / Glifo Sacro",
     "inDuello": false,
     "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Asta verticale, ansa superiore ad angolo e zampa diagonale discendente a destra.",
-    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 90,50 L 50,75 M 50,75 L 95,125",
-    "descrizione": "5ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 5. Dominio: La ruota, il viaggio, il sentiero, la cinetica, il messaggio, il ciclo senza fine dello spazio. Runa speculare autonoma su valenza 5. Corrispondenza di Canone: Posizione 5 = Valenza 5.",
-    "etimologia": "Dal proto-germanico *raidō (cavalcata, ruota del carro, viaggio).",
+    "movimento": "Asta verticale sinistra con due lobi triangolari convessi a destra (forma simile a B).",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 90,50 L 50,75 L 90,100 L 50,125",
+    "descrizione": "18ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 18 (riduzione teosofica: 1+8 = 9). Dominio: La betulla sacra, la terra viva (Elemento Terra Codex), nascita, fertilità, rigenerazione vegetale, protezione della dimora. Corrispondenza di Canone: Posizione 18 -> Valenza 9.",
+    "etimologia": "Dal proto-germanico *berkanan (betulla, dea della fertilità e rinascita terrena).",
+    "valenza": 9,
+    "sommaLettere": 18,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Ellisse (Rigenerazione / Terra)",
+    "pietraConsacrata": "Ambra / Smeraldo",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 18ª. Valenza Magica: 9 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 2ª Posizione (con Uruz e Nauthiz). Pietra consacrata: Ambra / Smeraldo. Incantesimi di Hogwarts in risonanza: Flipendo (9), Petrificus Totalus (9), Glacius (9), Compositum (9)."
+  },
+  {
+    "id": "runa-bianca",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "Speciale",
+    "posizioneNum": 25,
+    "aett": "Centro del Wyrd",
+    "thootPos": "Asse Centrale del Destino",
+    "nome": "Runa Bianca (○)",
+    "formula": "○ Runa Bianca",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Imposizione delle mani senza tracciato visibile, proiezione del vuoto mentale con Percèptio Ìntimo.",
+    "movimentoSvg": "M 75,35 A 40,40 0 1,1 74.9,35 Z",
+    "descrizione": "Runa Misterica del Wyrd (priva di glifo inciso). Collocata al Centro del Wyrd, rappresenta l'assenza trasfigurata in potere supremo, il vuoto fecondo, l'illusione totale (Percèptio Ìntimo). Valenza Esoterica 5 (speculare perfetta). Corrispondenza di Canone: Valenza 5.",
+    "etimologia": "Dal mistero delle tre Norne (ciò che ancora non è e che può divenire tutto).",
     "valenza": 5,
     "sommaLettere": 5,
     "valenzaOpposta": 5,
     "maxRipetizioni": 8,
-    "figuraGeometrica": "Pentagono regolare (Moto Perpetuo / Aria)",
-    "pietraConsacrata": "Azzurrite / Etere",
+    "figuraGeometrica": "Pentagono regolare (Etere Cosmico / Il Nulla)",
+    "pietraConsacrata": "Ciottolo Levigato privo di segni",
     "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 5ª. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 5ª Posizione (con Eihwaz e Laguz). Pietra consacrata: Azzurrite / Etere. Incantesimi di Hogwarts in risonanza: Levicorpus (5), Immobilus (5), Finge (5), Deleo (5), Dominium Evoco (5)."
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: Speciale. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: Asse Centrale del Destino. Pietra consacrata: Ciottolo Levigato privo di segni. Incantesimi di Hogwarts in risonanza: Perceptio Intimo (7), Levicorpus (5), Deleo (5), Revelio (5)."
   },
   {
-    "id": "runa-kenaz",
+    "id": "runa-dagaz",
     "isRune": true,
     "anno": 8,
     "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "6ª",
-    "posizioneNum": 6,
-    "aett": "1° Aett (Urd)",
-    "thootPos": "6ª Posizione (con Perthr e Inguz)",
-    "nome": "Runa Kenaz (ᚲ)",
-    "formula": "ᚲ Kenaz",
+    "posizioneAlfabeto": "24ª",
+    "posizioneNum": 24,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "8ª Posizione (con Wunjo e Sowilo)",
+    "nome": "Runa Dagaz (ᛞ)",
+    "formula": "ᛞ Dagaz",
     "ripetibile": true,
     "tipologia": "Antiche Rune / Glifo Sacro",
     "inDuello": false,
     "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Cuspide angolare aperta verso destra (fendente discendente poi ascendente).",
-    "movimentoSvg": "M 95,35 L 50,75 L 95,115",
-    "descrizione": "6ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 6. Dominio: Fiaccola viva, fiamma controllata di purificazione, guarigione delle ferite, ristoro spirituale, luce rivelatrice. Corrispondenza di Canone: Posizione 6 = Valenza 6.",
-    "etimologia": "Dal proto-germanico *kaunan (torcia, fiaccola, calore benefico).",
+    "movimento": "Forma a clessidra orizzontale o farfalla ad ali incrociate (due triangoli congiunti al vertice).",
+    "movimentoSvg": "M 45,30 L 45,120 L 105,30 L 105,120 Z",
+    "descrizione": "24ª Runa dell'Alfabeto Runico (chiude l'antico Futhark). Posizione alfabetica: 24 (riduzione teosofica: 2+4 = 6). Dominio: Spirito Sulis, elemento Fuoco vivente nel Codex (Numero 8 rituale), trasformazione all'alba, pienezza del giorno, incendio risanatore. Corrispondenza di Canone: Posizione 24 -> Valenza 6.",
+    "etimologia": "Dal proto-germanico *dagaz (giorno, luce dell'aurora, compimento trasformatore).",
     "valenza": 6,
-    "sommaLettere": 6,
+    "sommaLettere": 24,
     "valenzaOpposta": 4,
     "maxRipetizioni": 8,
-    "figuraGeometrica": "Esagono regolare (Equilibrio / Armonia)",
+    "figuraGeometrica": "Esagono regolare (Giorno / Fuoco Vivente)",
     "pietraConsacrata": "Agata / Molibdenite",
     "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 6ª. Valenza Magica: 6 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 6ª Posizione (con Perthr e Inguz). Pietra consacrata: Agata / Molibdenite. Incantesimi di Hogwarts in risonanza: Protego (6), Verdimillious (6), Adultero (6), Surge et expandi (6)."
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 24ª. Valenza Magica: 6 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 8ª Posizione (con Wunjo e Sowilo). Pietra consacrata: Agata / Molibdenite. Incantesimi di Hogwarts in risonanza: Protego (6), Verdimillious (6), Adultero (6), Surge et expandi (6)."
+  },
+  {
+    "id": "runa-ehwaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "19ª",
+    "posizioneNum": 19,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "3ª Posizione (con Thurisaz e Isa)",
+    "nome": "Runa Ehwaz (ᛖ)",
+    "formula": "ᛖ Ehwaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Due aste verticali congiunte in alto da due segmenti a V (forma simile a M).",
+    "movimentoSvg": "M 45,25 L 45,125 M 105,25 L 105,125 M 45,25 L 75,55 L 105,25",
+    "descrizione": "19ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 19 (riduzione teosofica: 1+9 = 10 -> 1). Dominio: Il cavallo destriero, avanzamento rapido, cinetica animale, svolta repentina, alleanza leale cavaliere-destriero. Corrispondenza di Canone: Posizione 19 -> Valenza 1.",
+    "etimologia": "Dal proto-germanico *ehwaz (cavallo, destriero sacro, compagno di viaggio).",
+    "valenza": 1,
+    "sommaLettere": 19,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Circonferenza (Cinetica / Cavallo)",
+    "pietraConsacrata": "Quarzo / Ambra",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 19ª. Valenza Magica: 1 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 3ª Posizione (con Thurisaz e Isa). Pietra consacrata: Quarzo / Ambra. Incantesimi di Hogwarts in risonanza: Incendio (1), Reparo (1), Snufflifors (1), Signo (1), Colligo (1)."
+  },
+  {
+    "id": "runa-eihwaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "13ª",
+    "posizioneNum": 13,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "5ª Posizione (con Raido e Laguz)",
+    "nome": "Runa Eihwaz (ᛇ)",
+    "formula": "ᛇ Eihwaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale centrale con uncino superiore verso sinistra e uncino inferiore verso destra.",
+    "movimentoSvg": "M 50,40 L 75,25 L 75,125 L 100,110",
+    "descrizione": "13ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 13 (riduzione teosofica: 1+3 = 4). Dominio: L'albero del tasso (Yggdrasil), asse del cosmo, trionfo sulle difficoltà, resurrezione, protezione magica millenaria. Corrispondenza di Canone: Posizione 13 -> Valenza 4.",
+    "etimologia": "Dal proto-germanico *eihwaz (albero del tasso, asse sacro del mondo).",
+    "valenza": 4,
+    "sommaLettere": 13,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Quadrato (Albero Cosmico / Stabilità)",
+    "pietraConsacrata": "Ambra / Quarzo",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 13ª. Valenza Magica: 4 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 5ª Posizione (con Raido e Laguz). Pietra consacrata: Ambra / Quarzo. Incantesimi di Hogwarts in risonanza: Liberacorpus (4), Diffindo (4), Persigno (4), Stigma Exsequor (4)."
+  },
+  {
+    "id": "runa-fehu",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "1ª",
+    "posizioneNum": 1,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "1ª Posizione (con Hagalaz e Teiwaz)",
+    "nome": "Runa Fehu (ᚠ)",
+    "formula": "ᚠ Fehu",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Incisione lineare verso l'alto con due aste oblique ascendenti a destra. Tracciabile su materia con Sìgno o nell'etere con Persìgno.",
+    "movimentoSvg": "M 50,125 L 50,25 M 50,55 L 95,30 M 50,85 L 90,60",
+    "descrizione": "1ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 1. Dominio: Inizio, creazione ex-nihilo, energia vitale cosmica, lavoro, ricchezza mobile, spirito primigenio. Corrispondenza di Canone: la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico (Posizione 1 = Valenza 1).",
+    "etimologia": "Dal proto-germanico *fehu (bestiame, ricchezza, energia creatrice del cosmo).",
+    "valenza": 1,
+    "sommaLettere": 1,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Circonferenza (Unità / Origine / Acqua)",
+    "pietraConsacrata": "Topazio / Luce",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 1ª. Valenza Magica: 1 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 1ª Posizione (con Hagalaz e Teiwaz). Pietra consacrata: Topazio / Luce. Incantesimi di Hogwarts in risonanza: Incendio (1), Reparo (1), Signo (1), Coerceo (1), Colligo (1)."
   },
   {
     "id": "runa-gebo",
@@ -4259,34 +4733,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Posizione nell'Alfabeto Runico: 7ª. Valenza Magica: 7 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 7ª Posizione (con Algiz e Othila). Pietra consacrata: Ambra / Quarzo. Incantesimi di Hogwarts in risonanza: Stupeficium (7), Vulnera Sanentur (7), Exsequor (7), Invenio (7)."
   },
   {
-    "id": "runa-wunjo",
-    "isRune": true,
-    "anno": 8,
-    "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "8ª",
-    "posizioneNum": 8,
-    "aett": "1° Aett (Urd)",
-    "thootPos": "8ª Posizione (con Sowilo e Dagaz)",
-    "nome": "Runa Wunjo (ᚹ)",
-    "formula": "ᚹ Wunjo",
-    "ripetibile": true,
-    "tipologia": "Antiche Rune / Glifo Sacro",
-    "inDuello": false,
-    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Asta verticale sinistra con triangolo superiore acuto proteso verso destra.",
-    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 95,55 L 50,80",
-    "descrizione": "8ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 8. Dominio: Gioia profonda, benessere, armonia spirituale, preghiera, celebrazione, assenza di sofferenza. Corrispondenza di Canone: Posizione 8 = Valenza 8.",
-    "etimologia": "Dal proto-germanico *wunjō (gioia, delizia, armonia del cuore).",
-    "valenza": 8,
-    "sommaLettere": 8,
-    "valenzaOpposta": 2,
-    "maxRipetizioni": 8,
-    "figuraGeometrica": "Ottagono regolare (Infinito / Fuoco)",
-    "pietraConsacrata": "Topazio / Opale",
-    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 8ª. Valenza Magica: 8 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 8ª Posizione (con Sowilo e Dagaz). Pietra consacrata: Topazio / Opale. Incantesimi di Hogwarts in risonanza: Lumos (8), Alohomora (8), Plasma (8), Exstinguo (8), Occulto (8)."
-  },
-  {
     "id": "runa-hagalaz",
     "isRune": true,
     "anno": 8,
@@ -4315,32 +4761,32 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Posizione nell'Alfabeto Runico: 9ª. Valenza Magica: 9 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 1ª Posizione (con Fehu e Teiwaz). Pietra consacrata: Opale / Aria. Incantesimi di Hogwarts in risonanza: Flipendo (9), Petrificus Totalus (9), Glacius (9), Compositum (9)."
   },
   {
-    "id": "runa-nauthiz",
+    "id": "runa-inguz",
     "isRune": true,
     "anno": 8,
     "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "10ª",
-    "posizioneNum": 10,
-    "aett": "2° Aett (Verdandi)",
-    "thootPos": "2ª Posizione (con Uruz e Berkana)",
-    "nome": "Runa Nauthiz (ᚾ)",
-    "formula": "ᚾ Nauthiz",
+    "posizioneAlfabeto": "22ª",
+    "posizioneNum": 22,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "6ª Posizione (con Kenaz e Perthr)",
+    "nome": "Runa Inguz (ᛜ)",
+    "formula": "ᛜ Inguz",
     "ripetibile": true,
     "tipologia": "Antiche Rune / Glifo Sacro",
     "inDuello": false,
     "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Asta verticale centrale attraversata diagonalmente da un segmento fendente inclinato.",
-    "movimentoSvg": "M 75,25 L 75,125 M 45,60 L 105,90",
-    "descrizione": "10ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 10 (riduzione teosofica: 1+0 = 1). Dominio: Necessità ineluttabile, vincolo stoico, controllo delle emozioni, carattere ferreo, salvezza nella prova. Corrispondenza di Canone: Posizione 10 -> Valenza 1.",
-    "etimologia": "Dal proto-germanico *naudiz (bisogno, necessità stringente, costrizione).",
-    "valenza": 1,
-    "sommaLettere": 10,
-    "valenzaOpposta": 9,
+    "movimento": "Rombo perfetto o losanga chiusa a quattro tratti obliqui simmetrici.",
+    "movimentoSvg": "M 75,35 L 110,75 L 75,115 L 40,75 Z",
+    "descrizione": "22ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 22 (riduzione teosofica: 2+2 = 4). Dominio: Luce primordiale dell'anima, seme della gestazione, portale magico, varco tra dimensioni, ponte arcano. Corrispondenza di Canone: Posizione 22 -> Valenza 4.",
+    "etimologia": "Dal proto-germanico *ingwaz (dio ancestrale Yngvi-Freyr, fecondità, luce vitale).",
+    "valenza": 4,
+    "sommaLettere": 22,
+    "valenzaOpposta": 6,
     "maxRipetizioni": 8,
-    "figuraGeometrica": "Circonferenza (Unità / Vincolo)",
-    "pietraConsacrata": "Ossidiana / Vincolo",
-    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 10ª. Valenza Magica: 1 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 2ª Posizione (con Uruz e Berkana). Pietra consacrata: Ossidiana / Vincolo. Incantesimi di Hogwarts in risonanza: Incendio (1), Reparo (1), Signo (1), Coerceo (1), Colligo (1)."
+    "figuraGeometrica": "Quadrato / Rombo (Varco / Portale)",
+    "pietraConsacrata": "Topazio / Opale",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 22ª. Valenza Magica: 4 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 6ª Posizione (con Kenaz e Perthr). Pietra consacrata: Topazio / Opale. Incantesimi di Hogwarts in risonanza: Liberacorpus (4), Diffindo (4), Persigno (4), Stigma Exsequor (4)."
   },
   {
     "id": "runa-isa",
@@ -4399,32 +4845,144 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Posizione nell'Alfabeto Runico: 12ª. Valenza Magica: 3 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 4ª Posizione (con Ansuz e Mannaz). Pietra consacrata: Quarzo / Terra. Incantesimi di Hogwarts in risonanza: Arresto Momentum (3), Orchideus (3), Incipio (3), Iungo (3)."
   },
   {
-    "id": "runa-eihwaz",
+    "id": "runa-kenaz",
     "isRune": true,
     "anno": 8,
     "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "13ª",
-    "posizioneNum": 13,
-    "aett": "2° Aett (Verdandi)",
-    "thootPos": "5ª Posizione (con Raido e Laguz)",
-    "nome": "Runa Eihwaz (ᛇ)",
-    "formula": "ᛇ Eihwaz",
+    "posizioneAlfabeto": "6ª",
+    "posizioneNum": 6,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "6ª Posizione (con Perthr e Inguz)",
+    "nome": "Runa Kenaz (ᚲ)",
+    "formula": "ᚲ Kenaz",
     "ripetibile": true,
     "tipologia": "Antiche Rune / Glifo Sacro",
     "inDuello": false,
     "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Asta verticale centrale con uncino superiore verso sinistra e uncino inferiore verso destra.",
-    "movimentoSvg": "M 50,40 L 75,25 L 75,125 L 100,110",
-    "descrizione": "13ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 13 (riduzione teosofica: 1+3 = 4). Dominio: L'albero del tasso (Yggdrasil), asse del cosmo, trionfo sulle difficoltà, resurrezione, protezione magica millenaria. Corrispondenza di Canone: Posizione 13 -> Valenza 4.",
-    "etimologia": "Dal proto-germanico *eihwaz (albero del tasso, asse sacro del mondo).",
-    "valenza": 4,
-    "sommaLettere": 13,
-    "valenzaOpposta": 6,
+    "movimento": "Cuspide angolare aperta verso destra (fendente discendente poi ascendente).",
+    "movimentoSvg": "M 95,35 L 50,75 L 95,115",
+    "descrizione": "6ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 6. Dominio: Fiaccola viva, fiamma controllata di purificazione, guarigione delle ferite, ristoro spirituale, luce rivelatrice. Corrispondenza di Canone: Posizione 6 = Valenza 6.",
+    "etimologia": "Dal proto-germanico *kaunan (torcia, fiaccola, calore benefico).",
+    "valenza": 6,
+    "sommaLettere": 6,
+    "valenzaOpposta": 4,
     "maxRipetizioni": 8,
-    "figuraGeometrica": "Quadrato (Albero Cosmico / Stabilità)",
-    "pietraConsacrata": "Ambra / Quarzo",
-    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 13ª. Valenza Magica: 4 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 5ª Posizione (con Raido e Laguz). Pietra consacrata: Ambra / Quarzo. Incantesimi di Hogwarts in risonanza: Liberacorpus (4), Diffindo (4), Persigno (4), Stigma Exsequor (4)."
+    "figuraGeometrica": "Esagono regolare (Equilibrio / Armonia)",
+    "pietraConsacrata": "Agata / Molibdenite",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 6ª. Valenza Magica: 6 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 6ª Posizione (con Perthr e Inguz). Pietra consacrata: Agata / Molibdenite. Incantesimi di Hogwarts in risonanza: Protego (6), Verdimillious (6), Adultero (6), Surge et expandi (6)."
+  },
+  {
+    "id": "runa-laguz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "21ª",
+    "posizioneNum": 21,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "5ª Posizione (con Raido ed Eihwaz)",
+    "nome": "Runa Laguz (ᛚ)",
+    "formula": "ᛚ Laguz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale scendente con ramo destro obliquo discendente dalla cima (amo d'acqua).",
+    "movimentoSvg": "M 60,25 L 60,125 M 60,25 L 100,65",
+    "descrizione": "21ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 21 (riduzione teosofica: 2+1 = 3). Dominio: Spirito Arausio, acqua primordiale, onde dell'oceano, abisso, trappola liquida, confinamento insidioso. Runa cardine delle gabbie con Colligo. Corrispondenza di Canone: Posizione 21 -> Valenza 3 (Elemento Acqua 1 nel Codex).",
+    "etimologia": "Dal proto-germanico *laguz (acqua, lago, marea, oceano profondo).",
+    "valenza": 3,
+    "sommaLettere": 21,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Triangolo equilatero (Acqua / Abisso)",
+    "pietraConsacrata": "Acquamarina / Acqua",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 21ª. Valenza Magica: 3 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 5ª Posizione (con Raido ed Eihwaz). Pietra consacrata: Acquamarina / Acqua. Incantesimi di Hogwarts in risonanza: Arresto Momentum (3), Orchideus (3), Incipio (3), Iungo (3)."
+  },
+  {
+    "id": "runa-mannaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "20ª",
+    "posizioneNum": 20,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "4ª Posizione (con Ansuz e Jera)",
+    "nome": "Runa Mannaz (ᛗ)",
+    "formula": "ᛗ Mannaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Due aste verticali parallele congiunte da una grande croce a X nella parte superiore.",
+    "movimentoSvg": "M 45,25 L 45,125 M 105,25 L 105,125 M 45,25 L 105,80 M 105,25 L 45,80",
+    "descrizione": "20ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 20 (riduzione teosofica: 2+0 = 2). Dominio: L'uomo, l'intelletto, la mente razionale, la coscienza umana, la cooperazione sociale, la scienza, l'equilibrio interiore. Corrispondenza di Canone: Posizione 20 -> Valenza 2.",
+    "etimologia": "Dal proto-germanico *mannaz (essere umano, uomo saggio, mente pensante).",
+    "valenza": 2,
+    "sommaLettere": 20,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Angolo / Linea (Mente Umana / Ragione)",
+    "pietraConsacrata": "Topazio / Zaffiro",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 20ª. Valenza Magica: 2 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 4ª Posizione (con Ansuz e Jera). Pietra consacrata: Topazio / Zaffiro. Incantesimi di Hogwarts in risonanza: Expelliarmus (2), Innerva (2), Fumos (2), Riddikulus (2)."
+  },
+  {
+    "id": "runa-nauthiz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "10ª",
+    "posizioneNum": 10,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "2ª Posizione (con Uruz e Berkana)",
+    "nome": "Runa Nauthiz (ᚾ)",
+    "formula": "ᚾ Nauthiz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale centrale attraversata diagonalmente da un segmento fendente inclinato.",
+    "movimentoSvg": "M 75,25 L 75,125 M 45,60 L 105,90",
+    "descrizione": "10ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 10 (riduzione teosofica: 1+0 = 1). Dominio: Necessità ineluttabile, vincolo stoico, controllo delle emozioni, carattere ferreo, salvezza nella prova. Corrispondenza di Canone: Posizione 10 -> Valenza 1.",
+    "etimologia": "Dal proto-germanico *naudiz (bisogno, necessità stringente, costrizione).",
+    "valenza": 1,
+    "sommaLettere": 10,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Circonferenza (Unità / Vincolo)",
+    "pietraConsacrata": "Ossidiana / Vincolo",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 10ª. Valenza Magica: 1 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 2ª Posizione (con Uruz e Berkana). Pietra consacrata: Ossidiana / Vincolo. Incantesimi di Hogwarts in risonanza: Incendio (1), Reparo (1), Signo (1), Coerceo (1), Colligo (1)."
+  },
+  {
+    "id": "runa-othila",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "23ª",
+    "posizioneNum": 23,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "7ª Posizione (con Gebo e Algiz)",
+    "nome": "Runa Othila (ᛟ)",
+    "formula": "ᛟ Othila",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Rombo superiore con aste inferiori incrociate prolungate verso il basso.",
+    "movimentoSvg": "M 45,125 L 75,95 L 105,65 L 75,35 L 45,65 L 75,95 L 105,125",
+    "descrizione": "23ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 23 (riduzione teosofica: 2+3 = 5). Dominio: La proprietà avita, la soglia sacra della casa, le radici familiari, il guardiano domestico, l'eredità. Runa speculare autonoma su valenza 5. Corrispondenza di Canone: Posizione 23 -> Valenza 5.",
+    "etimologia": "Dal proto-germanico *ōþalan (patrimonio ancestrale, terra natia, lignaggio).",
+    "valenza": 5,
+    "sommaLettere": 23,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Pentagono regolare (Soglia / Patrimonio)",
+    "pietraConsacrata": "Ossidiana / Onice",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 23ª. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 7ª Posizione (con Gebo e Algiz). Pietra consacrata: Ossidiana / Onice. Incantesimi di Hogwarts in risonanza: Levicorpus (5), Immobilus (5), Deleo (5), Dominium Evoco (5)."
   },
   {
     "id": "runa-perthr",
@@ -4455,32 +5013,32 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Posizione nell'Alfabeto Runico: 14ª. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 6ª Posizione (con Kenaz e Inguz). Pietra consacrata: Labradorite / Onice. Incantesimi di Hogwarts in risonanza: Levicorpus (5), Immobilus (5), Deleo (5), Dominium Evoco (5)."
   },
   {
-    "id": "runa-algiz",
+    "id": "runa-raido",
     "isRune": true,
     "anno": 8,
     "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "15ª",
-    "posizioneNum": 15,
-    "aett": "2° Aett (Verdandi)",
-    "thootPos": "7ª Posizione (con Gebo e Othila)",
-    "nome": "Runa Algiz (ᛉ)",
-    "formula": "ᛉ Algiz",
+    "posizioneAlfabeto": "5ª",
+    "posizioneNum": 5,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "5ª Posizione (con Eihwaz e Laguz)",
+    "nome": "Runa Raido (ᚱ)",
+    "formula": "ᚱ Raido",
     "ripetibile": true,
     "tipologia": "Antiche Rune / Glifo Sacro",
     "inDuello": false,
     "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Asta verticale eretta con due rami ascendenti divaricati simmetricamente in alto (corna d'alce).",
-    "movimentoSvg": "M 75,25 L 75,125 M 40,35 L 75,65 L 110,35",
-    "descrizione": "15ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 15 (riduzione teosofica: 1+5 = 6). Dominio: Baluardo di difesa inviolabile, scudo arcano assoluto, purezza incontaminata, guardia, allontanamento del pericolo. Corrispondenza di Canone: Posizione 15 -> Valenza 6 (perfetta risonanza con Protego!).",
-    "etimologia": "Dal proto-germanico *algiz (alce, protezione sacra, difesa inviolabile).",
-    "valenza": 6,
-    "sommaLettere": 15,
-    "valenzaOpposta": 4,
+    "movimento": "Asta verticale, ansa superiore ad angolo e zampa diagonale discendente a destra.",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 90,50 L 50,75 M 50,75 L 95,125",
+    "descrizione": "5ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 5. Dominio: La ruota, il viaggio, il sentiero, la cinetica, il messaggio, il ciclo senza fine dello spazio. Runa speculare autonoma su valenza 5. Corrispondenza di Canone: Posizione 5 = Valenza 5.",
+    "etimologia": "Dal proto-germanico *raidō (cavalcata, ruota del carro, viaggio).",
+    "valenza": 5,
+    "sommaLettere": 5,
+    "valenzaOpposta": 5,
     "maxRipetizioni": 8,
-    "figuraGeometrica": "Esagono regolare (Scudo / Purezza)",
-    "pietraConsacrata": "Ossidiana / Protezione",
-    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 15ª. Valenza Magica: 6 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 7ª Posizione (con Gebo e Othila). Pietra consacrata: Ossidiana / Protezione. Incantesimi di Hogwarts in risonanza: Protego (6), Verdimillious (6), Adultero (6), Surge et expandi (6)."
+    "figuraGeometrica": "Pentagono regolare (Moto Perpetuo / Aria)",
+    "pietraConsacrata": "Azzurrite / Etere",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 5ª. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 5ª Posizione (con Eihwaz e Laguz). Pietra consacrata: Azzurrite / Etere. Incantesimi di Hogwarts in risonanza: Levicorpus (5), Immobilus (5), Finge (5), Deleo (5), Dominium Evoco (5)."
   },
   {
     "id": "runa-sowilo",
@@ -4539,230 +5097,94 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Posizione nell'Alfabeto Runico: 17ª. Valenza Magica: 8 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 1ª Posizione (con Fehu e Hagalaz). Pietra consacrata: Onice / Acciaio. Incantesimi di Hogwarts in risonanza: Lumos (8), Alohomora (8), Plasma (8), Exstinguo (8), Occulto (8)."
   },
   {
-    "id": "runa-berkana",
+    "id": "runa-thurisaz",
     "isRune": true,
     "anno": 8,
     "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "18ª",
-    "posizioneNum": 18,
-    "aett": "3° Aett (Skuld)",
-    "thootPos": "2ª Posizione (con Uruz e Nauthiz)",
-    "nome": "Runa Berkana (ᛒ)",
-    "formula": "ᛒ Berkana",
+    "posizioneAlfabeto": "3ª",
+    "posizioneNum": 3,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "3ª Posizione (con Isa ed Ehwaz)",
+    "nome": "Runa Thurisaz (ᚦ)",
+    "formula": "ᚦ Thurisaz",
     "ripetibile": true,
     "tipologia": "Antiche Rune / Glifo Sacro",
     "inDuello": false,
     "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Asta verticale sinistra con due lobi triangolari convessi a destra (forma simile a B).",
-    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 90,50 L 50,75 L 90,100 L 50,125",
-    "descrizione": "18ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 18 (riduzione teosofica: 1+8 = 9). Dominio: La betulla sacra, la terra viva (Elemento Terra Codex), nascita, fertilità, rigenerazione vegetale, protezione della dimora. Corrispondenza di Canone: Posizione 18 -> Valenza 9.",
-    "etimologia": "Dal proto-germanico *berkanan (betulla, dea della fertilità e rinascita terrena).",
-    "valenza": 9,
-    "sommaLettere": 18,
-    "valenzaOpposta": 1,
-    "maxRipetizioni": 8,
-    "figuraGeometrica": "Ellisse (Rigenerazione / Terra)",
-    "pietraConsacrata": "Ambra / Smeraldo",
-    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 18ª. Valenza Magica: 9 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 2ª Posizione (con Uruz e Nauthiz). Pietra consacrata: Ambra / Smeraldo. Incantesimi di Hogwarts in risonanza: Flipendo (9), Petrificus Totalus (9), Glacius (9), Compositum (9)."
-  },
-  {
-    "id": "runa-ehwaz",
-    "isRune": true,
-    "anno": 8,
-    "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "19ª",
-    "posizioneNum": 19,
-    "aett": "3° Aett (Skuld)",
-    "thootPos": "3ª Posizione (con Thurisaz e Isa)",
-    "nome": "Runa Ehwaz (ᛖ)",
-    "formula": "ᛖ Ehwaz",
-    "ripetibile": true,
-    "tipologia": "Antiche Rune / Glifo Sacro",
-    "inDuello": false,
-    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Due aste verticali congiunte in alto da due segmenti a V (forma simile a M).",
-    "movimentoSvg": "M 45,25 L 45,125 M 105,25 L 105,125 M 45,25 L 75,55 L 105,25",
-    "descrizione": "19ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 19 (riduzione teosofica: 1+9 = 10 -> 1). Dominio: Il cavallo destriero, avanzamento rapido, cinetica animale, svolta repentina, alleanza leale cavaliere-destriero. Corrispondenza di Canone: Posizione 19 -> Valenza 1.",
-    "etimologia": "Dal proto-germanico *ehwaz (cavallo, destriero sacro, compagno di viaggio).",
-    "valenza": 1,
-    "sommaLettere": 19,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 8,
-    "figuraGeometrica": "Circonferenza (Cinetica / Cavallo)",
-    "pietraConsacrata": "Quarzo / Ambra",
-    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 19ª. Valenza Magica: 1 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 3ª Posizione (con Thurisaz e Isa). Pietra consacrata: Quarzo / Ambra. Incantesimi di Hogwarts in risonanza: Incendio (1), Reparo (1), Snufflifors (1), Signo (1), Colligo (1)."
-  },
-  {
-    "id": "runa-mannaz",
-    "isRune": true,
-    "anno": 8,
-    "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "20ª",
-    "posizioneNum": 20,
-    "aett": "3° Aett (Skuld)",
-    "thootPos": "4ª Posizione (con Ansuz e Jera)",
-    "nome": "Runa Mannaz (ᛗ)",
-    "formula": "ᛗ Mannaz",
-    "ripetibile": true,
-    "tipologia": "Antiche Rune / Glifo Sacro",
-    "inDuello": false,
-    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Due aste verticali parallele congiunte da una grande croce a X nella parte superiore.",
-    "movimentoSvg": "M 45,25 L 45,125 M 105,25 L 105,125 M 45,25 L 105,80 M 105,25 L 45,80",
-    "descrizione": "20ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 20 (riduzione teosofica: 2+0 = 2). Dominio: L'uomo, l'intelletto, la mente razionale, la coscienza umana, la cooperazione sociale, la scienza, l'equilibrio interiore. Corrispondenza di Canone: Posizione 20 -> Valenza 2.",
-    "etimologia": "Dal proto-germanico *mannaz (essere umano, uomo saggio, mente pensante).",
-    "valenza": 2,
-    "sommaLettere": 20,
-    "valenzaOpposta": 8,
-    "maxRipetizioni": 8,
-    "figuraGeometrica": "Angolo / Linea (Mente Umana / Ragione)",
-    "pietraConsacrata": "Topazio / Zaffiro",
-    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 20ª. Valenza Magica: 2 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 4ª Posizione (con Ansuz e Jera). Pietra consacrata: Topazio / Zaffiro. Incantesimi di Hogwarts in risonanza: Expelliarmus (2), Innerva (2), Fumos (2), Riddikulus (2)."
-  },
-  {
-    "id": "runa-laguz",
-    "isRune": true,
-    "anno": 8,
-    "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "21ª",
-    "posizioneNum": 21,
-    "aett": "3° Aett (Skuld)",
-    "thootPos": "5ª Posizione (con Raido ed Eihwaz)",
-    "nome": "Runa Laguz (ᛚ)",
-    "formula": "ᛚ Laguz",
-    "ripetibile": true,
-    "tipologia": "Antiche Rune / Glifo Sacro",
-    "inDuello": false,
-    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Asta verticale scendente con ramo destro obliquo discendente dalla cima (amo d'acqua).",
-    "movimentoSvg": "M 60,25 L 60,125 M 60,25 L 100,65",
-    "descrizione": "21ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 21 (riduzione teosofica: 2+1 = 3). Dominio: Spirito Arausio, acqua primordiale, onde dell'oceano, abisso, trappola liquida, confinamento insidioso. Runa cardine delle gabbie con Colligo. Corrispondenza di Canone: Posizione 21 -> Valenza 3 (Elemento Acqua 1 nel Codex).",
-    "etimologia": "Dal proto-germanico *laguz (acqua, lago, marea, oceano profondo).",
+    "movimento": "Asta verticale centrale con spina triangolare acuta protesa verso destra a metà altezza.",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,50 L 95,75 L 50,100",
+    "descrizione": "3ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 3. Dominio: Spina, dolore lacerante, caos, abbattimento di ostacoli, follia difensiva, liberazione violenta. Corrispondenza di Canone: Posizione 3 = Valenza 3.",
+    "etimologia": "Dal proto-germanico *þurisaz (gigante di ghiaccio, spina acuta).",
     "valenza": 3,
-    "sommaLettere": 21,
+    "sommaLettere": 3,
     "valenzaOpposta": 7,
     "maxRipetizioni": 8,
-    "figuraGeometrica": "Triangolo equilatero (Acqua / Abisso)",
-    "pietraConsacrata": "Acquamarina / Acqua",
+    "figuraGeometrica": "Triangolo equilatero (Caos / Spina)",
+    "pietraConsacrata": "Agata / Ossidiana",
     "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 21ª. Valenza Magica: 3 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 5ª Posizione (con Raido ed Eihwaz). Pietra consacrata: Acquamarina / Acqua. Incantesimi di Hogwarts in risonanza: Arresto Momentum (3), Orchideus (3), Incipio (3), Iungo (3)."
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 3ª. Valenza Magica: 3 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 3ª Posizione (con Isa ed Ehwaz). Pietra consacrata: Agata / Ossidiana. Incantesimi di Hogwarts in risonanza: Arresto Momentum (3), Orchideus (3), Incipio (3), Iungo (3)."
   },
   {
-    "id": "runa-inguz",
+    "id": "runa-uruz",
     "isRune": true,
     "anno": 8,
     "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "22ª",
-    "posizioneNum": 22,
-    "aett": "3° Aett (Skuld)",
-    "thootPos": "6ª Posizione (con Kenaz e Perthr)",
-    "nome": "Runa Inguz (ᛜ)",
-    "formula": "ᛜ Inguz",
+    "posizioneAlfabeto": "2ª",
+    "posizioneNum": 2,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "2ª Posizione (con Nauthiz e Berkana)",
+    "nome": "Runa Uruz (ᚢ)",
+    "formula": "ᚢ Uruz",
     "ripetibile": true,
     "tipologia": "Antiche Rune / Glifo Sacro",
     "inDuello": false,
     "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Rombo perfetto o losanga chiusa a quattro tratti obliqui simmetrici.",
-    "movimentoSvg": "M 75,35 L 110,75 L 75,115 L 40,75 Z",
-    "descrizione": "22ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 22 (riduzione teosofica: 2+2 = 4). Dominio: Luce primordiale dell'anima, seme della gestazione, portale magico, varco tra dimensioni, ponte arcano. Corrispondenza di Canone: Posizione 22 -> Valenza 4.",
-    "etimologia": "Dal proto-germanico *ingwaz (dio ancestrale Yngvi-Freyr, fecondità, luce vitale).",
-    "valenza": 4,
-    "sommaLettere": 22,
-    "valenzaOpposta": 6,
+    "movimento": "Asta verticale sinistra scendente, fendente obliquo a destra e seconda asta verticale scendente più breve.",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 95,50 L 95,125",
+    "descrizione": "2ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 2. Dominio: Incremento, potenza primordiale del toro (uro), salute, vigore muscolare, accrescimento strutturale, tenacia. Corrispondenza di Canone: Posizione 2 = Valenza 2.",
+    "etimologia": "Dal proto-germanico *ūruz (uro, toro primordiale selvaggio, forza tellurica).",
+    "valenza": 2,
+    "sommaLettere": 2,
+    "valenzaOpposta": 8,
     "maxRipetizioni": 8,
-    "figuraGeometrica": "Quadrato / Rombo (Varco / Portale)",
+    "figuraGeometrica": "Angolo / Linea (Dualismo / Forza)",
+    "pietraConsacrata": "Ambra / Quarzo",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 2ª. Valenza Magica: 2 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 2ª Posizione (con Nauthiz e Berkana). Pietra consacrata: Ambra / Quarzo. Incantesimi di Hogwarts in risonanza: Expelliarmus (2), Innerva (2), Fumos (2), Riddikulus (2)."
+  },
+  {
+    "id": "runa-wunjo",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "8ª",
+    "posizioneNum": 8,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "8ª Posizione (con Sowilo e Dagaz)",
+    "nome": "Runa Wunjo (ᚹ)",
+    "formula": "ᚹ Wunjo",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale sinistra con triangolo superiore acuto proteso verso destra.",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 95,55 L 50,80",
+    "descrizione": "8ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 8. Dominio: Gioia profonda, benessere, armonia spirituale, preghiera, celebrazione, assenza di sofferenza. Corrispondenza di Canone: Posizione 8 = Valenza 8.",
+    "etimologia": "Dal proto-germanico *wunjō (gioia, delizia, armonia del cuore).",
+    "valenza": 8,
+    "sommaLettere": 8,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Ottagono regolare (Infinito / Fuoco)",
     "pietraConsacrata": "Topazio / Opale",
-    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 22ª. Valenza Magica: 4 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 6ª Posizione (con Kenaz e Perthr). Pietra consacrata: Topazio / Opale. Incantesimi di Hogwarts in risonanza: Liberacorpus (4), Diffindo (4), Persigno (4), Stigma Exsequor (4)."
-  },
-  {
-    "id": "runa-othila",
-    "isRune": true,
-    "anno": 8,
-    "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "23ª",
-    "posizioneNum": 23,
-    "aett": "3° Aett (Skuld)",
-    "thootPos": "7ª Posizione (con Gebo e Algiz)",
-    "nome": "Runa Othila (ᛟ)",
-    "formula": "ᛟ Othila",
-    "ripetibile": true,
-    "tipologia": "Antiche Rune / Glifo Sacro",
-    "inDuello": false,
-    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Rombo superiore con aste inferiori incrociate prolungate verso il basso.",
-    "movimentoSvg": "M 45,125 L 75,95 L 105,65 L 75,35 L 45,65 L 75,95 L 105,125",
-    "descrizione": "23ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 23 (riduzione teosofica: 2+3 = 5). Dominio: La proprietà avita, la soglia sacra della casa, le radici familiari, il guardiano domestico, l'eredità. Runa speculare autonoma su valenza 5. Corrispondenza di Canone: Posizione 23 -> Valenza 5.",
-    "etimologia": "Dal proto-germanico *ōþalan (patrimonio ancestrale, terra natia, lignaggio).",
-    "valenza": 5,
-    "sommaLettere": 23,
-    "valenzaOpposta": 5,
-    "maxRipetizioni": 8,
-    "figuraGeometrica": "Pentagono regolare (Soglia / Patrimonio)",
-    "pietraConsacrata": "Ossidiana / Onice",
-    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 23ª. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 7ª Posizione (con Gebo e Algiz). Pietra consacrata: Ossidiana / Onice. Incantesimi di Hogwarts in risonanza: Levicorpus (5), Immobilus (5), Deleo (5), Dominium Evoco (5)."
-  },
-  {
-    "id": "runa-dagaz",
-    "isRune": true,
-    "anno": 8,
-    "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "24ª",
-    "posizioneNum": 24,
-    "aett": "3° Aett (Skuld)",
-    "thootPos": "8ª Posizione (con Wunjo e Sowilo)",
-    "nome": "Runa Dagaz (ᛞ)",
-    "formula": "ᛞ Dagaz",
-    "ripetibile": true,
-    "tipologia": "Antiche Rune / Glifo Sacro",
-    "inDuello": false,
-    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Forma a clessidra orizzontale o farfalla ad ali incrociate (due triangoli congiunti al vertice).",
-    "movimentoSvg": "M 45,30 L 45,120 L 105,30 L 105,120 Z",
-    "descrizione": "24ª Runa dell'Alfabeto Runico (chiude l'antico Futhark). Posizione alfabetica: 24 (riduzione teosofica: 2+4 = 6). Dominio: Spirito Sulis, elemento Fuoco vivente nel Codex (Numero 8 rituale), trasformazione all'alba, pienezza del giorno, incendio risanatore. Corrispondenza di Canone: Posizione 24 -> Valenza 6.",
-    "etimologia": "Dal proto-germanico *dagaz (giorno, luce dell'aurora, compimento trasformatore).",
-    "valenza": 6,
-    "sommaLettere": 24,
-    "valenzaOpposta": 4,
-    "maxRipetizioni": 8,
-    "figuraGeometrica": "Esagono regolare (Giorno / Fuoco Vivente)",
-    "pietraConsacrata": "Agata / Molibdenite",
-    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 24ª. Valenza Magica: 6 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 8ª Posizione (con Wunjo e Sowilo). Pietra consacrata: Agata / Molibdenite. Incantesimi di Hogwarts in risonanza: Protego (6), Verdimillious (6), Adultero (6), Surge et expandi (6)."
-  },
-  {
-    "id": "runa-bianca",
-    "isRune": true,
-    "anno": 8,
-    "annoLabel": "Antiche Rune",
-    "posizioneAlfabeto": "Speciale",
-    "posizioneNum": 25,
-    "aett": "Centro del Wyrd",
-    "thootPos": "Asse Centrale del Destino",
-    "nome": "Runa Bianca (○)",
-    "formula": "○ Runa Bianca",
-    "ripetibile": true,
-    "tipologia": "Antiche Rune / Glifo Sacro",
-    "inDuello": false,
-    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
-    "movimento": "Imposizione delle mani senza tracciato visibile, proiezione del vuoto mentale con Percèptio Ìntimo.",
-    "movimentoSvg": "M 75,35 A 40,40 0 1,1 74.9,35 Z",
-    "descrizione": "Runa Misterica del Wyrd (priva di glifo inciso). Collocata al Centro del Wyrd, rappresenta l'assenza trasfigurata in potere supremo, il vuoto fecondo, l'illusione totale (Percèptio Ìntimo). Valenza Esoterica 5 (speculare perfetta). Corrispondenza di Canone: Valenza 5.",
-    "etimologia": "Dal mistero delle tre Norne (ciò che ancora non è e che può divenire tutto).",
-    "valenza": 5,
-    "sommaLettere": 5,
-    "valenzaOpposta": 5,
-    "maxRipetizioni": 8,
-    "figuraGeometrica": "Pentagono regolare (Etere Cosmico / Il Nulla)",
-    "pietraConsacrata": "Ciottolo Levigato privo di segni",
-    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
-    "noteAritmantiche": "Posizione nell'Alfabeto Runico: Speciale. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: Asse Centrale del Destino. Pietra consacrata: Ciottolo Levigato privo di segni. Incantesimi di Hogwarts in risonanza: Perceptio Intimo (7), Levicorpus (5), Deleo (5), Revelio (5)."
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 8ª. Valenza Magica: 8 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 8ª Posizione (con Sowilo e Dagaz). Pietra consacrata: Topazio / Opale. Incantesimi di Hogwarts in risonanza: Lumos (8), Alohomora (8), Plasma (8), Exstinguo (8), Occulto (8)."
   }
 ];
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = SPELLS_DATA;
+}
 
 </script>
   <script>
@@ -4861,12 +5283,67 @@ const SPELLS_DATA = [
     const quickDuelToggle = document.getElementById("quickDuelToggle");
     const quickDuelText = document.getElementById("quickDuelText");
 
+    function updateFilterCounts() {
+      const yearCounts = {};
+      SPELLS_DATA.forEach(s => {
+        yearCounts[s.anno] = (yearCounts[s.anno] || 0) + 1;
+      });
+
+      const yearTabLabels = {
+        "ALL": `Tutti (${SPELLS_DATA.length})`,
+        "1": `I Anno (${yearCounts[1] || 0})`,
+        "2": `II Anno (${yearCounts[2] || 0})`,
+        "3": `III Anno (${yearCounts[3] || 0})`,
+        "4": `IV Anno (${yearCounts[4] || 0})`,
+        "5": `V Anno (${yearCounts[5] || 0})`,
+        "6": `VI Anno (${yearCounts[6] || 0})`,
+        "7": `VII Anno (${yearCounts[7] || 0})`,
+        "0": `Altri (${yearCounts[0] || 0})`,
+        "8": `Antiche Rune (${yearCounts[8] || 0})`
+      };
+
+      yearTabs.forEach(tab => {
+        const yr = tab.getAttribute("data-year");
+        if (yearTabLabels[yr]) {
+          tab.textContent = yearTabLabels[yr];
+        }
+      });
+
+      if (yearSelect) {
+        Array.from(yearSelect.options).forEach(opt => {
+          const yr = opt.value;
+          if (yearTabLabels[yr]) {
+            opt.textContent = yearTabLabels[yr];
+          }
+        });
+      }
+
+      const duelYes = SPELLS_DATA.filter(s => s.inDuello).length;
+      const duelNo = SPELLS_DATA.filter(s => !s.inDuello && !s.isRune).length;
+      const totalSpells = SPELLS_DATA.filter(s => !s.isRune).length;
+      duelSegBtns.forEach(btn => {
+        const d = btn.getAttribute("data-duel");
+        if (d === "ALL") btn.textContent = `Tutti (${totalSpells})`;
+        if (d === "YES") btn.textContent = `⚔️ Da Duello: SÌ (${duelYes})`;
+        if (d === "NO") btn.textContent = `⛔ Non da Duello: NO (${duelNo})`;
+      });
+
+      if (duelFilter) {
+        Array.from(duelFilter.options).forEach(opt => {
+          if (opt.value === "ALL") opt.textContent = `Duello: Qualsiasi (${totalSpells})`;
+          if (opt.value === "YES") opt.textContent = `⚔️ Utilizzabile in Duello: SÌ (${duelYes})`;
+          if (opt.value === "NO") opt.textContent = `⛔ Non da Duello / Rituale: NO (${duelNo})`;
+        });
+      }
+    }
+
     // Update Global Statistics
     function updateStats() {
       statTotal.textContent = SPELLS_DATA.length;
       statDuel.textContent = SPELLS_DATA.filter(s => s.inDuello).length;
       statDark.textContent = SPELLS_DATA.filter(s => s.tipologia.includes("Maledizione") || s.tipologia.includes("Fattura")).length;
-      statArith.textContent = SPELLS_DATA.filter(s => s.anno === 0 || s.tipologia.includes("Aritmantico") || s.tipologia.includes("Elementale") || s.tipologia.includes("Trasfigurazione")).length;
+      statArith.textContent = SPELLS_DATA.filter(s => s.anno === 0 || s.tipologia.includes("Aritmantico") || s.tipologia.includes("Elementale") || s.tipologia.includes("Trasfigurazione") || s.tipologia.includes("Celeste") || s.tipologia.includes("Botanica")).length;
+      updateFilterCounts();
     }
 
     // Highlighting helper

@@ -93,12 +93,67 @@
     const quickDuelToggle = document.getElementById("quickDuelToggle");
     const quickDuelText = document.getElementById("quickDuelText");
 
+    function updateFilterCounts() {
+      const yearCounts = {};
+      SPELLS_DATA.forEach(s => {
+        yearCounts[s.anno] = (yearCounts[s.anno] || 0) + 1;
+      });
+
+      const yearTabLabels = {
+        "ALL": `Tutti (${SPELLS_DATA.length})`,
+        "1": `I Anno (${yearCounts[1] || 0})`,
+        "2": `II Anno (${yearCounts[2] || 0})`,
+        "3": `III Anno (${yearCounts[3] || 0})`,
+        "4": `IV Anno (${yearCounts[4] || 0})`,
+        "5": `V Anno (${yearCounts[5] || 0})`,
+        "6": `VI Anno (${yearCounts[6] || 0})`,
+        "7": `VII Anno (${yearCounts[7] || 0})`,
+        "0": `Altri (${yearCounts[0] || 0})`,
+        "8": `Antiche Rune (${yearCounts[8] || 0})`
+      };
+
+      yearTabs.forEach(tab => {
+        const yr = tab.getAttribute("data-year");
+        if (yearTabLabels[yr]) {
+          tab.textContent = yearTabLabels[yr];
+        }
+      });
+
+      if (yearSelect) {
+        Array.from(yearSelect.options).forEach(opt => {
+          const yr = opt.value;
+          if (yearTabLabels[yr]) {
+            opt.textContent = yearTabLabels[yr];
+          }
+        });
+      }
+
+      const duelYes = SPELLS_DATA.filter(s => s.inDuello).length;
+      const duelNo = SPELLS_DATA.filter(s => !s.inDuello && !s.isRune).length;
+      const totalSpells = SPELLS_DATA.filter(s => !s.isRune).length;
+      duelSegBtns.forEach(btn => {
+        const d = btn.getAttribute("data-duel");
+        if (d === "ALL") btn.textContent = `Tutti (${totalSpells})`;
+        if (d === "YES") btn.textContent = `⚔️ Da Duello: SÌ (${duelYes})`;
+        if (d === "NO") btn.textContent = `⛔ Non da Duello: NO (${duelNo})`;
+      });
+
+      if (duelFilter) {
+        Array.from(duelFilter.options).forEach(opt => {
+          if (opt.value === "ALL") opt.textContent = `Duello: Qualsiasi (${totalSpells})`;
+          if (opt.value === "YES") opt.textContent = `⚔️ Utilizzabile in Duello: SÌ (${duelYes})`;
+          if (opt.value === "NO") opt.textContent = `⛔ Non da Duello / Rituale: NO (${duelNo})`;
+        });
+      }
+    }
+
     // Update Global Statistics
     function updateStats() {
       statTotal.textContent = SPELLS_DATA.length;
       statDuel.textContent = SPELLS_DATA.filter(s => s.inDuello).length;
       statDark.textContent = SPELLS_DATA.filter(s => s.tipologia.includes("Maledizione") || s.tipologia.includes("Fattura")).length;
-      statArith.textContent = SPELLS_DATA.filter(s => s.anno === 0 || s.tipologia.includes("Aritmantico") || s.tipologia.includes("Elementale") || s.tipologia.includes("Trasfigurazione")).length;
+      statArith.textContent = SPELLS_DATA.filter(s => s.anno === 0 || s.tipologia.includes("Aritmantico") || s.tipologia.includes("Elementale") || s.tipologia.includes("Trasfigurazione") || s.tipologia.includes("Celeste") || s.tipologia.includes("Botanica")).length;
+      updateFilterCounts();
     }
 
     // Highlighting helper
