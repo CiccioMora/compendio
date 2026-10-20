@@ -1,6 +1,7 @@
 // app.js - Logica Applicativa e Interattività del Portale degli Incantesimi
 
 // --- Application State ---
+    let activeMacro = "spells"; // "spells" | "runes"
     let activeYear = "ALL";
     let activeType = "ALL";
     let activeDuel = "ALL";
@@ -32,6 +33,14 @@
       6: "Terra (Formula Adultero)",
       8: "Fuoco (Formula Plasma)"
     };
+
+    // Macro Filter Elements
+    const macroSpellsBtn = document.getElementById("macroSpellsBtn");
+    const macroRunesBtn = document.getElementById("macroRunesBtn");
+    const spellSubFilters = document.getElementById("spellSubFilters");
+    const activeMacroHint = document.getElementById("activeMacroHint");
+    const macroSpellsText = document.getElementById("macroSpellsText");
+    const macroRunesText = document.getElementById("macroRunesText");
 
     // DOM Elements
     const spellsGrid = document.getElementById("spellsGrid");
@@ -95,12 +104,14 @@
 
     function updateFilterCounts() {
       const yearCounts = {};
-      SPELLS_DATA.forEach(s => {
+      const spellItems = SPELLS_DATA.filter(s => !s.isRune);
+      spellItems.forEach(s => {
         yearCounts[s.anno] = (yearCounts[s.anno] || 0) + 1;
       });
 
+      const totalSpells = spellItems.length;
       const yearTabLabels = {
-        "ALL": `Tutti (${SPELLS_DATA.length})`,
+        "ALL": `Tutti (${totalSpells})`,
         "1": `I Anno (${yearCounts[1] || 0})`,
         "2": `II Anno (${yearCounts[2] || 0})`,
         "3": `III Anno (${yearCounts[3] || 0})`,
@@ -108,8 +119,7 @@
         "5": `V Anno (${yearCounts[5] || 0})`,
         "6": `VI Anno (${yearCounts[6] || 0})`,
         "7": `VII Anno (${yearCounts[7] || 0})`,
-        "0": `Altri (${yearCounts[0] || 0})`,
-        "8": `Antiche Rune (${yearCounts[8] || 0})`
+        "0": `Altri (${yearCounts[0] || 0})`
       };
 
       yearTabs.forEach(tab => {
@@ -128,9 +138,8 @@
         });
       }
 
-      const duelYes = SPELLS_DATA.filter(s => s.inDuello).length;
-      const duelNo = SPELLS_DATA.filter(s => !s.inDuello && !s.isRune).length;
-      const totalSpells = SPELLS_DATA.filter(s => !s.isRune).length;
+      const duelYes = spellItems.filter(s => s.inDuello).length;
+      const duelNo = spellItems.filter(s => !s.inDuello).length;
       duelSegBtns.forEach(btn => {
         const d = btn.getAttribute("data-duel");
         if (d === "ALL") btn.textContent = `Tutti (${totalSpells})`;
@@ -145,6 +154,8 @@
           if (opt.value === "NO") opt.textContent = `⛔ Non da Duello / Rituale: NO (${duelNo})`;
         });
       }
+
+      updateMacroButtonBadges();
     }
 
     // Update Global Statistics
@@ -154,6 +165,74 @@
       statDark.textContent = SPELLS_DATA.filter(s => s.tipologia.includes("Maledizione") || s.tipologia.includes("Fattura")).length;
       statArith.textContent = SPELLS_DATA.filter(s => s.anno === 0 || s.tipologia.includes("Aritmantico") || s.tipologia.includes("Elementale") || s.tipologia.includes("Trasfigurazione") || s.tipologia.includes("Celeste") || s.tipologia.includes("Botanica")).length;
       updateFilterCounts();
+    }
+
+    // Helper per ricerca universale su ogni scheda (incantesimo o runa)
+    function matchesQuery(item, query) {
+      if (!query || query.trim() === "") return true;
+      const q = query.trim().toLowerCase();
+      const matchName = (item.nome || "").toLowerCase().includes(q);
+      const matchFormula = (item.formula || "").toLowerCase().includes(q);
+      const matchDesc = (item.descrizione || "").toLowerCase().includes(q);
+      const matchMov = (item.movimento || "").toLowerCase().includes(q);
+      const matchTipo = (item.tipologia || "").toLowerCase().includes(q);
+      const matchRune = (item.runeAssociate || "").toLowerCase().includes(q);
+      const matchAett = (item.aett || "").toLowerCase().includes(q);
+      const matchSimbolo = (item.simbolo || "").toLowerCase().includes(q);
+      const matchLettera = (item.lettera || "").toLowerCase().includes(q);
+      const matchPos = item.posizioneAlfabeto ? `pos. ${item.posizioneAlfabeto}`.toLowerCase().includes(q) : false;
+      const matchVal = `v${item.valenza}`.toLowerCase().includes(q) || `valenza ${item.valenza}`.toLowerCase().includes(q);
+
+      return matchName || matchFormula || matchDesc || matchMov || matchTipo || matchRune || matchAett || matchSimbolo || matchLettera || matchPos || matchVal;
+    }
+
+    // Aggiornamento badge live sui macro bottoni durante la ricerca
+    function updateMacroButtonBadges() {
+      const q = searchQuery.trim().toLowerCase();
+      let spellsCount = 0;
+      let runesCount = 0;
+
+      if (q === "") {
+        spellsCount = SPELLS_DATA.filter(s => !s.isRune).length;
+        runesCount = SPELLS_DATA.filter(s => s.isRune).length;
+      } else {
+        spellsCount = SPELLS_DATA.filter(s => !s.isRune && matchesQuery(s, q)).length;
+        runesCount = SPELLS_DATA.filter(s => s.isRune && matchesQuery(s, q)).length;
+      }
+
+      if (macroSpellsText) macroSpellsText.textContent = `Incantesimi (${spellsCount})`;
+      if (macroRunesText) macroRunesText.textContent = `Rune (${runesCount})`;
+    }
+
+    // Gestore del cambio Macro Filtro
+    function setMacroFilter(macro) {
+      activeMacro = macro;
+
+      if (macro === "spells") {
+        macroSpellsBtn?.classList.remove("text-slate-400", "hover:text-amber-300", "hover:bg-slate-900");
+        macroSpellsBtn?.classList.add("bg-amber-500", "text-slate-950", "shadow-md");
+
+        macroRunesBtn?.classList.remove("bg-indigo-600", "text-white", "shadow-md");
+        macroRunesBtn?.classList.add("text-slate-400", "hover:text-indigo-300", "hover:bg-slate-900");
+
+        if (spellSubFilters) spellSubFilters.classList.remove("hidden");
+        if (activeMacroHint) {
+          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">${SPELLS_DATA.filter(s => !s.isRune).length} Incantesimi Didattici</strong>`;
+        }
+      } else {
+        macroRunesBtn?.classList.remove("text-slate-400", "hover:text-indigo-300", "hover:bg-slate-900");
+        macroRunesBtn?.classList.add("bg-indigo-600", "text-white", "shadow-md");
+
+        macroSpellsBtn?.classList.remove("bg-amber-500", "text-slate-950", "shadow-md");
+        macroSpellsBtn?.classList.add("text-slate-400", "hover:text-amber-300", "hover:bg-slate-900");
+
+        if (spellSubFilters) spellSubFilters.classList.add("hidden");
+        if (activeMacroHint) {
+          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-indigo-300">${SPELLS_DATA.filter(s => s.isRune).length} Antiche Rune Futhark</strong>`;
+        }
+      }
+
+      renderSpells();
     }
 
     // Highlighting helper
@@ -167,36 +246,33 @@
     // Filter Logic
     function getFilteredSpells() {
       return SPELLS_DATA.filter(spell => {
-        // 1. Year filter
-        if (activeYear !== "ALL") {
-          const allowedYears = activeYear.split(",").map(Number);
-          if (!allowedYears.includes(spell.anno)) return false;
+        // 0. Macro Filter (Incantesimi vs Rune)
+        if (activeMacro === "spells" && spell.isRune) return false;
+        if (activeMacro === "runes" && !spell.isRune) return false;
+
+        // I filtri specifici si applicano solo nella sezione Incantesimi
+        if (activeMacro === "spells") {
+          // 1. Year filter
+          if (activeYear !== "ALL") {
+            const allowedYears = activeYear.split(",").map(Number);
+            if (!allowedYears.includes(spell.anno)) return false;
+          }
+
+          // 2. Type filter
+          if (activeType !== "ALL") {
+            if (!spell.tipologia.toLowerCase().includes(activeType.toLowerCase())) return false;
+          }
+
+          // 3. Duel filter
+          if (activeDuel === "YES" && !spell.inDuello) return false;
+          if (activeDuel === "NO" && spell.inDuello) return false;
+
+          // 4. Valence filter
+          if (activeValence !== "ALL" && spell.valenza !== Number(activeValence)) return false;
         }
 
-        // 2. Type filter
-        if (activeType !== "ALL") {
-          if (!spell.tipologia.toLowerCase().includes(activeType.toLowerCase())) return false;
-        }
-
-        // 3. Duel filter
-        if (activeDuel === "YES" && !spell.inDuello) return false;
-        if (activeDuel === "NO" && spell.inDuello) return false;
-
-        // 4. Valence filter
-        if (activeValence !== "ALL" && spell.valenza !== Number(activeValence)) return false;
-
-        // 5. Search Query (searches in: name, formula, description, movement, type, runeAssociate, aett)
-        if (searchQuery.trim() !== "") {
-          const q = searchQuery.toLowerCase();
-          const matchName = spell.nome.toLowerCase().includes(q);
-          const matchFormula = spell.formula.toLowerCase().includes(q);
-          const matchDesc = spell.descrizione.toLowerCase().includes(q);
-          const matchMov = spell.movimento.toLowerCase().includes(q);
-          const matchTipo = spell.tipologia.toLowerCase().includes(q);
-          const matchRune = (spell.runeAssociate || "").toLowerCase().includes(q);
-          const matchAett = (spell.aett || "").toLowerCase().includes(q);
-          if (!matchName && !matchFormula && !matchDesc && !matchMov && !matchTipo && !matchRune && !matchAett) return false;
-        }
+        // 5. Search Query (universale per tutte le sezioni!)
+        if (!matchesQuery(spell, searchQuery)) return false;
 
         return true;
       });
@@ -205,7 +281,7 @@
     // Render Cards
     function renderSpells() {
       const filtered = getFilteredSpells();
-      resultsCountBadge.textContent = `${filtered.length} incantesimi trovati`;
+      resultsCountBadge.textContent = activeMacro === "spells" ? `${filtered.length} incantesimi trovati` : `${filtered.length} rune trovate`;
 
       if (filtered.length === 0) {
         spellsGrid.innerHTML = "";
@@ -721,6 +797,7 @@
       } else {
         clearSearchBtn.classList.add("hidden");
       }
+      updateMacroButtonBadges();
       renderSpells();
     });
 
@@ -728,8 +805,13 @@
       searchInput.value = "";
       searchQuery = "";
       clearSearchBtn.classList.add("hidden");
+      updateMacroButtonBadges();
       renderSpells();
     });
+
+    // Macro Filter Listeners
+    macroSpellsBtn?.addEventListener("click", () => setMacroFilter("spells"));
+    macroRunesBtn?.addEventListener("click", () => setMacroFilter("runes"));
 
     // Reset filters handler
     function resetAllFilters() {
@@ -742,6 +824,7 @@
       clearSearchBtn.classList.add("hidden");
       typeFilter.value = "ALL";
       
+      setMacroFilter("spells");
       setYearFilter("ALL");
       setDuelFilter("ALL");
 
@@ -751,6 +834,7 @@
       });
       document.querySelector('.val-pill[data-val="ALL"]').classList.add("bg-amber-500/20", "text-amber-300", "border-amber-500/30", "border");
 
+      updateMacroButtonBadges();
       renderSpells();
     }
 

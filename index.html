@@ -99,14 +99,14 @@
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
     <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-amber-500/25 shadow-2xl space-y-4">
       
-      <!-- TOP: PROMINENT SEARCH BAR (NOME, FORMULA, DESCRIZIONE) -->
+            <!-- TOP: PROMINENT SEARCH BAR (NOME, FORMULA, DESCRIZIONE, RUNE) -->
       <div>
         <div class="flex items-center justify-between mb-1.5">
           <label for="searchInput" class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
-            <span>🔍</span> Ricerca Incantesimo o Testo nella Descrizione
+            <span>🔍</span> Ricerca Globale (Incantesimi & Rune)
           </label>
           <span class="text-[11px] text-slate-400 hidden sm:inline">
-            Ricerca attiva simultanea su: <strong>Nome</strong>, <strong>Formula</strong>, <strong>Descrizione</strong> e <strong>Movimento</strong>
+            Ricerca attiva simultanea su: <strong>Nome</strong>, <strong>Formula</strong>, <strong>Descrizione</strong>, <strong>Movimento</strong> e <strong>Rune</strong>
           </span>
         </div>
         <div class="relative">
@@ -116,7 +116,7 @@
           <input 
             type="text" 
             id="searchInput" 
-            placeholder="Cerca per nome (es. Flipendo), formula (es. Stupeficium), o parole chiave nella descrizione (es. 'fumo', 'duello', 'pietra', 'ossa', 'ferite')..." 
+            placeholder="Cerca per nome, formula, significato runico, valenza o parola chiave..." 
             class="w-full pl-11 pr-10 py-3 rounded-xl bg-slate-950/90 border border-slate-700/90 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition shadow-inner"
           >
           <button id="clearSearchBtn" title="Cancella ricerca" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-500 hover:text-amber-300 transition hidden text-base font-bold">
@@ -125,148 +125,168 @@
         </div>
       </div>
 
-      <!-- FILTER CONTROLS GRID (ANNO, DUELLO, TIPOLOGIA, RESET) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-1">
-        
-        <!-- Filter 1: Anno di Studio -->
-        <div>
-          <label for="yearSelect" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
-            <span>📅</span> Filtro Anno di Corso:
-          </label>
-          <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Tutti (202)</option>
-            <option value="1">I Anno (24)</option>
-            <option value="2">II Anno (15)</option>
-            <option value="3">III Anno (18)</option>
-            <option value="4">IV Anno (16)</option>
-            <option value="5">V Anno (13)</option>
-            <option value="6">VI Anno (43)</option>
-            <option value="7">VII Anno (31)</option>
-            <option value="0">Altri (17)</option>
-            <option value="8">Antiche Rune (25)</option>
-          </select>
+      <!-- MACRO FILTERS SWITCHER (INCANTESIMI / RUNE) -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 border-b border-slate-800/80 pb-3">
+        <div class="flex items-center gap-2.5 flex-wrap">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Archivio:</span>
+          <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="macroFilterGroup">
+            <button type="button" data-macro="spells" id="macroSpellsBtn" class="macro-btn px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 bg-amber-500 text-slate-950 shadow-md">
+              <span>🪄</span>
+              <span id="macroSpellsText">Incantesimi (177)</span>
+            </button>
+            <button type="button" data-macro="runes" id="macroRunesBtn" class="macro-btn px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 text-slate-400 hover:text-indigo-300 hover:bg-slate-900">
+              <span>ᛟ</span>
+              <span id="macroRunesText">Rune (25)</span>
+            </button>
+          </div>
         </div>
 
-        <!-- Filter 2: Utilizzo in Duello -->
-        <div>
-          <label for="duelFilter" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
-            <span>⚔️</span> Utilizzo in Duello:
-          </label>
-          <select id="duelFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Duello: Qualsiasi (177)</option>
-            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (100)</option>
-            <option value="NO">⛔ Non da Duello / Rituale: NO (77)</option>
-          </select>
+        <!-- Macro Context Hint -->
+        <div class="text-xs text-slate-400 flex items-center gap-2">
+          <span id="activeMacroHint" class="text-slate-400 text-[11px]">Visualizzazione: <strong class="text-amber-300">177 Incantesimi Didattici</strong></span>
         </div>
-
-        <!-- Filter 3: Tipologia -->
-        <div>
-          <label for="typeFilter" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
-            <span>🏷️</span> Tipologia Magica:
-          </label>
-          <select id="typeFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Tutte le Tipologie</option>
-            <option value="Offensivo">⚔️ Offensivo / Attacco</option>
-            <option value="Difensivo">🛡️ Difensivo / Scudo</option>
-            <option value="Schiantesimo">⚡ Schiantesimo</option>
-            <option value="Fattura">⚠️ Fattura</option>
-            <option value="Maledizione">☠️ Maledizione / M. Oscura</option>
-            <option value="Curativo">🌿 Curativo / Medimagia</option>
-            <option value="Trasfigurazione">🪄 Trasfigurazione</option>
-            <option value="Elementale">🔥 Elementale (4 Elementi)</option>
-            <option value="Aritmantico">📐 Aritmantico / Tracciatura</option>
-            <option value="Utilità">✨ Utilità & Cinetica</option>
-          </select>
-        </div>
-
-        <!-- Filter 4: Reset Button -->
-        <div class="flex items-end">
-          <button id="resetAllFiltersBtn" class="w-full py-2.5 px-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-xs font-semibold text-amber-300 border border-amber-500/30 hover:border-amber-400 transition flex items-center justify-center gap-1.5 shadow-sm">
-            <span>🔄</span> Ripristina Tutti i Filtri
-          </button>
-        </div>
-
       </div>
 
-      <!-- ROW 3: QUICK VISUAL TABS & SEGMENTED CONTROLS -->
-      <div class="border-t border-slate-800/80 pt-3 space-y-3">
-        
-        <!-- Year Quick Tabs -->
-        <div>
-          <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
-            <span>Filtro Rapido per Anno di Corso:</span>
-            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">202 incantesimi trovati</span>
+      <!-- SPELL SUB-FILTERS CONTAINER (VISIBILE SOLO IN SEZIONE INCANTESIMI) -->
+      <div id="spellSubFilters" class="space-y-4">
+        <!-- FILTER CONTROLS GRID (ANNO, DUELLO, TIPOLOGIA, RESET) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-1">
+          
+          <!-- Filter 1: Anno di Studio -->
+          <div>
+            <label for="yearSelect" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
+              <span>📅</span> Filtro Anno di Corso:
+            </label>
+            <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
+              <option value="ALL">Tutti gli Incantesimi (177)</option>
+              <option value="1">I Anno (24)</option>
+              <option value="2">II Anno (15)</option>
+              <option value="3">III Anno (18)</option>
+              <option value="4">IV Anno (16)</option>
+              <option value="5">V Anno (13)</option>
+              <option value="6">VI Anno (43)</option>
+              <option value="7">VII Anno (31)</option>
+              <option value="0">Altri (17)</option>
+            </select>
           </div>
-          <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
-            <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (202)
-            </button>
-            <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              I Anno (24)
-            </button>
-            <button data-year="2" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              II Anno (15)
-            </button>
-            <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              III Anno (18)
-            </button>
-            <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              IV Anno (16)
-            </button>
-            <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              V Anno (13)
-            </button>
-            <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VI Anno (43)
-            </button>
-            <button data-year="7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VII Anno (31)
-            </button>
-            <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              Altri (17)
-            </button>
-            <button data-year="8" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-indigo-950 text-indigo-300 border border-indigo-700/60 hover:bg-indigo-900">
-              Antiche Rune (25)
+
+          <!-- Filter 2: Utilizzo in Duello -->
+          <div>
+            <label for="duelFilter" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
+              <span>⚔️</span> Utilizzo in Duello:
+            </label>
+            <select id="duelFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
+              <option value="ALL">Duello: Qualsiasi (177)</option>
+              <option value="YES">⚔️ Utilizzabile in Duello: SÌ (100)</option>
+              <option value="NO">⛔ Non da Duello / Rituale: NO (77)</option>
+            </select>
+          </div>
+
+          <!-- Filter 3: Tipologia -->
+          <div>
+            <label for="typeFilter" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
+              <span>🏷️</span> Tipologia Magica:
+            </label>
+            <select id="typeFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
+              <option value="ALL">Tutte le Tipologie</option>
+              <option value="Offensivo">⚔️ Offensivo / Attacco</option>
+              <option value="Difensivo">🛡️ Difensivo / Scudo</option>
+              <option value="Schiantesimo">⚡ Schiantesimo</option>
+              <option value="Fattura">⚠️ Fattura</option>
+              <option value="Maledizione">☠️ Maledizione / M. Oscura</option>
+              <option value="Curativo">🌿 Curativo / Medimagia</option>
+              <option value="Trasfigurazione">🪄 Trasfigurazione</option>
+              <option value="Elementale">🔥 Elementale (4 Elementi)</option>
+              <option value="Aritmantico">📐 Aritmantico / Tracciatura</option>
+              <option value="Utilità">✨ Utilità & Cinetica</option>
+            </select>
+          </div>
+
+          <!-- Filter 4: Reset Button -->
+          <div class="flex items-end">
+            <button id="resetAllFiltersBtn" class="w-full py-2.5 px-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-xs font-semibold text-amber-300 border border-amber-500/30 hover:border-amber-400 transition flex items-center justify-center gap-1.5 shadow-sm">
+              <span>🔄</span> Ripristina Tutti i Filtri
             </button>
           </div>
+
         </div>
 
-        <!-- Duel Segmented Buttons & Valence Pills -->
-        <div class="flex flex-wrap items-center justify-between gap-3 pt-1 text-xs">
-          <!-- Segmented Duel Controls -->
-          <div class="flex items-center gap-2">
-            <span class="text-slate-400 font-medium">Duello:</span>
-            <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
-              <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
-                Tutti (177)
+        <!-- ROW 3: QUICK VISUAL TABS & SEGMENTED CONTROLS -->
+        <div class="border-t border-slate-800/80 pt-3 space-y-3">
+          
+          <!-- Year Quick Tabs -->
+          <div>
+            <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
+              <span>Filtro Rapido per Anno di Corso:</span>
+              <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">202 incantesimi trovati</span>
+            </div>
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
+              <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
+              Tutti (202)
               </button>
-              <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
-                ⚔️ Da Duello: SÌ (100)
+              <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              I Anno (24)
               </button>
-              <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
-                ⛔ Non da Duello: NO (77)
+              <button data-year="2" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              II Anno (15)
+              </button>
+              <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              III Anno (18)
+              </button>
+              <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              IV Anno (16)
+              </button>
+              <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              V Anno (13)
+              </button>
+              <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              VI Anno (43)
+              </button>
+              <button data-year="7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              VII Anno (31)
+              </button>
+              <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              Altri (17)
               </button>
             </div>
           </div>
 
-          <!-- Quick Valence Filter Pills -->
-          <div class="flex items-center gap-1 flex-wrap">
-            <span class="text-slate-400 font-medium mr-1">Valenza:</span>
-            <button data-val="ALL" class="val-pill px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-code font-semibold text-[11px]">Tutte</button>
-            <button data-val="1" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V1</button>
-            <button data-val="2" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V2</button>
-            <button data-val="3" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V3</button>
-            <button data-val="4" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V4</button>
-            <button data-val="5" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V5</button>
-            <button data-val="6" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V6</button>
-            <button data-val="7" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V7</button>
-            <button data-val="8" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V8</button>
-            <button data-val="9" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V9</button>
+          <!-- Duel Segmented Buttons & Valence Pills -->
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-1 text-xs">
+            <!-- Segmented Duel Controls -->
+            <div class="flex items-center gap-2">
+              <span class="text-slate-400 font-medium">Duello:</span>
+              <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
+                <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
+                Tutti (177)
+                </button>
+                <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
+                ⚔️ Da Duello: SÌ (100)
+                </button>
+                <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
+                ⛔ Non da Duello: NO (77)
+                </button>
+              </div>
+            </div>
+
+            <!-- Quick Valence Filter Pills -->
+            <div class="flex items-center gap-1 flex-wrap">
+              <span class="text-slate-400 font-medium mr-1">Valenza:</span>
+              <button data-val="ALL" class="val-pill px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-code font-semibold text-[11px]">Tutte</button>
+              <button data-val="1" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V1</button>
+              <button data-val="2" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V2</button>
+              <button data-val="3" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V3</button>
+              <button data-val="4" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V4</button>
+              <button data-val="5" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V5</button>
+              <button data-val="6" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V6</button>
+              <button data-val="7" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V7</button>
+              <button data-val="8" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V8</button>
+              <button data-val="9" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V9</button>
+            </div>
           </div>
+
         </div>
-
       </div>
-
     </div>
   </section>
 
