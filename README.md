@@ -15,11 +15,11 @@
 ## 🌟 Caratteristiche Principali
 
 - **📅 Suddivisione Accademica per Anni di Corso (Programma Ufficiale)**:
-  - **I Anno** (17 incantesimi): *Fondamenti di Difesa, Cinetica, Incantesimi Generali e Trasfigurazione Morfologica (Flipendo, Expelliarmus, Wingardium Leviosa, Lumos, Diffindo, Transfiguro...)*
-  - **II Anno** (15 incantesimi): *Fatture, Controincanti e Trasfigurazione Materica (Rictusempra, Tarantallegra, Finite Incantatem, Muto, Engorgio, Reducio, Arania Exumai...)*
-  - **III Anno** (18 incantesimi): *Elementi di Gelo, Trasfigurazione Totale e Aritmanzia Base (Glacius, Riddikulus, Verto, Signo, Coerceo, Finge, Ascendio, Immobulus...)*
-  - **IV Anno** (25 incantesimi): *Tattiche di Difesa, Aritmanzia Elementale, Marchiatura e Medimagia (Bombarda, Stupeficium Avanzato, Aguamenti, Episkey, Adultero, Plasma, Dominum, Significo, Plansigno, Fersigno, Detecto...)*
-  - **V Anno** (14 incantesimi): *Preparazione ai G.U.F.O., Evanescenza e Varchi Aurei (Confringo, Reducto, Evanesco, Ivanesco, Phi Porta, Phi Revelio, Colovaria, Alarte Ascendare...)*
+  - **I Anno** (19 incantesimi): *Fondamenti di Difesa, Cinetica, Incantesimi Generali, Trasfigurazione Morfologica & Liber I (Flipendo, Expelliarmus, Wingardium Leviosa, Lumos, Diffindo, Transfiguro, Signo, Coerceo...)*
+  - **II Anno** (16 incantesimi): *Fatture, Controincanti, Trasfigurazione Materica & Liber II (Rictusempra, Tarantallegra, Finite Incantatem, Muto, Finge, Engorgio, Reducio, Arania Exumai...)*
+  - **III Anno** (17 incantesimi): *Elementi di Gelo, Trasfigurazione Totale & Liber III (Glacius, Riddikulus, Verto, Adultero, Plasma, Ascendio, Immobulus...)*
+  - **IV Anno** (24 incantesimi): *Tattiche di Difesa, Marchiatura, Medimagia & Liber IV (Bombarda, Stupeficium Avanzato, Aguamenti, Episkey, Phi Porta, Dominum, Significo, Plansigno, Fersigno, Detecto...)*
+  - **V Anno** (13 incantesimi): *Preparazione ai G.U.F.O., Evanescenza & Liber V (Confringo, Reducto, Evanesco, Ivanesco, Phi Revelio, Colovaria, Alarte Ascendare...)*
   - **VI Anno — Sesto Anno** (39 incantesimi):
     - *Incantesimi*: Confundo, Deletrius, Descendo, Silencio, Incantesimo Rallegrante, Carpe Retractum, Obliterato.
     - *Trasfigurazione Pratica & Circolare*: Crinus Muto, Pullus, Densaugeo, Paperate, Piscofors, Entomorphis, Furitum, Geminio, Inflatus, Obstringo Circulum.

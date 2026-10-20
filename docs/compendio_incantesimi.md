@@ -51,16 +51,18 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 ---
 ## 2. Catalogazione degli Incantesimi Suddivisa per Anni
 
-### I ANNO — FONDAMENTI DI DIFESA, CINETICA E TRASFIGURAZIONE MORFOLOGICA (17 Formule)
-*Fondamenti didattici, disarmo, mobilità e trasfigurazione inanimata di base (17 formule).*
+### I ANNO — FONDAMENTI DI DIFESA, CINETICA, TRASFIGURAZIONE & LIBER I (19 Formule)
+*Fondamenti didattici, disarmo, mobilità, trasfigurazione inanimata e Aritmanzia elementale base (19 formule).*
 
 | Nome | Formula | Valenza | Tipologia | Duello | Movimento Bacchetta | Sintesi Effetto |
 |---|---|:---:|---|:---:|---|---|
 | **Contro-incanto di Sospensione (Liberacorpus)** | `Liberacorpus` | **4** *(Opp. 6)* | Contro-incantesimo / Difensivo | **SÌ** | Fendente netto del polso dall'alto verso il basso a tagliare il vincolo di sospensione. | Il naturale contro-incanto ideato da Severus Piton per annullare istantaneamente l'effetto di Levicorpus, rilasciando la vittim... |
+| **Formula di Controllo dell'Acqua (Coerceo)** | `Coerceo` | **1** *(Opp. 9)* | Elementale Acqua / Controllo | **SÌ** | Se l'acqua è già presente: scatto secco del polso verso il basso. Se evocata: puntamento fermo appena fuoriesce dalla punta. | Formula aritmantica che assoggetta l'elemento naturale dell'Acqua (associato al numero 1 nella T.L.A.). Chi lo padroneggia sent... |
 | **Incantesimo Accendi-Bacchetta (Lumos)** | `Lumos` | **8** *(Opp. 2)* | Utilità / Luce Pura | **SÌ** | Tenere la bacchetta verticalmente e tracciare un cerchietto all'apice. | Ideato nel 1772 da Levina Monkstanley presso il Ministero della Magia per ritrovare una penna caduta. Genera una viva sorgente ... |
 | **Incantesimo Energizzante (Innerva)** | `Innerva` | **2** *(Opp. 8)* | Curativo / Rianimazione | **SÌ** | Puntamento calmo e tocco vibrante con la punta della bacchetta all'altezza del plesso solare o della fronte del soggetto privo di sensi; luce dorata. | Sortilegio di risveglio concepito specificamente per neutralizzare gli effetti degli schiantesimi. Non va assolutamente confuso... |
 | **Incantesimo Rigenerante (Reinnerva)** | `Reinnerva` | **7** *(Opp. 3)* | Curativo / Medimagia | NO | Ampio cerchio orizzontale in senso orario sopra il busto seguito da movimento lungo il corpo; luce dorata. | Incantesimo di ripristino delle funzioni vitali e della lucidità in soggetti che hanno perso conoscenza per cause non magiche. ... |
 | **Incantesimo Riparatore (Reparo)** | `Reparo` | **1** *(Opp. 9)* | Utilità / Ricostruzione | NO | Disegnare tante curve continue e morbide con la bacchetta mentre si pronuncia la formula puntando l'oggetto. | Incantesimo pre-medievale fondamentale nella quotidianità magica. Ricompone le parti spezzate e le risalda all'istante. Su edif... |
+| **Incantesimo Segnante / Tracciante (Signo)** | `Signo` | **1** *(Opp. 9)* | Aritmantico Fondamentale / Tracciamento | NO | Posizionare la bacchetta perpendicolarmente alla superficie e muoverla per formare la figura geometrica desiderata. | Traccia sul terreno o su qualsiasi superficie figure geometriche luminose (dal cerchio all'ellisse, 1-9) che svaniscono lascian... |
 | **Incantesimo del Fuoco (Incendio)** | `Incendio` | **1** *(Opp. 9)* | Offensivo / Elementale Fuoco | **SÌ** | Gesto curvo ascendente che richiama la sagoma sinuosa di una fiamma viva. | Emette una fiammata o proietta lingue di fuoco ardente dalla bacchetta. Impiegato sia nella vita quotidiana sia nel duello dife... |
 | **Incantesimo di Apertura Porte (Alohomora)** | `Alohomora` | **8** *(Opp. 2)* | Utilità / Scasso Magico | NO | Tracciare un cerchio in senso antiorario e, appena completato, una retta discendente perpendicolare. | Introdotto a Londra nel Seicento dall'esploratore magico Eldon Elsrickle (che lo apprese in Africa occidentale, con il signific... |
 | **Incantesimo di Chiusura Porte (Colloportus)** | `Colloportus` | **4** *(Opp. 6)* | Difensivo / Sigillo Meccanico | NO | Movimento squadrato netto a disegnare un rettangolo intorno alla serratura da sigillare. | Ideato da Blagdon Blay per contrastare i furti sistematici compiuti da Eldon Elsrickle. Sigilla con un rumore di risucchio port... |
@@ -75,13 +77,14 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Trasfigurazione Morfologica di Forma (Transfiguro)** | `Transfiguro` | **4** *(Opp. 6)* | Trasfigurazione Inanimata di I Livello | NO | Delineare la nuova sagoma aerea con la bacchetta mantenendo costante il materiale originario. | Forma più elementare di trasfigurazione inanimata: muta esclusivamente l'aspetto geometrico ed esteriore dell'oggetto lasciando... |
 
 
-### II ANNO — FATTURE, CONTROINCANTI E TRASFIGURAZIONE MATERICA (15 Formule)
-*Fatture di impatto, controincanti generali e mutazione materica su oggetti (15 formule).*
+### II ANNO — FATTURE, CONTROINCANTI, TRASFIGURAZIONE MATERICA & LIBER II (16 Formule)
+*Fatture di impatto, controincanti generali, mutazione materica e controllo dell'Aria (16 formule).*
 
 | Nome | Formula | Valenza | Tipologia | Duello | Movimento Bacchetta | Sintesi Effetto |
 |---|---|:---:|---|:---:|---|---|
 | **Animazione di Carta (Chartanimus)** | `Chartanimus` | **1** *(Opp. 9)* | Trasfigurazione Animata Elementare | NO | Tocco leggero agli angoli del foglio di carta e sollevamento spiraleggiante. | Trasforma un foglio di carta o pergamena in un origami tridimensionale magicamente animato che si muove secondo i comandi del m... |
 | **Controincantesimo Generale (Finite Incantatem)** | `Finite Incantatem` | **1** *(Opp. 9)* | Contro-incantesimo Generale | **SÌ** | Fendente orizzontale secco a tagliare la trama magica dell'incanto avversario. | Il controincantesimo per eccellenza. La sua valenza calcolata è 1, ma la grande aritmante Bridget Wenlock dimostrò nel XIII sec... |
+| **Formula di Controllo dell'Aria (Finge)** | `Finge` | **5** *(Opp. 5)* | Elementale Aria / Controllo | **SÌ** | Mulinello orizzontale del polso da sinistra a destra con scatto in avanti. | Domina e modella i flussi dell'aria e del vento (associati al numero 5 e all'etere classico nel Codex). |
 | **Incantesimo Congelatore del Moto (Immobilus)** | `Immobilus` | **5** *(Opp. 5)* | Cinetica / Difensivo / Disabilitazione | **SÌ** | Linea a zig-zag orizzontale seguita da un affondo netto verso il bersaglio. | Arresta i moti dei corpi nello spazio, siano essi esseri viventi o oggetti scagliati. Efficace per placare branchi di creature ... |
 | **Incantesimo Fumogeno (Fumos)** | `Fumos` | **2** *(Opp. 8)* | Difensivo / Occultamento / Tattico | **SÌ** | Movimento circolare continuo e morbido della bacchetta a disegnare una spirale d'aria davanti a sé. | Genera una nube densa e persistente di fumo grigio-nerastro che esce dal catalizzatore e avvolge rapidamente l'area, impedendo ... |
 | **Incantesimo di Ammorbidimento (Gommosus)** | `Gommosus` | **5** *(Opp. 5)* | Trasfigurazione Inanimata / Elasticità | **SÌ** | Disegnare una lettera S sinuosa che termina direttamente sull'oggetto bersaglio. | Altera temporaneamente le proprietà meccaniche e la consistenza di una superficie solida o pavimento, rendendoli morbidi, fless... |
@@ -97,17 +100,16 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Trasfigurazione in Topo (Snufflifors)** | `Snufflifors` | **1** *(Opp. 9)* | Trasfigurazione Inanimato-Animato | **SÌ** | Cerchio stretto seguito da due scatti rapidi a zig-zag a simulare i baffi e la coda. | Incantesimo didattico del secondo anno: trasforma oggetti inanimati di piccola taglia (come tomi o sassi) in un simulacro tempo... |
 
 
-### III ANNO — GELO, TRASFIGURAZIONE TOTALE E ARITMANZIA BASE (18 Formule)
-*Magia del ghiaccio, trasfigurazione totale inanimati-animali e inizio dei corsi di Aritmanzia: tracciamento geometrico e formule elementali (18 formule).*
+### III ANNO — GELO, TRASFIGURAZIONE TOTALE & LIBER III (17 Formule)
+*Magia del ghiaccio, trasfigurazione inanimati-animali e formule elementali di Terra e Fuoco (17 formule).*
 
 | Nome | Formula | Valenza | Tipologia | Duello | Movimento Bacchetta | Sintesi Effetto |
 |---|---|:---:|---|:---:|---|---|
-| **Formula di Controllo dell'Acqua (Coerceo)** | `Coerceo` | **1** *(Opp. 9)* | Elementale Acqua / Controllo | **SÌ** | Se l'acqua è già presente: scatto secco del polso verso il basso. Se evocata: puntamento fermo appena fuoriesce dalla punta. | Formula aritmantica che assoggetta l'elemento naturale dell'Acqua (associato al numero 1 nella T.L.A.). Chi lo padroneggia sent... |
-| **Formula di Controllo dell'Aria (Finge)** | `Finge` | **5** *(Opp. 5)* | Elementale Aria / Controllo | **SÌ** | Mulinello orizzontale del polso da sinistra a destra con scatto in avanti. | Domina e modella i flussi dell'aria e del vento (associati al numero 5 e all'etere classico nel Codex). |
+| **Formula di Controllo del Fuoco (Plasma)** | `Plasma` | **8** *(Opp. 2)* | Elementale Fuoco / Controllo | **SÌ** | Sferzata orizzontale arcuata della bacchetta dal basso verso l'alto rilasciando la fiamma. | Controlla le forze del fuoco naturale o magico (associato al numero 8 nella T.L.A.). Richiede notevole padronanza per evitare r... |
+| **Formula di Controllo della Terra (Adultero)** | `Adultero` | **6** *(Opp. 4)* | Elementale Terra / Controllo | **SÌ** | Puntamento secco al terreno seguito da uno strappo verso l'alto con entrambe le mani sulla presa. | Governa la stabilità della terra, zolle e pietre (associata al numero 6 nella T.L.A.). Impiegato anche nella creazione della ba... |
 | **Incantesimo Anti-Molliccio (Riddikulus)** | `Riddikulus` | **2** *(Opp. 8)* | Difensivo / Anti-Non-Esseri | NO | Colpo di frusta ascendente con la bacchetta, focalizzando intensamente un'immagine ridicola. | Incantesimo che costringe il Molliccio a mutare nella rappresentazione comica immaginata dall'incantatore. La risata che ne sca... |
 | **Incantesimo Congelante (Glacius)** | `Glacius` | **9** *(Opp. 1)* | Offensivo / Elementale Freddo | **SÌ** | Movimento diretto e conciso in un punto lungo la direzione del sortilegio. | Scaglia un getto di aria gelata che trasforma l'acqua in ghiaccio e congela bersagli viventi o inanimati. Se combinato con Agua... |
 | **Incantesimo Riordina-Bagagli (Bagaglius)** | `Bagaglius` | **7** *(Opp. 3)* | Locomozione Domestica | NO | Tracciare un lungo ed ampio gesto rivolto al pavimento verso i bauli. | Sfrutta la locomozione e la levitazione aerea per piegare e riporre ordinatamente gli abiti nelle valigie in pochi secondi. |
-| **Incantesimo Segnante / Tracciante (Signo)** | `Signo` | **1** *(Opp. 9)* | Aritmantico Fondamentale / Tracciamento | NO | Posizionare la bacchetta perpendicolarmente alla superficie e muoverla per formare la figura geometrica desiderata. | Traccia sul terreno o su qualsiasi superficie figure geometriche luminose (dal cerchio all'ellisse, 1-9) che svaniscono lascian... |
 | **Incantesimo Sposta-Alberi (Mobiliarbus)** | `Mobiliarbus` | **4** *(Opp. 6)* | Locomozione Pesi Massicci | NO | Movimento ascendente con impugnatura salda a due mani e traslazione orizzontale. | Permette di dissodare temporaneamente le radici di un albero o arbusto pesante per farlo fluttuare e riposizionarlo altrove. |
 | **Incantesimo del Vortice Terrestre (Orbis)** | `Orbis` | **9** *(Opp. 1)* | Offensivo / Elementale Terra | **SÌ** | Spirale discendente disegnata verso il suolo sotto i piedi del bersaglio. | Incantesimo legato all'elemento Terra. Crea un vortice di luce azzurra che risucchia il nemico verso il terreno, scagliando fra... |
 | **Incantesimo di Detersione (Gratta e Netta / Scourgify)** | `Scourgify` | **6** *(Opp. 4)* | Utilità / Detersione / Anti-Bundium | **SÌ** | Tracciare una lettera S verticale con decisione. | Pulisce, sgrassa e igienizza oggetti e stoviglie. Efficace rimedio contro le infestazioni di Bundium, creature amanti del marci... |
@@ -122,8 +124,8 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Trasfigurazione in Volatile (Avifors)** | `Avifors` | **9** *(Opp. 1)* | Trasfigurazione Bivalente | **SÌ** | Arco d'ali ascendente fluido con battito finale della bacchetta. | Perfezionato nel 1198 dalla strega inglese Ilyan Broser. Trasfigura oggetti inanimati o piccoli animali in uccelli (o pipistrel... |
 
 
-### IV ANNO — TATTICHE DI DIFESA, ARITMANZIA ELEMENTALE E MEDIMAGIA (25 Formule)
-*Sortilegi da breccia, marchiatura e diagnostica trasfigurativa, controllo avanzato di terra e fuoco, difese perimetrali (25 formule).*
+### IV ANNO — TATTICHE DI DIFESA, MARCHIATURA, MEDIMAGIA & LIBER IV (24 Formule)
+*Sortilegi da breccia, marchiatura e diagnostica trasfigurativa, varchi proporzionali aurei e difese statiche (24 formule).*
 
 | Nome | Formula | Valenza | Tipologia | Duello | Movimento Bacchetta | Sintesi Effetto |
 |---|---|:---:|---|:---:|---|---|
@@ -133,8 +135,6 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Fattura della Congiuntivite (Conjunctivitus)** | `Conjunctivitus` | **2** *(Opp. 8)* | Offensivo / Fattura Accecante | **SÌ** | Doppio tocco aereo rapido seguito da un affondo orizzontale mirato agli occhi. | Provoca un'istantanea e acuta infiammazione oculare con abbondante secrezione e spasmo palpebrale. Efficace anche contro gigant... |
 | **Fattura della Zucca (Melofors)** | `Melofors` | **4** *(Opp. 6)* | Fattura Trasfigurativa Irripetibile | **SÌ** | Arco a cupola sopra la testa dell'avversario con scatto verso il basso. | Incantesimo citato nel Codex come classico esempio di incanto irripetibile: manifesta una zucca arancione sulla testa della vit... |
 | **Fattura delle Corde Vincolanti (Incarceramus)** | `Incarceramus` | **8** *(Opp. 2)* | Fattura Offensiva / Confinamento | **SÌ** | Doppio giro a cappio della bacchetta seguito da un affondo in avanti. | Proietta lunghe e spesse corde magiche intrecciate che si avvinghiano attorno al bersaglio legandolo strettamente. |
-| **Formula di Controllo del Fuoco (Plasma)** | `Plasma` | **8** *(Opp. 2)* | Elementale Fuoco / Controllo | **SÌ** | Sferzata orizzontale arcuata della bacchetta dal basso verso l'alto rilasciando la fiamma. | Controlla le forze del fuoco naturale o magico (associato al numero 8 nella T.L.A.). Richiede notevole padronanza per evitare r... |
-| **Formula di Controllo della Terra (Adultero)** | `Adultero` | **6** *(Opp. 4)* | Elementale Terra / Controllo | **SÌ** | Puntamento secco al terreno seguito da uno strappo verso l'alto con entrambe le mani sulla presa. | Governa la stabilità della terra, zolle e pietre (associata al numero 6 nella T.L.A.). Impiegato anche nella creazione della ba... |
 | **Incantesimo Adesivo (Epoximise)** | `Epoximise` | **7** *(Opp. 3)* | Trasfigurazione Adesiva / Tattico | **SÌ** | Schiocco verso la linea di contatto tra le due superfici da unire. | Genera tra due superfici materiali uno strato di potentissima resina collante sintetica inseparabile. |
 | **Incantesimo Anti-Furto per Contenitori (Dominum)** | `Dominum` | **8** *(Opp. 2)* | Difesa Statica di Contenitori | NO | Appoggiare la bacchetta sul contenitore e farla vibrare con una serie di picchiettii lungo tutto il perimetro. | Garantisce che soltanto il legittimo proprietario possa interagire magicamente con il contenuto protetto di un forziere o mobil... |
 | **Incantesimo Curativo Rapido (Episkey)** | `Episkey` | **9** *(Opp. 1)* | Curativo / Medimagia da Campo | **SÌ** | Puntare la bacchetta sulla ferita e pronunciare la formula con tono deciso. | Sortilegio medimagico per traumi lievi, abrasioni, contusioni e piccole fratture. Provoca una sensazione alternata di caldo e g... |
@@ -143,6 +143,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Incantesimo Infiammante (Lacarnum Inflamare)** | `Lacarnum Inflamare` | **9** *(Opp. 1)* | Offensivo / Elementale Fuoco | **SÌ** | Schiocco rapido del polso a becco verso il mantello o il vestito dell'avversario. | Emette una scintilla o dardo ardente che accende qualsiasi tessuto o superficie non trattata con sortilegi ignifughi. |
 | **Incantesimo Leviga-Scale (Glisseo)** | `Glisseo` | **5** *(Opp. 5)* | Trasfigurazione Ambientale | **SÌ** | Onda discendente che segue il profilo della gradinata. | Concepito originariamente dai fondatori di Hogwarts per proteggere i dormitori femminili. Trasforma istantaneamente qualsiasi s... |
 | **Incantesimo Pietrificante di Cose (Duro)** | `Duro` | **4** *(Opp. 6)* | Litotrasfigurazione Inanimata | **SÌ** | Tocco secco perpendicolare verso il bersaglio con pugno serrato sulla bacchetta. | Converte la consistenza di un oggetto inanimato in dura pietra massiccia, lasciando inalterato lo spazio occupato. |
+| **Incantesimo Proporzionale Aureo (Phi Porta)** | `Phi Porta` | **4** *(Opp. 6)* | Traslazione / Varchi Aritmantici | NO | Disegnare un rettangolo continuo con rapporto lati 1,618 con la bacchetta perpendicolare. | Sfrutta la proporzione divina (1,618) del numero d'oro per aprire un passaggio segreto su una parete solida. Il varco deve esse... |
 | **Incantesimo Salda-Tagli (Cicatris)** | `Cicatris` | **1** *(Opp. 9)* | Curativo / Medimagia Minore | NO | Disegnare un piccolo semicerchio verso il taglio con luce tenue color pesca. | Sutura magicamente ferite superficiali da taglio o graffi domestici. Un uso eccessivo può indurire la cute. |
 | **Incantesimo d'Esilio (Relascio)** | `Relascio` | **1** *(Opp. 9)* | Offensivo / Disarmo / Allontanamento | **SÌ** | Mano portata rapidamente al petto e poi braccio steso con forza in avanti verso il bersaglio; fa scintille. | Genera un getto sfrigolante di scintille o acqua bollente (sott'acqua) che allontana persone, oggetti o creature moleste come i... |
 | **Incantesimo della Marcatura Infuocata (Flagramus)** | `Flagramus` | **8** *(Opp. 2)* | Utilità / Tattico / Aritmantico | **SÌ** | Tracciamento deciso di una croce di fuoco o del segno alfabetico desiderato nell'aria o sulla materia. | Incide rune, simboli o croci di fiamma pura sopra oggetti, pareti o porte, rendendoli incandescenti al tatto. Utilizzato nell'A... |
@@ -154,8 +155,8 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Sortilegio di Slancio Verticale (Alarte Ascenderai)** | `Alarte Ascenderai` | **1** *(Opp. 9)* | Offensivo / Cinetico / Non-Verbale | **SÌ** | Stoccata diretta dal basso verso l'alto con un lampo di luce rossa (preferibilmente non verbale). | Emette una luce scarlatta che proietta il corpo della vittima in aria a grande velocità per poi lasciarlo schiantare al suolo. ... |
 
 
-### V ANNO — PREPARAZIONE AI G.U.F.O., EVANESCENZA E VARCHI AUREI (14 Formule)
-*Sortilegi esplosivi, formule di evanescenza per inanimati e viventi, crittografia magica e varchi proporzionali aurei (14 formule).*
+### V ANNO — PREPARAZIONE AI G.U.F.O., EVANESCENZA & LIBER V (13 Formule)
+*Sortilegi esplosivi, formule di evanescenza per inanimati e viventi e crittografia celante aurea (13 formule).*
 
 | Nome | Formula | Valenza | Tipologia | Duello | Movimento Bacchetta | Sintesi Effetto |
 |---|---|:---:|---|:---:|---|---|
@@ -165,7 +166,6 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Fattura dei Foruncoli (Furunculus)** | `Furunculus` | **3** *(Opp. 7)* | Fattura Offensiva / Debilitante | **SÌ** | Doppio tocco aereo rapido a puntura d'ape seguito da affondo verso il bersaglio. | Ricopre istantaneamente la pelle e il volto della vittima di enormi e dolorose bolle colme di pus. Le lesioni possono essere al... |
 | **Incantesimo Celante Aureo (Phi Revelio)** | `Phi Revelio` | **2** *(Opp. 8)* | Occultamento / Crittografia Magica | NO | Tracciamento rettangolo aureo sulla pergamena con Signo e tocco al centro. | Permette di nascondere un messaggio scritto su pergamena rendendolo invisibile dopo 5 minuti dal tracciamento, riattivabile sol... |
 | **Incantesimo Polverizzante (Reducto)** | `Reducto` | **5** *(Opp. 5)* | Offensivo / Polverizzazione | **SÌ** | Movimento a V rovesciata seguito da una stoccata orizzontale in avanti. | Riduce in frantumi o fa saltare in aria oggetti solidi pesanti come macigni, cancelli o tronchi d'albero. Permette di liberarsi... |
-| **Incantesimo Proporzionale Aureo (Phi Porta)** | `Phi Porta` | **4** *(Opp. 6)* | Traslazione / Varchi Aritmantici | NO | Disegnare un rettangolo continuo con rapporto lati 1,618 con la bacchetta perpendicolare. | Sfrutta la proporzione divina (1,618) del numero d'oro per aprire un passaggio segreto su una parete solida. Il varco deve esse... |
 | **Incantesimo di Evanescenza per Inanimati e Liquidi (Evanesco)** | `Evanesco` | **3** *(Opp. 7)* | Evanescenza nel Non-Essere | **SÌ** | Movimento a spirale centrifuga che si allarga dal centro verso l'esterno svanendo nel nulla. | Trasferisce oggetti inanimati e liquidi nel Non-Essere (la dimensione liminale di energia caotica). Opera come opposto specular... |
 | **Incantesimo di Evanescenza per Viventi (Ivanesco)** | `Ivanesco` | **7** *(Opp. 3)* | Evanescenza di Viventi nel Non-Essere | **SÌ** | Fendente netto a triangolo aperto sopra la creatura evocata. | Formula canonica per far svanire nel Non-Essere piante ed esseri viventi precedentemente evocati. Non può essere applicato parz... |
 | **Incantesimo di Pressione Crollante (Deprimo)** | `Deprimo` | **8** *(Opp. 2)* | Offensivo / Distruzione / Pressione | **SÌ** | Puntamento perpendicolare dall'alto verso il basso con pressione muscolare dell'intero braccio. | Esercita una spaventosa pressione verso il basso sulla materia selezionata, causandone il collasso o la polverizzazione. Capace... |
@@ -175,7 +175,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Sortilegio Solleticante (Rictusempra)** | `Rictusempra` | **8** *(Opp. 2)* | Fattura / Disabilitazione Lieve | **SÌ** | Semicirconferenza con stoccata finale verso l'avversario; fiotto di luce bianca con urto simile a schiantesimo. | Sortilegio che investe il bersaglio con un dardo di luce argentata procurando un solletico feroce e incontrollabile che fa scop... |
 
 
-### VI ANNO (SESTO ANNO) — MALEDIZIONI, TRASFIGURAZIONE CIRCOLARE, INCANTESIMI E TRASLAZIONE (39 Formule)
+### VI ANNO (SESTO ANNO) — MALEDIZIONI, TRASFIGURAZIONE CIRCOLARE, INCANTESIMI & LIBER VI (39 Formule)
 *Didattica avanzata di Sesto Anno: Sortilegi e Incantesimi Non-Verbali, Trasfigurazione pratica e circolare intermittente, D.C.A.O. e traslazione spaziale aritmantica (39 formule).*
 
 | Nome | Formula | Valenza | Tipologia | Duello | Movimento Bacchetta | Sintesi Effetto |
@@ -221,7 +221,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Triangolo Traslatore (Transatio Objecto)** | `Transatio Objecto` | **7** *(Opp. 3)* | Aritmantico / Traslazione Geometrica | **SÌ** | Tracciare due triangoli equilateri concentrici nell'aria ruotati di 180 gradi con stoccata al vertice superiore. | Trattato nel Liber Sextus (Cap. V). Crea un condotto di traslazione geometrica istantanea fra due triangoli equilateri tracciat... |
 
 
-### VII ANNO (SETTIMO ANNO) — INCANTESIMI SUPERIORI, D.C.A.O., ANIMAGIA E RITUALI SIGILLANTI (26 Formule)
+### VII ANNO (SETTIMO ANNO) — INCANTESIMI SUPERIORI, D.C.A.O., ANIMAGIA & LIBER VII (26 Formule)
 *Didattica superiore di Settimo Anno: Incantesimi stazionari ed ermetici (Fidelius, Proteus, Cave Inimicum, Prior Incantatio, Passaporta), D.C.A.O. superiore, teoria dell'Animagia e rituali di sigillo permanente (26 formule).*
 
 | Nome | Formula | Valenza | Tipologia | Duello | Movimento Bacchetta | Sintesi Effetto |

@@ -26,13 +26,13 @@ for s in spells:
     by_year.setdefault(y, []).append(s)
 
 year_titles = {
-    1: ("I ANNO — FONDAMENTI DI DIFESA, CINETICA E TRASFIGURAZIONE MORFOLOGICA", "Fondamenti didattici, disarmo, mobilità e trasfigurazione inanimata di base (17 formule)."),
-    2: ("II ANNO — FATTURE, CONTROINCANTI E TRASFIGURAZIONE MATERICA", "Fatture di impatto, controincanti generali e mutazione materica su oggetti (15 formule)."),
-    3: ("III ANNO — GELO, TRASFIGURAZIONE TOTALE E ARITMANZIA BASE", "Magia del ghiaccio, trasfigurazione totale inanimati-animali e inizio dei corsi di Aritmanzia: tracciamento geometrico e formule elementali (18 formule)."),
-    4: ("IV ANNO — TATTICHE DI DIFESA, ARITMANZIA ELEMENTALE E MEDIMAGIA", "Sortilegi da breccia, marchiatura e diagnostica trasfigurativa, controllo avanzato di terra e fuoco, difese perimetrali (25 formule)."),
-    5: ("V ANNO — PREPARAZIONE AI G.U.F.O., EVANESCENZA E VARCHI AUREI", "Sortilegi esplosivi, formule di evanescenza per inanimati e viventi, crittografia magica e varchi proporzionali aurei (14 formule)."),
-    6: ("VI ANNO (SESTO ANNO) — MALEDIZIONI, TRASFIGURAZIONE CIRCOLARE, INCANTESIMI E TRASLAZIONE", "Didattica avanzata di Sesto Anno: Sortilegi e Incantesimi Non-Verbali, Trasfigurazione pratica e circolare intermittente, D.C.A.O. e traslazione spaziale aritmantica (39 formule)."),
-    7: ("VII ANNO (SETTIMO ANNO) — INCANTESIMI SUPERIORI, D.C.A.O., ANIMAGIA E RITUALI SIGILLANTI", "Didattica superiore di Settimo Anno: Incantesimi stazionari ed ermetici (Fidelius, Proteus, Cave Inimicum, Prior Incantatio, Passaporta), D.C.A.O. superiore, teoria dell'Animagia e rituali di sigillo permanente (26 formule).")
+    1: ("I ANNO — FONDAMENTI DI DIFESA, CINETICA, TRASFIGURAZIONE & LIBER I", "Fondamenti didattici, disarmo, mobilità, trasfigurazione inanimata e Aritmanzia elementale base (19 formule)."),
+    2: ("II ANNO — FATTURE, CONTROINCANTI, TRASFIGURAZIONE MATERICA & LIBER II", "Fatture di impatto, controincanti generali, mutazione materica e controllo dell'Aria (16 formule)."),
+    3: ("III ANNO — GELO, TRASFIGURAZIONE TOTALE & LIBER III", "Magia del ghiaccio, trasfigurazione inanimati-animali e formule elementali di Terra e Fuoco (17 formule)."),
+    4: ("IV ANNO — TATTICHE DI DIFESA, MARCHIATURA, MEDIMAGIA & LIBER IV", "Sortilegi da breccia, marchiatura e diagnostica trasfigurativa, varchi proporzionali aurei e difese statiche (24 formule)."),
+    5: ("V ANNO — PREPARAZIONE AI G.U.F.O., EVANESCENZA & LIBER V", "Sortilegi esplosivi, formule di evanescenza per inanimati e viventi e crittografia celante aurea (13 formule)."),
+    6: ("VI ANNO (SESTO ANNO) — MALEDIZIONI, TRASFIGURAZIONE CIRCOLARE, INCANTESIMI & LIBER VI", "Didattica avanzata di Sesto Anno: Sortilegi e Incantesimi Non-Verbali, Trasfigurazione pratica e circolare intermittente, D.C.A.O. e traslazione spaziale aritmantica (39 formule)."),
+    7: ("VII ANNO (SETTIMO ANNO) — INCANTESIMI SUPERIORI, D.C.A.O., ANIMAGIA & LIBER VII", "Didattica superiore di Settimo Anno: Incantesimi stazionari ed ermetici (Fidelius, Proteus, Cave Inimicum, Prior Incantatio, Passaporta), D.C.A.O. superiore, teoria dell'Animagia e rituali di sigillo permanente (26 formule).")
 }
 
 year_order = [1, 2, 3, 4, 5, 6, 7]

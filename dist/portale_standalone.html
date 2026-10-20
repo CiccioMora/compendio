@@ -135,11 +135,11 @@
           </label>
           <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
             <option value="ALL">Tutti gli Anni (154)</option>
-            <option value="1">I Anno — Fondamenti & Cinetica (17)</option>
-            <option value="2">II Anno — Fatture & Inanimati (15)</option>
-            <option value="3">III Anno — Gelo, Creature & Aritmanzia (18)</option>
-            <option value="4">IV Anno — Tattiche, Elementi & Medimagia (25)</option>
-            <option value="5">V Anno — Esplosivi & G.U.F.O. (14)</option>
+            <option value="1">I Anno — Fondamenti, Cinetica & Liber I (19)</option>
+            <option value="2">II Anno — Fatture, Inanimati & Liber II (16)</option>
+            <option value="3">III Anno — Gelo, Creature & Liber III (17)</option>
+            <option value="4">IV Anno — Tattiche, Medimagia & Liber IV (24)</option>
+            <option value="5">V Anno — Esplosivi, G.U.F.O. & Liber V (13)</option>
             <option value="6">VI Anno — Sesto Anno: Maledizioni, Trasfigurazione & Incantesimi (39)</option>
             <option value="7">VII Anno — Settimo Anno: Incantesimi Superiori, Difesa & Arti Oscure (26)</option>
           </select>
@@ -200,19 +200,19 @@
               Tutti (154)
             </button>
             <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              I Anno (17)
+              I Anno (19)
             </button>
             <button data-year="2" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              II Anno (15)
+              II Anno (16)
             </button>
             <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              III Anno (18)
+              III Anno (17)
             </button>
             <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              IV Anno (25)
+              IV Anno (24)
             </button>
             <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              V Anno (14)
+              V Anno (13)
             </button>
             <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               VI Anno (39)
@@ -506,7 +506,7 @@
   <!-- SCRIPTS: DATABASE & APP LOGIC -->
   <script>
 // spellsData.js - Archivio Completo dei 154 Incantesimi suddiviso per Anni (I - VII Anno)
-// Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR e Trattati Didattici
+// Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR e Trattati Didattici (Liber I-VII)
 
 const SPELLS_DATA = [
   {
@@ -529,6 +529,27 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "coerceo",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Formula di Controllo dell'Acqua (Coerceo)",
+    "formula": "Coerceo",
+    "ripetibile": false,
+    "tipologia": "Elementale Acqua / Controllo",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello. Plasma torrenti e muri d'acqua per deflettere fiamme, travolgere il rivale o spegnere attacchi incendiari.",
+    "movimento": "Se l'acqua è già presente: scatto secco del polso verso il basso. Se evocata: puntamento fermo appena fuoriesce dalla punta.",
+    "movimentoSvg": "M 75,30 L 75,115 M 55,95 L 75,115 L 95,95",
+    "descrizione": "Formula aritmantica che assoggetta l'elemento naturale dell'Acqua (associato al numero 1 nella T.L.A.). Chi lo padroneggia sente l'acqua come un prolungamento della bacchetta.",
+    "etimologia": "Dal latino coercere (contenere, domare, tenere a freno).",
+    "valenza": 1,
+    "sommaLettere": 37,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "lumos",
@@ -613,6 +634,27 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "signo",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Incantesimo Segnante / Tracciante (Signo)",
+    "formula": "Signo",
+    "ripetibile": false,
+    "tipologia": "Aritmantico Fondamentale / Tracciamento",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello. È l'incantesimo cardine con cui gli aritmanti tracciano figure geometriche perfette su pietre, pavimenti o tessuti.",
+    "movimento": "Posizionare la bacchetta perpendicolarmente alla superficie e muoverla per formare la figura geometrica desiderata.",
+    "movimentoSvg": "M 75,25 A 50,50 0 1,1 74,25 Z",
+    "descrizione": "Traccia sul terreno o su qualsiasi superficie figure geometriche luminose (dal cerchio all'ellisse, 1-9) che svaniscono lasciando il segno perfetto impresso nella materia.",
+    "etimologia": "Dal latino signare (tracciare, incidere un sigillo).",
+    "valenza": 1,
+    "sommaLettere": 28,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "incendio",
@@ -909,6 +951,27 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 73 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
   },
   {
+    "id": "finge",
+    "anno": 2,
+    "annoLabel": "II Anno",
+    "nome": "Formula di Controllo dell'Aria (Finge)",
+    "formula": "Finge",
+    "ripetibile": false,
+    "tipologia": "Elementale Aria / Controllo",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello. Genera potenti vortici e barriere eoliche che deviano dardi magici e proiettili solidi.",
+    "movimento": "Mulinello orizzontale del polso da sinistra a destra con scatto in avanti.",
+    "movimentoSvg": "M 35,75 Q 75,40 115,75 Q 75,110 35,75",
+    "descrizione": "Domina e modella i flussi dell'aria e del vento (associati al numero 5 e all'etere classico nel Codex).",
+    "etimologia": "Dal latino fingere (modellare, dare forma).",
+    "valenza": 5,
+    "sommaLettere": 32,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+  },
+  {
     "id": "immobilus",
     "anno": 2,
     "annoLabel": "II Anno",
@@ -1182,46 +1245,46 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
   },
   {
-    "id": "coerceo",
+    "id": "plasma",
     "anno": 3,
     "annoLabel": "III Anno",
-    "nome": "Formula di Controllo dell'Acqua (Coerceo)",
-    "formula": "Coerceo",
+    "nome": "Formula di Controllo del Fuoco (Plasma)",
+    "formula": "Plasma",
     "ripetibile": false,
-    "tipologia": "Elementale Acqua / Controllo",
+    "tipologia": "Elementale Fuoco / Controllo",
     "inDuello": true,
-    "duelloNote": "Utilizzabile in duello. Plasma torrenti e muri d'acqua per deflettere fiamme, travolgere il rivale o spegnere attacchi incendiari.",
-    "movimento": "Se l'acqua è già presente: scatto secco del polso verso il basso. Se evocata: puntamento fermo appena fuoriesce dalla punta.",
-    "movimentoSvg": "M 75,30 L 75,115 M 55,95 L 75,115 L 95,95",
-    "descrizione": "Formula aritmantica che assoggetta l'elemento naturale dell'Acqua (associato al numero 1 nella T.L.A.). Chi lo padroneggia sente l'acqua come un prolungamento della bacchetta.",
-    "etimologia": "Dal latino coercere (contenere, domare, tenere a freno).",
-    "valenza": 1,
-    "sommaLettere": 37,
-    "valenzaOpposta": 9,
+    "duelloNote": "Utilizzabile in duello. Plasma fiammate, serpenti di fuoco o scudi termici contro attacchi di gelo o creature della notte.",
+    "movimento": "Sferzata orizzontale arcuata della bacchetta dal basso verso l'alto rilasciando la fiamma.",
+    "movimentoSvg": "M 35,110 C 60,80 60,50 75,35 C 90,50 90,80 115,110 Z",
+    "descrizione": "Controlla le forze del fuoco naturale o magico (associato al numero 8 nella T.L.A.). Richiede notevole padronanza per evitare ritorni di fiamma.",
+    "etimologia": "Dal greco plásma (ciò che viene forgiato o plasmato nel calore).",
+    "valenza": 8,
+    "sommaLettere": 17,
+    "valenzaOpposta": 2,
     "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 17 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
   },
   {
-    "id": "finge",
+    "id": "adultero",
     "anno": 3,
     "annoLabel": "III Anno",
-    "nome": "Formula di Controllo dell'Aria (Finge)",
-    "formula": "Finge",
+    "nome": "Formula di Controllo della Terra (Adultero)",
+    "formula": "Adultero",
     "ripetibile": false,
-    "tipologia": "Elementale Aria / Controllo",
+    "tipologia": "Elementale Terra / Controllo",
     "inDuello": true,
-    "duelloNote": "Utilizzabile in duello. Genera potenti vortici e barriere eoliche che deviano dardi magici e proiettili solidi.",
-    "movimento": "Mulinello orizzontale del polso da sinistra a destra con scatto in avanti.",
-    "movimentoSvg": "M 35,75 Q 75,40 115,75 Q 75,110 35,75",
-    "descrizione": "Domina e modella i flussi dell'aria e del vento (associati al numero 5 e all'etere classico nel Codex).",
-    "etimologia": "Dal latino fingere (modellare, dare forma).",
-    "valenza": 5,
-    "sommaLettere": 32,
-    "valenzaOpposta": 5,
+    "duelloNote": "Utilizzabile in duello. Erige muraglie di pietra o fango per parare colpi nemici o dissesta il suolo sotto i piedi del rivale.",
+    "movimento": "Puntamento secco al terreno seguito da uno strappo verso l'alto con entrambe le mani sulla presa.",
+    "movimentoSvg": "M 40,115 L 75,35 L 110,115",
+    "descrizione": "Governa la stabilità della terra, zolle e pietre (associata al numero 6 nella T.L.A.). Impiegato anche nella creazione della base dei pozzi comunicanti.",
+    "etimologia": "Dal latino adulterare (alterare la natura e lo stato originale della materia).",
+    "valenza": 6,
+    "sommaLettere": 33,
+    "valenzaOpposta": 4,
     "maxRipetizioni": 1,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "riddikulus",
@@ -1285,27 +1348,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
     "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "signo",
-    "anno": 3,
-    "annoLabel": "III Anno",
-    "nome": "Incantesimo Segnante / Tracciante (Signo)",
-    "formula": "Signo",
-    "ripetibile": false,
-    "tipologia": "Aritmantico Fondamentale / Tracciamento",
-    "inDuello": false,
-    "duelloNote": "Non utilizzabile in duello. È l'incantesimo cardine con cui gli aritmanti tracciano figure geometriche perfette su pietre, pavimenti o tessuti.",
-    "movimento": "Posizionare la bacchetta perpendicolarmente alla superficie e muoverla per formare la figura geometrica desiderata.",
-    "movimentoSvg": "M 75,25 A 50,50 0 1,1 74,25 Z",
-    "descrizione": "Traccia sul terreno o su qualsiasi superficie figure geometriche luminose (dal cerchio all'ellisse, 1-9) che svaniscono lasciando il segno perfetto impresso nella materia.",
-    "etimologia": "Dal latino signare (tracciare, incidere un sigillo).",
-    "valenza": 1,
-    "sommaLettere": 28,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "mobiliarbus",
@@ -1686,48 +1728,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
   },
   {
-    "id": "plasma",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Formula di Controllo del Fuoco (Plasma)",
-    "formula": "Plasma",
-    "ripetibile": false,
-    "tipologia": "Elementale Fuoco / Controllo",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello. Plasma fiammate, serpenti di fuoco o scudi termici contro attacchi di gelo o creature della notte.",
-    "movimento": "Sferzata orizzontale arcuata della bacchetta dal basso verso l'alto rilasciando la fiamma.",
-    "movimentoSvg": "M 35,110 C 60,80 60,50 75,35 C 90,50 90,80 115,110 Z",
-    "descrizione": "Controlla le forze del fuoco naturale o magico (associato al numero 8 nella T.L.A.). Richiede notevole padronanza per evitare ritorni di fiamma.",
-    "etimologia": "Dal greco plásma (ciò che viene forgiato o plasmato nel calore).",
-    "valenza": 8,
-    "sommaLettere": 17,
-    "valenzaOpposta": 2,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 17 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "adultero",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Formula di Controllo della Terra (Adultero)",
-    "formula": "Adultero",
-    "ripetibile": false,
-    "tipologia": "Elementale Terra / Controllo",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello. Erige muraglie di pietra o fango per parare colpi nemici o dissesta il suolo sotto i piedi del rivale.",
-    "movimento": "Puntamento secco al terreno seguito da uno strappo verso l'alto con entrambe le mani sulla presa.",
-    "movimentoSvg": "M 40,115 L 75,35 L 110,115",
-    "descrizione": "Governa la stabilità della terra, zolle e pietre (associata al numero 6 nella T.L.A.). Impiegato anche nella creazione della base dei pozzi comunicanti.",
-    "etimologia": "Dal latino adulterare (alterare la natura e lo stato originale della materia).",
-    "valenza": 6,
-    "sommaLettere": 33,
-    "valenzaOpposta": 4,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "epoximise",
     "anno": 4,
     "annoLabel": "IV Anno",
@@ -1894,6 +1894,27 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 22 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "phi-porta",
+    "anno": 4,
+    "annoLabel": "IV Anno",
+    "nome": "Incantesimo Proporzionale Aureo (Phi Porta)",
+    "formula": "Phi Porta",
+    "ripetibile": false,
+    "tipologia": "Traslazione / Varchi Aritmantici",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello. Richiede di disegnare con Signo un rettangolo aureo continuo su una parete prima di aprire il varco.",
+    "movimento": "Disegnare un rettangolo continuo con rapporto lati 1,618 con la bacchetta perpendicolare.",
+    "movimentoSvg": "M 40,35 L 110,35 L 110,115 L 40,115 Z",
+    "descrizione": "Sfrutta la proporzione divina (1,618) del numero d'oro per aprire un passaggio segreto su una parete solida. Il varco deve essere aperto entro due minuti con la parola o gesto stabiliti.",
+    "etimologia": "Dalla lettera greca Phi (simbolo della sezione aurea di Fidia) e porta.",
+    "valenza": 4,
+    "sommaLettere": 49,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "cicatris",
@@ -2209,27 +2230,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 5,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
     "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 5 volte."
-  },
-  {
-    "id": "phi-porta",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Incantesimo Proporzionale Aureo (Phi Porta)",
-    "formula": "Phi Porta",
-    "ripetibile": false,
-    "tipologia": "Traslazione / Varchi Aritmantici",
-    "inDuello": false,
-    "duelloNote": "Non utilizzabile in duello. Richiede di disegnare con Signo un rettangolo aureo continuo su una parete prima di aprire il varco.",
-    "movimento": "Disegnare un rettangolo continuo con rapporto lati 1,618 con la bacchetta perpendicolare.",
-    "movimentoSvg": "M 40,35 L 110,35 L 110,115 L 40,115 Z",
-    "descrizione": "Sfrutta la proporzione divina (1,618) del numero d'oro per aprire un passaggio segreto su una parete solida. Il varco deve essere aperto entro due minuti con la parola o gesto stabiliti.",
-    "etimologia": "Dalla lettera greca Phi (simbolo della sezione aurea di Fidia) e porta.",
-    "valenza": 4,
-    "sommaLettere": 49,
-    "valenzaOpposta": 6,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "evanesco",
