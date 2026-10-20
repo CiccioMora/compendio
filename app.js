@@ -130,7 +130,7 @@
         // 4. Valence filter
         if (activeValence !== "ALL" && spell.valenza !== Number(activeValence)) return false;
 
-        // 5. Search Query (searches in: name, formula, description, movement, type)
+        // 5. Search Query (searches in: name, formula, description, movement, type, runeAssociate, aett)
         if (searchQuery.trim() !== "") {
           const q = searchQuery.toLowerCase();
           const matchName = spell.nome.toLowerCase().includes(q);
@@ -138,7 +138,9 @@
           const matchDesc = spell.descrizione.toLowerCase().includes(q);
           const matchMov = spell.movimento.toLowerCase().includes(q);
           const matchTipo = spell.tipologia.toLowerCase().includes(q);
-          if (!matchName && !matchFormula && !matchDesc && !matchMov && !matchTipo) return false;
+          const matchRune = (spell.runeAssociate || "").toLowerCase().includes(q);
+          const matchAett = (spell.aett || "").toLowerCase().includes(q);
+          if (!matchName && !matchFormula && !matchDesc && !matchMov && !matchTipo && !matchRune && !matchAett) return false;
         }
 
         return true;
@@ -173,16 +175,25 @@
           typeBadgeClass = "bg-orange-500/10 text-orange-300 border-orange-500/30";
         } else if (spell.tipologia.includes("Trasfigurazione")) {
           typeBadgeClass = "bg-teal-500/10 text-teal-300 border-teal-500/30";
+        } else if (spell.tipologia.includes("Rune") || spell.isRune) {
+          typeBadgeClass = "bg-indigo-500/20 text-indigo-300 border-indigo-500/40";
         }
 
-        // Duel badge
-        const duelBadge = spell.inDuello
-          ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm">
-               <span>⚔️</span> Duello: SÌ
-             </span>`
-          : `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700">
-               <span>⛔</span> Duello: NO
-             </span>`;
+        // Duel / Runic badge
+        let duelBadge;
+        if (spell.isRune) {
+          duelBadge = `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 shadow-sm">
+                         <span>ᛟ</span> Futhark: Pos. ${spell.posizioneAlfabeto}
+                       </span>`;
+        } else {
+          duelBadge = spell.inDuello
+            ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm">
+                 <span>⚔️</span> Duello: SÌ
+               </span>`
+            : `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700">
+                 <span>⛔</span> Duello: NO
+               </span>`;
+        }
 
         return `
           <div class="glass-card rounded-2xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSpellDetails('${spell.id}')">
@@ -296,8 +307,20 @@
       // Letter breakdown computation for modal
       const letters = spell.formula.toUpperCase().split("").filter(c => PYTHAGOREAN[c]);
       const breakdown = letters.map(c => `${c}=${PYTHAGOREAN[c]}`).join(" + ");
-      modalLetterBreakdown.textContent = `${breakdown} = ${spell.sommaLettere} ➔ Riduzione: Valenza ${spell.valenza}`;
+      modalLetterBreakdown.textContent = spell.isRune 
+        ? `Posizione nell'Alfabeto: ${spell.posizioneAlfabeto} ➔ Valenza Magica: ${spell.valenza} (Canone: Valenza corrisponde alla Posizione)`
+        : `${breakdown} = ${spell.sommaLettere} ➔ Riduzione: Valenza ${spell.valenza}`;
       modalArithNotes.textContent = spell.noteAritmantiche || "";
+
+      // Elemento Runa Associata nel Modale
+      const modalRuneBox = document.getElementById("modalRuneAssociation");
+      const modalRunePos = document.getElementById("modalRunePosition");
+      if (modalRuneBox && modalRunePos) {
+        modalRunePos.textContent = `Valenza ${spell.valenza}`;
+        modalRuneBox.innerHTML = spell.isRune
+          ? `<strong>Runa Primaria dell'Alfabeto:</strong> ${spell.nome} (${spell.aett})<br><span class="text-xs text-amber-200/90">Incantesimi in risonanza: ${spell.incantesimiAssociati || spell.runeAssociate}</span>`
+          : `<strong>Rune dell'Alfabeto Associate:</strong> <span class="text-amber-300">${spell.runeAssociate || "—"}</span>`;
+      }
 
       // Set Wand SVG Path & trigger animation
       wandPathElement.setAttribute("d", spell.movimentoSvg || "M 30,75 L 120,75");

@@ -2,13 +2,13 @@
 *Classificazione Accademica Metodologica per Anni di Studio (Hogwarts & Ministero della Magia)*
 
 > [!NOTE]
-> Il presente compendio unifica l'intero corpus magico di **154 incantesimi catalogati**, integrando le fonti didattiche ufficiali:
+> Il presente compendio unifica l'intero corpus magico di **179 voci catalogate (154 incantesimi + 25 rune dell'Antico Futhark)**, integrando le fonti didattiche ufficiali:
 > - **Programma di Studio Arcane GDR**: Incantesimi, Trasfigurazione e Difesa Contro le Arti Oscure (*I-VII Anno*).
 > - **Codex Arithmantiae** (*Zeno & Glaphira Hawstein*): *Liber VI* (Spazio e Traslazione — VI Anno), *Liber VII* (Rituali, Sigilli e Trappole — VII Anno) e formule elementali/operative.
 > - **Difesa Contro le Arti Oscure** (*Yashiro Isana Mortem*): **Maledictio** (*VI Anno*) e **Oltre il Mago** (*VII Anno*).
 > - **Formule Senza Anno (Altri)**: Controincanti generali, difese statiche di zona, trasfigurazione fondamentale e trattati aritmantici non vincolati ad un'annata scolastica.
 >
-> 🔗 **[Apri il Portale Web Interattivo Completo (154 Incantesimi)](file:///Users/andreamorachioli/.gemini/antigravity/brain/3a4f7fa7-8206-4f51-b303-aa9b9d9eaf5c/portale_incantesimi.html)** oppure visualizza il progetto in locale: **[index.html](file:///Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi/index.html)**.
+> 🔗 **[Apri il Portale Web Interattivo Completo (179 Voci (Incantesimi & Rune))](file:///Users/andreamorachioli/.gemini/antigravity/brain/3a4f7fa7-8206-4f51-b303-aa9b9d9eaf5c/portale_incantesimi.html)** oppure visualizza il progetto in locale: **[index.html](file:///Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi/index.html)**.
 
 ---
 ## 1. Fondamenti del Calcolo Aritmantico della Valenza Magica
@@ -33,6 +33,23 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 ### Struttura Didattica di Difesa Contro le Arti Oscure (*Yashiro Isana Mortem*):
 - **VI Anno — Maledictio**: studio approfondito della natura delle maledizioni, indole oscura, fatture complesse (*Titillando*, *Exulcero*, *Monstrum*, *Dismundo*), famiglia delle pastoie (*Locomotor Mortis*, *Locomotor Wibbly*), Maledizione di Dolohov (*Dolohoferio*), Maledizione Dissanguante (*Sectumsempra*) e contro-canto (*Vulnera Sanentur*), Sortilegio dell'Infelicità Eterna, demone spia (*Stalker Convocatus*).
 - **VII Anno — Oltre il Mago**: studio delle forze occulte supreme e della storia oscura: Maledizioni Senza Perdono (*Avada Kedavra*, *Crucio*, *Imperio*), Evocazione del Marchio Nero (*Morsmordre*), Maledizione della Fiamma Mutaforma (*Fiendfyre* / Ardemonio) e Contro-incanto Fendi-Fiamma (*Partis Temporus*), Horcrux e metodologie di distruzione, Legilimanzia e Occlumanzia applicate.
+
+
+### 1.1 Canone di Associazione Incantesimi ⟷ Alfabeto Runico
+> [!IMPORTANT]
+> **Regola Fondamentale di Corrispondenza**:  
+> *«Le rune si associano agli incantesimi in questo modo: la valenza dell'incantesimo deve corrispondere alla posizione della runa nell'alfabeto runico.»*  
+> 
+> Nel Futhark Antico (24 rune articolate nei 3 Aettir di 8 glifi ciascuno, più la Runa Bianca centrale), la corrispondenza si applica direttamente sulle posizioni 1–9 e tramite riduzione teosofica su base 9 per le posizioni 10–24:
+> - **Valenza 1**: ᚠ **Fehu** (Pos. 1ª), ᚾ **Nauthiz** (Pos. 10ª $\rightarrow 1$), ᛖ **Ehwaz** (Pos. 19ª $\rightarrow 1$)
+> - **Valenza 2**: ᚢ **Uruz** (Pos. 2ª), ᛁ **Isa** (Pos. 11ª $\rightarrow 2$), ᛗ **Mannaz** (Pos. 20ª $\rightarrow 2$)
+> - **Valenza 3**: ᚦ **Thurisaz** (Pos. 3ª), ᛃ **Jera** (Pos. 12ª $\rightarrow 3$), ᛚ **Laguz** (Pos. 21ª $\rightarrow 3$)
+> - **Valenza 4**: ᚨ **Ansuz** (Pos. 4ª), ᛇ **Eihwaz** (Pos. 13ª $\rightarrow 4$), ᛜ **Inguz** (Pos. 22ª $\rightarrow 4$)
+> - **Valenza 5**: ᚱ **Raido** (Pos. 5ª), ᛈ **Perthr** (Pos. 14ª $\rightarrow 5$), ᛟ **Othila** (Pos. 23ª $\rightarrow 5$), ○ **Runa Bianca** (Centro del Wyrd)
+> - **Valenza 6**: ᚲ **Kenaz** (Pos. 6ª), ᛉ **Algiz** (Pos. 15ª $\rightarrow 6$), ᛞ **Dagaz** (Pos. 24ª $\rightarrow 6$)
+> - **Valenza 7**: ᚷ **Gebo** (Pos. 7ª), ᛋ **Sowilo** (Pos. 16ª $\rightarrow 7$)
+> - **Valenza 8**: ᚹ **Wunjo** (Pos. 8ª), ᛏ **Teiwaz** (Pos. 17ª $\rightarrow 8$)
+> - **Valenza 9**: ᚺ **Hagalaz** (Pos. 9ª), ᛒ **Berkana** (Pos. 18ª $\rightarrow 9$)
 
 ### Regole Fondamentali:
 1. **Calcolo della Valenza**: si sommano i valori numerici delle singole lettere della formula e si riduce a cifra singola (intervallo 1-9).
@@ -284,3 +301,36 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 > **Accedi ai File:**
 > - [portale_incantesimi.html](file:///Users/andreamorachioli/.gemini/antigravity/brain/3a4f7fa7-8206-4f51-b303-aa9b9d9eaf5c/portale_incantesimi.html) (Versione Artifact)
 > - [index.html](file:///Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi/index.html) (Versione Workspace)
+
+
+---
+### ANTICHE RUNE — L'ALFABETO FUTHARK E I GLIFI SACRI (25 Voci)
+*Le ventiquattro rune del Futhark Antico (divise nei tre Aettir di Urd, Verdandi e Skuld) più la Runa Bianca. Ciascuna runa è associata agli incantesimi di Hogwarts aventi la medesima valenza magica.*
+
+| Glifo | Nome Runa | Pos. Alfabeto | Aett / Norna | Valenza Magica | Val. Opposta | Figura Operativa | Pietra Consacrata | Archetipi & Incantesimi di Hogwarts in Risonanza |
+|:---:|---|:---:|---|:---:|:---:|---|---|---|
+| **ᚠ** | **Fehu** | **1ª** | 1° Aett (Urd) | **1** | **9** | Circonferenza | Topazio / Luce | Inizio, creazione, spirito primigenio, lavoro, cosmo. Risonanza con: *Incendio*, *Reparo*, *Signo*, *Coerceo*, *Colligo*. |
+| **ᚢ** | **Uruz** | **2ª** | 1° Aett (Urd) | **2** | **8** | Angolo / Linea | Ambra / Quarzo | Forza primordiale del toro, vigore muscolare, salute, tenacia. Risonanza con: *Expelliarmus*, *Innerva*, *Fumos*, *Riddikulus*. |
+| **ᚦ** | **Thurisaz** | **3ª** | 1° Aett (Urd) | **3** | **7** | Triangolo equilatero | Agata / Ossidiana | Spina acuta, dolore, abbattimento di ostacoli, caos liberatorio. Risonanza con: *Arresto Momentum*, *Orchideus*, *Incipio*, *Iungo*. |
+| **ᚨ** | **Ansuz** | **4ª** | 1° Aett (Urd) | **4** | **6** | Quadrato | Opale / Aria | La bocca, il verbo sacro, formula vocale, ordine cosmico, legge divina. Risonanza con: *Liberacorpus*, *Diffindo*, *Persigno*, *Stigma Exsequor*. |
+| **ᚱ** | **Raido** | **5ª** | 1° Aett (Urd) | **5** | **5** | Pentagono regolare | Azzurrite / Etere | Ruota del fato, sentiero, viaggio, cinetica, messaggio continuo. Risonanza con: *Levicorpus*, *Immobilus*, *Finge*, *Deleo*, *Dominium Evoco*. |
+| **ᚲ** | **Kenaz** | **6ª** | 1° Aett (Urd) | **6** | **4** | Esagono regolare | Agata / Molibdenite | Fiaccola viva, fiamma di purificazione, guarigione delle ferite, ristoro. Risonanza con: *Protego*, *Verdimillious*, *Adultero*, *Surge et expandi*. |
+| **ᚷ** | **Gebo** | **7ª** | 1° Aett (Urd) | **7** | **3** | Ettagono regolare | Ambra / Quarzo | Il dono, patto sacro, unione di anime, reciprocità, simmetria. Risonanza con: *Stupeficium*, *Vulnera Sanentur*, *Exsequor*, *Invenio*. |
+| **ᚹ** | **Wunjo** | **8ª** | 1° Aett (Urd) | **8** | **2** | Ottagono regolare | Topazio / Opale | Gioia profonda, benessere, armonia spirituale, preghiera di luce. Risonanza con: *Lumos*, *Alohomora*, *Plasma*, *Exstinguo*, *Occulto*. |
+| **ᚺ** | **Hagalaz** | **9ª** | 2° Aett (Verdandi) | **9** | **1** | Ellisse | Opale / Aria | Spirito Hagalantes, grandine, tempesta aerea, rottura di schemi, fato mutato. Risonanza con: *Flipendo*, *Petrificus Totalus*, *Glacius*, *Compositum*. |
+| **ᚾ** | **Nauthiz** | **10ª** ($10 \rightarrow 1$) | 2° Aett (Verdandi) | **1** | **9** | Circonferenza | Ossidiana / Vincolo | Necessità ineluttabile, vincolo stoico, controllo emotivo, salvezza nella prova. Risonanza con: *Incendio*, *Reparo*, *Signo*, *Coerceo*. |
+| **ᛁ** | **Isa** | **11ª** ($11 \rightarrow 2$) | 2° Aett (Verdandi) | **2** | **8** | Angolo / Linea | Acquamarina / Gelo | Ghiaccio primigenio, stasi molecolare, fermata del moto e del tempo, luna. Risonanza con: *Expelliarmus*, *Innerva*, *Fumos*. |
+| **ᛃ** | **Jera** | **12ª** ($12 \rightarrow 3$) | 2° Aett (Verdandi) | **3** | **7** | Triangolo equilatero | Quarzo / Terra | Raccolto fecondo, ciclo delle stagioni, giustizia del tempo, rotazione feconda. Risonanza con: *Arresto Momentum*, *Orchideus*, *Incipio*, *Iungo*. |
+| **ᛇ** | **Eihwaz** | **13ª** ($13 \rightarrow 4$) | 2° Aett (Verdandi) | **4** | **6** | Quadrato | Ambra / Quarzo | L'albero del tasso (Yggdrasil), asse del cosmo, trionfo sulle avversità, rinascita. Risonanza con: *Liberacorpus*, *Diffindo*, *Persigno*. |
+| **ᛈ** | **Perthr** | **14ª** ($14 \rightarrow 5$) | 2° Aett (Verdandi) | **5** | **5** | Pentagono regolare | Labradorite / Onice | Il fato imperscrutabile, scrigno dei segreti, estrazione della memoria, mistero. Risonanza con: *Levicorpus*, *Immobilus*, *Deleo*, *Revelio*. |
+| **ᛉ** | **Algiz** | **15ª** ($15 \rightarrow 6$) | 2° Aett (Verdandi) | **6** | **4** | Esagono regolare | Ossidiana / Protezione | Scudo arcano inviolabile, corna dell'alce, baluardo sacro, difesa pura. Risonanza con: *Protego*, *Verdimillious*, *Surge et expandi*. |
+| **ᛋ** | **Sowilo** | **16ª** ($16 \rightarrow 7$) | 2° Aett (Verdandi) | **7** | **3** | Ettagono regolare | Topazio / Luce | Sole trionfante, vittoria della ragione, scintilla elettrica, fulmine, lucidità. Risonanza con: *Stupeficium*, *Vulnera Sanentur*, *Exsequor*. |
+| **ᛏ** | **Teiwaz** | **17ª** ($17 \rightarrow 8$) | 3° Aett (Skuld) | **8** | **2** | Ottagono regolare | Onice / Acciaio | La spada della giustizia di Tyr, cielo titanico, forza di volontà, maledizione. Risonanza con: *Lumos*, *Alohomora*, *Plasma*, *Exstinguo*. |
+| **ᛒ** | **Berkana** | **18ª** ($18 \rightarrow 9$) | 3° Aett (Skuld) | **9** | **1** | Ellisse | Ambra / Smeraldo | La betulla, terra viva (Maponos), fertilità, rigenerazione vegetale, germoglio. Risonanza con: *Flipendo*, *Petrificus Totalus*, *Glacius*. |
+| **ᛖ** | **Ehwaz** | **19ª** ($19 \rightarrow 1$) | 3° Aett (Skuld) | **1** | **9** | Circonferenza | Quarzo / Ambra | Il destriero sacro, cinetica animale, svolta repentina, simbiosi rapida. Risonanza con: *Incendio*, *Reparo*, *Snufflifors*, *Signo*. |
+| **ᛗ** | **Mannaz** | **20ª** ($20 \rightarrow 2$) | 3° Aett (Skuld) | **2** | **8** | Angolo / Linea | Topazio / Zaffiro | La mente umana, coscienza razionale, intelletto, scienza, cooperazione. Risonanza con: *Expelliarmus*, *Innerva*, *Riddikulus*. |
+| **ᛚ** | **Laguz** | **21ª** ($21 \rightarrow 3$) | 3° Aett (Skuld) | **3** | **7** | Triangolo equilatero | Acquamarina / Acqua | Spirito Arausio, acque dell'abisso, trappola liquida, confinamento insidioso. Risonanza con: *Arresto Momentum*, *Orchideus*, *Incipio*, *Iungo*. |
+| **ᛜ** | **Inguz** | **22ª** ($22 \rightarrow 4$) | 3° Aett (Skuld) | **4** | **6** | Quadrato | Topazio / Opale | Luce primordiale dell'anima, portale interdimensionale, varco aureo, ponte. Risonanza con: *Liberacorpus*, *Diffindo*, *Persigno*, *Colloportus*. |
+| **ᛟ** | **Othila** | **23ª** ($23 \rightarrow 5$) | 3° Aett (Skuld) | **5** | **5** | Pentagono regolare | Ossidiana / Onice | La soglia della dimora, patrimonio avito, radici familiari, guardiano. Risonanza con: *Levicorpus*, *Immobilus*, *Deleo*, *Dominium Evoco*. |
+| **ᛞ** | **Dagaz** | **24ª** ($24 \rightarrow 6$) | 3° Aett (Skuld) | **6** | **4** | Esagono regolare | Agata / Molibdenite | Spirito Sulis, fuoco vivente, giorno, trasformazione all'alba, incendio risanatore. Risonanza con: *Protego*, *Verdimillious*, *Adultero*. |
+| **○** | **Runa Bianca** | **Speciale** | Centro del Wyrd | **5** | **5** | Pentagono regolare | Ciottolo levigato | Assenza trasfigurata in potenza, il vuoto fecondo, illusione sensoriale totale. Risonanza con: *Perceptio Intimo*, *Levicorpus*, *Deleo*. |

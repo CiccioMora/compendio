@@ -134,7 +134,7 @@
             <span>📅</span> Filtro Anno di Corso:
           </label>
           <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Tutti gli Anni (154)</option>
+            <option value="ALL">Tutti gli Incantesimi & Rune (179)</option>
             <option value="1">I Anno — Fondamenti & Cinetica (16)</option>
             <option value="2">II Anno — Fatture & Inanimati (13)</option>
             <option value="3">III Anno — Gelo & Locomozione (14)</option>
@@ -143,6 +143,7 @@
             <option value="6">VI Anno — Sesto Anno: Maledizioni, Trasfigurazione & Incantesimi (38)</option>
             <option value="7">VII Anno — Settimo Anno: Incantesimi Superiori, Difesa & Arti Oscure (24)</option>
             <option value="0">Altri — Formule Senza Riferimento d'Anno (21)</option>
+            <option value="8">ᚠ Antiche Rune — Alfabeto Futhark & Glifi Sacri (25)</option>
           </select>
         </div>
 
@@ -198,7 +199,7 @@
           </div>
           <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
             <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (154)
+              Tutti (179)
             </button>
             <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               I Anno (16)
@@ -223,6 +224,9 @@
             </button>
             <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               Altri (21)
+            </button>
+            <button data-year="8" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-indigo-950 text-indigo-300 border border-indigo-700/60 hover:bg-indigo-900">
+              ᚠ Antiche Rune (25)
             </button>
           </div>
         </div>
@@ -406,6 +410,17 @@
             <p id="modalArithNotes" class="text-[11px] text-slate-400 mt-2 italic leading-relaxed">
               <!-- Note arimantiche approfondite -->
             </p>
+          </div>
+
+          <!-- Runic Alphabet Association Block -->
+          <div class="text-xs space-y-1.5 bg-indigo-950/40 p-3 rounded-lg border border-indigo-700/40">
+            <div class="text-indigo-300 font-semibold flex items-center justify-between">
+              <span>ᛟ Corrispondenza nell'Alfabeto Runico (Valenza = Posizione):</span>
+              <span id="modalRunePosition" class="font-code text-amber-300 font-bold"></span>
+            </div>
+            <div id="modalRuneAssociation" class="font-magic text-slate-200 text-sm">
+              <!-- Rune associate -->
+            </div>
           </div>
         </div>
 

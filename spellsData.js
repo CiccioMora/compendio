@@ -1,4 +1,4 @@
-// spellsData.js - Archivio Completo dei 154 Incantesimi suddiviso per Anni (I - VII Anno e Altri)
+// spellsData.js - Archivio Completo dei 179 Incantesimi e Rune dell'Antico Futhark
 // Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR, Trattati Didattici e Codex Arithmantiae
 
 const SPELLS_DATA = [
@@ -21,7 +21,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "lumos",
@@ -42,7 +43,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 8,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 17 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 17 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "innerva",
@@ -63,7 +65,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 38 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 38 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "reinnerva",
@@ -84,7 +87,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "reparo",
@@ -105,7 +109,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "incendio",
@@ -126,7 +131,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "alohomora",
@@ -147,7 +153,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "colloportus",
@@ -168,7 +175,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "expelliarmus",
@@ -189,7 +197,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "wingardium-leviosa",
@@ -210,7 +219,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 4,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 85 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 85 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "levicorpus",
@@ -231,7 +241,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 50 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 50 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "diffindo",
@@ -252,7 +263,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 4,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "flipendo",
@@ -273,7 +285,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "stupeficium",
@@ -294,7 +307,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 7,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 7 volte."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 7 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "protego",
@@ -315,7 +329,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 6,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "verdimillious",
@@ -336,7 +351,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 6,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 69 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 69 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "chartanimus",
@@ -357,7 +373,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "immobilus",
@@ -378,7 +395,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "fumos",
@@ -399,7 +417,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 2,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 20 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 20 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "gommosus",
@@ -420,7 +439,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "arresto-momentum",
@@ -441,7 +461,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 66 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 66 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "homorphus",
@@ -462,7 +483,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "peskipiksi-pesternomi",
@@ -483,7 +505,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 105 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 105 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "petrificus-totalus",
@@ -504,7 +527,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 72 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 72 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "acutus",
@@ -525,7 +549,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 13 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 13 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "incarcifors",
@@ -546,7 +571,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 61 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 61 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "vermiculus",
@@ -567,7 +593,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "malum",
@@ -588,7 +615,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "snufflifors",
@@ -609,7 +637,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "riddikulus",
@@ -630,7 +659,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 47 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 47 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "glacius",
@@ -651,7 +681,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "bagaglius",
@@ -672,7 +703,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "mobiliarbus",
@@ -693,7 +725,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 4,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "orbis",
@@ -714,7 +747,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "scourgify",
@@ -735,7 +769,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 6,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 51 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 51 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "everte-statim",
@@ -756,7 +791,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 4,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "locomotor",
@@ -777,7 +813,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "mobilicorpus",
@@ -798,7 +835,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 8,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 62 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 62 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "circumrota",
@@ -819,7 +857,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 4,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "feraverto",
@@ -840,7 +879,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 47 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 47 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "inferacus",
@@ -861,7 +901,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "lapifors",
@@ -882,7 +923,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "avifors",
@@ -903,7 +945,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "farfallus-explodit",
@@ -924,7 +967,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 3,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 75 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 75 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "orchideus",
@@ -945,7 +989,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "avis",
@@ -966,7 +1011,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 6,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "conjunctivitus",
@@ -987,7 +1033,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "melofors",
@@ -1008,7 +1055,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "incarceramus",
@@ -1029,7 +1077,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 8,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "epoximise",
@@ -1050,7 +1099,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "episkey",
@@ -1071,7 +1121,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "salvio-hexia",
@@ -1092,7 +1143,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 8,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "ferula",
@@ -1113,7 +1165,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "lacarnum-inflamare",
@@ -1134,7 +1187,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 72 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 72 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "glisseo",
@@ -1155,7 +1209,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "duro",
@@ -1176,7 +1231,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 22 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 22 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "cicatris",
@@ -1197,7 +1253,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "relascio",
@@ -1218,7 +1275,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "flagramus",
@@ -1239,7 +1297,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 8,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 35 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 35 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "expulso",
@@ -1260,7 +1319,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 4,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 31 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 31 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "alarte-ascenderai",
@@ -1281,7 +1341,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 64 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 64 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "draconifors",
@@ -1302,7 +1363,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 59 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 59 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "piertotum-locomotor",
@@ -1323,7 +1385,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 2,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 92 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 92 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "tarantallegra",
@@ -1344,7 +1407,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 4,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "furunculus",
@@ -1365,7 +1429,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 3,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "reducto",
@@ -1386,7 +1451,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 5,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 5 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 5 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "deprimo",
@@ -1407,7 +1473,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 8,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "lumos-solem",
@@ -1428,7 +1495,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "confringo",
@@ -1449,7 +1517,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 2,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "bombarda",
@@ -1470,7 +1539,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 2,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 29 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 29 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "rictusempra",
@@ -1491,7 +1561,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 8,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "vulnera-sanentur",
@@ -1512,7 +1583,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 7,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 61 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 7 volte."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 61 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 7 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "stalker-convocatus",
@@ -1533,7 +1605,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 57 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 57 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "morsmordre",
@@ -1554,7 +1627,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 57 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 57 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "densaugeo",
@@ -1575,7 +1649,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "languelingua",
@@ -1596,7 +1671,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "monstrum",
@@ -1617,7 +1693,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "titillando",
@@ -1638,7 +1715,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 8,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "exulcero",
@@ -1659,7 +1737,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 4,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "emineo",
@@ -1680,7 +1759,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "emineo-puteus",
@@ -1701,7 +1781,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "geminio",
@@ -1722,7 +1803,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "silencio",
@@ -1743,7 +1825,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "obliterato",
@@ -1764,7 +1847,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "rallegrante",
@@ -1785,7 +1869,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 100 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 100 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "carpe-retractum",
@@ -1806,7 +1891,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "dismundo",
@@ -1827,7 +1913,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "descendo",
@@ -1848,7 +1935,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 6,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "deletrius",
@@ -1869,7 +1957,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "confundo",
@@ -1890,7 +1979,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 2,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 38 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volta/e."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 38 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volta/e.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "adduco-maxima",
@@ -1911,7 +2001,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "inflatus",
@@ -1932,7 +2023,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "reparifarge",
@@ -1953,7 +2045,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "expecto-patronum",
@@ -1974,7 +2067,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 71 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 71 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "balbutio",
@@ -1995,7 +2089,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "sectumsempra",
@@ -2016,7 +2111,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "flagrante",
@@ -2037,7 +2133,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "locomotor-wibbly",
@@ -2058,7 +2155,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 73 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 73 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "locomotor-mortis",
@@ -2079,7 +2177,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 76 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 76 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "mucus-ad-nauseam",
@@ -2100,7 +2199,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 3,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volta/e."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volta/e.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "dolohoferio",
@@ -2121,7 +2221,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "infelicita-eterna",
@@ -2142,7 +2243,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 150 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 150 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "entomorphis",
@@ -2163,7 +2265,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 62 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 62 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "crinus-muto",
@@ -2184,7 +2287,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "furitum",
@@ -2205,7 +2309,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "paperante",
@@ -2226,7 +2331,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "piscofors",
@@ -2247,7 +2353,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "pullus",
@@ -2268,7 +2375,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 20 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 20 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "transatio-objecto",
@@ -2289,7 +2397,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 61 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 61 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "avada-kedavra",
@@ -2310,7 +2419,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "rotas-sator",
@@ -2331,7 +2441,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 5,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 113 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 5 volta/e."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 113 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 5 volta/e.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "obliviate",
@@ -2352,7 +2463,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "reverto",
@@ -2373,7 +2485,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "capio-memoriam",
@@ -2394,7 +2507,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "abscondas",
@@ -2415,7 +2529,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 6,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 24 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volta/e."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 24 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volta/e.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "quae-reversa",
@@ -2436,7 +2551,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 6,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 51 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volta/e."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 51 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volta/e.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "fermo",
@@ -2457,7 +2573,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 3,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volta/e."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volta/e.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "cave-inimicum",
@@ -2478,7 +2595,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 59 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 59 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "partis-temporus",
@@ -2499,7 +2617,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 66 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 66 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "portus",
@@ -2520,7 +2639,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "proteus",
@@ -2541,7 +2661,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "fidelius",
@@ -2562,7 +2683,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "animaleus-nobodyx",
@@ -2583,7 +2705,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "patronus-messaggero",
@@ -2604,7 +2727,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 69 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 69 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "in-fine-laqueo",
@@ -2625,7 +2749,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 65 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 65 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "crucio",
@@ -2646,7 +2771,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "imperio",
@@ -2667,7 +2793,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "fiendfyre",
@@ -2688,7 +2815,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "prior-incantatem",
@@ -2709,7 +2837,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Trattato in Codex Arithmantiae, Liber Sextus (Cap. VII: Le bacchette e l'aritmologia). Valenza 5 (somma 77 ridotta a 5). Valenza opposta: 5. Figura per Signo: Pentagono regolare."
+    "noteAritmantiche": "Trattato in Codex Arithmantiae, Liber Sextus (Cap. VII: Le bacchette e l'aritmologia). Valenza 5 (somma 77 ridotta a 5). Valenza opposta: 5. Figura per Signo: Pentagono regolare.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "nodum-solvo",
@@ -2730,7 +2859,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Trattato in Codex Arithmantiae, Liber Septimus (Cap. VII: La rottura di un sigillo). Valenza 6 (somma 42 ridotta a 6). Valenza opposta: 4. Figura per Signo: Esagono regolare."
+    "noteAritmantiche": "Trattato in Codex Arithmantiae, Liber Septimus (Cap. VII: La rottura di un sigillo). Valenza 6 (somma 42 ridotta a 6). Valenza opposta: 4. Figura per Signo: Esagono regolare.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "deminatio-gravitas",
@@ -2751,7 +2881,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 79 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 79 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "magnes-lathos-addicis",
@@ -2772,7 +2903,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 3,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 75 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volta/e."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 75 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volta/e.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "protegis-hoc-incantementum",
@@ -2793,7 +2925,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 116 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 116 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volta/e.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "finite-incantatem",
@@ -2814,7 +2947,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 73 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 73 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "plasma",
@@ -2835,7 +2969,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 17 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 17 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "coerceo",
@@ -2856,7 +2991,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "finge",
@@ -2877,7 +3013,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca"
   },
   {
     "id": "adultero",
@@ -2898,7 +3035,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "dominum",
@@ -2919,7 +3057,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 35 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 35 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "muffliato",
@@ -2940,7 +3079,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 4,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "phi-revelio",
@@ -2961,7 +3101,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 8,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 65 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 65 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)"
   },
   {
     "id": "phi-porta",
@@ -2982,7 +3123,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "signo",
@@ -3003,7 +3145,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "evanesco",
@@ -3024,7 +3167,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "ivanesco",
@@ -3045,7 +3189,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 3,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 34 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "detecto",
@@ -3066,7 +3211,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "fersigno",
@@ -3087,7 +3233,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "plansigno",
@@ -3108,7 +3255,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 44 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "significo",
@@ -3129,7 +3277,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
   },
   {
     "id": "protego-totalum",
@@ -3150,7 +3299,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 1,
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
   },
   {
     "id": "obstringo-circulum",
@@ -3171,7 +3321,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 7,
     "maxRipetizioni": 3,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 84 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte."
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 84 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volte.",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)"
   },
   {
     "id": "muto",
@@ -3192,7 +3343,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 15 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
   },
   {
     "id": "transfiguro",
@@ -3213,7 +3365,8 @@ const SPELLS_DATA = [
     "valenzaOpposta": 6,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)"
   },
   {
     "id": "verto",
@@ -3234,10 +3387,707 @@ const SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 26 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 26 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
+  },
+  {
+    "id": "runa-fehu",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "1ª",
+    "posizioneNum": 1,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "1ª Posizione (con Hagalaz e Teiwaz)",
+    "nome": "Runa Fehu (ᚠ)",
+    "formula": "ᚠ Fehu",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Incisione lineare verso l'alto con due aste oblique ascendenti a destra. Tracciabile su materia con Sìgno o nell'etere con Persìgno.",
+    "movimentoSvg": "M 50,125 L 50,25 M 50,55 L 95,30 M 50,85 L 90,60",
+    "descrizione": "1ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 1. Dominio: Inizio, creazione ex-nihilo, energia vitale cosmica, lavoro, ricchezza mobile, spirito primigenio. Corrispondenza di Canone: la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico (Posizione 1 = Valenza 1).",
+    "etimologia": "Dal proto-germanico *fehu (bestiame, ricchezza, energia creatrice del cosmo).",
+    "valenza": 1,
+    "sommaLettere": 1,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Circonferenza (Unità / Origine / Acqua)",
+    "pietraConsacrata": "Topazio / Luce",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 1ª. Valenza Magica: 1 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 1ª Posizione (con Hagalaz e Teiwaz). Pietra consacrata: Topazio / Luce. Incantesimi di Hogwarts in risonanza: Incendio (1), Reparo (1), Signo (1), Coerceo (1), Colligo (1)."
+  },
+  {
+    "id": "runa-uruz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "2ª",
+    "posizioneNum": 2,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "2ª Posizione (con Nauthiz e Berkana)",
+    "nome": "Runa Uruz (ᚢ)",
+    "formula": "ᚢ Uruz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale sinistra scendente, fendente obliquo a destra e seconda asta verticale scendente più breve.",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 95,50 L 95,125",
+    "descrizione": "2ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 2. Dominio: Incremento, potenza primordiale del toro (uro), salute, vigore muscolare, accrescimento strutturale, tenacia. Corrispondenza di Canone: Posizione 2 = Valenza 2.",
+    "etimologia": "Dal proto-germanico *ūruz (uro, toro primordiale selvaggio, forza tellurica).",
+    "valenza": 2,
+    "sommaLettere": 2,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Angolo / Linea (Dualismo / Forza)",
+    "pietraConsacrata": "Ambra / Quarzo",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 2ª. Valenza Magica: 2 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 2ª Posizione (con Nauthiz e Berkana). Pietra consacrata: Ambra / Quarzo. Incantesimi di Hogwarts in risonanza: Expelliarmus (2), Innerva (2), Fumos (2), Riddikulus (2)."
+  },
+  {
+    "id": "runa-thurisaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "3ª",
+    "posizioneNum": 3,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "3ª Posizione (con Isa ed Ehwaz)",
+    "nome": "Runa Thurisaz (ᚦ)",
+    "formula": "ᚦ Thurisaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale centrale con spina triangolare acuta protesa verso destra a metà altezza.",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,50 L 95,75 L 50,100",
+    "descrizione": "3ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 3. Dominio: Spina, dolore lacerante, caos, abbattimento di ostacoli, follia difensiva, liberazione violenta. Corrispondenza di Canone: Posizione 3 = Valenza 3.",
+    "etimologia": "Dal proto-germanico *þurisaz (gigante di ghiaccio, spina acuta).",
+    "valenza": 3,
+    "sommaLettere": 3,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Triangolo equilatero (Caos / Spina)",
+    "pietraConsacrata": "Agata / Ossidiana",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 3ª. Valenza Magica: 3 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 3ª Posizione (con Isa ed Ehwaz). Pietra consacrata: Agata / Ossidiana. Incantesimi di Hogwarts in risonanza: Arresto Momentum (3), Orchideus (3), Incipio (3), Iungo (3)."
+  },
+  {
+    "id": "runa-ansuz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "4ª",
+    "posizioneNum": 4,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "4ª Posizione (con Jera e Mannaz)",
+    "nome": "Runa Ansuz (ᚨ)",
+    "formula": "ᚨ Ansuz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale principale con due segmenti obliqui discendenti sul lato destro.",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,45 L 95,70 M 50,75 L 95,100",
+    "descrizione": "4ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 4. Dominio: La bocca, il verbo sacro, la parola incantata, la formula vocale, l'ordine cosmico, la saggezza di Odino. Corrispondenza di Canone: Posizione 4 = Valenza 4.",
+    "etimologia": "Dal proto-germanico *ansuz (divinità Asir, soffio vitale, verbo sacro).",
+    "valenza": 4,
+    "sommaLettere": 4,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Quadrato (Risoluzione / Immanenza)",
+    "pietraConsacrata": "Opale / Aria",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 4ª. Valenza Magica: 4 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 4ª Posizione (con Jera e Mannaz). Pietra consacrata: Opale / Aria. Incantesimi di Hogwarts in risonanza: Liberacorpus (4), Diffindo (4), Persigno (4), Stigma Exsequor (4)."
+  },
+  {
+    "id": "runa-raido",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "5ª",
+    "posizioneNum": 5,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "5ª Posizione (con Eihwaz e Laguz)",
+    "nome": "Runa Raido (ᚱ)",
+    "formula": "ᚱ Raido",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale, ansa superiore ad angolo e zampa diagonale discendente a destra.",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 90,50 L 50,75 M 50,75 L 95,125",
+    "descrizione": "5ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 5. Dominio: La ruota, il viaggio, il sentiero, la cinetica, il messaggio, il ciclo senza fine dello spazio. Runa speculare autonoma su valenza 5. Corrispondenza di Canone: Posizione 5 = Valenza 5.",
+    "etimologia": "Dal proto-germanico *raidō (cavalcata, ruota del carro, viaggio).",
+    "valenza": 5,
+    "sommaLettere": 5,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Pentagono regolare (Moto Perpetuo / Aria)",
+    "pietraConsacrata": "Azzurrite / Etere",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 5ª. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 5ª Posizione (con Eihwaz e Laguz). Pietra consacrata: Azzurrite / Etere. Incantesimi di Hogwarts in risonanza: Levicorpus (5), Immobilus (5), Finge (5), Deleo (5), Dominium Evoco (5)."
+  },
+  {
+    "id": "runa-kenaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "6ª",
+    "posizioneNum": 6,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "6ª Posizione (con Perthr e Inguz)",
+    "nome": "Runa Kenaz (ᚲ)",
+    "formula": "ᚲ Kenaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Cuspide angolare aperta verso destra (fendente discendente poi ascendente).",
+    "movimentoSvg": "M 95,35 L 50,75 L 95,115",
+    "descrizione": "6ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 6. Dominio: Fiaccola viva, fiamma controllata di purificazione, guarigione delle ferite, ristoro spirituale, luce rivelatrice. Corrispondenza di Canone: Posizione 6 = Valenza 6.",
+    "etimologia": "Dal proto-germanico *kaunan (torcia, fiaccola, calore benefico).",
+    "valenza": 6,
+    "sommaLettere": 6,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Esagono regolare (Equilibrio / Armonia)",
+    "pietraConsacrata": "Agata / Molibdenite",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 6ª. Valenza Magica: 6 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 6ª Posizione (con Perthr e Inguz). Pietra consacrata: Agata / Molibdenite. Incantesimi di Hogwarts in risonanza: Protego (6), Verdimillious (6), Adultero (6), Surge et expandi (6)."
+  },
+  {
+    "id": "runa-gebo",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "7ª",
+    "posizioneNum": 7,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "7ª Posizione (con Algiz e Othila)",
+    "nome": "Runa Gebo (ᚷ)",
+    "formula": "ᚷ Gebo",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Croce diagonale perfetta a X (intersezione al centro).",
+    "movimentoSvg": "M 40,30 L 110,120 M 110,30 L 40,120",
+    "descrizione": "7ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 7. Dominio: Il dono, l'unione, l'incontro, la generosità, la reciprocità, l'equilibrio simmetrico. Fondamento del Trivio di Compositum con Isa. Corrispondenza di Canone: Posizione 7 = Valenza 7.",
+    "etimologia": "Dal proto-germanico *gebō (dono, scambio ospitale, patto sacro).",
+    "valenza": 7,
+    "sommaLettere": 7,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Dono)",
+    "pietraConsacrata": "Ambra / Quarzo",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 7ª. Valenza Magica: 7 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 7ª Posizione (con Algiz e Othila). Pietra consacrata: Ambra / Quarzo. Incantesimi di Hogwarts in risonanza: Stupeficium (7), Vulnera Sanentur (7), Exsequor (7), Invenio (7)."
+  },
+  {
+    "id": "runa-wunjo",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "8ª",
+    "posizioneNum": 8,
+    "aett": "1° Aett (Urd)",
+    "thootPos": "8ª Posizione (con Sowilo e Dagaz)",
+    "nome": "Runa Wunjo (ᚹ)",
+    "formula": "ᚹ Wunjo",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale sinistra con triangolo superiore acuto proteso verso destra.",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 95,55 L 50,80",
+    "descrizione": "8ª Runa dell'Alfabeto Runico (1° Aett di Urd). Posizione alfabetica: 8. Dominio: Gioia profonda, benessere, armonia spirituale, preghiera, celebrazione, assenza di sofferenza. Corrispondenza di Canone: Posizione 8 = Valenza 8.",
+    "etimologia": "Dal proto-germanico *wunjō (gioia, delizia, armonia del cuore).",
+    "valenza": 8,
+    "sommaLettere": 8,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Ottagono regolare (Infinito / Fuoco)",
+    "pietraConsacrata": "Topazio / Opale",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 8ª. Valenza Magica: 8 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 8ª Posizione (con Sowilo e Dagaz). Pietra consacrata: Topazio / Opale. Incantesimi di Hogwarts in risonanza: Lumos (8), Alohomora (8), Plasma (8), Exstinguo (8), Occulto (8)."
+  },
+  {
+    "id": "runa-hagalaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "9ª",
+    "posizioneNum": 9,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "1ª Posizione (con Fehu e Teiwaz)",
+    "nome": "Runa Hagalaz (ᚺ)",
+    "formula": "ᚺ Hagalaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Due aste verticali parallele congiunte da un fendente diagonale discendente verso destra.",
+    "movimentoSvg": "M 50,25 L 50,125 M 100,25 L 100,125 M 50,85 L 100,60",
+    "descrizione": "9ª Runa dell'Alfabeto Runico (apre il 2° Aett di Verdandi). Posizione alfabetica: 9. Dominio: Grandine, tempesta aerea, rottura di schemi, forze mutevoli del destino, mutamento inesorabile. Runa dell'Elemento Aria nel Codex. Corrispondenza di Canone: Posizione 9 = Valenza 9.",
+    "etimologia": "Dal proto-germanico *haglaz (grandine, catastrofe celeste feconda).",
+    "valenza": 9,
+    "sommaLettere": 9,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Ellisse (Reincarnazione / Tempesta)",
+    "pietraConsacrata": "Opale / Aria",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 9ª. Valenza Magica: 9 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 1ª Posizione (con Fehu e Teiwaz). Pietra consacrata: Opale / Aria. Incantesimi di Hogwarts in risonanza: Flipendo (9), Petrificus Totalus (9), Glacius (9), Compositum (9)."
+  },
+  {
+    "id": "runa-nauthiz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "10ª",
+    "posizioneNum": 10,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "2ª Posizione (con Uruz e Berkana)",
+    "nome": "Runa Nauthiz (ᚾ)",
+    "formula": "ᚾ Nauthiz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale centrale attraversata diagonalmente da un segmento fendente inclinato.",
+    "movimentoSvg": "M 75,25 L 75,125 M 45,60 L 105,90",
+    "descrizione": "10ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 10 (riduzione teosofica: 1+0 = 1). Dominio: Necessità ineluttabile, vincolo stoico, controllo delle emozioni, carattere ferreo, salvezza nella prova. Corrispondenza di Canone: Posizione 10 -> Valenza 1.",
+    "etimologia": "Dal proto-germanico *naudiz (bisogno, necessità stringente, costrizione).",
+    "valenza": 1,
+    "sommaLettere": 10,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Circonferenza (Unità / Vincolo)",
+    "pietraConsacrata": "Ossidiana / Vincolo",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 10ª. Valenza Magica: 1 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 2ª Posizione (con Uruz e Berkana). Pietra consacrata: Ossidiana / Vincolo. Incantesimi di Hogwarts in risonanza: Incendio (1), Reparo (1), Signo (1), Coerceo (1), Colligo (1)."
+  },
+  {
+    "id": "runa-isa",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "11ª",
+    "posizioneNum": 11,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "3ª Posizione (con Thurisaz ed Ehwaz)",
+    "nome": "Runa Isa (ᛁ)",
+    "formula": "ᛁ Isa",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Singola asta verticale retta scendente, perfettamente pura.",
+    "movimentoSvg": "M 75,25 L 75,125",
+    "descrizione": "11ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 11 (riduzione teosofica: 1+1 = 2). Dominio: Ghiaccio, stasi molecolare, immobilità, arresto del tempo e del moto, freddo, notte, luna. Asse centrale di Compositum. Corrispondenza di Canone: Posizione 11 -> Valenza 2.",
+    "etimologia": "Dal proto-germanico *īsaz (ghiaccio, stasi cristallina).",
+    "valenza": 2,
+    "sommaLettere": 11,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Angolo / Linea Retta (Stasi / Gelo)",
+    "pietraConsacrata": "Acquamarina / Ghiaccio",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 11ª. Valenza Magica: 2 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 3ª Posizione (con Thurisaz ed Ehwaz). Pietra consacrata: Acquamarina / Ghiaccio. Incantesimi di Hogwarts in risonanza: Expelliarmus (2), Innerva (2), Fumos (2), Riddikulus (2)."
+  },
+  {
+    "id": "runa-jera",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "12ª",
+    "posizioneNum": 12,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "4ª Posizione (con Ansuz e Mannaz)",
+    "nome": "Runa Jera (ᛃ)",
+    "formula": "ᛃ Jera",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Due punte angolari contrapposte che non si toccano, orientate a vortice orario.",
+    "movimentoSvg": "M 50,45 L 75,25 L 100,45 M 50,105 L 75,125 L 100,105",
+    "descrizione": "12ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 12 (riduzione teosofica: 1+2 = 3). Dominio: Ciclo delle stagioni, raccolto fecondo, giustizia del tempo, rotazione, pazienza. Corrispondenza di Canone: Posizione 12 -> Valenza 3.",
+    "etimologia": "Dal proto-germanico *jēran (anno, buon raccolto, ciclo stagionale).",
+    "valenza": 3,
+    "sommaLettere": 12,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Triangolo equilatero (Tempo Ciclico)",
+    "pietraConsacrata": "Quarzo / Terra",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 12ª. Valenza Magica: 3 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 4ª Posizione (con Ansuz e Mannaz). Pietra consacrata: Quarzo / Terra. Incantesimi di Hogwarts in risonanza: Arresto Momentum (3), Orchideus (3), Incipio (3), Iungo (3)."
+  },
+  {
+    "id": "runa-eihwaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "13ª",
+    "posizioneNum": 13,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "5ª Posizione (con Raido e Laguz)",
+    "nome": "Runa Eihwaz (ᛇ)",
+    "formula": "ᛇ Eihwaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale centrale con uncino superiore verso sinistra e uncino inferiore verso destra.",
+    "movimentoSvg": "M 50,40 L 75,25 L 75,125 L 100,110",
+    "descrizione": "13ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 13 (riduzione teosofica: 1+3 = 4). Dominio: L'albero del tasso (Yggdrasil), asse del cosmo, trionfo sulle difficoltà, resurrezione, protezione magica millenaria. Corrispondenza di Canone: Posizione 13 -> Valenza 4.",
+    "etimologia": "Dal proto-germanico *eihwaz (albero del tasso, asse sacro del mondo).",
+    "valenza": 4,
+    "sommaLettere": 13,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Quadrato (Albero Cosmico / Stabilità)",
+    "pietraConsacrata": "Ambra / Quarzo",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 13ª. Valenza Magica: 4 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 5ª Posizione (con Raido e Laguz). Pietra consacrata: Ambra / Quarzo. Incantesimi di Hogwarts in risonanza: Liberacorpus (4), Diffindo (4), Persigno (4), Stigma Exsequor (4)."
+  },
+  {
+    "id": "runa-perthr",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "14ª",
+    "posizioneNum": 14,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "6ª Posizione (con Kenaz e Inguz)",
+    "nome": "Runa Perthr (ᛈ)",
+    "formula": "ᛈ Perthr",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale sinistra con profilo ad ansa angolare aperta verso destra.",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 85,45 L 65,75 L 85,105 L 50,125",
+    "descrizione": "14ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 14 (riduzione teosofica: 1+4 = 5). Dominio: Il fato, il bussolotto dei dadi, il segreto celato, l'estrazione della memoria, la profezia, la chiusura arcana. Corrispondenza di Canone: Posizione 14 -> Valenza 5.",
+    "etimologia": "Dal proto-germanico *perþr- (bussolotto oracolare, mistero celato, fato).",
+    "valenza": 5,
+    "sommaLettere": 14,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Pentagono regolare (Mistero / Destino)",
+    "pietraConsacrata": "Labradorite / Onice",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 14ª. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 6ª Posizione (con Kenaz e Inguz). Pietra consacrata: Labradorite / Onice. Incantesimi di Hogwarts in risonanza: Levicorpus (5), Immobilus (5), Deleo (5), Dominium Evoco (5)."
+  },
+  {
+    "id": "runa-algiz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "15ª",
+    "posizioneNum": 15,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "7ª Posizione (con Gebo e Othila)",
+    "nome": "Runa Algiz (ᛉ)",
+    "formula": "ᛉ Algiz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale eretta con due rami ascendenti divaricati simmetricamente in alto (corna d'alce).",
+    "movimentoSvg": "M 75,25 L 75,125 M 40,35 L 75,65 L 110,35",
+    "descrizione": "15ª Runa dell'Alfabeto Runico (2° Aett di Verdandi). Posizione alfabetica: 15 (riduzione teosofica: 1+5 = 6). Dominio: Baluardo di difesa inviolabile, scudo arcano assoluto, purezza incontaminata, guardia, allontanamento del pericolo. Corrispondenza di Canone: Posizione 15 -> Valenza 6 (perfetta risonanza con Protego!).",
+    "etimologia": "Dal proto-germanico *algiz (alce, protezione sacra, difesa inviolabile).",
+    "valenza": 6,
+    "sommaLettere": 15,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Esagono regolare (Scudo / Purezza)",
+    "pietraConsacrata": "Ossidiana / Protezione",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 15ª. Valenza Magica: 6 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 7ª Posizione (con Gebo e Othila). Pietra consacrata: Ossidiana / Protezione. Incantesimi di Hogwarts in risonanza: Protego (6), Verdimillious (6), Adultero (6), Surge et expandi (6)."
+  },
+  {
+    "id": "runa-sowilo",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "16ª",
+    "posizioneNum": 16,
+    "aett": "2° Aett (Verdandi)",
+    "thootPos": "8ª Posizione (con Wunjo e Dagaz)",
+    "nome": "Runa Sowilo (ᛋ)",
+    "formula": "ᛋ Sowilo",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Tracciato a saetta o fulmine a tre tratti diagonali a zigzag.",
+    "movimentoSvg": "M 95,30 L 55,55 L 95,95 L 55,120",
+    "descrizione": "16ª Runa dell'Alfabeto Runico (chiude il 2° Aett di Verdandi). Posizione alfabetica: 16 (riduzione teosofica: 1+6 = 7). Dominio: Sole trionfante, vittoria della ragione, scintilla elettrica, fulmine, lucidità e trionfo sulle tenebre. Corrispondenza di Canone: Posizione 16 -> Valenza 7 (risonanza con Stupeficium!).",
+    "etimologia": "Dal proto-germanico *sōwilō (sole splendente, fuoco celeste).",
+    "valenza": 7,
+    "sommaLettere": 16,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Ettagono regolare (Folgore / Sole)",
+    "pietraConsacrata": "Topazio / Luce",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 16ª. Valenza Magica: 7 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 8ª Posizione (con Wunjo e Dagaz). Pietra consacrata: Topazio / Luce. Incantesimi di Hogwarts in risonanza: Stupeficium (7), Vulnera Sanentur (7), Exsequor (7), Invenio (7)."
+  },
+  {
+    "id": "runa-teiwaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "17ª",
+    "posizioneNum": 17,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "1ª Posizione (con Fehu e Hagalaz)",
+    "nome": "Runa Teiwaz (ᛏ)",
+    "formula": "ᛏ Teiwaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale centrale sormontata da una cuspide a freccia verso l'alto (spada eretta).",
+    "movimentoSvg": "M 75,25 L 75,125 M 40,55 L 75,25 L 110,55",
+    "descrizione": "17ª Runa dell'Alfabeto Runico (apre il 3° Aett di Skuld). Posizione alfabetica: 17 (riduzione teosofica: 1+7 = 8). Dominio: Il dio del cielo Tyr, la spada della giustizia cosmica, forza di volontà inflessibile, maledizione, sacrificio d'onore. Corrispondenza di Canone: Posizione 17 -> Valenza 8.",
+    "etimologia": "Dal proto-germanico *tīwaz (dio Tyr, cielo splendente, giustizia infallibile).",
+    "valenza": 8,
+    "sommaLettere": 17,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Ottagono regolare (Volontà / Giustizia)",
+    "pietraConsacrata": "Onice / Acciaio",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 17ª. Valenza Magica: 8 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 1ª Posizione (con Fehu e Hagalaz). Pietra consacrata: Onice / Acciaio. Incantesimi di Hogwarts in risonanza: Lumos (8), Alohomora (8), Plasma (8), Exstinguo (8), Occulto (8)."
+  },
+  {
+    "id": "runa-berkana",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "18ª",
+    "posizioneNum": 18,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "2ª Posizione (con Uruz e Nauthiz)",
+    "nome": "Runa Berkana (ᛒ)",
+    "formula": "ᛒ Berkana",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale sinistra con due lobi triangolari convessi a destra (forma simile a B).",
+    "movimentoSvg": "M 50,25 L 50,125 M 50,25 L 90,50 L 50,75 L 90,100 L 50,125",
+    "descrizione": "18ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 18 (riduzione teosofica: 1+8 = 9). Dominio: La betulla sacra, la terra viva (Elemento Terra Codex), nascita, fertilità, rigenerazione vegetale, protezione della dimora. Corrispondenza di Canone: Posizione 18 -> Valenza 9.",
+    "etimologia": "Dal proto-germanico *berkanan (betulla, dea della fertilità e rinascita terrena).",
+    "valenza": 9,
+    "sommaLettere": 18,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Ellisse (Rigenerazione / Terra)",
+    "pietraConsacrata": "Ambra / Smeraldo",
+    "runeAssociate": "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 18ª. Valenza Magica: 9 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 2ª Posizione (con Uruz e Nauthiz). Pietra consacrata: Ambra / Smeraldo. Incantesimi di Hogwarts in risonanza: Flipendo (9), Petrificus Totalus (9), Glacius (9), Compositum (9)."
+  },
+  {
+    "id": "runa-ehwaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "19ª",
+    "posizioneNum": 19,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "3ª Posizione (con Thurisaz e Isa)",
+    "nome": "Runa Ehwaz (ᛖ)",
+    "formula": "ᛖ Ehwaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Due aste verticali congiunte in alto da due segmenti a V (forma simile a M).",
+    "movimentoSvg": "M 45,25 L 45,125 M 105,25 L 105,125 M 45,25 L 75,55 L 105,25",
+    "descrizione": "19ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 19 (riduzione teosofica: 1+9 = 10 -> 1). Dominio: Il cavallo destriero, avanzamento rapido, cinetica animale, svolta repentina, alleanza leale cavaliere-destriero. Corrispondenza di Canone: Posizione 19 -> Valenza 1.",
+    "etimologia": "Dal proto-germanico *ehwaz (cavallo, destriero sacro, compagno di viaggio).",
+    "valenza": 1,
+    "sommaLettere": 19,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Circonferenza (Cinetica / Cavallo)",
+    "pietraConsacrata": "Quarzo / Ambra",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 19ª. Valenza Magica: 1 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 3ª Posizione (con Thurisaz e Isa). Pietra consacrata: Quarzo / Ambra. Incantesimi di Hogwarts in risonanza: Incendio (1), Reparo (1), Snufflifors (1), Signo (1), Colligo (1)."
+  },
+  {
+    "id": "runa-mannaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "20ª",
+    "posizioneNum": 20,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "4ª Posizione (con Ansuz e Jera)",
+    "nome": "Runa Mannaz (ᛗ)",
+    "formula": "ᛗ Mannaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Due aste verticali parallele congiunte da una grande croce a X nella parte superiore.",
+    "movimentoSvg": "M 45,25 L 45,125 M 105,25 L 105,125 M 45,25 L 105,80 M 105,25 L 45,80",
+    "descrizione": "20ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 20 (riduzione teosofica: 2+0 = 2). Dominio: L'uomo, l'intelletto, la mente razionale, la coscienza umana, la cooperazione sociale, la scienza, l'equilibrio interiore. Corrispondenza di Canone: Posizione 20 -> Valenza 2.",
+    "etimologia": "Dal proto-germanico *mannaz (essere umano, uomo saggio, mente pensante).",
+    "valenza": 2,
+    "sommaLettere": 20,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Angolo / Linea (Mente Umana / Ragione)",
+    "pietraConsacrata": "Topazio / Zaffiro",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 20ª. Valenza Magica: 2 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 4ª Posizione (con Ansuz e Jera). Pietra consacrata: Topazio / Zaffiro. Incantesimi di Hogwarts in risonanza: Expelliarmus (2), Innerva (2), Fumos (2), Riddikulus (2)."
+  },
+  {
+    "id": "runa-laguz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "21ª",
+    "posizioneNum": 21,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "5ª Posizione (con Raido ed Eihwaz)",
+    "nome": "Runa Laguz (ᛚ)",
+    "formula": "ᛚ Laguz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Asta verticale scendente con ramo destro obliquo discendente dalla cima (amo d'acqua).",
+    "movimentoSvg": "M 60,25 L 60,125 M 60,25 L 100,65",
+    "descrizione": "21ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 21 (riduzione teosofica: 2+1 = 3). Dominio: Spirito Arausio, acqua primordiale, onde dell'oceano, abisso, trappola liquida, confinamento insidioso. Runa cardine delle gabbie con Colligo. Corrispondenza di Canone: Posizione 21 -> Valenza 3 (Elemento Acqua 1 nel Codex).",
+    "etimologia": "Dal proto-germanico *laguz (acqua, lago, marea, oceano profondo).",
+    "valenza": 3,
+    "sommaLettere": 21,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Triangolo equilatero (Acqua / Abisso)",
+    "pietraConsacrata": "Acquamarina / Acqua",
+    "runeAssociate": "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 21ª. Valenza Magica: 3 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 5ª Posizione (con Raido ed Eihwaz). Pietra consacrata: Acquamarina / Acqua. Incantesimi di Hogwarts in risonanza: Arresto Momentum (3), Orchideus (3), Incipio (3), Iungo (3)."
+  },
+  {
+    "id": "runa-inguz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "22ª",
+    "posizioneNum": 22,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "6ª Posizione (con Kenaz e Perthr)",
+    "nome": "Runa Inguz (ᛜ)",
+    "formula": "ᛜ Inguz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Rombo perfetto o losanga chiusa a quattro tratti obliqui simmetrici.",
+    "movimentoSvg": "M 75,35 L 110,75 L 75,115 L 40,75 Z",
+    "descrizione": "22ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 22 (riduzione teosofica: 2+2 = 4). Dominio: Luce primordiale dell'anima, seme della gestazione, portale magico, varco tra dimensioni, ponte arcano. Corrispondenza di Canone: Posizione 22 -> Valenza 4.",
+    "etimologia": "Dal proto-germanico *ingwaz (dio ancestrale Yngvi-Freyr, fecondità, luce vitale).",
+    "valenza": 4,
+    "sommaLettere": 22,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Quadrato / Rombo (Varco / Portale)",
+    "pietraConsacrata": "Topazio / Opale",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 22ª. Valenza Magica: 4 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 6ª Posizione (con Kenaz e Perthr). Pietra consacrata: Topazio / Opale. Incantesimi di Hogwarts in risonanza: Liberacorpus (4), Diffindo (4), Persigno (4), Stigma Exsequor (4)."
+  },
+  {
+    "id": "runa-othila",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "23ª",
+    "posizioneNum": 23,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "7ª Posizione (con Gebo e Algiz)",
+    "nome": "Runa Othila (ᛟ)",
+    "formula": "ᛟ Othila",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Rombo superiore con aste inferiori incrociate prolungate verso il basso.",
+    "movimentoSvg": "M 45,125 L 75,95 L 105,65 L 75,35 L 45,65 L 75,95 L 105,125",
+    "descrizione": "23ª Runa dell'Alfabeto Runico (3° Aett di Skuld). Posizione alfabetica: 23 (riduzione teosofica: 2+3 = 5). Dominio: La proprietà avita, la soglia sacra della casa, le radici familiari, il guardiano domestico, l'eredità. Runa speculare autonoma su valenza 5. Corrispondenza di Canone: Posizione 23 -> Valenza 5.",
+    "etimologia": "Dal proto-germanico *ōþalan (patrimonio ancestrale, terra natia, lignaggio).",
+    "valenza": 5,
+    "sommaLettere": 23,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Pentagono regolare (Soglia / Patrimonio)",
+    "pietraConsacrata": "Ossidiana / Onice",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 23ª. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 7ª Posizione (con Gebo e Algiz). Pietra consacrata: Ossidiana / Onice. Incantesimi di Hogwarts in risonanza: Levicorpus (5), Immobilus (5), Deleo (5), Dominium Evoco (5)."
+  },
+  {
+    "id": "runa-dagaz",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "24ª",
+    "posizioneNum": 24,
+    "aett": "3° Aett (Skuld)",
+    "thootPos": "8ª Posizione (con Wunjo e Sowilo)",
+    "nome": "Runa Dagaz (ᛞ)",
+    "formula": "ᛞ Dagaz",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Forma a clessidra orizzontale o farfalla ad ali incrociate (due triangoli congiunti al vertice).",
+    "movimentoSvg": "M 45,30 L 45,120 L 105,30 L 105,120 Z",
+    "descrizione": "24ª Runa dell'Alfabeto Runico (chiude l'antico Futhark). Posizione alfabetica: 24 (riduzione teosofica: 2+4 = 6). Dominio: Spirito Sulis, elemento Fuoco vivente nel Codex (Numero 8 rituale), trasformazione all'alba, pienezza del giorno, incendio risanatore. Corrispondenza di Canone: Posizione 24 -> Valenza 6.",
+    "etimologia": "Dal proto-germanico *dagaz (giorno, luce dell'aurora, compimento trasformatore).",
+    "valenza": 6,
+    "sommaLettere": 24,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Esagono regolare (Giorno / Fuoco Vivente)",
+    "pietraConsacrata": "Agata / Molibdenite",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: 24ª. Valenza Magica: 6 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: 8ª Posizione (con Wunjo e Sowilo). Pietra consacrata: Agata / Molibdenite. Incantesimi di Hogwarts in risonanza: Protego (6), Verdimillious (6), Adultero (6), Surge et expandi (6)."
+  },
+  {
+    "id": "runa-bianca",
+    "isRune": true,
+    "anno": 8,
+    "annoLabel": "Antiche Rune",
+    "posizioneAlfabeto": "Speciale",
+    "posizioneNum": 25,
+    "aett": "Centro del Wyrd",
+    "thootPos": "Asse Centrale del Destino",
+    "nome": "Runa Bianca (○)",
+    "formula": "○ Runa Bianca",
+    "ripetibile": true,
+    "tipologia": "Antiche Rune / Glifo Sacro",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile per la creazione di talismani consacrati con Exsèquor, legami di Thoot con Iùngo e cerchi di confinamento o protezione rituale.",
+    "movimento": "Imposizione delle mani senza tracciato visibile, proiezione del vuoto mentale con Percèptio Ìntimo.",
+    "movimentoSvg": "M 75,35 A 40,40 0 1,1 74.9,35 Z",
+    "descrizione": "Runa Misterica del Wyrd (priva di glifo inciso). Collocata al Centro del Wyrd, rappresenta l'assenza trasfigurata in potere supremo, il vuoto fecondo, l'illusione totale (Percèptio Ìntimo). Valenza Esoterica 5 (speculare perfetta). Corrispondenza di Canone: Valenza 5.",
+    "etimologia": "Dal mistero delle tre Norne (ciò che ancora non è e che può divenire tutto).",
+    "valenza": 5,
+    "sommaLettere": 5,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 8,
+    "figuraGeometrica": "Pentagono regolare (Etere Cosmico / Il Nulla)",
+    "pietraConsacrata": "Ciottolo Levigato privo di segni",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Posizione nell'Alfabeto Runico: Speciale. Valenza Magica: 5 (la valenza dell'incantesimo corrisponde alla posizione della runa nell'alfabeto runico). Triade di Thoot: Asse Centrale del Destino. Pietra consacrata: Ciottolo Levigato privo di segni. Incantesimi di Hogwarts in risonanza: Perceptio Intimo (7), Levicorpus (5), Deleo (5), Revelio (5)."
   }
 ];
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = SPELLS_DATA;
-}
