@@ -1,4 +1,4 @@
-// spellsData.js - Archivio Completo dei 179 Incantesimi e Rune dell'Antico Futhark
+// spellsData.js - Archivio Completo dei 181 Incantesimi e Rune dell'Antico Futhark
 // Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR, Trattati Didattici e Codex Arithmantiae
 
 const SPELLS_DATA = [
@@ -126,13 +126,13 @@ const SPELLS_DATA = [
     "movimentoSvg": "M 75,120 C 50,100 45,70 65,55 C 65,40 75,25 75,25 C 75,25 85,40 85,55 C 105,70 100,100 75,120 Z",
     "descrizione": "Emette una fiammata o proietta lingue di fuoco ardente dalla bacchetta. Impiegato sia nella vita quotidiana sia nel duello difensivo ed offensivo. Contromisure: Aguamenti, Protego, Finite Incantatem.",
     "etimologia": "Dal latino incendere (appiccare fuoco, infiammare).",
-    "valenza": 1,
+    "valenza": 8,
     "sommaLettere": 46,
-    "valenzaOpposta": 9,
+    "valenzaOpposta": 2,
     "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica forzata a 8 (Elemento Fuoco nel Codex Arithmantiae, formula Plasma e runa Dagaz). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare. Limite di reiterazione efficace: 8 volte.",
+    "runeAssociate": "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)"
   },
   {
     "id": "alohomora",
@@ -353,6 +353,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
     "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 69 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte.",
     "runeAssociate": "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)"
+  },
+  {
+    "id": "aguamenti",
+    "anno": 1,
+    "annoLabel": "I Anno",
+    "nome": "Incantesimo di Evocazione dell'Acqua (Aguamenti)",
+    "formula": "Aguamenti",
+    "ripetibile": true,
+    "tipologia": "Elementale Acqua / Utilità",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello per estinguere fiamme ordinarie o magiche minori, accecare l'avversario con un getto d'acqua pressurizzato o contrastare creature ignee.",
+    "movimento": "Movimento a onda fluida da sinistra verso destra terminante con puntamento deciso della punta.",
+    "movimentoSvg": "M 35,85 C 55,65 70,105 95,75 L 125,75",
+    "descrizione": "Sortilegio elementale dell'Acqua che proietta un getto d'acqua limpida e potabile dalla punta della bacchetta. La valenza è forzata per canone al numero 1 (Elemento Acqua del Codex Arithmantiae, associato alla formula Coerceo e alla runa Laguz).",
+    "etimologia": "Composto dal latino aqua (acqua) e augmentum (accrescimento).",
+    "valenza": 1,
+    "sommaLettere": 37,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Unità / Elemento Acqua)",
+    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
+    "noteAritmantiche": "Valenza Magica forzata a 1 (Elemento Acqua nel Codex Arithmantiae, associato alla formula Coerceo e alla runa Laguz). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza."
   },
   {
     "id": "chartanimus",
@@ -639,6 +661,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
     "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
+  },
+  {
+    "id": "ventus",
+    "anno": 2,
+    "annoLabel": "II Anno",
+    "nome": "Incantesimo del Vento (Ventus)",
+    "formula": "Ventus",
+    "ripetibile": true,
+    "tipologia": "Elementale Aria / Cinetico",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello per deflettere proiettili leggeri, sbilanciare l'avversario con violente raffiche d'aria o disperdere nubi tossiche e coltri fumogene.",
+    "movimento": "Spirale orizzontale oraria tracciata nell'aria con fendente terminale proteso in avanti.",
+    "movimentoSvg": "M 45,75 C 45,45 105,45 105,75 C 105,105 60,105 60,80 L 125,50",
+    "descrizione": "Sortilegio elementale dell'Aria che sprigiona un turbine d'aria impetuoso dalla punta della bacchetta. La valenza è forzata per canone al numero 5 (Elemento Aria del Codex Arithmantiae, associato alla formula Finge e alla runa Hagalaz).",
+    "etimologia": "Dal latino ventus (vento, soffio d'aria, brezza).",
+    "valenza": 5,
+    "sommaLettere": 20,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 5,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Equilibrio)",
+    "runeAssociate": "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+    "noteAritmantiche": "Valenza Magica forzata a 5 (Elemento Aria nel Codex Arithmantiae, associato alla formula Finge e alla runa Hagalaz). Valenza opposta di simmetria: 5 (simmetria speculare pura). Figura operativa per Signo: Pentagono regolare."
   },
   {
     "id": "riddikulus",
@@ -2942,13 +2986,13 @@ const SPELLS_DATA = [
     "movimentoSvg": "M 30,75 L 120,75 M 105,60 L 120,75 L 105,90",
     "descrizione": "Il controincantesimo per eccellenza. La sua valenza calcolata è 1, ma la grande aritmante Bridget Wenlock dimostrò nel XIII secolo la sua naturale affinità con il numero 7, il più potente serbatoio di opposizione magica.",
     "etimologia": "Dal latino finire (porre fine) e incantamentum (incantesimo).",
-    "valenza": 1,
+    "valenza": 7,
     "sommaLettere": 73,
-    "valenzaOpposta": 9,
+    "valenzaOpposta": 3,
     "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 73 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
-    "runeAssociate": "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)"
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Controincantesimo Supremo)",
+    "noteAritmantiche": "Valenza Magica forzata a 7 (Numero sacro di Bridget Wenlock per i controincantesimi: massima energia magica, obbligatorio in ogni contro-rituale). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)"
   },
   {
     "id": "plasma",

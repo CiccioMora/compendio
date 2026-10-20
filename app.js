@@ -460,8 +460,30 @@
       if (e.target === spellModal) closeModal();
     });
 
+    // Dizionario di Forzatura Canonica (Codex Arithmantiae & Bridget Wenlock)
+    const CANONICAL_OVERRIDES = {
+      "FINITE INCANTATEM": { valenza: 7, reason: "Valenza 7 forzata da Canone (Controincantesimo Supremo - Bridget Wenlock)", element: "Controincantesimo Supremo (Numero 7)" },
+      "FINITE": { valenza: 7, reason: "Valenza 7 forzata da Canone (Controincantesimo - Bridget Wenlock)", element: "Controincantesimo (Numero 7)" },
+      "INCENDIO": { valenza: 8, reason: "Valenza 8 forzata da Canone (Elemento Fuoco nel Codex Arithmantiae)", element: "Fuoco (Numero 8 - Formula Plasma)" },
+      "AGUAMENTI": { valenza: 1, reason: "Valenza 1 forzata da Canone (Elemento Acqua nel Codex Arithmantiae)", element: "Acqua (Numero 1 - Formula Coerceo)" },
+      "VENTUS": { valenza: 5, reason: "Valenza 5 forzata da Canone (Elemento Aria nel Codex Arithmantiae)", element: "Aria (Numero 5 - Formula Finge)" }
+    };
+
+    const VALENCE_RUNES_MAP = {
+      1: "ᚠ Fehu (Pos. 1ª), ᚾ Nauthiz (Pos. 10ª), ᛖ Ehwaz (Pos. 19ª)",
+      2: "ᚢ Uruz (Pos. 2ª), ᛁ Isa (Pos. 11ª), ᛗ Mannaz (Pos. 20ª)",
+      3: "ᚦ Thurisaz (Pos. 3ª), ᛃ Jera (Pos. 12ª), ᛚ Laguz (Pos. 21ª)",
+      4: "ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)",
+      5: "ᚱ Raido (Pos. 5ª), ᛈ Perthr (Pos. 14ª), ᛟ Othila (Pos. 23ª), ○ Runa Bianca",
+      6: "ᚲ Kenaz (Pos. 6ª), ᛉ Algiz (Pos. 15ª), ᛞ Dagaz (Pos. 24ª)",
+      7: "ᚷ Gebo (Pos. 7ª), ᛋ Sowilo (Pos. 16ª)",
+      8: "ᚹ Wunjo (Pos. 8ª), ᛏ Teiwaz (Pos. 17ª)",
+      9: "ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)"
+    };
+
     // Calculator Tool Logic
     function calculateWordArithmancy(word) {
+      const calcRunesElem = document.getElementById("calcRunes");
       if (!word) {
         calcNorm.textContent = "-";
         calcLetters.textContent = "-";
@@ -470,10 +492,12 @@
         calcOpposite.textContent = "-";
         calcFigure.textContent = "-";
         calcElement.textContent = "-";
+        if (calcRunesElem) calcRunesElem.textContent = "-";
         return;
       }
 
-      const clean = word.toUpperCase().split("").filter(c => PYTHAGOREAN[c]);
+      const rawClean = word.trim().toUpperCase();
+      const clean = rawClean.split("").filter(c => PYTHAGOREAN[c]);
       if (clean.length === 0) return;
 
       const sum = clean.reduce((acc, c) => acc + PYTHAGOREAN[c], 0);
@@ -481,15 +505,27 @@
       while (reduced > 9) {
         reduced = String(reduced).split("").reduce((acc, d) => acc + Number(d), 0);
       }
+
+      // Applicazione forzatura canonica
+      let isOverridden = false;
+      let overrideObj = CANONICAL_OVERRIDES[rawClean];
+      if (overrideObj) {
+        reduced = overrideObj.valenza;
+        isOverridden = true;
+      }
+
       const opposite = 5 - reduced + 5;
 
-      calcNorm.textContent = clean.join("");
+      calcNorm.textContent = clean.join("") + (isOverridden ? ` ⭐ [${overrideObj.reason}]` : "");
       calcLetters.textContent = clean.map(c => `${c}(${PYTHAGOREAN[c]})`).join(" + ");
       calcSum.textContent = sum;
-      calcValence.textContent = reduced;
+      calcValence.textContent = isOverridden ? `${reduced} (Canone)` : reduced;
       calcOpposite.textContent = opposite;
       calcFigure.textContent = GEOMETRY_MAP[reduced] || "-";
-      calcElement.textContent = ELEMENT_MAP[reduced] || `Simmetria speculare: ${opposite}`;
+      calcElement.textContent = (isOverridden && overrideObj.element) ? overrideObj.element : (ELEMENT_MAP[reduced] || `Simmetria speculare: ${opposite}`);
+      if (calcRunesElem) {
+        calcRunesElem.textContent = VALENCE_RUNES_MAP[reduced] || "-";
+      }
     }
 
     calcInput.addEventListener("input", (e) => {

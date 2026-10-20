@@ -213,7 +213,7 @@ $$\text{Incantesimo} \xrightarrow{\text{Formula verbale}} \text{Valenza Magica }
 │ Valenza │ Rune Futhark Ordinali│ Rune Acrofoniche     │ Elemento    │ Opposto  │ Esempi Incanti  │
 │ Magica  │ (Posizione 1–24)     │ (Fonema Pitagorico)  │ Rituale     │ (Simm. 5)│ Associati       │
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **1**   │ ᚠ Fehu (1ª)          │ ᚨ Ansuz (A = 1)      │ 🌊 Acqua    │ **9**    │ Incendio (1),   │
+│ **1**   │ ᚠ Fehu (1ª)          │ ᚨ Ansuz (A = 1)      │ 🌊 Acqua    │ **9**    │ Aguamenti (1),   │
 │         │ ᚾ Nauthiz (10ª)      │ ᛃ Jera (J = 1)       │ (*Coerceo / │          │ Reparo (1),     │
 │         │ ᛖ Ehwaz (19ª)        │ ᛋ Sowilo (S = 1)     │  Laguz*)    │          │ Signo, Colligo  │
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
@@ -241,9 +241,9 @@ $$\text{Incantesimo} \xrightarrow{\text{Formula verbale}} \text{Valenza Magica }
 │         │ ᛋ Sowilo (16ª)       │ ᛈ Perthr (P = 7)     │             │          │ Vulnera Sanentur│
 │         │                      │ ᛃ Jera (Y = 7)       │             │          │ Exsequor, Inveni│
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
-│ **8**   │ ᚹ Wunjo (8ª)         │ ᚺ Hagalaz (H = 8)    │ 🔥 Fuoco    │ **2**    │ Lumos (8),      │
-│         │ ᛏ Teiwaz (17ª)       │ ᛉ Algiz (Z = 8)      │ (*Plasma /  │          │ Alohomora (8),  │
-│         │                      │                      │  Dagaz*)    │          │ Incarceramus (8)│
+│ **8**   │ ᚹ Wunjo (8ª)         │ ᚺ Hagalaz (H = 8)    │ 🔥 Fuoco    │ **2**    │ Incendio (8),   │
+│         │ ᛏ Teiwaz (17ª)       │ ᛉ Algiz (Z = 8)      │ (*Plasma /  │          │ Lumos (8),      │
+│         │                      │                      │  Dagaz*)    │          │ Alohomora (8)   │
 ├─────────┼──────────────────────┼──────────────────────┼─────────────┼──────────┼─────────────────┤
 │ **9**   │ ᚺ Hagalaz (9ª)       │ ᛁ Isa (I = 9)        │ —           │ **1**    │ Flipendo (9),   │
 │         │ ᛒ Berkana (18ª)      │ ᚱ Raido (R = 9)      │             │          │ Petrificus (9), │
