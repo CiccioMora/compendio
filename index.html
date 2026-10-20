@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compendium Magicum - Portale della Conoscenza degli Incantesimi</title>
+  <!-- Tailwind CSS (CDN pubblico con fallback) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    if (!window.tailwind) {
+      document.write('<script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"><\/script>');
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen text-slate-200 antialiased selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP HEADER / NAV -->
+  <header class="sticky top-0 z-40 border-b border-amber-900/30 glass-panel">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 via-amber-700 to-amber-950 flex items-center justify-center border border-amber-400/40 shadow-lg shadow-amber-900/40">
+          <span class="text-xl">⚡</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-xl sm:text-2xl font-bold font-magic text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">
+              CODEX MAGICA
+            </h1>
+            <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/30">
+              Hogwarts • D.C.A.O. & Aritmanzia
+            </span>
+          </div>
+          <p class="text-xs text-slate-400">Portale Ufficiale di Catalogazione degli Incantesimi per Anni di Studio</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Quick Aritmancy Calculator Button -->
+        <button id="openCalculatorBtn" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/30 transition flex items-center gap-1.5 shadow-sm">
+          <span>🔢</span>
+          <span>Calcolatore Valenza</span>
+        </button>
+        <!-- Dueling Quick Filter Toggle -->
+        <button id="quickDuelToggle" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-indigo-500/15 hover:bg-indigo-500/25 text-indigo-300 border border-indigo-500/30 transition flex items-center gap-1.5 shadow-sm">
+          <span>⚔️</span>
+          <span id="quickDuelText">Solo Duello</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH STATS BANNER -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
+    <div class="relative overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950/90 p-6 sm:p-8 shadow-2xl">
+      <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-10 -top-10 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+        <div class="lg:col-span-2 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-600/30 text-amber-300 text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+            Trattato Accademico Unificato: D.C.A.O. & Codex Arithmantiae
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold font-magic text-slate-100 leading-tight">
+            Archivio Metodologico degli Incantesimi, Fatture e Maledizioni
+          </h2>
+          <p class="text-sm text-slate-300 leading-relaxed max-w-2xl">
+            Suddivisione per anni scolastici (I-V Anno, M.A.G.O. e Grimorio Aritmantico). Per ciascun incanto sono riportati: 
+            <strong>Nome</strong>, <strong>Formula</strong>, <strong>Descrizione</strong>, <strong>Valenza Magica</strong> (Tavola Pitagorica e T.L.A.), 
+            <strong>Movimento della Bacchetta</strong>, <strong>Tipologia</strong> e <strong>Idoneità al Duello Magico</strong>.
+          </p>
+        </div>
+
+        <!-- STATS BADGES -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3">
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
+            <div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">0</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Incantesimi Totali</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
+            <div id="statDuel" class="text-2xl font-bold font-magic text-emerald-400">0</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Abilitati in Duello</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
+            <div id="statDark" class="text-2xl font-bold font-magic text-rose-400">0</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Fatture & Maledizioni</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
+            <div id="statArith" class="text-2xl font-bold font-magic text-sky-400">0</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Aritmantici & Sigilli</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROLS: SEARCH & FILTERS -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+    <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-amber-500/25 shadow-2xl space-y-4">
+      
+      <!-- TOP: PROMINENT SEARCH BAR (NOME, FORMULA, DESCRIZIONE) -->
+      <div>
+        <div class="flex items-center justify-between mb-1.5">
+          <label for="searchInput" class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+            <span>🔍</span> Ricerca Incantesimo o Testo nella Descrizione
+          </label>
+          <span class="text-[11px] text-slate-400 hidden sm:inline">
+            Ricerca attiva simultanea su: <strong>Nome</strong>, <strong>Formula</strong>, <strong>Descrizione</strong> e <strong>Movimento</strong>
+          </span>
+        </div>
+        <div class="relative">
+          <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 text-lg">
+            ⚡
+          </span>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Cerca per nome (es. Flipendo), formula (es. Stupeficium), o parole chiave nella descrizione (es. 'fumo', 'duello', 'pietra', 'ossa', 'ferite')..." 
+            class="w-full pl-11 pr-10 py-3 rounded-xl bg-slate-950/90 border border-slate-700/90 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition shadow-inner"
+          >
+          <button id="clearSearchBtn" title="Cancella ricerca" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-500 hover:text-amber-300 transition hidden text-base font-bold">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- FILTER CONTROLS GRID (ANNO, DUELLO, TIPOLOGIA, RESET) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-1">
+        
+        <!-- Filter 1: Anno di Studio -->
+        <div>
+          <label for="yearSelect" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
+            <span>📅</span> Filtro Anno di Corso:
+          </label>
+          <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
+            <option value="ALL">Tutti gli Anni (129)</option>
+            <option value="1">I Anno — Fondamenti & Cinetica (16)</option>
+            <option value="2">II Anno — Fatture & Inanimati (14)</option>
+            <option value="3">III Anno — Gelo, Impatto & Locomozione (16)</option>
+            <option value="4">IV Anno — Tattiche & Medimagia (20)</option>
+            <option value="5">V Anno — Umana, Esplosivi & Maledizioni (24)</option>
+            <option value="6,7">M.A.G.O. & Arti Oscure (16)</option>
+            <option value="0">Grimorio Aritmantico (Hawstein) (23)</option>
+          </select>
+        </div>
+
+        <!-- Filter 2: Utilizzo in Duello -->
+        <div>
+          <label for="duelFilter" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
+            <span>⚔️</span> Utilizzo in Duello:
+          </label>
+          <select id="duelFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
+            <option value="ALL">Duello: Qualsiasi (129)</option>
+            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (86)</option>
+            <option value="NO">⛔ Non da Duello / Rituale: NO (43)</option>
+          </select>
+        </div>
+
+        <!-- Filter 3: Tipologia -->
+        <div>
+          <label for="typeFilter" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
+            <span>🏷️</span> Tipologia Magica:
+          </label>
+          <select id="typeFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
+            <option value="ALL">Tutte le Tipologie</option>
+            <option value="Offensivo">⚔️ Offensivo / Attacco</option>
+            <option value="Difensivo">🛡️ Difensivo / Scudo</option>
+            <option value="Schiantesimo">⚡ Schiantesimo</option>
+            <option value="Fattura">⚠️ Fattura</option>
+            <option value="Maledizione">☠️ Maledizione / M. Oscura</option>
+            <option value="Curativo">🌿 Curativo / Medimagia</option>
+            <option value="Trasfigurazione">🪄 Trasfigurazione</option>
+            <option value="Elementale">🔥 Elementale (4 Elementi)</option>
+            <option value="Aritmantico">📐 Aritmantico / Tracciatura</option>
+            <option value="Utilità">✨ Utilità & Cinetica</option>
+          </select>
+        </div>
+
+        <!-- Filter 4: Reset Button -->
+        <div class="flex items-end">
+          <button id="resetAllFiltersBtn" class="w-full py-2.5 px-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-xs font-semibold text-amber-300 border border-amber-500/30 hover:border-amber-400 transition flex items-center justify-center gap-1.5 shadow-sm">
+            <span>🔄</span> Ripristina Tutti i Filtri
+          </button>
+        </div>
+
+      </div>
+
+      <!-- ROW 3: QUICK VISUAL TABS & SEGMENTED CONTROLS -->
+      <div class="border-t border-slate-800/80 pt-3 space-y-3">
+        
+        <!-- Year Quick Tabs -->
+        <div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
+            <span>Filtro Rapido per Anno di Corso:</span>
+            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">129 incantesimi trovati</span>
+          </div>
+          <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
+            <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
+              Tutti (129)
+            </button>
+            <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              I Anno (16)
+            </button>
+            <button data-year="2" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              II Anno (14)
+            </button>
+            <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              III Anno (16)
+            </button>
+            <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              IV Anno (20)
+            </button>
+            <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              V Anno (24)
+            </button>
+            <button data-year="6,7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              M.A.G.O. (16)
+            </button>
+            <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
+              Aritmanzia & Trattati (23)
+            </button>
+          </div>
+        </div>
+
+        <!-- Duel Segmented Buttons & Valence Pills -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-1 text-xs">
+          <!-- Segmented Duel Controls -->
+          <div class="flex items-center gap-2">
+            <span class="text-slate-400 font-medium">Duello:</span>
+            <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
+              <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
+                Tutti (129)
+              </button>
+              <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
+                ⚔️ Da Duello: SÌ (86)
+              </button>
+              <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
+                ⛔ Non in Duello: NO (43)
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Valence Filter Pills -->
+          <div class="flex items-center gap-1 flex-wrap">
+            <span class="text-slate-400 font-medium mr-1">Valenza:</span>
+            <button data-val="ALL" class="val-pill px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-code font-semibold text-[11px]">Tutte</button>
+            <button data-val="1" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V1</button>
+            <button data-val="2" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V2</button>
+            <button data-val="3" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V3</button>
+            <button data-val="4" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V4</button>
+            <button data-val="5" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V5</button>
+            <button data-val="6" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V6</button>
+            <button data-val="7" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V7</button>
+            <button data-val="8" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V8</button>
+            <button data-val="9" class="val-pill px-2 py-1 rounded bg-slate-800/80 text-slate-300 hover:bg-slate-700 font-code text-[11px]">V9</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAIN CARDS GRID CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div id="spellsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Injected dynamically via JS -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="noResultsState" class="hidden text-center py-16 glass-panel rounded-2xl border border-slate-800">
+      <div class="text-4xl mb-3">📜</div>
+      <h3 class="text-lg font-bold font-magic text-slate-200">Nessun Incantesimo Trovato</h3>
+      <p class="text-sm text-slate-400 mt-1 max-w-md mx-auto">
+        Nessuna formula corrisponde ai filtri di ricerca selezionati. Prova a modificare i termini di ricerca o resettare i filtri.
+      </p>
+      <button id="resetFiltersBtn" class="mt-4 px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs transition">
+        Ripristina Tutti i Filtri
+      </button>
+    </div>
+  </main>
+
+  <!-- MODAL: SPELL DETAIL WITH LIVE WAND PATH & ARITHMANCY BREAKDOWN -->
+  <div id="spellModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto glass-panel rounded-2xl border border-amber-500/40 shadow-2xl p-6 sm:p-8 transform scale-95 transition-transform duration-300" id="modalCard">
+      
+      <!-- Close button -->
+      <button id="closeModalBtn" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center border border-slate-700 transition">
+        ✕
+      </button>
+
+      <!-- Modal Content Header -->
+      <div class="space-y-2 border-b border-slate-800 pb-5">
+        <div class="flex flex-wrap items-center gap-2" id="modalBadges">
+          <!-- Injected badges -->
+        </div>
+        <h2 id="modalTitle" class="text-2xl sm:text-3xl font-bold font-magic text-amber-300">
+          Titolo Incantesimo
+        </h2>
+        <div class="flex items-center gap-3">
+          <span class="text-xs text-slate-400">Formula magica:</span>
+          <span id="modalFormula" class="px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-200 font-code font-bold text-base tracking-wide">
+            Formula
+          </span>
+          <span id="modalEtymology" class="text-xs text-slate-400 italic"></span>
+        </div>
+      </div>
+
+      <!-- Modal Body Grid -->
+      <div class="mt-6 space-y-6">
+        
+        <!-- Descrizione Principale -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
+            <span>📖</span> Descrizione & Effetti Magici
+          </h4>
+          <p id="modalDesc" class="text-sm text-slate-200 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-800/80">
+            Descrizione completa...
+          </p>
+        </div>
+
+        <!-- Wand Movement with Interactive Visualizer -->
+        <div class="bg-gradient-to-br from-slate-950 to-slate-900 p-4 sm:p-5 rounded-xl border border-slate-800">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+              <span>🪄</span> Movimento della Bacchetta
+            </h4>
+            <button id="replayWandAnimBtn" class="text-[11px] font-semibold px-2.5 py-1 rounded bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/30 transition flex items-center gap-1">
+              <span>🔄</span> Anima Gesto
+            </button>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
+            <!-- Animated SVG canvas -->
+            <div class="sm:col-span-1 bg-slate-950 rounded-lg border border-amber-900/40 p-3 flex flex-col items-center justify-center relative">
+              <svg id="wandSvgCanvas" viewBox="0 0 150 150" class="w-28 h-28">
+                <!-- Grid background lines -->
+                <circle cx="75" cy="75" r="70" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
+                <circle cx="75" cy="75" r="40" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
+                <line x1="75" y1="5" x2="75" y2="145" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
+                <line x1="5" y1="75" x2="145" y2="75" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
+                <!-- Dynamic Wand Path -->
+                <path id="wandPathElement" d="" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" class="wand-path-anim" />
+              </svg>
+              <div class="text-[10px] text-slate-400 mt-1 uppercase tracking-wider">Traccia Dinamica</div>
+            </div>
+
+            <!-- Movement description -->
+            <div class="sm:col-span-2 space-y-2">
+              <p id="modalMovement" class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                Descrizione del movimento della bacchetta...
+              </p>
+              <div id="modalDuelTactics" class="text-xs p-3 rounded-lg bg-indigo-950/40 border border-indigo-800/40 text-indigo-200">
+                <!-- Tactical dueling notes -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arithmantic Analysis Section -->
+        <div class="bg-slate-950/80 p-4 sm:p-5 rounded-xl border border-amber-600/30 space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+              <span>📐</span> Analisi Aritmantica (Codex Arithmantiae)
+            </h4>
+            <span class="text-[11px] font-code text-slate-400">Tavola Pitagorica (1-9)</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <div class="text-[10px] text-slate-400 uppercase">Valenza Magica</div>
+              <div id="modalValenceNum" class="text-xl font-bold font-code text-amber-400">0</div>
+              <div class="text-[10px] text-slate-400" id="modalValenceSum">Somma: 0</div>
+            </div>
+
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <div class="text-[10px] text-slate-400 uppercase">Valenza Opposta</div>
+              <div id="modalOppositeNum" class="text-xl font-bold font-code text-indigo-400">0</div>
+              <div class="text-[10px] text-slate-400">Simmetria su 5</div>
+            </div>
+
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <div class="text-[10px] text-slate-400 uppercase">Ripetibilità Max</div>
+              <div id="modalRepeatMax" class="text-xl font-bold font-code text-emerald-400">1x</div>
+              <div class="text-[10px] text-slate-400" id="modalRepeatStatus">Irripetibile</div>
+            </div>
+
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <div class="text-[10px] text-slate-400 uppercase">Figura Operativa</div>
+              <div id="modalGeometry" class="text-xs font-bold text-sky-400 mt-1 truncate">Cerchio</div>
+              <div class="text-[10px] text-slate-400">Incanto Signo</div>
+            </div>
+          </div>
+
+          <!-- Letters to Numbers Breakdown -->
+          <div class="text-xs space-y-1.5 bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+            <div class="text-slate-400 font-semibold">Scomposizione Numerica delle Lettere:</div>
+            <div id="modalLetterBreakdown" class="font-code text-amber-200/90 text-xs break-all">
+              <!-- Scomposizione -->
+            </div>
+            <p id="modalArithNotes" class="text-[11px] text-slate-400 mt-2 italic leading-relaxed">
+              <!-- Note arimantiche approfondite -->
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: ARITHMANCY CALCULATOR TOOL -->
+  <div id="calculatorModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="relative w-full max-w-xl glass-panel rounded-2xl border border-amber-500/40 shadow-2xl p-6 sm:p-7 transform scale-95 transition-transform duration-300" id="calcCard">
+      <button id="closeCalcBtn" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center">✕</button>
+
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-2xl">📐</span>
+        <h3 class="text-xl font-bold font-magic text-amber-300">Calcolatore di Valenza Aritmantica</h3>
+      </div>
+      <p class="text-xs text-slate-400 mb-4">
+        Calcola la Valenza Magica, la Valenza Opposta di Simmetria e la Figura Operativa secondo le regole del <em>Codex Arithmantiae</em> di Zeno e Glaphira Hawstein.
+      </p>
+
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">
+            Inserisci Nome, Formula o Parola da Calcolare
+          </label>
+          <input 
+            type="text" 
+            id="calcInput" 
+            placeholder="Es. Levicorpus, Lumos, o il tuo nome..." 
+            class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-amber-200 font-code text-base focus:outline-none focus:border-amber-500 uppercase"
+          >
+        </div>
+
+        <div id="calcResults" class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-3">
+          <div class="text-xs text-slate-400 flex justify-between">
+            <span>Formula normalizzata:</span>
+            <span id="calcNorm" class="font-code text-slate-200">-</span>
+          </div>
+          <div class="text-xs text-slate-400">
+            <div>Valori lettere (Tavola Pitagorica):</div>
+            <div id="calcLetters" class="font-code text-amber-300 text-xs mt-0.5 break-all">-</div>
+          </div>
+          <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800 text-center">
+            <div class="bg-slate-900 p-2 rounded-lg">
+              <div class="text-[10px] text-slate-400 uppercase">Somma Cifre</div>
+              <div id="calcSum" class="text-base font-bold font-code text-slate-200">0</div>
+            </div>
+            <div class="bg-slate-900 p-2 rounded-lg">
+              <div class="text-[10px] text-slate-400 uppercase">Valenza (1-9)</div>
+              <div id="calcValence" class="text-xl font-bold font-code text-amber-400">-</div>
+            </div>
+            <div class="bg-slate-900 p-2 rounded-lg">
+              <div class="text-[10px] text-slate-400 uppercase">Val. Opposta</div>
+              <div id="calcOpposite" class="text-xl font-bold font-code text-indigo-400">-</div>
+            </div>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-amber-950/20 border border-amber-900/30 text-xs text-amber-200/90 space-y-1">
+            <div class="flex justify-between">
+              <span class="text-slate-400">Figura Operativa (Signo):</span>
+              <strong id="calcFigure" class="text-amber-300">-</strong>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Elemento / Simmetria:</span>
+              <strong id="calcElement" class="text-sky-300">-</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick examples to click -->
+        <div class="pt-2">
+          <div class="text-[11px] text-slate-400 mb-1.5">Esempi celebri dal Codex:</div>
+          <div class="flex flex-wrap gap-1.5">
+            <button class="calc-sample px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-[11px] text-amber-300 font-code" data-word="Levicorpus">Levicorpus (V5)</button>
+            <button class="calc-sample px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-[11px] text-amber-300 font-code" data-word="Lumos">Lumos (V8)</button>
+            <button class="calc-sample px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-[11px] text-amber-300 font-code" data-word="Densaugeo">Densaugeo (V1)</button>
+            <button class="calc-sample px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-[11px] text-amber-300 font-code" data-word="Finite Incantatem">Finite Incantatem (V1/7)</button>
+            <button class="calc-sample px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-[11px] text-amber-300 font-code" data-word="Salvio Hexia">Salvio Hexia (V8)</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-900 py-8 bg-slate-950 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <p class="font-magic text-slate-400 font-semibold">
+        HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY • DIPARTIMENTO D.C.A.O. & STUDI ARITMANTICI
+      </p>
+      <p>
+        Fonti canoniche: <em>Codex Arithmantiae</em> (Z. Hawstein, G. Hawstein), <em>Manuale di Difesa Contro le Arti Oscure</em> (G. Mortem, K. Flarehelm), 
+        <em>Exorcismis Occultis</em> e <em>Maledictio</em> (Y. I. Mortem).
+      </p>
+      <p class="text-[11px] text-slate-600">
+        Classificazione ministeriale redatta per la consultazione degli studenti dal I al VII Anno e corpo docenti.
+      </p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS: DATABASE & APP LOGIC -->
+  <script src="spellsData.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
