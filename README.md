@@ -4,7 +4,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/it/docs/Web/JavaScript)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-amber.svg?style=for-the-badge)](LICENSE)
-[![Incantesimi](https://img.shields.io/badge/Incantesimi_Catalogati-151-blueviolet?style=for-the-badge)](#)
+[![Incantesimi](https://img.shields.io/badge/Incantesimi_Catalogati-154-blueviolet?style=for-the-badge)](#)
 
 > **Portale Web interattivo e compendio accademico completo che suddivide e cataloga la conoscenza degli incantesimi per anni di studio (I-VII Anno, M.A.G.O., programma didattico ufficiale di Arcane GDR e Codex Arithmantiae).**
 >
@@ -20,22 +20,22 @@
   - **III Anno** (14 incantesimi): *Elementi di Gelo, Impatto e Mollicci (Glacius, Riddikulus, Ascendio, Immobulus...)*
   - **IV Anno** (18 incantesimi): *Tattiche di Difesa, Distruzione e Medimagia (Bombarda, Stupeficium Avanzato, Aguamenti, Episkey, Avis, Oppugno...)*
   - **V Anno** (10 incantesimi): *Preparazione ai G.U.F.O. ed Esplosivi Avanzati (Confringo, Reducto, Colovaria, Alarte Ascendare, Orchideus...)*
-  - **VI Anno — M.A.G.O. I (Programma Arcane GDR & Liber Sextus)** (38 incantesimi):
+  - **VI Anno — M.A.G.O. I (Programma Arcane GDR & Liber Sextus)** (37 incantesimi):
     - *Incantesimi*: Confundo, Deletrius, Descendo, Silencio, Incantesimo Rallegrante, Carpe Retractum, Obliterato.
     - *Trasfigurazione Pratica*: Crinus Muto, Pullus, Densaugeo, Paperate, Piscofors, Entomorphis, Furitum, Geminio, Inflatus.
     - *D.C.A.O. ("Maledictio" - Y. I. Mortem)*: Titillando, Exulcero, Monstrum, Dismundo, Locomotor Mortis, Locomotor Wibbly, Maledizione di Dolohov (*Dolohoferio*), Maledizione Dissanguante (*Sectumsempra*), Canto Curativo (*Vulnera Sanentur*), Maledizione delle Caccole (*Mucus ad Nauseam*), Maledizione Balbuziente (*Balbutio*), Maledizione Flagrante (*Flagrante*), Maledizione Languelingua, Morsmordre [Teoria], Incanto Patronus (*Expecto Patronum*), Sortilegio dell'Infelicità Eterna, Demone Stalker (*Stalker Convocatus*).
-    - *Aritmanzia ("Codex Arithmantiae: Liber Sextus - Spazio e Traslazione" - Z. & G. Hawstein)*: Emineo, Emineo Puteus, Transatio Objecto, Prior Incantatem.
+    - *Aritmanzia ("Codex Arithmantiae: Liber Sextus - Spazio e Traslazione" - Z. & G. Hawstein)*: Emineo, Emineo Puteus, Transatio Objecto.
     - *Trasfigurazione Correttiva*: Reparifarge.
-  - **VII Anno — M.A.G.O. II (Programma Arcane GDR & Liber Septimus)** (21 incantesimi):
-    - *D.C.A.O. Superiore ("Oltre il Mago" - Y. I. Mortem)*: Anatema che Uccide (*Avada Kedavra*), Maledizione Cruciatus (*Crucio*), Maledizione Imperius (*Imperio*), Maledizione della Fiamma Mutaforma (*Fiendfyre* / Ardemonio), Incantesimo Fendi-Fiamma (*Partis Temporus*), Incanto Patronus Messaggero.
-    - *Incantesimi & Trasporti*: Passaporta (*Portus*), Incantesimo Estensivo Irriconoscibile (*Adduco Maxima*), Cancellazione della Memoria (*Obliviate*).
+  - **VII Anno — M.A.G.O. II (Programma Arcane GDR & Liber Septimus)** (25 incantesimi):
+    - *Incantesimi (Programma Ufficiale & Sortilegi)*: Incantesimo Fidelius (*Fidelius*), Incantesimo Proteus (*Proteus*), Cave Inimicum (*Cave Inimicum*), Prior Incantatio (*Prior Incantatem*), Incantesimo Fendi-Fiamma (*Partis Temporus*), Passaporta (*Portus*), Incantesimo Estensivo Irriconoscibile (*Adduco Maxima*), Cancellazione della Memoria (*Obliviate*).
+    - *D.C.A.O. Superiore ("Oltre il Mago" - Y. I. Mortem)*: Anatema che Uccide (*Avada Kedavra*), Maledizione Cruciatus (*Crucio*), Maledizione Imperius (*Imperio*), Maledizione della Fiamma Mutaforma (*Fiendfyre* / Ardemonio), Incanto Patronus Messaggero.
     - *Trasfigurazione Teoria Animagia*: Animaleus Nobodyx, Homine Reverto.
     - *Aritmanzia ("Codex Arithmantiae: Liber Septimus - Rituali, Sigilli e Trappole" - Z. & G. Hawstein)*: Nodum Solvo, Abscondas, Fermo, In Fine Laqueo, Quae Reversa, Deminatio Gravitas, Magnes Lathos Addicis, Protegis Hoc Incantementum, Rotas Sator, Capio Memoriam.
   - **Grimorio Aritmantico Operativo (Liber I-V & Trattati)** (21 formule): *Trattati operativi di Zeno & Glaphira Hawstein: Signo e le 9 Figure Geometriche, Coerceo, Plasma, Finge, Adultero, Phi Porta, Phi Revelio, Sigilli di Controvalenza e Trasfigurazione Metodica.*
 
 - **⚔️ Filtro e Valutazione Tattica per il Duello Magico**:
   - **96 Incantesimi Abilitati al Duello**: catalogati con finestra di lancio rapido, tempo di caricamento verbale/non verbale e contromisure.
-  - **55 Incantesimi Non da Duello**: formule di utilità domestica, riparazione, scasso (*Alohomora*), sigilli lenti (*Colloportus*), pozzi comunicanti o trasfigurazioni complesse d'aula.
+  - **58 Incantesimi Non da Duello**: formule di utilità domestica, riparazione, scasso (*Alohomora*), sigilli lenti (*Colloportus*), pozzi comunicanti, protezioni d'area (*Fidelius*, *Cave Inimicum*) o trasfigurazioni complesse d'aula.
   - Segmented buttons e commutatore rapido *"Solo Duello"* nella barra di navigazione.
 
 - **🔍 Ricerca Testuale Full-Text in Tempo Reale**:
@@ -61,7 +61,7 @@
 ```text
 portale-incantesimi/
 ├── index.html              # Entrypoint dell'applicazione web (compatibile GitHub Pages)
-├── spellsData.js           # Database completo dei 151 incantesimi strutturato in JSON/JS
+├── spellsData.js           # Database completo dei 154 incantesimi strutturato in JSON/JS
 ├── app.js                  # Logica applicativa, gestione filtri, ricerca e modali
 ├── style.css               # Regole grafiche avanzate, font magici e animazioni SVG
 ├── dist/

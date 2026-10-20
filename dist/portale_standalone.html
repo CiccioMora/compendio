@@ -218,14 +218,14 @@
             <span>📅</span> Filtro Anno di Corso:
           </label>
           <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Tutti gli Anni (151)</option>
+            <option value="ALL">Tutti gli Anni (154)</option>
             <option value="1">I Anno — Fondamenti & Cinetica (16)</option>
             <option value="2">II Anno — Fatture & Inanimati (13)</option>
             <option value="3">III Anno — Gelo & Locomozione (14)</option>
             <option value="4">IV Anno — Tattiche & Medimagia (18)</option>
             <option value="5">V Anno — G.U.F.O. & Esplosivi (10)</option>
-            <option value="6">VI Anno — M.A.G.O. I: Maledictio, Trasfigurazione, Incantesimi & Lib. VI (38)</option>
-            <option value="7">VII Anno — M.A.G.O. II: Oltre il Mago, Trasporti, Animagia & Lib. VII (21)</option>
+            <option value="6">VI Anno — M.A.G.O. I: Maledictio, Trasfigurazione, Incantesimi & Lib. VI (37)</option>
+            <option value="7">VII Anno — M.A.G.O. II: Incantesimi, Oltre il Mago, Animagia & Lib. VII (25)</option>
             <option value="0">Aritmanzia — Hawstein: Liber I-V & Trattati Operativi (21)</option>
           </select>
         </div>
@@ -236,9 +236,9 @@
             <span>⚔️</span> Utilizzo in Duello:
           </label>
           <select id="duelFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Duello: Qualsiasi (151)</option>
+            <option value="ALL">Duello: Qualsiasi (154)</option>
             <option value="YES">⚔️ Utilizzabile in Duello: SÌ (96)</option>
-            <option value="NO">⛔ Non da Duello / Rituale: NO (55)</option>
+            <option value="NO">⛔ Non da Duello / Rituale: NO (58)</option>
           </select>
         </div>
 
@@ -278,11 +278,11 @@
         <div>
           <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
             <span>Filtro Rapido per Anno di Corso:</span>
-            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">151 incantesimi trovati</span>
+            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">154 incantesimi trovati</span>
           </div>
           <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
             <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (151)
+              Tutti (154)
             </button>
             <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               I Anno (16)
@@ -300,10 +300,10 @@
               V Anno (10)
             </button>
             <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VI Anno (38)
+              VI Anno (37)
             </button>
             <button data-year="7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VII Anno (21)
+              VII Anno (25)
             </button>
             <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               Aritmanzia (21)
@@ -318,13 +318,13 @@
             <span class="text-slate-400 font-medium">Duello:</span>
             <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
               <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
-                Tutti (151)
+                Tutti (154)
               </button>
               <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
                 ⚔️ Da Duello: SÌ (96)
               </button>
               <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
-                ⛔ Non da Duello: NO (55)
+                ⛔ Non da Duello: NO (58)
               </button>
             </div>
           </div>
@@ -2701,27 +2701,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
   },
   {
-    "id": "prior-incantatem",
-    "anno": 6,
-    "annoLabel": "VI Anno (Liber Sextus)",
-    "nome": "Rivelazione della Memoria della Bacchetta (Prior Incantatem)",
-    "formula": "Prior Incantatem",
-    "ripetibile": false,
-    "tipologia": "Aritmantico / Indagine / Memoria Bacchette",
-    "inDuello": false,
-    "duelloNote": "Utilizzabile solo in casi rari di connessione tra bacchette gemelle con lo stesso nucleo (Prior Incantatio). Normalmente usato in indagini forensi ministeriali.",
-    "movimento": "Giunzione punta a punta con la bacchetta da ispezionare.",
-    "movimentoSvg": "M 75,30 L 75,70 M 75,80 L 75,120",
-    "descrizione": "Costringe una bacchetta a rilasciare l'ombra e l'eco degli ultimi sortilegi castati in ordine temporale inverso.",
-    "etimologia": "Dal latino prior (precedente) e incantamentum (incantesimo).",
-    "valenza": 5,
-    "sommaLettere": 77,
-    "valenzaOpposta": 5,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Trattato in Codex Arithmantiae, Liber Sextus (Cap. VII: Le bacchette e l'aritmologia). Valenza 5 (somma 77 ridotta a 5). Valenza opposta: 5. Figura per Signo: Pentagono regolare."
-  },
-  {
     "id": "infelicita-eterna",
     "anno": 6,
     "annoLabel": "VI Anno (Maledictio)",
@@ -3058,9 +3037,30 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volta/e."
   },
   {
+    "id": "cave-inimicum",
+    "anno": 7,
+    "annoLabel": "VII Anno (Incantesimi - Sortilegi)",
+    "nome": "Incantesimo Difensivo d'Avvertimento (Cave Inimicum)",
+    "formula": "Cave Inimicum",
+    "ripetibile": false,
+    "tipologia": "Difensivo Statico di Zona (I.D.S.) / Rivelazione Nemici",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Sortilegio difensivo d'accampamento: avvolge un'area in una cupola invisibile che avverte gli occupanti dell'avvicinarsi di nemici o intrusi e ne dissimula la vista dall'esterno.",
+    "movimento": "Puntare la bacchetta verso la volta celeste e tracciare un cerchio protettivo dall'alto verso il basso.",
+    "movimentoSvg": "M 75,30 A 45,45 0 1,0 75,120 A 45,45 0 1,0 75,30 M 75,45 L 75,105 M 45,75 L 105,75",
+    "descrizione": "Incluso nel programma didattico di VII Anno (Incantesimi - Sortilegi: Cave Inimicum). Uno dei cardini della difesa da campo avanzata: rende l'area protetta indistinguibile per chi guarda dall'esterno e fa vibrare la bacchetta dell'incantatore non appena un individuo ostile tenta di varcare il perimetro.",
+    "etimologia": "Dal latino cave (guardati da, fai attenzione) e inimicum (il nemico).",
+    "valenza": 5,
+    "sommaLettere": 59,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 59 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
     "id": "partis-temporus",
     "anno": 7,
-    "annoLabel": "VII Anno (Oltre il Mago)",
+    "annoLabel": "VII Anno (Incantesimi & D.C.A.O.)",
     "nome": "Incantesimo Fendi-Fiamma (Partis Temporus)",
     "formula": "Partis Temporus",
     "ripetibile": false,
@@ -3069,7 +3069,7 @@ const SPELLS_DATA = [
     "duelloNote": "Utilizzabile in duello contro barriere di fuoco o colate di fuoco magico per fendere le fiamme e creare un varco sicuro di passaggio.",
     "movimento": "Fendente verticale netto dall'alto in basso con rapida separazione orizzontale a braccia aperte.",
     "movimentoSvg": "M 75,30 L 75,120 M 75,75 L 35,75 M 75,75 L 115,75",
-    "descrizione": "Trattato nel testo di D.C.A.O. superiore Oltre il Mago (Y. I. Mortem, VII Anno). Formula di alta difesa contro magie ignee oscure: permette all'incantatore di aprire una breccia o un corridoio di sicurezza attraverso barriere di fuoco magico ostili (incluso l'Ardemonio parzialmente circoscritto).",
+    "descrizione": "Incluso nel programma didattico di VII Anno (Incantesimi - Sortilegi: Partis Temporus & D.C.A.O. Superiore). Formula di alta difesa contro magie ignee oscure: permette all'incantatore di aprire una breccia o un corridoio di sicurezza attraverso barriere di fuoco magico ostili (incluso l'Ardemonio parzialmente circoscritto).",
     "etimologia": "Dal latino partire (dividere, spartire) e tempus/temporis (tempo, tregua temporanea).",
     "valenza": 3,
     "sommaLettere": 66,
@@ -3100,6 +3100,27 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e."
   },
   {
+    "id": "proteus",
+    "anno": 7,
+    "annoLabel": "VII Anno (Incantesimi - Sortilegi)",
+    "nome": "Incantesimo Proteus (Proteus)",
+    "formula": "Proteus",
+    "ripetibile": false,
+    "tipologia": "Incantesimo di Legame Simpatico / Modifica Multipla",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello. Crea un legame magico indissolubile tra più repliche di un oggetto (es. le monete dell'Esercito di Silente o i Galeoni dei Mangiamorte): modificandone una, tutte le altre mutano all'istante.",
+    "movimento": "Tracciare un esagono aereo sopra il prototipo e toccare a raggiera le repliche.",
+    "movimentoSvg": "M 75,35 L 105,55 L 105,95 L 75,115 L 45,95 L 45,55 Z",
+    "descrizione": "Incluso nel programma didattico di VII Anno (Incantesimi - Sortilegi: Incantesimo Proteus) e trattato nel Liber III del Codex Arithmantiae. Lega magicamente più oggetti a un originale: quando i tratti o le lettere dell'originale vengono alterati, tutte le copie riflettono istantaneamente la modifica.",
+    "etimologia": "Dal dio marino greco Proteo, celebre per mutare forma a piacimento.",
+    "valenza": 6,
+    "sommaLettere": 33,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
     "id": "adduco-maxima",
     "anno": 7,
     "annoLabel": "VII Anno (Incantesimi & Trasfigurazione)",
@@ -3119,6 +3140,27 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "fidelius",
+    "anno": 7,
+    "annoLabel": "VII Anno (Incantesimi - Teoria Fidelius)",
+    "nome": "Incantesimo di Occultamento Totale (Incantesimo Fidelius)",
+    "formula": "Fidelius",
+    "ripetibile": false,
+    "tipologia": "Incanto di Occultamento Ermetico / Rituale dell'Anima",
+    "inDuello": false,
+    "duelloNote": "Rituale di protezione assoluta non da duello. Nasconde un segreto (come una dimora o una persona) all'interno dell'anima vivente di un Custode Segreto designato.",
+    "movimento": "Punta della bacchetta a contatto con il petto del Custode Segreto, tracciando un quadrato ermetico ideale.",
+    "movimentoSvg": "M 45,45 L 105,45 L 105,105 L 45,105 Z M 75,60 L 75,90 M 60,75 L 90,75",
+    "descrizione": "Incluso nel programma didattico di VII Anno (Incantesimi - Teoria Incantesimo Fidelius). Sortilegio antico ed estremamente complesso che sigilla un'informazione nell'anima di una persona viva (il Custode Segreto). Il luogo protetto diventa invisibile, intangibile e introvabile a chiunque, a meno che il Custode non riveli volontariamente il segreto.",
+    "etimologia": "Dal latino fidelis (fedele, leale).",
+    "valenza": 4,
+    "sommaLettere": 40,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volta/e."
   },
   {
     "id": "animaleus-nobodyx",
@@ -3245,6 +3287,27 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Angolo / Linea (Dualismo)",
     "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 56 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "prior-incantatem",
+    "anno": 7,
+    "annoLabel": "VII Anno (Incantesimi - Prior Incantatio)",
+    "nome": "Rivelazione della Memoria della Bacchetta (Prior Incantatio / Prior Incantatem)",
+    "formula": "Prior Incantatem",
+    "ripetibile": false,
+    "tipologia": "Aritmantico / Indagine / Memoria Bacchette",
+    "inDuello": false,
+    "duelloNote": "Utilizzabile solo in casi rari di connessione tra bacchette gemelle con lo stesso nucleo (Prior Incantatio). Normalmente usato in indagini forensi ministeriali.",
+    "movimento": "Giunzione punta a punta con la bacchetta da ispezionare.",
+    "movimentoSvg": "M 75,30 L 75,70 M 75,80 L 75,120",
+    "descrizione": "Incluso nel programma didattico di VII Anno (Incantesimi - Sortilegi: Prior Incantatio). Trattato approfonditamente anche nel Liber Sextus del Codex Arithmantiae (Cap. VII: Le bacchette e l'aritmologia). Costringe una bacchetta a rilasciare l'ombra e l'eco degli ultimi sortilegi castati in ordine temporale inverso.",
+    "etimologia": "Dal latino prior (precedente) e incantamentum (incantesimo).",
+    "valenza": 5,
+    "sommaLettere": 77,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Trattato in Codex Arithmantiae, Liber Sextus (Cap. VII: Le bacchette e l'aritmologia). Valenza 5 (somma 77 ridotta a 5). Valenza opposta: 5. Figura per Signo: Pentagono regolare."
   },
   {
     "id": "nodum-solvo",
