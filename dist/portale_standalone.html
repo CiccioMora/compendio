@@ -218,14 +218,14 @@
             <span>📅</span> Filtro Anno di Corso:
           </label>
           <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Tutti gli Anni (144)</option>
+            <option value="ALL">Tutti gli Anni (151)</option>
             <option value="1">I Anno — Fondamenti & Cinetica (16)</option>
-            <option value="2">II Anno — Fatture & Inanimati (14)</option>
-            <option value="3">III Anno — Gelo, Impatto & Locomozione (16)</option>
-            <option value="4">IV Anno — Tattiche & Medimagia (20)</option>
-            <option value="5">V Anno — Umana, Esplosivi & Maledizioni (22)</option>
-            <option value="6">VI Anno — Maledictio & Liber Sextus (19)</option>
-            <option value="7">VII Anno — Oltre il Mago & Liber Septimus (16)</option>
+            <option value="2">II Anno — Fatture & Inanimati (13)</option>
+            <option value="3">III Anno — Gelo & Locomozione (14)</option>
+            <option value="4">IV Anno — Tattiche & Medimagia (18)</option>
+            <option value="5">V Anno — G.U.F.O. & Esplosivi (10)</option>
+            <option value="6">VI Anno — M.A.G.O. I: Maledictio, Trasfigurazione, Incantesimi & Lib. VI (38)</option>
+            <option value="7">VII Anno — M.A.G.O. II: Oltre il Mago, Trasporti, Animagia & Lib. VII (21)</option>
             <option value="0">Aritmanzia — Hawstein: Liber I-V & Trattati Operativi (21)</option>
           </select>
         </div>
@@ -236,9 +236,9 @@
             <span>⚔️</span> Utilizzo in Duello:
           </label>
           <select id="duelFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Duello: Qualsiasi (144)</option>
-            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (93)</option>
-            <option value="NO">⛔ Non da Duello / Rituale: NO (51)</option>
+            <option value="ALL">Duello: Qualsiasi (151)</option>
+            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (96)</option>
+            <option value="NO">⛔ Non da Duello / Rituale: NO (55)</option>
           </select>
         </div>
 
@@ -278,35 +278,35 @@
         <div>
           <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
             <span>Filtro Rapido per Anno di Corso:</span>
-            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">144 incantesimi trovati</span>
+            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">151 incantesimi trovati</span>
           </div>
           <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
             <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (144)
+              Tutti (151)
             </button>
             <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               I Anno (16)
             </button>
             <button data-year="2" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              II Anno (14)
+              II Anno (13)
             </button>
             <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              III Anno (16)
+              III Anno (14)
             </button>
             <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              IV Anno (20)
+              IV Anno (18)
             </button>
             <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              V Anno (22)
+              V Anno (10)
             </button>
             <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VI Anno / Maledictio & Lib. VI (19)
+              VI Anno (38)
             </button>
             <button data-year="7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VII Anno / Oltre il Mago & Lib. VII (16)
+              VII Anno (21)
             </button>
             <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              Aritmanzia / Liber I-V (21)
+              Aritmanzia (21)
             </button>
           </div>
         </div>
@@ -318,13 +318,13 @@
             <span class="text-slate-400 font-medium">Duello:</span>
             <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
               <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
-                Tutti (144)
+                Tutti (151)
               </button>
               <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
-                ⚔️ Da Duello: SÌ (93)
+                ⚔️ Da Duello: SÌ (96)
               </button>
               <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
-                ⛔ Non da Duello: NO (51)
+                ⛔ Non da Duello: NO (55)
               </button>
             </div>
           </div>
@@ -595,9 +595,9 @@
   <script>
 // spellsData.js - Archivio Completo degli Incantesimi suddiviso per Anni
 // Fonti Didattiche Ufficiali:
-// - Codex Arithmantiae (Zeno & Glaphira Hawstein): Liber I-V (Aritmanzia di Base e Trattati Operativi), Liber VI (Spazio e Traslazione, VI Anno), Liber VII (Rituali, Sigilli e Trappole, VII Anno)
-// - Difesa Contro le Arti Oscure: Maledictio (Yashiro Isana Mortem, VI Anno), Oltre il Mago (Yashiro Isana Mortem, VII Anno)
-// - Manuale di Trasfigurazione & Dispense di Incantesimi
+// - Programma di Studio Arcane GDR: Incantesimi, Trasfigurazione, Difesa Contro le Arti Oscure (I-VII Anno)
+// - Codex Arithmantiae (Zeno & Glaphira Hawstein): Liber I-V (Aritmanzia di Base), Liber VI (Spazio e Traslazione), Liber VII (Rituali, Sigilli e Trappole)
+// - Trattati di D.C.A.O.: Maledictio & Oltre il Mago (Yashiro Isana Mortem)
 
 const SPELLS_DATA = [
   {
@@ -1042,27 +1042,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 66 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
   },
   {
-    "id": "deletrius",
-    "anno": 2,
-    "annoLabel": "II Anno",
-    "nome": "Incantesimo di Cancellazione (Deletrius)",
-    "formula": "Deletrius",
-    "ripetibile": false,
-    "tipologia": "Contro-incanto / Rimozione Marchi",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Rimuove scritte magiche, marchi trasfigurativi (Significo, Plansigno, Fersigno) o l'eco di proiezioni spettrali.",
-    "movimento": "Sinuoso movimento che disegna un rettangolo continuo intorno alla traccia da cancellare.",
-    "movimentoSvg": "M 40,50 L 110,50 L 110,100 L 40,100 Z",
-    "descrizione": "Dissolve tracce magiche, marchi impressi su oggetti o viventi e scritte invisibili. Usato per pulire le superfici incise.",
-    "etimologia": "Dal verbo latino delere (cancellare, distruggere la traccia).",
-    "valenza": 5,
-    "sommaLettere": 41,
-    "valenzaOpposta": 5,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "homorphus",
     "anno": 2,
     "annoLabel": "II Anno",
@@ -1315,27 +1294,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
   },
   {
-    "id": "carpe-retractum",
-    "anno": 3,
-    "annoLabel": "III Anno",
-    "nome": "Incantesimo Tirante (Carpe Retractum)",
-    "formula": "Carpe Retractum",
-    "ripetibile": true,
-    "tipologia": "Utilità / Mobilità / Attrazione",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello in modo strategico: aggancia oggetti, ripari o persino la veste dell'avversario tirandolo verso di sé per disorientarlo o strappargli armi.",
-    "movimento": "Movimento che evoca avere una corda o una frusta tra le mani, stoccata in avanti e strattone indietro.",
-    "movimentoSvg": "M 30,75 L 110,75 M 95,60 L 110,75 L 95,90 M 110,75 L 45,75",
-    "descrizione": "Emette dalla punta della bacchetta una corda di pura energia dorata e arancione. Se l'oggetto colpito è mobile, viene attirato verso il mago; se è inamovibile, l'incantatore viene proiettato verso il punto d'ancoraggio.",
-    "etimologia": "Dal latino carpere (afferrare) e retractum (tratto indietro).",
-    "valenza": 9,
-    "sommaLettere": 63,
-    "valenzaOpposta": 1,
-    "maxRipetizioni": 9,
-    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
-  },
-  {
     "id": "orbis",
     "anno": 3,
     "annoLabel": "III Anno",
@@ -1355,27 +1313,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
     "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 27 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
-  },
-  {
-    "id": "descendo",
-    "anno": 3,
-    "annoLabel": "III Anno",
-    "nome": "Incantesimo di Caduta Cinetica (Descendo)",
-    "formula": "Descendo",
-    "ripetibile": true,
-    "tipologia": "Cinetica / Offensivo",
-    "inDuello": true,
-    "duelloNote": "Molto potente in duello: imprime un'accelerazione gravitazionale verso il basso a oggetti a mezz'aria per schiantarli su un bersaglio o far crollare pareti.",
-    "movimento": "Colpo di frusta secco dall'alto verso il basso con luce blu.",
-    "movimentoSvg": "M 75,25 L 75,120 M 55,95 L 75,120 L 95,95",
-    "descrizione": "Forza un corpo o una struttura a precipitare verso il basso ad alta velocità, convertendo il moto in energia cinetica d'impatto devastante.",
-    "etimologia": "Dal latino descendere (scendere, precipitare).",
-    "valenza": 6,
-    "sommaLettere": 33,
-    "valenzaOpposta": 4,
-    "maxRipetizioni": 6,
-    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte."
   },
   {
     "id": "scourgify",
@@ -1714,27 +1651,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
   },
   {
-    "id": "silencio",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Incantesimo Ammutolente (Silencio)",
-    "formula": "Silencio",
-    "ripetibile": false,
-    "tipologia": "Fattura Silenziante / Duello",
-    "inDuello": true,
-    "duelloNote": "Arma superba in duello: priva la vittima della voce, impedendole di pronunciare qualsiasi incantesimo verbale.",
-    "movimento": "Curva sinuosa a forma di U con discesa netta verso il basso.",
-    "movimentoSvg": "M 45,40 L 45,85 C 45,110 105,110 105,85 L 105,40",
-    "descrizione": "Nato storicamente per zittire il canto folle dei Fwooper. In duello toglie completamente la parola. Se eseguito male può provocare un rigonfiamento con rumori assordanti.",
-    "etimologia": "Dal latino silentium (silenzio assoluto).",
-    "valenza": 5,
-    "sommaLettere": 41,
-    "valenzaOpposta": 5,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "episkey",
     "anno": 4,
     "annoLabel": "IV Anno",
@@ -1924,27 +1840,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 35 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
   },
   {
-    "id": "expecto-patronum",
-    "anno": 4,
-    "annoLabel": "IV Anno",
-    "nome": "Incanto Patronus (Expecto Patronum)",
-    "formula": "Expecto Patronum",
-    "ripetibile": false,
-    "tipologia": "Difensivo Superiore / Luce Pura",
-    "inDuello": false,
-    "duelloNote": "Non utilizzato nei duelli regolamentari tra maghi. Può fungere da scudo se l'avversario evoca Dissennatori o per inviare messaggi cifrati vocali agli alleati.",
-    "movimento": "Ampio cerchio ascendente in senso orario seguito da un affondo in avanti, catalizzando un ricordo di pura e intensa felicità.",
-    "movimentoSvg": "M 75,30 C 115,30 125,75 125,75 C 125,115 75,120 75,120 C 35,120 25,75 25,75 C 25,35 75,30 75,30 Z M 75,75 L 130,55",
-    "descrizione": "Uno degli incantesimi difensivi più complessi e potenti della magia antica. Evoca una figura eterea argentea (corporea o incorporea) alimentata dalla felicità, che respinge Dissennatori e Lethifold e funge da messaggero parlante.",
-    "etimologia": "Dal latino expectare (attendere, invocare) e patronus (protettore, difensore).",
-    "valenza": 8,
-    "sommaLettere": 71,
-    "valenzaOpposta": 2,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 71 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "expulso",
     "anno": 4,
     "annoLabel": "IV Anno",
@@ -2029,48 +1924,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 92 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volte."
   },
   {
-    "id": "obliviate",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Cancellazione della Memoria (Oblivion / Obliviate)",
-    "formula": "Obliviate",
-    "ripetibile": false,
-    "tipologia": "Magia della Mente / Modifica Mnemonica",
-    "inDuello": false,
-    "duelloNote": "Non utilizzabile nei duelli sportivi (uso riservato agli Obliviatori ministeriali o a maghi oscuri).",
-    "movimento": "Torsione lenta del polso in senso antiorario a spirale risucchiante diretta alla fronte.",
-    "movimentoSvg": "M 75,75 m -35,0 a 35,35 0 1,0 70,0 a 25,25 0 1,0 -50,0 a 15,15 0 1,0 30,0",
-    "descrizione": "Ideato nel Seicento da Mnemosine Radford. Cancella ricordi specifici o interi fili conduttori della memoria babbana o magica. Se eseguito male può provocare danni neurologici permanenti (Area di Broca).",
-    "etimologia": "Dal latino oblivisci (dimenticare, cancellare dalla mente).",
-    "valenza": 5,
-    "sommaLettere": 41,
-    "valenzaOpposta": 5,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "densaugeo",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Fattura Cresci-Denti (Densaugeo)",
-    "formula": "Densaugeo",
-    "ripetibile": false,
-    "tipologia": "Fattura Trasfigurativa / DCAO V Anno",
-    "inDuello": true,
-    "duelloNote": "Molto insidiosa in duello: fa crescere a dismisura gli incisivi (fino a 7 cm) rendendo impossibile chiudere la bocca e pronunciare formule vocali.",
-    "movimento": "Puntamento deciso alla bocca con un doppio tocco verticale.",
-    "movimentoSvg": "M 75,40 L 75,70 M 65,70 L 85,70 M 75,80 L 75,115",
-    "descrizione": "Inserito nel programma didattico di DCAO del V anno a partire dagli anni 80. Fa crescere gli incisivi a vista d'occhio provocando grave imbarazzo e totale blocco della fonazione magica. Contro-incanto di valenza 9.",
-    "etimologia": "Dal latino dens (dente) e augere (accrescere, ingrandire).",
-    "valenza": 1,
-    "sommaLettere": 37,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "tarantallegra",
     "anno": 5,
     "annoLabel": "V Anno",
@@ -2090,27 +1943,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 4,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 49 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 4 volte."
-  },
-  {
-    "id": "languelingua",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Fattura Incolla-Lingua (Languelingua)",
-    "formula": "Languelingua",
-    "ripetibile": false,
-    "tipologia": "Fattura / Maledizione Silenziante",
-    "inDuello": true,
-    "duelloNote": "Micidiale in duello contro duellanti convenzionali: incolla la lingua al palato impedendo di scandire qualsiasi formula verbale.",
-    "movimento": "Giro stretto del polso a nodo orizzontale seguito da un affondo.",
-    "movimentoSvg": "M 45,75 C 45,45 105,45 105,75 C 105,105 45,105 45,75 Z M 105,75 L 130,75",
-    "descrizione": "Incolla saldamente la lingua al palato come se fosse ingrossata, rendendo impossibile articolare parole e formule. Un duellante esperto può contrastarla solo tramite contro-incanti non-verbali.",
-    "etimologia": "Composto dal latino languere (essere inerte) e lingua.",
-    "valenza": 7,
-    "sommaLettere": 52,
-    "valenzaOpposta": 3,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
-    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "furunculus",
@@ -2153,69 +1985,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 5,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
     "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 5 volte."
-  },
-  {
-    "id": "rallegrante",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Incantesimo Rallegrante / di Euforia",
-    "formula": "Incantesimo Rallegrante",
-    "ripetibile": false,
-    "tipologia": "Magia Emozionale / Non-Verbale",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello contro creature amortali: agisce sullo stato emozionale stimolando il rilascio di serotonina, temporanea difesa contro Dissennatori.",
-    "movimento": "Tracciare una lettera D capovolta verso il basso, come a mimare un sorriso.",
-    "movimentoSvg": "M 40,75 L 110,75 C 110,110 40,110 40,75 Z",
-    "descrizione": "Ideato nel tardo Medioevo dal giullare di corte Felic Summerbee. La sua formula verbale è andata perduta ma viene eseguito efficacemente in modo non verbale per indurre euforia.",
-    "etimologia": "Formula perduta di matrice folklorica.",
-    "valenza": 1,
-    "sommaLettere": 100,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 100 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "adduco-maxima",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Incantesimo di Estensione Irriconoscibile (Adduco Maxima)",
-    "formula": "Adduco Maxima",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Spaziale Avanzata",
-    "inDuello": false,
-    "duelloNote": "Non utilizzabile in duello. Crea uno spazio interno dimensionalmente espanso all'interno di un contenitore (es. borse, tende, stanze).",
-    "movimento": "Insieme di più circonferenze concentriche che richiamano l'espansione molecolare interna.",
-    "movimentoSvg": "M 75,75 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0 M 75,75 m -25,0 a 25,25 0 1,1 50,0 a 25,25 0 1,1 -50,0",
-    "descrizione": "Sofisticata distorsione dello spazio-tempo: genera una piega dimensionale interna permanente lasciando intatto il perimetro visibile esterno (es. Stanza delle Necessità o borse senza fondo).",
-    "etimologia": "Dal latino adducere (aggiungere, dilatare) e maxima.",
-    "valenza": 1,
-    "sommaLettere": 46,
-    "valenzaOpposta": 9,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "inflatus",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Incantesimo di Gonfiamento Corporeo (Inflatus)",
-    "formula": "Inflatus",
-    "ripetibile": false,
-    "tipologia": "Fattura Trasfigurativa / Espansione",
-    "inDuello": true,
-    "duelloNote": "Molto efficace in duello: gonfia il corpo della vittima a dismisura come un pallone aerostatico, facendola rimbalzare goffamente a mezz'aria.",
-    "movimento": "Circonferenza che si espande verso l'esterno con soffio d'aria.",
-    "movimentoSvg": "M 75,75 m -40,0 a 40,40 0 1,0 80,0 a 40,40 0 1,0 -80,0 M 75,25 L 75,10 M 75,125 L 75,140",
-    "descrizione": "Provoca l'espansione esponenziale del volume corporeo del bersaglio, incrementandone lo spazio occupato e rendendolo incapace di camminare.",
-    "etimologia": "Dal latino inflare (gonfiare, dilatare con aria).",
-    "valenza": 3,
-    "sommaLettere": 30,
-    "valenzaOpposta": 7,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "deprimo",
@@ -2323,132 +2092,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 53 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 8 volte."
   },
   {
-    "id": "entomorphis",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Trasfigurazione Entomologica (Entomorphis)",
-    "formula": "Entomorphis",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Umana / Debilitazione",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello: priva la vittima dell'uso della parola e la costringe a movimenti striscianti a terra con tratti da insetto.",
-    "movimento": "Movimento a scatti rapidi a tre segmenti (capo, torace, addome).",
-    "movimentoSvg": "M 75,35 L 75,65 M 75,65 L 75,95 M 50,65 L 100,65 M 45,95 L 105,95",
-    "descrizione": "Conferisce temporaneamente al soggetto colpito la morfologia e i tratti funzionali di un insetto (assenza di parola, arti a zampa, movimento strisciante).",
-    "etimologia": "Dal greco éntomon (insetto) e morphé (forma).",
-    "valenza": 8,
-    "sommaLettere": 62,
-    "valenzaOpposta": 2,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 62 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "crinus-muto",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Trasfigurazione della Capigliatura (Crinus Muto)",
-    "formula": "Crinus Muto",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Umana Estetica",
-    "inDuello": false,
-    "duelloNote": "Non da duello. Usato per mutare colore e stile di capelli e sopracciglia.",
-    "movimento": "Passaggio a pettine della bacchetta sopra il capo.",
-    "movimentoSvg": "M 40,40 C 40,70 110,70 110,40 M 55,60 L 55,100 M 75,65 L 75,110 M 95,60 L 95,100",
-    "descrizione": "Altera temporaneamente la pigmentazione, lunghezza e consistenza della chioma e delle sopracciglia umane.",
-    "etimologia": "Dal latino crinis (capello, crine) e mutare.",
-    "valenza": 9,
-    "sommaLettere": 45,
-    "valenzaOpposta": 1,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "furitum",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Trasfigurazione in Furetto (Furitum)",
-    "formula": "Furitum",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Umana-Animale / Duello",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello (anche in modo non-verbale a sorpresa): riduce l'avversario a un furetto incapace di impugnare la bacchetta e di parlare.",
-    "movimento": "Giro ellittico stretto con stoccata morbida verso il pavimento.",
-    "movimentoSvg": "M 40,85 C 40,55 110,55 110,85 C 110,115 40,115 40,85 Z M 110,85 L 130,70",
-    "descrizione": "Trasfigura il soggetto in un furetto agile ma totalmente innocuo e privo di parola. Il ritorno richiede un controincantesimo non-verbale.",
-    "etimologia": "Dal latino fur, furis (ladro, alludendo alla natura furtiva del furetto).",
-    "valenza": 9,
-    "sommaLettere": 36,
-    "valenzaOpposta": 1,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
-    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "paperante",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Trasfigurazione in Papera (Paperate)",
-    "formula": "Paperante",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione da Duello",
-    "inDuello": true,
-    "duelloNote": "Arma definitiva da duello trasfigurativo: trasforma all'istante l'avversario in un'oca o papera, privandolo di ogni capacità di attacco magico.",
-    "movimento": "Movimenti circolari continui in senso orario dalla sommità del capo fino ai piedi del rivale.",
-    "movimentoSvg": "M 75,25 C 105,25 115,65 75,85 C 45,100 45,125 75,125 C 105,125 115,100 75,85",
-    "descrizione": "Ideato intorno al VII secolo: priva completamente il duellante della possibilità di contrattaccare chiudendo rapidamente il duello a proprio favore. L'essenza resta intatta.",
-    "etimologia": "Dal termine volgare papera con suffisso participiale -ante.",
-    "valenza": 6,
-    "sommaLettere": 42,
-    "valenzaOpposta": 4,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "piscofors",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Trasfigurazione in Pesce (Piscofors)",
-    "formula": "Piscofors",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Animata-Animata",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duelli acquatici o per rendere inerme un rivale sulla terraferma trasformandolo in un pesce boccheggiante.",
-    "movimento": "Sinuosa onda orizzontale a forma di pinna di pesce.",
-    "movimentoSvg": "M 35,75 C 60,45 90,45 115,75 C 90,105 60,105 35,75 Z M 115,75 L 130,60 M 115,75 L 130,90",
-    "descrizione": "Trasforma temporaneamente un essere animato in un pesce. Reso celebre dalle prove del Torneo Tremaghi per l'adattamento subacqueo.",
-    "etimologia": "Dal latino piscis (pesce) e -fors.",
-    "valenza": 3,
-    "sommaLettere": 48,
-    "valenzaOpposta": 7,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
-  },
-  {
-    "id": "pullus",
-    "anno": 5,
-    "annoLabel": "V Anno",
-    "nome": "Trasfigurazione in Pollo (Pullus)",
-    "formula": "Pullus",
-    "ripetibile": false,
-    "tipologia": "Trasfigurazione Umana-Aviaria / Duello",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello: trasforma temporaneamente l'avversario in un pollo starnazzante e innocuo. Micidiale contro gli Erkling della Foresta Nera.",
-    "movimento": "Puntamento frontale e scatto a becco con battito d'ali.",
-    "movimentoSvg": "M 50,80 Q 75,40 100,80 M 75,40 L 75,110",
-    "descrizione": "Documentato nel 1754 a seguito dell'impiego da parte del corridore su scopa italiano Silvio Astolfi. Trasforma la persona in un pollo; reversibile con Finite Incantatem non-verbale.",
-    "etimologia": "Dal latino pullus (pulcino, piccolo animale, pollo).",
-    "valenza": 2,
-    "sommaLettere": 20,
-    "valenzaOpposta": 8,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Angolo / Linea (Dualismo)",
-    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 20 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "vulnera-sanentur",
     "anno": 6,
     "annoLabel": "VI Anno (Maledictio)",
@@ -2470,27 +2113,6 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 61 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 7 volte."
   },
   {
-    "id": "reverto",
-    "anno": 6,
-    "annoLabel": "VI Anno (Trasfigurazione M.A.G.O.)",
-    "nome": "Controincantesimo Trasfigurativo di I Livello (Reverto)",
-    "formula": "Reverto",
-    "ripetibile": false,
-    "tipologia": "Contro-incantesimo Trasfigurativo",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello per annullare rapidamente trasfigurazioni semplici applicate su oggetti o creature sul campo.",
-    "movimento": "Movimento spiraleggiante retrogrado con stoccata al centro.",
-    "movimentoSvg": "M 110,75 A 35,35 0 1,0 40,75 M 40,75 L 75,75",
-    "descrizione": "Annulla le alterazioni molecolari semplici ripristinando il ceppo e la conformazione originaria del materiale o dell'organismo.",
-    "etimologia": "Dal latino revertere (ritornare allo stato originario).",
-    "valenza": 4,
-    "sommaLettere": 40,
-    "valenzaOpposta": 6,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
-  },
-  {
     "id": "stalker-convocatus",
     "anno": 6,
     "annoLabel": "VI Anno (Maledictio)",
@@ -2510,6 +2132,69 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
     "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 57 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "morsmordre",
+    "anno": 6,
+    "annoLabel": "VI Anno (D.C.A.O. - Teoria)",
+    "nome": "Evocazione del Marchio Nero (Morsmordre)",
+    "formula": "Morsmordre",
+    "ripetibile": false,
+    "tipologia": "Magia Oscura / Marchio del Terrore",
+    "inDuello": false,
+    "duelloNote": "Non impiegabile come attacco in duello. Viene scagliato in alto verso il cielo per firmare un luogo di massacro.",
+    "movimento": "Puntare la bacchetta verso la volta celeste e imprimere una rotazione a spirale verso l'alto con un lampo verde veleno.",
+    "movimentoSvg": "M 75,120 Q 55,80 75,55 Q 95,30 75,25",
+    "descrizione": "Incluso nel programma didattico di VI Anno (D.C.A.O. - Morsmordre [Teoria]). Trattato nel testo di D.C.A.O. superiore Oltre il Mago (Y. I. Mortem, VII Anno). Proietta nel cielo notturno un colossale teschio formato da fumo verde smeraldo da cui fuoriesce un serpente vivo dalla bocca. Simbolo di Lord Voldemort e dei Mangiamorte.",
+    "etimologia": "Dal latino mors (morte) e il francese mordre (mordere).",
+    "valenza": 3,
+    "sommaLettere": 57,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 57 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "densaugeo",
+    "anno": 6,
+    "annoLabel": "VI Anno (Trasfigurazione)",
+    "nome": "Fattura Cresci-Denti (Densaugeo)",
+    "formula": "Densaugeo",
+    "ripetibile": false,
+    "tipologia": "Fattura Trasfigurativa / DCAO V Anno",
+    "inDuello": true,
+    "duelloNote": "Molto insidiosa in duello: fa crescere a dismisura gli incisivi (fino a 7 cm) rendendo impossibile chiudere la bocca e pronunciare formule vocali.",
+    "movimento": "Puntamento deciso alla bocca con un doppio tocco verticale.",
+    "movimentoSvg": "M 75,40 L 75,70 M 65,70 L 85,70 M 75,80 L 75,115",
+    "descrizione": "Incluso nel programma di VI Anno (Trasfigurazione Pratica - Densaugeo). Inserito nel programma didattico di DCAO del V anno a partire dagli anni 80. Fa crescere gli incisivi a vista d'occhio provocando grave imbarazzo e totale blocco della fonazione magica. Contro-incanto di valenza 9.",
+    "etimologia": "Dal latino dens (dente) e augere (accrescere, ingrandire).",
+    "valenza": 1,
+    "sommaLettere": 37,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "languelingua",
+    "anno": 6,
+    "annoLabel": "VI Anno (D.C.A.O. - Maledictio)",
+    "nome": "Fattura Incolla-Lingua (Languelingua)",
+    "formula": "Languelingua",
+    "ripetibile": false,
+    "tipologia": "Fattura / Maledizione Silenziante",
+    "inDuello": true,
+    "duelloNote": "Micidiale in duello contro duellanti convenzionali: incolla la lingua al palato impedendo di scandire qualsiasi formula verbale.",
+    "movimento": "Giro stretto del polso a nodo orizzontale seguito da un affondo.",
+    "movimentoSvg": "M 45,75 C 45,45 105,45 105,75 C 105,105 45,105 45,75 Z M 105,75 L 130,75",
+    "descrizione": "Incluso nel programma didattico di VI Anno (D.C.A.O. - Maledizione Languelingua). Incolla saldamente la lingua al palato come se fosse ingrossata, rendendo impossibile articolare parole e formule. Un duellante esperto può contrastarla solo tramite contro-incanti non-verbali.",
+    "etimologia": "Composto dal latino languere (essere inerte) e lingua.",
+    "valenza": 7,
+    "sommaLettere": 52,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica 52 ridotta a 7). Valenza opposta di simmetria: 3. Figura operativa per Signo: Ettagono regolare (Opposizione / Massima Energia). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "monstrum",
@@ -2617,25 +2302,109 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 55 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e."
   },
   {
-    "id": "portus",
+    "id": "geminio",
     "anno": 6,
-    "annoLabel": "VI Anno (Liber Sextus)",
-    "nome": "Incantesimo Passaporta (Portus)",
-    "formula": "Portus",
+    "annoLabel": "VI Anno (Trasfigurazione & D.C.A.O.)",
+    "nome": "Incantesimo / Maledizione di Duplicazione (Geminio)",
+    "formula": "Geminio",
     "ripetibile": false,
-    "tipologia": "Aritmantico / Traslazione ad Area",
+    "tipologia": "Trasfigurazione / Maledizione Duplicante",
     "inDuello": false,
-    "duelloNote": "Non da duello d'attacco rapido; utilizzabile per ritirate tattiche d'emergenza predisposte o per evacuare alleati su un oggetto prefissato.",
-    "movimento": "Puntamento fermo e prolungato sull'oggetto con tocco vibrante al termine della formula; rilascia un bagliore azzurro.",
-    "movimentoSvg": "M 40,75 L 110,75 M 90,55 L 110,75 L 90,95 M 75,40 A 35,35 0 0,1 75,110",
-    "descrizione": "Trattato nel Liber Sextus (Cap. IV). Trasforma qualsiasi oggetto comune in una Passaporta abilitata a trasportare chiunque la tocchi a una destinazione e ora prestabilite.",
-    "etimologia": "Dal latino porta (passaggio, varco d'accesso).",
+    "duelloNote": "Non da duello ordinario. Quando imposto come maledizione (Maledizione Gemini), fa moltiplicare esponenzialmente e roventemente l'oggetto toccato fino a schiacciare o soffocare gli intrusi (es. camere blindate della Gringott).",
+    "movimento": "Pressione perpendicolare sulla superficie dell'oggetto seguita da un rapido doppio tocco a rimbalzo.",
+    "movimentoSvg": "M 55,75 A 20,20 0 1,1 54,75 M 95,75 A 20,20 0 1,1 94,75",
+    "descrizione": "Incluso nel programma di VI Anno (Trasfigurazione Pratica & D.C.A.O. - Maledizione Gemini [Teoria]). Duplica qualsiasi oggetto inanimato creando una replica esatta all'apparenza, ma priva di valore autentico e destinata col tempo a decadere e degradarsi.",
+    "etimologia": "Dal latino geminare (raddoppiare, moltiplicare).",
+    "valenza": 9,
+    "sommaLettere": 45,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "silencio",
+    "anno": 6,
+    "annoLabel": "VI Anno (Incantesimi)",
+    "nome": "Incantesimo Ammutolente (Silencio)",
+    "formula": "Silencio",
+    "ripetibile": false,
+    "tipologia": "Fattura Silenziante / Duello",
+    "inDuello": true,
+    "duelloNote": "Arma superba in duello: priva la vittima della voce, impedendole di pronunciare qualsiasi incantesimo verbale.",
+    "movimento": "Curva sinuosa a forma di U con discesa netta verso il basso.",
+    "movimentoSvg": "M 45,40 L 45,85 C 45,110 105,110 105,85 L 105,40",
+    "descrizione": "Incluso nel programma ministeriale di VI Anno (Incantesimi - Incantesimo Ammutolente). Nato storicamente per zittire il canto folle dei Fwooper. In duello toglie completamente la parola. Se eseguito male può provocare un rigonfiamento con rumori assordanti.",
+    "etimologia": "Dal latino silentium (silenzio assoluto).",
+    "valenza": 5,
+    "sommaLettere": 41,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "obliterato",
+    "anno": 6,
+    "annoLabel": "VI Anno (Incantesimi)",
+    "nome": "Incantesimo Obliterante (Obliterato)",
+    "formula": "Obliterato",
+    "ripetibile": false,
+    "tipologia": "Modifica Ambientale / Occultamento Tracce",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Impiegato per cancellare orme, impronte di ruote o segni di calpestio sul terreno o sulla neve per depistare inseguitori.",
+    "movimento": "Movimento a tergicristallo orizzontale a sfiorare la superficie del terreno.",
+    "movimentoSvg": "M 30,85 Q 75,55 120,85 M 35,95 Q 75,65 115,95",
+    "descrizione": "Incluso nel programma ministeriale di VI Anno (Incantesimi - Incantesimo Obliterante). Cancella istantaneamente orme, calpestii o tracce fisiche su neve, sabbia, fango o polvere, ripristinando la superficie originale senza lasciare segni di alterazione.",
+    "etimologia": "Dal latino obliterare (cancellare, sopprimere ogni memoria visiva).",
+    "valenza": 9,
+    "sommaLettere": 45,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "rallegrante",
+    "anno": 6,
+    "annoLabel": "VI Anno (Incantesimi)",
+    "nome": "Incantesimo Rallegrante / di Euforia",
+    "formula": "Incantesimo Rallegrante",
+    "ripetibile": false,
+    "tipologia": "Magia Emozionale / Non-Verbale",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello contro creature amortali: agisce sullo stato emozionale stimolando il rilascio di serotonina, temporanea difesa contro Dissennatori.",
+    "movimento": "Tracciare una lettera D capovolta verso il basso, come a mimare un sorriso.",
+    "movimentoSvg": "M 40,75 L 110,75 C 110,110 40,110 40,75 Z",
+    "descrizione": "Incluso nel programma ministeriale di VI Anno (Incantesimi - Sortilegi). Ideato nel tardo Medioevo dal giullare di corte Felic Summerbee. La sua formula verbale è andata perduta ma viene eseguito efficacemente in modo non verbale per indurre euforia.",
+    "etimologia": "Formula perduta di matrice folklorica.",
     "valenza": 1,
-    "sommaLettere": 28,
+    "sommaLettere": 100,
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e."
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 100 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "carpe-retractum",
+    "anno": 6,
+    "annoLabel": "VI Anno (Incantesimi)",
+    "nome": "Incantesimo Tirante (Carpe Retractum)",
+    "formula": "Carpe Retractum",
+    "ripetibile": true,
+    "tipologia": "Utilità / Mobilità / Attrazione",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello in modo strategico: aggancia oggetti, ripari o persino la veste dell'avversario tirandolo verso di sé per disorientarlo o strappargli armi.",
+    "movimento": "Movimento che evoca avere una corda o una frusta tra le mani, stoccata in avanti e strattone indietro.",
+    "movimentoSvg": "M 30,75 L 110,75 M 95,60 L 110,75 L 95,90 M 110,75 L 45,75",
+    "descrizione": "Incluso nel programma ministeriale di VI Anno (Incantesimi - Incantesimo Afferra e Tira). Emette dalla punta della bacchetta una corda di pura energia dorata e arancione. Se l'oggetto colpito è mobile, viene attirato verso il mago; se è inamovibile, l'incantatore viene proiettato verso il punto d'ancoraggio.",
+    "etimologia": "Dal latino carpere (afferrare) e retractum (tratto indietro).",
+    "valenza": 9,
+    "sommaLettere": 63,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 9,
+    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
   },
   {
     "id": "dismundo",
@@ -2659,6 +2428,90 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
   },
   {
+    "id": "descendo",
+    "anno": 6,
+    "annoLabel": "VI Anno (Incantesimi)",
+    "nome": "Incantesimo di Caduta Cinetica (Descendo)",
+    "formula": "Descendo",
+    "ripetibile": true,
+    "tipologia": "Cinetica / Offensivo",
+    "inDuello": true,
+    "duelloNote": "Molto potente in duello: imprime un'accelerazione gravitazionale verso il basso a oggetti a mezz'aria per schiantarli su un bersaglio o far crollare pareti.",
+    "movimento": "Colpo di frusta secco dall'alto verso il basso con luce blu.",
+    "movimentoSvg": "M 75,25 L 75,120 M 55,95 L 75,120 L 95,95",
+    "descrizione": "Incluso nel programma ministeriale di VI Anno (Incantesimi - Descendo). Forza un corpo o una struttura a precipitare verso il basso ad alta velocità, convertendo il moto in energia cinetica d'impatto devastante.",
+    "etimologia": "Dal latino descendere (scendere, precipitare).",
+    "valenza": 6,
+    "sommaLettere": 33,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 6,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte."
+  },
+  {
+    "id": "deletrius",
+    "anno": 6,
+    "annoLabel": "VI Anno (Incantesimi)",
+    "nome": "Incantesimo di Cancellazione (Deletrius)",
+    "formula": "Deletrius",
+    "ripetibile": false,
+    "tipologia": "Contro-incanto / Rimozione Marchi",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Rimuove scritte magiche, marchi trasfigurativi (Significo, Plansigno, Fersigno) o l'eco di proiezioni spettrali.",
+    "movimento": "Sinuoso movimento che disegna un rettangolo continuo intorno alla traccia da cancellare.",
+    "movimentoSvg": "M 40,50 L 110,50 L 110,100 L 40,100 Z",
+    "descrizione": "Incluso nel programma ministeriale di VI Anno (Incantesimi - Incantesimo di Cancellazione). Dissolve tracce magiche, marchi impressi su oggetti o viventi e scritte invisibili. Usato per pulire le superfici incise.",
+    "etimologia": "Dal verbo latino delere (cancellare, distruggere la traccia).",
+    "valenza": 5,
+    "sommaLettere": 41,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "confundo",
+    "anno": 6,
+    "annoLabel": "VI Anno (Incantesimi)",
+    "nome": "Incantesimo di Confusione (Confundo)",
+    "formula": "Confundo",
+    "ripetibile": true,
+    "tipologia": "Magia Mentale / Confusione",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello. Causa istantaneo disorientamento e confusione nella mente del bersaglio, facendogli fallire la mira, esitare o attaccare alleati.",
+    "movimento": "Puntamento ondulatorio della bacchetta verso le tempie del bersaglio con una rapida rotazione del polso.",
+    "movimentoSvg": "M 40,75 C 55,45 65,105 80,75 C 95,45 105,105 120,75",
+    "descrizione": "Incluso nel programma ministeriale di VI Anno (Incantesimi - Incantesimo di Confusione). Offusca la lucidità, inganna la percezione spaziale e altera temporaneamente il giudizio razionale dell'avversario o di oggetti magici senzienti (come il Calice di Fuoco).",
+    "etimologia": "Dal verbo latino confundere (mescolare, disorientare, confondere).",
+    "valenza": 2,
+    "sommaLettere": 38,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 2,
+    "figuraGeometrica": "Angolo / Linea (Dualismo)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 38 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 2 volta/e."
+  },
+  {
+    "id": "inflatus",
+    "anno": 6,
+    "annoLabel": "VI Anno (Trasfigurazione)",
+    "nome": "Incantesimo di Gonfiamento Corporeo (Inflatus)",
+    "formula": "Inflatus",
+    "ripetibile": false,
+    "tipologia": "Fattura Trasfigurativa / Espansione",
+    "inDuello": true,
+    "duelloNote": "Molto efficace in duello: gonfia il corpo della vittima a dismisura come un pallone aerostatico, facendola rimbalzare goffamente a mezz'aria.",
+    "movimento": "Circonferenza che si espande verso l'esterno con soffio d'aria.",
+    "movimentoSvg": "M 75,75 m -40,0 a 40,40 0 1,0 80,0 a 40,40 0 1,0 -80,0 M 75,25 L 75,10 M 75,125 L 75,140",
+    "descrizione": "Incluso nel programma di VI Anno (Trasfigurazione Pratica - Inflatus). Provoca l'espansione esponenziale del volume corporeo del bersaglio, incrementandone lo spazio occupato e rendendolo incapace di camminare.",
+    "etimologia": "Dal latino inflare (gonfiare, dilatare con aria).",
+    "valenza": 3,
+    "sommaLettere": 30,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 30 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
     "id": "reparifarge",
     "anno": 6,
     "annoLabel": "VI Anno (Trasfigurazione M.A.G.O.)",
@@ -2680,25 +2533,46 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
   },
   {
-    "id": "animaleus-nobodyx",
+    "id": "expecto-patronum",
     "anno": 6,
-    "annoLabel": "VI Anno (Trasfigurazione M.A.G.O.)",
-    "nome": "Incantesimo di Ripristino Umano (Animaleus Nobodyx)",
-    "formula": "Animaleus Nobodyx",
+    "annoLabel": "VI Anno (D.C.A.O. - Sortilegi)",
+    "nome": "Incanto Patronus (Expecto Patronum)",
+    "formula": "Expecto Patronum",
     "ripetibile": false,
-    "tipologia": "Trasfigurazione Correttiva / Disvelamento",
-    "inDuello": true,
-    "duelloNote": "Utilizzabile in duello contro animagi o avversari trasfigurati per forzarne istantaneamente il ritorno alla forma umana originaria.",
-    "movimento": "Puntare con assoluta fermezza la bacchetta verso l'individuo trasfigurato pronunciando chiaramente la formula rituale.",
-    "movimentoSvg": "M 35,75 L 115,75 M 100,55 L 115,75 L 100,95",
-    "descrizione": "Formula strategica di disvelamento identitario (nessuno è più animale). Riattiva istantaneamente le funzioni neurofisiologiche umane, frequenza cardiaca ed encefalica.",
-    "etimologia": "Composto pseudo-latino animal-eus e nobody (nessuno è più animale).",
-    "valenza": 5,
-    "sommaLettere": 68,
-    "valenzaOpposta": 5,
+    "tipologia": "Difensivo Superiore / Luce Pura",
+    "inDuello": false,
+    "duelloNote": "Non utilizzato nei duelli regolamentari tra maghi. Può fungere da scudo se l'avversario evoca Dissennatori o per inviare messaggi cifrati vocali agli alleati.",
+    "movimento": "Ampio cerchio ascendente in senso orario seguito da un affondo in avanti, catalizzando un ricordo di pura e intensa felicità.",
+    "movimentoSvg": "M 75,30 C 115,30 125,75 125,75 C 125,115 75,120 75,120 C 35,120 25,75 25,75 C 25,35 75,30 75,30 Z M 75,75 L 130,55",
+    "descrizione": "Incluso nel programma didattico di VI Anno (D.C.A.O. - Incanto Patronus). Uno degli incantesimi difensivi più complessi e potenti della magia antica. Evoca una figura eterea argentea (corporea o incorporea) alimentata dalla felicità, che respinge Dissennatori e Lethifold e funge da messaggero parlante.",
+    "etimologia": "Dal latino expectare (attendere, invocare) e patronus (protettore, difensore).",
+    "valenza": 8,
+    "sommaLettere": 71,
+    "valenzaOpposta": 2,
     "maxRipetizioni": 1,
-    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 71 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "balbutio",
+    "anno": 6,
+    "annoLabel": "VI Anno (Maledictio - D.C.A.O.)",
+    "nome": "Maledizione Balbuziente (Balbutio)",
+    "formula": "Balbutio",
+    "ripetibile": false,
+    "tipologia": "Maledizione / Inibizione Verbale",
+    "inDuello": true,
+    "duelloNote": "Molto efficace in duello contro maghi che non padroneggiano il lancio non-verbale: blocca la favella e fa balbettare convulsamente il bersaglio rendendo nulli gli incantesimi verbali.",
+    "movimento": "Doppio scatto orizzontale a zig-zag serrato all'altezza della gola.",
+    "movimentoSvg": "M 40,75 L 60,65 L 75,85 L 90,65 L 110,75",
+    "descrizione": "Descritta in Maledictio e inserita nel programma di VI Anno (D.C.A.O. - Maledizione Balbuziente). Provoca un'improvvisa forma grave di balbuzie spasmodica che impedisce l'articolazione sillabica corretta delle formule magiche.",
+    "etimologia": "Dal latino balbutire (balbettare, inciampare nelle parole).",
+    "valenza": 1,
+    "sommaLettere": 28,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e."
   },
   {
     "id": "sectumsempra",
@@ -2720,6 +2594,27 @@ const SPELLS_DATA = [
     "maxRipetizioni": 9,
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
     "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte."
+  },
+  {
+    "id": "flagrante",
+    "anno": 6,
+    "annoLabel": "VI Anno (Maledictio - D.C.A.O.)",
+    "nome": "Maledizione Flagrante (Flagrante)",
+    "formula": "Flagrante",
+    "ripetibile": false,
+    "tipologia": "Maledizione Difensiva / Ustione da Contatto",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Viene applicata segretamente su tesori, maniglie o reliquie: all'istante del contatto fisico, il metallo arde di calore rovente provocando ustioni gravi.",
+    "movimento": "Spirale stretta sulla superficie dell'oggetto culminante con una pressione incandescente della punta.",
+    "movimentoSvg": "M 75,75 m -35,0 a 35,35 0 1,0 70,0 a 35,35 0 1,0 -70,0 M 75,50 L 75,100 M 50,75 L 100,75",
+    "descrizione": "Descritta in Maledictio e inclusa nel programma di VI Anno (D.C.A.O. - Maledizione Flagrante). Incanta oggetti e forzieri rendendoli roventi al tocco pur non mostrando alcun segno esteriore visibile (nessun fumo né fiamma apparente).",
+    "etimologia": "Dal participio latino flagrans / flagrantis (che brucia, ardente, fiammeggiante).",
+    "valenza": 3,
+    "sommaLettere": 39,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volta/e."
   },
   {
     "id": "locomotor-wibbly",
@@ -2762,6 +2657,27 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 76 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "mucus-ad-nauseam",
+    "anno": 6,
+    "annoLabel": "VI Anno (Maledictio - D.C.A.O.)",
+    "nome": "Maledizione delle Caccole (Mucus ad Nauseam)",
+    "formula": "Mucus ad Nauseam",
+    "ripetibile": true,
+    "tipologia": "Maledizione / Debilitazione Respiratoria",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello. Provoca un attacco istantaneo di raffreddore magico acuto con copiosa rinorrea verdastra che toglie il respiro e spezza il puntamento.",
+    "movimento": "Gesto ondulatorio rapido dal naso dell'incantatore verso il bersaglio con un colpo secco discendente.",
+    "movimentoSvg": "M 45,40 Q 60,85 75,60 Q 90,85 105,40 L 75,115",
+    "descrizione": "Descritta in Maledictio e inclusa nel programma di VI Anno (D.C.A.O. - Maledizione delle caccole). Provoca un colamento ininterrotto di muco denso e starnuti convulsi che debilitano l'avversario e rendono impossibile la corretta pronuncia verbale.",
+    "etimologia": "Dal latino mucus (muco) e ad nauseam (fino alla nausea, a oltranza).",
+    "valenza": 3,
+    "sommaLettere": 39,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 3,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 39 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 3 volta/e."
   },
   {
     "id": "dolohoferio",
@@ -2827,6 +2743,132 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 150 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
   },
   {
+    "id": "entomorphis",
+    "anno": 6,
+    "annoLabel": "VI Anno (Trasfigurazione)",
+    "nome": "Trasfigurazione Entomologica (Entomorphis)",
+    "formula": "Entomorphis",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Umana / Debilitazione",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello: priva la vittima dell'uso della parola e la costringe a movimenti striscianti a terra con tratti da insetto.",
+    "movimento": "Movimento a scatti rapidi a tre segmenti (capo, torace, addome).",
+    "movimentoSvg": "M 75,35 L 75,65 M 75,65 L 75,95 M 50,65 L 100,65 M 45,95 L 105,95",
+    "descrizione": "Incluso nel programma di VI Anno (Trasfigurazione Pratica - Entomorphis). Conferisce temporaneamente al soggetto colpito la morfologia e i tratti funzionali di un insetto (assenza di parola, arti a zampa, movimento strisciante).",
+    "etimologia": "Dal greco éntomon (insetto) e morphé (forma).",
+    "valenza": 8,
+    "sommaLettere": 62,
+    "valenzaOpposta": 2,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
+    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 62 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "crinus-muto",
+    "anno": 6,
+    "annoLabel": "VI Anno (Trasfigurazione)",
+    "nome": "Trasfigurazione della Capigliatura (Crinus Muto)",
+    "formula": "Crinus Muto",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Umana Estetica",
+    "inDuello": false,
+    "duelloNote": "Non da duello. Usato per mutare colore e stile di capelli e sopracciglia.",
+    "movimento": "Passaggio a pettine della bacchetta sopra il capo.",
+    "movimentoSvg": "M 40,40 C 40,70 110,70 110,40 M 55,60 L 55,100 M 75,65 L 75,110 M 95,60 L 95,100",
+    "descrizione": "Incluso nel programma di VI Anno (Trasfigurazione Pratica - Crinus Muto). Altera temporaneamente la pigmentazione, lunghezza e consistenza della chioma e delle sopracciglia umane.",
+    "etimologia": "Dal latino crinis (capello, crine) e mutare.",
+    "valenza": 9,
+    "sommaLettere": 45,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 45 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "furitum",
+    "anno": 6,
+    "annoLabel": "VI Anno (Trasfigurazione)",
+    "nome": "Trasfigurazione in Furetto (Furitum)",
+    "formula": "Furitum",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Umana-Animale / Duello",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello (anche in modo non-verbale a sorpresa): riduce l'avversario a un furetto incapace di impugnare la bacchetta e di parlare.",
+    "movimento": "Giro ellittico stretto con stoccata morbida verso il pavimento.",
+    "movimentoSvg": "M 40,85 C 40,55 110,55 110,85 C 110,115 40,115 40,85 Z M 110,85 L 130,70",
+    "descrizione": "Incluso nel programma di VI Anno (Trasfigurazione Pratica - Furitum). Trasfigura il soggetto in un furetto agile ma totalmente innocuo e privo di parola. Il ritorno richiede un controincantesimo non-verbale.",
+    "etimologia": "Dal latino fur, furis (ladro, alludendo alla natura furtiva del furetto).",
+    "valenza": 9,
+    "sommaLettere": 36,
+    "valenzaOpposta": 1,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
+    "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 36 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "paperante",
+    "anno": 6,
+    "annoLabel": "VI Anno (Trasfigurazione)",
+    "nome": "Trasfigurazione in Papera (Paperate)",
+    "formula": "Paperante",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione da Duello",
+    "inDuello": true,
+    "duelloNote": "Arma definitiva da duello trasfigurativo: trasforma all'istante l'avversario in un'oca o papera, privandolo di ogni capacità di attacco magico.",
+    "movimento": "Movimenti circolari continui in senso orario dalla sommità del capo fino ai piedi del rivale.",
+    "movimentoSvg": "M 75,25 C 105,25 115,65 75,85 C 45,100 45,125 75,125 C 105,125 115,100 75,85",
+    "descrizione": "Incluso nel programma di VI Anno (Trasfigurazione Pratica - Paperate). Ideato intorno al VII secolo: priva completamente il duellante della possibilità di contrattaccare chiudendo rapidamente il duello a proprio favore. L'essenza resta intatta.",
+    "etimologia": "Dal termine volgare papera con suffisso participiale -ante.",
+    "valenza": 6,
+    "sommaLettere": 42,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "piscofors",
+    "anno": 6,
+    "annoLabel": "VI Anno (Trasfigurazione)",
+    "nome": "Trasfigurazione in Pesce (Piscofors)",
+    "formula": "Piscofors",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Animata-Animata",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duelli acquatici o per rendere inerme un rivale sulla terraferma trasformandolo in un pesce boccheggiante.",
+    "movimento": "Sinuosa onda orizzontale a forma di pinna di pesce.",
+    "movimentoSvg": "M 35,75 C 60,45 90,45 115,75 C 90,105 60,105 35,75 Z M 115,75 L 130,60 M 115,75 L 130,90",
+    "descrizione": "Incluso nel programma di VI Anno (Trasfigurazione Pratica - Piscofors). Trasforma temporaneamente un essere animato in un pesce. Reso celebre dalle prove del Torneo Tremaghi per l'adattamento subacqueo.",
+    "etimologia": "Dal latino piscis (pesce) e -fors.",
+    "valenza": 3,
+    "sommaLettere": 48,
+    "valenzaOpposta": 7,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
+    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 48 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "pullus",
+    "anno": 6,
+    "annoLabel": "VI Anno (Trasfigurazione)",
+    "nome": "Trasfigurazione in Pollo (Pullus)",
+    "formula": "Pullus",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Umana-Aviaria / Duello",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello: trasforma temporaneamente l'avversario in un pollo starnazzante e innocuo. Micidiale contro gli Erkling della Foresta Nera.",
+    "movimento": "Puntamento frontale e scatto a becco con battito d'ali.",
+    "movimentoSvg": "M 50,80 Q 75,40 100,80 M 75,40 L 75,110",
+    "descrizione": "Incluso nel programma di VI Anno (Trasfigurazione Pratica - Pullus). Documentato nel 1754 a seguito dell'impiego da parte del corridore su scopa italiano Silvio Astolfi. Trasforma la persona in un pollo; reversibile con Finite Incantatem non-verbale.",
+    "etimologia": "Dal latino pullus (pulcino, piccolo animale, pollo).",
+    "valenza": 2,
+    "sommaLettere": 20,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Angolo / Linea (Dualismo)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica 20 ridotta a 2). Valenza opposta di simmetria: 8. Figura operativa per Signo: Angolo / Linea (Dualismo). Limite di reiterazione efficace: 1 volte."
+  },
+  {
     "id": "transatio-objecto",
     "anno": 6,
     "annoLabel": "VI Anno (Liber Sextus)",
@@ -2890,6 +2932,48 @@ const SPELLS_DATA = [
     "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 113 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 5 volta/e."
   },
   {
+    "id": "obliviate",
+    "anno": 7,
+    "annoLabel": "VII Anno (Incantesimi)",
+    "nome": "Cancellazione della Memoria (Oblivion / Obliviate)",
+    "formula": "Obliviate",
+    "ripetibile": false,
+    "tipologia": "Magia della Mente / Modifica Mnemonica",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile nei duelli sportivi (uso riservato agli Obliviatori ministeriali o a maghi oscuri).",
+    "movimento": "Torsione lenta del polso in senso antiorario a spirale risucchiante diretta alla fronte.",
+    "movimentoSvg": "M 75,75 m -35,0 a 35,35 0 1,0 70,0 a 25,25 0 1,0 -50,0 a 15,15 0 1,0 30,0",
+    "descrizione": "Incluso nel programma ministeriale di VII Anno (Incantesimi - Incantesimo di cancellazione della Memoria). Ideato nel Seicento da Mnemosine Radford. Cancella ricordi specifici o interi fili conduttori della memoria babbana o magica. Se eseguito male può provocare danni neurologici permanenti (Area di Broca).",
+    "etimologia": "Dal latino oblivisci (dimenticare, cancellare dalla mente).",
+    "valenza": 5,
+    "sommaLettere": 41,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 41 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "reverto",
+    "anno": 7,
+    "annoLabel": "VII Anno (Trasfigurazione - Teoria Homine Reverto)",
+    "nome": "Controincantesimo Trasfigurativo di I Livello (Reverto)",
+    "formula": "Reverto",
+    "ripetibile": false,
+    "tipologia": "Contro-incantesimo Trasfigurativo",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello per annullare rapidamente trasfigurazioni semplici applicate su oggetti o creature sul campo.",
+    "movimento": "Movimento spiraleggiante retrogrado con stoccata al centro.",
+    "movimentoSvg": "M 110,75 A 35,35 0 1,0 40,75 M 40,75 L 75,75",
+    "descrizione": "Incluso nel programma di VII Anno (Trasfigurazione Teoria - Pozione/Controincanto Homine Reverto [Teoria]). Annulla le alterazioni molecolari semplici ripristinando il ceppo e la conformazione originaria del materiale o dell'organismo.",
+    "etimologia": "Dal latino revertere (ritornare allo stato originario).",
+    "valenza": 4,
+    "sommaLettere": 40,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Quadrato (Immanenza / Risoluzione)",
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura operativa per Signo: Quadrato (Immanenza / Risoluzione). Limite di reiterazione efficace: 1 volte."
+  },
+  {
     "id": "capio-memoriam",
     "anno": 7,
     "annoLabel": "VII Anno (Liber Septimus)",
@@ -2909,27 +2993,6 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
     "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volta/e."
-  },
-  {
-    "id": "morsmordre",
-    "anno": 7,
-    "annoLabel": "VII Anno (Oltre il Mago)",
-    "nome": "Evocazione del Marchio Nero (Morsmordre)",
-    "formula": "Morsmordre",
-    "ripetibile": false,
-    "tipologia": "Magia Oscura / Marchio del Terrore",
-    "inDuello": false,
-    "duelloNote": "Non impiegabile come attacco in duello. Viene scagliato in alto verso il cielo per firmare un luogo di massacro.",
-    "movimento": "Puntare la bacchetta verso la volta celeste e imprimere una rotazione a spirale verso l'alto con un lampo verde veleno.",
-    "movimentoSvg": "M 75,120 Q 55,80 75,55 Q 95,30 75,25",
-    "descrizione": "Trattato nel testo di D.C.A.O. superiore Oltre il Mago (Y. I. Mortem, VII Anno). Proietta nel cielo notturno un colossale teschio formato da fumo verde smeraldo da cui fuoriesce un serpente vivo dalla bocca. Simbolo di Lord Voldemort e dei Mangiamorte.",
-    "etimologia": "Dal latino mors (morte) e il francese mordre (mordere).",
-    "valenza": 3,
-    "sommaLettere": 57,
-    "valenzaOpposta": 7,
-    "maxRipetizioni": 1,
-    "figuraGeometrica": "Triangolo equilatero (Unificazione)",
-    "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 57 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volte."
   },
   {
     "id": "abscondas",
@@ -3014,6 +3077,90 @@ const SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Triangolo equilatero (Unificazione)",
     "noteAritmantiche": "Valenza Magica 3 (somma pitagorica 66 ridotta a 3). Valenza opposta di simmetria: 7. Figura operativa per Signo: Triangolo equilatero (Unificazione). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "portus",
+    "anno": 7,
+    "annoLabel": "VII Anno (Incantesimi - Famiglia Trasporti)",
+    "nome": "Incantesimo Passaporta (Portus)",
+    "formula": "Portus",
+    "ripetibile": false,
+    "tipologia": "Aritmantico / Traslazione ad Area",
+    "inDuello": false,
+    "duelloNote": "Non da duello d'attacco rapido; utilizzabile per ritirate tattiche d'emergenza predisposte o per evacuare alleati su un oggetto prefissato.",
+    "movimento": "Puntamento fermo e prolungato sull'oggetto con tocco vibrante al termine della formula; rilascia un bagliore azzurro.",
+    "movimentoSvg": "M 40,75 L 110,75 M 90,55 L 110,75 L 90,95 M 75,40 A 35,35 0 0,1 75,110",
+    "descrizione": "Incluso nel programma di VII Anno (Incantesimi - Famiglia dei Trasporti: Passaporta). Trattato anche nel Liber Sextus del Codex Arithmantiae. Trattato nel Liber Sextus (Cap. IV). Trasforma qualsiasi oggetto comune in una Passaporta abilitata a trasportare chiunque la tocchi a una destinazione e ora prestabilite.",
+    "etimologia": "Dal latino porta (passaggio, varco d'accesso).",
+    "valenza": 1,
+    "sommaLettere": 28,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 28 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volta/e."
+  },
+  {
+    "id": "adduco-maxima",
+    "anno": 7,
+    "annoLabel": "VII Anno (Incantesimi & Trasfigurazione)",
+    "nome": "Incantesimo di Estensione Irriconoscibile (Adduco Maxima)",
+    "formula": "Adduco Maxima",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Spaziale Avanzata",
+    "inDuello": false,
+    "duelloNote": "Non utilizzabile in duello. Crea uno spazio interno dimensionalmente espanso all'interno di un contenitore (es. borse, tende, stanze).",
+    "movimento": "Insieme di più circonferenze concentriche che richiamano l'espansione molecolare interna.",
+    "movimentoSvg": "M 75,75 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0 M 75,75 m -25,0 a 25,25 0 1,1 50,0 a 25,25 0 1,1 -50,0",
+    "descrizione": "Incluso nel programma di VII Anno (Incantesimi - Incantesimo Estensivo Irriconoscibile) e studiato come teoria in Trasfigurazione di VI Anno. Sofisticata distorsione dello spazio-tempo: genera una piega dimensionale interna permanente lasciando intatto il perimetro visibile esterno (es. Stanza delle Necessità o borse senza fondo).",
+    "etimologia": "Dal latino adducere (aggiungere, dilatare) e maxima.",
+    "valenza": 1,
+    "sommaLettere": 46,
+    "valenzaOpposta": 9,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Circonferenza (Elemento Acqua)",
+    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 46 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "animaleus-nobodyx",
+    "anno": 7,
+    "annoLabel": "VII Anno (Trasfigurazione - Teoria Animagia)",
+    "nome": "Incantesimo di Ripristino Umano (Animaleus Nobodyx)",
+    "formula": "Animaleus Nobodyx",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione Correttiva / Disvelamento",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello contro animagi o avversari trasfigurati per forzarne istantaneamente il ritorno alla forma umana originaria.",
+    "movimento": "Puntare con assoluta fermezza la bacchetta verso l'individuo trasfigurato pronunciando chiaramente la formula rituale.",
+    "movimentoSvg": "M 35,75 L 115,75 M 100,55 L 115,75 L 100,95",
+    "descrizione": "Incluso nel programma di VII Anno (Trasfigurazione Teoria - Incantesimo Animaleus Nobodyx [Teoria]). Formula di sicurezza per il disvelamento delle trasfigurazioni umane. Formula strategica di disvelamento identitario (nessuno è più animale). Riattiva istantaneamente le funzioni neurofisiologiche umane, frequenza cardiaca ed encefalica.",
+    "etimologia": "Composto pseudo-latino animal-eus e nobody (nessuno è più animale).",
+    "valenza": 5,
+    "sommaLettere": 68,
+    "valenzaOpposta": 5,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
+    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 68 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte."
+  },
+  {
+    "id": "patronus-messaggero",
+    "anno": 7,
+    "annoLabel": "VII Anno (D.C.A.O. Superiore)",
+    "nome": "Incanto Patronus Messaggero (Expecto Patronum Vocalis)",
+    "formula": "Expecto Patronum",
+    "ripetibile": false,
+    "tipologia": "Incanto Protettivo Superiore / Messaggero Vocale",
+    "inDuello": false,
+    "duelloNote": "Non da combattimento diretto. Invenzione riservata all'Ordine della Fenice (ideata da Albus Silente): il Patronus assume consistenza corporea o semitrasparente e parla con la voce stessa dell'evocatore per recapitare comunicazioni segrete a prova di intercettazione.",
+    "movimento": "Ampio cerchio fluido dal cuore verso l'esterno, accompagnato da un sussurro mentale del messaggio da trasmettere.",
+    "movimentoSvg": "M 75,45 C 50,45 35,65 35,85 C 35,110 65,120 75,130 C 85,120 115,110 115,85 C 115,65 100,45 75,45 Z",
+    "descrizione": "Incluso nel programma didattico di VII Anno (D.C.A.O. - Incanto Patronus Messaggero). Variante avanzatissima ideata da Silente: il Patronus si muove istantaneamente attraverso qualsiasi distanza e ostacolo, manifestandosi davanti al destinatario e ripetendo il messaggio con la voce dell'incantatore prima di dissolversi.",
+    "etimologia": "Dal latino patronus (protettore, difensore).",
+    "valenza": 6,
+    "sommaLettere": 69,
+    "valenzaOpposta": 4,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 69 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volta/e."
   },
   {
     "id": "in-fine-laqueo",

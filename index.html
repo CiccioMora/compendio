@@ -134,14 +134,14 @@
             <span>📅</span> Filtro Anno di Corso:
           </label>
           <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Tutti gli Anni (144)</option>
+            <option value="ALL">Tutti gli Anni (151)</option>
             <option value="1">I Anno — Fondamenti & Cinetica (16)</option>
-            <option value="2">II Anno — Fatture & Inanimati (14)</option>
-            <option value="3">III Anno — Gelo, Impatto & Locomozione (16)</option>
-            <option value="4">IV Anno — Tattiche & Medimagia (20)</option>
-            <option value="5">V Anno — Umana, Esplosivi & Maledizioni (22)</option>
-            <option value="6">VI Anno — Maledictio & Liber Sextus (19)</option>
-            <option value="7">VII Anno — Oltre il Mago & Liber Septimus (16)</option>
+            <option value="2">II Anno — Fatture & Inanimati (13)</option>
+            <option value="3">III Anno — Gelo & Locomozione (14)</option>
+            <option value="4">IV Anno — Tattiche & Medimagia (18)</option>
+            <option value="5">V Anno — G.U.F.O. & Esplosivi (10)</option>
+            <option value="6">VI Anno — M.A.G.O. I: Maledictio, Trasfigurazione, Incantesimi & Lib. VI (38)</option>
+            <option value="7">VII Anno — M.A.G.O. II: Oltre il Mago, Trasporti, Animagia & Lib. VII (21)</option>
             <option value="0">Aritmanzia — Hawstein: Liber I-V & Trattati Operativi (21)</option>
           </select>
         </div>
@@ -152,9 +152,9 @@
             <span>⚔️</span> Utilizzo in Duello:
           </label>
           <select id="duelFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-            <option value="ALL">Duello: Qualsiasi (144)</option>
-            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (93)</option>
-            <option value="NO">⛔ Non da Duello / Rituale: NO (51)</option>
+            <option value="ALL">Duello: Qualsiasi (151)</option>
+            <option value="YES">⚔️ Utilizzabile in Duello: SÌ (96)</option>
+            <option value="NO">⛔ Non da Duello / Rituale: NO (55)</option>
           </select>
         </div>
 
@@ -194,35 +194,35 @@
         <div>
           <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
             <span>Filtro Rapido per Anno di Corso:</span>
-            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">144 incantesimi trovati</span>
+            <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">151 incantesimi trovati</span>
           </div>
           <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
             <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (144)
+              Tutti (151)
             </button>
             <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               I Anno (16)
             </button>
             <button data-year="2" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              II Anno (14)
+              II Anno (13)
             </button>
             <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              III Anno (16)
+              III Anno (14)
             </button>
             <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              IV Anno (20)
+              IV Anno (18)
             </button>
             <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              V Anno (22)
+              V Anno (10)
             </button>
             <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VI Anno / Maledictio & Lib. VI (19)
+              VI Anno (38)
             </button>
             <button data-year="7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VII Anno / Oltre il Mago & Lib. VII (16)
+              VII Anno (21)
             </button>
             <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              Aritmanzia / Liber I-V (21)
+              Aritmanzia (21)
             </button>
           </div>
         </div>
@@ -234,13 +234,13 @@
             <span class="text-slate-400 font-medium">Duello:</span>
             <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
               <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
-                Tutti (144)
+                Tutti (151)
               </button>
               <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
-                ⚔️ Da Duello: SÌ (93)
+                ⚔️ Da Duello: SÌ (96)
               </button>
               <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
-                ⛔ Non da Duello: NO (51)
+                ⛔ Non da Duello: NO (55)
               </button>
             </div>
           </div>
