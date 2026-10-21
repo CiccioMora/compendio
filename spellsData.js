@@ -1,5 +1,5 @@
-// spellsData.js - Archivio Completo dei 289 Incantesimi e Rune dell'Antico Futhark
-const SPELLS_DATA = [
+// spellsData.js - Archivio Completo dei 293 Incantesimi e Rune dell'Antico Futhark
+var SPELLS_DATA = [
   {
     "id": "chartanimus",
     "anno": 1,
@@ -6622,3 +6622,10 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚷ Gebo (Pos. 7ª)"
   }
 ];
+
+if (typeof window !== 'undefined') {
+  window.SPELLS_DATA = SPELLS_DATA;
+}
+if (typeof globalThis !== 'undefined') {
+  globalThis.SPELLS_DATA = SPELLS_DATA;
+}

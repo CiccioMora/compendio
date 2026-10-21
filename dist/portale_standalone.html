@@ -401,7 +401,6 @@
         </div>
       </div>
     </div>
-    </div>
   </section>
 
   <!-- MAIN CARDS GRID CONTAINER -->
@@ -16296,8 +16295,8 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
 
   <!-- SCRIPTS: DATABASE & APP LOGIC -->
   <script>
-// spellsData.js - Archivio Completo dei 289 Incantesimi e Rune dell'Antico Futhark
-const SPELLS_DATA = [
+// spellsData.js - Archivio Completo dei 293 Incantesimi e Rune dell'Antico Futhark
+var SPELLS_DATA = [
   {
     "id": "chartanimus",
     "anno": 1,
@@ -22955,6 +22954,13 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
   }
 ];
 
+if (typeof window !== 'undefined') {
+  window.SPELLS_DATA = SPELLS_DATA;
+}
+if (typeof globalThis !== 'undefined') {
+  globalThis.SPELLS_DATA = SPELLS_DATA;
+}
+
 </script>
   <script>
 /**
@@ -28583,6 +28589,11 @@ window.materieData = {
 ]
 };
 
+var materieData = window.materieData;
+if (typeof globalThis !== 'undefined') {
+  globalThis.materieData = window.materieData;
+}
+
 </script>
   <script>
 // app.js - Logica Applicativa e Interattività del Portale Unificato di Hogwarts
@@ -28629,10 +28640,11 @@ function initPortal() {
       secondaryIcon: "ᛟ",
       secondaryLabel: "Aett Runico:",
       secondaryOptions: [
-        { label: "Tutti gli Aett Futhark", value: "ALL" },
-        { label: "Primo Aett (Freyr)", value: "Freyr" },
-        { label: "Secondo Aett (Heimdall)", value: "Heimdall" },
-        { label: "Terzo Aett (Tiwaz)", value: "Tiwaz" }
+        { label: "Tutti gli Aett (25 Rune)", value: "ALL" },
+        { label: "1° Aett di Urd (Rune 1-8)", value: "Urd" },
+        { label: "2° Aett di Verdandi (Rune 9-16)", value: "Verdandi" },
+        { label: "3° Aett di Skuld (Rune 17-24)", value: "Skuld" },
+        { label: "Centro del Wyrd (25ª Runa)", value: "Wyrd" }
       ]
     },
     creatures: {
@@ -28838,18 +28850,48 @@ function initPortal() {
   const itemModalSubtitle = document.getElementById("itemModalSubtitle");
   const itemModalContentBody = document.getElementById("itemModalContentBody");
 
+  // --- Universal Data Retrievers (Safe against scope, browser and module differences) ---
+  function getAllSpells() {
+    if (typeof window !== "undefined" && window.SPELLS_DATA && Array.isArray(window.SPELLS_DATA) && window.SPELLS_DATA.length > 0) {
+      return window.SPELLS_DATA;
+    }
+    if (typeof SPELLS_DATA !== "undefined" && Array.isArray(SPELLS_DATA) && SPELLS_DATA.length > 0) {
+      return SPELLS_DATA;
+    }
+    if (typeof globalThis !== "undefined" && globalThis.SPELLS_DATA && Array.isArray(globalThis.SPELLS_DATA) && globalThis.SPELLS_DATA.length > 0) {
+      return globalThis.SPELLS_DATA;
+    }
+    return [];
+  }
+
+  function getMaterieData() {
+    if (typeof window !== "undefined" && window.materieData) {
+      return window.materieData;
+    }
+    if (typeof materieData !== "undefined") {
+      return materieData;
+    }
+    if (typeof globalThis !== "undefined" && globalThis.materieData) {
+      return globalThis.materieData;
+    }
+    return { creature: [], piante: [], pozioni: [] };
+  }
+
   // --- Helper: Retrieve Dataset by Macro ---
   function getDatasetForMacro(macro) {
+    const allSpells = getAllSpells();
+    const mat = getMaterieData();
+
     if (macro === "spells") {
-      return (window.SPELLS_DATA || []).filter(s => !s.isRune);
+      return allSpells.filter(s => !s.isRune);
     } else if (macro === "runes") {
-      return (window.SPELLS_DATA || []).filter(s => s.isRune);
+      return allSpells.filter(s => s.isRune);
     } else if (macro === "creatures") {
-      return window.materieData?.creature || [];
+      return mat.creature || [];
     } else if (macro === "plants") {
-      return window.materieData?.piante || [];
+      return mat.piante || [];
     } else if (macro === "potions") {
-      return window.materieData?.pozioni || [];
+      return mat.pozioni || [];
     }
     return [];
   }
@@ -28951,11 +28993,13 @@ function initPortal() {
 
   // --- Global Stats Update ---
   function updateStats() {
-    const spells = (window.SPELLS_DATA || []).filter(s => !s.isRune);
-    const runes = (window.SPELLS_DATA || []).filter(s => s.isRune);
-    const creatures = window.materieData?.creature || [];
-    const plants = window.materieData?.piante || [];
-    const potions = window.materieData?.pozioni || [];
+    const allSpells = getAllSpells();
+    const mat = getMaterieData();
+    const spells = allSpells.filter(s => !s.isRune);
+    const runes = allSpells.filter(s => s.isRune);
+    const creatures = mat.creature || [];
+    const plants = mat.piante || [];
+    const potions = mat.pozioni || [];
 
     if (statTotal) statTotal.textContent = spells.length;
     if (statRunes) statRunes.textContent = runes.length;
@@ -29267,6 +29311,67 @@ function initPortal() {
     `;
   }
 
+  function renderRuneCardHtml(rune) {
+    const symbolChar = (rune.formula || '').split(' ')[0] || 'ᛟ';
+    return `
+      <div class="glass-card rounded-2xl p-5 flex flex-col justify-between cursor-pointer group border border-indigo-500/25 hover:border-indigo-400 hover:shadow-indigo-500/10 transition-all" onclick="openSpellDetails('${rune.id}')">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-300 border border-indigo-700/60 font-magic">
+              ᛟ ${rune.aett || 'Futhark'}
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 shadow-sm">
+              <span>Pos.</span> ${rune.posizioneAlfabeto || '1ª'}
+            </span>
+          </div>
+
+          <div class="flex items-start justify-between gap-3 mb-2">
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold font-magic text-slate-100 group-hover:text-indigo-300 transition-colors mb-1">
+                ${highlightText(rune.nome, searchQuery)}
+              </h3>
+              <span class="font-code text-xs px-2.5 py-1 rounded-lg bg-indigo-500/15 border border-indigo-500/30 text-indigo-200 font-bold tracking-wider inline-block">
+                ${highlightText(rune.formula, searchQuery)}
+              </span>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-indigo-950/90 border border-indigo-500/40 flex items-center justify-center text-2xl text-indigo-300 shadow-inner shrink-0 group-hover:scale-110 transition-transform">
+              ${symbolChar}
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-300 line-clamp-3 leading-relaxed mb-4">
+            ${highlightText(rune.descrizione, searchQuery)}
+          </p>
+        </div>
+
+        <div class="border-t border-slate-800/80 pt-3 space-y-2">
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center gap-1.5">
+              <span class="text-slate-400">Valenza:</span>
+              <span class="font-code font-bold text-amber-400 bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-700/40">
+                V${rune.valenza}
+              </span>
+              <span class="text-[11px] text-slate-400">
+                (Opp. ${rune.valenzaOpposta})
+              </span>
+            </div>
+            <div class="text-[11px] text-indigo-400 font-medium truncate max-w-[140px]" title="${rune.pietraConsacrata || ''}">
+              💎 ${rune.pietraConsacrata || 'Consacrata'}
+            </div>
+          </div>
+
+          <div class="text-[11px] text-slate-400 line-clamp-1 italic bg-slate-950/40 px-2 py-1 rounded">
+            ✍️ ${highlightText(rune.movimento, searchQuery)}
+          </div>
+
+          <div class="pt-1 flex items-center justify-end text-xs text-indigo-400 font-semibold group-hover:translate-x-1 transition-transform">
+            <span>Dettagli Runa & Tracciamento →</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   function renderCreatureCardHtml(item) {
     let classColor = 'bg-slate-800 text-slate-300 border-slate-700';
     if (item.classificazione === 'X') classColor = 'bg-slate-800/80 text-slate-300 border-slate-700';
@@ -29404,8 +29509,10 @@ function initPortal() {
       noResultsState.style.display = "none";
     }
 
-    if (activeMacro === "spells" || activeMacro === "runes") {
+    if (activeMacro === "spells") {
       spellsGrid.innerHTML = filtered.map(s => renderSpellCardHtml(s)).join("");
+    } else if (activeMacro === "runes") {
+      spellsGrid.innerHTML = filtered.map(r => renderRuneCardHtml(r)).join("");
     } else if (activeMacro === "creatures") {
       spellsGrid.innerHTML = filtered.map(c => renderCreatureCardHtml(c)).join("");
     } else if (activeMacro === "plants") {
@@ -29417,7 +29524,8 @@ function initPortal() {
 
   // --- Open Detailed Spell/Rune Modal ---
   window.openSpellDetails = function(spellId) {
-    const spell = (window.SPELLS_DATA || []).find(s => s.id === spellId);
+    const allSpells = getAllSpells();
+    const spell = allSpells.find(s => s.id === spellId);
     if (!spell) return;
 
     modalTitle.textContent = spell.nome;
@@ -29722,10 +29830,11 @@ function initPortal() {
 
   // --- Detailed Item Modal (Creature, Piante, Pozioni) ---
   window.openItemDetails = function(macro, id) {
+    const mat = getMaterieData();
     let dataset = [];
-    if (macro === "creatures") dataset = window.materieData?.creature || [];
-    else if (macro === "plants") dataset = window.materieData?.piante || [];
-    else if (macro === "potions") dataset = window.materieData?.pozioni || [];
+    if (macro === "creatures") dataset = mat.creature || [];
+    else if (macro === "plants") dataset = mat.piante || [];
+    else if (macro === "potions") dataset = mat.pozioni || [];
 
     const item = dataset.find(x => x.id === id);
     if (!item) return;

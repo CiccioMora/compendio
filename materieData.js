@@ -5623,3 +5623,8 @@ window.materieData = {
   }
 ]
 };
+
+var materieData = window.materieData;
+if (typeof globalThis !== 'undefined') {
+  globalThis.materieData = window.materieData;
+}
