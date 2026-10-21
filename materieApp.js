@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         count = currentDataset.filter(i => String(i.anno) === btnInfo.value).length;
       }
 
-      btn.className = `px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border flex items-center gap-1.5 ${
+      btn.className = `year-filter-btn cursor-pointer px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border flex items-center gap-1.5 ${
         isSelected
           ? 'bg-amber-600 text-white border-amber-500 shadow-lg shadow-amber-600/30'
           : 'bg-slate-900/60 text-slate-300 border-slate-700/60 hover:border-amber-500/50 hover:text-white'
@@ -124,11 +124,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: 'Piante Velenose', value: 'Piante Velenose' },
         { label: 'Piante Antropomorfe', value: 'Piante Antropomorfe' },
         { label: 'Alteratrici di Stato', value: 'Alteratrici di Stato' },
-        { label: 'Piante Maestre & Avanzate', value: 'Piante Maestre & Avanzate' },
-        { label: 'Famiglia delle Fagiole', value: 'Famiglia delle Fagiole' },
-        { label: 'Strumentazione Magica', value: 'Strumentazione Magica' },
+        { label: 'Alberi Nobili & Legnami Magici', value: 'Alberi Nobili' },
+        { label: 'Piante Maestre & Avanzate', value: 'Piante Maestre' },
+        { label: 'Famiglia delle Fagiole', value: 'Fagiole' },
+        { label: 'Strumentazione Magica', value: 'Strumentazione' },
         { label: 'Formule Botaniche', value: 'Formule Botaniche' },
-        { label: 'Anatomia Botanica', value: 'Anatomia Botanica' }
+        { label: 'Anatomia Botanica', value: 'Anatomia Botanica' },
+        { label: 'Tecniche di Difesa & Bonifica', value: 'Bonifica' }
       ];
       types.forEach(opt => {
         const el = document.createElement('option');
@@ -145,10 +147,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: 'Alteratrice di Stato', value: 'Alteratrice' },
         { label: 'Veleno / Tossico', value: 'Veleno' },
         { label: 'Antidoto', value: 'Antidoto' },
-        { label: "Filtro d'Amore", value: 'Filtro' },
+        { label: "Filtro d'Amore / Emotivo", value: 'Filtro' },
         { label: 'Elisir', value: 'Elisir' },
+        { label: 'Sonnifero / Soporifera', value: 'Soporifera' },
         { label: 'Per Oggetti / Tattica', value: 'Oggetti' },
-        { label: 'Speciale / Proibita', value: 'Oscura' }
+        { label: 'Cosmetica / Aspetto', value: 'Cosmetica' },
+        { label: 'Veterinaria Magica', value: 'Veterinaria' },
+        { label: 'Magia Oscura / Proibita', value: 'Oscura' }
       ];
       types.forEach(opt => {
         const el = document.createElement('option');
@@ -261,9 +266,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filtered.length === 0) {
       cardsGrid.classList.add('hidden');
       noResultsState.classList.remove('hidden');
+      noResultsState.style.display = 'block';
     } else {
       cardsGrid.classList.remove('hidden');
       noResultsState.classList.add('hidden');
+      noResultsState.style.display = 'none';
     }
   }
 
@@ -511,11 +518,15 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
 
+    itemModal.style.display = 'flex';
+    itemModal.classList.remove('hidden');
     itemModal.classList.add('active');
   }
 
   function closeModal() {
     itemModal.classList.remove('active');
+    itemModal.classList.add('hidden');
+    itemModal.style.display = 'none';
   }
 
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);

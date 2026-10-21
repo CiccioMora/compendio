@@ -89,18 +89,22 @@
       display: none !important;
     }
 
-    #spellModal, #calculatorModal, #noResultsState {
-      display: none;
-      pointer-events: none;
+    #spellModal, #calculatorModal, #itemModal {
+      display: none !important;
+      pointer-events: none !important;
     }
 
-    #spellModal.active, #calculatorModal.active {
+    #spellModal.active, #calculatorModal.active, #itemModal.active {
       display: flex !important;
       pointer-events: auto !important;
     }
 
+    #noResultsState {
+      display: none;
+    }
+
     /* Interactive button styles */
-    .year-tab, .duel-seg-btn, .val-pill, .macro-btn {
+    .year-tab, .duel-seg-btn, .val-pill, .macro-btn, .macro-tab, .year-filter-btn {
       cursor: pointer;
       user-select: none;
     }

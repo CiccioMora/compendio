@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         count = currentDataset.filter(i => String(i.anno) === btnInfo.value).length;
       }
 
-      btn.className = `px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border flex items-center gap-1.5 ${
+      btn.className = `year-filter-btn cursor-pointer px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border flex items-center gap-1.5 ${
         isSelected
           ? 'bg-amber-600 text-white border-amber-500 shadow-lg shadow-amber-600/30'
           : 'bg-slate-900/60 text-slate-300 border-slate-700/60 hover:border-amber-500/50 hover:text-white'
@@ -163,11 +163,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: 'Piante Velenose', value: 'Piante Velenose' },
         { label: 'Piante Antropomorfe', value: 'Piante Antropomorfe' },
         { label: 'Alteratrici di Stato', value: 'Alteratrici di Stato' },
-        { label: 'Piante Maestre & Avanzate', value: 'Piante Maestre & Avanzate' },
-        { label: 'Famiglia delle Fagiole', value: 'Famiglia delle Fagiole' },
-        { label: 'Strumentazione Magica', value: 'Strumentazione Magica' },
+        { label: 'Alberi Nobili & Legnami Magici', value: 'Alberi Nobili' },
+        { label: 'Piante Maestre & Avanzate', value: 'Piante Maestre' },
+        { label: 'Famiglia delle Fagiole', value: 'Fagiole' },
+        { label: 'Strumentazione Magica', value: 'Strumentazione' },
         { label: 'Formule Botaniche', value: 'Formule Botaniche' },
-        { label: 'Anatomia Botanica', value: 'Anatomia Botanica' }
+        { label: 'Anatomia Botanica', value: 'Anatomia Botanica' },
+        { label: 'Tecniche di Difesa & Bonifica', value: 'Bonifica' }
       ];
       types.forEach(opt => {
         const el = document.createElement('option');
@@ -184,10 +186,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: 'Alteratrice di Stato', value: 'Alteratrice' },
         { label: 'Veleno / Tossico', value: 'Veleno' },
         { label: 'Antidoto', value: 'Antidoto' },
-        { label: "Filtro d'Amore", value: 'Filtro' },
+        { label: "Filtro d'Amore / Emotivo", value: 'Filtro' },
         { label: 'Elisir', value: 'Elisir' },
+        { label: 'Sonnifero / Soporifera', value: 'Soporifera' },
         { label: 'Per Oggetti / Tattica', value: 'Oggetti' },
-        { label: 'Speciale / Proibita', value: 'Oscura' }
+        { label: 'Cosmetica / Aspetto', value: 'Cosmetica' },
+        { label: 'Veterinaria Magica', value: 'Veterinaria' },
+        { label: 'Magia Oscura / Proibita', value: 'Oscura' }
       ];
       types.forEach(opt => {
         const el = document.createElement('option');
@@ -300,9 +305,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filtered.length === 0) {
       cardsGrid.classList.add('hidden');
       noResultsState.classList.remove('hidden');
+      noResultsState.style.display = 'block';
     } else {
       cardsGrid.classList.remove('hidden');
       noResultsState.classList.add('hidden');
+      noResultsState.style.display = 'none';
     }
   }
 
@@ -550,11 +557,15 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
 
+    itemModal.style.display = 'flex';
+    itemModal.classList.remove('hidden');
     itemModal.classList.add('active');
   }
 
   function closeModal() {
     itemModal.classList.remove('active');
+    itemModal.classList.add('hidden');
+    itemModal.style.display = 'none';
   }
 
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
@@ -794,8 +805,8 @@ html_content = """<!DOCTYPE html>
   </main>
 
   <!-- Detailed Modal Popup -->
-  <div id="itemModal" class="fixed inset-0 z-50 flex items-center justify-center p-4">
-    <div id="modalBackdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"></div>
+  <div id="itemModal" style="display: none;" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden transition-opacity duration-200">
+    <div id="modalBackdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity cursor-pointer"></div>
     <div class="glass-panel relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-3xl border border-slate-700 shadow-2xl p-6 sm:p-7 z-10 flex flex-col justify-between">
       <div>
         <div class="flex items-start justify-between gap-4 mb-3">
@@ -847,5 +858,34 @@ html_content = """<!DOCTYPE html>
 with open('materie.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
 print("Generato con successo materie.html")
+
+# 4. GENERATE dist/materie_standalone.html AND ARTIFACT
+with open('style.css', 'r', encoding='utf-8') as f:
+    css_content = f.read()
+
+standalone_html = html_content
+standalone_html = standalone_html.replace(
+    '<link rel="stylesheet" href="style.css">',
+    f'<style>\n{css_content}\n</style>'
+)
+standalone_html = standalone_html.replace(
+    '<script src="materieData.js"></script>',
+    f'<script>\n{data_js}\n</script>'
+)
+standalone_html = standalone_html.replace(
+    '<script src="materieApp.js"></script>',
+    f'<script>\n{app_js}\n</script>'
+)
+
+os.makedirs('dist', exist_ok=True)
+with open('dist/materie_standalone.html', 'w', encoding='utf-8') as f:
+    f.write(standalone_html)
+print("Generato con successo dist/materie_standalone.html")
+
+artifact_path = '/Users/andreamorachioli/.gemini/antigravity/brain/3a4f7fa7-8206-4f51-b303-aa9b9d9eaf5c/materie.html'
+if os.path.exists(os.path.dirname(artifact_path)):
+    with open(artifact_path, 'w', encoding='utf-8') as f:
+        f.write(standalone_html)
+    print(f"Aggiornato con successo l'artifact {artifact_path}")
 
 print("Tutti i file del Portale Materie sono stati compilati ed esportati con successo!")
