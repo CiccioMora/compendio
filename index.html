@@ -132,7 +132,7 @@
           <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="macroFilterGroup">
             <button type="button" data-macro="spells" id="macroSpellsBtn" class="macro-btn px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 bg-amber-500 text-slate-950 shadow-md">
               <span>🪄</span>
-              <span id="macroSpellsText">Incantesimi (241)</span>
+              <span id="macroSpellsText">Incantesimi (264)</span>
             </button>
             <button type="button" data-macro="runes" id="macroRunesBtn" class="macro-btn px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 text-slate-400 hover:text-indigo-300 hover:bg-slate-900">
               <span>ᛟ</span>
@@ -143,7 +143,7 @@
 
         <!-- Macro Context Hint -->
         <div class="text-xs text-slate-400 flex items-center gap-2">
-          <span id="activeMacroHint" class="text-slate-400 text-[11px]">Visualizzazione: <strong class="text-amber-300">241 Incantesimi Didattici</strong></span>
+          <span id="activeMacroHint" class="text-slate-400 text-[11px]">Visualizzazione: <strong class="text-amber-300">264 Incantesimi Didattici</strong></span>
         </div>
       </div>
 
@@ -158,15 +158,15 @@
               <span>📅</span> Filtro Anno di Corso:
             </label>
             <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-              <option value="ALL">Tutti gli Incantesimi (241)</option>
+              <option value="ALL">Tutti gli Incantesimi (264)</option>
               <option value="1">I Anno (27)</option>
               <option value="2">II Anno (20)</option>
-              <option value="3">III Anno (30)</option>
-              <option value="4">IV Anno (26)</option>
-              <option value="5">V Anno (20)</option>
-              <option value="6">VI Anno (46)</option>
-              <option value="7">VII Anno (35)</option>
-              <option value="0">Altri (37)</option>
+              <option value="3">III Anno (34)</option>
+              <option value="4">IV Anno (33)</option>
+              <option value="5">V Anno (24)</option>
+              <option value="6">VI Anno (50)</option>
+              <option value="7">VII Anno (42)</option>
+              <option value="0">Altri (34)</option>
             </select>
           </div>
 
@@ -176,9 +176,9 @@
               <span>⚔️</span> Utilizzo in Duello:
             </label>
             <select id="duelFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-              <option value="ALL">Duello: Qualsiasi (241)</option>
-              <option value="YES">⚔️ Utilizzabile in Duello: SÌ (128)</option>
-              <option value="NO">⛔ Non da Duello / Rituale: NO (113)</option>
+              <option value="ALL">Duello: Qualsiasi (264)</option>
+              <option value="YES">⚔️ Utilizzabile in Duello: SÌ (136)</option>
+              <option value="NO">⛔ Non da Duello / Rituale: NO (128)</option>
             </select>
           </div>
 
@@ -218,11 +218,11 @@
           <div>
             <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
               <span>Filtro Rapido per Anno di Corso:</span>
-              <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">241 incantesimi trovati</span>
+              <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">264 incantesimi trovati</span>
             </div>
             <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
               <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (241)
+              Tutti (264)
               </button>
               <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               I Anno (27)
@@ -231,22 +231,22 @@
               II Anno (20)
               </button>
               <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              III Anno (30)
+              III Anno (34)
               </button>
               <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              IV Anno (26)
+              IV Anno (33)
               </button>
               <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              V Anno (20)
+              V Anno (24)
               </button>
               <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VI Anno (46)
+              VI Anno (50)
               </button>
               <button data-year="7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VII Anno (35)
+              VII Anno (42)
               </button>
               <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              Altri (37)
+              Altri (34)
               </button>
             </div>
           </div>
@@ -258,13 +258,13 @@
               <span class="text-slate-400 font-medium">Duello:</span>
               <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
                 <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
-                Tutti (241)
+                Tutti (264)
                 </button>
                 <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
-                ⚔️ Da Duello: SÌ (128)
+                ⚔️ Da Duello: SÌ (136)
                 </button>
                 <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
-                ⛔ Non da Duello: NO (113)
+                ⛔ Non da Duello: NO (128)
                 </button>
               </div>
             </div>

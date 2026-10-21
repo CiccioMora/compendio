@@ -2,7 +2,7 @@
 *Classificazione Accademica Metodologica per Anni di Studio (Hogwarts & Arcane GDR)*
 
 > [!NOTE]
-> Il presente compendio unifica l'intero corpus magico di **266 voci catalogate (241 incantesimi pratici + 25 rune dell'Antico Futhark)**, integrando le fonti didattiche ufficiali:
+> Il presente compendio unifica l'intero corpus magico di **289 voci catalogate (264 incantesimi pratici + 25 rune dell'Antico Futhark)**, integrando le fonti didattiche ufficiali:
 > - **Manuale di Studio Magico Incantesimi (Edizione 2026)** (*Yashiro Isana Mortem*): Tomi I-VII (I-VII Anno) completi di formule, gesti, etimologie e Chicche di Magia.
 > - **Programma di Trasfigurazione** (*Yashiro Isana Mortem*): Principi di trasformazione inanimata, animata, umana ed evocazioni tecniche (*Avis*, *Serpensortia*, *Orchideus*, *Ebublio*, *Obscuro*, *Pulveris*, *Slugulus Eructo*).
 > - **Astronomia Magica** (*Mary C. Silente & Trattato I-V Anno*): *Guidami*, *Alheia Croma*, *Apokros*, *Lux Perfluo*, *Astralis Cartae Dominium*, *Astra Invoco*, *Stellaris Revela*, *Stellaris Obscura*, *Caelus Memorium*, *Cometae Vocatum*, *Sidera Sentio*, *Orbis Caeli*, *Rituale Meteorio*.
@@ -11,7 +11,7 @@
 > - **Difesa Contro le Arti Oscure** (*Gellert Mortem & Yashiro Isana Mortem*): **Maledictio** (*VI Anno*), **Oltre il Mago** (*VII Anno*) e trattati anti-creature oscure (*Imposium*).
 > - **Formule Senza Anno (Altri)**: Controincanti generali, difese statiche di zona, trasfigurazione fondamentale e trattati aritmantici non vincolati ad un'annata scolastica.
 >
-> 🔗 **[Apri il Portale Web Interattivo Completo (266 Voci)](file:///Users/andreamorachioli/.gemini/antigravity/brain/3a4f7fa7-8206-4f51-b303-aa9b9d9eaf5c/portale_incantesimi.html)** oppure visualizza il progetto in locale: **[index.html](file:///Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi/index.html)**.
+> 🔗 **[Apri il Portale Web Interattivo Completo (289 Voci)](file:///Users/andreamorachioli/.gemini/antigravity/brain/3a4f7fa7-8206-4f51-b303-aa9b9d9eaf5c/portale_incantesimi.html)** oppure visualizza il progetto in locale: **[index.html](file:///Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi/index.html)**.
 
 ---
 ## 1. Fondamenti del Calcolo Aritmantico della Valenza Magica
@@ -42,7 +42,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 
 ---
 
-## 2. Tavola Generale dei 266 Incantesimi e Rune
+## 2. Tavola Generale dei 289 Incantesimi e Rune
 
 | Anno | Nome Incanto | Formula | Valenza | Opposto | Tipologia | Duello | Runa Associata |
 |:---:|---|---|:---:|:---:|---|:---:|---|
@@ -250,6 +250,29 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **VII Anno** | **Sigillo Elettromagnetizzante (Magnes Lathos Addicis)** | `Magnes Lathos Addicis` | **3** | 7 | Aritmantico / Sigillo Magnetico | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **VII Anno** | **Sigillo di Protezione Caldeo (Protègis Hòc Incanteméntum)** | `Protegis Hoc Incantementum` | **8** | 2 | Aritmantico / Sigillo Protettivo Superiore | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
 | **VII Anno** | **Sintonizzazione e Percezione Astrale (Sidera Sentio)** | `Sidera Sentio` | **3** | 7 | Percezione Extrasensoriale / Flussi Magici Astrali | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
+| **III Anno** | **Tracciamento Runico nell'Etere (Persìgno)** | `Persigno` | **4** | 6 | Magia Runica / Tracciamento nell'Etere | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
+| **III Anno** | **Attivazione Runica Epifanica (Incipìo)** | `Incipio` | **3** | 7 | Magia Runica / Attivazione Epifanica Estroflessa | ⚔️ SÌ | ᚦ Thurisaz (Pos. 3ª) |
+| **III Anno** | **Attivazione Runica Penetrante (Exsèquor)** | `Exsequor` | **7** | 3 | Magia Runica / Attivazione Penetrante della Sostanza | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
+| **IV Anno** | **Cancellazione del Segno Runico (Dèleo)** | `Deleo` | **5** | 5 | Magia Runica / Cancellazione del Segno Inerte | ⛔ NO | ᚱ Raido (Pos. 5ª) |
+| **IV Anno** | **Disattivazione Energetica Runica (Exstìnguo)** | `Exstinguo` | **8** | 2 | Magia Runica / Disattivazione Energetica | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
+| **IV Anno** | **Sigillo Celante Runico (Occùlto)** | `Occulto` | **8** | 2 | Magia Runica / Occultamento Sigillare | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
+| **IV Anno** | **Vincolo Triadico di Thoot (Iùngo)** | `Iungo` | **3** | 7 | Magia Runica / Vincolo Triadico di Thoot | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
+| **IV Anno** | **Attivazione Suprema del Legame (Vìnculum Expròmo)** | `Vinculum Expromo` | **5** | 5 | Magia Runica / Attivazione di Legami Runici | ⛔ NO | ᚱ Raido (Pos. 5ª) |
+| **IV Anno** | **Rottura di Legame Runico (Dimòtum Vìnculum)** | `Dimotum Vinculum` | **3** | 7 | Magia Runica / Dissoluzione di Vincoli | ⚔️ SÌ | ᚦ Thurisaz (Pos. 3ª) |
+| **V Anno** | **Tracciamento Libero del Futhark (Delìneo Fùthark)** | `Delineo Futhark` | **5** | 5 | Magia Runica Avanzata / Tracciamento Totale | ⛔ NO | ᚱ Raido (Pos. 5ª) |
+| **V Anno** | **Marchiatura Runica Semi-Indelebile (Stìgma Exsèquor)** | `Stigma Exsequor` | **4** | 6 | Magia Runica / Marchiatura Vivente Semi-Indelebile | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
+| **V Anno** | **Rilevazione di Marchi Runici (Stigma Detecto)** | `Stigma Detecto` | **6** | 4 | Magia Runica Diagnostica / Rilevazione Marchi | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
+| **V Anno** | **Localizzazione Telepatica Runica (Invènio)** | `Invenio` | **7** | 3 | Magia Runica / Localizzazione Telepatica | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
+| **VI Anno** | **Convocazione dei Sigilli del Futhark (Runam Tractio)** | `Runam Tractio` | **9** | 1 | Magia Runica Rituale / Convocazione Sigilli | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
+| **VI Anno** | **Purificazione di Artefatti Maledetti (Obscùrus Epuro)** | `Obscurus Epuro Candor Reversio` | **8** | 2 | Magia Runica Catartica / Purificazione Artefatti | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
+| **VI Anno** | **Rituale del Trivio Runico (Compòsitum)** | `Compositum` | **9** | 1 | Magia Runica / Fusione di Sigilli (Trivio) | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
+| **VII Anno** | **Arcanum Invocationis (Dominìum Evòco)** | `Dominium Evoco` | **5** | 5 | Alta Magia Runica / Arcanum Invocationis | ⚔️ SÌ | ᚱ Raido (Pos. 5ª) |
+| **VII Anno** | **Evocazione degli Spiriti Elementali (Nul-soleth-konef)** | `Nul-soleth-konef-Tir-nef-kohal` | **8** | 2 | Alta Magia Runica / Evocazione Elementale Ancestrale | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
+| **VII Anno** | **Illusione della Runa Bianca (Percèptio Ìntimo)** | `Perceptio Intimo` | **7** | 3 | Magia Runica Psichica / Illusione della Runa Bianca | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
+| **VII Anno** | **Alterazione Meteorologica Ancestrale (Ic-oncìplie)** | `Ic-onciplie-jecundelicas-gaestas` | **3** | 7 | Alta Magia Runica / Manipolazione Meteorologica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
+| **VII Anno** | **Vincolo Seriale e Confinamento (Collìgo)** | `Colligo` | **1** | 9 | Magia Runica / Vincolo Seriale di Confinamento | ⚔️ SÌ | ᚠ Fehu (Pos. 1ª) |
+| **VII Anno** | **Attivazione Trappola Runica (Surge et expandi)** | `Surge et expandi` | **6** | 4 | Alta Magia Runica / Attivazione Trappola Runica | ⛔ NO | ᚲ Kenaz (Pos. 6ª) |
+| **VII Anno** | **Dissoluzione del Confinamento (Rescindo Captio)** | `Rescindo Captio` | **7** | 3 | Alta Magia Runica / Dissoluzione Trappola Runica | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
 | **Antiche Rune** | **Runa Fehu (ᚠ)** | `ᚠ Fehu` | **1** | 9 | Antiche Rune / Glifo Sacro | ᛟ Runa | ᚠ Fehu (Pos. 1ª) |
 | **Antiche Rune** | **Runa Uruz (ᚢ)** | `ᚢ Uruz` | **2** | 8 | Antiche Rune / Glifo Sacro | ᛟ Runa | ᚢ Uruz (Pos. 2ª) |
 | **Antiche Rune** | **Runa Thurisaz (ᚦ)** | `ᚦ Thurisaz` | **3** | 7 | Antiche Rune / Glifo Sacro | ᛟ Runa | ᚦ Thurisaz (Pos. 3ª) |
@@ -290,14 +313,14 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Altri** | **Incantesimo Muta-Colore (Colovaria)** | `Colovaria` | **6** | 4 | Chicche di Magia / Alterazione Cromatica | ⛔ NO | ᚲ Kenaz (Pos. 6ª) |
 | **Altri** | **Incantesimo Proporzionale Aureo (Phi Porta)** | `Phi Porta` | **4** | 6 | Traslazione / Varchi Aritmantici | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **Altri** | **Incantesimo Rendi-Illegibile (Illegibilus)** | `Illegibilus` | **9** | 1 | Chicche di Magia / Riservatezza Documentale | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
-| **Altri** | **Incantesimo Rivelatore di Legami Runici (Vinculum Revelio)** | `Vinculum Revelio` | **3** | 7 | Magia Runica Investigativa / Aritmanzia | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
-| **Altri** | **Incantesimo Rivelatore di Magia Oscura (Maleficium Revelio)** | `Maleficium Revelio` | **7** | 3 | Rivelazione Forense / Anti-Magia Oscura | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
+| **IV Anno** | **Incantesimo Rivelatore di Legami Runici (Vinculum Revelio)** | `Vinculum Revelio` | **3** | 7 | Magia Runica / Diagnostica Legami di Thoot | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
+| **VI Anno** | **Incantesimo Rivelatore di Magia Oscura (Maleficium Revelio)** | `Maleficium Revelio` | **7** | 3 | Magia Runica / Rivelazione Oscura e Diagnosi Maledizioni | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
 | **Altri** | **Incantesimo Rivelatore di Pozioni di Scarpin (Revelio Minimum)** | `Revelio Minimum` | **7** | 3 | Rivelazione Analitica di Pozioni | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
 | **Altri** | **Incantesimo Rivelatore di Presenze Umane (Hommenum Revelio)** | `Hommenum Revelio` | **8** | 2 | Rilevazione di Presenza | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
 | **Altri** | **Incantesimo Rivelatore di Tracce Recenti (Appare Vestigium)** | `Appare Vestigium` | **2** | 8 | Investigativo / Scanner Magico | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **Altri** | **Incantesimo Rudimentale di Sblocco Porta (Portaberto)** | `Portaberto` | **4** | 6 | Incantesimo di Sblocco Arcaico | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **Altri** | **Incantesimo Scaccia-Babbani (Repello Babbanum)** | `Repello Babbanum` | **4** | 6 | Occultamento Territoriale / Statuto di Segretezza | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
-| **Altri** | **Incantesimo Segnante / Tracciante (Signo)** | `Signo` | **1** | 9 | Aritmantico Fondamentale / Tracciamento | ⛔ NO | ᚠ Fehu (Pos. 1ª) |
+| **III Anno** | **Incantesimo Segnante / Tracciante (Signo)** | `Signo` | **1** | 9 | Magia Runica / Tracciamento su Materia | ⛔ NO | ᚠ Fehu (Pos. 1ª) |
 | **Altri** | **Incantesimo di Adesione Permanente (Adesio Perpetua)** | `Adesio Perpetua` | **2** | 8 | Sigillo Materico / Incollamento Permanente | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **Altri** | **Incantesimo di Apertura Varchi (Liberate)** | `Liberate` | **9** | 1 | Incantesimo di Apertura Porte e Varchi | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
 | **Altri** | **Incantesimo di Apertura a Forza Bruta (Dunamis)** | `Dunamis` | **9** | 1 | Sblocco Cinetico Esplosivo | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
