@@ -6227,8 +6227,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "adesio-perpetua",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 1,
+    "annoLabel": "I Anno",
     "nome": "Incantesimo di Adesione Permanente (Adesio Perpetua)",
     "formula": "Adesio Perpetua",
     "ripetibile": false,

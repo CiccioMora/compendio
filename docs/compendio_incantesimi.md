@@ -321,7 +321,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **IV Anno** | **Incantesimo Rudimentale di Sblocco Porta (Portaberto)** | `Portaberto` | **4** | 6 | Incantesimo di Sblocco Arcaico | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **Altri** | **Incantesimo Scaccia-Babbani (Repello Babbanum)** | `Repello Babbanum` | **4** | 6 | Occultamento Territoriale / Statuto di Segretezza | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **III Anno** | **Incantesimo Segnante / Tracciante (Signo)** | `Signo` | **1** | 9 | Magia Runica / Tracciamento su Materia | ⛔ NO | ᚠ Fehu (Pos. 1ª) |
-| **Altri** | **Incantesimo di Adesione Permanente (Adesio Perpetua)** | `Adesio Perpetua` | **2** | 8 | Sigillo Materico / Incollamento Permanente | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
+| **I Anno** | **Incantesimo di Adesione Permanente (Adesio Perpetua)** | `Adesio Perpetua` | **2** | 8 | Sigillo Materico / Incollamento Permanente | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **IV Anno** | **Incantesimo di Apertura Varchi (Liberate)** | `Liberate` | **9** | 1 | Incantesimo di Apertura Porte e Varchi | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
 | **IV Anno** | **Incantesimo di Apertura a Forza Bruta (Dunamis)** | `Dunamis` | **9** | 1 | Sblocco Cinetico Esplosivo | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
 | **V Anno** | **Incantesimo di Evanescenza per Inanimati e Liquidi (Evanesco)** | `Evanesco` | **3** | 7 | Evanescenza nel Non-Essere | ⚔️ SÌ | ᚦ Thurisaz (Pos. 3ª) |
