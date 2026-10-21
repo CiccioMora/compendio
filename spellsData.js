@@ -99,7 +99,7 @@ const SPELLS_DATA = [
     "inDuello": false,
     "duelloNote": "Non idoneo al duello convenzionale. Utilizzato per l'orientamento notturno sul campo, allineare i telescopi e determinare con precisione il meridiano astronomico e il Nord geografico.",
     "movimento": "Bacchetta appoggiata orizzontale sul palmo della mano aperta con pronuncia ferma della formula; la bacchetta ruota autonomamente fermandosi verso il Nord.",
-    "movimentoSvg": "M 40,75 L 110,75 M 95,60 L 110,75 L 95,90",
+    "movimentoSvg": "M 75,125 L 75,25 M 65,42 L 75,25 M 85,42 L 75,25",
     "descrizione": "Trattato nella dispensa didattica di Astronomia del I Anno. Fa ruotare la bacchetta posta sul palmo della mano del mago fino a indicare stabilmente il Nord geografico/magnetico, permettendo l'orientamento immediato nelle osservazioni notturne.",
     "etimologia": "Dall'italiano guidare (condurre, orientare la direzione).",
     "valenza": 1,

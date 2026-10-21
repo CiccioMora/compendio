@@ -75,6 +75,9 @@
     const modalDuelTactics = document.getElementById("modalDuelTactics");
     const wandPathElement = document.getElementById("wandPathElement");
     const replayWandAnimBtn = document.getElementById("replayWandAnimBtn");
+    const wandCanvasBox = document.getElementById("wandCanvasBox");
+    const wandTrackLabel = document.getElementById("wandTrackLabel");
+    let isCompassActive = false;
     const modalValenceNum = document.getElementById("modalValenceNum");
     const modalValenceSum = document.getElementById("modalValenceSum");
     const modalOppositeNum = document.getElementById("modalOppositeNum");
@@ -449,10 +452,35 @@
           : `<strong>Runa dell'Alfabeto Associata:</strong> <span class="text-amber-300">${spell.runeAssociate || "—"}</span>`;
       }
 
+      // Bussola Magica (Guidami / Point Me) Setup
+      isCompassActive = (spell.id === "guidami");
+      if (wandPathElement) {
+        wandPathElement.removeAttribute("transform");
+        wandPathElement.style.transition = "";
+      }
+      const guidePath = document.getElementById("wandGuidePath");
+      if (guidePath) {
+        guidePath.removeAttribute("transform");
+        guidePath.style.transition = "";
+      }
+      const spark = document.getElementById("wandSpark");
+      if (spark) {
+        spark.style.transition = "";
+      }
+      if (wandTrackLabel) {
+        wandTrackLabel.innerHTML = isCompassActive
+          ? '🧭 <span class="text-amber-300 font-semibold">Bussola Magica:</span> Muovi il mouse per orientare'
+          : 'Traccia Dinamica';
+      }
+      if (replayWandAnimBtn) {
+        replayWandAnimBtn.innerHTML = isCompassActive
+          ? '<span>🧭</span> Punta al Nord'
+          : '<span>🔄</span> Anima Gesto';
+      }
+
       // Configura il tracciato del gesto
       const pathData = spell.movimentoSvg || "M 30,75 L 120,75";
       wandPathElement.setAttribute("d", pathData);
-      const guidePath = document.getElementById("wandGuidePath");
       if (guidePath) guidePath.setAttribute("d", pathData);
 
       // Mostra prima il modale affinché le dimensioni e il layout siano attivi
@@ -581,14 +609,95 @@
     }
 
     replayWandAnimBtn.addEventListener("click", () => {
+      if (isCompassActive) {
+        wandPathElement.removeAttribute("transform");
+        const guidePath = document.getElementById("wandGuidePath");
+        if (guidePath) guidePath.removeAttribute("transform");
+        const spark = document.getElementById("wandSpark");
+        if (spark) {
+          spark.setAttribute("cx", "75");
+          spark.setAttribute("cy", "25");
+        }
+      }
       animateWandPath();
     });
+
+    // Compass Interactive Mouse Tracking (Guidami / Point Me)
+    if (wandCanvasBox) {
+      wandCanvasBox.addEventListener("mousemove", (e) => {
+        if (!isCompassActive) return;
+        const svg = document.getElementById("wandSvgCanvas");
+        if (!svg) return;
+        const rect = svg.getBoundingClientRect();
+        const mouseX = ((e.clientX - rect.left) / rect.width) * 150;
+        const mouseY = ((e.clientY - rect.top) / rect.height) * 150;
+
+        const dx = mouseX - 75;
+        const dy = mouseY - 75;
+        if (Math.hypot(dx, dy) < 4) return;
+
+        const angleRad = Math.atan2(dy, dx);
+        const angleDeg = (angleRad * 180 / Math.PI) + 90;
+
+        wandPathElement.setAttribute("transform", `rotate(${angleDeg.toFixed(1)} 75 75)`);
+        const guidePath = document.getElementById("wandGuidePath");
+        if (guidePath) guidePath.setAttribute("transform", `rotate(${angleDeg.toFixed(1)} 75 75)`);
+
+        const spark = document.getElementById("wandSpark");
+        if (spark) {
+          const sparkX = 75 + 50 * Math.sin(angleDeg * Math.PI / 180);
+          const sparkY = 75 - 50 * Math.cos(angleDeg * Math.PI / 180);
+          spark.setAttribute("cx", sparkX.toFixed(1));
+          spark.setAttribute("cy", sparkY.toFixed(1));
+          spark.style.opacity = "1";
+        }
+      });
+
+      wandCanvasBox.addEventListener("mouseleave", () => {
+        if (!isCompassActive) return;
+        wandPathElement.style.transition = "transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1)";
+        const guidePath = document.getElementById("wandGuidePath");
+        if (guidePath) guidePath.style.transition = "transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1)";
+        const spark = document.getElementById("wandSpark");
+        if (spark) spark.style.transition = "cx 0.45s ease-out, cy 0.45s ease-out";
+
+        wandPathElement.setAttribute("transform", "rotate(0 75 75)");
+        if (guidePath) guidePath.setAttribute("transform", "rotate(0 75 75)");
+        if (spark) {
+          spark.setAttribute("cx", "75");
+          spark.setAttribute("cy", "25");
+        }
+
+        setTimeout(() => {
+          wandPathElement.style.transition = "";
+          if (guidePath) guidePath.style.transition = "";
+          if (spark) spark.style.transition = "";
+        }, 450);
+      });
+    }
 
     function closeModal() {
       if (wandAnimId) {
         cancelAnimationFrame(wandAnimId);
         wandAnimId = null;
       }
+      isCompassActive = false;
+      if (wandPathElement) {
+        wandPathElement.removeAttribute("transform");
+        wandPathElement.style.transition = "";
+      }
+      const guidePath = document.getElementById("wandGuidePath");
+      if (guidePath) {
+        guidePath.removeAttribute("transform");
+        guidePath.style.transition = "";
+      }
+      const spark = document.getElementById("wandSpark");
+      if (spark) {
+        spark.style.transition = "";
+      }
+      if (wandTrackLabel) wandTrackLabel.textContent = "Traccia Dinamica";
+      if (replayWandAnimBtn) replayWandAnimBtn.innerHTML = '<span>🔄</span> Anima Gesto';
+
       spellModal.classList.add("opacity-0");
       modalCard.classList.add("scale-95");
       setTimeout(() => {

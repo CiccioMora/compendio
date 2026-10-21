@@ -344,7 +344,7 @@
           
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
             <!-- Animated SVG canvas -->
-            <div class="sm:col-span-1 bg-slate-950 rounded-lg border border-amber-900/40 p-3 flex flex-col items-center justify-center relative">
+            <div id="wandCanvasBox" class="sm:col-span-1 bg-slate-950 rounded-lg border border-amber-900/40 p-3 flex flex-col items-center justify-center relative select-none">
               <svg id="wandSvgCanvas" viewBox="0 0 150 150" class="w-32 h-32">
                 <defs>
                   <radialGradient id="sparkGrad" cx="50%" cy="50%" r="50%">
@@ -366,7 +366,7 @@
                 <!-- Scintilla della punta della bacchetta -->
                 <circle id="wandSpark" cx="75" cy="75" r="6" fill="url(#sparkGrad)" style="opacity: 0;" />
               </svg>
-              <div class="text-[10px] text-slate-400 mt-1 uppercase tracking-wider">Traccia Dinamica</div>
+              <div id="wandTrackLabel" class="text-[10px] text-slate-400 mt-1 uppercase tracking-wider text-center">Traccia Dinamica</div>
             </div>
 
             <!-- Movement description -->
