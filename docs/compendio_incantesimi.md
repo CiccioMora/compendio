@@ -219,7 +219,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **VII Anno** | **Attivazione del Quadrato di Sator (Rotas Sator)** | `Rotas Opera Tenet Arepo Sator` | **5** | 5 | Aritmantico / Quadrato Palindromo Magico | ⛔ NO | ᚱ Raido (Pos. 5ª) |
 | **VII Anno** | **Barriera Avanzata Anti-Maledizioni (Protego Horribilis)** | `Protego Horribilis` | **8** | 2 | D.C.A.O. Avanzata / Protezione Oscura | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
 | **VII Anno** | **Cancellazione della Memoria (Oblivion / Obliviate)** | `Obliviate` | **5** | 5 | Magia della Mente / Modifica Mnemonica | ⛔ NO | ᚱ Raido (Pos. 5ª) |
-| **VII Anno** | **Controincantesimo Trasfigurativo di I Livello (Reverto)** | `Reverto` | **4** | 6 | Contro-incantesimo Trasfigurativo | ⚔️ SÌ | ᚨ Ansuz (Pos. 4ª) |
+| **I Anno** | **Controincantesimo Trasfigurativo di I Livello (Reverto)** | `Reverto` | **4** | 6 | Trasfigurazione / Controincantesimo di I Livello | ⚔️ SÌ | ᚨ Ansuz (Pos. 4ª) |
 | **VII Anno** | **Duplicazione dei Ricordi (Capio Memoriam)** | `Capio Memoriam` | **5** | 5 | Aritmantico / Medimagia / Rituale Mentale | ⛔ NO | ᚱ Raido (Pos. 5ª) |
 | **VII Anno** | **Evocazione della Scia Cometare (Cometae Vocatum)** | `Cometae Vocatum` | **4** | 6 | Alta Evocazione Simbolica Celeste / Magia Cerimoniale | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **VII Anno** | **Formula Celante di Trappola (Abscondas)** | `Abscondas` | **6** | 4 | Aritmantico / Occultamento di Trappola | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
@@ -329,10 +329,10 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Altri** | **Incantesimo di Fortificazione Barriere (Fianto Duri)** | `Fianto Duri` | **9** | 1 | Chicche di Magia / Difensivo Avanzato M.A.G.O. | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
 | **Altri** | **Incantesimo di Montaggio e Costruzione (Erecto)** | `Erecto` | **3** | 7 | Chicche di Magia / Cinetica Architettonica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **Altri** | **Incantesimo di Tracciamento a Ritroso (Avenseguim)** | `Avenseguim` | **8** | 2 | Localizzazione e Tracciamento Forense | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
-| **Altri** | **Incanto Diagnostico di Rifrazione (Detecto)** | `Detecto` | **9** | 1 | Diagnostica Trasfigurativa | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
+| **I Anno** | **Incanto Diagnostico di Rifrazione (Detecto)** | `Detecto` | **9** | 1 | Trasfigurazione / Diagnostica Molecolare e Marchi | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
 | **Altri** | **Incanto Leggero come una Piuma** | `Pluma Levis` | **4** | 6 | Chicche di Magia / Riduzione Peso M.A.G.O. | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
-| **Altri** | **Marchiatura di Creature ed Entità Viventi (Fersigno)** | `Fersigno` | **3** | 7 | Marchiatura Vivente | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
-| **Altri** | **Marchiatura di Elementi Vegetali (Plansigno)** | `Plansigno` | **8** | 2 | Marchiatura Vegetale | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
-| **Altri** | **Marchiatura di Oggetti Inanimati (Significo)** | `Significo` | **1** | 9 | Marchiatura Inanimata | ⛔ NO | ᚠ Fehu (Pos. 1ª) |
+| **I Anno** | **Marchiatura di Creature ed Entità Viventi (Fersigno)** | `Fersigno` | **3** | 7 | Trasfigurazione / Marchiatura Vivente | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
+| **I Anno** | **Marchiatura di Elementi Vegetali (Plansigno)** | `Plansigno` | **8** | 2 | Trasfigurazione / Marchiatura Vegetale | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
+| **I Anno** | **Marchiatura di Oggetti Inanimati (Significo)** | `Significo` | **1** | 9 | Trasfigurazione / Marchiatura Inanimata | ⛔ NO | ᚠ Fehu (Pos. 1ª) |
 | **Altri** | **Protezione Totale di Zona (Protego Totalum)** | `Protego Totalum` | **9** | 1 | Difensivo Statico di Zona (I.D.S.) | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
 

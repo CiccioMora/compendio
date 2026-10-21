@@ -246,14 +246,14 @@
             </label>
             <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
               <option value="ALL">Tutti gli Incantesimi (264)</option>
-              <option value="1">I Anno (27)</option>
+              <option value="1">I Anno (32)</option>
               <option value="2">II Anno (20)</option>
               <option value="3">III Anno (34)</option>
               <option value="4">IV Anno (33)</option>
               <option value="5">V Anno (24)</option>
               <option value="6">VI Anno (50)</option>
-              <option value="7">VII Anno (42)</option>
-              <option value="0">Altri (34)</option>
+              <option value="7">VII Anno (41)</option>
+              <option value="0">Altri (30)</option>
             </select>
           </div>
 
@@ -312,7 +312,7 @@
               Tutti (264)
               </button>
               <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              I Anno (27)
+              I Anno (32)
               </button>
               <button data-year="2" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               II Anno (20)
@@ -330,10 +330,10 @@
               VI Anno (50)
               </button>
               <button data-year="7" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              VII Anno (42)
+              VII Anno (41)
               </button>
               <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              Altri (34)
+              Altri (30)
               </button>
             </div>
           </div>
@@ -4456,14 +4456,14 @@ const SPELLS_DATA = [
   },
   {
     "id": "reverto",
-    "anno": 7,
-    "annoLabel": "VII Anno",
+    "anno": 1,
+    "annoLabel": "I Anno",
     "nome": "Controincantesimo Trasfigurativo di I Livello (Reverto)",
     "formula": "Reverto",
     "ripetibile": false,
-    "tipologia": "Contro-incantesimo Trasfigurativo",
+    "tipologia": "Trasfigurazione / Controincantesimo di I Livello",
     "inDuello": true,
-    "duelloNote": "Utilizzabile in duello per annullare rapidamente trasfigurazioni semplici applicate su oggetti o creature sul campo.",
+    "duelloNote": "Abilitato in duello per annullare rapidamente alterazioni trasfigurative semplici inflitte dall'avversario. Trattato prima di Pagina 29 (PDF p. 10) nel manuale di Trasfigurazione come controincanto fondante.",
     "movimento": "Movimento spiraleggiante retrogrado con stoccata al centro.",
     "movimentoSvg": "M 110,75 A 35,35 0 1,0 40,75 M 40,75 L 75,75",
     "descrizione": "Incluso nel programma di VII Anno (Trasfigurazione Teoria - Pozione/Controincanto Homine Reverto [Teoria]). Annulla le alterazioni molecolari semplici ripristinando il ceppo e la conformazione originaria del materiale o dell'organismo.",
@@ -7051,14 +7051,14 @@ const SPELLS_DATA = [
   },
   {
     "id": "detecto",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 1,
+    "annoLabel": "I Anno",
     "nome": "Incanto Diagnostico di Rifrazione (Detecto)",
     "formula": "Detecto",
     "ripetibile": false,
-    "tipologia": "Diagnostica Trasfigurativa",
+    "tipologia": "Trasfigurazione / Diagnostica Molecolare e Marchi",
     "inDuello": false,
-    "duelloNote": "Non da duello. Rivela se un oggetto è naturale o frutto di trasfigurazione mediante rifrazione luminosa.",
+    "duelloNote": "Non da duello. Primo Anno di Trasfigurazione (Pagine 16 e 25): analisi della perfezione molecolare ed evidenziazione di marchi magici occulti.",
     "movimento": "Puntamento orizzontale a sfioramento della superficie dell'oggetto.",
     "movimentoSvg": "M 35,75 L 115,75 M 75,40 L 75,110",
     "descrizione": "Provoca un bagliore luminescente sulla superficie di oggetti, piante o esseri trasfigurati o marchiati, distinguendoli da quelli autenticamente naturali.",
@@ -7095,14 +7095,14 @@ const SPELLS_DATA = [
   },
   {
     "id": "fersigno",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 1,
+    "annoLabel": "I Anno",
     "nome": "Marchiatura di Creature ed Entità Viventi (Fersigno)",
     "formula": "Fersigno",
     "ripetibile": false,
-    "tipologia": "Marchiatura Vivente",
+    "tipologia": "Trasfigurazione / Marchiatura Vivente",
     "inDuello": false,
-    "duelloNote": "Non da duello. Marchiatura specifica per animali e viventi (l'uso di formule per inanimati su viventi è letale).",
+    "duelloNote": "Non da duello. Primo Anno di Trasfigurazione (Pagina 25): applicazione di un marchio non lesivo su entità animate o creature viventi.",
     "movimento": "Sfioramento a mezz'aria sopra il dorso della creatura senza contatto diretto.",
     "movimentoSvg": "M 40,65 Q 75,30 110,65 Q 75,100 40,65 Z",
     "descrizione": "Formula designata per apporre marchi di riconoscimento su animali trasfigurati rispettando i flussi ematici dell'essere vivente.",
@@ -7117,14 +7117,14 @@ const SPELLS_DATA = [
   },
   {
     "id": "plansigno",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 1,
+    "annoLabel": "I Anno",
     "nome": "Marchiatura di Elementi Vegetali (Plansigno)",
     "formula": "Plansigno",
     "ripetibile": false,
-    "tipologia": "Marchiatura Vegetale",
+    "tipologia": "Trasfigurazione / Marchiatura Vegetale",
     "inDuello": false,
-    "duelloNote": "Non da duello. Appone un marchio magico su arbusti o piante trasfigurate.",
+    "duelloNote": "Non da duello. Primo Anno di Trasfigurazione (Pagina 25): applicazione di un marchio magico su elementi botanici e vegetali.",
     "movimento": "Tocco delicato sulla foglia o fusto principale con rotazione oraria.",
     "movimentoSvg": "M 75,115 L 75,55 Q 50,35 75,25 Q 100,35 75,55",
     "descrizione": "Formula specifica per imprimere il marchio di trasfigurazione su elementi botanici senza alterarne l'apparato linfatico.",
@@ -7139,14 +7139,14 @@ const SPELLS_DATA = [
   },
   {
     "id": "significo",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 1,
+    "annoLabel": "I Anno",
     "nome": "Marchiatura di Oggetti Inanimati (Significo)",
     "formula": "Significo",
     "ripetibile": false,
-    "tipologia": "Marchiatura Inanimata",
+    "tipologia": "Trasfigurazione / Marchiatura Inanimata",
     "inDuello": false,
-    "duelloNote": "Non da duello. Appone un marchio semitrasparente d'autore su oggetti inanimati trasfigurati.",
+    "duelloNote": "Non da duello. Primo Anno di Trasfigurazione (Pagina 25): applicazione di un marchio semitrasparente identificativo su oggetti inanimati.",
     "movimento": "Pressione perpendicolare della punta concependo mentalmente il simbolo o lettera del marchio.",
     "movimentoSvg": "M 50,50 L 100,50 L 100,100 L 50,100 Z",
     "descrizione": "Applica un sigillo d'autore su oggetti inanimati trasfigurati per certificarne l'origine. Non va mai usato su viventi.",

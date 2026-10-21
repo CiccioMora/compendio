@@ -1,13 +1,19 @@
 # 🪄 Compendio Accademico di Trasfigurazione Magica
 **Dalla cattedra di Trasfigurazione della Scuola di Magia e Stregoneria di Hogwarts**  
-*Sincronizzato con il Programma Ufficiale di Studio di Arcane GDR (I - VII Anno)*
+*Classificazione Didattica Canonica secondo il Manuale Ufficiale di Yashiro Isana Mortem (Edizione Ufficiale)*
 
 ---
 
 > [!NOTE]
-> Il presente compendio formalizza la classificazione curricolare e metodologica della **Trasfigurazione**, strutturata dal I al VII Anno di corso secondo il Registro Ufficiale dei Docenti di Hogwarts e la cattedra di Trasfigurazione (*Yashiro Isana Mortem*).
-> 
-> Per ciascun anno didattico vengono dettagliati i moduli di **Teoria** e il corpus delle formule operative di **Pratica**, con relative valenze pitagoriche, simmetrie speculari, figure geometriche operative (*Signo*) e corrispondenze con l'Antico Futhark.
+> Il presente compendio formalizza la suddivisione metodologica e curricolare della **Trasfigurazione**, sincronizzata con la scansione esatta per pagine e argomenti stabilita dal testo didattico di cattedra:
+> - **Prima di PAGINA 29**: Fondamenti Molecolari, Marchiatura e Forme Base (**I Anno**)
+> - **PAGINA 29**: Trasfigurazione Inanimata elementare e avanzata (**II Anno**)
+> - **PAGINA 40 — DETRASFIGURAZIONE**: Detrasfigurazione, Difesa Non-Verbale e Bivalenza (**III Anno**)
+> - **PAGINA 51 — LITOTRASFIGURAZIONE**: Litotrasfigurazione, Animazione e Dilatazione (**IV Anno**)
+> - **PAGINA 59 — EVOCAZIONE**: Evocazione floreale/materica, Evanescenza e Duplicazione (**V Anno**)
+> - **Dopo PAGINA 59**: Trasfigurazione Umana, Tassonomia avanzata e Animagia (**VI & VII Anno**)
+>
+> Tutte le formule includono la **Valenza Magica Pitagorica (1–9)**, la **figura geometrica operativa per Signo** e la rigorosa **corrispondenza 1:1 con l'Antico Futhark** (Valenza = Posizione della singola Runa).
 
 ---
 
@@ -15,39 +21,39 @@
 
 ```mermaid
 flowchart TD
-    subgraph I_Anno["I Anno: Fondamenti Molecolari & Forme"]
-        T1["Teoria: Parametri (Spazio, Struttura, Colore, Tonalità, Essenza), Leggi/Divieti di Gamp, Controincanti"]
-        P1["Pratica: Chartanimus | Formule Base: Transfiguro, Muto, Verto"]
+    subgraph I_Anno["I Anno: Fondamenti & Marchiatura (Prima di Pagina 29)"]
+        T1["Teoria: Parametri Molecolari, Leggi di Gamp, Marchiatura (Pag. 25), Livelli di Trasfigurazione"]
+        P1["Pratica: Chartanimus, Transfiguro, Muto, Verto, Reverto, Significo, Plansigno, Fersigno, Detecto"]
     end
 
-    subgraph II_Anno["II Anno: Trasfigurazione Inanimata"]
-        T2["Teoria: Caratteristiche della Trasfigurazione Inanimata"]
+    subgraph II_Anno["II Anno: Trasfigurazione Inanimata (Inizio Pagina 29)"]
+        T2["Teoria: Caratteristiche della Trasfigurazione Inanimata, Persistenza e Saturazione"]
         P2["Pratica: Acutus, Malum, Gommosus, Vermiculus, Snufflifors, Incarcifors, Feraverto, Inferacus"]
     end
 
-    subgraph III_Anno["III Anno: Detrasfigurazione & Difesa"]
-        T3["Teoria: Detrasfigurazione, Difesa Non-Verbale, Bivalenza negli Incanti"]
+    subgraph III_Anno["III Anno: Detrasfigurazione & Bivalenza (Inizio Pagina 40)"]
+        T3["Teoria: Detrasfigurazione Molecolare, Difesa Non-Verbale, Bivalenza negli Incanti"]
         P3["Pratica: Reparifarge, Lapifors, Avifors, Avis, Farfallus Explodit, Furunculus, Glisseo"]
     end
 
-    subgraph IV_Anno["IV Anno: Trasfigurazione Animata & Litotrasfigurazione"]
+    subgraph IV_Anno["IV Anno: Litotrasfigurazione & Animazione (Inizio Pagina 51)"]
         T4["Teoria: Litotrasfigurazione, Trasfigurazione Animata, Paradosso della Trasfigurazione"]
-        P4["Pratica: Draconifors, Duro, Piertotum Locomotor, Engorgio e Diminuendo"]
+        P4["Pratica: Draconifors, Duro, Piertotum Locomotor, Engorgio, Diminuendo"]
     end
 
-    subgraph V_Anno["V Anno: Evocazione & Evanescenza"]
+    subgraph V_Anno["V Anno: Evocazione & Evanescenza (Inizio Pagina 59)"]
         T5["Teoria: Principi di Evocazione ed Evanescenza, Duplicazione, Incanto Anti-furto, Demone Stalker"]
-        P5["Pratica: Demone Stalker (Teoria), Epoximise, Orchideus, Melofors, Incarceramus"]
+        P5["Pratica: Orchideus, Melofors, Epoximise, Incarceramus, Evanesco, Ivanesco"]
     end
 
     subgraph VI_Anno["VI Anno: Trasfigurazione Umana & Pieghe Spazio-Temporali"]
-        T6["Teoria: Estensione Irriconoscibile (Adduco Maxima), Tassonomia, Trasfigurazione Circolare, T. Umana"]
+        T6["Teoria: Estensione Irriconoscibile (Adduco Maxima), Tassonomia della Trasformazione, T. Umana"]
         P6["Pratica: Crinus Muto, Pullus, Densaugeo, Paperante, Piscofors, Entomorphis, Furitum, Geminio, Inflatus"]
     end
 
-    subgraph VII_Anno["VII Anno: Animagia Suprema & Ripristino"]
+    subgraph VII_Anno["VII Anno: Animagia Suprema & Disvelamento"]
         T7["Teoria: Animagia, Animagus, Licantropia/Mannarismo, Maledictus, Metamorphomagus"]
-        P7["Pratica: Animaleus Nobodyx (Teoria), Pozione/Incanto Homine Reverto (Reverto)"]
+        P7["Pratica: Animaleus Nobodyx, Pozione Homine Reverto, Alta Evanescenza"]
     end
 
     I_Anno --> II_Anno --> III_Anno --> IV_Anno --> V_Anno --> VI_Anno --> VII_Anno
@@ -55,247 +61,193 @@ flowchart TD
 
 ---
 
-## 🏛️ 1. I ANNO — FONDAMENTI MOLECOLARI E TRASFORMAZIONE DI BASE
+## 🏛️ 1. I ANNO — FONDAMENTI MOLECOLARI, MARCHIATURA E TRASFORMAZIONE BASE
+*(Manuale di Studio: Sezioni precedenti a PAGINA 29)*
 
 ### Modulo di Teoria
-1. **La concentrazione**: orientamento mentale e focalizzazione dell'intento.
-2. **Parametri Fondamentali**:
+1. **La concentrazione**: orientamento mentale e focalizzazione dell'intento (Pag. 9).
+2. **Parametri Fondamentali** (Pag. 10):
    - **Spazio**: volume, ingombro tridimensionale e collocazione del corpo.
    - **Struttura**: legami molecolari e densità della materia.
    - **Colore**: dispersione cromatica e pigmentazione superficiale.
    - **Tonalità**: timbro materico, risonanza e lucentezza.
-   - **Essenza**: matrice spirituale, peso e inerzia magica.
-3. **La perfezione Molecolare & La rifrazione**: allineamento degli atomi e reazione alla luce.
-4. **Controincantesimi Trasfigurativi**: fondamenti della neutralizzazione delle alterazioni.
-5. **Leggi e Divieti di Gamp**:
+   - **Essenza**: matrice ontologica, peso e inerzia magica.
+3. **La Perfezione Molecolare & Diagnostica** (Pag. 16): verifica della compattezza atomica mediante *Detecto*.
+4. **Controincantesimi Trasfigurativi di Primo Livello** (Pag. 17–18): natura del controincanto universale *Reverto*.
+5. **Leggi e Divieti di Gamp** (Pag. 20):
    - *Cinque Eccezioni Principali alla Legge di Gamp sulla Trasfigurazione degli Elementi* (impossibilità di creare cibo dal nulla, denaro reale, vita senziente, amore autentico o resuscitare i morti).
-6. **La marchiatura animata ed inanimata**: sigillatura trasfigurativa della materia.
-7. **Le Tre Branche di Trasfigurazione Elementare**:
-   - *La Trasfigurazione che muta la forma di un oggetto* (`Transfiguro`).
-   - *La Trasfigurazione che muta il materiale di un oggetto* (`Muto`).
-   - *La Trasfigurazione totale di un oggetto* (`Verto`).
+6. **La Marchiatura Animata ed Inanimata** (Pag. 25): imposizione di sigilli identificativi semitrasparenti su inanimato (*Significo*), vegetali (*Plansigno*) e viventi (*Fersigno*).
+7. **Le Tre Branche di Trasfigurazione Elementare** (Pag. 26–27):
+   - *Morfologica (Forma)*: `Transfiguro`.
+   - *Materica (Sostanza)*: `Muto`.
+   - *Totale (Forma + Materia)*: `Verto`.
 
 ### Modulo di Pratica
-* **`Chartanimus`** (Animazione di Carta)
-  * *Formula*: `Chartanimus`
-  * *Valenza Pitagorica*: **4** *(Somma 49 $\rightarrow 13 \rightarrow 4$)* — *Opposto*: **6** *(Quadrato)*
-  * *Rune Associate*: ᚨ Ansuz (Pos. 4ª), ᛇ Eihwaz (Pos. 13ª), ᛜ Inguz (Pos. 22ª)
-  * *Gesto*: Tocco lieve della punta della bacchetta al centro del foglio con sollevamento rapido.
-  * *Effetto*: Anima fogli di pergamena o origami conferendo loro movimenti autonomi e sembianze di piccoli animali di carta.
-* **`Transfiguro`** (Trasfigurazione Morfologica di Forma)
-  * *Formula*: `Transfiguro` | *Valenza*: **8** (Opposto 2, Ottagono) | *Rune*: ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª)
-* **`Muto`** (Trasfigurazione Materica di Sostanza)
-  * *Formula*: `Muto` | *Valenza*: **6** (Opposto 4, Esagono) | *Rune*: ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª)
-* **`Verto`** (Trasfigurazione Totale)
-  * *Formula*: `Verto` | *Valenza*: **6** (Opposto 4, Esagono) | *Rune*: ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª)
+* **`Chartanimus`** (Animazione di Carta) — *Pagina 17*
+  * *Formula*: `Chartanimus` | *Valenza*: **1** (Opposto 9, Circonferenza) | *Runa*: **ᚠ Fehu (Pos. 1ª)**
+  * *Effetto*: Primo esercizio didattico: trasforma fogli o pergamene in origami animati capaci di volare e muoversi.
+* **`Reverto`** (Controincantesimo Trasfigurativo di I Livello) — *Pagina 17–19*
+  * *Formula*: `Reverto` | *Valenza*: **7** (Opposto 3, Ettagono) | *Runa*: **ᚷ Gebo (Pos. 7ª)**
+  * *Effetto*: Annulla le trasfigurazioni semplici applicate su oggetti inanimati, piante o creature, ripristinandone la forma originaria.
+* **`Signìfico`** (Marchiatura Inanimata) — *Pagina 25*
+  * *Formula*: `Significo` | *Valenza*: **8** (Opposto 2, Ottagono) | *Runa*: **ᚹ Wunjo (Pos. 8ª)**
+  * *Effetto*: Imprime un marchio magico identificativo semitrasparente su oggetti inanimati.
+* **`Plansìgno`** (Marchiatura Vegetale) — *Pagina 25*
+  * *Formula*: `Plansigno` | *Valenza*: **2** (Opposto 8, Angolo/Linea) | *Runa*: **ᚢ Uruz (Pos. 2ª)**
+  * *Effetto*: Marchia elementi botanici e vegetali preservandone la linfa vitale.
+* **`Fersìgno`** (Marchiatura Vivente) — *Pagina 25*
+  * *Formula*: `Fersigno` | *Valenza*: **9** (Opposto 1, Ellisse) | *Runa*: **ᚺ Hagalaz (Pos. 9ª)**
+  * *Effetto*: Applica un sigillo non lesivo su entità biologiche animate e creature.
+* **`Detecto`** (Diagnostica Molecolare e Marchi) — *Pagine 16 & 25*
+  * *Formula*: `Detecto` | *Valenza*: **9** (Opposto 1, Ellisse) | *Runa*: **ᚺ Hagalaz (Pos. 9ª)**
+  * *Effetto*: Rivela marchi occulti ed esamina la coerenza molecolare dell'oggetto trasfigurato.
+* **`Transfìguro`** (Trasfigurazione Morfologica) — *Pagina 26*
+  * *Formula*: `Transfiguro` | *Valenza*: **8** (Opposto 2, Ottagono) | *Runa*: **ᚹ Wunjo (Pos. 8ª)**
+  * *Effetto*: Modifica esclusivamente la conformazione esteriore lasciando inalterato il materiale.
+* **`Muto`** (Trasfigurazione Materica) — *Pagina 26–27*
+  * *Formula*: `Muto` | *Valenza*: **6** (Opposto 4, Esagono) | *Runa*: **ᚲ Kenaz (Pos. 6ª)**
+  * *Effetto*: Altera la composizione materica senza variare la forma.
+* **`Verto`** (Trasfigurazione Totale) — *Pagina 27*
+  * *Formula*: `Verto` | *Valenza*: **6** (Opposto 4, Esagono) | *Runa*: **ᚲ Kenaz (Pos. 6ª)**
+  * *Effetto*: Modifica simultaneamente forma e sostanza dell'oggetto.
 
 ---
 
 ## 🏛️ 2. II ANNO — LA TRASFIGURAZIONE INANIMATA
+*(Manuale di Studio: Inizio a PAGINA 29 fino a Pagina 39)*
 
 ### Modulo di Teoria
-1. **La Trasfigurazione Inanimata**: transizione tra corpi privi di vita biologica; stabilità della massa e densità.
-2. **Le caratteristiche della Trasfigurazione**: tempo di persistenza, decadimento trasfigurativo e saturazione magica.
+1. **La Trasfigurazione Inanimata** (Pag. 29): transizione tra corpi privi di vita; stabilità della massa, inerzia e densità.
+2. **Le caratteristiche della Trasfigurazione** (Pag. 36): la Potenza, la Durata e l’Efficacia; decadimento e saturazione magica.
 
 ### Modulo di Pratica
-* **`Acutus`** (Trasfigurazione in Ago)
-  * *Formula*: `Acutus` | *Valenza*: **2** (Opposto 8, Angolo/Linea) | *Rune*: ᚢ Uruz (2ª), ᛁ Isa (11ª), ᛗ Mannaz (20ª)
-  * *Effetto*: Esercizio canonico: trasforma un fiammifero o scheggia di legno in un affilato ago d'acciaio.
-* **`Malum`** (Trasfigurazione in Mela)
-  * *Formula*: `Malum` | *Valenza*: **6** (Opposto 4, Esagono) | *Rune*: ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª)
-* **`Gommosus`** (Incantesimo di Ammorbidimento)
-  * *Formula*: `Gommosus` | *Valenza*: **1** (Opposto 9, Circonferenza) | *Rune*: ᚠ Fehu (1ª), ᚾ Nauthiz (10ª), ᛖ Ehwaz (19ª)
-  * *Effetto*: Rende superfici solide gommose ed elastiche come trampolini, ammortizzando cadute o respingendo colpi.
-* **`Vermiculus`** (Trasfigurazione in Lombrico)
-  * *Formula*: `Vermiculus` | *Valenza*: **2** (Opposto 8, Angolo/Linea) | *Rune*: ᚢ Uruz (2ª), ᛁ Isa (11ª), ᛗ Mannaz (20ª)
-* **`Snufflifors`** (Trasfigurazione in Topo)
-  * *Formula*: `Snufflifors` | *Valenza*: **9** (Opposto 1, Ellisse) | *Rune*: ᚺ Hagalaz (9ª), ᛒ Berkana (18ª)
-* **`Incarcifors`** (Trasfigurazione in Gabbia)
-  * *Formula*: `Incarcifors` | *Valenza*: **8** (Opposto 2, Ottagono) | *Rune*: ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª)
-  * *Effetto*: Trasfigura oggetti circostanti in una gabbia di ferro o legno per imprigionare bersagli o creature.
-* **`Feraverto`** (Trasfigurazione Animale in Calice)
-  * *Formula*: `Feraverto` | *Valenza*: **5** (Opposto 5, Pentagono) | *Rune*: ᚱ Raido (5ª), ᛈ Perthr (14ª), ᛟ Othila (23ª), ○ Bianca
-  * *Gesto*: Tre tocchi precisi della bacchetta sul dorso dell'animale.
-  * *Effetto*: Converte un piccolo animale (es. topo o corvo) in un elegante calice d'acqua di cristallo.
-* **`Inferacus`** (Trasfigurazione Riccio in Portaspilli)
-  * *Formula*: `Inferacus` | *Valenza*: **1** (Opposto 9, Circonferenza) | *Rune*: ᚠ Fehu (1ª), ᚾ Nauthiz (10ª), ᛖ Ehwaz (19ª)
+* **`Acutus`** (Trasfigurazione in Ago) — *Pagina 30*
+  * *Formula*: `Acutus` | *Valenza*: **2** (Opposto 8, Angolo/Linea) | *Runa*: **ᚢ Uruz (Pos. 2ª)**
+  * *Effetto*: Trasforma un fiammifero o scheggia lignea in un affilato ago d'acciaio.
+* **`Malum`** (Trasfigurazione in Mela) — *Pagina 31*
+  * *Formula*: `Malum` | *Valenza*: **6** (Opposto 4, Esagono) | *Runa*: **ᚲ Kenaz (Pos. 6ª)**
+  * *Effetto*: Trasforma oggetti inanimati in una mela compatta e lucida.
+* **`Gommosus`** (Incantesimo di Elasticità) — *Pagina 32*
+  * *Formula*: `Gommosus` | *Valenza*: **1** (Opposto 9, Circonferenza) | *Runa*: **ᚠ Fehu (Pos. 1ª)**
+  * *Effetto*: Rende superfici solide gommose ed elastiche come trampolini, ammortizzando impatti.
+* **`Vermiculus`** (Trasfigurazione in Lombrico) — *Pagina 33*
+  * *Formula*: `Vermiculus` | *Valenza*: **2** (Opposto 8, Angolo/Linea) | *Runa*: **ᚢ Uruz (Pos. 2ª)**
+  * *Effetto*: Trasfigura piccoli oggetti o parassiti in lombrichi inoffensivi.
+* **`Snufflifors`** (Trasfigurazione in Topo) — *Pagina 34*
+  * *Formula*: `Snufflifors` | *Valenza*: **9** (Opposto 1, Ellisse) | *Runa*: **ᚺ Hagalaz (Pos. 9ª)**
+  * *Effetto*: Converte libri o oggetti inanimati in topolini grigi.
+* **`Incarcifors`** (Trasfigurazione in Gabbia) — *Pagina 35*
+  * *Formula*: `Incarcifors` | *Valenza*: **8** (Opposto 2, Ottagono) | *Runa*: **ᚹ Wunjo (Pos. 8ª)**
+  * *Effetto*: Muta arredi circostanti in robuste gabbie per imprigionare intrusi o creature.
+* **`Feraverto`** (Trasfigurazione Animale in Calice) — *Pagina 37*
+  * *Formula*: `Feraverto` | *Valenza*: **5** (Opposto 5, Pentagono) | *Runa*: **ᚱ Raido (Pos. 5ª)**
+  * *Effetto*: Tre tocchi precisi: trasfigura un animale di piccola taglia in un calice di cristallo colmo d'acqua pura.
+* **`Inferacus`** (Trasfigurazione in Portaspilli) — *Pagina 38*
+  * *Formula*: `Inferacus` | *Valenza*: **1** (Opposto 9, Circonferenza) | *Runa*: **ᚠ Fehu (Pos. 1ª)**
+  * *Effetto*: Trasfigura un riccio o piccolo animale aculeato in un puntaspilli di velluto.
 
 ---
 
-## 🏛️ 3. III ANNO — DETRASFIGURAZIONE E BIVALENZA
+## 🏛️ 3. III ANNO — DETRASFIGURAZIONE, DIFESA E BIVALENZA
+*(Manuale di Studio: Inizio a PAGINA 40 — DETRASFIGURAZIONE fino a Pagina 50)*
 
 ### Modulo di Teoria
-1. **Detrasfigurazione**: tecniche di ripristino dell'ordine molecolare primitivo e scomposizione degli incanti innestati.
-2. **Difesa Non-Verbale**: schermatura del pensiero trasfigurativo per prevenire contro-sorti avversarie.
-3. **Bivalenza negli Incanti**: formule a duplice polarità operativa (difesa/offesa, materia/inerzia).
+1. **Detrasfigurazione** (Pag. 40): de-strutturazione delle alterazioni trasfigurative e scomposizione molecolare selettiva.
+2. **Difesa Non-Verbale** (Pag. 42): canalizzazione silenziosa dell'intento trasfigurativo senza fuga acustica.
+3. **Bivalenza negli Incanti** (Pag. 43): sortilegi applicabili con esito speculare su inanimato e animato.
 
 ### Modulo di Pratica
-* **`Reparifarge`** (Incantesimo di Rettifica Trasfigurativa / Detrasfigurazione)
-  * *Formula*: `Reparifarge` | *Valenza*: **6** (Opposto 4, Esagono) | *Rune*: ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª)
-  * *Effetto*: Il controincanto principe della disciplina: annulla trasfigurazioni parziali, imperfette o andate storte.
-* **`Lapifors`** (Trasfigurazione in Coniglio)
-  * *Formula*: `Lapifors` | *Valenza*: **9** (Opposto 1, Ellisse) | *Rune*: ᚺ Hagalaz (9ª), ᛒ Berkana (18ª)
-* **`Avifors`** (Trasfigurazione in Volatile)
-  * *Formula*: `Avifors` | *Valenza*: **7** (Opposto 3, Ettagono) | *Rune*: ᚷ Gebo (7ª), ᛋ Sowilo (16ª)
-* **`Avis`** (Evocazione di Stormo d'Uccelli)
-  * *Formula*: `Avis` | *Valenza*: **5** (Opposto 5, Pentagono) | *Rune*: ᚱ Raido (5ª), ᛈ Perthr (14ª), ᛟ Othila (23ª), ○ Bianca
-  * *Effetto*: Evoca un turbine di piccoli uccellini cinguettanti dalla punta della bacchetta.
-* **`Farfallus Explodit`** (Evocazione Farfalle Luminose)
-  * *Formula*: `Farfallus Explodit` | *Valenza*: **7** (Opposto 3, Ettagono) | *Rune*: ᚷ Gebo (7ª), ᛋ Sowilo (16ª)
-* **`Furunculus`** (Fattura dei Foruncoli)
-  * *Formula*: `Furunculus` | *Valenza*: **1** (Opposto 9, Circonferenza) | *Rune*: ᚠ Fehu (1ª), ᚾ Nauthiz (10ª), ᛖ Ehwaz (19ª)
-* **`Glisseo`** (Incantesimo Leviga-Scale)
-  * *Formula*: `Glisseo` | *Valenza*: **6** (Opposto 4, Esagono) | *Rune*: ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª)
-  * *Effetto*: Rende gradini o piani inclinati perfettamente lisci come scivoli d'ardesia.
+* **`Reparifarge`** (Detrasfigurazione Rettificatrice) — *Pagina 41*
+  * *Formula*: `Reparifarge` | *Valenza*: **6** (Opposto 4, Esagono) | *Runa*: **ᚲ Kenaz (Pos. 6ª)**
+  * *Effetto*: Il controincanto principe di III Anno: annulla trasfigurazioni parziali, incomplete o difettose.
+* **`Lapifors`** (Trasfigurazione Bivalente in Coniglio) — *Pagina 44*
+  * *Formula*: `Lapifors` | *Valenza*: **9** (Opposto 1, Ellisse) | *Runa*: **ᚺ Hagalaz (Pos. 9ª)**
+  * *Effetto*: Trasforma bersagli inanimati o piccole entità in conigli viventi.
+* **`Avifors`** (Trasfigurazione in Uccelli) — *Pagina 45*
+  * *Formula*: `Avifors` | *Valenza*: **7** (Opposto 3, Ettagono) | *Runa*: **ᚷ Gebo (Pos. 7ª)**
+  * *Effetto*: Converte oggetti o statue in uno stormo di piccoli volatili.
+* **`Avis`** (Evocazione di Stormo d'Uccelli) — *Pagina 46*
+  * *Formula*: `Avis` | *Valenza*: **5** (Opposto 5, Pentagono) | *Runa*: **ᚱ Raido (Pos. 5ª)**
+  * *Effetto*: Evoca dal nulla una nube di uccelli canori con getto balistico.
+* **`Farfallus Explodit`** (Evocazione Farfalle Accecanti) — *Pagina 47*
+  * *Formula*: `Farfallus Explodit` | *Valenza*: **7** (Opposto 3, Ettagono) | *Runa*: **ᚷ Gebo (Pos. 7ª)**
+  * *Effetto*: Evoca migliaia di farfalle iridescenti che disorientano e stordiscono il nemico.
+* **`Furunculus`** (Fattura Trasfigurativa dei Brufoli) — *Pagina 48*
+  * *Formula*: `Furunculus` | *Valenza*: **1** (Opposto 9, Circonferenza) | *Runa*: **ᚠ Fehu (Pos. 1ª)**
+  * *Effetto*: Causa un'eruzione epidermica istantanea trasfigurando il tessuto cutaneo in dolorosi foruncoli.
+* **`Glisseo`** (Levigazione Trasfigurativa) — *Pagina 49*
+  * *Formula*: `Glisseo` | *Valenza*: **6** (Opposto 4, Esagono) | *Runa*: **ᚲ Kenaz (Pos. 6ª)**
+  * *Effetto*: Appiana scalinate o pendenze convertendole in scivoli levigati come marmo ghiacciato.
 
 ---
 
-## 🏛️ 4. IV ANNO — LITOTRASFIGURAZIONE E TRASFIGURAZIONE ANIMATA
+## 🏛️ 4. IV ANNO — LITOTRASFIGURAZIONE E ANIMAZIONE
+*(Manuale di Studio: Inizio a PAGINA 51 — LITOTRASFIGURAZIONE fino a Pagina 58)*
 
 ### Modulo di Teoria
-1. **Litotrasfigurazione**: manipolazione della materia minerale, pietra dura, marmo e metalli pesanti.
-2. **Trasfigurazione Animata**: infusione di schemi motori biologici in costrutti minerali o lignei.
-3. **Paradosso della Trasfigurazione**: tensione energetica tra materia originale e materia impressa.
+1. **Litotrasfigurazione** (Pag. 51): manipolazione avanzata della materia rocciosa, scultorea e minerale (*lithos*).
+2. **Trasfigurazione Animata** (Pag. 54): infusione di schemi biologici motori ed eterici in manufatti inanimati.
+3. **Paradosso della Trasfigurazione** (Pag. 56): tensione metafisica e limiti di autonomia della materia animata.
 
 ### Modulo di Pratica
-* **`Draconifors`** (Animazione Draconica)
-  * *Formula*: `Draconifors` | *Valenza*: **1** (Opposto 9, Circonferenza) | *Rune*: ᚠ Fehu (1ª), ᚾ Nauthiz (10ª), ᛖ Ehwaz (19ª)
-  * *Effetto*: Trasforma statuette o effigi in minuscoli draghetti animati capaci di sputare piccole fiammelle.
-* **`Duro`** (Incantesimo Pietrificante di Cose)
-  * *Formula*: `Duro` | *Valenza*: **4** (Opposto 6, Quadrato) | *Rune*: ᚨ Ansuz (4ª), ᛇ Eihwaz (13ª), ᛜ Inguz (22ª)
-  * *Effetto*: Converte all'istante materiali morbidi o flessibili (tessuti, arazzi, liquidi) in dura pietra massiccia.
-* **`Piertotum Locomotor`** (Animazione di Statue e Armature)
-  * *Formula*: `Piertotum Locomotor` | *Valenza*: **8** (Opposto 2, Ottagono) | *Rune*: ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª)
-  * *Effetto*: Alta animazione archetipica: dà vita a colossi di pietra e armature medievali chiamandoli a guardia del castello.
-* **`Engorgio` & `Diminuendo`** (Ingrossamento e Rimpicciolimento)
-  * *Formule*: `Engorgio` | `Diminuendo`
-  * *Valenze Pitagoriche*: **9** *(Somma 54 $\rightarrow 9$ per entrambe)* — *Opposto*: **1** *(Ellisse)*
-  * *Rune Associate*: ᚺ Hagalaz (Pos. 9ª), ᛒ Berkana (Pos. 18ª)
-  * *Effetti*: Regolano la dilatazione e la contrazione volumetrica uniforme di corpi inanimati ed entità viventi.
+* **`Draconifors`** (Litotrasfigurazione e Animazione Draconica) — *Pagina 51*
+  * *Formula*: `Draconifors` | *Valenza*: **1** (Opposto 9, Circonferenza) | *Runa*: **ᚠ Fehu (Pos. 1ª)**
+  * *Effetto*: Anima statue di draghi conferendo loro volo autonomo, morsi e getti di fiammelle.
+* **`Duro`** (Litotrasfigurazione Pietrificante) — *Pagina 53*
+  * *Formula*: `Duro` | *Valenza*: **4** (Opposto 6, Quadrato) | *Runa*: **ᚨ Ansuz (Pos. 4ª)**
+  * *Effetto*: Converte all'istante materiali morbidi o liquidi in solida pietra massiccia.
+* **`Piertotum Locomotor`** (Grande Animazione Litica) — *Pagina 55*
+  * *Formula*: `Piertotum Locomotor` | *Valenza*: **8** (Opposto 2, Ottagono) | *Runa*: **ᚹ Wunjo (Pos. 8ª)**
+  * *Effetto*: Risveglia statue colossali e armature del castello ordinando loro di combattere a difesa dell'istituto.
+* **`Engorgio` & `Diminuendo`** (Dilatazione e Compressione Volumetrica) — *Pagina 57*
+  * *Formule*: `Engorgio` | `Diminuendo` | *Valenza*: **9** (Opposto 1, Ellisse) | *Runa*: **ᚺ Hagalaz (Pos. 9ª)**
+  * *Effetto*: Incrementano o comprimono uniformemente la scala dimensionale dei bersagli senza alterarne la densità.
 
 ---
 
 ## 🏛️ 5. V ANNO — EVOCAZIONE, EVANESCENZA E DUPLICAZIONE
+*(Manuale di Studio: Inizio a PAGINA 59 — EVOCAZIONE)*
 
 ### Modulo di Teoria
-1. **Evocazione**: principi generali di materializzazione dal non-essere.
-2. **Limiti del Demone Stalker**: confini etici e dimensionali dell'entità inseguente.
-3. **La Duplicazione**: regole di riproduzione della materia (*Geminio*).
-4. **Principi generali di Evanescenza**:
-   - Evanescenza di corpi inanimati (*Evanesco*).
-   - Evanescenza di piante ed esseri viventi superiori.
-5. **Incantesimo Anti-furto**: sigilli di proprietà inalienabile applicati su beni trasfigurati.
-6. **Demone Stalker [Teoria]**: fenomenologia della creatura evocata.
+1. **Principi Generali di Evocazione** (Pag. 60): creazione e richiamo di materia dal Non-Essere (regolata dalla Legge di Gamp).
+2. **La Duplicazione** (Pag. 73): moltiplicazione di oggetti con decadimento qualitativo.
+3. **Principi Generali di Evanescenza** (Pag. 74–76): dissoluzione ontologica di corpi inanimati ed entità viventi.
+4. **Incanto Anti-Furto** (Pag. 77) e **Demone Stalker** (Pag. 68–72): spionaggio ed entità evocate.
 
 ### Modulo di Pratica
-* **`Epoximise`** (Incantesimo Adesivo / Incollante)
-  * *Formula*: `Epoximise` | *Valenza*: **3** (Opposto 7, Triangolo equil.) | *Rune*: ᚦ Thurisaz (3ª), ᛃ Jera (12ª), ᛚ Laguz (21ª)
-* **`Orchideus`** (Evocazione Floreale)
-  * *Formula*: `Orchideus` | *Valenza*: **8** (Opposto 2, Ottagono) | *Rune*: ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª)
-* **`Melofors`** (Fattura della Zucca)
-  * *Formula*: `Melofors` | *Valenza*: **8** (Opposto 2, Ottagono) | *Rune*: ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª)
-  * *Effetto*: Ingloba la testa dell'avversario all'interno di una pesante zucca matura.
-* **`Incarceramus`** (Fattura delle Corde Vincolanti)
-  * *Formula*: `Incarceramus` | *Valenza*: **6** (Opposto 4, Esagono) | *Rune*: ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª)
-  * *Effetto*: Scaglia spesse corde magiche dalla bacchetta che si avvolgono e stringono attorno al bersaglio.
+* **`Orchideus`** (Evocazione Floreale) — *Pagina 79*
+  * *Formula*: `Orchideus` | *Valenza*: **3** (Opposto 7, Triangolo) | *Runa*: **ᚦ Thurisaz (Pos. 3ª)**
+* **`Melofors`** (Fattura Trasfigurativa della Zucca) — *Pagina 80*
+  * *Formula*: `Melofors` | *Valenza*: **6** (Opposto 4, Esagono) | *Runa*: **ᚲ Kenaz (Pos. 6ª)**
+* **`Epoximise`** (Trasfigurazione Adesiva) — *Pagina 78*
+  * *Formula*: `Epoximise` | *Valenza*: **7** (Opposto 3, Ettagono) | *Runa*: **ᚷ Gebo (Pos. 7ª)**
+* **`Incarceramus`** (Evocazione di Corde e Legacci) — *Pagina 81*
+  * *Formula*: `Incarceramus` | *Valenza*: **9** (Opposto 1, Ellisse) | *Runa*: **ᚺ Hagalaz (Pos. 9ª)**
 
 ---
 
-## 🏛️ 6. VI ANNO — TRASFIGURAZIONE UMANA E DISTORSIONI DELLO SPAZIO
+## 🏛️ 6. VI ANNO — TRASFIGURAZIONE UMANA & TRASFUSIONE SPAZIALE
+*(Argomenti successivi a Pagina 88 già classificati)*
 
-### Modulo di Teoria
-1. **Incantesimo di Estensione Irriconoscibile** (`Adduco Maxima`, Pagina 83 del Manuale): dilatazione dello spazio interno lasciando invariate le dimensioni esterne.
-2. **Tassonomia della Trasformazione**: classificazione delle mutazioni inter-specie.
-3. **Trasfigurazione Circolare** (`Obstringo Circulum`): loop ciclici di trasformazione periodica.
-4. **Trasfigurazione Umana**: principi biologici di alterazione corporea su tessuti umani viventi.
-
-### Modulo di Pratica
-* **`Adduco Maxima`** (Estensione Irriconoscibile)
-  * *Formula*: `Adduco Maxima` | *Valenza*: **7** (Opposto 3, Ettagono) | *Rune*: ᚷ Gebo (7ª), ᛋ Sowilo (16ª)
-* **`Obstringo Circulum`** (Trasfigurazione Circolare Intermittente)
-  * *Formula*: `Obstringo Circulum` | *Valenza*: **8** (Opposto 2, Ottagono) | *Rune*: ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª)
-* **`Crinus Muto`** (Trasfigurazione della Capigliatura)
-  * *Formula*: `Crinus Muto` | *Valenza*: **3** (Opposto 7, Triangolo equil.) | *Rune*: ᚦ Thurisaz (3ª), ᛃ Jera (12ª), ᛚ Laguz (21ª)
-* **`Pullus`** (Trasfigurazione in Pollo)
-  * *Formula*: `Pullus` | *Valenza*: **2** (Opposto 8, Angolo/Linea) | *Rune*: ᚢ Uruz (2ª), ᛁ Isa (11ª), ᛗ Mannaz (20ª)
-* **`Densaugeo`** (Fattura Cresci-Denti)
-  * *Formula*: `Densaugeo` | *Valenza*: **9** (Opposto 1, Ellisse) | *Rune*: ᚺ Hagalaz (9ª), ᛒ Berkana (18ª)
-* **`Paperate / Paperante`** (Trasfigurazione in Papera)
-  * *Formula*: `Paperante` | *Valenza*: **8** (Opposto 2, Ottagono) | *Rune*: ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª)
-* **`Piscofors`** (Trasfigurazione in Pesce)
-  * *Formula*: `Piscofors` | *Valenza*: **8** (Opposto 2, Ottagono) | *Rune*: ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª)
-* **`Entomorphis`** (Trasfigurazione Insettoide)
-  * *Formula*: `Entomorphis` | *Valenza*: **9** (Opposto 1, Ellisse) | *Rune*: ᚺ Hagalaz (9ª), ᛒ Berkana (18ª)
-* **`Furitum`** (Trasfigurazione in Furetto)
-  * *Formula*: `Furitum` | *Valenza*: **5** (Opposto 5, Pentagono) | *Rune*: ᚱ Raido (5ª), ᛈ Perthr (14ª), ᛟ Othila (23ª), ○ Bianca
-* **`Geminio`** (Duplicazione Trasfigurativa)
-  * *Formula*: `Geminio` | *Valenza*: **5** (Opposto 5, Pentagono) | *Rune*: ᚱ Raido (5ª), ᛈ Perthr (14ª), ᛟ Othila (23ª), ○ Bianca
-* **`Inflatus`** (Gonfiamento Corporeo a Palloncino)
-  * *Formula*: `Inflatus` | *Valenza*: **8** (Opposto 2, Ottagono) | *Rune*: ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª)
+* **Tassonomia della Trasformazione & Trasfigurazione Circolare** (Pag. 88–94)
+* **Trasfigurazione Umana** (Pag. 96):
+  * `Crinus Muto` (Valenza 8 • ᚹ Wunjo) — Alterazione estetica capillare.
+  * `Pullus` (Valenza 8 • ᚹ Wunjo) — Trasfigurazione in pollo da duello.
+  * `Densaugeo` (Valenza 5 • ᚱ Raido) — Crescita mostruosa dei denti.
+  * `Paperante` (Valenza 1 • ᚠ Fehu) — Trasfigurazione in papera.
+  * `Piscofors` (Valenza 3 • ᚦ Thurisaz) — Trasfigurazione marina in pesce.
+  * `Entomorphis` (Valenza 9 • ᚺ Hagalaz) — Trasfigurazione in insetto.
+  * `Furitum` (Valenza 7 • ᚷ Gebo) — Trasfigurazione in furetto.
+  * `Geminio` (Valenza 6 • ᚲ Kenaz) — Duplicazione virale.
+  * `Inflatus` (Valenza 6 • ᚲ Kenaz) — Rigonfiamento corporeo a pallone.
+  * `Capacius Extremis` / `Adduco Maxima` (Valenza 2 / 1) — Estensione spaziale indistinguibile.
 
 ---
 
-## 🏛️ 7. VII ANNO — ANIMAGIA SUPREMA E RITORNO ALLA FORMA UMANA
+## 🏛️ 7. VII ANNO — ALTA ANIMAGIA, MANNARISMO E RIVERSIONE SUPREMA
+*(Argomenti di coronamento accademico M.A.G.O. già classificati)*
 
-### Modulo di Teoria
-1. **Animagia**: l'apice della Trasfigurazione umana; fusione della coscienza umana con la forma animale istintiva.
-2. **Animagus**: il processo meditativo e rituale per svelare e padroneggiare la propria forma bestiale.
-3. **Animagia e Licantropia / Mannarismo**: differenze sostanziali tra mutazione volontaria (Animagus) e infezione patologica indotta (Licantropia).
-4. **Maledictus**: maledizioni di sangue trasmissibili per via matrilineare con trasformazione bestiale definitiva.
-5. **Metamorphomagus**: facoltà innata e non apprendibile di mutare lineamenti e aspetto a piacimento.
-
-### Modulo di Pratica
-* **`Animaleus Nobodyx` [Teoria]** (Incantesimo di Ripristino Umano)
-  * *Formula*: `Animaleus Nobodyx` | *Valenza*: **7** (Opposto 3, Ettagono) | *Rune*: ᚷ Gebo (7ª), ᛋ Sowilo (16ª)
-  * *Effetto*: Sortilegio supremo per forzare un individuo trasfigurato o un Animagus a deporre la forma animale e riacquisire i tratti e la fisionomia umana originale.
-* **`Reverto` / Pozione Homine Reverto [Teoria]** (Controincantesimo Trasfigurativo di Ritorno)
-  * *Formula*: `Reverto` | *Valenza*: **6** (Opposto 4, Esagono) | *Rune*: ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª)
-  * *Effetto*: Reverte istantaneamente mutazioni molecolari complesse, risanando l'involucro corporeo da deformazioni esterne.
-
----
-
-## 📊 Tabella Sinottica Generale di Trasfigurazione (I - VII Anno)
-
-| Anno | Nome Incanto | Formula | Val. | Opp. | Ramo Operativo | Idoneità Duello | Rune Associate (Futhark) |
-|:---:|---|---|:---:|:---:|---|:---:|---|
-| **I** | **Animazione di Carta** | `Chartanimus` | **4** | 6 | Animazione Inanimata Base | ⛔ NO | ᚨ Ansuz (4ª), ᛇ Eihwaz (13ª), ᛜ Inguz (22ª) |
-| **I** | **Forma Morfologica** | `Transfiguro` | **8** | 2 | Trasfigurazione di Forma | ⛔ NO | ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª) |
-| **I** | **Sostanza Materica** | `Muto` | **6** | 4 | Trasfigurazione di Materiale | ⛔ NO | ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª) |
-| **I** | **Trasfigurazione Totale** | `Verto` | **6** | 4 | Trasfigurazione Completa | ⛔ NO | ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª) |
-| **II** | **Trasfigurazione in Ago** | `Acutus` | **2** | 8 | Trasfigurazione Inanimata | ⚔️ SÌ | ᚢ Uruz (2ª), ᛁ Isa (11ª), ᛗ Mannaz (20ª) |
-| **II** | **Trasfigurazione in Mela** | `Malum` | **6** | 4 | Trasfigurazione Inanimata | ⛔ NO | ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª) |
-| **II** | **Ammorbidimento** | `Gommosus` | **1** | 9 | Alterazione Materica Elastica | ⚔️ SÌ | ᚠ Fehu (1ª), ᚾ Nauthiz (10ª), ᛖ Ehwaz (19ª) |
-| **II** | **Trasfigurazione in Lombrico** | `Vermiculus` | **2** | 8 | Trasfigurazione Organica Minore | ⚔️ SÌ | ᚢ Uruz (2ª), ᛁ Isa (11ª), ᛗ Mannaz (20ª) |
-| **II** | **Trasfigurazione in Topo** | `Snufflifors` | **9** | 1 | Trasfigurazione Inanimato-Animale | ⚔️ SÌ | ᚺ Hagalaz (9ª), ᛒ Berkana (18ª) |
-| **II** | **Trasfigurazione in Gabbia** | `Incarcifors` | **8** | 2 | Trasfigurazione Inanimata Contenitiva | ⚔️ SÌ | ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª) |
-| **II** | **Animale in Calice d'Acqua** | `Feraverto` | **5** | 5 | Trasfigurazione Animale-Inanimato | ⛔ NO | ᚱ Raido (5ª), ᛈ Perthr (14ª), ᛟ Othila (23ª), ○ Bianca |
-| **II** | **Riccio in Portaspilli** | `Inferacus` | **1** | 9 | Trasfigurazione Animale-Inanimato | ⛔ NO | ᚠ Fehu (1ª), ᚾ Nauthiz (10ª), ᛖ Ehwaz (19ª) |
-| **III** | **Rettifica Trasfigurativa** | `Reparifarge` | **6** | 4 | Detrasfigurazione / Risoluzione | ⚔️ SÌ | ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª) |
-| **III** | **Trasfigurazione in Coniglio** | `Lapifors` | **9** | 1 | Trasfigurazione Inanimato-Animale | ⚔️ SÌ | ᚺ Hagalaz (9ª), ᛒ Berkana (18ª) |
-| **III** | **Trasfigurazione in Volatile** | `Avifors` | **7** | 3 | Trasfigurazione Inanimato-Animale | ⚔️ SÌ | ᚷ Gebo (7ª), ᛋ Sowilo (16ª) |
-| **III** | **Evocazione Stormo Uccelli** | `Avis` | **5** | 5 | Evocazione Ornitologica | ⚔️ SÌ | ᚱ Raido (5ª), ᛈ Perthr (14ª), ᛟ Othila (23ª), ○ Bianca |
-| **III** | **Farfalle Luminose** | `Farfallus Explodit` | **7** | 3 | Evocazione Entomologica Ottica | ⚔️ SÌ | ᚷ Gebo (7ª), ᛋ Sowilo (16ª) |
-| **III** | **Fattura dei Foruncoli** | `Furunculus` | **1** | 9 | Fattura Trasfigurativa Epidermica | ⚔️ SÌ | ᚠ Fehu (1ª), ᚾ Nauthiz (10ª), ᛖ Ehwaz (19ª) |
-| **III** | **Leviga-Scale** | `Glisseo` | **6** | 4 | Alterazione Architettonica | ⚔️ SÌ | ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª) |
-| **IV** | **Animazione Draconica** | `Draconifors` | **1** | 9 | Litotrasfigurazione Animata | ⚔️ SÌ | ᚠ Fehu (1ª), ᚾ Nauthiz (10ª), ᛖ Ehwaz (19ª) |
-| **IV** | **Pietrificazione Oggetti** | `Duro` | **4** | 6 | Litotrasfigurazione Minerale | ⚔️ SÌ | ᚨ Ansuz (4ª), ᛇ Eihwaz (13ª), ᛜ Inguz (22ª) |
-| **IV** | **Animazione Statue & Armature** | `Piertotum Locomotor` | **8** | 2 | Alta Animazione di Difesa | ⚔️ SÌ | ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª) |
-| **IV** | **Ingrandimento Dimensionale** | `Engorgio` | **9** | 1 | Alterazione Volumetrica | ⚔️ SÌ | ᚺ Hagalaz (9ª), ᛒ Berkana (18ª) |
-| **IV** | **Rimpicciolimento Dimensionale**| `Diminuendo` | **9** | 1 | Compressione Volumetrica | ⚔️ SÌ | ᚺ Hagalaz (9ª), ᛒ Berkana (18ª) |
-| **V** | **Incantesimo Incollante** | `Epoximise` | **3** | 7 | Adesione Trasfigurativa | ⚔️ SÌ | ᚦ Thurisaz (3ª), ᛃ Jera (12ª), ᛚ Laguz (21ª) |
-| **V** | **Evocazione Floreale** | `Orchideus` | **8** | 2 | Evocazione Botanica | ⛔ NO | ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª) |
-| **V** | **Fattura della Zucca** | `Melofors` | **8** | 2 | Trasfigurazione Confinante | ⚔️ SÌ | ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª) |
-| **V** | **Corde Vincolanti** | `Incarceramus` | **6** | 4 | Evocazione Contenitiva | ⚔️ SÌ | ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª) |
-| **VI** | **Estensione Irriconoscibile**| `Adduco Maxima` | **7** | 3 | Piegatura Spazio-Temporale | ⛔ NO | ᚷ Gebo (7ª), ᛋ Sowilo (16ª) |
-| **VI** | **Trasfigurazione Circolare** | `Obstringo Circulum` | **8** | 2 | Mutazione Ciclica Periodica | ⛔ NO | ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª) |
-| **VI** | **Trasfigurazione Capelli** | `Crinus Muto` | **3** | 7 | Trasfigurazione Umana Minore | ⛔ NO | ᚦ Thurisaz (3ª), ᛃ Jera (12ª), ᛚ Laguz (21ª) |
-| **VI** | **Trasfigurazione in Pollo** | `Pullus` | **2** | 8 | Trasfigurazione Umana Bestiale | ⚔️ SÌ | ᚢ Uruz (2ª), ᛁ Isa (11ª), ᛗ Mannaz (20ª) |
-| **VI** | **Fattura Cresci-Denti** | `Densaugeo` | **9** | 1 | Trasfigurazione Umana Involontaria | ⚔️ SÌ | ᚺ Hagalaz (9ª), ᛒ Berkana (18ª) |
-| **VI** | **Trasfigurazione in Papera** | `Paperante` | **8** | 2 | Trasfigurazione Umana Bestiale | ⚔️ SÌ | ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª) |
-| **VI** | **Trasfigurazione in Pesce** | `Piscofors` | **8** | 2 | Trasfigurazione Umana Bestiale | ⚔️ SÌ | ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª) |
-| **VI** | **Trasfigurazione Insettoide** | `Entomorphis` | **9** | 1 | Trasfigurazione Umana Insettoide | ⚔️ SÌ | ᚺ Hagalaz (9ª), ᛒ Berkana (18ª) |
-| **VI** | **Trasfigurazione in Furetto** | `Furitum` | **5** | 5 | Trasfigurazione Umana Bestiale | ⚔️ SÌ | ᚱ Raido (5ª), ᛈ Perthr (14ª), ᛟ Othila (23ª), ○ Bianca |
-| **VI** | **Duplicazione Trasfigurativa** | `Geminio` | **5** | 5 | Duplicazione Materica | ⛔ NO | ᚱ Raido (5ª), ᛈ Perthr (14ª), ᛟ Othila (23ª), ○ Bianca |
-| **VI** | **Gonfiamento a Palloncino** | `Inflatus` | **8** | 2 | Trasfigurazione Umana Corporea | ⚔️ SÌ | ᚹ Wunjo (8ª), ᛏ Teiwaz (17ª) |
-| **VII** | **Ripristino Umano** | `Animaleus Nobodyx` | **7** | 3 | Alta Detrasfigurazione Umana | ⚔️ SÌ | ᚷ Gebo (7ª), ᛋ Sowilo (16ª) |
-| **VII** | **Ritorno alla Forma Umana**| `Reverto` | **6** | 4 | Controincantesimo Umano Supremo | ⚔️ SÌ | ᚲ Kenaz (6ª), ᛉ Algiz (15ª), ᛞ Dagaz (24ª) |
+* **Animagia & Animagus** (Pag. 108–110): trasformazione conscia e reversibile in animale guida.
+* **Licantropia, Mannarismo e Maledictus** (Pag. 112–123): maledizioni del sangue e degenerazione ontologica.
+* **`Animaleus Nobodyx`** (Valenza 6 • ᚲ Kenaz) — Formula correttiva per disvelare Animaghi e smascherare sembianze animali.
+* **Pozione Homine Reverto** (Pag. 122) — Formulazione alchemica per costringere l'Animagus al ripristino umano.
