@@ -55,13 +55,7 @@ html = re.sub(r'<span id="macroCreaturesText"[^>]*>(?:Creature Magiche|Creature)
 html = re.sub(r'<span id="macroPlantsText"[^>]*>(?:Erbologia & Piante|Piante) \([0-9]+\)</span>', f'<span id="macroPlantsText" class="tracking-wide">Erbologia & Piante ({plant_count})</span>', html)
 html = re.sub(r'<span id="macroPotionsText"[^>]*>(?:Arte delle Pozioni|Pozioni) \([0-9]+\)</span>', f'<span id="macroPotionsText" class="tracking-wide">Arte delle Pozioni ({pot_count})</span>', html)
 
-# Aggiornamento Header Stats Badges & 3 Box Totali
-dark_count = len([s for s in spells if not s.get('isRune') and ('Maledizione' in s.get('tipologia', '') or 'Fattura' in s.get('tipologia', ''))])
-html = re.sub(r'<div id="statTotal"[^>]*>[0-9]+</div>', f'<div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">{spells_count}</div>', html)
-html = re.sub(r'<div id="statRunes"[^>]*>[0-9]+</div>', f'<div id="statRunes" class="text-2xl font-bold font-magic text-indigo-400">{runes_count}</div>', html)
-html = re.sub(r'<div id="statCreatures"[^>]*>[0-9]+</div>', f'<div id="statCreatures" class="text-2xl font-bold font-magic text-amber-400">{cr_count}</div>', html)
-html = re.sub(r'<div id="statPlants"[^>]*>[0-9]+</div>', f'<div id="statPlants" class="text-2xl font-bold font-magic text-emerald-400">{plant_count}</div>', html)
-html = re.sub(r'<div id="statPotions"[^>]*>[0-9]+</div>', f'<div id="statPotions" class="text-2xl font-bold font-magic text-indigo-400">{pot_count}</div>', html)
+# Aggiornamento Gran Totale Archiviato
 html = re.sub(r'<div id="statGrandTotal"[^>]*>[0-9]+</div>', f'<div id="statGrandTotal" class="text-3xl sm:text-4xl font-bold font-magic text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600">{grand_total}</div>', html)
 
 # Aggiornamento Year Quick Tabs per default (Incantesimi)

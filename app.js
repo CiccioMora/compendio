@@ -500,15 +500,6 @@ function initPortal() {
       }`;
     });
 
-    // Update Stat Cards highlight in Hero Banner
-    document.querySelectorAll(".stat-card").forEach(card => {
-      const target = card.dataset.statMacro;
-      if (target === activeMacro) {
-        card.classList.add("ring-2", "ring-amber-400", "bg-amber-950/40");
-      } else {
-        card.classList.remove("ring-2", "ring-amber-400", "bg-amber-950/40");
-      }
-    });
 
     // Sync URL hash
     if (window.history && window.history.replaceState) {
@@ -1583,25 +1574,6 @@ function initPortal() {
     }
   });
 
-  // --- Hero Stat Cards Click Listeners ---
-  document.querySelectorAll(".stat-card").forEach(card => {
-    card.addEventListener("click", () => {
-      const targetMacro = card.dataset.statMacro;
-      if (targetMacro) {
-        setMacroFilter(targetMacro);
-        const catalogSec = document.getElementById("catalogSection");
-        if (catalogSec) {
-          catalogSec.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    });
-    card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        card.click();
-      }
-    });
-  });
 
   // Expose global methods
   window.setMacroFilter = setMacroFilter;
