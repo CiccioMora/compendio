@@ -2,7 +2,7 @@
 *Classificazione Accademica Metodologica per Anni di Studio (Hogwarts & Arcane GDR)*
 
 > [!NOTE]
-> Il presente compendio unifica l'intero corpus magico di **290 voci catalogate (265 incantesimi pratici + 25 rune dell'Antico Futhark)**, integrando le fonti didattiche ufficiali:
+> Il presente compendio unifica l'intero corpus magico di **291 voci catalogate (266 incantesimi pratici + 25 rune dell'Antico Futhark)**, integrando le fonti didattiche ufficiali:
 > - **Manuale di Studio Magico Incantesimi (Edizione 2026)** (*Yashiro Isana Mortem*): Tomi I-VII (I-VII Anno) completi di formule, gesti, etimologie e Chicche di Magia.
 > - **Programma di Trasfigurazione** (*Yashiro Isana Mortem*): Principi di trasformazione inanimata, animata, umana ed evocazioni tecniche (*Avis*, *Serpensortia*, *Orchideus*, *Ebublio*, *Obscuro*, *Pulveris*, *Slugulus Eructo*).
 > - **Astronomia Magica** (*Mary C. Silente & Trattato I-V Anno*): *Guidami*, *Alheia Croma*, *Apokros*, *Lux Perfluo*, *Astralis Cartae Dominium*, *Astra Invoco*, *Stellaris Revela*, *Stellaris Obscura*, *Caelus Memorium*, *Cometae Vocatum*, *Sidera Sentio*, *Orbis Caeli*, *Rituale Meteorio*.
@@ -11,7 +11,7 @@
 > - **Difesa Contro le Arti Oscure** (*Gellert Mortem & Yashiro Isana Mortem*): **Maledictio** (*VI Anno*), **Oltre il Mago** (*VII Anno*) e trattati anti-creature oscure (*Imposium*).
 > - **Formule Senza Anno (Altri)**: Controincanti generali, difese statiche di zona, trasfigurazione fondamentale e trattati aritmantici non vincolati ad un'annata scolastica.
 >
-> 🔗 **[Apri il Portale Web Interattivo Completo (290 Voci)](file:///Users/andreamorachioli/.gemini/antigravity/brain/3a4f7fa7-8206-4f51-b303-aa9b9d9eaf5c/portale_incantesimi.html)** oppure visualizza il progetto in locale: **[index.html](file:///Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi/index.html)**.
+> 🔗 **[Apri il Portale Web Interattivo Completo (291 Voci)](file:///Users/andreamorachioli/.gemini/antigravity/brain/3a4f7fa7-8206-4f51-b303-aa9b9d9eaf5c/portale_incantesimi.html)** oppure visualizza il progetto in locale: **[index.html](file:///Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi/index.html)**.
 
 ---
 ## 1. Fondamenti del Calcolo Aritmantico della Valenza Magica
@@ -42,7 +42,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 
 ---
 
-## 2. Tavola Generale dei 290 Incantesimi e Rune
+## 2. Tavola Generale dei 291 Incantesimi e Rune
 
 | Anno | Nome Incanto | Formula | Valenza | Opposto | Tipologia | Duello | Runa Associata |
 |:---:|---|---|:---:|:---:|---|:---:|---|
@@ -336,4 +336,5 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **I Anno** | **Marchiatura di Oggetti Inanimati (Significo)** | `Significo` | **1** | 9 | Trasfigurazione / Marchiatura Inanimata | ⛔ NO | ᚠ Fehu (Pos. 1ª) |
 | **Altri** | **Protezione Totale di Zona (Protego Totalum)** | `Protego Totalum` | **9** | 1 | Difensivo Statico di Zona (I.D.S.) | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
 | **Altri** | **Incantesimo Palpitante (Palpitatio)** | `Palpitatio` | **2** | 8 | Curativo / Percezione Empatica / Medimagia | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
+| **Altri** | **Incantesimo Onironauta (Remnate)** | `Remnate` | **4** | 6 | Utilità / Magia Psichica / Onirica | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 

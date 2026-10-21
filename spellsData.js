@@ -6554,5 +6554,27 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Angolo / Linea (Dinamismo Vitale)",
     "noteAritmantiche": "Valenza Magica 2 (somma pitagorica P=7 + A=1 + L=3 + P=7 + I=9 + T=2 + A=1 + T=2 + I=9 + O=6 = 47 ➔ 11 ➔ 2). Valenza opposta di simmetria: 8 (Fuoco / Ottagono). Figura geometrica operativa: Angolo / Linea. Runa associata dell'Antico Futhark: ᚢ Uruz (Pos. 2ª, runa della vitalità corporea, salute e forza interiore). Limite di reiterazione efficace: 1 volta.",
     "runeAssociate": "ᚢ Uruz (Pos. 2ª)"
+  },
+  {
+    "id": "remnate",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo Onironauta (Remnate)",
+    "formula": "Remnate",
+    "ripetibile": false,
+    "tipologia": "Utilità / Magia Psichica / Onirica",
+    "inDuello": false,
+    "duelloNote": "Inutilizzabile in duello. Induce la fisiologica atonia e paralisi muscolare della fase REM; richiede quiete, concentrazione prolungata e ambiente sicuro.",
+    "movimento": "Evoluzione del moto di Dismundo: spirale onirica espansiva all'altezza della fronte/tempie, che traccia i cerchi concentrici dell'attività cerebrale della fase REM.",
+    "movimentoSvg": "M 75,75 C 75,65 85,65 85,75 C 85,90 60,90 60,75 C 60,50 100,50 100,75 C 100,110 40,110 40,75 C 40,30 115,30 115,75",
+    "descrizione": "Incantesimo capace di influire profondamente sulla mente, sia propria che altrui. Il soggetto, pur sveglio, viene condotto in una vera e propria fase REM ('sonno paradosso'), rimanendo al contempo cosciente dell'attività e degli stimoli esterni: è possibile indurre sogni lucidi vividi e partecipare attivamente a quelli altrui (se più soggetti sono sotto gli effetti dello stesso incantesimo, entro un limite ristretto e circoscritto).\nUno dei partecipanti può far da Cicerone e guidare l'altro nel proprio sogno, modulando le visioni e lo scenario condiviso.\n\nL'effetto dell'incanto è variabile a seconda dei classici parametri. Durante lo stesso si è succubi di una paralisi muscolare temporanea (atonia REM) — è pertanto consigliabile cader vittima degli effetti di tale sortilegio in una posizione comoda e circondata da persone fidate. Consigliata una conoscenza avanzata della mente umana, meglio se in possesso di abilità specialistiche quali l'Occlumanzia o la Legilimanzia.\n\nStoria e Origine: Ultimato da Emma Mortem Camus (Emma Sawyer all'anagrafe) in base alle nozioni di Difesa Contro le Arti Oscure apprese nel corso degli anni (di cui ora detiene il titolo di Massima Esponente). Il sortilegio nasce dalle radici di Dismundo (vedi Manuale), ma gli effetti sono stati modificati affinché intaccassero la psiche anziché la vista. È stato fortemente voluto e concepito in seguito ad un incidente che ha visto coinvolta la migliore amica d'infanzia Lorraine Muriel Mhara, oggigiorno cieca, per alleviare la frustrazione dovuta alla perdita di quello che, per lei, era il senso più sviluppato e sul quale faceva più riferimento.",
+    "etimologia": "Da 'REM' ('Rapid Eye Movement') o 'sonno paradosso', ovvero lo stadio avanzato del sonno caratterizzato da un'elevata attività cerebrale e sogni vividi, unito al suffisso inglese '-ate', utilizzato per formare verbi o azioni operative.",
+    "valenza": 4,
+    "sommaLettere": 31,
+    "valenzaOpposta": 6,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Quadrato (Stabilità Mentale / Architettura Onirica)",
+    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica R=9 + E=5 + M=4 + N=5 + A=1 + T=2 + E=5 = 31 ➔ 4). Valenza opposta di simmetria: 6 (Terra / Esagono). Figura geometrica operativa: Quadrato. Runa associata dell'Antico Futhark: ᚨ Ansuz (Pos. 4ª, runa della mente cosciente, della saggezza, della comunicazione e del pensiero). Limite di reiterazione efficace: 1 volta.",
+    "runeAssociate": "ᚨ Ansuz (Pos. 4ª)"
   }
 ];
