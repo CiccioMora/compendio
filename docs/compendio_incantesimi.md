@@ -334,7 +334,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **I Anno** | **Marchiatura di Creature ed Entità Viventi (Fersigno)** | `Fersigno` | **3** | 7 | Trasfigurazione / Marchiatura Vivente | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **I Anno** | **Marchiatura di Elementi Vegetali (Plansigno)** | `Plansigno` | **8** | 2 | Trasfigurazione / Marchiatura Vegetale | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
 | **I Anno** | **Marchiatura di Oggetti Inanimati (Significo)** | `Significo` | **1** | 9 | Trasfigurazione / Marchiatura Inanimata | ⛔ NO | ᚠ Fehu (Pos. 1ª) |
-| **Altri** | **Protezione Totale di Zona (Protego Totalum)** | `Protego Totalum` | **9** | 1 | Difensivo Statico di Zona (I.D.S.) | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
+| **III Anno** | **Protezione Totale di Zona (Protego Totalum)** | `Protego Totalum` | **9** | 1 | Difensivo Statico di Zona (I.D.S.) | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
 | **Altri** | **Incantesimo Palpitante (Palpitatio)** | `Palpitatio` | **2** | 8 | Curativo / Percezione Empatica / Medimagia | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **Altri** | **Incantesimo Onironauta (Remnate)** | `Remnate` | **4** | 6 | Utilità / Magia Psichica / Onirica | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **Altri** | **Maledizione Asfissiante (Suffocatio)** | `Suffocatio` | **7** | 3 | Maledizione / Maledizione Oscura / Letale | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |

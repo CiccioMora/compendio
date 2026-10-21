@@ -6513,8 +6513,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "protego-totalum",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 3,
+    "annoLabel": "III Anno",
     "nome": "Protezione Totale di Zona (Protego Totalum)",
     "formula": "Protego Totalum",
     "ripetibile": true,
