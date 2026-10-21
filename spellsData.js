@@ -6598,5 +6598,27 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Ettagono regolare (Opposizione / Conflitto Vitale)",
     "noteAritmantiche": "Valenza Magica 7 (somma pitagorica S=1 + U=3 + F=6 + F=6 + O=6 + C=3 + A=1 + T=2 + I=9 + O=6 = 43 ➔ 7). Valenza opposta di simmetria: 3 (Triangolo / Creazione). Figura geometrica operativa: Ettagono regolare (Opposizione estrema). Runa associata dell'Antico Futhark: ᚷ Gebo (Pos. 7ª, runa del patto, del legame indissolubile e dell'opposizione magica). Limite di reiterazione efficace: 1 volta (mantenimento attivo continuo).",
     "runeAssociate": "ᚷ Gebo (Pos. 7ª)"
+  },
+  {
+    "id": "illuficium",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo Illusorio (Illuficium)",
+    "formula": "Illuficium",
+    "ripetibile": false,
+    "tipologia": "Trasfigurazione / Illusione Sensoriale / Ottica",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in duello tattico a corto raggio (entro 2-3 metri, massimo 2 bersagli). Altera fino a 2 sensi contemporaneamente (es. vista e udito) proiettando miraggi ingannevoli. Si dissolve se l'avversario riconosce razionalmente l'illusione, se l'incantatore viene distratto o colpito, oppure tramite il controincantesimo specifico Illusìndum (rotazione a 360° della bacchetta sopra il capo con braccio esteso verso l'alto).",
+    "movimento": "Puntamento diretto verso il bersaglio o l'area designata, accompagnato da una rotazione controllata e fluida del polso nello spazio per canalizzare la proiezione illusoria.",
+    "movimentoSvg": "M 30,75 L 60,75 C 60,55 90,55 90,75 C 90,95 60,95 60,75 C 60,50 105,40 125,75",
+    "descrizione": "Genera dalla punta della bacchetta un'illusione strutturata, proiettabile su un singolo individuo o su un'area circoscritta ('target ambientale') e su chiunque vi si trovi all'interno.\nRichiede un livello eccezionalmente elevato di concentrazione: il trasfiguratore deve ricostruire mentalmente l'illusione attraverso un processo di visualizzazione nitido e perfettamente stabile, dirigendo il catalizzatore con una rotazione controllata del polso.\n\nLimitazioni Tecniche:\n• Alterazione Sensoriale: l'incantatore può alterare strutturalmente al massimo due sensi contemporaneamente (es. Vista e Udito, oppure Udito e Olfatto).\n• Raggio d'Azione: circoscritto a un perimetro ridotto di 2–3 metri al massimo dall'utilizzatore.\n• Bersagli: coinvolge al massimo due soggetti alla volta.\n• Condizioni di Dissoluzione: l'illusione svanisce se la vittima realizza e riconosce razionalmente la natura illusoria di ciò che percepisce, oppure a causa di distrazioni ambientali o fisiche subite dall'incantatore.\n\nDifesa e Controincanto:\nIl controincantesimo specifico è Illusìndum, che interrompe e dissolve la proiezione. Perché abbia successo, l'intensità magica del controincanto deve superare quella dell'illusione originale; l'esecuzione prevede una rotazione completa a 360° della bacchetta sopra il capo con il braccio dominante esteso lungo l'asse verticale.\n\nStoria e Origine:\nFrutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos Noctis sulla formalizzazione scientifica e percettivo-visiva delle illusioni. Lo studio comparato ha integrato incantesimi affini come Desilludo e matrici di manipolazione della percezione come Dismundo, analizzando a fondo i processi fenomenologici dell'alterazione sensoriale per perfezionare le tecniche di manipolazione della realtà percepita.",
+    "etimologia": "Formazione pseudo-latina nata dalla combinazione di illusio ('illusione', da illudere: ingannare, deridere) e del suffisso formativo -ficium (dal verbo latino facere: fare, creare), con il significato complessivo di 'atto di creare illusioni' o 'generazione illusoria'.",
+    "valenza": 7,
+    "sommaLettere": 52,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Dono Illusorio)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica I=9 + L=3 + L=3 + U=3 + F=6 + I=9 + C=3 + I=9 + U=3 + M=4 = 52 ➔ 7). Valenza opposta di simmetria: 3 (Triangolo / Creazione). Figura geometrica operativa: Ettagono regolare (Opposizione e dualismo reale/fittizio). Runa associata dell'Antico Futhark: ᚷ Gebo (Pos. 7ª, runa del dono, dello scambio percettivo e del confine tra vero e simulato). Limite di reiterazione efficace: 1 volta.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª)"
   }
 ];
