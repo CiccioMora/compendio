@@ -79,6 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (statPozioni) statPozioni.textContent = data.pozioni.length;
   if (statTotal) statTotal.textContent = data.creature.length + data.piante.length + data.pozioni.length;
 
+  // Update Tab Badges dynamically
+  macroTabs.forEach(t => {
+    const macro = t.getAttribute('data-macro');
+    const badge = t.querySelector('span.font-mono');
+    if (badge && data[macro]) {
+      badge.textContent = data[macro].length;
+    }
+  });
+
   // Modal Elements
   const itemModal = document.getElementById('itemModal');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
@@ -99,7 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { label: 'IV Anno', value: '4' },
     { label: 'V Anno', value: '5' },
     { label: 'VI Anno', value: '6' },
-    { label: 'VII Anno', value: '7' }
+    { label: 'VII Anno', value: '7' },
+    { label: 'Altri', value: '0' }
   ];
 
   function renderYearButtons() {
@@ -703,11 +713,11 @@ html_content = """<!DOCTYPE html>
       </div>
       <div class="glass-panel rounded-xl p-3 text-center border border-slate-800">
         <span class="text-xs text-slate-400 block mb-0.5">🧪 Pozioni Avanzate</span>
-        <span id="statPozioni" class="font-magic text-xl font-bold text-indigo-400">132</span>
+        <span id="statPozioni" class="font-magic text-xl font-bold text-indigo-400">137</span>
       </div>
       <div class="glass-panel rounded-xl p-3 text-center border border-slate-800">
         <span class="text-xs text-slate-400 block mb-0.5">📚 Totale Voci</span>
-        <span id="statTotal" class="font-magic text-xl font-bold text-white">263</span>
+        <span id="statTotal" class="font-magic text-xl font-bold text-white">268</span>
       </div>
     </div>
   </section>
@@ -732,7 +742,7 @@ html_content = """<!DOCTYPE html>
       <button type="button" data-macro="pozioni" aria-selected="false" class="macro-tab relative px-5 py-3 rounded-xl font-magic text-sm font-bold transition-all duration-300 flex items-center gap-2.5 bg-slate-900/60 text-slate-400 hover:text-slate-200 border border-slate-800 hover:border-slate-700">
         <span class="text-lg">🧪</span>
         <span>Arte delle Pozioni</span>
-        <span class="text-[11px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 font-mono">132</span>
+        <span class="text-[11px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 font-mono">137</span>
       </button>
     </div>
 

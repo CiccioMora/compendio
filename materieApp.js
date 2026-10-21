@@ -40,6 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (statPozioni) statPozioni.textContent = data.pozioni.length;
   if (statTotal) statTotal.textContent = data.creature.length + data.piante.length + data.pozioni.length;
 
+  // Update Tab Badges dynamically
+  macroTabs.forEach(t => {
+    const macro = t.getAttribute('data-macro');
+    const badge = t.querySelector('span.font-mono');
+    if (badge && data[macro]) {
+      badge.textContent = data[macro].length;
+    }
+  });
+
   // Modal Elements
   const itemModal = document.getElementById('itemModal');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
@@ -60,7 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { label: 'IV Anno', value: '4' },
     { label: 'V Anno', value: '5' },
     { label: 'VI Anno', value: '6' },
-    { label: 'VII Anno', value: '7' }
+    { label: 'VII Anno', value: '7' },
+    { label: 'Altri', value: '0' }
   ];
 
   function renderYearButtons() {
