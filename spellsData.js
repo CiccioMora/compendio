@@ -6532,5 +6532,27 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
     "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
     "runeAssociate": "ᚺ Hagalaz (Pos. 9ª)"
+  },
+  {
+    "id": "palpitatio",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo Palpitante (Palpitatio)",
+    "formula": "Palpitatio",
+    "ripetibile": false,
+    "tipologia": "Curativo / Percezione Empatica / Medimagia",
+    "inDuello": false,
+    "duelloNote": "Inutilizzabile in duello. Richiede concentrazione assoluta, postura statica a due mani (catalizzatore puntato, mano sul cuore), visualizzazione del volto e recitazione preliminare del nome del bersaglio.",
+    "movimento": "Postura a due mani: la mano dominante punta il catalizzatore in avanti (braccio rilassato lungo il fianco e poco inclinato in avanti); l'altra mano sosta sul petto a livello del cuore per percepire il battito.",
+    "movimentoSvg": "M 25,75 L 50,75 L 58,70 L 64,80 L 72,35 L 80,105 L 86,70 L 92,75 L 102,68 L 110,75 L 125,75",
+    "descrizione": "Consente di percepire il battito cardiaco di un soggetto e ricavare, grazie alla frequenza dello stesso, informazioni basilari e generiche circa il suo stato emotivo attuale (battito rallentato: probabile quiete; battito accelerato: probabile agitazione).\n\nAffinché l'incantesimo abbia effetto, il volto della persona dev'essere ben impresso in mente ed il nome della stessa pronunciato prima della formula: [Nome] + [Secondo Nome] + [Cognome] + Palpitatio.\nSe correttamente lanciato, la punta del catalizzatore brillerà di una luce bianca tenue ed il nostro battito cardiaco svanirà gradualmente: una volta 'agganciato' il bersaglio, la luce brillerà più intensamente ed il battito percepito sarà quello del bersaglio, in tempo reale. Gli effetti sono vanificati in mancanza di concentrazione e/o rottura della posa.\n\nStoria e Origine: Ricercato, studiato e coniato da Emma Mortem Camus (Emma Sawyer all'anagrafe), questo sortilegio è stato fortemente voluto dalla stessa strega come riflesso del proprio carattere e della natura empatica che la contraddistingue. Ella usava cullare il proprio sonno col battito cardiaco dei propri cari che, sapendo al sicuro, aiutavano di riflesso a regolarizzare il proprio cuore e la conducevano verso sogni tranquilli (testimonianza di Heinrich Albert Camus e Mairon Poirier).",
+    "etimologia": "Dal latino palpitatio ('palpitazione', dal verbo palpitare), traducibile nella percezione cosciente del proprio battito cardiaco — o di quello altrui, in questo caso.",
+    "valenza": 2,
+    "sommaLettere": 47,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Angolo / Linea (Dinamismo Vitale)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica P=7 + A=1 + L=3 + P=7 + I=9 + T=2 + A=1 + T=2 + I=9 + O=6 = 47 ➔ 11 ➔ 2). Valenza opposta di simmetria: 8 (Fuoco / Ottagono). Figura geometrica operativa: Angolo / Linea. Runa associata dell'Antico Futhark: ᚢ Uruz (Pos. 2ª, runa della vitalità corporea, salute e forza interiore). Limite di reiterazione efficace: 1 volta.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª)"
   }
 ];

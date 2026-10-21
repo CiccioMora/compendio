@@ -41,12 +41,12 @@ with open(f'{BASE_DIR}/app.js', 'r', encoding='utf-8') as f:
 
 # Aggiorna statistiche globali se presenti
 app_js = re.sub(
-    r'activeMacroHint\.innerHTML = `Visualizzazione: <strong class="text-amber-300">\$\{SPELLS_DATA\.filter\(s => !s\.isRune\)\.length\} Incantesimi Didattici</strong>`;',
+    r'activeMacroHint\.innerHTML = `Visualizzazione: <strong class="text-amber-300">.*? Incantesimi Didattici</strong>`;',
     f'activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">{spells_count} Incantesimi Didattici</strong>`;',
     app_js
 )
 app_js = re.sub(
-    r'activeMacroHint\.innerHTML = `Visualizzazione: <strong class="text-indigo-300">\$\{SPELLS_DATA\.filter\(s => s\.isRune\)\.length\} Antiche Rune Futhark</strong>`;',
+    r'activeMacroHint\.innerHTML = `Visualizzazione: <strong class="text-indigo-300">.*? Antiche Rune Futhark</strong>`;',
     f'activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-indigo-300">{runes_count} Antiche Rune Futhark</strong>`;',
     app_js
 )

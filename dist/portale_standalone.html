@@ -174,7 +174,7 @@
         <!-- STATS BADGES -->
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3">
           <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
-            <div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">264</div>
+            <div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">265</div>
             <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Incantesimi</div>
           </div>
           <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
@@ -231,7 +231,7 @@
           <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="macroFilterGroup">
             <button type="button" data-macro="spells" id="macroSpellsBtn" class="macro-btn px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 bg-amber-500 text-slate-950 shadow-md">
               <span>🪄</span>
-              <span id="macroSpellsText">Incantesimi (264)</span>
+              <span id="macroSpellsText">Incantesimi (265)</span>
             </button>
             <button type="button" data-macro="runes" id="macroRunesBtn" class="macro-btn px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 text-slate-400 hover:text-indigo-300 hover:bg-slate-900">
               <span>ᛟ</span>
@@ -242,7 +242,7 @@
 
         <!-- Macro Context Hint -->
         <div class="text-xs text-slate-400 flex items-center gap-2">
-          <span id="activeMacroHint" class="text-slate-400 text-[11px]">Visualizzazione: <strong class="text-amber-300">264 Incantesimi Didattici</strong></span>
+          <span id="activeMacroHint" class="text-slate-400 text-[11px]">Visualizzazione: <strong class="text-amber-300">265 Incantesimi Didattici</strong></span>
         </div>
       </div>
 
@@ -287,11 +287,11 @@
           <div>
             <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
               <span>Filtro Rapido per Anno di Corso:</span>
-              <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">264 incantesimi trovati</span>
+              <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">265 incantesimi trovati</span>
             </div>
             <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
               <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (264)
+              Tutti (265)
               </button>
               <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               I Anno (32)
@@ -315,7 +315,7 @@
               VII Anno (41)
               </button>
               <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              Altri (30)
+              Altri (31)
               </button>
             </div>
           </div>
@@ -327,13 +327,13 @@
               <span class="text-slate-400 font-medium">Duello:</span>
               <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
                 <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
-                Tutti (264)
+                Tutti (265)
                 </button>
                 <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
                 Sì (136)
                 </button>
                 <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
-                No (128)
+                No (129)
                 </button>
               </div>
             </div>
@@ -15674,6 +15674,69 @@
               </div>
             </div>
           </div>
+          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSpellDetails('palpitatio')">
+            <div>
+              <!-- Header info: Year & Duel -->
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
+                  Altri
+                </span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
+              </div>
+
+              <!-- Spell Name -->
+              <h3 class="text-lg font-bold font-magic text-slate-100 group-hover:text-amber-300 transition-colors line-clamp-1 mb-1">
+                Incantesimo Palpitante (Palpitatio)
+              </h3>
+
+              <!-- Formula Box -->
+              <div class="flex items-center gap-2 mb-3">
+                <span class="font-code text-xs px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-200 font-bold tracking-wide">
+                  ⚡ Palpitatio
+                </span>
+                <span class="text-xs px-2 py-0.5 rounded border bg-emerald-500/10 text-emerald-300 border-emerald-500/30 truncate max-w-[150px]">
+                  Curativo
+                </span>
+              </div>
+
+              <!-- Description -->
+              <p class="text-xs text-slate-300 line-clamp-3 leading-relaxed mb-4">
+                Consente di percepire il battito cardiaco di un soggetto e ricavare, grazie alla frequenza dello stesso, informazioni basilari e generiche circa il suo stato emotivo attuale (battito rallentato: probabile quiete; battito accelerato: probabile agitazione).
+
+Affinché l'incantesimo abbia effetto, il volto della persona dev'essere ben impresso in mente ed il nome della stessa pronunciato prima della formula: [Nome] + [Secondo Nome] + [Cognome] + Palpitatio.
+Se correttamente lanciato, la punta del catalizzatore brillerà di una luce bianca tenue ed il nostro battito cardiaco svanirà gradualmente: una volta 'agganciato' il bersaglio, la luce brillerà più intensamente ed il battito percepito sarà quello del bersaglio, in tempo reale. Gli effetti sono vanificati in mancanza di concentrazione e/o rottura della posa.
+
+Storia e Origine: Ricercato, studiato e coniato da Emma Mortem Camus (Emma Sawyer all'anagrafe), questo sortilegio è stato fortemente voluto dalla stessa strega come riflesso del proprio carattere e della natura empatica che la contraddistingue. Ella usava cullare il proprio sonno col battito cardiaco dei propri cari che, sapendo al sicuro, aiutavano di riflesso a regolarizzare il proprio cuore e la conducevano verso sogni tranquilli (testimonianza di Heinrich Albert Camus e Mairon Poirier).
+              </p>
+            </div>
+
+            <!-- Footer Arithmantic Summary -->
+            <div class="border-t border-slate-800/80 pt-3 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-400">Valenza:</span>
+                  <span class="font-code font-bold text-amber-400 bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-700/40">
+                    V2
+                  </span>
+                  <span class="text-[11px] text-slate-400" title="Valenza opposta di simmetria">
+                    (Opp. 8)
+                  </span>
+                </div>
+                <div class="text-[11px] text-sky-400 font-medium truncate max-w-[120px]" title="Angolo / Linea (Dinamismo Vitale)">
+                  Angolo / Linea
+                </div>
+              </div>
+
+              <!-- Wand Movement snippet -->
+              <div class="text-[11px] text-slate-400 line-clamp-1 italic bg-slate-950/40 px-2 py-1 rounded">
+                🪄 Postura a due mani: la mano dominante punta il catalizzatore in avanti (braccio rilassato lungo il fianco e poco inclinato in avanti); l'altra mano sosta sul petto a livello del cuore per percepire il battito.
+              </div>
+
+              <div class="pt-1 flex items-center justify-end text-xs text-amber-400 font-semibold group-hover:translate-x-1 transition-transform">
+                <span>Consulta Scheda & Gesto →</span>
+              </div>
+            </div>
+          </div>
     </div>
 
     <!-- Empty State -->
@@ -22483,6 +22546,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Ellisse (Reincarnazione / Dinamismo estremo)",
     "noteAritmantiche": "Valenza Magica 9 (somma pitagorica 63 ridotta a 9). Valenza opposta di simmetria: 1. Figura operativa per Signo: Ellisse (Reincarnazione / Dinamismo estremo). Limite di reiterazione efficace: 9 volte.",
     "runeAssociate": "ᚺ Hagalaz (Pos. 9ª)"
+  },
+  {
+    "id": "palpitatio",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Incantesimo Palpitante (Palpitatio)",
+    "formula": "Palpitatio",
+    "ripetibile": false,
+    "tipologia": "Curativo / Percezione Empatica / Medimagia",
+    "inDuello": false,
+    "duelloNote": "Inutilizzabile in duello. Richiede concentrazione assoluta, postura statica a due mani (catalizzatore puntato, mano sul cuore), visualizzazione del volto e recitazione preliminare del nome del bersaglio.",
+    "movimento": "Postura a due mani: la mano dominante punta il catalizzatore in avanti (braccio rilassato lungo il fianco e poco inclinato in avanti); l'altra mano sosta sul petto a livello del cuore per percepire il battito.",
+    "movimentoSvg": "M 25,75 L 50,75 L 58,70 L 64,80 L 72,35 L 80,105 L 86,70 L 92,75 L 102,68 L 110,75 L 125,75",
+    "descrizione": "Consente di percepire il battito cardiaco di un soggetto e ricavare, grazie alla frequenza dello stesso, informazioni basilari e generiche circa il suo stato emotivo attuale (battito rallentato: probabile quiete; battito accelerato: probabile agitazione).\n\nAffinché l'incantesimo abbia effetto, il volto della persona dev'essere ben impresso in mente ed il nome della stessa pronunciato prima della formula: [Nome] + [Secondo Nome] + [Cognome] + Palpitatio.\nSe correttamente lanciato, la punta del catalizzatore brillerà di una luce bianca tenue ed il nostro battito cardiaco svanirà gradualmente: una volta 'agganciato' il bersaglio, la luce brillerà più intensamente ed il battito percepito sarà quello del bersaglio, in tempo reale. Gli effetti sono vanificati in mancanza di concentrazione e/o rottura della posa.\n\nStoria e Origine: Ricercato, studiato e coniato da Emma Mortem Camus (Emma Sawyer all'anagrafe), questo sortilegio è stato fortemente voluto dalla stessa strega come riflesso del proprio carattere e della natura empatica che la contraddistingue. Ella usava cullare il proprio sonno col battito cardiaco dei propri cari che, sapendo al sicuro, aiutavano di riflesso a regolarizzare il proprio cuore e la conducevano verso sogni tranquilli (testimonianza di Heinrich Albert Camus e Mairon Poirier).",
+    "etimologia": "Dal latino palpitatio ('palpitazione', dal verbo palpitare), traducibile nella percezione cosciente del proprio battito cardiaco — o di quello altrui, in questo caso.",
+    "valenza": 2,
+    "sommaLettere": 47,
+    "valenzaOpposta": 8,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Angolo / Linea (Dinamismo Vitale)",
+    "noteAritmantiche": "Valenza Magica 2 (somma pitagorica P=7 + A=1 + L=3 + P=7 + I=9 + T=2 + A=1 + T=2 + I=9 + O=6 = 47 ➔ 11 ➔ 2). Valenza opposta di simmetria: 8 (Fuoco / Ottagono). Figura geometrica operativa: Angolo / Linea. Runa associata dell'Antico Futhark: ᚢ Uruz (Pos. 2ª, runa della vitalità corporea, salute e forza interiore). Limite di reiterazione efficace: 1 volta.",
+    "runeAssociate": "ᚢ Uruz (Pos. 2ª)"
   }
 ];
 
@@ -22701,7 +22786,7 @@ const SPELLS_DATA = [
 
         if (spellSubFilters) spellSubFilters.classList.remove("hidden");
         if (activeMacroHint) {
-          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">264 Incantesimi Didattici</strong>`;
+          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">265 Incantesimi Didattici</strong>`;
         }
       } else {
         macroRunesBtn?.classList.remove("text-slate-400", "hover:text-indigo-300", "hover:bg-slate-900");
