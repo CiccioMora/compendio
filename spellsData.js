@@ -5743,8 +5743,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "finite-incantatem",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 1,
+    "annoLabel": "I Anno",
     "nome": "Controincantesimo Generale (Finite Incantatem)",
     "formula": "Finite Incantatem",
     "ripetibile": false,

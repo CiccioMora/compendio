@@ -299,7 +299,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Antiche Rune** | **Runa Dagaz (ᛞ)** | `ᛞ Dagaz` | **6** | 4 | Antiche Rune / Glifo Sacro | ᛟ Runa | ᛞ Dagaz (Pos. 24ª) |
 | **Antiche Rune** | **Runa Bianca (○)** | `○ Runa Bianca` | **5** | 5 | Antiche Rune / Glifo Sacro | ᛟ Runa | ○ Runa Bianca (Pos. Speciale) |
 | **Altri** | **Antico Incantesimo di Apertura (Aberto)** | `Aberto` | **7** | 3 | Incantesimo di Sblocco Tradizionale | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
-| **Altri** | **Controincantesimo Generale (Finite Incantatem)** | `Finite Incantatem` | **7** | 3 | Contro-incantesimo Generale | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
+| **I Anno** | **Controincantesimo Generale (Finite Incantatem)** | `Finite Incantatem` | **7** | 3 | Contro-incantesimo Generale | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
 | **III Anno** | **Formula di Controllo del Fuoco (Plasma)** | `Plasma` | **8** | 2 | Elementale Fuoco / Controllo | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
 | **III Anno** | **Formula di Controllo dell'Acqua (Coerceo)** | `Coerceo` | **1** | 9 | Elementale Acqua / Controllo | ⚔️ SÌ | ᚠ Fehu (Pos. 1ª) |
 | **III Anno** | **Formula di Controllo dell'Aria (Finge)** | `Finge` | **5** | 5 | Elementale Aria / Controllo | ⚔️ SÌ | ᚱ Raido (Pos. 5ª) |
