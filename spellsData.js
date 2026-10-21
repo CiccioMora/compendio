@@ -5721,8 +5721,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "aberto",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 4,
+    "annoLabel": "IV Anno",
     "nome": "Antico Incantesimo di Apertura (Aberto)",
     "formula": "Aberto",
     "ripetibile": true,
@@ -6161,8 +6161,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "portaberto",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 4,
+    "annoLabel": "IV Anno",
     "nome": "Incantesimo Rudimentale di Sblocco Porta (Portaberto)",
     "formula": "Portaberto",
     "ripetibile": false,
@@ -6249,8 +6249,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "liberate",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 4,
+    "annoLabel": "IV Anno",
     "nome": "Incantesimo di Apertura Varchi (Liberate)",
     "formula": "Liberate",
     "ripetibile": false,
@@ -6271,8 +6271,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "dunamis",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 4,
+    "annoLabel": "IV Anno",
     "nome": "Incantesimo di Apertura a Forza Bruta (Dunamis)",
     "formula": "Dunamis",
     "ripetibile": false,

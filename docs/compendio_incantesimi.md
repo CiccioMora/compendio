@@ -298,7 +298,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Antiche Rune** | **Runa Othila (ᛟ)** | `ᛟ Othila` | **5** | 5 | Antiche Rune / Glifo Sacro | ᛟ Runa | ᛟ Othila (Pos. 23ª) |
 | **Antiche Rune** | **Runa Dagaz (ᛞ)** | `ᛞ Dagaz` | **6** | 4 | Antiche Rune / Glifo Sacro | ᛟ Runa | ᛞ Dagaz (Pos. 24ª) |
 | **Antiche Rune** | **Runa Bianca (○)** | `○ Runa Bianca` | **5** | 5 | Antiche Rune / Glifo Sacro | ᛟ Runa | ○ Runa Bianca (Pos. Speciale) |
-| **Altri** | **Antico Incantesimo di Apertura (Aberto)** | `Aberto` | **7** | 3 | Incantesimo di Sblocco Tradizionale | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
+| **IV Anno** | **Antico Incantesimo di Apertura (Aberto)** | `Aberto` | **7** | 3 | Incantesimo di Sblocco Tradizionale | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
 | **I Anno** | **Controincantesimo Generale (Finite Incantatem)** | `Finite Incantatem` | **7** | 3 | Contro-incantesimo Generale | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
 | **III Anno** | **Formula di Controllo del Fuoco (Plasma)** | `Plasma` | **8** | 2 | Elementale Fuoco / Controllo | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
 | **III Anno** | **Formula di Controllo dell'Acqua (Coerceo)** | `Coerceo` | **1** | 9 | Elementale Acqua / Controllo | ⚔️ SÌ | ᚠ Fehu (Pos. 1ª) |
@@ -318,12 +318,12 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Altri** | **Incantesimo Rivelatore di Pozioni di Scarpin (Revelio Minimum)** | `Revelio Minimum` | **7** | 3 | Rivelazione Analitica di Pozioni | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
 | **Altri** | **Incantesimo Rivelatore di Presenze Umane (Hommenum Revelio)** | `Hommenum Revelio` | **8** | 2 | Rilevazione di Presenza | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
 | **Altri** | **Incantesimo Rivelatore di Tracce Recenti (Appare Vestigium)** | `Appare Vestigium` | **2** | 8 | Investigativo / Scanner Magico | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
-| **Altri** | **Incantesimo Rudimentale di Sblocco Porta (Portaberto)** | `Portaberto` | **4** | 6 | Incantesimo di Sblocco Arcaico | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
+| **IV Anno** | **Incantesimo Rudimentale di Sblocco Porta (Portaberto)** | `Portaberto` | **4** | 6 | Incantesimo di Sblocco Arcaico | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **Altri** | **Incantesimo Scaccia-Babbani (Repello Babbanum)** | `Repello Babbanum` | **4** | 6 | Occultamento Territoriale / Statuto di Segretezza | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **III Anno** | **Incantesimo Segnante / Tracciante (Signo)** | `Signo` | **1** | 9 | Magia Runica / Tracciamento su Materia | ⛔ NO | ᚠ Fehu (Pos. 1ª) |
 | **Altri** | **Incantesimo di Adesione Permanente (Adesio Perpetua)** | `Adesio Perpetua` | **2** | 8 | Sigillo Materico / Incollamento Permanente | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
-| **Altri** | **Incantesimo di Apertura Varchi (Liberate)** | `Liberate` | **9** | 1 | Incantesimo di Apertura Porte e Varchi | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
-| **Altri** | **Incantesimo di Apertura a Forza Bruta (Dunamis)** | `Dunamis` | **9** | 1 | Sblocco Cinetico Esplosivo | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
+| **IV Anno** | **Incantesimo di Apertura Varchi (Liberate)** | `Liberate` | **9** | 1 | Incantesimo di Apertura Porte e Varchi | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
+| **IV Anno** | **Incantesimo di Apertura a Forza Bruta (Dunamis)** | `Dunamis` | **9** | 1 | Sblocco Cinetico Esplosivo | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
 | **V Anno** | **Incantesimo di Evanescenza per Inanimati e Liquidi (Evanesco)** | `Evanesco` | **3** | 7 | Evanescenza nel Non-Essere | ⚔️ SÌ | ᚦ Thurisaz (Pos. 3ª) |
 | **V Anno** | **Incantesimo di Evanescenza per Viventi (Ivanesco)** | `Ivanesco` | **7** | 3 | Evanescenza di Viventi nel Non-Essere | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
 | **VII Anno** | **Incantesimo di Fortificazione Barriere (Fianto Duri)** | `Fianto Duri` | **9** | 1 | Chicche di Magia / Difensivo Avanzato M.A.G.O. | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
