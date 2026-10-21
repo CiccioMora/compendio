@@ -458,7 +458,14 @@
       }
 
       // Bussola Magica (Guidami / Point Me) Setup
-      isCompassActive = (spell.id === "guidami");
+      isCompassActive = (spell.id === "guidami" || (spell.formula && spell.formula.toLowerCase() === "guidami"));
+      const compassRose = document.getElementById("compassRoseDecor");
+      const needleGroup = document.getElementById("wandNeedleGroup");
+
+      if (needleGroup) {
+        needleGroup.removeAttribute("transform");
+        needleGroup.style.transition = "";
+      }
       if (wandPathElement) {
         wandPathElement.removeAttribute("transform");
         wandPathElement.style.transition = "";
@@ -472,9 +479,15 @@
       if (spark) {
         spark.style.transition = "";
       }
+
+      if (compassRose) {
+        if (isCompassActive) compassRose.classList.remove("hidden");
+        else compassRose.classList.add("hidden");
+      }
+
       if (wandTrackLabel) {
         wandTrackLabel.innerHTML = isCompassActive
-          ? '🧭 <span class="text-amber-300 font-semibold">Bussola Magica:</span> Muovi il mouse per orientare'
+          ? '🧭 <span class="text-amber-300 font-semibold">Bussola Magica:</span> Segue il puntatore del mouse'
           : 'Traccia Dinamica';
       }
       if (replayWandAnimBtn) {
@@ -514,6 +527,30 @@
 
       const spark = document.getElementById("wandSpark");
       const guidePath = document.getElementById("wandGuidePath");
+      const needleGroup = document.getElementById("wandNeedleGroup");
+
+      // Per Guidami (Point Me): non ha un movimento animato ciclico.
+      // Traccia subito la freccia verticale fissa (75, 125 -> 75, 25)
+      // e abilita il puntamento continuo verso il mouse.
+      if (isCompassActive) {
+        wandPathElement.style.strokeDasharray = "none";
+        wandPathElement.style.strokeDashoffset = "0";
+        if (guidePath) {
+          guidePath.style.strokeDasharray = "none";
+          guidePath.style.strokeDashoffset = "0";
+        }
+        if (needleGroup) {
+          needleGroup.style.transition = "";
+          needleGroup.setAttribute("transform", "rotate(0 75 75)");
+        }
+        if (spark) {
+          spark.setAttribute("cx", "75");
+          spark.setAttribute("cy", "25");
+          spark.style.opacity = "1";
+          spark.setAttribute("r", "6");
+        }
+        return;
+      }
       const d = wandPathElement.getAttribute("d");
 
       if (!d || d.trim() === "") {
@@ -615,71 +652,80 @@
 
     replayWandAnimBtn.addEventListener("click", () => {
       if (isCompassActive) {
-        wandPathElement.removeAttribute("transform");
-        const guidePath = document.getElementById("wandGuidePath");
-        if (guidePath) guidePath.removeAttribute("transform");
-        const spark = document.getElementById("wandSpark");
-        if (spark) {
-          spark.setAttribute("cx", "75");
-          spark.setAttribute("cy", "25");
+        const needleGroup = document.getElementById("wandNeedleGroup");
+        if (needleGroup) {
+          needleGroup.style.transition = "transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)";
+          needleGroup.setAttribute("transform", "rotate(0 75 75)");
+          setTimeout(() => {
+            if (needleGroup) needleGroup.style.transition = "";
+          }, 500);
+        } else {
+          wandPathElement.style.transition = "transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)";
+          wandPathElement.setAttribute("transform", "rotate(0 75 75)");
+          const guidePath = document.getElementById("wandGuidePath");
+          if (guidePath) {
+            guidePath.style.transition = "transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)";
+            guidePath.setAttribute("transform", "rotate(0 75 75)");
+          }
+          const spark = document.getElementById("wandSpark");
+          if (spark) {
+            spark.style.transition = "cx 0.5s ease-out, cy 0.5s ease-out";
+            spark.setAttribute("cx", "75");
+            spark.setAttribute("cy", "25");
+          }
+          setTimeout(() => {
+            wandPathElement.style.transition = "";
+            if (guidePath) guidePath.style.transition = "";
+            if (spark) spark.style.transition = "";
+          }, 500);
         }
+        return;
       }
       animateWandPath();
     });
 
     // Compass Interactive Mouse Tracking (Guidami / Point Me)
-    if (wandCanvasBox) {
-      wandCanvasBox.addEventListener("mousemove", (e) => {
-        if (!isCompassActive) return;
-        const svg = document.getElementById("wandSvgCanvas");
-        if (!svg) return;
-        const rect = svg.getBoundingClientRect();
-        const mouseX = ((e.clientX - rect.left) / rect.width) * 150;
-        const mouseY = ((e.clientY - rect.top) / rect.height) * 150;
+    // Tracciamento continuo reattivo su tutta la finestra quando il modale di Guidami è aperto
+    window.addEventListener("mousemove", (e) => {
+      if (!isCompassActive) return;
+      if (!spellModal || spellModal.classList.contains("hidden")) return;
 
-        const dx = mouseX - 75;
-        const dy = mouseY - 75;
-        if (Math.hypot(dx, dy) < 4) return;
+      const svg = document.getElementById("wandSvgCanvas");
+      if (!svg) return;
+      const rect = svg.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
 
-        const angleRad = Math.atan2(dy, dx);
-        const angleDeg = (angleRad * 180 / Math.PI) + 90;
+      const dx = e.clientX - centerX;
+      const dy = e.clientY - centerY;
+      if (Math.hypot(dx, dy) < 2) return;
 
+      const angleRad = Math.atan2(dy, dx);
+      const angleDeg = (angleRad * 180 / Math.PI) + 90;
+
+      const needleGroup = document.getElementById("wandNeedleGroup");
+      if (needleGroup) {
+        needleGroup.style.transition = "";
+        needleGroup.setAttribute("transform", `rotate(${angleDeg.toFixed(1)} 75 75)`);
+      } else {
+        wandPathElement.style.transition = "";
         wandPathElement.setAttribute("transform", `rotate(${angleDeg.toFixed(1)} 75 75)`);
         const guidePath = document.getElementById("wandGuidePath");
-        if (guidePath) guidePath.setAttribute("transform", `rotate(${angleDeg.toFixed(1)} 75 75)`);
-
+        if (guidePath) {
+          guidePath.style.transition = "";
+          guidePath.setAttribute("transform", `rotate(${angleDeg.toFixed(1)} 75 75)`);
+        }
         const spark = document.getElementById("wandSpark");
         if (spark) {
-          const sparkX = 75 + 50 * Math.sin(angleDeg * Math.PI / 180);
-          const sparkY = 75 - 50 * Math.cos(angleDeg * Math.PI / 180);
+          const rad = (angleDeg - 90) * Math.PI / 180;
+          const sparkX = 75 + 50 * Math.cos(rad);
+          const sparkY = 75 + 50 * Math.sin(rad);
           spark.setAttribute("cx", sparkX.toFixed(1));
           spark.setAttribute("cy", sparkY.toFixed(1));
           spark.style.opacity = "1";
         }
-      });
-
-      wandCanvasBox.addEventListener("mouseleave", () => {
-        if (!isCompassActive) return;
-        wandPathElement.style.transition = "transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1)";
-        const guidePath = document.getElementById("wandGuidePath");
-        if (guidePath) guidePath.style.transition = "transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1)";
-        const spark = document.getElementById("wandSpark");
-        if (spark) spark.style.transition = "cx 0.45s ease-out, cy 0.45s ease-out";
-
-        wandPathElement.setAttribute("transform", "rotate(0 75 75)");
-        if (guidePath) guidePath.setAttribute("transform", "rotate(0 75 75)");
-        if (spark) {
-          spark.setAttribute("cx", "75");
-          spark.setAttribute("cy", "25");
-        }
-
-        setTimeout(() => {
-          wandPathElement.style.transition = "";
-          if (guidePath) guidePath.style.transition = "";
-          if (spark) spark.style.transition = "";
-        }, 450);
-      });
-    }
+      }
+    });
 
     function closeModal() {
       if (wandAnimId) {
@@ -687,6 +733,14 @@
         wandAnimId = null;
       }
       isCompassActive = false;
+      const compassRose = document.getElementById("compassRoseDecor");
+      if (compassRose) compassRose.classList.add("hidden");
+
+      const needleGroup = document.getElementById("wandNeedleGroup");
+      if (needleGroup) {
+        needleGroup.removeAttribute("transform");
+        needleGroup.style.transition = "";
+      }
       if (wandPathElement) {
         wandPathElement.removeAttribute("transform");
         wandPathElement.style.transition = "";

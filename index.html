@@ -359,12 +359,22 @@
                 <circle cx="75" cy="75" r="40" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
                 <line x1="75" y1="5" x2="75" y2="145" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
                 <line x1="5" y1="75" x2="145" y2="75" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,2" />
-                <!-- Guida semitrasparente del percorso completo -->
-                <path id="wandGuidePath" d="" fill="none" stroke="rgba(245, 158, 11, 0.15)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Traccia dinamica animata -->
-                <path id="wandPathElement" d="" fill="none" stroke="#fbbf24" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Scintilla della punta della bacchetta -->
-                <circle id="wandSpark" cx="75" cy="75" r="6" fill="url(#sparkGrad)" style="opacity: 0;" />
+                <!-- Compass Rose / North Indicator (Guidami) -->
+                <g id="compassRoseDecor" class="hidden pointer-events-none select-none">
+                  <text x="75" y="18" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="11">N</text>
+                  <text x="75" y="144" text-anchor="middle" fill="#64748b" font-weight="bold" font-size="9">S</text>
+                  <text x="142" y="78" text-anchor="middle" fill="#64748b" font-weight="bold" font-size="9">E</text>
+                  <text x="8" y="78" text-anchor="middle" fill="#64748b" font-weight="bold" font-size="9">O</text>
+                </g>
+                <!-- Needle / Gesture Group -->
+                <g id="wandNeedleGroup">
+                  <!-- Guida semitrasparente del percorso completo -->
+                  <path id="wandGuidePath" d="" fill="none" stroke="rgba(245, 158, 11, 0.15)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                  <!-- Traccia dinamica animata -->
+                  <path id="wandPathElement" d="" fill="none" stroke="#fbbf24" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <!-- Scintilla della punta della bacchetta -->
+                  <circle id="wandSpark" cx="75" cy="75" r="6" fill="url(#sparkGrad)" style="opacity: 0;" />
+                </g>
               </svg>
               <div id="wandTrackLabel" class="text-[10px] text-slate-400 mt-1 uppercase tracking-wider text-center">Traccia Dinamica</div>
             </div>
