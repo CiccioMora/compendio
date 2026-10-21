@@ -149,9 +149,9 @@
 
       if (duelFilter) {
         Array.from(duelFilter.options).forEach(opt => {
-          if (opt.value === "ALL") opt.textContent = `Duello: Qualsiasi (${totalSpells})`;
-          if (opt.value === "YES") opt.textContent = `⚔️ Utilizzabile in Duello: SÌ (${duelYes})`;
-          if (opt.value === "NO") opt.textContent = `⛔ Non da Duello / Rituale: NO (${duelNo})`;
+          if (opt.value === "ALL") opt.textContent = `Tutti (${totalSpells})`;
+          if (opt.value === "YES") opt.textContent = `Sì (${duelYes})`;
+          if (opt.value === "NO") opt.textContent = `No (${duelNo})`;
         });
       }
 

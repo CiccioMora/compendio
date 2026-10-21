@@ -104,10 +104,114 @@ html = re.sub(r'<div id="statDark"[^>]*>[0-9]+</div>', f'<div id="statDark" clas
 # Results badge
 html = re.sub(r'<span id="resultsCountBadge"[^>]*>[0-9]+ incantesimi trovati</span>', f'<span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">{spells_count} incantesimi trovati</span>', html)
 
+# Helper generazione singola card per pre-rendering immediato (First Paint istantaneo senza attesa JS)
+def generate_card_html(spell):
+    tipologia = spell.get('tipologia', '')
+    is_rune = spell.get('isRune', False)
+    
+    # Type color badge
+    type_badge_class = "bg-amber-500/10 text-amber-300 border-amber-500/30"
+    if "Offensivo" in tipologia or "Schiantesimo" in tipologia:
+        type_badge_class = "bg-rose-500/10 text-rose-300 border-rose-500/30"
+    elif "Difensivo" in tipologia:
+        type_badge_class = "bg-sky-500/10 text-sky-300 border-sky-500/30"
+    elif "Maledizione" in tipologia:
+        type_badge_class = "bg-purple-500/15 text-purple-300 border-purple-500/30"
+    elif "Curativo" in tipologia:
+        type_badge_class = "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
+    elif "Elementale" in tipologia:
+        type_badge_class = "bg-orange-500/10 text-orange-300 border-orange-500/30"
+    elif "Trasfigurazione" in tipologia:
+        type_badge_class = "bg-teal-500/10 text-teal-300 border-teal-500/30"
+    elif "Rune" in tipologia or is_rune:
+        type_badge_class = "bg-indigo-500/20 text-indigo-300 border-indigo-500/40"
+        
+    # Duel / Runic badge
+    if is_rune:
+        pos = spell.get("posizioneAlfabeto", "")
+        duel_badge = f'<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 shadow-sm"><span>ᛟ</span> Futhark: Pos. {pos}</span>'
+    else:
+        if spell.get('inDuello'):
+            duel_badge = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>'
+        else:
+            duel_badge = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>'
+
+    tipo_short = tipologia.split('/')[0].strip() if tipologia else ''
+    figura = spell.get('figuraGeometrica', '')
+    figura_short = figura.split('(')[0].strip() if figura else ''
+
+    return f'''
+          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSpellDetails('{spell['id']}')">
+            <div>
+              <!-- Header info: Year & Duel -->
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
+                  {spell.get('annoLabel', '')}
+                </span>
+                {duel_badge}
+              </div>
+
+              <!-- Spell Name -->
+              <h3 class="text-lg font-bold font-magic text-slate-100 group-hover:text-amber-300 transition-colors line-clamp-1 mb-1">
+                {spell.get('nome', '')}
+              </h3>
+
+              <!-- Formula Box -->
+              <div class="flex items-center gap-2 mb-3">
+                <span class="font-code text-xs px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-200 font-bold tracking-wide">
+                  ⚡ {spell.get('formula', '')}
+                </span>
+                <span class="text-xs px-2 py-0.5 rounded border {type_badge_class} truncate max-w-[150px]">
+                  {tipo_short}
+                </span>
+              </div>
+
+              <!-- Description -->
+              <p class="text-xs text-slate-300 line-clamp-3 leading-relaxed mb-4">
+                {spell.get('descrizione', '')}
+              </p>
+            </div>
+
+            <!-- Footer Arithmantic Summary -->
+            <div class="border-t border-slate-800/80 pt-3 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-400">Valenza:</span>
+                  <span class="font-code font-bold text-amber-400 bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-700/40">
+                    V{spell.get('valenza', '')}
+                  </span>
+                  <span class="text-[11px] text-slate-400" title="Valenza opposta di simmetria">
+                    (Opp. {spell.get('valenzaOpposta', '')})
+                  </span>
+                </div>
+                <div class="text-[11px] text-sky-400 font-medium truncate max-w-[120px]" title="{figura}">
+                  {figura_short}
+                </div>
+              </div>
+
+              <!-- Wand Movement snippet -->
+              <div class="text-[11px] text-slate-400 line-clamp-1 italic bg-slate-950/40 px-2 py-1 rounded">
+                🪄 {spell.get('movimento', '')}
+              </div>
+
+              <div class="pt-1 flex items-center justify-end text-xs text-amber-400 font-semibold group-hover:translate-x-1 transition-transform">
+                <span>Consulta Scheda & Gesto →</span>
+              </div>
+            </div>
+          </div>'''
+
+# Pre-renderizza tutte le schede iniziali degli incantesimi (escluse le rune dal default)
+initial_spells = [s for s in spells if not s.get('isRune')]
+cards_html = "".join(generate_card_html(s) for s in initial_spells)
+
+# Inietta le schede in spellsGrid per rendere la lista immediatamente disponibile
+grid_pattern = r'(<div id="spellsGrid"[^>]*>)[\s\S]*?(</div>\s*<!-- Empty State -->)'
+html = re.sub(grid_pattern, r'\1' + cards_html + r'\n    \2', html)
+
 with open(f'{BASE_DIR}/index.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
-print("index.html aggiornato.")
+print(f"index.html aggiornato con {len(initial_spells)} schede pre-renderizzate.")
 
 # 3. Aggiorna dist/portale_standalone.html
 with open(f'{BASE_DIR}/style.css', 'r', encoding='utf-8') as f:
