@@ -144,13 +144,10 @@
       </div>
 
       <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Link to Materie Portal Clone -->
-        <a href="materie.html" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 transition flex items-center gap-1.5 shadow-sm">
-          <span>🧪</span>
-          <span class="hidden sm:inline">Pagina Clone (Materie)</span>
-          <span class="sm:hidden">Clone</span>
-          <span class="text-xs">➔</span>
-        </a>
+        <div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/10 text-amber-300 border border-amber-500/25">
+          <span>📚</span>
+          <span>5 Discipline • 562 Nozioni</span>
+        </div>
         <!-- Quick Aritmancy Calculator Button -->
         <button id="openCalculatorBtn" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/30 transition flex items-center gap-1.5 shadow-sm">
           <span>🔢</span>
@@ -193,30 +190,30 @@
           </div>
         </div>
 
-        <!-- STATS BADGES: LE 5 MACRO-CATEGORIE E I 3 BOX CON I TOTALI DELLE INFORMAZIONI -->
+        <!-- STATS BADGES: LE 5 MACRO-CATEGORIE E I 3 BOX CON I TOTALI DELLE INFORMAZIONI (INTERATTIVI) -->
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pt-4 border-t border-slate-800/80">
           <!-- Incantesimi -->
-          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center hover:border-amber-500/40 transition">
+          <div role="button" tabindex="0" data-stat-macro="spells" title="Clicca per visualizzare gli Incantesimi" class="stat-card cursor-pointer p-3.5 rounded-xl bg-slate-950/70 border border-amber-500/30 hover:border-amber-400 hover:bg-amber-950/30 transition text-center group shadow-sm">
             <div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">268</div>
-            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">🪄 Incantesimi</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 group-hover:text-amber-300 font-medium">🪄 Incantesimi</div>
           </div>
           <!-- Antiche Rune -->
-          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center hover:border-indigo-500/40 transition">
+          <div role="button" tabindex="0" data-stat-macro="runes" title="Clicca per visualizzare le Antiche Rune" class="stat-card cursor-pointer p-3.5 rounded-xl bg-slate-950/70 border border-indigo-500/30 hover:border-indigo-400 hover:bg-indigo-950/30 transition text-center group shadow-sm">
             <div id="statRunes" class="text-2xl font-bold font-magic text-indigo-400">25</div>
-            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">ᛟ Antiche Rune</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 group-hover:text-indigo-300 font-medium">ᛟ Antiche Rune</div>
           </div>
           <!-- BOX 1: Creature Magiche -->
-          <div class="p-3.5 rounded-xl bg-slate-950/80 border border-amber-600/50 bg-amber-950/20 text-center hover:border-amber-400 transition shadow-sm">
+          <div role="button" tabindex="0" data-stat-macro="creatures" title="Clicca per visualizzare le Creature Magiche" class="stat-card cursor-pointer p-3.5 rounded-xl bg-slate-950/80 border border-amber-600/50 bg-amber-950/20 text-center hover:border-amber-400 hover:bg-amber-950/40 transition group shadow-sm">
             <div id="statCreatures" class="text-2xl font-bold font-magic text-amber-400">74</div>
             <div class="text-[11px] uppercase tracking-wider text-amber-300 font-medium">🐉 Creature Magiche</div>
           </div>
           <!-- BOX 2: Erbologia & Piante -->
-          <div class="p-3.5 rounded-xl bg-slate-950/80 border border-emerald-600/50 bg-emerald-950/20 text-center hover:border-emerald-400 transition shadow-sm">
+          <div role="button" tabindex="0" data-stat-macro="plants" title="Clicca per visualizzare Erbologia & Piante" class="stat-card cursor-pointer p-3.5 rounded-xl bg-slate-950/80 border border-emerald-600/50 bg-emerald-950/20 text-center hover:border-emerald-400 hover:bg-emerald-950/40 transition group shadow-sm">
             <div id="statPlants" class="text-2xl font-bold font-magic text-emerald-400">57</div>
             <div class="text-[11px] uppercase tracking-wider text-emerald-300 font-medium">🌿 Erbologia & Piante</div>
           </div>
           <!-- BOX 3: Arte delle Pozioni -->
-          <div class="p-3.5 rounded-xl bg-slate-950/80 border border-indigo-600/50 bg-indigo-950/20 text-center hover:border-indigo-400 transition shadow-sm">
+          <div role="button" tabindex="0" data-stat-macro="potions" title="Clicca per visualizzare le Pozioni" class="stat-card cursor-pointer p-3.5 rounded-xl bg-slate-950/80 border border-indigo-600/50 bg-indigo-950/20 text-center hover:border-indigo-400 hover:bg-indigo-950/40 transition group shadow-sm">
             <div id="statPotions" class="text-2xl font-bold font-magic text-indigo-400">138</div>
             <div class="text-[11px] uppercase tracking-wider text-indigo-300 font-medium">🧪 Arte delle Pozioni</div>
           </div>
@@ -226,7 +223,45 @@
   </section>
 
   <!-- CONTROLS: SEARCH & FILTERS -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6" id="catalogSection">
+    
+    <!-- PROMINENT MACRO CATEGORY SELECTOR (LE 5 MACRO-DISCIPLINE) -->
+    <div class="mb-4">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+          <span>📚</span> Seleziona Disciplina Magica:
+        </span>
+        <span id="activeMacroHint" class="text-xs text-slate-300 font-medium">Visualizzazione: <strong class="text-amber-300">268 Incantesimi Didattici</strong></span>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3" id="macroFilterGroup">
+        <!-- 🪄 Incantesimi -->
+        <button type="button" data-macro="spells" id="macroSpellsBtn" class="macro-btn p-3.5 rounded-xl text-xs sm:text-sm font-magic font-bold transition-all duration-200 flex flex-col items-center justify-center gap-1 bg-amber-500 text-slate-950 shadow-lg shadow-amber-500/20 border border-amber-400 ring-2 ring-amber-400/40">
+          <span class="text-2xl">🪄</span>
+          <span id="macroSpellsText" class="tracking-wide">Incantesimi (268)</span>
+        </button>
+        <!-- ᛟ Antiche Rune -->
+        <button type="button" data-macro="runes" id="macroRunesBtn" class="macro-btn p-3.5 rounded-xl text-xs sm:text-sm font-magic font-bold transition-all duration-200 flex flex-col items-center justify-center gap-1 text-slate-300 hover:text-indigo-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80">
+          <span class="text-2xl">ᛟ</span>
+          <span id="macroRunesText" class="tracking-wide">Antiche Rune (25)</span>
+        </button>
+        <!-- 🐉 Creature Magiche -->
+        <button type="button" data-macro="creatures" id="macroCreaturesBtn" class="macro-btn p-3.5 rounded-xl text-xs sm:text-sm font-magic font-bold transition-all duration-200 flex flex-col items-center justify-center gap-1 text-slate-300 hover:text-amber-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80">
+          <span class="text-2xl">🐉</span>
+          <span id="macroCreaturesText" class="tracking-wide">Creature Magiche (74)</span>
+        </button>
+        <!-- 🌿 Erbologia & Piante -->
+        <button type="button" data-macro="plants" id="macroPlantsBtn" class="macro-btn p-3.5 rounded-xl text-xs sm:text-sm font-magic font-bold transition-all duration-200 flex flex-col items-center justify-center gap-1 text-slate-300 hover:text-emerald-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80">
+          <span class="text-2xl">🌿</span>
+          <span id="macroPlantsText" class="tracking-wide">Erbologia & Piante (57)</span>
+        </button>
+        <!-- 🧪 Arte delle Pozioni -->
+        <button type="button" data-macro="potions" id="macroPotionsBtn" class="macro-btn p-3.5 rounded-xl text-xs sm:text-sm font-magic font-bold transition-all duration-200 flex flex-col items-center justify-center gap-1 text-slate-300 hover:text-indigo-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80">
+          <span class="text-2xl">🧪</span>
+          <span id="macroPotionsText" class="tracking-wide">Arte delle Pozioni (138)</span>
+        </button>
+      </div>
+    </div>
+
     <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-amber-500/25 shadow-2xl space-y-4">
       
       <!-- TOP: PROMINENT SEARCH BAR (UNIVERSALE SU TUTTE LE MACRO-DISCIPLINE) -->
@@ -252,40 +287,6 @@
           <button id="clearSearchBtn" title="Cancella ricerca" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-500 hover:text-amber-300 transition hidden text-base font-bold">
             ✕
           </button>
-        </div>
-      </div>
-
-      <!-- MACRO FILTERS SWITCHER (LE 5 MACRO-CATEGORIE) -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 border-b border-slate-800/80 pb-3">
-        <div class="flex items-center gap-2.5 flex-wrap">
-          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Archivio:</span>
-          <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner flex-wrap gap-1" id="macroFilterGroup">
-            <button type="button" data-macro="spells" id="macroSpellsBtn" class="macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-amber-500 text-slate-950 shadow-md">
-              <span>🪄</span>
-              <span id="macroSpellsText">Incantesimi (268)</span>
-            </button>
-            <button type="button" data-macro="runes" id="macroRunesBtn" class="macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-400 hover:text-indigo-300 hover:bg-slate-900">
-              <span>ᛟ</span>
-              <span id="macroRunesText">Rune (25)</span>
-            </button>
-            <button type="button" data-macro="creatures" id="macroCreaturesBtn" class="macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-400 hover:text-amber-300 hover:bg-slate-900">
-              <span>🐉</span>
-              <span id="macroCreaturesText">Creature (74)</span>
-            </button>
-            <button type="button" data-macro="plants" id="macroPlantsBtn" class="macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-400 hover:text-emerald-300 hover:bg-slate-900">
-              <span>🌿</span>
-              <span id="macroPlantsText">Piante (57)</span>
-            </button>
-            <button type="button" data-macro="potions" id="macroPotionsBtn" class="macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-400 hover:text-indigo-300 hover:bg-slate-900">
-              <span>🧪</span>
-              <span id="macroPotionsText">Pozioni (138)</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Macro Context Hint -->
-        <div class="text-xs text-slate-400 flex items-center gap-2">
-          <span id="activeMacroHint" class="text-slate-400 text-[11px]">Visualizzazione: <strong class="text-amber-300">268 Incantesimi Didattici</strong></span>
         </div>
       </div>
 
@@ -22842,7 +22843,15 @@ const SPELLS_DATA = [
     "duelloNote": "Inutilizzabile in duello. Richiede concentrazione assoluta, postura statica a due mani (catalizzatore puntato, mano sul cuore), visualizzazione del volto e recitazione preliminare del nome del bersaglio.",
     "movimento": "Postura a due mani: la mano dominante punta il catalizzatore in avanti (braccio rilassato lungo il fianco e poco inclinato in avanti); l'altra mano sosta sul petto a livello del cuore per percepire il battito.",
     "movimentoSvg": "M 25,75 L 50,75 L 58,70 L 64,80 L 72,35 L 80,105 L 86,70 L 92,75 L 102,68 L 110,75 L 125,75",
-    "descrizione": "Consente di percepire il battito cardiaco di un soggetto e ricavare, grazie alla frequenza dello stesso, informazioni basilari e generiche circa il suo stato emotivo attuale (battito rallentato: probabile quiete; battito accelerato: probabile agitazione).\n\nAffinché l'incantesimo abbia effetto, il volto della persona dev'essere ben impresso in mente ed il nome della stessa pronunciato prima della formula: [Nome] + [Secondo Nome] + [Cognome] + Palpitatio.\n\nSe correttamente lanciato, la punta del catalizzatore brillerà di una luce bianca tenue ed il nostro battito cardiaco svanirà gradualmente: una volta 'agganciato' il bersaglio, la luce brillerà più intensamente ed il battito percepito sarà quello del bersaglio, in tempo reale.\n\nGli effetti sono vanificati in mancanza di concentrazione e/o rottura della posa.\n\nIncantesimo ricercato, studiato e coniato da Emma Mortem Camus (Emma Sawyer all'anagrafe).",
+    "descrizione": "Consente di percepire il battito cardiaco di un soggetto e ricavare, grazie alla frequenza dello stesso, informazioni basilari e generiche circa il suo stato emotivo attuale (battito rallentato: probabile quiete; battito accelerato: probabile agitazione).
+
+Affinché l'incantesimo abbia effetto, il volto della persona dev'essere ben impresso in mente ed il nome della stessa pronunciato prima della formula: [Nome] + [Secondo Nome] + [Cognome] + Palpitatio.
+
+Se correttamente lanciato, la punta del catalizzatore brillerà di una luce bianca tenue ed il nostro battito cardiaco svanirà gradualmente: una volta 'agganciato' il bersaglio, la luce brillerà più intensamente ed il battito percepito sarà quello del bersaglio, in tempo reale.
+
+Gli effetti sono vanificati in mancanza di concentrazione e/o rottura della posa.
+
+Incantesimo ricercato, studiato e coniato da Emma Mortem Camus (Emma Sawyer all'anagrafe).",
     "etimologia": "Dal latino palpitatio ('palpitazione', dal verbo palpitare), traducibile nella percezione cosciente del proprio battito cardiaco — o di quello altrui, in questo caso.",
     "valenza": 2,
     "sommaLettere": 47,
@@ -22864,7 +22873,14 @@ const SPELLS_DATA = [
     "duelloNote": "Inutilizzabile in duello. Induce la fisiologica atonia e paralisi muscolare della fase REM; richiede quiete, concentrazione prolungata e ambiente sicuro.",
     "movimento": "Evoluzione del moto di Dismundo: spirale onirica espansiva all'altezza della fronte/tempie, che traccia i cerchi concentrici dell'attività cerebrale della fase REM.",
     "movimentoSvg": "M 75,75 C 75,65 85,65 85,75 C 85,90 60,90 60,75 C 60,50 100,50 100,75 C 100,110 40,110 40,75 C 40,30 115,30 115,75",
-    "descrizione": "Incantesimo capace di influire profondamente sulla mente, sia propria che altrui. Il soggetto, pur sveglio, viene condotto in una vera e propria fase REM ('sonno paradosso'), rimanendo al contempo cosciente dell'attività e degli stimoli esterni: è possibile indurre sogni lucidi vividi e partecipare attivamente a quelli altrui (se più soggetti sono sotto gli effetti dello stesso incantesimo, entro un limite ristretto e circoscritto).\nUno dei partecipanti può far da Cicerone e guidare l'altro nel proprio sogno, modulando le visioni e lo scenario condiviso.\n\nL'effetto dell'incanto è variabile a seconda dei classici parametri. Durante lo stesso si è succubi di una paralisi muscolare temporanea (atonia REM), è pertanto consigliabile cader vittima degli effetti di tale sortilegio in una posizione comoda e circondata da persone fidate.\n\nConsigliata una conoscenza avanzata della mente umana, meglio se in possesso di abilità specialistiche quali l'Occlumanzia o la Legilimanzia.\n\nRicercato, studiato e coniato da Emma Mortem Camus (Emma Sawyer all'anagrafe).",
+    "descrizione": "Incantesimo capace di influire profondamente sulla mente, sia propria che altrui. Il soggetto, pur sveglio, viene condotto in una vera e propria fase REM ('sonno paradosso'), rimanendo al contempo cosciente dell'attività e degli stimoli esterni: è possibile indurre sogni lucidi vividi e partecipare attivamente a quelli altrui (se più soggetti sono sotto gli effetti dello stesso incantesimo, entro un limite ristretto e circoscritto).
+Uno dei partecipanti può far da Cicerone e guidare l'altro nel proprio sogno, modulando le visioni e lo scenario condiviso.
+
+L'effetto dell'incanto è variabile a seconda dei classici parametri. Durante lo stesso si è succubi di una paralisi muscolare temporanea (atonia REM), è pertanto consigliabile cader vittima degli effetti di tale sortilegio in una posizione comoda e circondata da persone fidate.
+
+Consigliata una conoscenza avanzata della mente umana, meglio se in possesso di abilità specialistiche quali l'Occlumanzia o la Legilimanzia.
+
+Ricercato, studiato e coniato da Emma Mortem Camus (Emma Sawyer all'anagrafe).",
     "etimologia": "Da 'REM' ('Rapid Eye Movement') o 'sonno paradosso', ovvero lo stadio avanzato del sonno caratterizzato da un'elevata attività cerebrale e sogni vividi, unito al suffisso inglese '-ate', utilizzato per formare verbi o azioni operative.",
     "valenza": 4,
     "sommaLettere": 31,
@@ -22886,7 +22902,13 @@ const SPELLS_DATA = [
     "duelloNote": "Utilizzabile in scontro mortale / bellico (proibita nei duelli sportivi e accademici). Maledizione invisibile priva di scia luminosa o proiettile visibile: richiede linea di tiro e contatto visivo costante, alimentata da odio e intento ostile. Contrastabile interrompendo la linea di vista (frapponendo un solido tra sé e l'attentatore). Il controincantesimo immediato salvavita è Anapneo per liberare le vie aeree occluse.",
     "movimento": "Puntamento diretto e fisso alla gola della vittima, seguito da una torsione secca e serrata del polso a chiusura (simulando una morsa o un cappio invisibile sulle vie aeree).",
     "movimentoSvg": "M 35,75 C 35,45 65,35 85,55 C 105,75 105,95 85,105 C 70,110 65,95 75,85 C 85,75 115,75 125,75",
-    "descrizione": "Maledizione letale insidiosa che provoca un progressivo restringimento dei canali respiratori che, occlusi, porteranno alla morte per soffocamento preceduta da vista appannata, pensiero non lucido e collasso in mancanza d'ossigeno.\nL'incantesimo è di tipo attivo, pertanto richiede un'elevata concentrazione ed una spiccata volontà mossa da sentimenti puramente negativi, oltre che a linea di tiro diretta e contatto visivo libero sulla vittima: saltato anche solo uno dei paletti che regolamentano le Maledizioni, gli effetti sono annullati.\n\nDifesa e Contromisure:\nL'incantesimo manca di raggio (o luce), non regalando alcun indizio circa la propria attivazione (dinamica analoga all'Incantesimo Oblivion); questo lo rende difficile da intercettare in un primo momento, perciò è consigliabile agire d'istinto ed appellarsi alla ragione finché si è in grado di farlo. Il contatto visivo diretto e fisso da parte di qualcuno può fungere da indizio assai rivelatore: frapporre qualcosa fra sé ed il tentato omicida può far interrompere il sortilegio. Il Controincantesimo è Anapneo, che agisce direttamente sulle zone interessate dalla Maledizione per revertire le capacità respiratorie, liberando gli appositi canali e pareti.\n\nRicercato, studiato e coniato da Emma Mortem Camus (Emma Sawyer all'anagrafe).",
+    "descrizione": "Maledizione letale insidiosa che provoca un progressivo restringimento dei canali respiratori che, occlusi, porteranno alla morte per soffocamento preceduta da vista appannata, pensiero non lucido e collasso in mancanza d'ossigeno.
+L'incantesimo è di tipo attivo, pertanto richiede un'elevata concentrazione ed una spiccata volontà mossa da sentimenti puramente negativi, oltre che a linea di tiro diretta e contatto visivo libero sulla vittima: saltato anche solo uno dei paletti che regolamentano le Maledizioni, gli effetti sono annullati.
+
+Difesa e Contromisure:
+L'incantesimo manca di raggio (o luce), non regalando alcun indizio circa la propria attivazione (dinamica analoga all'Incantesimo Oblivion); questo lo rende difficile da intercettare in un primo momento, perciò è consigliabile agire d'istinto ed appellarsi alla ragione finché si è in grado di farlo. Il contatto visivo diretto e fisso da parte di qualcuno può fungere da indizio assai rivelatore: frapporre qualcosa fra sé ed il tentato omicida può far interrompere il sortilegio. Il Controincantesimo è Anapneo, che agisce direttamente sulle zone interessate dalla Maledizione per revertire le capacità respiratorie, liberando gli appositi canali e pareti.
+
+Ricercato, studiato e coniato da Emma Mortem Camus (Emma Sawyer all'anagrafe).",
     "etimologia": "Dal latino suffocatio ('soffocamento' e/o 'strangolamento', dal verbo suffocare), traducibile nell'ostruzione parziale o completa delle vie respiratorie da parte della magia.",
     "valenza": 7,
     "sommaLettere": 43,
@@ -22908,7 +22930,20 @@ const SPELLS_DATA = [
     "duelloNote": "Utilizzabile in duello tattico a corto raggio (entro 2-3 metri, massimo 2 bersagli). Altera fino a 2 sensi contemporaneamente (es. vista e udito) proiettando miraggi ingannevoli. Si dissolve se l'avversario riconosce razionalmente l'illusione, se l'incantatore viene distratto o colpito, oppure tramite il controincantesimo specifico Illusìndum (rotazione a 360° della bacchetta sopra il capo con braccio esteso verso l'alto).",
     "movimento": "Puntamento diretto verso il bersaglio o l'area designata, accompagnato da una rotazione controllata e fluida del polso nello spazio per canalizzare la proiezione illusoria.",
     "movimentoSvg": "M 30,75 L 60,75 C 60,55 90,55 90,75 C 90,95 60,95 60,75 C 60,50 105,40 125,75",
-    "descrizione": "Genera dalla punta della bacchetta un'illusione strutturata, proiettabile su un singolo individuo o su un'area circoscritta ('target ambientale') e su chiunque vi si trovi all'interno.\nRichiede un livello eccezionalmente elevato di concentrazione: il trasfiguratore deve ricostruire mentalmente l'illusione attraverso un processo di visualizzazione nitido e perfettamente stabile, dirigendo il catalizzatore con una rotazione controllata del polso.\n\nLimitazioni Tecniche:\n• Alterazione Sensoriale: l'incantatore può alterare strutturalmente al massimo due sensi contemporaneamente (es. Vista e Udito, oppure Udito e Olfatto).\n• Raggio d'Azione: circoscritto a un perimetro ridotto di 2–3 metri al massimo dall'utilizzatore.\n• Bersagli: coinvolge al massimo due soggetti alla volta.\n• Condizioni di Dissoluzione: l'illusione svanisce se la vittima realizza e riconosce razionalmente la natura illusoria di ciò che percepisce, oppure a causa di distrazioni ambientali o fisiche subite dall'incantatore.\n\nDifesa e Controincanto:\nIl controincantesimo specifico è Illusìndum, che interrompe e dissolve la proiezione. Perché abbia successo, l'intensità magica del controincanto deve superare quella dell'illusione originale; l'esecuzione prevede una rotazione completa a 360° della bacchetta sopra il capo con il braccio dominante esteso lungo l'asse verticale.\n\nStoria e Origine:\nFrutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos Noctis sulla formalizzazione scientifica e percettivo-visiva delle illusioni. Lo studio comparato ha integrato incantesimi affini come Desilludo e matrici di manipolazione della percezione come Dismundo, analizzando a fondo i processi fenomenologici dell'alterazione sensoriale per perfezionare le tecniche di manipolazione della realtà percepita.",
+    "descrizione": "Genera dalla punta della bacchetta un'illusione strutturata, proiettabile su un singolo individuo o su un'area circoscritta ('target ambientale') e su chiunque vi si trovi all'interno.
+Richiede un livello eccezionalmente elevato di concentrazione: il trasfiguratore deve ricostruire mentalmente l'illusione attraverso un processo di visualizzazione nitido e perfettamente stabile, dirigendo il catalizzatore con una rotazione controllata del polso.
+
+Limitazioni Tecniche:
+• Alterazione Sensoriale: l'incantatore può alterare strutturalmente al massimo due sensi contemporaneamente (es. Vista e Udito, oppure Udito e Olfatto).
+• Raggio d'Azione: circoscritto a un perimetro ridotto di 2–3 metri al massimo dall'utilizzatore.
+• Bersagli: coinvolge al massimo due soggetti alla volta.
+• Condizioni di Dissoluzione: l'illusione svanisce se la vittima realizza e riconosce razionalmente la natura illusoria di ciò che percepisce, oppure a causa di distrazioni ambientali o fisiche subite dall'incantatore.
+
+Difesa e Controincanto:
+Il controincantesimo specifico è Illusìndum, che interrompe e dissolve la proiezione. Perché abbia successo, l'intensità magica del controincanto deve superare quella dell'illusione originale; l'esecuzione prevede una rotazione completa a 360° della bacchetta sopra il capo con il braccio dominante esteso lungo l'asse verticale.
+
+Storia e Origine:
+Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos Noctis sulla formalizzazione scientifica e percettivo-visiva delle illusioni. Lo studio comparato ha integrato incantesimi affini come Desilludo e matrici di manipolazione della percezione come Dismundo, analizzando a fondo i processi fenomenologici dell'alterazione sensoriale per perfezionare le tecniche di manipolazione della realtà percepita.",
     "etimologia": "Formazione pseudo-latina nata dalla combinazione di illusio ('illusione', da illudere: ingannare, deridere) e del suffisso formativo -ficium (dal verbo latino facere: fare, creare), con il significato complessivo di 'atto di creare illusioni' o 'generazione illusoria'.",
     "valenza": 7,
     "sommaLettere": 52,
@@ -28553,7 +28588,7 @@ window.materieData = {
 // app.js - Logica Applicativa e Interattività del Portale Unificato di Hogwarts
 // Integra le 5 Macro-Discipline: Incantesimi, Rune, Creature, Piante e Pozioni
 
-document.addEventListener("DOMContentLoaded", () => {
+function initPortal() {
 
   // --- Macro Configurations & Metadata ---
   const MACRO_CONFIG = {
@@ -28561,8 +28596,8 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Incantesimi",
       icon: "🪄",
       hint: '<strong class="text-amber-300">268 Incantesimi Didattici</strong> (Valenza, Movimenti Bacchetta, Duello)',
-      activeClass: "bg-amber-500 text-slate-950 shadow-md",
-      inactiveClass: "text-slate-400 hover:text-amber-300 hover:bg-slate-900",
+      activeClass: "bg-amber-500 text-slate-950 shadow-lg shadow-amber-500/20 border border-amber-400 ring-2 ring-amber-400/40",
+      inactiveClass: "text-slate-300 hover:text-amber-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80",
       hasYear: true,
       hasDuel: true,
       hasValence: true,
@@ -28583,11 +28618,11 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     runes: {
-      name: "Rune",
+      name: "Antiche Rune",
       icon: "ᛟ",
       hint: '<strong class="text-indigo-300">25 Antiche Rune Futhark</strong> (Significato, Aett, Simboli)',
-      activeClass: "bg-indigo-600 text-white shadow-md",
-      inactiveClass: "text-slate-400 hover:text-indigo-300 hover:bg-slate-900",
+      activeClass: "bg-indigo-600 text-white shadow-lg shadow-indigo-600/20 border border-indigo-400 ring-2 ring-indigo-400/40",
+      inactiveClass: "text-slate-300 hover:text-indigo-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80",
       hasYear: false,
       hasDuel: false,
       hasValence: false,
@@ -28601,11 +28636,11 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     creatures: {
-      name: "Creature",
+      name: "Creature Magiche",
       icon: "🐉",
       hint: '<strong class="text-amber-400">74 Creature Magiche</strong> (Classificazione Ministeriale, Habitat, Dieta)',
-      activeClass: "bg-amber-600 text-white shadow-md",
-      inactiveClass: "text-slate-400 hover:text-amber-300 hover:bg-slate-900",
+      activeClass: "bg-amber-600 text-white shadow-lg shadow-amber-600/20 border border-amber-400 ring-2 ring-amber-400/40",
+      inactiveClass: "text-slate-300 hover:text-amber-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80",
       hasYear: true,
       hasDuel: false,
       hasValence: false,
@@ -28621,11 +28656,11 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     plants: {
-      name: "Piante",
+      name: "Erbologia & Piante",
       icon: "🌿",
       hint: '<strong class="text-emerald-400">57 Piante & Colture Botaniche</strong> (Parti Usate, Proprietà, Coltivazione)',
-      activeClass: "bg-emerald-600 text-white shadow-md",
-      inactiveClass: "text-slate-400 hover:text-emerald-300 hover:bg-slate-900",
+      activeClass: "bg-emerald-600 text-white shadow-lg shadow-emerald-600/20 border border-emerald-400 ring-2 ring-emerald-400/40",
+      inactiveClass: "text-slate-300 hover:text-emerald-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80",
       hasYear: true,
       hasDuel: false,
       hasValence: false,
@@ -28647,11 +28682,11 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     potions: {
-      name: "Pozioni",
+      name: "Arte delle Pozioni",
       icon: "🧪",
       hint: '<strong class="text-indigo-400">138 Pozioni & Preparazioni Alchemiche</strong> (Ingredienti, Procedimenti, Effetti)',
-      activeClass: "bg-indigo-600 text-white shadow-md",
-      inactiveClass: "text-slate-400 hover:text-indigo-300 hover:bg-slate-900",
+      activeClass: "bg-indigo-600 text-white shadow-lg shadow-indigo-600/20 border border-indigo-400 ring-2 ring-indigo-400/40",
+      inactiveClass: "text-slate-300 hover:text-indigo-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80",
       hasYear: true,
       hasDuel: false,
       hasValence: false,
@@ -28895,7 +28930,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function highlightText(text, query) {
     if (!text) return "";
     if (!query || query.trim().length === 0) return text;
-    const clean = query.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const clean = query.trim().replace(/[.*+?^${}()|[\]\]/g, '\$&');
     const regex = new RegExp(`(${clean})`, 'gi');
     return text.replace(regex, '<mark class="bg-amber-400/40 text-amber-200 px-0.5 rounded font-semibold">$1</mark>');
   }
@@ -29013,10 +29048,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const btn = document.getElementById(`macro${m.charAt(0).toUpperCase() + m.slice(1)}Btn`);
       if (!btn) return;
       const cfg = MACRO_CONFIG[m];
-      btn.className = `macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
-        m === activeMacro ? cfg.activeClass : cfg.inactiveClass
+      const isCurrent = (m === activeMacro);
+      btn.className = `macro-btn p-3.5 rounded-xl text-xs sm:text-sm font-magic font-bold transition-all duration-200 flex flex-col items-center justify-center gap-1 ${
+        isCurrent ? cfg.activeClass : cfg.inactiveClass
       }`;
     });
+
+    // Update Stat Cards highlight in Hero Banner
+    document.querySelectorAll(".stat-card").forEach(card => {
+      const target = card.dataset.statMacro;
+      if (target === activeMacro) {
+        card.classList.add("ring-2", "ring-amber-400", "bg-amber-950/40");
+      } else {
+        card.classList.remove("ring-2", "ring-amber-400", "bg-amber-950/40");
+      }
+    });
+
+    // Sync URL hash
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, null, '#' + macro);
+    }
 
     // Update Macro Context Hint
     if (activeMacroHint) {
@@ -30021,11 +30072,57 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // --- Hero Stat Cards Click Listeners ---
+  document.querySelectorAll(".stat-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const targetMacro = card.dataset.statMacro;
+      if (targetMacro) {
+        setMacroFilter(targetMacro);
+        const catalogSec = document.getElementById("catalogSection");
+        if (catalogSec) {
+          catalogSec.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
+
+  // Expose global methods
+  window.setMacroFilter = setMacroFilter;
+  window.resetAllFilters = resetAllFilters;
+
   // --- Initial Boot ---
   updateStats();
-  setMacroFilter("spells");
 
-});
+  const initialHash = (typeof window !== "undefined" && window.location && window.location.hash)
+    ? window.location.hash.replace("#", "").toLowerCase()
+    : "";
+  const validMacros = ["spells", "runes", "creatures", "plants", "potions"];
+  if (validMacros.includes(initialHash)) {
+    setMacroFilter(initialHash);
+  } else if (initialHash === "creature") {
+    setMacroFilter("creatures");
+  } else if (initialHash === "piante") {
+    setMacroFilter("plants");
+  } else if (initialHash === "pozioni") {
+    setMacroFilter("potions");
+  } else {
+    setMacroFilter("spells");
+  }
+
+}
+
+// Robust execution whether script is evaluated before or after DOMContentLoaded
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initPortal);
+} else {
+  initPortal();
+}
 
 </script>
 </body>

@@ -1,7 +1,7 @@
 // app.js - Logica Applicativa e Interattività del Portale Unificato di Hogwarts
 // Integra le 5 Macro-Discipline: Incantesimi, Rune, Creature, Piante e Pozioni
 
-document.addEventListener("DOMContentLoaded", () => {
+function initPortal() {
 
   // --- Macro Configurations & Metadata ---
   const MACRO_CONFIG = {
@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Incantesimi",
       icon: "🪄",
       hint: '<strong class="text-amber-300">268 Incantesimi Didattici</strong> (Valenza, Movimenti Bacchetta, Duello)',
-      activeClass: "bg-amber-500 text-slate-950 shadow-md",
-      inactiveClass: "text-slate-400 hover:text-amber-300 hover:bg-slate-900",
+      activeClass: "bg-amber-500 text-slate-950 shadow-lg shadow-amber-500/20 border border-amber-400 ring-2 ring-amber-400/40",
+      inactiveClass: "text-slate-300 hover:text-amber-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80",
       hasYear: true,
       hasDuel: true,
       hasValence: true,
@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     runes: {
-      name: "Rune",
+      name: "Antiche Rune",
       icon: "ᛟ",
       hint: '<strong class="text-indigo-300">25 Antiche Rune Futhark</strong> (Significato, Aett, Simboli)',
-      activeClass: "bg-indigo-600 text-white shadow-md",
-      inactiveClass: "text-slate-400 hover:text-indigo-300 hover:bg-slate-900",
+      activeClass: "bg-indigo-600 text-white shadow-lg shadow-indigo-600/20 border border-indigo-400 ring-2 ring-indigo-400/40",
+      inactiveClass: "text-slate-300 hover:text-indigo-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80",
       hasYear: false,
       hasDuel: false,
       hasValence: false,
@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     creatures: {
-      name: "Creature",
+      name: "Creature Magiche",
       icon: "🐉",
       hint: '<strong class="text-amber-400">74 Creature Magiche</strong> (Classificazione Ministeriale, Habitat, Dieta)',
-      activeClass: "bg-amber-600 text-white shadow-md",
-      inactiveClass: "text-slate-400 hover:text-amber-300 hover:bg-slate-900",
+      activeClass: "bg-amber-600 text-white shadow-lg shadow-amber-600/20 border border-amber-400 ring-2 ring-amber-400/40",
+      inactiveClass: "text-slate-300 hover:text-amber-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80",
       hasYear: true,
       hasDuel: false,
       hasValence: false,
@@ -69,11 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     plants: {
-      name: "Piante",
+      name: "Erbologia & Piante",
       icon: "🌿",
       hint: '<strong class="text-emerald-400">57 Piante & Colture Botaniche</strong> (Parti Usate, Proprietà, Coltivazione)',
-      activeClass: "bg-emerald-600 text-white shadow-md",
-      inactiveClass: "text-slate-400 hover:text-emerald-300 hover:bg-slate-900",
+      activeClass: "bg-emerald-600 text-white shadow-lg shadow-emerald-600/20 border border-emerald-400 ring-2 ring-emerald-400/40",
+      inactiveClass: "text-slate-300 hover:text-emerald-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80",
       hasYear: true,
       hasDuel: false,
       hasValence: false,
@@ -95,11 +95,11 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     potions: {
-      name: "Pozioni",
+      name: "Arte delle Pozioni",
       icon: "🧪",
       hint: '<strong class="text-indigo-400">138 Pozioni & Preparazioni Alchemiche</strong> (Ingredienti, Procedimenti, Effetti)',
-      activeClass: "bg-indigo-600 text-white shadow-md",
-      inactiveClass: "text-slate-400 hover:text-indigo-300 hover:bg-slate-900",
+      activeClass: "bg-indigo-600 text-white shadow-lg shadow-indigo-600/20 border border-indigo-400 ring-2 ring-indigo-400/40",
+      inactiveClass: "text-slate-300 hover:text-indigo-300 bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80",
       hasYear: true,
       hasDuel: false,
       hasValence: false,
@@ -461,10 +461,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const btn = document.getElementById(`macro${m.charAt(0).toUpperCase() + m.slice(1)}Btn`);
       if (!btn) return;
       const cfg = MACRO_CONFIG[m];
-      btn.className = `macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
-        m === activeMacro ? cfg.activeClass : cfg.inactiveClass
+      const isCurrent = (m === activeMacro);
+      btn.className = `macro-btn p-3.5 rounded-xl text-xs sm:text-sm font-magic font-bold transition-all duration-200 flex flex-col items-center justify-center gap-1 ${
+        isCurrent ? cfg.activeClass : cfg.inactiveClass
       }`;
     });
+
+    // Update Stat Cards highlight in Hero Banner
+    document.querySelectorAll(".stat-card").forEach(card => {
+      const target = card.dataset.statMacro;
+      if (target === activeMacro) {
+        card.classList.add("ring-2", "ring-amber-400", "bg-amber-950/40");
+      } else {
+        card.classList.remove("ring-2", "ring-amber-400", "bg-amber-950/40");
+      }
+    });
+
+    // Sync URL hash
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, null, '#' + macro);
+    }
 
     // Update Macro Context Hint
     if (activeMacroHint) {
@@ -1469,8 +1485,54 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // --- Hero Stat Cards Click Listeners ---
+  document.querySelectorAll(".stat-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const targetMacro = card.dataset.statMacro;
+      if (targetMacro) {
+        setMacroFilter(targetMacro);
+        const catalogSec = document.getElementById("catalogSection");
+        if (catalogSec) {
+          catalogSec.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
+
+  // Expose global methods
+  window.setMacroFilter = setMacroFilter;
+  window.resetAllFilters = resetAllFilters;
+
   // --- Initial Boot ---
   updateStats();
-  setMacroFilter("spells");
 
-});
+  const initialHash = (typeof window !== "undefined" && window.location && window.location.hash)
+    ? window.location.hash.replace("#", "").toLowerCase()
+    : "";
+  const validMacros = ["spells", "runes", "creatures", "plants", "potions"];
+  if (validMacros.includes(initialHash)) {
+    setMacroFilter(initialHash);
+  } else if (initialHash === "creature") {
+    setMacroFilter("creatures");
+  } else if (initialHash === "piante") {
+    setMacroFilter("plants");
+  } else if (initialHash === "pozioni") {
+    setMacroFilter("potions");
+  } else {
+    setMacroFilter("spells");
+  }
+
+}
+
+// Robust execution whether script is evaluated before or after DOMContentLoaded
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initPortal);
+} else {
+  initPortal();
+}

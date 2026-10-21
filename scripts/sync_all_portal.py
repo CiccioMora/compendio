@@ -49,11 +49,11 @@ with open(f'{BASE_DIR}/index.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
 # Aggiorna macro bottoni
-html = re.sub(r'<span id="macroSpellsText">Incantesimi \([0-9]+\)</span>', f'<span id="macroSpellsText">Incantesimi ({spells_count})</span>', html)
-html = re.sub(r'<span id="macroRunesText">Rune \([0-9]+\)</span>', f'<span id="macroRunesText">Rune ({runes_count})</span>', html)
-html = re.sub(r'<span id="macroCreaturesText">Creature \([0-9]+\)</span>', f'<span id="macroCreaturesText">Creature ({cr_count})</span>', html)
-html = re.sub(r'<span id="macroPlantsText">Piante \([0-9]+\)</span>', f'<span id="macroPlantsText">Piante ({plant_count})</span>', html)
-html = re.sub(r'<span id="macroPotionsText">Pozioni \([0-9]+\)</span>', f'<span id="macroPotionsText">Pozioni ({pot_count})</span>', html)
+html = re.sub(r'<span id="macroSpellsText"[^>]*>Incantesimi \([0-9]+\)</span>', f'<span id="macroSpellsText" class="tracking-wide">Incantesimi ({spells_count})</span>', html)
+html = re.sub(r'<span id="macroRunesText"[^>]*>(?:Antiche Rune|Rune) \([0-9]+\)</span>', f'<span id="macroRunesText" class="tracking-wide">Antiche Rune ({runes_count})</span>', html)
+html = re.sub(r'<span id="macroCreaturesText"[^>]*>(?:Creature Magiche|Creature) \([0-9]+\)</span>', f'<span id="macroCreaturesText" class="tracking-wide">Creature Magiche ({cr_count})</span>', html)
+html = re.sub(r'<span id="macroPlantsText"[^>]*>(?:Erbologia & Piante|Piante) \([0-9]+\)</span>', f'<span id="macroPlantsText" class="tracking-wide">Erbologia & Piante ({plant_count})</span>', html)
+html = re.sub(r'<span id="macroPotionsText"[^>]*>(?:Arte delle Pozioni|Pozioni) \([0-9]+\)</span>', f'<span id="macroPotionsText" class="tracking-wide">Arte delle Pozioni ({pot_count})</span>', html)
 
 # Aggiornamento Header Stats Badges & 3 Box Totali
 dark_count = len([s for s in spells if not s.get('isRune') and ('Maledizione' in s.get('tipologia', '') or 'Fattura' in s.get('tipologia', ''))])
@@ -207,21 +207,25 @@ with open(f'{BASE_DIR}/app.js', 'r', encoding='utf-8') as f:
 
 # Creazione standalone
 standalone_html = html
-standalone_html = standalone_html.replace(
-    '<link rel="stylesheet" href="style.css">',
-    f'<style>\n{css_content}\n</style>'
+standalone_html = re.sub(
+    r'<link rel="stylesheet" href="style\.css(?:\?[^"]*)?">',
+    f'<style>\n{css_content}\n</style>',
+    standalone_html
 )
-standalone_html = standalone_html.replace(
-    '<script src="spellsData.js"></script>',
-    f'<script>\n{spells_data_content}\n</script>'
+standalone_html = re.sub(
+    r'<script src="spellsData\.js(?:\?[^"]*)?"></script>',
+    f'<script>\n{spells_data_content}\n</script>',
+    standalone_html
 )
-standalone_html = standalone_html.replace(
-    '<script src="materieData.js"></script>',
-    f'<script>\n{materie_data_content}\n</script>'
+standalone_html = re.sub(
+    r'<script src="materieData\.js(?:\?[^"]*)?"></script>',
+    f'<script>\n{materie_data_content}\n</script>',
+    standalone_html
 )
-standalone_html = standalone_html.replace(
-    '<script src="app.js"></script>',
-    f'<script>\n{app_js_content}\n</script>'
+standalone_html = re.sub(
+    r'<script src="app\.js(?:\?[^"]*)?"></script>',
+    f'<script>\n{app_js_content}\n</script>',
+    standalone_html
 )
 
 with open(f'{BASE_DIR}/dist/portale_standalone.html', 'w', encoding='utf-8') as f:
