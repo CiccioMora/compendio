@@ -1009,7 +1009,7 @@ raw_spells = [
     'formula': 'Coerceo', 'ripetibile': False, 'tipologia': 'Elementale Acqua / Controllo', 'inDuello': True,
     'duelloNote': 'Utilizzabile in duello. Plasma torrenti e muri d'acqua per deflettere fiamme, travolgere il rivale o spegnere attacchi incendiari.',
     'movimento': 'Se l'acqua è già presente: scatto secco del polso verso il basso. Se evocata: puntamento fermo appena fuoriesce dalla punta.',
-    'movimentoSvg': 'M 75,30 L 75,115 M 55,95 L 75,115 L 95,95',
+    'movimentoSvg': 'M 75,30 L 75,115 M 55,95 L 75,115 M 95,95 L 75,115',
     'descrizione': 'Formula aritmantica che assoggetta l'elemento naturale dell'Acqua (associato al numero 1 nella T.L.A.). Chi lo padroneggia sente l'acqua come un prolungamento della bacchetta.',
     'etimologia': 'Dal latino 'coercere' (contenere, domare, tenere a freno).'
   },
