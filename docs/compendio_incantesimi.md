@@ -1,4 +1,4 @@
-# Compendium Magicum: Portale della Conoscenza delle Nozioni Pratiche
+# Codex Arcane - Mondo Magico
 *Classificazione Accademica Metodologica per Anni di Studio (Hogwarts & Arcane GDR)*
 
 > [!NOTE]

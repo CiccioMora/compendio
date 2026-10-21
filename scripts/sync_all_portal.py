@@ -152,7 +152,7 @@ for s in spells:
     rune = s.get('runeAssociate', '-')
     table_rows.append(f"| **{anno_lbl}** | **{nome}** | `{formula}` | **{val}** | {opp} | {tipo} | {duel} | {rune} |")
 
-compendium_header = f"""# Compendium Magicum: Portale della Conoscenza delle Nozioni Pratiche
+compendium_header = f"""# Codex Arcane - Mondo Magico
 *Classificazione Accademica Metodologica per Anni di Studio (Hogwarts & Arcane GDR)*
 
 > [!NOTE]
