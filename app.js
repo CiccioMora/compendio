@@ -142,8 +142,8 @@
       duelSegBtns.forEach(btn => {
         const d = btn.getAttribute("data-duel");
         if (d === "ALL") btn.textContent = `Tutti (${totalSpells})`;
-        if (d === "YES") btn.textContent = `⚔️ Da Duello: SÌ (${duelYes})`;
-        if (d === "NO") btn.textContent = `⛔ Non da Duello: NO (${duelNo})`;
+        if (d === "YES") btn.textContent = `Sì (${duelYes})`;
+        if (d === "NO") btn.textContent = `No (${duelNo})`;
       });
 
       if (duelFilter) {

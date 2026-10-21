@@ -91,8 +91,8 @@ html = re.sub(r'data-year="0"([^>]*)>\s*Altri \([0-9]+\)', f'data-year="0"\\1>\n
 
 # Aggiornamento duelSegmentedGroup
 html = re.sub(r'data-duel="ALL"([^>]*)>\s*Tutti \([0-9]+\)', f'data-duel="ALL"\\1>\n                Tutti ({spells_count})', html)
-html = re.sub(r'data-duel="YES"([^>]*)>\s*⚔️ Da Duello: SÌ \([0-9]+\)', f'data-duel="YES"\\1>\n                ⚔️ Da Duello: SÌ ({duel_yes})', html)
-html = re.sub(r'data-duel="NO"([^>]*)>\s*⛔ Non da Duello: NO \([0-9]+\)', f'data-duel="NO"\\1>\n                ⛔ Non da Duello: NO ({duel_no})', html)
+html = re.sub(r'data-duel="YES"([^>]*)>\s*(?:⚔️ Da Duello: SÌ|Sì) \([0-9]+\)', f'data-duel="YES"\\1>\n                Sì ({duel_yes})', html)
+html = re.sub(r'data-duel="NO"([^>]*)>\s*(?:⛔ Non da Duello: NO|No) \([0-9]+\)', f'data-duel="NO"\\1>\n                No ({duel_no})', html)
 
 # Results badge
 html = re.sub(r'<span id="resultsCountBadge"[^>]*>[0-9]+ incantesimi trovati</span>', f'<span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">{spells_count} incantesimi trovati</span>', html)
