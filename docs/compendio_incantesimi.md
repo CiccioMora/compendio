@@ -306,13 +306,13 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **III Anno** | **Formula di Controllo della Terra (Adultero)** | `Adultero` | **6** | 4 | Elementale Terra / Controllo | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
 | **V Anno** | **Incantesimo Anti-Furto per Contenitori (Dominum)** | `Dominum` | **8** | 2 | Difesa Statica di Contenitori | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
 | **IV Anno** | **Incantesimo Celante Aureo (Phi Revelio)** | `Phi Revelio` | **2** | 8 | Occultamento / Crittografia Magica | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
-| **Altri** | **Incantesimo Domestico Lavapiatti** | `Lavapiatti` | **3** | 7 | Chicche di Magia / Magia Domestica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
-| **Altri** | **Incantesimo Frantuma-Vetri Senza Schegge (Finestra)** | `Finestra` | **2** | 8 | Chicche di Magia / Infiltrazione M.A.G.O. | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
-| **Altri** | **Incantesimo Imperturbabile (Imperturbabile)** | `Imperturbabile` | **7** | 3 | Chicche di Magia / Barriera Oggetti e Suoni M.A.G.O. | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
-| **Altri** | **Incantesimo Linea dell'Età** | `Aetas Limen` | **9** | 1 | Chicche di Magia / Barriera d'Accesso M.A.G.O. | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
-| **Altri** | **Incantesimo Muta-Colore (Colovaria)** | `Colovaria` | **6** | 4 | Chicche di Magia / Alterazione Cromatica | ⛔ NO | ᚲ Kenaz (Pos. 6ª) |
+| **VII Anno** | **Incantesimo Domestico Lavapiatti** | `Lavapiatti` | **3** | 7 | Chicche di Magia / Magia Domestica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
+| **VII Anno** | **Incantesimo Frantuma-Vetri Senza Schegge (Finestra)** | `Finestra` | **2** | 8 | Chicche di Magia / Infiltrazione M.A.G.O. | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
+| **VII Anno** | **Incantesimo Imperturbabile (Imperturbabile)** | `Imperturbabile` | **7** | 3 | Chicche di Magia / Barriera Oggetti e Suoni M.A.G.O. | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
+| **VII Anno** | **Incantesimo Linea dell'Età** | `Aetas Limen` | **9** | 1 | Chicche di Magia / Barriera d'Accesso M.A.G.O. | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
+| **VII Anno** | **Incantesimo Muta-Colore (Colovaria)** | `Colovaria` | **6** | 4 | Chicche di Magia / Alterazione Cromatica | ⛔ NO | ᚲ Kenaz (Pos. 6ª) |
 | **IV Anno** | **Incantesimo Proporzionale Aureo (Phi Porta)** | `Phi Porta` | **4** | 6 | Traslazione / Varchi Aritmantici | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
-| **Altri** | **Incantesimo Rendi-Illegibile (Illegibilus)** | `Illegibilus` | **9** | 1 | Chicche di Magia / Riservatezza Documentale | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
+| **VII Anno** | **Incantesimo Rendi-Illegibile (Illegibilus)** | `Illegibilus` | **9** | 1 | Chicche di Magia / Riservatezza Documentale | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
 | **IV Anno** | **Incantesimo Rivelatore di Legami Runici (Vinculum Revelio)** | `Vinculum Revelio` | **3** | 7 | Magia Runica / Diagnostica Legami di Thoot | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **VI Anno** | **Incantesimo Rivelatore di Magia Oscura (Maleficium Revelio)** | `Maleficium Revelio` | **7** | 3 | Magia Runica / Rivelazione Oscura e Diagnosi Maledizioni | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
 | **Altri** | **Incantesimo Rivelatore di Pozioni di Scarpin (Revelio Minimum)** | `Revelio Minimum` | **7** | 3 | Rivelazione Analitica di Pozioni | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
@@ -327,10 +327,10 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **V Anno** | **Incantesimo di Evanescenza per Inanimati e Liquidi (Evanesco)** | `Evanesco` | **3** | 7 | Evanescenza nel Non-Essere | ⚔️ SÌ | ᚦ Thurisaz (Pos. 3ª) |
 | **V Anno** | **Incantesimo di Evanescenza per Viventi (Ivanesco)** | `Ivanesco` | **7** | 3 | Evanescenza di Viventi nel Non-Essere | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
 | **Altri** | **Incantesimo di Fortificazione Barriere (Fianto Duri)** | `Fianto Duri` | **9** | 1 | Chicche di Magia / Difensivo Avanzato M.A.G.O. | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
-| **Altri** | **Incantesimo di Montaggio e Costruzione (Erecto)** | `Erecto` | **3** | 7 | Chicche di Magia / Cinetica Architettonica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
+| **VII Anno** | **Incantesimo di Montaggio e Costruzione (Erecto)** | `Erecto` | **3** | 7 | Chicche di Magia / Cinetica Architettonica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **Altri** | **Incantesimo di Tracciamento a Ritroso (Avenseguim)** | `Avenseguim` | **8** | 2 | Localizzazione e Tracciamento Forense | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
 | **I Anno** | **Incanto Diagnostico di Rifrazione (Detecto)** | `Detecto` | **9** | 1 | Trasfigurazione / Diagnostica Molecolare e Marchi | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
-| **Altri** | **Incanto Leggero come una Piuma** | `Pluma Levis` | **4** | 6 | Chicche di Magia / Riduzione Peso M.A.G.O. | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
+| **VII Anno** | **Incanto Leggero come una Piuma** | `Pluma Levis` | **4** | 6 | Chicche di Magia / Riduzione Peso M.A.G.O. | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **I Anno** | **Marchiatura di Creature ed Entità Viventi (Fersigno)** | `Fersigno` | **3** | 7 | Trasfigurazione / Marchiatura Vivente | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **I Anno** | **Marchiatura di Elementi Vegetali (Plansigno)** | `Plansigno` | **8** | 2 | Trasfigurazione / Marchiatura Vegetale | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
 | **I Anno** | **Marchiatura di Oggetti Inanimati (Significo)** | `Significo` | **1** | 9 | Trasfigurazione / Marchiatura Inanimata | ⛔ NO | ᚠ Fehu (Pos. 1ª) |
