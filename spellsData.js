@@ -5875,8 +5875,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "phi-revelio",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 4,
+    "annoLabel": "IV Anno",
     "nome": "Incantesimo Celante Aureo (Phi Revelio)",
     "formula": "Phi Revelio",
     "ripetibile": false,
@@ -6007,8 +6007,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "phi-porta",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 4,
+    "annoLabel": "IV Anno",
     "nome": "Incantesimo Proporzionale Aureo (Phi Porta)",
     "formula": "Phi Porta",
     "ripetibile": false,

@@ -305,13 +305,13 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **III Anno** | **Formula di Controllo dell'Aria (Finge)** | `Finge` | **5** | 5 | Elementale Aria / Controllo | ⚔️ SÌ | ᚱ Raido (Pos. 5ª) |
 | **III Anno** | **Formula di Controllo della Terra (Adultero)** | `Adultero` | **6** | 4 | Elementale Terra / Controllo | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
 | **Altri** | **Incantesimo Anti-Furto per Contenitori (Dominum)** | `Dominum` | **8** | 2 | Difesa Statica di Contenitori | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
-| **Altri** | **Incantesimo Celante Aureo (Phi Revelio)** | `Phi Revelio` | **2** | 8 | Occultamento / Crittografia Magica | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
+| **IV Anno** | **Incantesimo Celante Aureo (Phi Revelio)** | `Phi Revelio` | **2** | 8 | Occultamento / Crittografia Magica | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **Altri** | **Incantesimo Domestico Lavapiatti** | `Lavapiatti` | **3** | 7 | Chicche di Magia / Magia Domestica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **Altri** | **Incantesimo Frantuma-Vetri Senza Schegge (Finestra)** | `Finestra` | **2** | 8 | Chicche di Magia / Infiltrazione M.A.G.O. | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **Altri** | **Incantesimo Imperturbabile (Imperturbabile)** | `Imperturbabile` | **7** | 3 | Chicche di Magia / Barriera Oggetti e Suoni M.A.G.O. | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
 | **Altri** | **Incantesimo Linea dell'Età** | `Aetas Limen` | **9** | 1 | Chicche di Magia / Barriera d'Accesso M.A.G.O. | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
 | **Altri** | **Incantesimo Muta-Colore (Colovaria)** | `Colovaria` | **6** | 4 | Chicche di Magia / Alterazione Cromatica | ⛔ NO | ᚲ Kenaz (Pos. 6ª) |
-| **Altri** | **Incantesimo Proporzionale Aureo (Phi Porta)** | `Phi Porta` | **4** | 6 | Traslazione / Varchi Aritmantici | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
+| **IV Anno** | **Incantesimo Proporzionale Aureo (Phi Porta)** | `Phi Porta` | **4** | 6 | Traslazione / Varchi Aritmantici | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **Altri** | **Incantesimo Rendi-Illegibile (Illegibilus)** | `Illegibilus` | **9** | 1 | Chicche di Magia / Riservatezza Documentale | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
 | **IV Anno** | **Incantesimo Rivelatore di Legami Runici (Vinculum Revelio)** | `Vinculum Revelio` | **3** | 7 | Magia Runica / Diagnostica Legami di Thoot | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **VI Anno** | **Incantesimo Rivelatore di Magia Oscura (Maleficium Revelio)** | `Maleficium Revelio` | **7** | 3 | Magia Runica / Rivelazione Oscura e Diagnosi Maledizioni | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
