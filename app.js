@@ -98,10 +98,6 @@
     const calcFigure = document.getElementById("calcFigure");
     const calcElement = document.getElementById("calcElement");
 
-    // Quick Duel Button
-    const quickDuelToggle = document.getElementById("quickDuelToggle");
-    const quickDuelText = document.getElementById("quickDuelText");
-
     function updateFilterCounts() {
       const yearCounts = {};
       const spellItems = SPELLS_DATA.filter(s => !s.isRune);
@@ -733,7 +729,6 @@
         }
       });
 
-      updateQuickDuelButton();
       renderSpells();
     }
 
@@ -748,27 +743,6 @@
         setDuelFilter(btn.dataset.duel);
       });
     });
-
-    // Quick duel button toggle in top header
-    quickDuelToggle.addEventListener("click", () => {
-      if (activeDuel === "YES") {
-        setDuelFilter("ALL");
-      } else {
-        setDuelFilter("YES");
-      }
-    });
-
-    function updateQuickDuelButton() {
-      if (activeDuel === "YES") {
-        quickDuelToggle.classList.remove("bg-indigo-500/15", "text-indigo-300", "border-indigo-500/30");
-        quickDuelToggle.classList.add("bg-emerald-500", "text-slate-950", "border-emerald-400", "font-bold");
-        quickDuelText.textContent = "Duello: ATTIVO (Filtro)";
-      } else {
-        quickDuelToggle.classList.add("bg-indigo-500/15", "text-indigo-300", "border-indigo-500/30");
-        quickDuelToggle.classList.remove("bg-emerald-500", "text-slate-950", "border-emerald-400", "font-bold");
-        quickDuelText.textContent = "Solo Duello";
-      }
-    }
 
     // Valence pills event listeners
     valPills.forEach(pill => {

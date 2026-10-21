@@ -128,11 +128,6 @@
           <span>🔢</span>
           <span>Calcolatore Valenza</span>
         </button>
-        <!-- Dueling Quick Filter Toggle -->
-        <button id="quickDuelToggle" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-indigo-500/15 hover:bg-indigo-500/25 text-indigo-300 border border-indigo-500/30 transition flex items-center gap-1.5 shadow-sm">
-          <span>⚔️</span>
-          <span id="quickDuelText">Solo Duello</span>
-        </button>
       </div>
     </div>
   </header>
@@ -7273,10 +7268,6 @@ const SPELLS_DATA = [
     const calcFigure = document.getElementById("calcFigure");
     const calcElement = document.getElementById("calcElement");
 
-    // Quick Duel Button
-    const quickDuelToggle = document.getElementById("quickDuelToggle");
-    const quickDuelText = document.getElementById("quickDuelText");
-
     function updateFilterCounts() {
       const yearCounts = {};
       const spellItems = SPELLS_DATA.filter(s => !s.isRune);
@@ -7908,7 +7899,6 @@ const SPELLS_DATA = [
         }
       });
 
-      updateQuickDuelButton();
       renderSpells();
     }
 
@@ -7923,27 +7913,6 @@ const SPELLS_DATA = [
         setDuelFilter(btn.dataset.duel);
       });
     });
-
-    // Quick duel button toggle in top header
-    quickDuelToggle.addEventListener("click", () => {
-      if (activeDuel === "YES") {
-        setDuelFilter("ALL");
-      } else {
-        setDuelFilter("YES");
-      }
-    });
-
-    function updateQuickDuelButton() {
-      if (activeDuel === "YES") {
-        quickDuelToggle.classList.remove("bg-indigo-500/15", "text-indigo-300", "border-indigo-500/30");
-        quickDuelToggle.classList.add("bg-emerald-500", "text-slate-950", "border-emerald-400", "font-bold");
-        quickDuelText.textContent = "Duello: ATTIVO (Filtro)";
-      } else {
-        quickDuelToggle.classList.add("bg-indigo-500/15", "text-indigo-300", "border-indigo-500/30");
-        quickDuelToggle.classList.remove("bg-emerald-500", "text-slate-950", "border-emerald-400", "font-bold");
-        quickDuelText.textContent = "Solo Duello";
-      }
-    }
 
     // Valence pills event listeners
     valPills.forEach(pill => {
