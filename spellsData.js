@@ -55,7 +55,7 @@ const SPELLS_DATA = [
     "inDuello": false,
     "duelloNote": "Non da duello. Dissolve istantaneamente le alterazioni ottiche e rifrattive prodotte da Alheia Croma o abbagliamenti da luce concentrata.",
     "movimento": "Puntamento inverso della bacchetta seguito da fendente orizzontale netto ad allontanare il flusso d'energia.",
-    "movimentoSvg": "M 115,75 L 45,75 M 60,60 L 45,75 L 60,90",
+    "movimentoSvg": "M 115,75 L 45,75 M 60,60 L 45,75 L 60,90 L 45,75",
     "descrizione": "Controincantesimo specifico di Alheia Croma inserito nel programma di Astronomia di I Anno. Ristabilisce la naturale convergenza focale di telescopi e occhi magici, azzerando residui di dispersione cromatica o alterazioni rifrattive.",
     "etimologia": "Dal greco apokrouo (respingere indietro, respingere con forza, far cessare).",
     "valenza": 5,
