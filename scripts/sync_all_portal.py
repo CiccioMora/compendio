@@ -65,17 +65,7 @@ html = re.sub(r'<span id="macroSpellsText">Incantesimi \([0-9]+\)</span>', f'<sp
 html = re.sub(r'<span id="macroRunesText">Rune \([0-9]+\)</span>', f'<span id="macroRunesText">Rune ({runes_count})</span>', html)
 html = re.sub(r'Visualizzazione: <strong class="text-amber-300">[0-9]+ Incantesimi Didattici</strong>', f'Visualizzazione: <strong class="text-amber-300">{spells_count} Incantesimi Didattici</strong>', html)
 
-# Aggiornamento dropdown yearSelect
-html = re.sub(r'<option value="ALL">Tutti gli Incantesimi \([0-9]+\)</option>', f'<option value="ALL">Tutti gli Incantesimi ({spells_count})</option>', html)
-html = re.sub(r'<option value="ALL">Tutti \([0-9]+\)</option>', f'<option value="ALL">Tutti gli Incantesimi ({spells_count})</option>', html)
-html = re.sub(r'<option value="1">I Anno \([0-9]+\)</option>', f'<option value="1">I Anno ({year_counts.get(1, 0)})</option>', html)
-html = re.sub(r'<option value="2">II Anno \([0-9]+\)</option>', f'<option value="2">II Anno ({year_counts.get(2, 0)})</option>', html)
-html = re.sub(r'<option value="3">III Anno \([0-9]+\)</option>', f'<option value="3">III Anno ({year_counts.get(3, 0)})</option>', html)
-html = re.sub(r'<option value="4">IV Anno \([0-9]+\)</option>', f'<option value="4">IV Anno ({year_counts.get(4, 0)})</option>', html)
-html = re.sub(r'<option value="5">V Anno \([0-9]+\)</option>', f'<option value="5">V Anno ({year_counts.get(5, 0)})</option>', html)
-html = re.sub(r'<option value="6">VI Anno \([0-9]+\)</option>', f'<option value="6">VI Anno ({year_counts.get(6, 0)})</option>', html)
-html = re.sub(r'<option value="7">VII Anno \([0-9]+\)</option>', f'<option value="7">VII Anno ({year_counts.get(7, 0)})</option>', html)
-html = re.sub(r'<option value="0">Altri \([0-9]+\)</option>', f'<option value="0">Altri ({year_counts.get(0, 0)})</option>', html)
+
 
 
 # Aggiornamento Year Quick Tabs

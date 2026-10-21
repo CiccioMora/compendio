@@ -47,7 +47,6 @@
     const noResultsState = document.getElementById("noResultsState");
     const searchInput = document.getElementById("searchInput");
     const clearSearchBtn = document.getElementById("clearSearchBtn");
-    const yearSelect = document.getElementById("yearSelect");
     const typeFilter = document.getElementById("typeFilter");
     const duelFilter = document.getElementById("duelFilter");
     const yearTabs = document.querySelectorAll(".year-tab");
@@ -128,15 +127,6 @@
           tab.textContent = yearTabLabels[yr];
         }
       });
-
-      if (yearSelect) {
-        Array.from(yearSelect.options).forEach(opt => {
-          const yr = opt.value;
-          if (yearTabLabels[yr]) {
-            opt.textContent = yearTabLabels[yr];
-          }
-        });
-      }
 
       const duelYes = spellItems.filter(s => s.inDuello).length;
       const duelNo = spellItems.filter(s => !s.inDuello).length;
@@ -868,10 +858,9 @@
       if (e.target === calculatorModal) closeCalculator();
     });
 
-    // --- SYNCHRONIZED YEAR FILTERING ---
+    // --- YEAR FILTERING ---
     function setYearFilter(yearValue) {
       activeYear = yearValue;
-      if (yearSelect) yearSelect.value = yearValue;
 
       yearTabs.forEach(t => {
         if (t.dataset.year === yearValue) {
@@ -884,10 +873,6 @@
       });
       renderSpells();
     }
-
-    yearSelect.addEventListener("change", (e) => {
-      setYearFilter(e.target.value);
-    });
 
     yearTabs.forEach(tab => {
       tab.addEventListener("click", () => {

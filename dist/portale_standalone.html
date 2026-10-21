@@ -226,28 +226,10 @@
 
       <!-- SPELL SUB-FILTERS CONTAINER (VISIBILE SOLO IN SEZIONE INCANTESIMI) -->
       <div id="spellSubFilters" class="space-y-4">
-        <!-- FILTER CONTROLS GRID (ANNO, DUELLO, TIPOLOGIA, RESET) -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+        <!-- FILTER CONTROLS GRID (TIPOLOGIA & RESET) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
           
-          <!-- Filter 1: Anno di Studio -->
-          <div>
-            <label for="yearSelect" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
-              <span>📅</span> Filtro Anno di Corso:
-            </label>
-            <select id="yearSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
-              <option value="ALL">Tutti gli Incantesimi (264)</option>
-              <option value="1">I Anno (32)</option>
-              <option value="2">II Anno (20)</option>
-              <option value="3">III Anno (34)</option>
-              <option value="4">IV Anno (33)</option>
-              <option value="5">V Anno (24)</option>
-              <option value="6">VI Anno (50)</option>
-              <option value="7">VII Anno (41)</option>
-              <option value="0">Altri (30)</option>
-            </select>
-          </div>
-
-          <!-- Filter 2: Tipologia -->
+          <!-- Filter: Tipologia -->
           <div>
             <label for="typeFilter" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
               <span>🏷️</span> Tipologia Magica:
@@ -267,7 +249,7 @@
             </select>
           </div>
 
-          <!-- Filter 4: Reset Button -->
+          <!-- Reset Button -->
           <div class="flex items-end">
             <button id="resetAllFiltersBtn" class="w-full py-2.5 px-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-xs font-semibold text-amber-300 border border-amber-500/30 hover:border-amber-400 transition flex items-center justify-center gap-1.5 shadow-sm">
               <span>🔄</span> Ripristina Tutti i Filtri
@@ -22533,7 +22515,6 @@ const SPELLS_DATA = [
     const noResultsState = document.getElementById("noResultsState");
     const searchInput = document.getElementById("searchInput");
     const clearSearchBtn = document.getElementById("clearSearchBtn");
-    const yearSelect = document.getElementById("yearSelect");
     const typeFilter = document.getElementById("typeFilter");
     const duelFilter = document.getElementById("duelFilter");
     const yearTabs = document.querySelectorAll(".year-tab");
@@ -22614,15 +22595,6 @@ const SPELLS_DATA = [
           tab.textContent = yearTabLabels[yr];
         }
       });
-
-      if (yearSelect) {
-        Array.from(yearSelect.options).forEach(opt => {
-          const yr = opt.value;
-          if (yearTabLabels[yr]) {
-            opt.textContent = yearTabLabels[yr];
-          }
-        });
-      }
 
       const duelYes = spellItems.filter(s => s.inDuello).length;
       const duelNo = spellItems.filter(s => !s.inDuello).length;
@@ -23354,10 +23326,9 @@ const SPELLS_DATA = [
       if (e.target === calculatorModal) closeCalculator();
     });
 
-    // --- SYNCHRONIZED YEAR FILTERING ---
+    // --- YEAR FILTERING ---
     function setYearFilter(yearValue) {
       activeYear = yearValue;
-      if (yearSelect) yearSelect.value = yearValue;
 
       yearTabs.forEach(t => {
         if (t.dataset.year === yearValue) {
@@ -23370,10 +23341,6 @@ const SPELLS_DATA = [
       });
       renderSpells();
     }
-
-    yearSelect.addEventListener("change", (e) => {
-      setYearFilter(e.target.value);
-    });
 
     yearTabs.forEach(tab => {
       tab.addEventListener("click", () => {
