@@ -319,7 +319,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Altri** | **Incantesimo Rivelatore di Presenze Umane (Hommenum Revelio)** | `Hommenum Revelio` | **8** | 2 | Rilevazione di Presenza | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
 | **Altri** | **Incantesimo Rivelatore di Tracce Recenti (Appare Vestigium)** | `Appare Vestigium` | **2** | 8 | Investigativo / Scanner Magico | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **IV Anno** | **Incantesimo Rudimentale di Sblocco Porta (Portaberto)** | `Portaberto` | **4** | 6 | Incantesimo di Sblocco Arcaico | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
-| **Altri** | **Incantesimo Scaccia-Babbani (Repello Babbanum)** | `Repello Babbanum` | **4** | 6 | Occultamento Territoriale / Statuto di Segretezza | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
+| **V Anno** | **Incantesimo Scaccia-Babbani (Repello Babbanum)** | `Repello Babbanum` | **4** | 6 | Occultamento Territoriale / Statuto di Segretezza | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **III Anno** | **Incantesimo Segnante / Tracciante (Signo)** | `Signo` | **1** | 9 | Magia Runica / Tracciamento su Materia | ⛔ NO | ᚠ Fehu (Pos. 1ª) |
 | **I Anno** | **Incantesimo di Adesione Permanente (Adesio Perpetua)** | `Adesio Perpetua` | **2** | 8 | Sigillo Materico / Incollamento Permanente | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **IV Anno** | **Incantesimo di Apertura Varchi (Liberate)** | `Liberate` | **9** | 1 | Incantesimo di Apertura Porte e Varchi | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |

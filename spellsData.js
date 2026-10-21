@@ -6183,8 +6183,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "repello-babbanum",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 5,
+    "annoLabel": "V Anno",
     "nome": "Incantesimo Scaccia-Babbani (Repello Babbanum)",
     "formula": "Repello Babbanum",
     "ripetibile": false,
