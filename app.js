@@ -737,9 +737,11 @@
       renderSpells();
     }
 
-    duelFilter.addEventListener("change", (e) => {
-      setDuelFilter(e.target.value);
-    });
+    if (duelFilter) {
+      duelFilter.addEventListener("change", (e) => {
+        setDuelFilter(e.target.value);
+      });
+    }
 
     duelSegBtns.forEach(btn => {
       btn.addEventListener("click", () => {

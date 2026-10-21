@@ -77,10 +77,6 @@ html = re.sub(r'<option value="6">VI Anno \([0-9]+\)</option>', f'<option value=
 html = re.sub(r'<option value="7">VII Anno \([0-9]+\)</option>', f'<option value="7">VII Anno ({year_counts.get(7, 0)})</option>', html)
 html = re.sub(r'<option value="0">Altri \([0-9]+\)</option>', f'<option value="0">Altri ({year_counts.get(0, 0)})</option>', html)
 
-# Aggiornamento duelFilter
-html = re.sub(r'<option value="ALL">Duello: Qualsiasi \([0-9]+\)</option>', f'<option value="ALL">Duello: Qualsiasi ({spells_count})</option>', html)
-html = re.sub(r'<option value="YES">⚔️ Utilizzabile in Duello: SÌ \([0-9]+\)</option>', f'<option value="YES">⚔️ Utilizzabile in Duello: SÌ ({duel_yes})</option>', html)
-html = re.sub(r'<option value="NO">⛔ Non da Duello / Rituale: NO \([0-9]+\)</option>', f'<option value="NO">⛔ Non da Duello / Rituale: NO ({duel_no})</option>', html)
 
 # Aggiornamento Year Quick Tabs
 html = re.sub(r'data-year="ALL"([^>]*)>\s*Tutti \([0-9]+\)', f'data-year="ALL"\\1>\n              Tutti ({spells_count})', html)
