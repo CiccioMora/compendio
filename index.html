@@ -35,8 +35,8 @@
         <!-- Link to Materie Portal Clone -->
         <a href="materie.html" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 transition flex items-center gap-1.5 shadow-sm">
           <span>🧪</span>
-          <span class="hidden sm:inline">Creature, Piante & Pozioni</span>
-          <span class="sm:hidden">Altre Materie</span>
+          <span class="hidden sm:inline">Pagina Clone (Materie)</span>
+          <span class="sm:hidden">Clone</span>
           <span class="text-xs">➔</span>
         </a>
         <!-- Quick Aritmancy Calculator Button -->
@@ -54,39 +54,59 @@
       <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -left-10 -top-10 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
       
-      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-        <div class="lg:col-span-2 space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-600/30 text-amber-300 text-xs font-medium">
-            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-            Elenco in costante aggiornamento
+      <div class="relative z-10 space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-8 space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-600/30 text-amber-300 text-xs font-medium">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+              Compendio Unificato del Mondo Magico • 5 Macro-Discipline
+            </div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-magic text-slate-100 leading-tight">
+              Archivio delle Nozioni Pratiche
+            </h2>
+            <p class="text-sm text-slate-300 leading-relaxed max-w-3xl">
+              Suddivisione metodologica per anni scolastici e categorie d'uso. Include il corpus integrale di 
+              <strong>Incantesimi</strong> e <strong>Antiche Rune</strong> (con calcolo di Valenza e movimenti di bacchetta), 
+              affiancato dai trattati completi di <strong>Cura delle Creature Magiche</strong>, <strong>Erbologia Botanica</strong> e <strong>Arte delle Pozioni</strong>.
+            </p>
           </div>
-          <h2 class="text-2xl sm:text-3xl font-bold font-magic text-slate-100 leading-tight">
-            Archivio delle Nozioni Pratiche
-          </h2>
-          <p class="text-sm text-slate-300 leading-relaxed max-w-2xl">
-            Suddivisione per anni scolastici e tipologia di utilizzo. Per ciascun incanto sono riportati: 
-            <strong>Nome</strong>, <strong>Formula</strong>, <strong>Descrizione</strong>, <strong>Valenza Magica</strong> (Tavola Pitagorica e T.L.A.), 
-            <strong>Movimento della Bacchetta</strong>, <strong>Tipologia</strong> e <strong>Idoneità al Duello Magico</strong>.
-          </p>
+
+          <!-- Gran Totale Box -->
+          <div class="lg:col-span-4 flex flex-col justify-center">
+            <div class="p-4 rounded-xl bg-slate-950/80 border border-amber-500/30 text-center shadow-lg">
+              <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium mb-1">Totale Nozioni Archiviate</div>
+              <div id="statGrandTotal" class="text-3xl sm:text-4xl font-bold font-magic text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600">562</div>
+              <div class="text-[11px] text-slate-400 mt-1">Voci Didattiche Ufficiali</div>
+            </div>
+          </div>
         </div>
 
-        <!-- STATS BADGES -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3">
-          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
+        <!-- STATS BADGES: LE 5 MACRO-CATEGORIE E I 3 BOX CON I TOTALI DELLE INFORMAZIONI -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pt-4 border-t border-slate-800/80">
+          <!-- Incantesimi -->
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center hover:border-amber-500/40 transition">
             <div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">268</div>
-            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Incantesimi</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">🪄 Incantesimi</div>
           </div>
-          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
+          <!-- Antiche Rune -->
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center hover:border-indigo-500/40 transition">
             <div id="statRunes" class="text-2xl font-bold font-magic text-indigo-400">25</div>
-            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Antiche Rune</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">ᛟ Antiche Rune</div>
           </div>
-          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
-            <div id="statDuel" class="text-2xl font-bold font-magic text-emerald-400">138</div>
-            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Abilitati in Duello</div>
+          <!-- BOX 1: Creature Magiche -->
+          <div class="p-3.5 rounded-xl bg-slate-950/80 border border-amber-600/50 bg-amber-950/20 text-center hover:border-amber-400 transition shadow-sm">
+            <div id="statCreatures" class="text-2xl font-bold font-magic text-amber-400">74</div>
+            <div class="text-[11px] uppercase tracking-wider text-amber-300 font-medium">🐉 Creature Magiche</div>
           </div>
-          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
-            <div id="statDark" class="text-2xl font-bold font-magic text-rose-400">30</div>
-            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Fatture & Maledizioni</div>
+          <!-- BOX 2: Erbologia & Piante -->
+          <div class="p-3.5 rounded-xl bg-slate-950/80 border border-emerald-600/50 bg-emerald-950/20 text-center hover:border-emerald-400 transition shadow-sm">
+            <div id="statPlants" class="text-2xl font-bold font-magic text-emerald-400">57</div>
+            <div class="text-[11px] uppercase tracking-wider text-emerald-300 font-medium">🌿 Erbologia & Piante</div>
+          </div>
+          <!-- BOX 3: Arte delle Pozioni -->
+          <div class="p-3.5 rounded-xl bg-slate-950/80 border border-indigo-600/50 bg-indigo-950/20 text-center hover:border-indigo-400 transition shadow-sm">
+            <div id="statPotions" class="text-2xl font-bold font-magic text-indigo-400">138</div>
+            <div class="text-[11px] uppercase tracking-wider text-indigo-300 font-medium">🧪 Arte delle Pozioni</div>
           </div>
         </div>
       </div>
@@ -97,14 +117,14 @@
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
     <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-amber-500/25 shadow-2xl space-y-4">
       
-            <!-- TOP: PROMINENT SEARCH BAR (NOME, FORMULA, DESCRIZIONE, RUNE) -->
+      <!-- TOP: PROMINENT SEARCH BAR (UNIVERSALE SU TUTTE LE MACRO-DISCIPLINE) -->
       <div>
         <div class="flex items-center justify-between mb-1.5">
           <label for="searchInput" class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
-            <span>🔍</span> Ricerca Globale (Incantesimi & Rune)
+            <span>🔍</span> Ricerca Globale (Tutte le Macro-Discipline)
           </label>
           <span class="text-[11px] text-slate-400 hidden sm:inline">
-            Ricerca attiva simultanea su: <strong>Nome</strong>, <strong>Formula</strong>, <strong>Descrizione</strong>, <strong>Movimento</strong> e <strong>Rune</strong>
+            Ricerca attiva su: <strong>Nome</strong>, <strong>Formula</strong>, <strong>Ingredienti</strong>, <strong>Classificazione</strong>, <strong>Habitat</strong> e <strong>Proprietà</strong>
           </span>
         </div>
         <div class="relative">
@@ -114,7 +134,7 @@
           <input 
             type="text" 
             id="searchInput" 
-            placeholder="Cerca per nome, formula, significato runico, valenza o parola chiave..." 
+            placeholder="Cerca per nome, formula, ingredienti, classificazione, habitat, proprietà o parola chiave..." 
             class="w-full pl-11 pr-10 py-3 rounded-xl bg-slate-950/90 border border-slate-700/90 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition shadow-inner"
           >
           <button id="clearSearchBtn" title="Cancella ricerca" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-500 hover:text-amber-300 transition hidden text-base font-bold">
@@ -123,18 +143,30 @@
         </div>
       </div>
 
-      <!-- MACRO FILTERS SWITCHER (INCANTESIMI / RUNE) -->
+      <!-- MACRO FILTERS SWITCHER (LE 5 MACRO-CATEGORIE) -->
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 border-b border-slate-800/80 pb-3">
         <div class="flex items-center gap-2.5 flex-wrap">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Archivio:</span>
-          <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="macroFilterGroup">
-            <button type="button" data-macro="spells" id="macroSpellsBtn" class="macro-btn px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 bg-amber-500 text-slate-950 shadow-md">
+          <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner flex-wrap gap-1" id="macroFilterGroup">
+            <button type="button" data-macro="spells" id="macroSpellsBtn" class="macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-amber-500 text-slate-950 shadow-md">
               <span>🪄</span>
               <span id="macroSpellsText">Incantesimi (268)</span>
             </button>
-            <button type="button" data-macro="runes" id="macroRunesBtn" class="macro-btn px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 text-slate-400 hover:text-indigo-300 hover:bg-slate-900">
+            <button type="button" data-macro="runes" id="macroRunesBtn" class="macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-400 hover:text-indigo-300 hover:bg-slate-900">
               <span>ᛟ</span>
               <span id="macroRunesText">Rune (25)</span>
+            </button>
+            <button type="button" data-macro="creatures" id="macroCreaturesBtn" class="macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-400 hover:text-amber-300 hover:bg-slate-900">
+              <span>🐉</span>
+              <span id="macroCreaturesText">Creature (74)</span>
+            </button>
+            <button type="button" data-macro="plants" id="macroPlantsBtn" class="macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-400 hover:text-emerald-300 hover:bg-slate-900">
+              <span>🌿</span>
+              <span id="macroPlantsText">Piante (57)</span>
+            </button>
+            <button type="button" data-macro="potions" id="macroPotionsBtn" class="macro-btn px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-slate-400 hover:text-indigo-300 hover:bg-slate-900">
+              <span>🧪</span>
+              <span id="macroPotionsText">Pozioni (138)</span>
             </button>
           </div>
         </div>
@@ -145,17 +177,17 @@
         </div>
       </div>
 
-      <!-- SPELL SUB-FILTERS CONTAINER (VISIBILE SOLO IN SEZIONE INCANTESIMI) -->
+      <!-- DISCIPLINE SUB-FILTERS CONTAINER -->
       <div id="spellSubFilters" class="space-y-4">
-        <!-- FILTER CONTROLS GRID (TIPOLOGIA & RESET) -->
+        <!-- FILTER CONTROLS GRID (TIPOLOGIA SPECIFICA & RESET) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
           
-          <!-- Filter: Tipologia -->
-          <div>
-            <label for="typeFilter" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
-              <span>🏷️</span> Tipologia:
+          <!-- Filter: Tipologia Dinamica per Disciplina -->
+          <div id="secondaryFilterWrapper">
+            <label id="secondaryFilterLabel" for="secondaryFilterSelect" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
+              <span id="secondaryFilterIcon">🏷️</span> <span id="secondaryFilterText">Tipologia Incantesimo:</span>
             </label>
-            <select id="typeFilter" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
+            <select id="secondaryFilterSelect" class="w-full px-3 py-2.5 rounded-xl bg-slate-950/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-amber-500 transition">
               <option value="ALL">Tutte le Tipologie</option>
               <option value="Offensivo">⚔️ Offensivo / Attacco</option>
               <option value="Difensivo">🛡️ Difensivo / Scudo</option>
@@ -179,13 +211,13 @@
 
         </div>
 
-        <!-- ROW 3: QUICK VISUAL TABS & SEGMENTED CONTROLS -->
-        <div class="border-t border-slate-800/80 pt-3 space-y-3">
+        <!-- ROW 2: QUICK VISUAL TABS PER ANNO DI CORSO -->
+        <div class="border-t border-slate-800/80 pt-3 space-y-3" id="yearTabsSection">
           
           <!-- Year Quick Tabs -->
           <div>
             <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
-              <span>Filtro Rapido per Anno di Corso:</span>
+              <span id="yearTabsSectionTitle">Filtro Rapido per Anno di Corso:</span>
               <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">268 incantesimi trovati</span>
             </div>
             <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
@@ -219,8 +251,8 @@
             </div>
           </div>
 
-          <!-- Duel Segmented Buttons & Valence Pills -->
-          <div class="flex flex-wrap items-center justify-between gap-3 pt-1 text-xs">
+          <!-- Duel Segmented Buttons & Valence Pills (VISIBILE ESCLUSIVAMENTE SUGLI INCANTESIMI!) -->
+          <div id="duelAndValenceContainer" class="flex flex-wrap items-center justify-between gap-3 pt-1 text-xs">
             <!-- Segmented Duel Controls -->
             <div class="flex items-center gap-2">
               <span class="text-slate-400 font-medium">Duello:</span>
@@ -255,6 +287,7 @@
 
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -16097,6 +16130,42 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
     </div>
   </div>
 
+  <!-- MODAL: DETAILED ITEM MODAL (CREATURE, PIANTE, POZIONI - NO VALENZA) -->
+  <div id="itemModal" style="display: none;" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div id="itemModalBackdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity cursor-pointer"></div>
+    <div class="relative w-full max-w-2xl max-h-[88vh] overflow-y-auto glass-panel rounded-2xl border border-amber-500/40 shadow-2xl p-6 sm:p-7 z-10 flex flex-col justify-between transform scale-95 transition-transform duration-300" id="itemModalCard">
+      <div>
+        <div class="flex items-start justify-between gap-4 mb-3">
+          <div class="flex flex-wrap items-center gap-2">
+            <span id="itemModalBadgeCategory" class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-950/80 text-amber-300 border border-amber-800">
+              Categoria
+            </span>
+            <span id="itemModalBadgeYear" class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700">
+              Anno
+            </span>
+            <span id="itemModalBadgeSpecial" class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-950/80 text-purple-300 border border-purple-800">
+              Speciale
+            </span>
+          </div>
+          <button type="button" id="itemModalCloseBtn" class="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center border border-slate-700 transition">
+            ✕
+          </button>
+        </div>
+
+        <h3 id="itemModalTitle" class="font-magic text-2xl font-bold text-white mb-1 tracking-wide">
+          Titolo Elemento
+        </h3>
+        <p id="itemModalSubtitle" class="text-xs text-amber-500 italic mb-4">
+          Sottotitolo / Sinonimi
+        </p>
+
+        <div id="itemModalContentBody">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="border-t border-slate-900 py-8 bg-slate-950 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 space-y-2">
@@ -16114,6 +16183,7 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
 
   <!-- SCRIPTS: DATABASE & APP LOGIC -->
   <script src="spellsData.js"></script>
+  <script src="materieData.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

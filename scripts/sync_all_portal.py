@@ -15,7 +15,7 @@ import re
 BASE_DIR = '/Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi'
 ARTIFACT_DIR = '/Users/andreamorachioli/.gemini/antigravity/brain/3a4f7fa7-8206-4f51-b303-aa9b9d9eaf5c'
 
-# Carica dati
+# Carica dati Incantesimi & Rune
 with open(f'{BASE_DIR}/spellsData.js', 'r', encoding='utf-8') as f:
     text = f.read()
 
@@ -31,30 +31,18 @@ for s in spells:
     if not s.get('isRune'):
         year_counts[s['anno']] = year_counts.get(s['anno'], 0) + 1
 
-print(f"Totale: {total_entries} (Incantesimi: {spells_count}, Rune: {runes_count})")
-print(f"Per anno: {year_counts}")
-print(f"Duello SÌ: {duel_yes}, Duello NO: {duel_no}")
+# Carica dati Creature, Piante e Pozioni
+with open(f'{BASE_DIR}/materieData.js', 'r', encoding='utf-8') as f:
+    materie_text = f.read()
 
-# 1. Aggiorna app.js
-with open(f'{BASE_DIR}/app.js', 'r', encoding='utf-8') as f:
-    app_js = f.read()
+cr_count = len(re.findall(r'"id":\s*"c-', materie_text))
+plant_count = len(re.findall(r'"id":\s*"p-', materie_text))
+pot_count = len(re.findall(r'"id":\s*"pot-', materie_text))
+grand_total = total_entries + cr_count + plant_count + pot_count
 
-# Aggiorna statistiche globali se presenti
-app_js = re.sub(
-    r'activeMacroHint\.innerHTML = `Visualizzazione: <strong class="text-amber-300">.*? Incantesimi Didattici</strong>`;',
-    f'activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">{spells_count} Incantesimi Didattici</strong>`;',
-    app_js
-)
-app_js = re.sub(
-    r'activeMacroHint\.innerHTML = `Visualizzazione: <strong class="text-indigo-300">.*? Antiche Rune Futhark</strong>`;',
-    f'activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-indigo-300">{runes_count} Antiche Rune Futhark</strong>`;',
-    app_js
-)
-
-with open(f'{BASE_DIR}/app.js', 'w', encoding='utf-8') as f:
-    f.write(app_js)
-
-print("app.js sincronizzato.")
+print(f"Totale Incantesimi & Rune: {total_entries} (Incantesimi: {spells_count}, Rune: {runes_count})")
+print(f"Discipline Aggiuntive: Creature: {cr_count}, Piante: {plant_count}, Pozioni: {pot_count}")
+print(f"Gran Totale Archiviato: {grand_total} voci")
 
 # 2. Aggiorna index.html
 with open(f'{BASE_DIR}/index.html', 'r', encoding='utf-8') as f:
@@ -63,12 +51,20 @@ with open(f'{BASE_DIR}/index.html', 'r', encoding='utf-8') as f:
 # Aggiorna macro bottoni
 html = re.sub(r'<span id="macroSpellsText">Incantesimi \([0-9]+\)</span>', f'<span id="macroSpellsText">Incantesimi ({spells_count})</span>', html)
 html = re.sub(r'<span id="macroRunesText">Rune \([0-9]+\)</span>', f'<span id="macroRunesText">Rune ({runes_count})</span>', html)
-html = re.sub(r'Visualizzazione: <strong class="text-amber-300">[0-9]+ Incantesimi Didattici</strong>', f'Visualizzazione: <strong class="text-amber-300">{spells_count} Incantesimi Didattici</strong>', html)
+html = re.sub(r'<span id="macroCreaturesText">Creature \([0-9]+\)</span>', f'<span id="macroCreaturesText">Creature ({cr_count})</span>', html)
+html = re.sub(r'<span id="macroPlantsText">Piante \([0-9]+\)</span>', f'<span id="macroPlantsText">Piante ({plant_count})</span>', html)
+html = re.sub(r'<span id="macroPotionsText">Pozioni \([0-9]+\)</span>', f'<span id="macroPotionsText">Pozioni ({pot_count})</span>', html)
 
+# Aggiornamento Header Stats Badges & 3 Box Totali
+dark_count = len([s for s in spells if not s.get('isRune') and ('Maledizione' in s.get('tipologia', '') or 'Fattura' in s.get('tipologia', ''))])
+html = re.sub(r'<div id="statTotal"[^>]*>[0-9]+</div>', f'<div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">{spells_count}</div>', html)
+html = re.sub(r'<div id="statRunes"[^>]*>[0-9]+</div>', f'<div id="statRunes" class="text-2xl font-bold font-magic text-indigo-400">{runes_count}</div>', html)
+html = re.sub(r'<div id="statCreatures"[^>]*>[0-9]+</div>', f'<div id="statCreatures" class="text-2xl font-bold font-magic text-amber-400">{cr_count}</div>', html)
+html = re.sub(r'<div id="statPlants"[^>]*>[0-9]+</div>', f'<div id="statPlants" class="text-2xl font-bold font-magic text-emerald-400">{plant_count}</div>', html)
+html = re.sub(r'<div id="statPotions"[^>]*>[0-9]+</div>', f'<div id="statPotions" class="text-2xl font-bold font-magic text-indigo-400">{pot_count}</div>', html)
+html = re.sub(r'<div id="statGrandTotal"[^>]*>[0-9]+</div>', f'<div id="statGrandTotal" class="text-3xl sm:text-4xl font-bold font-magic text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600">{grand_total}</div>', html)
 
-
-
-# Aggiornamento Year Quick Tabs
+# Aggiornamento Year Quick Tabs per default (Incantesimi)
 html = re.sub(r'data-year="ALL"([^>]*)>\s*Tutti \([0-9]+\)', f'data-year="ALL"\\1>\n              Tutti ({spells_count})', html)
 html = re.sub(r'data-year="1"([^>]*)>\s*I Anno \([0-9]+\)', f'data-year="1"\\1>\n              I Anno ({year_counts.get(1, 0)})', html)
 html = re.sub(r'data-year="2"([^>]*)>\s*II Anno \([0-9]+\)', f'data-year="2"\\1>\n              II Anno ({year_counts.get(2, 0)})', html)
@@ -84,14 +80,7 @@ html = re.sub(r'data-duel="ALL"([^>]*)>\s*Tutti \([0-9]+\)', f'data-duel="ALL"\\
 html = re.sub(r'data-duel="YES"([^>]*)>\s*(?:⚔️ Da Duello: SÌ|Sì) \([0-9]+\)', f'data-duel="YES"\\1>\n                Sì ({duel_yes})', html)
 html = re.sub(r'data-duel="NO"([^>]*)>\s*(?:⛔ Non da Duello: NO|No) \([0-9]+\)', f'data-duel="NO"\\1>\n                No ({duel_no})', html)
 
-# Aggiornamento Header Stats Badges
-dark_count = len([s for s in spells if not s.get('isRune') and ('Maledizione' in s.get('tipologia', '') or 'Fattura' in s.get('tipologia', ''))])
-html = re.sub(r'<div id="statTotal"[^>]*>[0-9]+</div>\s*<div[^>]*>(?:Incantesimi Totali|Incantesimi)</div>', f'<div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">{spells_count}</div>\n            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Incantesimi</div>', html)
-html = re.sub(r'<div id="statRunes"[^>]*>[0-9]+</div>\s*<div[^>]*>Antiche Rune</div>', f'<div id="statRunes" class="text-2xl font-bold font-magic text-indigo-400">{runes_count}</div>\n            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Antiche Rune</div>', html)
-html = re.sub(r'<div id="statDuel"[^>]*>[0-9]+</div>', f'<div id="statDuel" class="text-2xl font-bold font-magic text-emerald-400">{duel_yes}</div>', html)
-html = re.sub(r'<div id="statDark"[^>]*>[0-9]+</div>', f'<div id="statDark" class="text-2xl font-bold font-magic text-rose-400">{dark_count}</div>', html)
-
-# Results badge
+# Results badge default
 html = re.sub(r'<span id="resultsCountBadge"[^>]*>[0-9]+ incantesimi trovati</span>', f'<span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">{spells_count} incantesimi trovati</span>', html)
 
 # Helper generazione singola card per pre-rendering immediato (First Paint istantaneo senza attesa JS)
@@ -210,6 +199,9 @@ with open(f'{BASE_DIR}/style.css', 'r', encoding='utf-8') as f:
 with open(f'{BASE_DIR}/spellsData.js', 'r', encoding='utf-8') as f:
     spells_data_content = f.read()
 
+with open(f'{BASE_DIR}/materieData.js', 'r', encoding='utf-8') as f:
+    materie_data_content = f.read()
+
 with open(f'{BASE_DIR}/app.js', 'r', encoding='utf-8') as f:
     app_js_content = f.read()
 
@@ -222,6 +214,10 @@ standalone_html = standalone_html.replace(
 standalone_html = standalone_html.replace(
     '<script src="spellsData.js"></script>',
     f'<script>\n{spells_data_content}\n</script>'
+)
+standalone_html = standalone_html.replace(
+    '<script src="materieData.js"></script>',
+    f'<script>\n{materie_data_content}\n</script>'
 )
 standalone_html = standalone_html.replace(
     '<script src="app.js"></script>',
