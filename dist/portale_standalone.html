@@ -174,7 +174,7 @@
         <!-- STATS BADGES -->
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3">
           <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
-            <div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">266</div>
+            <div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">267</div>
             <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Incantesimi</div>
           </div>
           <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
@@ -182,11 +182,11 @@
             <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Antiche Rune</div>
           </div>
           <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
-            <div id="statDuel" class="text-2xl font-bold font-magic text-emerald-400">136</div>
+            <div id="statDuel" class="text-2xl font-bold font-magic text-emerald-400">137</div>
             <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Abilitati in Duello</div>
           </div>
           <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-center">
-            <div id="statDark" class="text-2xl font-bold font-magic text-rose-400">29</div>
+            <div id="statDark" class="text-2xl font-bold font-magic text-rose-400">30</div>
             <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Fatture & Maledizioni</div>
           </div>
         </div>
@@ -231,7 +231,7 @@
           <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="macroFilterGroup">
             <button type="button" data-macro="spells" id="macroSpellsBtn" class="macro-btn px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 bg-amber-500 text-slate-950 shadow-md">
               <span>🪄</span>
-              <span id="macroSpellsText">Incantesimi (266)</span>
+              <span id="macroSpellsText">Incantesimi (267)</span>
             </button>
             <button type="button" data-macro="runes" id="macroRunesBtn" class="macro-btn px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 text-slate-400 hover:text-indigo-300 hover:bg-slate-900">
               <span>ᛟ</span>
@@ -242,7 +242,7 @@
 
         <!-- Macro Context Hint -->
         <div class="text-xs text-slate-400 flex items-center gap-2">
-          <span id="activeMacroHint" class="text-slate-400 text-[11px]">Visualizzazione: <strong class="text-amber-300">266 Incantesimi Didattici</strong></span>
+          <span id="activeMacroHint" class="text-slate-400 text-[11px]">Visualizzazione: <strong class="text-amber-300">267 Incantesimi Didattici</strong></span>
         </div>
       </div>
 
@@ -287,11 +287,11 @@
           <div>
             <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
               <span>Filtro Rapido per Anno di Corso:</span>
-              <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">266 incantesimi trovati</span>
+              <span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">267 incantesimi trovati</span>
             </div>
             <div class="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none" id="yearTabsContainer">
               <button data-year="ALL" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-amber-500 text-slate-950 shadow-md">
-              Tutti (266)
+              Tutti (267)
               </button>
               <button data-year="1" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               I Anno (32)
@@ -315,7 +315,7 @@
               VII Anno (41)
               </button>
               <button data-year="0" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              Altri (32)
+              Altri (33)
               </button>
             </div>
           </div>
@@ -327,10 +327,10 @@
               <span class="text-slate-400 font-medium">Duello:</span>
               <div class="inline-flex rounded-xl bg-slate-950 p-1 border border-slate-800 shadow-inner" id="duelSegmentedGroup">
                 <button data-duel="ALL" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition">
-                Tutti (266)
+                Tutti (267)
                 </button>
                 <button data-duel="YES" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-emerald-300 hover:bg-slate-800/80 transition">
-                Sì (136)
+                Sì (137)
                 </button>
                 <button data-duel="NO" class="duel-seg-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-rose-300 hover:bg-slate-800/80 transition">
                 No (130)
@@ -15800,6 +15800,69 @@ Storia e Origine: Ultimato da Emma Mortem Camus (Emma Sawyer all'anagrafe) in ba
               </div>
             </div>
           </div>
+          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSpellDetails('suffocatio')">
+            <div>
+              <!-- Header info: Year & Duel -->
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
+                  Altri
+                </span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
+              </div>
+
+              <!-- Spell Name -->
+              <h3 class="text-lg font-bold font-magic text-slate-100 group-hover:text-amber-300 transition-colors line-clamp-1 mb-1">
+                Maledizione Asfissiante (Suffocatio)
+              </h3>
+
+              <!-- Formula Box -->
+              <div class="flex items-center gap-2 mb-3">
+                <span class="font-code text-xs px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-200 font-bold tracking-wide">
+                  ⚡ Suffocatio
+                </span>
+                <span class="text-xs px-2 py-0.5 rounded border bg-purple-500/15 text-purple-300 border-purple-500/30 truncate max-w-[150px]">
+                  Maledizione
+                </span>
+              </div>
+
+              <!-- Description -->
+              <p class="text-xs text-slate-300 line-clamp-3 leading-relaxed mb-4">
+                Maledizione letale insidiosa che provoca un progressivo restringimento dei canali respiratori che, occlusi, porteranno alla morte per soffocamento preceduta da vista appannata, pensiero non lucido e collasso in mancanza d'ossigeno.
+L'incantesimo è di tipo attivo, pertanto richiede un'elevata concentrazione ed una spiccata volontà mossa da sentimenti puramente negativi, oltre che a linea di tiro diretta e contatto visivo libero sulla vittima: saltato anche solo uno dei paletti che regolamentano le Maledizioni, gli effetti sono annullati.
+
+Difesa e Contromisure: L'incantesimo manca di raggio (o luce), non regalando alcun indizio circa la propria attivazione (dinamica analoga all'Incantesimo Oblivion); questo lo rende difficile da intercettare in un primo momento, perciò è consigliabile agire d'istinto ed appellarsi alla ragione finché si è in grado di farlo. Il contatto visivo diretto e fisso da parte di qualcuno può fungere da indizio assai rivelatore: frapporre qualcosa fra sé ed il tentato omicida può far interrompere il sortilegio. Il Controincantesimo è Anapneo, che agisce direttamente sulle zone interessate dalla Maledizione per revertire le capacità respiratorie, liberando gli appositi canali e pareti.
+
+Storia e Origine: La madre di tale incanto, Emma Mortem Camus (Emma Sawyer all'anagrafe), ha praticato e perfezionato questo incantesimo col passare del tempo, gettando le basi per lo stesso in seguito al primo attentato ai danni del padre acquisito Heinrich Albert Camus, salvo ultimarlo in tempi recenti, dopo svariati episodi del medesimo nodo criminale. Difficile pensare che il suo odio rimanesse inespresso, complici le sue abilità e competenze in campo di Difesa Contro le Arti Oscure ed il viscerale amore verso gli affetti.
+              </p>
+            </div>
+
+            <!-- Footer Arithmantic Summary -->
+            <div class="border-t border-slate-800/80 pt-3 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-400">Valenza:</span>
+                  <span class="font-code font-bold text-amber-400 bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-700/40">
+                    V7
+                  </span>
+                  <span class="text-[11px] text-slate-400" title="Valenza opposta di simmetria">
+                    (Opp. 3)
+                  </span>
+                </div>
+                <div class="text-[11px] text-sky-400 font-medium truncate max-w-[120px]" title="Ettagono regolare (Opposizione / Conflitto Vitale)">
+                  Ettagono regolare
+                </div>
+              </div>
+
+              <!-- Wand Movement snippet -->
+              <div class="text-[11px] text-slate-400 line-clamp-1 italic bg-slate-950/40 px-2 py-1 rounded">
+                🪄 Puntamento diretto e fisso alla gola della vittima, seguito da una torsione secca e serrata del polso a chiusura (simulando una morsa o un cappio invisibile sulle vie aeree).
+              </div>
+
+              <div class="pt-1 flex items-center justify-end text-xs text-amber-400 font-semibold group-hover:translate-x-1 transition-transform">
+                <span>Consulta Scheda & Gesto →</span>
+              </div>
+            </div>
+          </div>
     </div>
 
     <!-- Empty State -->
@@ -22653,6 +22716,28 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Quadrato (Stabilità Mentale / Architettura Onirica)",
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica R=9 + E=5 + M=4 + N=5 + A=1 + T=2 + E=5 = 31 ➔ 4). Valenza opposta di simmetria: 6 (Terra / Esagono). Figura geometrica operativa: Quadrato. Runa associata dell'Antico Futhark: ᚨ Ansuz (Pos. 4ª, runa della mente cosciente, della saggezza, della comunicazione e del pensiero). Limite di reiterazione efficace: 1 volta.",
     "runeAssociate": "ᚨ Ansuz (Pos. 4ª)"
+  },
+  {
+    "id": "suffocatio",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Maledizione Asfissiante (Suffocatio)",
+    "formula": "Suffocatio",
+    "ripetibile": false,
+    "tipologia": "Maledizione / Maledizione Oscura / Letale",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in scontro mortale / bellico (proibita nei duelli sportivi e accademici). Maledizione invisibile priva di scia luminosa o proiettile visibile: richiede linea di tiro e contatto visivo costante, alimentata da odio e intento ostile. Contrastabile interrompendo la linea di vista (frapponendo un solido tra sé e l'attentatore). Il controincantesimo immediato salvavita è Anapneo per liberare le vie aeree occluse.",
+    "movimento": "Puntamento diretto e fisso alla gola della vittima, seguito da una torsione secca e serrata del polso a chiusura (simulando una morsa o un cappio invisibile sulle vie aeree).",
+    "movimentoSvg": "M 35,75 C 35,45 65,35 85,55 C 105,75 105,95 85,105 C 70,110 65,95 75,85 C 85,75 115,75 125,75",
+    "descrizione": "Maledizione letale insidiosa che provoca un progressivo restringimento dei canali respiratori che, occlusi, porteranno alla morte per soffocamento preceduta da vista appannata, pensiero non lucido e collasso in mancanza d'ossigeno.\nL'incantesimo è di tipo attivo, pertanto richiede un'elevata concentrazione ed una spiccata volontà mossa da sentimenti puramente negativi, oltre che a linea di tiro diretta e contatto visivo libero sulla vittima: saltato anche solo uno dei paletti che regolamentano le Maledizioni, gli effetti sono annullati.\n\nDifesa e Contromisure: L'incantesimo manca di raggio (o luce), non regalando alcun indizio circa la propria attivazione (dinamica analoga all'Incantesimo Oblivion); questo lo rende difficile da intercettare in un primo momento, perciò è consigliabile agire d'istinto ed appellarsi alla ragione finché si è in grado di farlo. Il contatto visivo diretto e fisso da parte di qualcuno può fungere da indizio assai rivelatore: frapporre qualcosa fra sé ed il tentato omicida può far interrompere il sortilegio. Il Controincantesimo è Anapneo, che agisce direttamente sulle zone interessate dalla Maledizione per revertire le capacità respiratorie, liberando gli appositi canali e pareti.\n\nStoria e Origine: La madre di tale incanto, Emma Mortem Camus (Emma Sawyer all'anagrafe), ha praticato e perfezionato questo incantesimo col passare del tempo, gettando le basi per lo stesso in seguito al primo attentato ai danni del padre acquisito Heinrich Albert Camus, salvo ultimarlo in tempi recenti, dopo svariati episodi del medesimo nodo criminale. Difficile pensare che il suo odio rimanesse inespresso, complici le sue abilità e competenze in campo di Difesa Contro le Arti Oscure ed il viscerale amore verso gli affetti.",
+    "etimologia": "Dal latino suffocatio ('soffocamento' e/o 'strangolamento', dal verbo suffocare), traducibile nell'ostruzione parziale o completa delle vie respiratorie da parte della magia.",
+    "valenza": 7,
+    "sommaLettere": 43,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Conflitto Vitale)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica S=1 + U=3 + F=6 + F=6 + O=6 + C=3 + A=1 + T=2 + I=9 + O=6 = 43 ➔ 7). Valenza opposta di simmetria: 3 (Triangolo / Creazione). Figura geometrica operativa: Ettagono regolare (Opposizione estrema). Runa associata dell'Antico Futhark: ᚷ Gebo (Pos. 7ª, runa del patto, del legame indissolubile e dell'opposizione magica). Limite di reiterazione efficace: 1 volta (mantenimento attivo continuo).",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª)"
   }
 ];
 
@@ -22871,7 +22956,7 @@ const SPELLS_DATA = [
 
         if (spellSubFilters) spellSubFilters.classList.remove("hidden");
         if (activeMacroHint) {
-          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">266 Incantesimi Didattici</strong>`;
+          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">267 Incantesimi Didattici</strong>`;
         }
       } else {
         macroRunesBtn?.classList.remove("text-slate-400", "hover:text-indigo-300", "hover:bg-slate-900");

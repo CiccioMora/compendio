@@ -6576,5 +6576,27 @@ const SPELLS_DATA = [
     "figuraGeometrica": "Quadrato (Stabilità Mentale / Architettura Onirica)",
     "noteAritmantiche": "Valenza Magica 4 (somma pitagorica R=9 + E=5 + M=4 + N=5 + A=1 + T=2 + E=5 = 31 ➔ 4). Valenza opposta di simmetria: 6 (Terra / Esagono). Figura geometrica operativa: Quadrato. Runa associata dell'Antico Futhark: ᚨ Ansuz (Pos. 4ª, runa della mente cosciente, della saggezza, della comunicazione e del pensiero). Limite di reiterazione efficace: 1 volta.",
     "runeAssociate": "ᚨ Ansuz (Pos. 4ª)"
+  },
+  {
+    "id": "suffocatio",
+    "anno": 0,
+    "annoLabel": "Altri",
+    "nome": "Maledizione Asfissiante (Suffocatio)",
+    "formula": "Suffocatio",
+    "ripetibile": false,
+    "tipologia": "Maledizione / Maledizione Oscura / Letale",
+    "inDuello": true,
+    "duelloNote": "Utilizzabile in scontro mortale / bellico (proibita nei duelli sportivi e accademici). Maledizione invisibile priva di scia luminosa o proiettile visibile: richiede linea di tiro e contatto visivo costante, alimentata da odio e intento ostile. Contrastabile interrompendo la linea di vista (frapponendo un solido tra sé e l'attentatore). Il controincantesimo immediato salvavita è Anapneo per liberare le vie aeree occluse.",
+    "movimento": "Puntamento diretto e fisso alla gola della vittima, seguito da una torsione secca e serrata del polso a chiusura (simulando una morsa o un cappio invisibile sulle vie aeree).",
+    "movimentoSvg": "M 35,75 C 35,45 65,35 85,55 C 105,75 105,95 85,105 C 70,110 65,95 75,85 C 85,75 115,75 125,75",
+    "descrizione": "Maledizione letale insidiosa che provoca un progressivo restringimento dei canali respiratori che, occlusi, porteranno alla morte per soffocamento preceduta da vista appannata, pensiero non lucido e collasso in mancanza d'ossigeno.\nL'incantesimo è di tipo attivo, pertanto richiede un'elevata concentrazione ed una spiccata volontà mossa da sentimenti puramente negativi, oltre che a linea di tiro diretta e contatto visivo libero sulla vittima: saltato anche solo uno dei paletti che regolamentano le Maledizioni, gli effetti sono annullati.\n\nDifesa e Contromisure: L'incantesimo manca di raggio (o luce), non regalando alcun indizio circa la propria attivazione (dinamica analoga all'Incantesimo Oblivion); questo lo rende difficile da intercettare in un primo momento, perciò è consigliabile agire d'istinto ed appellarsi alla ragione finché si è in grado di farlo. Il contatto visivo diretto e fisso da parte di qualcuno può fungere da indizio assai rivelatore: frapporre qualcosa fra sé ed il tentato omicida può far interrompere il sortilegio. Il Controincantesimo è Anapneo, che agisce direttamente sulle zone interessate dalla Maledizione per revertire le capacità respiratorie, liberando gli appositi canali e pareti.\n\nStoria e Origine: La madre di tale incanto, Emma Mortem Camus (Emma Sawyer all'anagrafe), ha praticato e perfezionato questo incantesimo col passare del tempo, gettando le basi per lo stesso in seguito al primo attentato ai danni del padre acquisito Heinrich Albert Camus, salvo ultimarlo in tempi recenti, dopo svariati episodi del medesimo nodo criminale. Difficile pensare che il suo odio rimanesse inespresso, complici le sue abilità e competenze in campo di Difesa Contro le Arti Oscure ed il viscerale amore verso gli affetti.",
+    "etimologia": "Dal latino suffocatio ('soffocamento' e/o 'strangolamento', dal verbo suffocare), traducibile nell'ostruzione parziale o completa delle vie respiratorie da parte della magia.",
+    "valenza": 7,
+    "sommaLettere": 43,
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 1,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Conflitto Vitale)",
+    "noteAritmantiche": "Valenza Magica 7 (somma pitagorica S=1 + U=3 + F=6 + F=6 + O=6 + C=3 + A=1 + T=2 + I=9 + O=6 = 43 ➔ 7). Valenza opposta di simmetria: 3 (Triangolo / Creazione). Figura geometrica operativa: Ettagono regolare (Opposizione estrema). Runa associata dell'Antico Futhark: ᚷ Gebo (Pos. 7ª, runa del patto, del legame indissolubile e dell'opposizione magica). Limite di reiterazione efficace: 1 volta (mantenimento attivo continuo).",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª)"
   }
 ];
