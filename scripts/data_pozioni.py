@@ -3518,6 +3518,41 @@ pozioni_data.extend([
         "avvertenze": "RISCHIO USTIONI E PIAGHE CHIMICHE: Il pus puro di Bubotubero è caustico e instabile. Indossare obbligatoriamente guanti in pelle di drago o cuoio spesso e maniche rimboccate. È categoricamente vietata qualsiasi forma di ingestione o contatto con la cute nuda. In caso di contatto accidentale con la frazione pura, sciacquare subito con acqua fresca e medicare con pasta di calendula o essenza di Murtlap. Se la soluzione non è lavorata con moto vorticoso costante, la frazione lipidica si separa potendo corrodere setole e indumenti.",
         "inventoreOrigine": "Pozione inventata nel 2026 da Harvey M. Specter durante una punizione collettiva nelle Serre di Hogwarts, per detergere superfici lapidee secolari e pavimentazioni degradate, invertendo la polarità distruttiva del pus di Bubotubero tramite diluizione acquosa a freddo ed emulsione meccanica. Eccellente sinergia catalitica con Tergeo e Scourgify.",
         "descrizione": "Solvente alchemico da contatto che disgrega all'istante muffe parassite, alghe, muschi e residui di terriccio magico stratificati nei decenni su pietra e terracotta, senza intaccare le malte né la porosità della pietra e inibendo la ricomparsa di colonie fungine. A differenza dei comuni detergenti domestici (come il Detergente della Signora Scower), agisce come un aggressivo presidio sgrassante e disincrostante di grado botanico."
+},
+    {
+        "id": "pot-garza-ortica",
+        "nome": "Garza di Ortica",
+        "nomeAlternativo": "Manufatto Tessile Alchemico / Filtro Purificante",
+        "anno": 0,
+        "annoLabel": "Altri",
+        "tipologia": "Per Oggetti / Strumentazione Alchemica / Filtro & Bendaggio",
+        "coloreFinale": "Bianco sporco o avorio naturale, con riflessi opachi",
+        "tempoPreparazione": "Circa 1 ora (sobbollitura 30 min, battitura, pettinatura e tessitura)",
+        "difficolta": "Base",
+        "metodoAssunzione": "Strumento di filtraggio alchemico / Bendaggio sterile per ferite aperte",
+        "ingredienti": [
+                "Fusti di Ortica matura freschi (5)",
+                "Acqua sorgiva (150 ml)",
+                "Cenere di legno di Quercia (1 tazza)",
+                "Strumenti consigliati: Coltello d'argento affilato, mazzuolo di legno, pettine a denti fitti (in legno o osso), guanti in pelle di drago, piccolo telaio da tessitura (o bacchetta magica)"
+        ],
+        "preparazione": [
+                "1. Indossare i guanti in pelle di drago e raccogliere i 5 fusti di Ortica matura, scegliendo quelli più alti e fibrosi.",
+                "2. Con il coltello d'argento, rimuovere delicatamente tutte le foglie e le diramazioni laterali, conservando le foglie per altri decotti.",
+                "3. Adagiare i fusti puliti in un calderone riempito d'Acqua sorgiva, assicurandosi che siano completamente sommersi.",
+                "4. Versare la tazza di cenere di legno di Quercia per favorire il processo di macerazione e distacco dalla corteccia.",
+                "5. Accendere un fuoco vivace e portare ad ebollizione rapida, lasciando sobbollire per esattamente 30 minuti per distruggere completamente l'acido urticante dei peli e ammorbidire i fusti.",
+                "6. Scolare i fusti e lasciarli raffreddare su un ripiano di pietra pulito.",
+                "7. Utilizzando le dita o la punta del coltello d'argento, sbucciare la corteccia esterna ormai macerata per mettere a nudo le lunghe fibre biancastre interne (fibre liberiane).",
+                "8. Battere delicatamente le fibre estratte con il mazzuolo di legno per renderle soffici e flessibili.",
+                "9. Pettinare ripetutamente le fibre con il pettine a denti fitti per eliminare le parti legnose residue e allineare i filamenti più sottili.",
+                "10. Prendere i filamenti così ottenuti e disporli sul piccolo telaio, procedendo a intrecciarli a trama rada (incrociando ordito e trama ogni 2 millimetri) per formare la garza. I maghi più esperti sono soliti incantare il telaio affinché lavori in autonomia.",
+                "11. Lavare la garza finita in pura acqua corrente fredda per eliminare i residui di cenere.",
+                "12. Stendere la garza ad asciugare al sole o al vento."
+        ],
+        "avvertenze": "MANIPOLAZIONE INIZIALE: I fusti freschi di ortica possiedono peli urticanti attivi e dolorosi; è indispensabile l'uso di guanti protettivi in pelle di drago fino al completamento dell'ebollizione con cenere. Una volta completato il processo termico e di filatura, la garza perde completamente ogni proprietà urticante risultando morbidissima, anallergica e sicura su piaghe e ferite aperte. A differenza delle comuni garze di cotone babbano o lino, questo tessuto non assorbe né altera i principi attivi delle pozioni filtrate, trattenendo solo impurità fisiche e scorie magiche.",
+        "inventoreOrigine": "Manufatto tessile alchemico tradizionale a trama rada. Strumento d'elezione indispensabile per la chiarificazione e il filtraggio di infusi corrosivi o preparazioni oftalmiche (come il Filtro di Eufrasia), nonché bendaggio sterile che previene il rigetto magico dei tessuti rigenerati.",
+        "descrizione": "Manufatto tessile alchemico a trama rada ottenuto dalla filatura delle fibre liberiane interne del fusto dell'ortica. Grazie alla straordinaria resistenza chimica e alla carica magica purificante, è lo strumento d'elezione per il filtro di infusi acidi, corrosivi o destinati all'uso oculare, oltre a essere impiegato come bendaggio sterile che previene il rigetto magico dei tessuti rigenerati senza assorbire i principi attivi."
 }
 ])
 print(f"Totale Pozioni caricate nel compendio finale: {len(pozioni_data)}")

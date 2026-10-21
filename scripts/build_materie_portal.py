@@ -713,11 +713,11 @@ html_content = """<!DOCTYPE html>
       </div>
       <div class="glass-panel rounded-xl p-3 text-center border border-slate-800">
         <span class="text-xs text-slate-400 block mb-0.5">🧪 Pozioni Avanzate</span>
-        <span id="statPozioni" class="font-magic text-xl font-bold text-indigo-400">137</span>
+        <span id="statPozioni" class="font-magic text-xl font-bold text-indigo-400">138</span>
       </div>
       <div class="glass-panel rounded-xl p-3 text-center border border-slate-800">
         <span class="text-xs text-slate-400 block mb-0.5">📚 Totale Voci</span>
-        <span id="statTotal" class="font-magic text-xl font-bold text-white">268</span>
+        <span id="statTotal" class="font-magic text-xl font-bold text-white">269</span>
       </div>
     </div>
   </section>
@@ -742,7 +742,7 @@ html_content = """<!DOCTYPE html>
       <button type="button" data-macro="pozioni" aria-selected="false" class="macro-tab relative px-5 py-3 rounded-xl font-magic text-sm font-bold transition-all duration-300 flex items-center gap-2.5 bg-slate-900/60 text-slate-400 hover:text-slate-200 border border-slate-800 hover:border-slate-700">
         <span class="text-lg">🧪</span>
         <span>Arte delle Pozioni</span>
-        <span class="text-[11px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 font-mono">137</span>
+        <span class="text-[11px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 font-mono">138</span>
       </button>
     </div>
 

@@ -5,7 +5,7 @@
 
 ---
 
-## 🏛️ 1. Struttura del Nuovo Portale Clone (`materie.html`)
+## 🏛️ 1. Struttura del Portale Clone (`materie.html`)
 
 Il portale clone dedicato alle tre discipline pratiche è stato sviluppato con la medesima estetica (parchment dark glassmorphism, Cinzel, Tailwind e interattività) del portale principale degli incantesimi, con le seguenti caratteristiche fondanti:
 - **3 Macro-Categorie Esclusive**:
@@ -17,7 +17,7 @@ Il portale clone dedicato alle tre discipline pratiche è stato sviluppato con l
 - **Filtri Specifici Dinamici**:
   - Per le *Creature*: filtro per **Classificazione Ministeriale** (*X, XX, XXX, XXXX, XXXXX*).
   - Per le *Piante*: filtro per **Tipologia Botanica** (*Rimedio, Velenose, Antropomorfe, Alteratrici, Avanzate, Strumenti, Formule, Bonifica*).
-  - Per le *Pozioni*: filtro per **Tipologia Alchemica** (*Curativa, Trasformante, Alteratrice, Veleno, Antidoto, Filtro d'Amore, Elisir, Soporifera, Per Oggetti, Cosmetica, Veterinaria, Oscura/Illegale*).
+  - Per le *Pozioni*: filtro per **Tipologia Alchemica** (*Curativa, Trasformante, Alteratrice, Veleno, Antidoto, Filtro d'Amore, Elisir, Soporifera, Per Oggetti / Strumentazione, Cosmetica, Veterinaria, Oscura/Illegale*).
 - **Ricerca Live Full-Text**: ricerca istantanea su nomi, sinonimi, ingredienti, habitat, proprietà ed effetti.
 - **Modale Interattivo di Dettaglio**: visualizzazione completa con ricette numerate passo-passo, precauzioni, avvertenze critiche e note storiche.
 - **Collegamento Bidirezionale**: navigazione immediata tra il portale Incantesimi & Rune ([`index.html`](file:///Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi/index.html)) e il portale Materie ([`materie.html`](file:///Users/andreamorachioli/.gemini/antigravity/scratch/portale-incantesimi/materie.html)).
@@ -30,8 +30,8 @@ Il portale clone dedicato alle tre discipline pratiche è stato sviluppato con l
 | :--- | :--- | :--- | :--- |
 | 🐉 **Creature Magiche** | **74** | III, IV, V, VI, VII Anno | Classificazione Ministeriale (X – XXXXX), Habitat, Dieta, Commerciabilità (Classe A, B) |
 | 🌿 **Erbologia & Piante** | **57** | I, II, III, IV, V, VI, VII Anno | Tipologia Botanica, Parti Utilizzate, Proprietà, Coltivazione & Cura, Usi Pozionistici |
-| 🧪 **Arte delle Pozioni** | **137** | I – VII Anno + **Altri** (5 speciali) | Tipologia Alchemica, Colore Finale, Tempo di Preparazione, Ingredienti, Procedura Numerata, Avvertenze |
-| **TOTALE ARCHIVIO** | **268** | **I – VII Anno & Altri** | **Nessuna Valenza Aritmantica** |
+| 🧪 **Arte delle Pozioni** | **138** | I – VII Anno + **Altri** (6 speciali) | Tipologia Alchemica, Colore Finale, Tempo di Preparazione, Ingredienti, Procedura Numerata, Avvertenze |
+| **TOTALE ARCHIVIO** | **269** | **I – VII Anno & Altri** | **Nessuna Valenza Aritmantica** |
 
 ---
 
@@ -39,10 +39,10 @@ Il portale clone dedicato alle tre discipline pratiche è stato sviluppato con l
 
 ```mermaid
 flowchart TD
-    subgraph Totale["Compendio Materie: 268 Voci"]
+    subgraph Totale["Compendio Materie: 269 Voci"]
         Creature["🐉 Creature: 74 voci"]
         Piante["🌿 Piante: 57 voci"]
-        Pozioni["🧪 Pozioni: 137 voci"]
+        Pozioni["🧪 Pozioni: 138 voci"]
     end
     
     Creature --> C_III["III Anno: 2"]
@@ -59,7 +59,7 @@ flowchart TD
     Piante --> P_VI["VI Anno: 4"]
     Piante --> P_VII["VII Anno: 11"]
     
-    Pozioni --> Pot_0["Altri (Speciali): 5"]
+    Pozioni --> Pot_0["Altri (Speciali): 6"]
     Pozioni --> Pot_I["I Anno: 1"]
     Pozioni --> Pot_II["II Anno: 27"]
     Pozioni --> Pot_III["III Anno: 26"]
@@ -71,16 +71,16 @@ flowchart TD
 
 ---
 
-## 🧪 3. Nuove Pozioni Inserite in "Altri" (2026)
+## 🧪 3. Pozioni & Strumentazioni Inserite in "Altri"
 
-Le 5 nuove pozioni collocate nella categoria didattica **Altri** (`anno: 0`) costituiscono formule speciali avanzate o semilavorati alchemici sviluppati nel 2026:
+Le 6 formule e manufatti collocati nella categoria didattica **Altri** (`anno: 0`) costituiscono preparazioni avanzate, semilavorati e presidi alchemici speciali:
 
 1. **Elisir dell'Indomito** *(Harvey Specter, 2026)*:
    - **Tipologia**: Alteratrice di Stato / Potenziamento / Resistenza Fisica Estrema.
    - **Ingrediente Focale**: Dente di Graphorn intero (frantumato in schegge, non polverizzato), Fiele di Armadillo, Succo di Fire Crab, Sangue di Re'em (3 gocce), Essenza di Dittamo.
-   - **Effetti**: Soppressione totale del sistema nervoso rispetto al dolore, indurimento dermico temporaneo; rende il bevitore un *juggernaut* capace di ignorare ferite e respingere incantesimi minori.
+   - **Effetti**: Soppressione totale del dolore e indurimento dermico temporaneo; trasforma il bevitore in un *juggernaut* in grado di ignorare ferite e respingere fatture minori.
    - **Sigillatura Fisica**: Immersione finale di una barra di ferro freddo per 3 secondi.
-   - **Avvertenze**: "Crollo" psicofisico con perdita di empatia e pensiero razionale complesso ("visione a tunnel"); impossibile lanciare incantesimi di precisione; pericolo di lacerazioni muscolari interne non percepite.
+   - **Avvertenze**: "Crollo" psicofisico con perdita di empatia e pensiero razionale ("visione a tunnel"); impossibile lanciare incantesimi di precisione; pericolo di lacerazioni muscolari interne.
 
 2. **Elisir Solis Igniti** *(Harvey Specter & Alfred Knight, 2026)*:
    - **Tipologia**: Curativa Suprema / Rigenerazione Mirata & Oftalmica.
@@ -104,6 +104,11 @@ Le 5 nuove pozioni collocate nella categoria didattica **Altri** (`anno: 0`) cos
    - **Ingredienti**: Pus puro di Bubotubero (300 ml, lavorato a freddo con moto vorticoso), Cristalli di sale marino grosso, Linfa di corteccia o Frullobulbo, Macerato di Timo selvatico, Alcool puro distillato (opzionale).
    - **Effetti**: Inverte la causticità del pus trasformandolo in un potente solvente alchemico da contatto per pavimentazioni secolari e pietre da serra; rimuove depositi organici decennali e colonie fungine senza intaccare la malta.
    - **Sinergia Magica**: Straordinaria reazione con **Tergeo** e **Scourgify** per assorbire ed eliminare istantaneamente residui melmosi e liquido esausto.
+
+6. **Garza di Ortica** *(Manufatto Tessile Alchemico Tradizionale)*:
+   - **Tipologia**: Per Oggetti / Strumentazione Alchemica / Filtro Purificante & Bendaggio.
+   - **Ingredienti & Strumenti**: Fusti di Ortica matura freschi (5), Acqua sorgiva (150 ml), Cenere di legno di Quercia (1 tazza); coltello d'argento affilato, mazzuolo di legno, pettine a denti fitti (in legno o osso), guanti in pelle di drago, piccolo telaio da tessitura (o bacchetta magica).
+   - **Funzione & Proprietà**: Manufatto tessile a trama rada ricavato dalle fibre liberiane interne dell'ortica macerate in cenere di quercia. Straordinaria resistenza chimica e carica magica purificante: è lo strumento d'elezione per il filtro di infusi acidi, corrosivi o per uso oculare (come il Filtro di Eufrasia), nonché bendaggio sterile che previene il rigetto magico dei tessuti rigenerati. Non assorbe né altera i principi attivi delle pozioni filtrate.
 
 ---
 
