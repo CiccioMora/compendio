@@ -5765,8 +5765,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "plasma",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 3,
+    "annoLabel": "III Anno",
     "nome": "Formula di Controllo del Fuoco (Plasma)",
     "formula": "Plasma",
     "ripetibile": false,
@@ -5787,8 +5787,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "coerceo",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 3,
+    "annoLabel": "III Anno",
     "nome": "Formula di Controllo dell'Acqua (Coerceo)",
     "formula": "Coerceo",
     "ripetibile": false,
@@ -5809,8 +5809,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "finge",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 3,
+    "annoLabel": "III Anno",
     "nome": "Formula di Controllo dell'Aria (Finge)",
     "formula": "Finge",
     "ripetibile": false,
@@ -5831,8 +5831,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "adultero",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 3,
+    "annoLabel": "III Anno",
     "nome": "Formula di Controllo della Terra (Adultero)",
     "formula": "Adultero",
     "ripetibile": false,

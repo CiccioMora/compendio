@@ -300,10 +300,10 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Antiche Rune** | **Runa Bianca (○)** | `○ Runa Bianca` | **5** | 5 | Antiche Rune / Glifo Sacro | ᛟ Runa | ○ Runa Bianca (Pos. Speciale) |
 | **Altri** | **Antico Incantesimo di Apertura (Aberto)** | `Aberto` | **7** | 3 | Incantesimo di Sblocco Tradizionale | ⛔ NO | ᚷ Gebo (Pos. 7ª) |
 | **Altri** | **Controincantesimo Generale (Finite Incantatem)** | `Finite Incantatem` | **7** | 3 | Contro-incantesimo Generale | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
-| **Altri** | **Formula di Controllo del Fuoco (Plasma)** | `Plasma` | **8** | 2 | Elementale Fuoco / Controllo | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
-| **Altri** | **Formula di Controllo dell'Acqua (Coerceo)** | `Coerceo` | **1** | 9 | Elementale Acqua / Controllo | ⚔️ SÌ | ᚠ Fehu (Pos. 1ª) |
-| **Altri** | **Formula di Controllo dell'Aria (Finge)** | `Finge` | **5** | 5 | Elementale Aria / Controllo | ⚔️ SÌ | ᚱ Raido (Pos. 5ª) |
-| **Altri** | **Formula di Controllo della Terra (Adultero)** | `Adultero` | **6** | 4 | Elementale Terra / Controllo | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
+| **III Anno** | **Formula di Controllo del Fuoco (Plasma)** | `Plasma` | **8** | 2 | Elementale Fuoco / Controllo | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
+| **III Anno** | **Formula di Controllo dell'Acqua (Coerceo)** | `Coerceo` | **1** | 9 | Elementale Acqua / Controllo | ⚔️ SÌ | ᚠ Fehu (Pos. 1ª) |
+| **III Anno** | **Formula di Controllo dell'Aria (Finge)** | `Finge` | **5** | 5 | Elementale Aria / Controllo | ⚔️ SÌ | ᚱ Raido (Pos. 5ª) |
+| **III Anno** | **Formula di Controllo della Terra (Adultero)** | `Adultero` | **6** | 4 | Elementale Terra / Controllo | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
 | **Altri** | **Incantesimo Anti-Furto per Contenitori (Dominum)** | `Dominum` | **8** | 2 | Difesa Statica di Contenitori | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
 | **Altri** | **Incantesimo Celante Aureo (Phi Revelio)** | `Phi Revelio` | **2** | 8 | Occultamento / Crittografia Magica | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **Altri** | **Incantesimo Domestico Lavapiatti** | `Lavapiatti` | **3** | 7 | Chicche di Magia / Magia Domestica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
