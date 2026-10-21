@@ -88,7 +88,7 @@ raw_spells = [
     'formula': 'Liberacorpus', 'ripetibile': False, 'tipologia': 'Contro-incantesimo / Difensivo', 'inDuello': True,
     'duelloNote': 'Utilizzabile in duello per liberare sé stessi (se capaci di lancio non-verbale) o un compagno sospeso dall'incantesimo Levicorpus.',
     'movimento': 'Fendente netto del polso dall'alto verso il basso a tagliare il vincolo di sospensione.',
-    'movimentoSvg': 'M 75,25 L 75,115 M 60,100 L 75,115 L 90,100',
+    'movimentoSvg': 'M 75,25 L 75,115 M 60,100 L 75,115 M 90,100 L 75,115',
     'descrizione': 'Il naturale contro-incanto ideato da Severus Piton per annullare istantaneamente l'effetto di Levicorpus, rilasciando la vittima a terra.',
     'etimologia': 'Dal latino 'liberare' (sciogliere dai ceppi) e 'corpus' (corpo).'
   },
