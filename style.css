@@ -83,3 +83,24 @@
       transform: translateY(-3px);
       box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.7), 0 0 16px -2px rgba(217, 119, 6, 0.2);
     }
+
+    /* Core Visibility & Modal Controls (guaranteed without relying on Tailwind) */
+    .hidden, [hidden] {
+      display: none !important;
+    }
+
+    #spellModal, #calculatorModal, #noResultsState {
+      display: none;
+      pointer-events: none;
+    }
+
+    #spellModal.active, #calculatorModal.active {
+      display: flex !important;
+      pointer-events: auto !important;
+    }
+
+    /* Interactive button styles */
+    .year-tab, .duel-seg-btn, .val-pill, .macro-btn {
+      cursor: pointer;
+      user-select: none;
+    }

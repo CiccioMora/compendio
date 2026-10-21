@@ -122,9 +122,9 @@ def generate_card_html(spell):
         duel_badge = f'<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 shadow-sm"><span>ᛟ</span> Futhark: Pos. {pos}</span>'
     else:
         if spell.get('inDuello'):
-            duel_badge = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>'
+            duel_badge = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>'
         else:
-            duel_badge = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>'
+            duel_badge = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>'
 
     tipo_short = tipologia.split('/')[0].strip() if tipologia else ''
     figura = spell.get('figuraGeometrica', '')

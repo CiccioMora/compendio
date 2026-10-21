@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Codex Arcane - Mondo Magico</title>
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS (Gstatic Allowlist per Sandbox Antigravity + CDN Pubblico) -->
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;600&display=swap');
@@ -91,6 +92,27 @@
       border-color: rgba(245, 158, 11, 0.45);
       transform: translateY(-3px);
       box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.7), 0 0 16px -2px rgba(217, 119, 6, 0.2);
+    }
+
+    /* Core Visibility & Modal Controls (guaranteed without relying on Tailwind) */
+    .hidden, [hidden] {
+      display: none !important;
+    }
+
+    #spellModal, #calculatorModal, #noResultsState {
+      display: none;
+      pointer-events: none;
+    }
+
+    #spellModal.active, #calculatorModal.active {
+      display: flex !important;
+      pointer-events: auto !important;
+    }
+
+    /* Interactive button styles */
+    .year-tab, .duel-seg-btn, .val-pill, .macro-btn {
+      cursor: pointer;
+      user-select: none;
     }
 
 </style>
@@ -347,7 +369,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -405,7 +427,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -463,7 +485,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -521,7 +543,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -579,7 +601,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -637,7 +659,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -695,7 +717,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -753,7 +775,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -811,7 +833,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -869,7 +891,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -927,7 +949,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -985,7 +1007,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -1043,7 +1065,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1101,7 +1123,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1159,7 +1181,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1217,7 +1239,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1275,7 +1297,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1333,7 +1355,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -1391,7 +1413,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1449,7 +1471,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1507,7 +1529,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1565,7 +1587,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1623,7 +1645,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1681,7 +1703,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1739,7 +1761,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -1797,7 +1819,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -1855,7 +1877,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -1913,7 +1935,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -1971,7 +1993,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -2029,7 +2051,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -2087,7 +2109,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -2145,7 +2167,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -2203,7 +2225,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -2261,7 +2283,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -2319,7 +2341,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -2377,7 +2399,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -2435,7 +2457,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -2493,7 +2515,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -2551,7 +2573,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -2609,7 +2631,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -2667,7 +2689,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -2725,7 +2747,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -2783,7 +2805,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -2841,7 +2863,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -2899,7 +2921,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -2957,7 +2979,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -3015,7 +3037,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   II Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3073,7 +3095,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3131,7 +3153,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3189,7 +3211,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3247,7 +3269,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -3305,7 +3327,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3363,7 +3385,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -3421,7 +3443,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3479,7 +3501,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3537,7 +3559,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3595,7 +3617,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3653,7 +3675,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3711,7 +3733,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3769,7 +3791,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3827,7 +3849,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -3885,7 +3907,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -3943,7 +3965,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4001,7 +4023,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4059,7 +4081,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4117,7 +4139,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4175,7 +4197,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4233,7 +4255,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4291,7 +4313,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4349,7 +4371,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4407,7 +4429,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4465,7 +4487,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4523,7 +4545,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4581,7 +4603,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -4639,7 +4661,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -4697,7 +4719,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4755,7 +4777,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4813,7 +4835,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4871,7 +4893,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4929,7 +4951,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -4987,7 +5009,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -5045,7 +5067,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -5103,7 +5125,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -5161,7 +5183,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -5219,7 +5241,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -5277,7 +5299,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -5335,7 +5357,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -5393,7 +5415,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -5451,7 +5473,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -5509,7 +5531,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -5567,7 +5589,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -5625,7 +5647,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -5683,7 +5705,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -5741,7 +5763,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -5799,7 +5821,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -5857,7 +5879,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -5915,7 +5937,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -5973,7 +5995,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -6031,7 +6053,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -6089,7 +6111,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -6147,7 +6169,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -6205,7 +6227,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -6263,7 +6285,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -6321,7 +6343,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -6379,7 +6401,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -6437,7 +6459,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -6495,7 +6517,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -6553,7 +6575,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -6611,7 +6633,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -6669,7 +6691,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -6727,7 +6749,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -6785,7 +6807,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -6843,7 +6865,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -6901,7 +6923,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -6959,7 +6981,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -7017,7 +7039,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -7075,7 +7097,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -7133,7 +7155,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -7191,7 +7213,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -7249,7 +7271,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -7307,7 +7329,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -7365,7 +7387,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -7423,7 +7445,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -7481,7 +7503,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -7539,7 +7561,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -7597,7 +7619,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -7655,7 +7677,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -7713,7 +7735,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -7771,7 +7793,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -7829,7 +7851,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -7887,7 +7909,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -7945,7 +7967,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -8003,7 +8025,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -8061,7 +8083,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -8119,7 +8141,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -8177,7 +8199,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -8235,7 +8257,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -8293,7 +8315,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -8351,7 +8373,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -8409,7 +8431,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -8467,7 +8489,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -8525,7 +8547,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -8583,7 +8605,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -8641,7 +8663,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -8699,7 +8721,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -8757,7 +8779,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -8815,7 +8837,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -8873,7 +8895,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -8931,7 +8953,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -8989,7 +9011,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -9047,7 +9069,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9105,7 +9127,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -9163,7 +9185,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9221,7 +9243,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9279,7 +9301,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -9337,7 +9359,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9395,7 +9417,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9453,7 +9475,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9511,7 +9533,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9569,7 +9591,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9627,7 +9649,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -9685,7 +9707,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -9743,7 +9765,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9801,7 +9823,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -9859,7 +9881,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9917,7 +9939,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -9975,7 +9997,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -10033,7 +10055,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -10091,7 +10113,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -10149,7 +10171,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -10207,7 +10229,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -10265,7 +10287,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -10323,7 +10345,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -10381,7 +10403,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -10439,7 +10461,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -10497,7 +10519,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -10555,7 +10577,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -10613,7 +10635,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -10671,7 +10693,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -10729,7 +10751,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -10787,7 +10809,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -10845,7 +10867,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -10903,7 +10925,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -10961,7 +10983,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11019,7 +11041,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11077,7 +11099,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11135,7 +11157,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -11193,7 +11215,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11251,7 +11273,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11309,7 +11331,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11367,7 +11389,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11425,7 +11447,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -11483,7 +11505,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11541,7 +11563,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -11599,7 +11621,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -11657,7 +11679,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -11715,7 +11737,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -11773,7 +11795,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11831,7 +11853,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11889,7 +11911,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -11947,7 +11969,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12005,7 +12027,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12063,7 +12085,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12121,7 +12143,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12179,7 +12201,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12237,7 +12259,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -12295,7 +12317,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12353,7 +12375,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12411,7 +12433,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -12469,7 +12491,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12527,7 +12549,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12585,7 +12607,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12643,7 +12665,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -12701,7 +12723,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12759,7 +12781,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12817,7 +12839,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -12875,7 +12897,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   V Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12933,7 +12955,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -12991,7 +13013,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -13049,7 +13071,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -13107,7 +13129,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -13165,7 +13187,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -13223,7 +13245,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -13281,7 +13303,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -13339,7 +13361,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -13397,7 +13419,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -13455,7 +13477,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VII Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -13513,7 +13535,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -13571,7 +13593,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -13629,7 +13651,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -13687,7 +13709,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -13745,7 +13767,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -13803,7 +13825,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -13861,7 +13883,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -13919,7 +13941,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -13977,7 +13999,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14035,7 +14057,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14093,7 +14115,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14151,7 +14173,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14209,7 +14231,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14267,7 +14289,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14325,7 +14347,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14383,7 +14405,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   IV Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14441,7 +14463,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   VI Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14499,7 +14521,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14557,7 +14579,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -14615,7 +14637,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14673,7 +14695,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14731,7 +14753,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14789,7 +14811,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   III Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14847,7 +14869,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14905,7 +14927,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -14963,7 +14985,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -15021,7 +15043,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -15079,7 +15101,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -15137,7 +15159,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: SÌ</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm"><span>⚔️</span> Duello: Sì</span>
               </div>
 
               <!-- Spell Name -->
@@ -15195,7 +15217,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -15253,7 +15275,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -15311,7 +15333,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -15369,7 +15391,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -15427,7 +15449,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -15485,7 +15507,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -15543,7 +15565,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   I Anno
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -15601,7 +15623,7 @@
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
                   Altri
                 </span>
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: NO</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
 
               <!-- Spell Name -->
@@ -15655,7 +15677,7 @@
     </div>
 
     <!-- Empty State -->
-    <div id="noResultsState" class="hidden text-center py-16 glass-panel rounded-2xl border border-slate-800">
+    <div id="noResultsState" style="display: none;" class="hidden text-center py-16 glass-panel rounded-2xl border border-slate-800">
       <div class="text-4xl mb-3">📜</div>
       <h3 class="text-lg font-bold font-magic text-slate-200">Nessun Incantesimo Trovato</h3>
       <p class="text-sm text-slate-400 mt-1 max-w-md mx-auto">
@@ -15668,7 +15690,7 @@
   </main>
 
   <!-- MODAL: SPELL DETAIL WITH LIVE WAND PATH & ARITHMANCY BREAKDOWN -->
-  <div id="spellModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+  <div id="spellModal" style="display: none;" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto glass-panel rounded-2xl border border-amber-500/40 shadow-2xl p-6 sm:p-8 transform scale-95 transition-transform duration-300" id="modalCard">
       
       <!-- Close button -->
@@ -15829,7 +15851,7 @@
   </div>
 
   <!-- MODAL: ARITHMANCY CALCULATOR TOOL -->
-  <div id="calculatorModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+  <div id="calculatorModal" style="display: none;" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="relative w-full max-w-xl glass-panel rounded-2xl border border-amber-500/40 shadow-2xl p-6 sm:p-7 transform scale-95 transition-transform duration-300" id="calcCard">
       <button id="closeCalcBtn" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center">✕</button>
 
@@ -22679,7 +22701,7 @@ const SPELLS_DATA = [
 
         if (spellSubFilters) spellSubFilters.classList.remove("hidden");
         if (activeMacroHint) {
-          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">241 Incantesimi Didattici</strong>`;
+          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">264 Incantesimi Didattici</strong>`;
         }
       } else {
         macroRunesBtn?.classList.remove("text-slate-400", "hover:text-indigo-300", "hover:bg-slate-900");
@@ -22722,7 +22744,21 @@ const SPELLS_DATA = [
 
           // 2. Type filter
           if (activeType !== "ALL") {
-            if (!spell.tipologia.toLowerCase().includes(activeType.toLowerCase())) return false;
+            const t = (spell.tipologia || "").toLowerCase();
+            const q = activeType.toLowerCase();
+            if (activeType === "Utilità") {
+              if (!t.includes("utilità") && !t.includes("cinetic") && !t.includes("locomozione") && !t.includes("pulizia") && !t.includes("riparazione") && !t.includes("ottico") && !t.includes("levitazione")) return false;
+            } else if (activeType === "Offensivo") {
+              if (!t.includes("offensivo") && !t.includes("schiantesimo") && !t.includes("attacco") && !t.includes("esplosiv") && !t.includes("disarmo")) return false;
+            } else if (activeType === "Difensivo") {
+              if (!t.includes("difensivo") && !t.includes("scudo") && !t.includes("protezione") && !t.includes("contro-incant") && !t.includes("controincant")) return false;
+            } else if (activeType === "Curativo") {
+              if (!t.includes("curativo") && !t.includes("medimagia") && !t.includes("chirurgico")) return false;
+            } else if (activeType === "Maledizione") {
+              if (!t.includes("maledizione") && !t.includes("oscura")) return false;
+            } else {
+              if (!t.includes(q)) return false;
+            }
           }
 
           // 3. Duel filter
@@ -22748,10 +22784,12 @@ const SPELLS_DATA = [
       if (filtered.length === 0) {
         spellsGrid.innerHTML = "";
         noResultsState.classList.remove("hidden");
+        noResultsState.style.display = "block";
         return;
       }
 
       noResultsState.classList.add("hidden");
+      noResultsState.style.display = "none";
 
       spellsGrid.innerHTML = filtered.map(spell => {
         // Type color badge
@@ -22781,10 +22819,10 @@ const SPELLS_DATA = [
         } else {
           duelBadge = spell.inDuello
             ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm">
-                 <span>⚔️</span> Duello: SÌ
+                 <span>⚔️</span> Duello: Sì
                </span>`
             : `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700">
-                 <span>⛔</span> Duello: NO
+                 <span>⛔</span> Duello: No
                </span>`;
         }
 
@@ -22960,6 +22998,8 @@ const SPELLS_DATA = [
       if (guidePath) guidePath.setAttribute("d", pathData);
 
       // Mostra prima il modale affinché le dimensioni e il layout siano attivi
+      spellModal.style.display = "flex";
+      spellModal.classList.add("active");
       spellModal.classList.remove("hidden");
       setTimeout(() => {
         spellModal.classList.remove("opacity-0");
@@ -23095,6 +23135,11 @@ const SPELLS_DATA = [
           wandAnimId = null;
           wandPathElement.style.strokeDashoffset = "0";
           if (spark) {
+            try {
+              const endPt = wandPathElement.getPointAtLength(totalLen);
+              spark.setAttribute("cx", endPt.x);
+              spark.setAttribute("cy", endPt.y);
+            } catch (e) {}
             spark.style.transition = "opacity 0.6s ease, transform 0.3s ease";
             spark.style.opacity = "0.75";
             spark.setAttribute("r", "6");
@@ -23218,7 +23263,9 @@ const SPELLS_DATA = [
       spellModal.classList.add("opacity-0");
       modalCard.classList.add("scale-95");
       setTimeout(() => {
+        spellModal.classList.remove("active");
         spellModal.classList.add("hidden");
+        spellModal.style.display = "none";
       }, 250);
     }
     closeModalBtn.addEventListener("click", closeModal);
@@ -23306,6 +23353,8 @@ const SPELLS_DATA = [
     });
 
     openCalculatorBtn.addEventListener("click", () => {
+      calculatorModal.style.display = "flex";
+      calculatorModal.classList.add("active");
       calculatorModal.classList.remove("hidden");
       setTimeout(() => {
         calculatorModal.classList.remove("opacity-0");
@@ -23318,7 +23367,9 @@ const SPELLS_DATA = [
       calculatorModal.classList.add("opacity-0");
       calcCard.classList.add("scale-95");
       setTimeout(() => {
+        calculatorModal.classList.remove("active");
         calculatorModal.classList.add("hidden");
+        calculatorModal.style.display = "none";
       }, 250);
     }
     closeCalcBtn.addEventListener("click", closeCalculator);
@@ -23394,7 +23445,11 @@ const SPELLS_DATA = [
     });
 
     // Dropdown type filter
-    typeFilter.addEventListener("change", (e) => {
+    typeFilter?.addEventListener("change", (e) => {
+      activeType = e.target.value;
+      renderSpells();
+    });
+    typeFilter?.addEventListener("input", (e) => {
       activeType = e.target.value;
       renderSpells();
     });
@@ -23430,9 +23485,9 @@ const SPELLS_DATA = [
       activeDuel = "ALL";
       activeValence = "ALL";
       searchQuery = "";
-      searchInput.value = "";
-      clearSearchBtn.classList.add("hidden");
-      typeFilter.value = "ALL";
+      if (searchInput) searchInput.value = "";
+      if (clearSearchBtn) clearSearchBtn.classList.add("hidden");
+      if (typeFilter) typeFilter.value = "ALL";
       
       setMacroFilter("spells");
       setYearFilter("ALL");
@@ -23442,7 +23497,10 @@ const SPELLS_DATA = [
         p.classList.remove("bg-amber-500/20", "text-amber-300", "border-amber-500/30", "border");
         p.classList.add("bg-slate-800/80", "text-slate-300");
       });
-      document.querySelector('.val-pill[data-val="ALL"]').classList.add("bg-amber-500/20", "text-amber-300", "border-amber-500/30", "border");
+      const allValPill = document.querySelector('.val-pill[data-val="ALL"]');
+      if (allValPill) {
+        allValPill.classList.add("bg-amber-500/20", "text-amber-300", "border-amber-500/30", "border");
+      }
 
       updateMacroButtonBadges();
       renderSpells();

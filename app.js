@@ -211,7 +211,7 @@
 
         if (spellSubFilters) spellSubFilters.classList.remove("hidden");
         if (activeMacroHint) {
-          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">241 Incantesimi Didattici</strong>`;
+          activeMacroHint.innerHTML = `Visualizzazione: <strong class="text-amber-300">264 Incantesimi Didattici</strong>`;
         }
       } else {
         macroRunesBtn?.classList.remove("text-slate-400", "hover:text-indigo-300", "hover:bg-slate-900");
@@ -254,7 +254,21 @@
 
           // 2. Type filter
           if (activeType !== "ALL") {
-            if (!spell.tipologia.toLowerCase().includes(activeType.toLowerCase())) return false;
+            const t = (spell.tipologia || "").toLowerCase();
+            const q = activeType.toLowerCase();
+            if (activeType === "Utilità") {
+              if (!t.includes("utilità") && !t.includes("cinetic") && !t.includes("locomozione") && !t.includes("pulizia") && !t.includes("riparazione") && !t.includes("ottico") && !t.includes("levitazione")) return false;
+            } else if (activeType === "Offensivo") {
+              if (!t.includes("offensivo") && !t.includes("schiantesimo") && !t.includes("attacco") && !t.includes("esplosiv") && !t.includes("disarmo")) return false;
+            } else if (activeType === "Difensivo") {
+              if (!t.includes("difensivo") && !t.includes("scudo") && !t.includes("protezione") && !t.includes("contro-incant") && !t.includes("controincant")) return false;
+            } else if (activeType === "Curativo") {
+              if (!t.includes("curativo") && !t.includes("medimagia") && !t.includes("chirurgico")) return false;
+            } else if (activeType === "Maledizione") {
+              if (!t.includes("maledizione") && !t.includes("oscura")) return false;
+            } else {
+              if (!t.includes(q)) return false;
+            }
           }
 
           // 3. Duel filter
@@ -280,10 +294,12 @@
       if (filtered.length === 0) {
         spellsGrid.innerHTML = "";
         noResultsState.classList.remove("hidden");
+        noResultsState.style.display = "block";
         return;
       }
 
       noResultsState.classList.add("hidden");
+      noResultsState.style.display = "none";
 
       spellsGrid.innerHTML = filtered.map(spell => {
         // Type color badge
@@ -313,10 +329,10 @@
         } else {
           duelBadge = spell.inDuello
             ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm">
-                 <span>⚔️</span> Duello: SÌ
+                 <span>⚔️</span> Duello: Sì
                </span>`
             : `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700">
-                 <span>⛔</span> Duello: NO
+                 <span>⛔</span> Duello: No
                </span>`;
         }
 
@@ -492,6 +508,8 @@
       if (guidePath) guidePath.setAttribute("d", pathData);
 
       // Mostra prima il modale affinché le dimensioni e il layout siano attivi
+      spellModal.style.display = "flex";
+      spellModal.classList.add("active");
       spellModal.classList.remove("hidden");
       setTimeout(() => {
         spellModal.classList.remove("opacity-0");
@@ -627,6 +645,11 @@
           wandAnimId = null;
           wandPathElement.style.strokeDashoffset = "0";
           if (spark) {
+            try {
+              const endPt = wandPathElement.getPointAtLength(totalLen);
+              spark.setAttribute("cx", endPt.x);
+              spark.setAttribute("cy", endPt.y);
+            } catch (e) {}
             spark.style.transition = "opacity 0.6s ease, transform 0.3s ease";
             spark.style.opacity = "0.75";
             spark.setAttribute("r", "6");
@@ -750,7 +773,9 @@
       spellModal.classList.add("opacity-0");
       modalCard.classList.add("scale-95");
       setTimeout(() => {
+        spellModal.classList.remove("active");
         spellModal.classList.add("hidden");
+        spellModal.style.display = "none";
       }, 250);
     }
     closeModalBtn.addEventListener("click", closeModal);
@@ -838,6 +863,8 @@
     });
 
     openCalculatorBtn.addEventListener("click", () => {
+      calculatorModal.style.display = "flex";
+      calculatorModal.classList.add("active");
       calculatorModal.classList.remove("hidden");
       setTimeout(() => {
         calculatorModal.classList.remove("opacity-0");
@@ -850,7 +877,9 @@
       calculatorModal.classList.add("opacity-0");
       calcCard.classList.add("scale-95");
       setTimeout(() => {
+        calculatorModal.classList.remove("active");
         calculatorModal.classList.add("hidden");
+        calculatorModal.style.display = "none";
       }, 250);
     }
     closeCalcBtn.addEventListener("click", closeCalculator);
@@ -926,7 +955,11 @@
     });
 
     // Dropdown type filter
-    typeFilter.addEventListener("change", (e) => {
+    typeFilter?.addEventListener("change", (e) => {
+      activeType = e.target.value;
+      renderSpells();
+    });
+    typeFilter?.addEventListener("input", (e) => {
       activeType = e.target.value;
       renderSpells();
     });
@@ -962,9 +995,9 @@
       activeDuel = "ALL";
       activeValence = "ALL";
       searchQuery = "";
-      searchInput.value = "";
-      clearSearchBtn.classList.add("hidden");
-      typeFilter.value = "ALL";
+      if (searchInput) searchInput.value = "";
+      if (clearSearchBtn) clearSearchBtn.classList.add("hidden");
+      if (typeFilter) typeFilter.value = "ALL";
       
       setMacroFilter("spells");
       setYearFilter("ALL");
@@ -974,7 +1007,10 @@
         p.classList.remove("bg-amber-500/20", "text-amber-300", "border-amber-500/30", "border");
         p.classList.add("bg-slate-800/80", "text-slate-300");
       });
-      document.querySelector('.val-pill[data-val="ALL"]').classList.add("bg-amber-500/20", "text-amber-300", "border-amber-500/30", "border");
+      const allValPill = document.querySelector('.val-pill[data-val="ALL"]');
+      if (allValPill) {
+        allValPill.classList.add("bg-amber-500/20", "text-amber-300", "border-amber-500/30", "border");
+      }
 
       updateMacroButtonBadges();
       renderSpells();
