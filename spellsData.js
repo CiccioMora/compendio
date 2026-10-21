@@ -5853,8 +5853,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "dominum",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 5,
+    "annoLabel": "V Anno",
     "nome": "Incantesimo Anti-Furto per Contenitori (Dominum)",
     "formula": "Dominum",
     "ripetibile": false,
@@ -6293,8 +6293,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "evanesco",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 5,
+    "annoLabel": "V Anno",
     "nome": "Incantesimo di Evanescenza per Inanimati e Liquidi (Evanesco)",
     "formula": "Evanesco",
     "ripetibile": false,
@@ -6315,8 +6315,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "ivanesco",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 5,
+    "annoLabel": "V Anno",
     "nome": "Incantesimo di Evanescenza per Viventi (Ivanesco)",
     "formula": "Ivanesco",
     "ripetibile": false,

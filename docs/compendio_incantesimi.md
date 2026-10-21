@@ -304,7 +304,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **III Anno** | **Formula di Controllo dell'Acqua (Coerceo)** | `Coerceo` | **1** | 9 | Elementale Acqua / Controllo | ⚔️ SÌ | ᚠ Fehu (Pos. 1ª) |
 | **III Anno** | **Formula di Controllo dell'Aria (Finge)** | `Finge` | **5** | 5 | Elementale Aria / Controllo | ⚔️ SÌ | ᚱ Raido (Pos. 5ª) |
 | **III Anno** | **Formula di Controllo della Terra (Adultero)** | `Adultero` | **6** | 4 | Elementale Terra / Controllo | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
-| **Altri** | **Incantesimo Anti-Furto per Contenitori (Dominum)** | `Dominum` | **8** | 2 | Difesa Statica di Contenitori | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
+| **V Anno** | **Incantesimo Anti-Furto per Contenitori (Dominum)** | `Dominum` | **8** | 2 | Difesa Statica di Contenitori | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
 | **IV Anno** | **Incantesimo Celante Aureo (Phi Revelio)** | `Phi Revelio` | **2** | 8 | Occultamento / Crittografia Magica | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **Altri** | **Incantesimo Domestico Lavapiatti** | `Lavapiatti` | **3** | 7 | Chicche di Magia / Magia Domestica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **Altri** | **Incantesimo Frantuma-Vetri Senza Schegge (Finestra)** | `Finestra` | **2** | 8 | Chicche di Magia / Infiltrazione M.A.G.O. | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
@@ -324,8 +324,8 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Altri** | **Incantesimo di Adesione Permanente (Adesio Perpetua)** | `Adesio Perpetua` | **2** | 8 | Sigillo Materico / Incollamento Permanente | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **Altri** | **Incantesimo di Apertura Varchi (Liberate)** | `Liberate` | **9** | 1 | Incantesimo di Apertura Porte e Varchi | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
 | **Altri** | **Incantesimo di Apertura a Forza Bruta (Dunamis)** | `Dunamis` | **9** | 1 | Sblocco Cinetico Esplosivo | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
-| **Altri** | **Incantesimo di Evanescenza per Inanimati e Liquidi (Evanesco)** | `Evanesco` | **3** | 7 | Evanescenza nel Non-Essere | ⚔️ SÌ | ᚦ Thurisaz (Pos. 3ª) |
-| **Altri** | **Incantesimo di Evanescenza per Viventi (Ivanesco)** | `Ivanesco` | **7** | 3 | Evanescenza di Viventi nel Non-Essere | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
+| **V Anno** | **Incantesimo di Evanescenza per Inanimati e Liquidi (Evanesco)** | `Evanesco` | **3** | 7 | Evanescenza nel Non-Essere | ⚔️ SÌ | ᚦ Thurisaz (Pos. 3ª) |
+| **V Anno** | **Incantesimo di Evanescenza per Viventi (Ivanesco)** | `Ivanesco` | **7** | 3 | Evanescenza di Viventi nel Non-Essere | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
 | **Altri** | **Incantesimo di Fortificazione Barriere (Fianto Duri)** | `Fianto Duri` | **9** | 1 | Chicche di Magia / Difensivo Avanzato M.A.G.O. | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
 | **Altri** | **Incantesimo di Montaggio e Costruzione (Erecto)** | `Erecto` | **3** | 7 | Chicche di Magia / Cinetica Architettonica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **Altri** | **Incantesimo di Tracciamento a Ritroso (Avenseguim)** | `Avenseguim` | **8** | 2 | Localizzazione e Tracciamento Forense | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
