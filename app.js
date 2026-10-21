@@ -498,13 +498,16 @@
         totalLen = 220;
       }
 
-      if (!totalLen || totalLen <= 0 || isNaN(totalLen)) {
-        totalLen = 220;
-      }
+      const isStationary = !totalLen || totalLen <= 0.5;
 
-      // Imposta stroke-dasharray esattamente sulla lunghezza reale
-      wandPathElement.style.strokeDasharray = `${totalLen} ${totalLen}`;
-      wandPathElement.style.strokeDashoffset = `${totalLen}`;
+      if (isStationary) {
+        wandPathElement.style.strokeDasharray = "none";
+        wandPathElement.style.strokeDashoffset = "0";
+      } else {
+        // Imposta stroke-dasharray esattamente sulla lunghezza reale
+        wandPathElement.style.strokeDasharray = `${totalLen} ${totalLen}`;
+        wandPathElement.style.strokeDashoffset = `${totalLen}`;
+      }
 
       // Posizione iniziale della scintilla
       let startPoint = { x: 75, y: 75 };
@@ -526,27 +529,36 @@
       }
 
       // Durata fluida proporzionata (1.2s - 1.8s)
-      const duration = Math.min(Math.max(totalLen * 5.5, 1100), 1800);
+      const duration = isStationary ? 1200 : Math.min(Math.max(totalLen * 5.5, 1100), 1800);
       const startTime = performance.now();
 
       function step(now) {
         const elapsed = now - startTime;
         const progress = Math.min(elapsed / duration, 1);
 
-        // Curva di accelerazione/decelerazione cubica fluida
-        const ease = progress < 0.5
-          ? 4 * progress * progress * progress
-          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+        if (isStationary) {
+          if (spark) {
+            spark.setAttribute("cx", 75);
+            spark.setAttribute("cy", 75);
+            const pulse = 6 + Math.sin(progress * Math.PI) * 2.5;
+            spark.setAttribute("r", pulse.toFixed(1));
+          }
+        } else {
+          // Curva di accelerazione/decelerazione cubica fluida
+          const ease = progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
 
-        const currentLen = ease * totalLen;
-        wandPathElement.style.strokeDashoffset = `${Math.max(0, totalLen - currentLen)}`;
+          const currentLen = ease * totalLen;
+          wandPathElement.style.strokeDashoffset = `${Math.max(0, totalLen - currentLen)}`;
 
-        if (spark) {
-          try {
-            const pt = wandPathElement.getPointAtLength(Math.min(currentLen, totalLen));
-            spark.setAttribute("cx", pt.x);
-            spark.setAttribute("cy", pt.y);
-          } catch (e) {}
+          if (spark) {
+            try {
+              const pt = wandPathElement.getPointAtLength(Math.min(currentLen, totalLen));
+              spark.setAttribute("cx", pt.x);
+              spark.setAttribute("cy", pt.y);
+            } catch (e) {}
+          }
         }
 
         if (progress < 1) {
@@ -557,6 +569,7 @@
           if (spark) {
             spark.style.transition = "opacity 0.6s ease, transform 0.3s ease";
             spark.style.opacity = "0.75";
+            spark.setAttribute("r", "6");
           }
           if (replayWandAnimBtn) {
             replayWandAnimBtn.classList.remove("ring-2", "ring-amber-400", "bg-amber-500/30");

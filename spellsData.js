@@ -2255,7 +2255,7 @@ const SPELLS_DATA = [
     "inDuello": true,
     "duelloNote": "Micidiale in duello: genera un'onda d'urto a pressione che scaraventa violentemente la persona colpita contro le pareti.",
     "movimento": "Puntamento fermo e stoccata frontale con rilascio di scintille bluastre.",
-    "movimentoSvg": "M 40,75 L 115,75 M 95,55 L 115,75 L 95,95",
+    "movimentoSvg": "M 75,75 L 75,75",
     "descrizione": "Sortilegio esplosivo da minatori: comprime le molecole dell'oggetto bersaglio provocando un'onda d'urto espulsiva violenta.",
     "etimologia": "Dal latino expellere / expulsum (scagliare fuori con violenza).",
     "valenza": 4,
