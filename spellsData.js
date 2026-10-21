@@ -6337,8 +6337,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "fianto-duri",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 7,
+    "annoLabel": "VII Anno",
     "nome": "Incantesimo di Fortificazione Barriere (Fianto Duri)",
     "formula": "Fianto Duri",
     "ripetibile": false,

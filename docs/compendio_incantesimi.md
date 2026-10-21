@@ -326,7 +326,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **Altri** | **Incantesimo di Apertura a Forza Bruta (Dunamis)** | `Dunamis` | **9** | 1 | Sblocco Cinetico Esplosivo | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
 | **V Anno** | **Incantesimo di Evanescenza per Inanimati e Liquidi (Evanesco)** | `Evanesco` | **3** | 7 | Evanescenza nel Non-Essere | ⚔️ SÌ | ᚦ Thurisaz (Pos. 3ª) |
 | **V Anno** | **Incantesimo di Evanescenza per Viventi (Ivanesco)** | `Ivanesco` | **7** | 3 | Evanescenza di Viventi nel Non-Essere | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
-| **Altri** | **Incantesimo di Fortificazione Barriere (Fianto Duri)** | `Fianto Duri` | **9** | 1 | Chicche di Magia / Difensivo Avanzato M.A.G.O. | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
+| **VII Anno** | **Incantesimo di Fortificazione Barriere (Fianto Duri)** | `Fianto Duri` | **9** | 1 | Chicche di Magia / Difensivo Avanzato M.A.G.O. | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
 | **VII Anno** | **Incantesimo di Montaggio e Costruzione (Erecto)** | `Erecto` | **3** | 7 | Chicche di Magia / Cinetica Architettonica | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **Altri** | **Incantesimo di Tracciamento a Ritroso (Avenseguim)** | `Avenseguim` | **8** | 2 | Localizzazione e Tracciamento Forense | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
 | **I Anno** | **Incanto Diagnostico di Rifrazione (Detecto)** | `Detecto` | **9** | 1 | Trasfigurazione / Diagnostica Molecolare e Marchi | ⛔ NO | ᚺ Hagalaz (Pos. 9ª) |
