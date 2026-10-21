@@ -6095,8 +6095,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "revelio-minimum",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 2,
+    "annoLabel": "II Anno",
     "nome": "Incantesimo Rivelatore di Pozioni di Scarpin (Revelio Minimum)",
     "formula": "Revelio Minimum",
     "ripetibile": false,
@@ -6117,8 +6117,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "hommenum-revelio",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 2,
+    "annoLabel": "II Anno",
     "nome": "Incantesimo Rivelatore di Presenze Umane (Hommenum Revelio)",
     "formula": "Hommenum Revelio",
     "ripetibile": false,
@@ -6139,8 +6139,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "appare-vestigium",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 2,
+    "annoLabel": "II Anno",
     "nome": "Incantesimo Rivelatore di Tracce Recenti (Appare Vestigium)",
     "formula": "Appare Vestigium",
     "ripetibile": false,
@@ -6381,8 +6381,8 @@ const SPELLS_DATA = [
   },
   {
     "id": "avenseguim",
-    "anno": 0,
-    "annoLabel": "Altri",
+    "anno": 2,
+    "annoLabel": "II Anno",
     "nome": "Incantesimo di Tracciamento a Ritroso (Avenseguim)",
     "formula": "Avenseguim",
     "ripetibile": false,
