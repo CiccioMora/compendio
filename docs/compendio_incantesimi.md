@@ -156,7 +156,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **V Anno** | **Fattura delle Corde Vincolanti (Incarceramus)** | `Incarceramus` | **8** | 2 | Fattura Offensiva / Confinamento | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
 | **V Anno** | **Incantesimo Adesivo (Epoximise)** | `Epoximise` | **7** | 3 | Trasfigurazione Adesiva / Tattico | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
 | **V Anno** | **Incantesimo Amplificatore della Voce (Sonorus)** | `Sonorus` | **4** | 6 | Modulazione Acustica / Utilità | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
-| **V Anno** | **Incantesimo Antiacustico di Zona (Muffliato)** | `Muffliato` | **4** | 6 | Difensivo Statico di Zona / Acustico | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
+| **III Anno** | **Incantesimo Antiacustico di Zona (Muffliato)** | `Muffliato` | **4** | 6 | Difensivo Statico di Zona / Acustico | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
 | **V Anno** | **Incantesimo Difensivo di Zona (Salvio Hexia)** | `Salvio Hexia` | **8** | 2 | Difensivo Statico di Zona (I.D.S.) | ⛔ NO | ᚹ Wunjo (Pos. 8ª) |
 | **V Anno** | **Incantesimo Polverizzante (Reducto)** | `Reducto` | **5** | 5 | Offensivo / Polverizzazione | ⚔️ SÌ | ᚱ Raido (Pos. 5ª) |
 | **V Anno** | **Incantesimo di Calma / Riduzione Sonora (Quietus)** | `Quietus` | **4** | 6 | Contro-Incanto Acustico | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
@@ -168,7 +168,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **V Anno** | **Risonanza con le Energie Astrali (Astra Invoco)** | `Astra Invoco` | **2** | 8 | Risonanza Astrale / Armonizzazione Energetica | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **V Anno** | **Sortilegio Esplosivo da Breccia (Bombarda)** | `Bombarda` | **2** | 8 | Offensivo / Esplosivo da Minatori | ⚔️ SÌ | ᚢ Uruz (Pos. 2ª) |
 | **V Anno** | **Sortilegio Solleticante (Rictusempra)** | `Rictusempra` | **8** | 2 | Fattura / Disabilitazione Lieve | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
-| **V Anno** | **Sortilegio di Slancio Verticale (Alarte Ascenderai)** | `Alarte Ascenderai` | **1** | 9 | Offensivo / Cinetico / Non-Verbale | ⚔️ SÌ | ᚠ Fehu (Pos. 1ª) |
+| **V Anno** | **Sortilegio di Slancio Verticale (Alarte Ascendare / Alarte Ascenderai)** | `Alarte Ascendare` | **1** | 9 | Offensivo / Cinetico / Non-Verbale | ⚔️ SÌ | ᚠ Fehu (Pos. 1ª) |
 | **VI Anno** | **Allontanamento Parassitario e Disinfestazione (Repello Inimicum)** | `Repello Inimicum` | **3** | 7 | Disinfestazione Botanica / Frequenza Repulsiva | ⛔ NO | ᚦ Thurisaz (Pos. 3ª) |
 | **VI Anno** | **Barriera Protettiva Massimizzata (Protego Maxima)** | `Protego Maxima` | **4** | 6 | Difensivo Massimizzato / Protezione d'Area | ⚔️ SÌ | ᚨ Ansuz (Pos. 4ª) |
 | **VI Anno** | **Barriera contro la Fauna Fitofaga (Protego Herbivorum)** | `Protego Herbivorum` | **2** | 8 | Difesa Botanica di Zona / Barriera Fitofaga | ⛔ NO | ᚢ Uruz (Pos. 2ª) |

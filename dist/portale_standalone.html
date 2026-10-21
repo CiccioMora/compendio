@@ -300,13 +300,13 @@
               II Anno (20)
               </button>
               <button data-year="3" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              III Anno (39)
+              III Anno (40)
               </button>
               <button data-year="4" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               IV Anno (35)
               </button>
               <button data-year="5" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
-              V Anno (24)
+              V Anno (23)
               </button>
               <button data-year="6" class="year-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">
               VI Anno (50)
@@ -6747,7 +6747,7 @@
               <!-- Header info: Year & Duel -->
               <div class="flex items-center justify-between gap-2 mb-3">
                 <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800/90 text-amber-300 border border-slate-700">
-                  V Anno
+                  III Anno
                 </span>
                 <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 border border-slate-700"><span>⛔</span> Duello: No</span>
               </div>
@@ -6769,7 +6769,7 @@
 
               <!-- Description -->
               <p class="text-xs text-slate-300 line-clamp-3 leading-relaxed mb-4">
-                Impedisce a curiosi o spie di origliare ciò che viene detto all'interno di una stanza o di un campo.
+                Evocato su un’area delimitata, erige una barriera invisibile che preserva la riservatezza delle comunicazioni: chi si trova all’esterno percepirà soltanto un suono persistente e disturbante (ronzio indistinto) che impedisce qualsiasi tentativo di ascolto, anche tramite lettura labiale. Conosciuto anche come Incantesimo Anti-Intrusi ad area, ideale per ambienti ristretti, stanze o accampamenti; se impostato per specifici intrusi può fungere da allarme perimetrale magico.
               </p>
             </div>
 
@@ -6792,7 +6792,7 @@
 
               <!-- Wand Movement snippet -->
               <div class="text-[11px] text-slate-400 line-clamp-1 italic bg-slate-950/40 px-2 py-1 rounded">
-                🪄 Tre onde con il polso dal basso verso l'alto, ridiscese nel verso opposto e braccio spostato da sinistra verso destra.
+                🪄 Tre onde con il polso dal basso verso l'alto, ridiscese nel verso opposto e braccio spostato da sinistra verso destra (oppure movimento evocativo della mano a ricordare un orecchio).
               </div>
 
               <div class="pt-1 flex items-center justify-end text-xs text-amber-400 font-semibold group-hover:translate-x-1 transition-transform">
@@ -7438,7 +7438,7 @@
               </div>
             </div>
           </div>
-          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSpellDetails('alarte-ascenderai')">
+          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSpellDetails('alarte-ascendare')">
             <div>
               <!-- Header info: Year & Duel -->
               <div class="flex items-center justify-between gap-2 mb-3">
@@ -7450,13 +7450,13 @@
 
               <!-- Spell Name -->
               <h3 class="text-lg font-bold font-magic text-slate-100 group-hover:text-amber-300 transition-colors line-clamp-1 mb-1">
-                Sortilegio di Slancio Verticale (Alarte Ascenderai)
+                Sortilegio di Slancio Verticale (Alarte Ascendare / Alarte Ascenderai)
               </h3>
 
               <!-- Formula Box -->
               <div class="flex items-center gap-2 mb-3">
                 <span class="font-code text-xs px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-200 font-bold tracking-wide">
-                  ⚡ Alarte Ascenderai
+                  ⚡ Alarte Ascendare
                 </span>
                 <span class="text-xs px-2 py-0.5 rounded border bg-rose-500/10 text-rose-300 border-rose-500/30 truncate max-w-[150px]">
                   Offensivo
@@ -18633,18 +18633,18 @@ const SPELLS_DATA = [
   },
   {
     "id": "muffliato",
-    "anno": 5,
-    "annoLabel": "V Anno",
+    "anno": 3,
+    "annoLabel": "III Anno",
     "nome": "Incantesimo Antiacustico di Zona (Muffliato)",
     "formula": "Muffliato",
     "ripetibile": true,
     "tipologia": "Difensivo Statico di Zona / Acustico",
     "inDuello": false,
-    "duelloNote": "Non da duello. Crea un ronzio indistinto nelle orecchie di chi si trova all'esterno della zona protetta, nascondendo conversazioni.",
-    "movimento": "Tre onde con il polso dal basso verso l'alto, ridiscese nel verso opposto e braccio spostato da sinistra verso destra.",
+    "duelloNote": "Non da duello rapido: sortilegio statico di occultamento acustico di zona. Crea un ronzio indistinto nelle orecchie di chi si trova all'esterno della barriera, nascondendo conversazioni e impedendo l'ascolto anche tramite lettura labiale.",
+    "movimento": "Tre onde con il polso dal basso verso l'alto, ridiscese nel verso opposto e braccio spostato da sinistra verso destra (oppure movimento evocativo della mano a ricordare un orecchio).",
     "movimentoSvg": "M 35,90 Q 50,45 65,90 Q 80,45 95,90 L 125,90",
-    "descrizione": "Impedisce a curiosi o spie di origliare ciò che viene detto all'interno di una stanza o di un campo.",
-    "etimologia": "Dall'inglese to muffle (ovattare, soffocare i suoni).",
+    "descrizione": "Evocato su un’area delimitata, erige una barriera invisibile che preserva la riservatezza delle comunicazioni: chi si trova all’esterno percepirà soltanto un suono persistente e disturbante (ronzio indistinto) che impedisce qualsiasi tentativo di ascolto, anche tramite lettura labiale. Conosciuto anche come Incantesimo Anti-Intrusi ad area, ideale per ambienti ristretti, stanze o accampamenti; se impostato per specifici intrusi può fungere da allarme perimetrale magico.",
+    "etimologia": "Dall'inglese to muffle (ovattare, soffocare i suoni / smorzare).",
     "valenza": 4,
     "sommaLettere": 40,
     "valenzaOpposta": 6,
@@ -18896,11 +18896,11 @@ const SPELLS_DATA = [
     "runeAssociate": "ᚹ Wunjo (Pos. 8ª)"
   },
   {
-    "id": "alarte-ascenderai",
+    "id": "alarte-ascendare",
     "anno": 5,
     "annoLabel": "V Anno",
-    "nome": "Sortilegio di Slancio Verticale (Alarte Ascenderai)",
-    "formula": "Alarte Ascenderai",
+    "nome": "Sortilegio di Slancio Verticale (Alarte Ascendare / Alarte Ascenderai)",
+    "formula": "Alarte Ascendare",
     "ripetibile": true,
     "tipologia": "Offensivo / Cinetico / Non-Verbale",
     "inDuello": true,
