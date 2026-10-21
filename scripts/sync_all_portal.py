@@ -94,6 +94,13 @@ html = re.sub(r'data-duel="ALL"([^>]*)>\s*Tutti \([0-9]+\)', f'data-duel="ALL"\\
 html = re.sub(r'data-duel="YES"([^>]*)>\s*(?:⚔️ Da Duello: SÌ|Sì) \([0-9]+\)', f'data-duel="YES"\\1>\n                Sì ({duel_yes})', html)
 html = re.sub(r'data-duel="NO"([^>]*)>\s*(?:⛔ Non da Duello: NO|No) \([0-9]+\)', f'data-duel="NO"\\1>\n                No ({duel_no})', html)
 
+# Aggiornamento Header Stats Badges
+dark_count = len([s for s in spells if not s.get('isRune') and ('Maledizione' in s.get('tipologia', '') or 'Fattura' in s.get('tipologia', ''))])
+html = re.sub(r'<div id="statTotal"[^>]*>[0-9]+</div>\s*<div[^>]*>(?:Incantesimi Totali|Incantesimi)</div>', f'<div id="statTotal" class="text-2xl font-bold font-magic text-amber-400">{spells_count}</div>\n            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Incantesimi</div>', html)
+html = re.sub(r'<div id="statRunes"[^>]*>[0-9]+</div>\s*<div[^>]*>Antiche Rune</div>', f'<div id="statRunes" class="text-2xl font-bold font-magic text-indigo-400">{runes_count}</div>\n            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Antiche Rune</div>', html)
+html = re.sub(r'<div id="statDuel"[^>]*>[0-9]+</div>', f'<div id="statDuel" class="text-2xl font-bold font-magic text-emerald-400">{duel_yes}</div>', html)
+html = re.sub(r'<div id="statDark"[^>]*>[0-9]+</div>', f'<div id="statDark" class="text-2xl font-bold font-magic text-rose-400">{dark_count}</div>', html)
+
 # Results badge
 html = re.sub(r'<span id="resultsCountBadge"[^>]*>[0-9]+ incantesimi trovati</span>', f'<span id="resultsCountBadge" class="text-amber-400 font-code font-semibold">{spells_count} incantesimi trovati</span>', html)
 

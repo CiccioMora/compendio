@@ -58,6 +58,7 @@
 
     // Stats Elements
     const statTotal = document.getElementById("statTotal");
+    const statRunes = document.getElementById("statRunes");
     const statDuel = document.getElementById("statDuel");
     const statDark = document.getElementById("statDark");
     const statArith = document.getElementById("statArith");
@@ -159,10 +160,14 @@
 
     // Update Global Statistics
     function updateStats() {
-      statTotal.textContent = SPELLS_DATA.length;
-      statDuel.textContent = SPELLS_DATA.filter(s => s.inDuello).length;
-      statDark.textContent = SPELLS_DATA.filter(s => s.tipologia.includes("Maledizione") || s.tipologia.includes("Fattura")).length;
-      statArith.textContent = SPELLS_DATA.filter(s => s.anno === 0 || s.tipologia.includes("Aritmantico") || s.tipologia.includes("Elementale") || s.tipologia.includes("Trasfigurazione") || s.tipologia.includes("Celeste") || s.tipologia.includes("Botanica")).length;
+      const spells = SPELLS_DATA.filter(s => !s.isRune);
+      const runes = SPELLS_DATA.filter(s => s.isRune);
+
+      if (statTotal) statTotal.textContent = spells.length;
+      if (statRunes) statRunes.textContent = runes.length;
+      if (statDuel) statDuel.textContent = spells.filter(s => s.inDuello).length;
+      if (statDark) statDark.textContent = spells.filter(s => s.tipologia.includes("Maledizione") || s.tipologia.includes("Fattura")).length;
+      if (statArith) statArith.textContent = spells.filter(s => s.anno === 0 || s.tipologia.includes("Aritmantico") || s.tipologia.includes("Elementale") || s.tipologia.includes("Trasfigurazione") || s.tipologia.includes("Celeste") || s.tipologia.includes("Botanica")).length;
       updateFilterCounts();
     }
 
