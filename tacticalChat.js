@@ -12,36 +12,68 @@
       icon: "⚔️",
       placeholder: "Descrivi la situazione di duello (es. 'L\'avversario usa Protego e mi attacca con fiamme')...",
       chips: [
-        "⚔️ Combo Disarmo e Schianto Rapido",
+        "⚔️ Combo Disarmo e Schianto Rapido (Non Letale)",
         "🛡️ Superare o Abbattere un Protego",
         "🔥 Neutralizzare un attacco di Fuoco",
-        "⚡ Attacco rapido con Valenza Opposta",
+        "⚡ Blocco Motorio con Petrificus Totalus",
         "💨 Fuga ed Evasione da Accerchiamento",
         "🪄 Spezzare un incantesimo di Legame"
       ],
-      chipsPhysical: [
-        "🥊 Schivata e Disarmo Fisico del Polso",
-        "🥋 Leva Articolare e Proiezione a Terra",
-        "🦵 Spazzata Bassa alla Gamba d'Appoggio",
-        "🧥 Parata con Mantello e Presa al Collo",
-        "💨 Evasione Bassa da Pugno o Carica",
-        "💥 Colpo Rapido al Plesso Solare"
+      chipsOfficialMagical: [
+        "⚔️ Combo Disarmo e Schianto Rapido (Non Letale)",
+        "🛡️ Superare o Abbattere un Protego",
+        "🔥 Neutralizzare un attacco di Fuoco",
+        "⚡ Blocco Motorio con Petrificus Totalus",
+        "💨 Fuga ed Evasione da Accerchiamento",
+        "🪄 Spezzare un incantesimo di Legame"
       ],
-      chipsHybridUserMagic: [
+      chipsUnofficialMagical: [
+        "☠️ Combo Mortale con Pozione Esplosiva e Schianto Letale",
+        "🌱 Urlo Mortale di Mandragola + Confinamento Istantaneo",
+        "🐍 Serpensortia Velenosa e Colpo Mortale Diffindo",
+        "🧪 Fiala di Pozione Fuoco di Drago per Ustioni Letali",
+        "💥 Bombarda Maxima e Frammentazione Mortale",
+        "🌿 Tentacula Velenosa da Lancio e Soffocamento"
+      ],
+      chipsOfficialPhysical: [
+        "🥊 Schivata e Disarmo Fisico del Polso (Resa)",
+        "🥋 Leva Articolare e Proiezione a Terra (Sottomissione)",
+        "🦵 Spazzata Bassa alla Gamba d'Appoggio",
+        "🧥 Parata con Mantello e Presa al Busto",
+        "💨 Evasione Bassa da Pugno o Carica",
+        "💥 Percussione Controllata al Plesso Solare"
+      ],
+      chipsUnofficialPhysical: [
+        "💀 Colpo Letale alla Trachea e Rottura Cervicale",
+        "🔪 Blitz Armato con Lama da Lancio e Presa Mortale",
+        "🧪 Fiala Tossica Caustica negli Occhi in Clinch",
+        "💥 Schiacciamento Cranico e Atterramento Mortale",
+        "🦵 Spazzata e Calcio Letale al Plesso Solare a Terra"
+      ],
+      chipsOfficialHybridUserMagic: [
         "🪄 Bloccare la Carica Fisica con Glisseo e Impedimenta",
         "❄️ Inabilitazione Motoria con Gambemolli a Distanza",
         "⛓️ Incarceramus per Confinare l'Assalitore Fisico",
         "⚡ Stordimento Preventivo con Stupeficium",
-        "💨 Arretramento Veloce con Carpe Retractum",
-        "🛡️ Barriera d'Attrito per Impedire il Corpo a Corpo"
+        "💨 Arretramento Veloce con Carpe Retractum"
       ],
-      chipsHybridEnemyMagic: [
+      chipsUnofficialHybridUserMagic: [
+        "☠️ Diffindo Profondo Recisorio Letale sull'Assalitore",
+        "🧪 Pozione Esplosiva ai Piedi del Combattente Fisico",
+        "🐍 Serpensortia con Morso Velenoso Mortale sulla Carica",
+        "🌱 Radici di Tranello del Diavolo per Asfissia Mortale"
+      ],
+      chipsOfficialHybridEnemyMagic: [
         "🏃 Blitz Ravvicinato e Deviazione del Polso Armato",
         "📐 Evasione a Zig-Zag per Schivare gli Incantesimi",
         "💥 Disarmo Fisico della Bacchetta e Atterramento",
-        "🧥 Accecamento con Mantello per Togliere la Mira",
-        "🦵 Spazzata a Terra prima che Lanci l'Incanto",
         "🥋 Blocco Articolare del Braccio che Impugna la Bacchetta"
+      ],
+      chipsUnofficialHybridEnemyMagic: [
+        "🔪 Blitz Mortale con Lama alla Gola prima della Formula",
+        "🧪 Fiala Tossica Accecante sul Mago e Spezzamento Collo",
+        "💥 Percussione Letale alla Laringe per Soffocare l'Incanto",
+        "⚡ Schianto della Testa del Mago su Parete e Resa Mortale"
       ]
     },
     potions: {
@@ -420,18 +452,63 @@
     // 1. DUEL / COMBAT SCENARIOS
     if (field === "duel" || (field === "all" && (q.includes("duell") || q.includes("combatt") || q.includes("protego") || q.includes("attacc") || q.includes("scudo") || q.includes("disarm") || hasBurn || hasFall))) {
       
+      const isLethalOrFatalIntent = /(?:morte|mortal[ei]|letal[ei]|uccid|ammazz|carotide|trachea|cervicale|laringe|recidere.*collo|dilani|ferit.*mortal|danni.*mortal|fino\s+alla\s+morte)/i.test(q);
+      const isExternalAgentIntent = /(?:pozion|fial|velen|boccett|piant|erbolog|mandragol|tentacul|tranello|creatur|mostro|animale|bestia|serpensortia|acromantul|berretto)/i.test(q);
+
       const duelRegimeLabel = reqOfficial ? '⚖️ Ufficiale' : '🏴 Non Ufficiale';
       const duelFieldBadge = `⚔️ Duello • ${duelRegimeLabel} • 🪄 Magico`;
       const duelOfficialWarningSuffix = reqOfficial
-        ? "Regole Ufficiali di Duello: incantesimi pienamente conformi al Codice Didattico di Hogwarts (⚔️ SÌ). Vietate arti oscure o lesioni permanenti."
-        : "Duello Non Ufficiale / Scontro Libero: nessuna limitazione arbitrale. Ammesse magie d'impatto ambientale, trasfigurazioni pesanti e pozioni tattiche da lancio.";
+        ? "Regolamento Ufficiale: Consentiti esclusivamente incantesimi (o corpo a corpo) senza provocare ferite mortali all'avversario. Severamente vietati agenti esterni (creature, pozioni, piante) e colpi letali."
+        : "Regolamento Non Ufficiale: Ammessi agenti esterni (creature, pozioni, piante) ed è autorizzato provocare danni mortali o direttamente la morte dell'avversario.";
 
       // A. DUELLO FISICO (Lotta corpo a corpo / Disarmati / Sala d'armi)
       if (reqDuelType === "physical") {
         const isDisarmIntent = hasDisarm || /(?:arma|polso|bacchetta|disarm|leva)/i.test(q);
         const officialRuleText = reqOfficial
-          ? "⚖️ Duello Fisico Ufficiale: Regolamento da Sala d'Armi di Hogwarts. Vietati colpi proibiti (occhi, gola, colpi dopo la dichiarazione di resa). Vittoria all'atterramento netto o resa per leva articolare."
-          : "🏴 Duello Fisico Libero (Non Ufficiale): Nessuna restrizione arbitrale. Sfrutta pareti, manto, oggetti contundenti ed evita l'accerchiamento.";
+          ? "⚖️ Regolamento Duello Fisico Ufficiale: Regolamento da Sala d'Armi di Hogwarts. Consentito solo corpo a corpo non letale. Severamente vietati agenti esterni (veleni, armi da taglio, pozioni) e colpi a danno mortale (vietati colpi a trachea, occhi, rottura cervicale). Vittoria all'atterramento netto o resa per leva articolare."
+          : "🏴 Duello Fisico Libero (Non Ufficiale): Nessuna restrizione arbitrale. Consentiti colpi letali alla gola/trachea, rottura cervicale ed impiego di agenti esterni o armi improprie mortali.";
+
+        if (!reqOfficial && isLethalOrFatalIntent) {
+          return {
+            title: "Duello Fisico Mortale (Non Ufficiale): Colpi Letali alla Trachea e Frattura Cervicale",
+            fieldLabel: "⚔️ Duello Fisico Non Ufficiale • Corpo a Corpo Mortale",
+            bestMove: {
+              name: "Sequenza Letale di Soppressione: Blitz Laringeo ➔ Proiezione Cranica ➔ Torsione Cervicale Fatale",
+              steps: [
+                {
+                  num: 1,
+                  action: "Evasione e Percussione Letale alla Trachea",
+                  spellLink: "<strong>Colpo Diretto alla Laringe</strong>",
+                  details: "Schiva la guardia avversaria con passo angolato e affonda una percussione secca a mano aperta o nocche serrate contro la cartilagine tiroidea della trachea: lo schiacciamento provoca arresto respiratorio mortale istantaneo."
+                },
+                {
+                  num: 2,
+                  action: "Frattura Articolare del Braccio e Proiezione Cranica",
+                  spellLink: "<strong>Leva Spezza-Braccio & Impatto Occipitale</strong>",
+                  details: "Mentre l'avversario boccheggia asfissiato, torci il braccio fino alla frattura ossea completa e proietta il suo corpo facendogli schiantare la nuca violentemente contro la pietra."
+                },
+                {
+                  num: 3,
+                  action: "Torsione Cervicale Mortale o Agente Caustico",
+                  spellLink: "<strong>Rottura Cervicale / Fiala Caustica</strong>",
+                  details: "Fissa il capo del rivale con entrambe le mani e applica una rapida torsione orizzontale a scatto per la dislocazione delle vertebre cervicali e morte sul colpo, oppure frantuma una fiala di pozione acida direttamente sul volto."
+                }
+              ],
+              rationale: "Nello scontro fisico non ufficiale, mirare direttamente ai centri vitali (laringe, cervicale, occipite) consente l'eliminazione letale irreversibile del contendente."
+            },
+            alternatives: [
+              {
+                title: "Piano B: Lama da Lancio o Pugnale Improvvisato",
+                desc: "Estrai un pugnale o una lama da polso mirando alla giugulare prima che il rivale possa impostare la guardia corpo a corpo."
+              },
+              {
+                title: "Piano C: Clinch e Frantumazione Fiala Tossica",
+                desc: "In fase di presa ravvicinata, rompi una fiala di veleno a contatto sul viso dell'avversario per asfissia immediata."
+              }
+            ],
+            warnings: officialRuleText
+          };
+        }
 
         if (isDisarmIntent) {
           return {
@@ -531,6 +608,48 @@
 
       // B. DUELLO IBRIDO: TU MAGO VS NEMICO FISICO
       if (reqDuelType === "hybrid" && reqHybridRole === "user_magic") {
+        if (!reqOfficial && (isLethalOrFatalIntent || isExternalAgentIntent)) {
+          return {
+            title: "Duello Ibrido Mortale (Non Ufficiale): Sinergia Magica ed Agenti Esterni Letali (Tu Mago vs Nemico Fisico)",
+            fieldLabel: "⚡ Duello Ibrido Non Ufficiale • Tu Mago • Danni Mortali Autorizzati",
+            bestMove: {
+              name: "Sequenza Letale Anti-Bruto: Fiala Esplosiva/Spine Velenose ➔ Diffindo alla Carotide ➔ Confringo Letale",
+              steps: [
+                {
+                  num: 1,
+                  action: "Lancio Agente Esterno sulla Carica",
+                  spellLink: formatEntityLink("Soluzione Esplosiva", "potion", "pot-sol-esplosiva") + " o " + formatEntityLink("Tentacula Velenosa", "plant", "p-tentacula"),
+                  details: "Infrangi una fiala di <strong>Soluzione Esplosiva</strong> o getta rami spinosi di <strong>Tentacula Velenosa</strong> sulla traiettoria di corsa dell'avversario: l'esplosione o il veleno neurotossico arrestano all'istante l'avanzata distruggendo i muscoli delle gambe."
+                },
+                {
+                  num: 2,
+                  action: "Recisione Letale dei Tendini e Giugulare",
+                  spellLink: formatEntityLink("Diffindo", "spell", "diffindo"),
+                  details: "Mentre l'assalitore barcolla dilaniato dall'agente esterno, scaglia <strong>Diffindo (V5)</strong> mirando dritto alla giugulare per innescare dissanguamento mortale fulmineo."
+                },
+                {
+                  num: 3,
+                  action: "Annientamento Definitivo con Confringo",
+                  spellLink: formatEntityLink("Confringo", "spell", "confringo"),
+                  details: "Concludi scagliando <strong>Confringo (V6)</strong> al torace del rivale al suolo per eliminare ogni segno vitale."
+                }
+              ],
+              rationale: "Nel duello ibrido non ufficiale, l'integrazione di un reagente alchemico o botanico esterno unito a sortilegi di lacerazione letale assicura la soppressione immediata del contendente fisico."
+            },
+            alternatives: [
+              {
+                title: "Piano B: Pianta Tranello del Diavolo per Asfissia",
+                desc: `Innesca semi di ${formatEntityLink("Tranello del Diavolo", "plant", "p-tranello-diavolo")} per stritolare mortalmente l'avversario.`
+              },
+              {
+                title: "Piano C: Morte Istantanea con Urlo di Mandragola",
+                desc: `Estrai una ${formatEntityLink("Mandragola", "plant", "p-mandragola")} senza cuffie protettive verso il rivale per causarne la morte istantanea sul colpo.`
+              }
+            ],
+            warnings: "🏴 DUELLO IBRIDO MORTALE: Ammessi agenti esterni (pozioni, piante, veleni) e sortilegi a letalità garantita."
+          };
+        }
+
         return {
           title: `Duello Ibrido: Controllo e Neutralizzazione a Distanza (Tu Mago vs Nemico Fisico)`,
           fieldLabel: `⚡ Duello Ibrido • Tu Mago vs Nemico Fisico • ${reqOfficial ? '⚖️ Ufficiale' : '🏴 Non Ufficiale'}`,
@@ -582,6 +701,48 @@
 
       // C. DUELLO IBRIDO: TU FISICO VS NEMICO MAGO
       if (reqDuelType === "hybrid" && reqHybridRole === "enemy_magic") {
+        if (!reqOfficial && (isLethalOrFatalIntent || isExternalAgentIntent)) {
+          return {
+            title: "Duello Ibrido Mortale (Non Ufficiale): Blitz Letale Anti-Bacchetta ed Eliminazione (Tu Fisico vs Nemico Mago)",
+            fieldLabel: "⚡ Duello Ibrido Non Ufficiale • Tu Fisico • Letalità Immediata Autorizzata",
+            bestMove: {
+              name: "Blitz Mortale Anti-Mago: Corsa a Zig-Zag ➔ Deflessione e Taglio/Percussione Letale alla Gola ➔ Frattura Cervicale",
+              steps: [
+                {
+                  num: 1,
+                  action: "Corsa a Zig-Zag e Chiusura Distanza Letale",
+                  spellLink: "<strong>Blitz Sotto Linea di Tiro</strong>",
+                  details: "Scatta a zig-zag con baricentro ribassato per mandare a vuoto i dardi magici del rivale e chiudere la distanza a meno di 1 metro prima che completi la pronuncia dell'incanto."
+                },
+                {
+                  num: 2,
+                  action: "Deflessione del Polso e Colpo Letale alla Gola",
+                  spellLink: "<strong>Lama alla Giugulare / Schiacciamento Laringe</strong>",
+                  details: "Defletti con la mano sinistra il braccio armato del mago verso il soffitto e affonda simultaneamente con la destra una lama o una percussione mortale alla cartilagine tiroidea della gola, troncando all'istante voce e respirazione."
+                },
+                {
+                  num: 3,
+                  action: "Frattura Cervicale Mortale e Distruzione Bacchetta",
+                  spellLink: "<strong>Dislocazione Cervicale & Rottura Bacchetta</strong>",
+                  details: "Afferra la testa del mago e spezza le vertebre cervicali con torsione a scatto fatale, calpestando e spezzando in due la bacchetta nemica al suolo."
+                }
+              ],
+              rationale: "Nel duello ibrido non ufficiale, la biomeccanica del blitz ravvicinato sfrutta il tempo di pronuncia verbale del mago per neutralizzarlo letalmente alla gola prima che la magia possa manifestarsi."
+            },
+            alternatives: [
+              {
+                title: "Piano B: Fiala Tossica Accecante sul Mago",
+                desc: "Lancia una fiala di polvere urticante o veleno negli occhi del mago prima di chiudere la distanza per l'eliminazione mortale."
+              },
+              {
+                title: "Piano C: Imboscata da Riparo e Aggressione Mortale alle Spalle",
+                desc: "Attendi dietro una colonna che il mago scarichi un incanto pesante a vuoto, quindi attaccalo alle spalle spezzandogli la colonna vertebrale."
+              }
+            ],
+            warnings: "🏴 DUELLO IBRIDO MORTALE: Uccisione dell'avversario prima che completi la formula magica. Autorizzati colpi letali e armi improprie."
+          };
+        }
+
         return {
           title: `Duello Ibrido: Tattica di Blitz e Neutralizzazione Bacchetta (Tu Fisico vs Nemico Mago)`,
           fieldLabel: `⚡ Duello Ibrido • Tu Fisico vs Nemico Mago • ${reqOfficial ? '⚖️ Ufficiale' : '🏴 Non Ufficiale'}`,
@@ -631,6 +792,134 @@
         };
       }
       
+      // RULE ENFORCEMENT FOR OFFICIAL DUELS (VIOLATION PREVENTION & COMPLIANT CONVERSION)
+      if (reqOfficial && isLethalOrFatalIntent) {
+        return {
+          title: "Intervento Arbitrale: Conversione Non Letale (Duello Ufficiale)",
+          fieldLabel: "⚔️ Duello Ufficiale • Divieto Ferite Mortali • ⚖️ Vittoria Pulita",
+          bestMove: {
+            name: "Protocollo Regolamentare: Disarmo Rapido (Expelliarmus) ➔ Blocco Motorio (Petrificus Totalus) ➔ Stordimento (Stupeficium)",
+            steps: [
+              {
+                num: 1,
+                action: "Disarmo Netto alla Mano Armata",
+                spellLink: formatEntityLink("Expelliarmus", "spell", "expelliarmus"),
+                details: "Scaglia <strong>Expelliarmus (V2)</strong> al polso avversario: la bacchetta nemica vola via, neutralizzando qualsiasi minaccia senza provocare alcuna ferita o danno permanente."
+              },
+              {
+                num: 2,
+                action: "Impedimento Motorio Temporaneo",
+                spellLink: formatEntityLink("Petrificus Totalus", "spell", "petrificus-totalus"),
+                details: "Senza soluzione di continuità, lancia <strong>Petrificus Totalus (V2)</strong>: le articolazioni del rivale si saldano all'istante facendolo cadere rigido a terra senza subire lesioni fisiche."
+              },
+              {
+                num: 3,
+                action: "Stordimento e Conclusione Arbitrata",
+                spellLink: formatEntityLink("Stupeficium", "spell", "stupeficium"),
+                details: "Concludi con un calibrato <strong>Stupeficium (V7)</strong> per indurre il sonno magico istantaneo e consentire all'arbitro di dichiarare la tua vittoria ufficiale."
+              }
+            ],
+            rationale: "La sequenza Expelliarmus (V2) ➔ Petrificus Totalus (V2) ➔ Stupeficium (V7) garantisce il 100% di efficacia operativa rispettando alla lettera il divieto di infliggere ferite mortali o permanenti."
+          },
+          alternatives: [
+            {
+              title: "Piano B: Confinamento con Incarceramus",
+              desc: `Usa ${formatEntityLink("Incarceramus", "spell", "incarceramus")} (V6) per avvolgere il contendente in funi incantate, costringendolo alla resa formale.`
+            },
+            {
+              title: "Piano C: Liquefazione Muscolare con Gambemolli",
+              desc: `Applica ${formatEntityLink("Locomotor Wibbly", "spell", "locomotor-wibbly")} (V2) per far cedere le ginocchia del rivale e porre fine al duello.`
+            }
+          ],
+          warnings: "⚖️ REGOLAMENTO DUELLO UFFICIALE: Nel duello ufficiale è tassativamente proibito provocare ferite mortali o la morte dell'avversario. Qualsiasi attacco letale comporta la squalifica immediata, il sequestro della bacchetta da parte degli arbitri e l'intervento degli Auror del Ministero."
+        };
+      }
+
+      if (reqOfficial && isExternalAgentIntent) {
+        return {
+          title: "Intervento Arbitrale: Esclusione Agenti Esterni (Duello Ufficiale)",
+          fieldLabel: "⚔️ Duello Ufficiale • Divieto Agenti Esterni • ⚖️ Solo Magia Pura",
+          bestMove: {
+            name: "Sostituzione Canonica: Incantesimi Certificati da Duello",
+            steps: [
+              {
+                num: 1,
+                action: "Cortina d'Oscuramento Magico Puro",
+                spellLink: formatEntityLink("Fumos", "spell", "fumos") + " o " + formatEntityLink("Obscuro", "spell", "obscuro"),
+                details: "Invece di lanciare fiale o agenti esterni proibiti, proietta <strong>Fumos (V5)</strong> o <strong>Obscuro (V8)</strong> per occultare la tua sagoma o bendare il rivale con incantesimi approvati dal regolamento."
+              },
+              {
+                num: 2,
+                action: "Destabilizzazione del Terreno con Glisseo",
+                spellLink: formatEntityLink("Glisseo", "spell", "glisseo"),
+                details: "Senza ricorrere a radici o piante d'attacco esterne, usa <strong>Glisseo (V6 - Terra)</strong> sul pavimento per annullare l'attrito e far cadere l'avversario."
+              },
+              {
+                num: 3,
+                action: "Chiusura con Disarmo Diretto",
+                spellLink: formatEntityLink("Expelliarmus", "spell", "expelliarmus"),
+                details: "Strappa la bacchetta al rivale steso a terra con <strong>Expelliarmus (V2)</strong> conseguendo la vittoria secondo il Codice di Duello."
+              }
+            ],
+            rationale: "Nei duelli ufficiali l'impiego di pozioni, bestie o piante esterne è vietato a pena di squalifica immediata: il regolamento impone di risolvere ogni scontro solo con la bacchetta (o corpo a corpo)."
+          },
+          alternatives: [
+            {
+              title: "Piano B: Sostituzione di Creature con Avis & Oppugno",
+              desc: `Invece di liberare creature esterne, evoca piccoli uccelli magici con ${formatEntityLink("Avis", "spell", "avis")} e ${formatEntityLink("Oppugno", "spell", "oppugno")} per distrarre il rivale senza provocare ferite mortali.`
+            },
+            {
+              title: "Piano C: Confinamento con Corde Magiche",
+              desc: `Sostituisci il Tranello del Diavolo con ${formatEntityLink("Incarceramus", "spell", "incarceramus")} (V6), pienamente consentito dal comitato dei duelli.`
+            }
+          ],
+          warnings: "⚖️ REGOLAMENTO DUELLO UFFICIALE: È severamente vietato l'impiego di agenti esterni (pozioni, creature magiche, piante). Introdurre nel recinto di duello fiale alchemiche, veleni, mandragole o bestie comporta la squalifica immediata con disonore. Usare esclusivamente incantesimi da bacchetta certificati (⚔️ SÌ)."
+        };
+      }
+
+      // UNOFFICIAL DUEL: LETHAL OR EXTERNAL AGENTS COMBOS IN MAGICAL DUEL
+      if (!reqOfficial && (isLethalOrFatalIntent || isExternalAgentIntent)) {
+        return {
+          title: "Duello Mortale (Non Ufficiale): Sinergia con Agenti Esterni e Letalità Totale",
+          fieldLabel: "🏴 Duello Non Ufficiale • Agenti Esterni & Danni Mortali Autorizzati",
+          bestMove: {
+            name: "Trittico di Annientamento: Agente Esterno Tossico/Esplosivo ➔ Sortilegio Lacerante Letale ➔ Colpo Mortale",
+            steps: [
+              {
+                num: 1,
+                action: "Ingaggio con Agente Esterno (Pozione da Lancio / Creatura Velenosa / Pianta)",
+                spellLink: formatEntityLink("Pozione Fuoco di Drago", "potion", "pot-fuoco-drago") + " o " + formatEntityLink("Serpensortia", "spell", "serpensortia"),
+                details: "Frangi a terra una fiala letale di <strong>Pozione Fuoco di Drago</strong> o <strong>Soluzione Esplosiva</strong> ai piedi del nemico per causare deflagrazione e ustioni letali immediate, oppure evoca con <strong>Serpensortia (V4)</strong> una vipera dal morso velenoso mortale che attacca l'avversario rompendo la sua difesa."
+              },
+              {
+                num: 2,
+                action: "Attacco Lacerante ad Alta Letalità",
+                spellLink: formatEntityLink("Diffindo", "spell", "diffindo") + " o " + formatEntityLink("Confringo", "spell", "confringo"),
+                details: "Mentre il nemico è devastato dall'agente esterno, scaglia <strong>Diffindo (V5)</strong> con fendente profondo mirando alla giugulare o alle arterie principali per provocare dissanguamento letale, oppure proietta <strong>Confringo (V6)</strong> al torace per frantumare la cassa toracica."
+              },
+              {
+                num: 3,
+                action: "Colpo di Grazia / Eliminazione Mortale Istantanea",
+                spellLink: formatEntityLink("Mandragola", "plant", "p-mandragola") + " o " + formatEntityLink("Bombarda", "spell", "bombarda"),
+                details: "Estrai una <strong>Mandragola</strong> adulta esponendo l'avversario all'urlo fatale che causa la morte istantanea, oppure scatena una <strong>Bombarda Maxima</strong> concentrata sul bersaglio al suolo per annientare ogni traccia di vita residua."
+              }
+            ],
+            rationale: "Nello scontro non ufficiale non esistono arbitri né tutele legali: la combinazione di agenti esterni non intercettabili da Protego ordinari e magie a letalità garantita assicura l'abbattimento mortale istantaneo."
+          },
+          alternatives: [
+            {
+              title: "Piano B: Tentacula Velenosa e Strangolamento Letale",
+              desc: `Scaglia spore o rami di ${formatEntityLink("Tentacula Velenosa", "plant", "p-tentacula")} sul collo del rivale: i tentacoli strangolano e iniettano veleno letale fulmineo mentre scagli colpi perforanti a distanza.`
+            },
+            {
+              title: "Piano C: Tranello del Diavolo e Asfissia Fatale",
+              desc: `Innesca semi di ${formatEntityLink("Tranello del Diavolo", "plant", "p-tranello-diavolo")} al buio sotto i piedi del nemico: le spire asfissiano la vittima schiacciandole la laringe fino alla morte.`
+            }
+          ],
+          warnings: "🏴 DUELLO NON UFFICIALE: Questo protocollo causa danni mortali irreversibili o la morte diretta dell'avversario. Autorizzato l'impiego di pozioni velenose/esplosive, creature aggressive e piante mortali."
+        };
+      }
+      
       // Scenario 1: BURN / FIRE + FALL / KNOCKDOWN (e.g. "voglio attaccare il mio avversario provocandogli bruciature e facendolo cadere al suolo")
       if ((hasBurn || hasFire) && hasFall && (isExplicitAttack || !isExplicitDefense)) {
         return {
@@ -670,7 +959,9 @@
               desc: `Applica ${formatEntityLink("Locomotor Wibbly", "spell", "locomotor-wibbly")} (V2) per rendere le gambe del rivale come gelatina facendolo crollare al suolo, e subito dopo scaglia ${formatEntityLink("Incendio", "spell", "incendio")} (V1) sul mantello per completare l'obiettivo.`
             }
           ],
-          warnings: "Tutti gli incantesimi della combo (Glisseo, Exulcero, Incendio, Flipendo, Expelliarmus) sono pienamente abilitati in duello formale (⚔️ SÌ). Le bruciature da Exulcero vanno trattate a fine scontro con essenza di Dittamo; è rigorosamente proibito infierire con ulteriori fiamme su un avversario già disarmato e al tappeto."
+          warnings: reqOfficial
+            ? "⚖️ Regolamento Duello Ufficiale: Consentiti esclusivamente incantesimi senza provocare ferite mortali all'avversario. Severamente vietati agenti esterni (creature, pozioni, piante) e colpi letali. Le bruciature superficiali vanno trattate a fine scontro con Dittamo; è severamente proibito infierire su un avversario a terra."
+            : "🏴 Duello Non Ufficiale: Consentiti agenti esterni (pozioni, piante, creature) ed autorizzato l'impiego di colpi a danno mortale o letalità diretta."
         };
       }
 
@@ -709,11 +1000,15 @@
               desc: `Usa ${formatEntityLink("Melofors", "spell", "melofors")} (V4) per incastrare una pesante zucca sulla testa dell'avversario togliendogli la vista, poi disarmalo con calma.`
             },
             {
-              title: "Piano C: Fiala Fumogena Alchemica",
-              desc: `Frantuma a terra una ${formatEntityLink("Pozione Fumogena", "potion", "pot-fumogena")} per creare una barriera fisica di fumo opaco non dissolvibile da incanti ordinari.`
+              title: reqOfficial ? "Piano C: Raffica di Vento Elusiva" : "Piano C: Fiala Fumogena Alchemica",
+              desc: reqOfficial
+                ? `Invece di sostanze alchemiche esterne non permesse in duello ufficiale, scaglia ${formatEntityLink("Ventus", "spell", "ventus")} per convogliare la coltre verso l'avversario e disorientarlo.`
+                : `Frantuma a terra una ${formatEntityLink("Pozione Fumogena", "potion", "pot-fumogena")} mista a veleno da lancio per intossicare l'avversario.`
             }
           ],
-          warnings: "Obscuro ed Expelliarmus sono regolari in duello (⚔️ SÌ). Non lanciare sortilegi cinetici pesanti nel fumo se non sei sicuro della posizione degli arbitri di duello."
+          warnings: reqOfficial
+            ? "⚖️ Regolamento Duello Ufficiale: Solo incantesimi non letali approvati (⚔️ SÌ). Severamente proibiti agenti esterni e ferite mortali."
+            : "🏴 Duello Non Ufficiale: Consentito l'uso di fiale di fumo, veleni e danni mortali."
         };
       }
 
@@ -881,11 +1176,15 @@
               desc: `Scaglia ${formatEntityLink("Incendio", "spell", "incendio")} (V1) abbinato a un fendente d'aria di ${formatEntityLink("Ventus", "spell", "ventus")} per espandere il raggio termico su un fronte largo.`
             },
             {
-              title: "Piano C: Pozione Sputafuoco",
-              desc: `Trattieni un sorso di ${formatEntityLink("Pozione Sputafuoco", "potion", "pot-sputafuoco")} ed espellilo in avanti creando un muro di fiamme inestinguibili.`
+              title: reqOfficial ? "Piano C: Maledizione Eruzioni Cutanee" : "Piano C: Pozione Sputafuoco / Fuoco di Drago",
+              desc: reqOfficial
+                ? `Invece di pozioni esterne proibite, lancia ${formatEntityLink("Furnunculus", "spell", "furnunculus")} (V3) per provocare dolorose pustole che distraggono il rivale.`
+                : `Trattieni un sorso di ${formatEntityLink("Pozione Sputafuoco", "potion", "pot-sputafuoco")} o lancia una fiala di ${formatEntityLink("Pozione Fuoco di Drago", "potion", "pot-fuoco-drago")} per ustioni mortali estese.`
             }
           ],
-          warnings: "Le bruciature da Exulcero o Incendio richiedono il trattamento con Essenza di Dittamo o balsamo antiscottature a fine duello."
+          warnings: reqOfficial
+            ? "⚖️ Regolamento Duello Ufficiale: Consentiti esclusivamente incantesimi senza provocare ferite mortali. Severamente vietati agenti esterni (pozioni, creature, piante)."
+            : "🏴 Duello Non Ufficiale: Ammessi agenti esterni alchemici e colpi ad alta letalità."
         };
       }
 
@@ -1628,9 +1927,26 @@
       ? "L'utente richiede una MOSSA SINGOLA (1 solo incantesimo o azione decisiva immediata, senza passaggi multipli)."
       : `L'utente richiede una COMBO TATTICA a esattamente ${steps} passaggi sequenziali numerati.`;
 
+    let duelInstruction = "";
+    if (field === "duel") {
+      const isOff = options && options.duelOfficial !== undefined ? !!options.duelOfficial : (typeof duelOfficial !== "undefined" ? duelOfficial : true);
+      const dType = (options && options.duelType) || (typeof duelType !== "undefined" ? duelType : "magical");
+      const dRole = (options && options.duelHybridRole) || (typeof duelHybridRole !== "undefined" ? duelHybridRole : "user_magic");
+      if (isOff) {
+        duelInstruction = `\nREGOLAMENTO UFFICIALE: Consentiti esclusivamente incantesimi (o corpo a corpo se fisico/ibrido) SENZA provocare ferite mortali all'avversario. Severamente vietati agenti esterni (creature, pozioni, piante) e colpi letali.`;
+      } else {
+        duelInstruction = `\nREGOLAMENTO NON UFFICIALE (MORTALE): Consentiti agenti esterni (creature, pozioni da lancio, piante/erbologia) ed è autorizzato provocare danni mortali o direttamente la morte dell'avversario.`;
+      }
+      if (dType === "physical") {
+        duelInstruction += ` SCONTRO FISICO (corpo a corpo, sala d'armi senza bacchetta).`;
+      } else if (dType === "hybrid") {
+        duelInstruction += ` SCONTRO IBRIDO (${dRole === 'user_magic' ? 'Tu usi la magia con bacchetta vs nemico corpo a corpo' : 'Tu combatti corpo a corpo vs nemico mago con bacchetta'}).`;
+      }
+    }
+
     const systemPrompt = `Sei il Grimorio Tattico di Hogwarts, un esperto maestro di duelli magici, alchimia delle pozioni, creature ed erbologia dell'Arcane GDR.
 L'utente ti chiede una mossa o combo tattica nel campo "${fieldName}".
-${modeInstruction}
+${modeInstruction}${duelInstruction}
 Fornisci SEMPRE:
 1. "${mode === 'single' ? 'Mossa Risolutiva Singola Consigliata' : 'Combo Ottimale Consigliata (' + steps + ' Passaggi)'}": con formule esatte (es. Expelliarmus, Aguamenti, Glisseo), Valenza Magica (1-9), e spiegazione chiara del perché funziona.
 2. "Razionale Tattico & Valenza": spiegazione della logica magica o aritmantica della sequenza.
@@ -1889,6 +2205,15 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
         btn.classList.toggle("text-slate-400", !isCurrent);
       });
 
+      const duelRulesHint = document.getElementById("duelRulesHint");
+      if (duelRulesHint) {
+        if (duelOfficial) {
+          duelRulesHint.innerHTML = `<span class="text-amber-400 font-bold">⚖️ Regolamento Ufficiale:</span> Consentiti solo incantesimi (o corpo a corpo) <span class="text-amber-300 font-semibold">senza provocare ferite mortali</span>. <span class="text-rose-400 font-bold">Vietati</span> agenti esterni (creature, pozioni, piante) e colpi letali.`;
+        } else {
+          duelRulesHint.innerHTML = `<span class="text-rose-400 font-bold">🏴 Regolamento Non Ufficiale:</span> <span class="text-emerald-400 font-bold">Consentiti</span> agenti esterni (creature magiche, pozioni da lancio, erbologia) ed è autorizzato <span class="text-red-400 font-bold">provocare danni mortali o direttamente la morte</span>.`;
+        }
+      }
+
       updateInputPlaceholder();
       renderSuggestionChips();
     }
@@ -2110,13 +2435,26 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       let chipsToRender = fieldData.chips;
 
       if (activeField === "duel") {
-        if (duelType === "physical") {
-          chipsToRender = fieldData.chipsPhysical || fieldData.chips;
-        } else if (duelType === "hybrid") {
-          if (duelHybridRole === "user_magic") {
-            chipsToRender = fieldData.chipsHybridUserMagic || fieldData.chips;
+        if (duelOfficial) {
+          if (duelType === "physical") {
+            chipsToRender = fieldData.chipsOfficialPhysical || fieldData.chipsPhysical || fieldData.chips;
+          } else if (duelType === "hybrid") {
+            chipsToRender = duelHybridRole === "user_magic"
+              ? (fieldData.chipsOfficialHybridUserMagic || fieldData.chipsHybridUserMagic || fieldData.chips)
+              : (fieldData.chipsOfficialHybridEnemyMagic || fieldData.chipsHybridEnemyMagic || fieldData.chips);
           } else {
-            chipsToRender = fieldData.chipsHybridEnemyMagic || fieldData.chips;
+            chipsToRender = fieldData.chipsOfficialMagical || fieldData.chips;
+          }
+        } else {
+          // Unofficial duel: lethal options & external agents (creatures, potions, plants)
+          if (duelType === "physical") {
+            chipsToRender = fieldData.chipsUnofficialPhysical || fieldData.chipsPhysical || fieldData.chips;
+          } else if (duelType === "hybrid") {
+            chipsToRender = duelHybridRole === "user_magic"
+              ? (fieldData.chipsUnofficialHybridUserMagic || fieldData.chipsHybridUserMagic || fieldData.chips)
+              : (fieldData.chipsUnofficialHybridEnemyMagic || fieldData.chipsHybridEnemyMagic || fieldData.chips);
+          } else {
+            chipsToRender = fieldData.chipsUnofficialMagical || fieldData.chips;
           }
         }
       }
