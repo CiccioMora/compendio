@@ -1526,6 +1526,9 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
     const messagesContainer = document.getElementById("chatMessagesContainer");
     const clearBtn = document.getElementById("clearChatBtn");
     const chipsContainer = document.getElementById("chatSuggestionChips");
+    const chipsScrollLeftBtn = document.getElementById("chipsScrollLeftBtn");
+    const chipsScrollRightBtn = document.getElementById("chipsScrollRightBtn");
+    const fieldSelector = document.getElementById("chatFieldSelector");
     const fieldPills = document.querySelectorAll(".chat-field-pill");
     const activeFieldLabel = document.getElementById("activeChatFieldLabel");
     const toggleApiKeyBtn = document.getElementById("toggleChatApiKey");
@@ -1632,6 +1635,100 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       });
     });
 
+    // Horizontal Scroll Helpers & Navigation Arrows
+    function updateScrollArrows() {
+      if (!chipsContainer || !chipsScrollLeftBtn || !chipsScrollRightBtn) return;
+      const maxScroll = chipsContainer.scrollWidth - chipsContainer.clientWidth;
+      if (maxScroll <= 4) {
+        chipsScrollLeftBtn.style.opacity = "0";
+        chipsScrollLeftBtn.style.pointerEvents = "none";
+        chipsScrollRightBtn.style.opacity = "0";
+        chipsScrollRightBtn.style.pointerEvents = "none";
+        return;
+      }
+
+      const atStart = chipsContainer.scrollLeft <= 6;
+      const atEnd = chipsContainer.scrollLeft >= maxScroll - 6;
+
+      chipsScrollLeftBtn.style.opacity = atStart ? "0" : "0.95";
+      chipsScrollLeftBtn.style.pointerEvents = atStart ? "none" : "auto";
+
+      chipsScrollRightBtn.style.opacity = atEnd ? "0" : "0.95";
+      chipsScrollRightBtn.style.pointerEvents = atEnd ? "none" : "auto";
+    }
+
+    chipsScrollLeftBtn?.addEventListener("click", () => {
+      chipsContainer?.scrollBy({ left: -220, behavior: "smooth" });
+    });
+
+    chipsScrollRightBtn?.addEventListener("click", () => {
+      chipsContainer?.scrollBy({ left: 220, behavior: "smooth" });
+    });
+
+    chipsContainer?.addEventListener("scroll", updateScrollArrows);
+
+    // Converts vertical mouse wheel to smooth horizontal scroll
+    function enableHorizontalWheelScroll(element) {
+      if (!element) return;
+      element.addEventListener("wheel", (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && e.deltaY !== 0) {
+          e.preventDefault();
+          element.scrollLeft += e.deltaY * 1.2;
+          updateScrollArrows();
+        }
+      }, { passive: false });
+    }
+
+    // Enables mouse click-and-drag horizontal scroll
+    function enableDragToScroll(element) {
+      if (!element) return;
+      let isDown = false;
+      let startX = 0;
+      let initialScroll = 0;
+      let hasDragged = false;
+
+      element.addEventListener("mousedown", (e) => {
+        if (e.button !== 0) return;
+        isDown = true;
+        hasDragged = false;
+        startX = e.pageX - element.offsetLeft;
+        initialScroll = element.scrollLeft;
+      });
+
+      window.addEventListener("mouseup", () => {
+        if (!isDown) return;
+        isDown = false;
+        setTimeout(() => { hasDragged = false; }, 50);
+      });
+
+      element.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - element.offsetLeft;
+        const walk = (x - startX) * 1.4;
+        if (Math.abs(walk) > 5) {
+          hasDragged = true;
+        }
+        element.scrollLeft = initialScroll - walk;
+        updateScrollArrows();
+      });
+
+      // Capture phase click handler: suppress click if dragged
+      element.addEventListener("click", (e) => {
+        if (hasDragged) {
+          e.preventDefault();
+          e.stopPropagation();
+          hasDragged = false;
+        }
+      }, true);
+    }
+
+    // Initialize horizontal scroll handlers
+    enableHorizontalWheelScroll(chipsContainer);
+    enableDragToScroll(chipsContainer);
+    enableHorizontalWheelScroll(fieldSelector);
+    enableDragToScroll(fieldSelector);
+
     // Render suggestion chips
     function renderSuggestionChips() {
       if (!chipsContainer) return;
@@ -1650,6 +1747,9 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
           }
         });
       });
+
+      chipsContainer.scrollLeft = 0;
+      setTimeout(updateScrollArrows, 30);
     }
 
     // Update active field
@@ -1705,6 +1805,7 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       }
 
       renderSuggestionChips();
+      setTimeout(updateScrollArrows, 80);
       setTimeout(() => chatInput?.focus(), 150);
     }
 

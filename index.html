@@ -7,7 +7,7 @@
   <!-- Tailwind CSS (Gstatic Allowlist per Sandbox Antigravity + CDN Pubblico) -->
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css?v=2.8">
+  <link rel="stylesheet" href="style.css?v=2.9">
 </head>
 <body class="min-h-screen text-slate-200 antialiased selection:bg-amber-500 selection:text-slate-950">
 
@@ -16197,7 +16197,7 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
           <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Campo di Azione:</span>
           <span id="activeChatFieldLabel" class="text-[11px] text-slate-300 font-medium">Selezionato: <strong class="text-amber-300">Duello Magico</strong></span>
         </div>
-        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar" id="chatFieldSelector">
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 thin-scrollbar select-none cursor-grab active:cursor-grabbing" id="chatFieldSelector" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch; touch-action: pan-x;">
           <button type="button" data-field="duel" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-amber-500 text-slate-950 shadow-sm font-magic">
             ⚔️ Duello Magico
           </button>
@@ -16245,9 +16245,22 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
         </div>
       </div>
 
-      <!-- Quick Suggestion Chips Bar -->
-      <div class="px-4 py-2 bg-slate-950/60 border-b border-slate-900 flex items-center gap-1.5 overflow-x-auto no-scrollbar shrink-0" id="chatSuggestionChips">
-        <!-- Filled dynamically by tacticalChat.js -->
+      <!-- Quick Suggestion Chips Bar with Scroll Controls -->
+      <div class="relative bg-slate-950/70 border-b border-slate-900 shrink-0">
+        <!-- Left Scroll Button -->
+        <button type="button" id="chipsScrollLeftBtn" title="Scorri esempi indietro" aria-label="Scorri esempi indietro" class="absolute left-1 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-slate-900/95 hover:bg-amber-500 hover:text-slate-950 text-amber-400 border border-slate-700 shadow-lg flex items-center justify-center text-xs font-bold transition opacity-0 pointer-events-none">
+          ‹
+        </button>
+
+        <!-- Chips Scroll Container -->
+        <div class="px-3 sm:px-4 py-2 flex items-center gap-1.5 overflow-x-auto thin-scrollbar select-none cursor-grab active:cursor-grabbing" id="chatSuggestionChips" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch; touch-action: pan-x;">
+          <!-- Filled dynamically by tacticalChat.js -->
+        </div>
+
+        <!-- Right Scroll Button -->
+        <button type="button" id="chipsScrollRightBtn" title="Scorri esempi avanti" aria-label="Scorri esempi avanti" class="absolute right-1 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-slate-900/95 hover:bg-amber-500 hover:text-slate-950 text-amber-400 border border-slate-700 shadow-lg flex items-center justify-center text-xs font-bold transition opacity-90 hover:opacity-100">
+          ›
+        </button>
       </div>
 
       <!-- Messages Scroll Area -->
@@ -16291,9 +16304,9 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
   </footer>
 
   <!-- SCRIPTS: DATABASE & APP LOGIC -->
-  <script src="spellsData.js?v=2.8"></script>
-  <script src="materieData.js?v=2.8"></script>
-  <script src="tacticalChat.js?v=2.8"></script>
-  <script src="app.js?v=2.8"></script>
+  <script src="spellsData.js?v=2.9"></script>
+  <script src="materieData.js?v=2.9"></script>
+  <script src="tacticalChat.js?v=2.9"></script>
+  <script src="app.js?v=2.9"></script>
 </body>
 </html>

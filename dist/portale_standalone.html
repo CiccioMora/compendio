@@ -162,6 +162,28 @@
       scrollbar-width: none;
     }
 
+    /* Thin elegant magical scrollbar for horizontal chip bars */
+    .thin-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+    .thin-scrollbar::-webkit-scrollbar-track {
+      background: rgba(2, 6, 23, 0.7);
+      border-radius: 4px;
+    }
+    .thin-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(245, 158, 11, 0.35);
+      border-radius: 4px;
+    }
+    .thin-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(245, 158, 11, 0.75);
+    }
+    .thin-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(245, 158, 11, 0.35) rgba(2, 6, 23, 0.7);
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-x;
+    }
+
 </style>
 </head>
 <body class="min-h-screen text-slate-200 antialiased selection:bg-amber-500 selection:text-slate-950">
@@ -16352,7 +16374,7 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
           <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Campo di Azione:</span>
           <span id="activeChatFieldLabel" class="text-[11px] text-slate-300 font-medium">Selezionato: <strong class="text-amber-300">Duello Magico</strong></span>
         </div>
-        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar" id="chatFieldSelector">
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 thin-scrollbar select-none cursor-grab active:cursor-grabbing" id="chatFieldSelector" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch; touch-action: pan-x;">
           <button type="button" data-field="duel" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-amber-500 text-slate-950 shadow-sm font-magic">
             ⚔️ Duello Magico
           </button>
@@ -16400,9 +16422,22 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
         </div>
       </div>
 
-      <!-- Quick Suggestion Chips Bar -->
-      <div class="px-4 py-2 bg-slate-950/60 border-b border-slate-900 flex items-center gap-1.5 overflow-x-auto no-scrollbar shrink-0" id="chatSuggestionChips">
-        <!-- Filled dynamically by tacticalChat.js -->
+      <!-- Quick Suggestion Chips Bar with Scroll Controls -->
+      <div class="relative bg-slate-950/70 border-b border-slate-900 shrink-0">
+        <!-- Left Scroll Button -->
+        <button type="button" id="chipsScrollLeftBtn" title="Scorri esempi indietro" aria-label="Scorri esempi indietro" class="absolute left-1 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-slate-900/95 hover:bg-amber-500 hover:text-slate-950 text-amber-400 border border-slate-700 shadow-lg flex items-center justify-center text-xs font-bold transition opacity-0 pointer-events-none">
+          ‹
+        </button>
+
+        <!-- Chips Scroll Container -->
+        <div class="px-3 sm:px-4 py-2 flex items-center gap-1.5 overflow-x-auto thin-scrollbar select-none cursor-grab active:cursor-grabbing" id="chatSuggestionChips" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch; touch-action: pan-x;">
+          <!-- Filled dynamically by tacticalChat.js -->
+        </div>
+
+        <!-- Right Scroll Button -->
+        <button type="button" id="chipsScrollRightBtn" title="Scorri esempi avanti" aria-label="Scorri esempi avanti" class="absolute right-1 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-slate-900/95 hover:bg-amber-500 hover:text-slate-950 text-amber-400 border border-slate-700 shadow-lg flex items-center justify-center text-xs font-bold transition opacity-90 hover:opacity-100">
+          ›
+        </button>
       </div>
 
       <!-- Messages Scroll Area -->
@@ -30242,6 +30277,9 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
     const messagesContainer = document.getElementById("chatMessagesContainer");
     const clearBtn = document.getElementById("clearChatBtn");
     const chipsContainer = document.getElementById("chatSuggestionChips");
+    const chipsScrollLeftBtn = document.getElementById("chipsScrollLeftBtn");
+    const chipsScrollRightBtn = document.getElementById("chipsScrollRightBtn");
+    const fieldSelector = document.getElementById("chatFieldSelector");
     const fieldPills = document.querySelectorAll(".chat-field-pill");
     const activeFieldLabel = document.getElementById("activeChatFieldLabel");
     const toggleApiKeyBtn = document.getElementById("toggleChatApiKey");
@@ -30348,6 +30386,100 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       });
     });
 
+    // Horizontal Scroll Helpers & Navigation Arrows
+    function updateScrollArrows() {
+      if (!chipsContainer || !chipsScrollLeftBtn || !chipsScrollRightBtn) return;
+      const maxScroll = chipsContainer.scrollWidth - chipsContainer.clientWidth;
+      if (maxScroll <= 4) {
+        chipsScrollLeftBtn.style.opacity = "0";
+        chipsScrollLeftBtn.style.pointerEvents = "none";
+        chipsScrollRightBtn.style.opacity = "0";
+        chipsScrollRightBtn.style.pointerEvents = "none";
+        return;
+      }
+
+      const atStart = chipsContainer.scrollLeft <= 6;
+      const atEnd = chipsContainer.scrollLeft >= maxScroll - 6;
+
+      chipsScrollLeftBtn.style.opacity = atStart ? "0" : "0.95";
+      chipsScrollLeftBtn.style.pointerEvents = atStart ? "none" : "auto";
+
+      chipsScrollRightBtn.style.opacity = atEnd ? "0" : "0.95";
+      chipsScrollRightBtn.style.pointerEvents = atEnd ? "none" : "auto";
+    }
+
+    chipsScrollLeftBtn?.addEventListener("click", () => {
+      chipsContainer?.scrollBy({ left: -220, behavior: "smooth" });
+    });
+
+    chipsScrollRightBtn?.addEventListener("click", () => {
+      chipsContainer?.scrollBy({ left: 220, behavior: "smooth" });
+    });
+
+    chipsContainer?.addEventListener("scroll", updateScrollArrows);
+
+    // Converts vertical mouse wheel to smooth horizontal scroll
+    function enableHorizontalWheelScroll(element) {
+      if (!element) return;
+      element.addEventListener("wheel", (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && e.deltaY !== 0) {
+          e.preventDefault();
+          element.scrollLeft += e.deltaY * 1.2;
+          updateScrollArrows();
+        }
+      }, { passive: false });
+    }
+
+    // Enables mouse click-and-drag horizontal scroll
+    function enableDragToScroll(element) {
+      if (!element) return;
+      let isDown = false;
+      let startX = 0;
+      let initialScroll = 0;
+      let hasDragged = false;
+
+      element.addEventListener("mousedown", (e) => {
+        if (e.button !== 0) return;
+        isDown = true;
+        hasDragged = false;
+        startX = e.pageX - element.offsetLeft;
+        initialScroll = element.scrollLeft;
+      });
+
+      window.addEventListener("mouseup", () => {
+        if (!isDown) return;
+        isDown = false;
+        setTimeout(() => { hasDragged = false; }, 50);
+      });
+
+      element.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - element.offsetLeft;
+        const walk = (x - startX) * 1.4;
+        if (Math.abs(walk) > 5) {
+          hasDragged = true;
+        }
+        element.scrollLeft = initialScroll - walk;
+        updateScrollArrows();
+      });
+
+      // Capture phase click handler: suppress click if dragged
+      element.addEventListener("click", (e) => {
+        if (hasDragged) {
+          e.preventDefault();
+          e.stopPropagation();
+          hasDragged = false;
+        }
+      }, true);
+    }
+
+    // Initialize horizontal scroll handlers
+    enableHorizontalWheelScroll(chipsContainer);
+    enableDragToScroll(chipsContainer);
+    enableHorizontalWheelScroll(fieldSelector);
+    enableDragToScroll(fieldSelector);
+
     // Render suggestion chips
     function renderSuggestionChips() {
       if (!chipsContainer) return;
@@ -30366,6 +30498,9 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
           }
         });
       });
+
+      chipsContainer.scrollLeft = 0;
+      setTimeout(updateScrollArrows, 30);
     }
 
     // Update active field
@@ -30421,6 +30556,7 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       }
 
       renderSuggestionChips();
+      setTimeout(updateScrollArrows, 80);
       setTimeout(() => chatInput?.focus(), 150);
     }
 
