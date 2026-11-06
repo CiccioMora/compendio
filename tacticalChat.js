@@ -126,6 +126,23 @@
     const spells = getSpells();
     const materie = getMaterie();
 
+    // --- Intent & Effect Feature Extraction ---
+    const isExplicitAttack = /(?:voglio|attacc|colpir|lanciar|infligg|provoc|bruciar|atterrar|abbatter|disarmar|far\s+cader|facendolo\s+cader|mandar.*(?:suolo|terra|tappeto))/i.test(q);
+    const isExplicitDefense = /(?:difend|difesa|parar|scherm|neutralizz|estingu|spegner|salvar|proteg|antidot|subisc|avversario\s+(?:usa|ha\s+usato|attacca|mi\s+attacca)|mi\s+attacca)/i.test(q) && !q.includes("voglio attaccare");
+
+    const hasBurn = /(?:bruciat|brucia|ustio|piaghe|vescic|scottatur)/i.test(q);
+    const hasFire = /(?:fuoco|fiamm|incendi|termic)/i.test(q);
+    const hasFall = /(?:cader|cadut|suolo|terra|tappeto|scivol|atterr|sbilanc|inciamp|sgambett|gambe.*moll)/i.test(q);
+    const hasDisarm = /(?:disarm|togli.*bacchett|volar.*bacchett)/i.test(q);
+    const hasStun = /(?:stord|schiant|sven|incoscient|addorment)/i.test(q);
+    const hasImmobilize = /(?:immobil|pietrif|blocca|legar|funi|congel)/i.test(q);
+    const hasBlind = /(?:accec|ciec|buio|fumo|oscur|nebbia|zucca|melofors)/i.test(q);
+    const hasShield = /(?:protego|scudo|barriera)/i.test(q);
+    const hasShieldBreak = (/(?:romper|abbatter|sfondar|superar|bypass|annullar)/i.test(q) && hasShield) || q.includes("superare o abbattere un protego") || q.includes("rompo un protego");
+    const hasLift = /(?:sollev|aria|volar|sospend|levit|levicorpus)/i.test(q);
+    const hasWater = /(?:acqua|bolla|sommerg|affog|ebublio|aguamenti)/i.test(q);
+    const hasCut = /(?:tagli|recid|fendent|squarc|diffindo)/i.test(q);
+
     // 0. MULTIDISCIPLINARY COMBOS (field === "all" or queries mentioning mixed strategies)
     if (field === "all" && (q.includes("integrat") || q.includes("misto") || (q.includes("pianta") && q.includes("pozion")) || q.includes("tutte") || q.includes("combo integrata"))) {
       return {
@@ -170,10 +187,96 @@
     }
 
     // 1. DUEL / COMBAT SCENARIOS
-    if (field === "duel" || (field === "all" && (q.includes("duell") || q.includes("combatt") || q.includes("protego") || q.includes("attacc") || q.includes("scudo") || q.includes("disarm")))) {
+    if (field === "duel" || (field === "all" && (q.includes("duell") || q.includes("combatt") || q.includes("protego") || q.includes("attacc") || q.includes("scudo") || q.includes("disarm") || hasBurn || hasFall))) {
       
-      // Scenario A: Protego / Shield Breaker
-      if (q.includes("protego") || q.includes("scudo") || q.includes("barriera") || q.includes("abbatter") || q.includes("sfondar") || q.includes("superare")) {
+      // Scenario 1: BURN / FIRE + FALL / KNOCKDOWN (e.g. "voglio attaccare il mio avversario provocandogli bruciature e facendolo cadere al suolo")
+      if ((hasBurn || hasFire) && hasFall && (isExplicitAttack || !isExplicitDefense)) {
+        return {
+          title: "Strategia di Duello: Atterramento al Suolo e Attacco Ustionante",
+          fieldLabel: "⚔️ Duello Magico • Combo Offensiva di Controllo & Danno",
+          bestMove: {
+            name: "Sequenza Tattica: Sbilanciamento Rapido (Glisseo) ➔ Piaghe Termiche (Exulcero / Incendio)",
+            steps: [
+              {
+                num: 1,
+                action: "Annullamento dell'Attrito e Atterramento Immediato",
+                spellLink: formatEntityLink("Glisseo", "spell", "glisseo"),
+                details: "Inizia incanalando <strong>Glisseo (Valenza 6 - Terra)</strong> direttamente sulla porzione di pavimento sotto i piedi dell'avversario. Annulla istantaneamente il coefficiente d'attrito: il rivale perde aderenza e stramazza rovinosamente a terra supino, perdendo la linea di mira e l'assetto per erigere uno scudo."
+              },
+              {
+                num: 2,
+                action: "Attacco Ustionante al Bersaglio a Terra",
+                spellLink: formatEntityLink("Exulcero", "spell", "exulcero") + " o " + formatEntityLink("Incendio", "spell", "incendio"),
+                details: "Mentre l'avversario è steso al suolo e tenta disperatamente di rialzarsi, scaglia <strong>Exulcero (Valenza 4 - Maledictio VI Anno)</strong>: la stoccata provoca bruciature cutanee dolorose e piaghe simili a bruciature di sigaro sul torso del rivale, oppure usa <strong>Incendio (Valenza 1)</strong> per scatenare getti di fiamme che incendiano le vesti costringendolo a rotolare nel panico."
+              },
+              {
+                num: 3,
+                action: "Disarmo di Chiusura a Bersaglio Indifeso",
+                spellLink: formatEntityLink("Expelliarmus", "spell", "expelliarmus"),
+                details: "Approfitta dell'attimo in cui il bersaglio è a terra in preda al bruciore per sferrare un netto <strong>Expelliarmus (Valenza 2)</strong> al polso della mano armata, strappandogli la bacchetta prima che possa tentare una replica."
+              }
+            ],
+            rationale: "La combinazione di mobilità annullata (Glisseo V6 / Terra) e danno termico immediato (Exulcero V4 o Incendio V1) garantisce che il secondo colpo vada a segno al 100%: un bersaglio steso a terra non ha appoggio per schivare né equilibrio per sostenere un Protego ortogonale."
+          },
+          alternatives: [
+            {
+              title: "Piano B (Sequenza Inversa: Danno Termico ➔ Spinta Cinetica)",
+              desc: `Colpisci a sorpresa con ${formatEntityLink("Exulcero", "spell", "exulcero")} (V4) per infliggere fitte ustionanti, seguito all'istante da ${formatEntityLink("Flipendo", "spell", "flipendo")} (V1) al torace per scaraventare l'avversario all'indietro facendolo schiantare a gambe all'aria.`
+            },
+            {
+              title: "Piano C (Variante Liquefazione Muscolare: Gambemolli)",
+              desc: `Applica ${formatEntityLink("Locomotor Wibbly", "spell", "locomotor-wibbly")} (V2) per rendere le gambe del rivale come gelatina facendolo crollare al suolo, e subito dopo scaglia ${formatEntityLink("Incendio", "spell", "incendio")} (V1) sul mantello per completare l'obiettivo.`
+            }
+          ],
+          warnings: "Tutti gli incantesimi della combo (Glisseo, Exulcero, Incendio, Flipendo, Expelliarmus) sono pienamente abilitati in duello formale (⚔️ SÌ). Le bruciature da Exulcero vanno trattate a fine scontro con essenza di Dittamo; è rigorosamente proibito infierire con ulteriori fiamme su un avversario già disarmato e al tappeto."
+        };
+      }
+
+      // Scenario 2: BLIND / SMOKE + DISARM
+      if (hasBlind && (hasDisarm || isExplicitAttack)) {
+        return {
+          title: "Strategia di Duello: Accecamento Tattico e Disarmo Rapido",
+          fieldLabel: "⚔️ Duello Magico • Tattica Offensiva Elusiva",
+          bestMove: {
+            name: "Doppietta di Furtività: Cortina Visiva ➔ Disarmo Diretto",
+            steps: [
+              {
+                num: 1,
+                action: "Occultamento della Visuale Avversaria",
+                spellLink: formatEntityLink("Obscuro", "spell", "obscuro") + " o " + formatEntityLink("Fumos", "spell", "fumos"),
+                details: "Incanala <strong>Obscuro (V8)</strong> per bendare istantaneamente gli occhi dell'avversario o <strong>Fumos (V5)</strong> per avvolgerlo in una coltre fumogena: privato del contatto visivo, il rivale non può puntare la bacchetta."
+              },
+              {
+                num: 2,
+                action: "Disarmo con Angolo di Puntamento Imprevisto",
+                spellLink: formatEntityLink("Expelliarmus", "spell", "expelliarmus"),
+                details: "Muoviti lateralmente rispetto al fumo e lancia <strong>Expelliarmus (V2)</strong> guidato dalla voce o dalla sagoma dell'avversario per strappargli la bacchetta."
+              },
+              {
+                num: 3,
+                action: "Blocco Cinetico Finale",
+                spellLink: formatEntityLink("Petrificus Totalus", "spell", "petrificus-totalus"),
+                details: "Senza attendere che il fumo si diradi, completa con la pietrificazione per congelare il corpo della vittima al suolo."
+              }
+            ],
+            rationale: "La rottura del canale ottico impedisce all'avversario di alzare scudi direzionali come Protego, che richiedono l'intercettazione visiva del raggio nemico."
+          },
+          alternatives: [
+            {
+              title: "Piano B: Zucca Trasfigurativa Disorientante",
+              desc: `Usa ${formatEntityLink("Melofors", "spell", "melofors")} (V4) per incastrare una pesante zucca sulla testa dell'avversario togliendogli la vista, poi disarmalo con calma.`
+            },
+            {
+              title: "Piano C: Fiala Fumogena Alchemica",
+              desc: `Frantuma a terra una ${formatEntityLink("Pozione Fumogena", "potion", "pot-fumogena")} per creare una barriera fisica di fumo opaco non dissolvibile da incanti ordinari.`
+            }
+          ],
+          warnings: "Obscuro ed Expelliarmus sono regolari in duello (⚔️ SÌ). Non lanciare sortilegi cinetici pesanti nel fumo se non sei sicuro della posizione degli arbitri di duello."
+        };
+      }
+
+      // Scenario 3: PROTEGO / SHIELD BREAKER
+      if (hasShieldBreak || hasShield) {
         return {
           title: "Strategia di Duello: Superamento e Neutralizzazione di Protego",
           fieldLabel: "⚔️ Duello Magico • Anti-Scudo",
@@ -215,11 +318,11 @@
         };
       }
 
-      // Scenario B: Fire Attack / Neutralizing Fire
-      if (q.includes("fuoco") || q.includes("incendio") || q.includes("fiamma") || q.includes("brucia")) {
+      // Scenario 4: DEFENSIVE COUNTER TO FIRE ATTACK
+      if ((hasFire || hasBurn) && (isExplicitDefense || q.includes("mi attacca") || q.includes("contro") || q.includes("estinguere") || q.includes("neutralizzare un attacco di fuoco"))) {
         return {
           title: "Strategia di Duello: Neutralizzazione Fuoco ed Estinzione Magica",
-          fieldLabel: "⚔️ Duello Magico • Contro-Elementale",
+          fieldLabel: "⚔️ Duello Magico • Contro-Elementale Difensiva",
           bestMove: {
             name: "Contro-Azione Idro-Cinetica e Schianto",
             steps: [
@@ -255,6 +358,92 @@
             }
           ],
           warnings: "Attenzione: in caso di Fuoco Maledetto (Ardemonio), Aguamenti è inefficace; in tal caso l'unica soluzione canonica è la smaterializzazione rapida o il controincanto universale Finite Incantatem eseguito all'unisono da più maghi."
+        };
+      }
+
+      // Scenario 5: FALL / KNOCKDOWN ONLY (ATTACK)
+      if (hasFall && (isExplicitAttack || !isExplicitDefense) && !hasBurn && !hasFire) {
+        return {
+          title: "Strategia di Duello: Atterramento al Suolo e Imprigionamento",
+          fieldLabel: "⚔️ Duello Magico • Controllo Cinetico",
+          bestMove: {
+            name: "Catena di Atterramento e Neutralizzazione a Terra",
+            steps: [
+              {
+                num: 1,
+                action: "Sgretolamento della Postura a Terra",
+                spellLink: formatEntityLink("Flipendo", "spell", "flipendo") + " o " + formatEntityLink("Glisseo", "spell", "glisseo"),
+                details: "Colpisci il torso con una scarica di <strong>Flipendo (V1)</strong> per scagliarlo all'indietro a terra, oppure usa <strong>Glisseo (V6)</strong> sotto i suoi piedi per farlo cadere sul suolo liscio."
+              },
+              {
+                num: 2,
+                action: "Congelamento Motorio a Terra",
+                spellLink: formatEntityLink("Petrificus Totalus", "spell", "petrificus-totalus"),
+                details: "Mentre è schienato al suolo, scaglia <strong>Petrificus Totalus (V2)</strong>: braccia e gambe si saldano bloccando qualsiasi tentativo di rimettersi in piedi."
+              },
+              {
+                num: 3,
+                action: "Chiusura con Disarmo",
+                spellLink: formatEntityLink("Expelliarmus", "spell", "expelliarmus"),
+                details: "Strappa la bacchetta al bersaglio pietrificato con <strong>Expelliarmus (V2)</strong>."
+              }
+            ],
+            rationale: "La Valenza 1 (Flipendo - impulso elementale) seguita da Valenza 2 (Petrificus Totalus) ed Expelliarmus (V2) condivide la risonanza pitagorica riducendo il tempo di latenza tra i colpi."
+          },
+          alternatives: [
+            {
+              title: "Piano B: Maledizione Gambemolli",
+              desc: `Colpisci con ${formatEntityLink("Locomotor Wibbly", "spell", "locomotor-wibbly")} (V2) per fargli cedere le ginocchia e farlo accasciare a terra.`
+            },
+            {
+              title: "Piano C: Legaccio con Incarceramus",
+              desc: `Usa ${formatEntityLink("Incarceramus", "spell", "incarceramus")} (V6) per avvolgere gambe e busto con corde incantate mentre cade.`
+            }
+          ],
+          warnings: "Non colpire con incantesimi lesivi un bersaglio già al suolo e impossibilitato a difendersi."
+        };
+      }
+
+      // Scenario 6: BURN / FIRE ONLY (ATTACK)
+      if ((hasBurn || hasFire) && (isExplicitAttack || !isExplicitDefense)) {
+        return {
+          title: "Strategia di Duello: Attacco Piro-Cinetico e Bruciature",
+          fieldLabel: "⚔️ Duello Magico • Offensiva Termica",
+          bestMove: {
+            name: "Incursione di Fiamme e Piaghe Ustionanti",
+            steps: [
+              {
+                num: 1,
+                action: "Attacco Termico Primario",
+                spellLink: formatEntityLink("Exulcero", "spell", "exulcero") + " o " + formatEntityLink("Incendio", "spell", "incendio"),
+                details: "Scaglia <strong>Exulcero (V4)</strong> per causare bruciature e piaghe dolorose istantanee che costringono il rivale a rompere la guardia, o lancia una fiammata con <strong>Incendio (V1)</strong> mirando alla veste per distrarlo con il fuoco."
+              },
+              {
+                num: 2,
+                action: "Disarmo Rapido su Bersaglio Dolorante",
+                spellLink: formatEntityLink("Expelliarmus", "spell", "expelliarmus"),
+                details: "Mentre l'avversario ritrae la mano o batte sul mantello per spegnere le fiamme, scaglia <strong>Expelliarmus (V2)</strong> al polso per sottrargli l'arma."
+              },
+              {
+                num: 3,
+                action: "Stordimento di Sicurezza",
+                spellLink: formatEntityLink("Stupeficium", "spell", "stupeficium"),
+                details: "Chiudi con <strong>Stupeficium (V7)</strong> per mandare il rivale al tappeto in stato di incoscienza."
+              }
+            ],
+            rationale: "Il dolore acuto da bruciatura rompe istantaneamente la concentrazione mentale necessaria per deviare gli incanti in arrivo."
+          },
+          alternatives: [
+            {
+              title: "Piano B: Fiammata Spinta con Ventus",
+              desc: `Scaglia ${formatEntityLink("Incendio", "spell", "incendio")} (V1) abbinato a un fendente d'aria di ${formatEntityLink("Ventus", "spell", "ventus")} per espandere il raggio termico su un fronte largo.`
+            },
+            {
+              title: "Piano C: Pozione Sputafuoco",
+              desc: `Trattieni un sorso di ${formatEntityLink("Pozione Sputafuoco", "potion", "pot-sputafuoco")} ed espellilo in avanti creando un muro di fiamme inestinguibili.`
+            }
+          ],
+          warnings: "Le bruciature da Exulcero o Incendio richiedono il trattamento con Essenza di Dittamo o balsamo antiscottature a fine duello."
         };
       }
 
@@ -346,7 +535,49 @@
     }
 
     // 2. POTIONS SCENARIOS
-    if (field === "potions" || (field === "all" && (q.includes("pozion") || q.includes("alchim") || q.includes("veleno") || q.includes("antidoto") || q.includes("infuso") || q.includes("calderon")))) {
+    if (field === "potions" || (field === "all" && (q.includes("pozion") || q.includes("alchim") || q.includes("veleno") || q.includes("antidoto") || q.includes("infuso") || q.includes("calderon") || ((hasBurn || q.includes("bruciat") || q.includes("ustion")) && !isExplicitAttack)))) {
+      if (hasBurn || q.includes("bruciatur") || q.includes("ustion") || q.includes("scottatur")) {
+        return {
+          title: "Protocollo Alchemico: Trattamento Medimagico delle Ustioni",
+          fieldLabel: "🧪 Arte delle Pozioni • Medimagia Riparatrice",
+          bestMove: {
+            name: "Cicatrizzazione Epidermica e Terapia Termica Rapida",
+            steps: [
+              {
+                num: 1,
+                action: "Cicatrizzazione Istantanea delle Piaghe",
+                spellLink: formatEntityLink("Essenza di Dittamo", "plant", "p-dittamo"),
+                details: "Applicare 3 gocce di <strong>Essenza di Dittamo</strong> direttamente sulla cute lesa: fumo argenteo si leverà dalla ferita e uno strato di pelle nuova e sana si riformerà all'istante sigillando le bruciature."
+              },
+              {
+                num: 2,
+                action: "Bendaggio Sterile Lenitivo",
+                spellLink: formatEntityLink("Garza di Ortica", "potion", "pot-garza-ortica"),
+                details: "Applicare la <strong>Garza di Ortica</strong> a trama rada per proteggere l'epidermide in rigenerazione da infezioni senza alterare l'azione dei principi attivi."
+              },
+              {
+                num: 3,
+                action: "Terapia Reintegrativa Fisiologica",
+                spellLink: formatEntityLink("Pozione Rigeneratrice", "potion", "pot-rigeneratrice"),
+                details: "Somministrare per via orale per reintegrare i liquidi e i sali persi dallo shock termico dell'ustione."
+              }
+            ],
+            rationale: "L'Essenza di Dittamo arresta il processo necrotico delle cellule colpite da calore o maledizioni lesive (come Exulcero), mentre la Garza di Ortica evita il rigetto cutaneo."
+          },
+          alternatives: [
+            {
+              title: "Piano B: Pasta Cancellalividi & Scottature",
+              desc: "Per scottature superficiali da calderone, applicare la pasta densa a base di calendula e murtlap per lenire il rossore."
+            },
+            {
+              title: "Piano C: Infuso di Mandragola Lenitiva",
+              desc: "In caso di ustioni chimiche o caustiche da pus di Bubotubero, risciacquare con infuso di radice di Mandragola per neutralizzare l'acidità magica."
+            }
+          ],
+          warnings: "L'Essenza di Dittamo è altamente infiammabile prima dell'applicazione: tenere lontano da candele o calderoni accesi."
+        };
+      }
+
       if (q.includes("veleno") || q.includes("antidoto") || q.includes("tossic") || q.includes("avvelen")) {
         return {
           title: "Protocollo Alchemico d'Emergenza: Neutralizzazione Veleni",
@@ -850,25 +1081,56 @@
     }
 
     // 6. GENERAL / SEMANTIC FALLBACK SEARCH ACROSS ENTIRE COMPENDIUM
-    // Scan all spells for matching terms in name, formula, or duelloNote
-    const matchingSpells = spells.filter(s => {
-      const corpus = `${s.nome} ${s.formula} ${s.descrizione} ${s.duelloNote || ''} ${s.tipologia}`.toLowerCase();
-      return q.split(/\s+/).some(word => word.length > 3 && corpus.includes(word));
-    }).slice(0, 3);
+    const stopWords = new Set([
+      "voglio", "vorrei", "posso", "devo", "come", "cosa", "quale", "quali",
+      "il", "lo", "la", "i", "gli", "le", "un", "uno", "una",
+      "di", "a", "da", "in", "con", "su", "per", "tra", "fra",
+      "e", "ed", "o", "od", "ma", "che", "cui", "chi",
+      "mio", "mia", "miei", "mie", "tuo", "tua", "suo", "sua",
+      "avversario", "avversari", "nemico", "nemici", "bersaglio",
+      "fare", "far", "modo", "meglio", "migliore"
+    ]);
 
-    const matchingCreatures = materie.creature.filter(c => {
-      const corpus = `${c.nome} ${c.descrizione} ${c.utilizziMagici || ''}`.toLowerCase();
-      return q.split(/\s+/).some(word => word.length > 3 && corpus.includes(word));
-    }).slice(0, 2);
+    const cleanTokens = q.replace(/[^\w\sàèéìòù]/gi, ' ').split(/\s+/).filter(w => w.length >= 3 && !stopWords.has(w));
 
-    const matchingPotions = materie.pozioni.filter(p => {
-      const corpus = `${p.nome} ${p.descrizione} ${p.tipologia}`.toLowerCase();
-      return q.split(/\s+/).some(word => word.length > 3 && corpus.includes(word));
-    }).slice(0, 2);
+    function scoreItem(item, isSpell) {
+      let score = 0;
+      const text = `${item.nome} ${item.formula || ''} ${item.descrizione} ${item.duelloNote || ''} ${item.tipologia || ''} ${item.utilizziMagici || ''}`.toLowerCase();
+      cleanTokens.forEach(tok => {
+        if (item.nome.toLowerCase().includes(tok)) score += 12;
+        if (item.formula && item.formula.toLowerCase().includes(tok)) score += 14;
+        if (item.duelloNote && item.duelloNote.toLowerCase().includes(tok)) score += 8;
+        if (item.descrizione.toLowerCase().includes(tok)) score += 4;
+        if (item.tipologia && item.tipologia.toLowerCase().includes(tok)) score += 6;
+      });
+      if (isSpell) {
+        if ((isExplicitAttack || field === "duel") && item.inDuello) score += 15;
+        if ((isExplicitAttack || field === "duel") && !item.inDuello) score -= 20;
+      }
+      return score;
+    }
+
+    const matchingSpells = spells
+      .map(s => ({ item: s, score: scoreItem(s, true) }))
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .map(x => x.item);
+
+    const matchingCreatures = materie.creature
+      .map(c => ({ item: c, score: scoreItem(c, false) }))
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .map(x => x.item);
+
+    const matchingPotions = materie.pozioni
+      .map(p => ({ item: p, score: scoreItem(p, false) }))
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .map(x => x.item);
 
     // Build synthesized custom advice
     const spellA = matchingSpells[0] || spells.find(s => s.id === "expelliarmus") || spells[0];
-    const spellB = matchingSpells[1] || spells.find(s => s.id === "stupeficium") || spells[1];
+    const spellB = matchingSpells[1] || (spellA.id === "expelliarmus" ? spells.find(s => s.id === "stupeficium") : spells.find(s => s.id === "expelliarmus")) || spells[1];
     const potionAlt = matchingPotions[0];
     const creatureAlt = matchingCreatures[0];
 
