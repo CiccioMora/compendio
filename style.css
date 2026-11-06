@@ -89,12 +89,12 @@
       display: none !important;
     }
 
-    #spellModal, #calculatorModal, #itemModal {
+    #spellModal, #calculatorModal, #itemModal, #tacticalChatDrawer {
       display: none !important;
       pointer-events: none !important;
     }
 
-    #spellModal.active, #calculatorModal.active, #itemModal.active {
+    #spellModal.active, #calculatorModal.active, #itemModal.active, #tacticalChatDrawer.active {
       display: flex !important;
       pointer-events: auto !important;
     }
@@ -107,4 +107,39 @@
     .year-tab, .duel-seg-btn, .val-pill, .macro-btn, .macro-tab, .year-filter-btn {
       cursor: pointer;
       user-select: none;
+    }
+
+    /* Tactical Chat & FAB styling */
+    @keyframes fabGlowPulse {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(245, 158, 11, 0.4), 0 10px 25px -5px rgba(0, 0, 0, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 35px rgba(245, 158, 11, 0.75), 0 12px 30px -5px rgba(217, 119, 6, 0.5);
+      }
+    }
+    .fab-glow {
+      animation: fabGlowPulse 2.8s infinite ease-in-out;
+    }
+
+    @keyframes chatBubbleEnter {
+      from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    .chat-bubble-enter {
+      animation: chatBubbleEnter 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }

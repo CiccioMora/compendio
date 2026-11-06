@@ -7,7 +7,7 @@
   <!-- Tailwind CSS (Gstatic Allowlist per Sandbox Antigravity + CDN Pubblico) -->
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css?v=2.4">
+  <link rel="stylesheet" href="style.css?v=2.5">
 </head>
 <body class="min-h-screen text-slate-200 antialiased selection:bg-amber-500 selection:text-slate-950">
 
@@ -39,7 +39,13 @@
         <!-- Quick Aritmancy Calculator Button -->
         <button id="openCalculatorBtn" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/30 transition flex items-center gap-1.5 shadow-sm">
           <span>🔢</span>
-          <span>Calcolatore Valenza</span>
+          <span class="hidden md:inline">Calcolatore Valenza</span>
+          <span class="md:hidden">Valenza</span>
+        </button>
+        <!-- Grimorio Tattico Chat Button -->
+        <button id="openTacticalChatBtn" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 hover:bg-amber-400 text-slate-950 border border-amber-300 transition flex items-center gap-1.5 shadow-md font-magic font-bold">
+          <span>⚡</span>
+          <span>Grimorio Tattico</span>
         </button>
       </div>
     </div>
@@ -15859,7 +15865,7 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
   </main>
 
   <!-- MODAL: SPELL DETAIL WITH LIVE WAND PATH & ARITHMANCY BREAKDOWN -->
-  <div id="spellModal" style="display: none;" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+  <div id="spellModal" style="display: none;" class="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto glass-panel rounded-2xl border border-amber-500/40 shadow-2xl p-6 sm:p-8 transform scale-95 transition-transform duration-300" id="modalCard">
       
       <!-- Close button -->
@@ -16020,7 +16026,7 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
   </div>
 
   <!-- MODAL: ARITHMANCY CALCULATOR TOOL -->
-  <div id="calculatorModal" style="display: none;" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+  <div id="calculatorModal" style="display: none;" class="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="relative w-full max-w-xl glass-panel rounded-2xl border border-amber-500/40 shadow-2xl p-6 sm:p-7 transform scale-95 transition-transform duration-300" id="calcCard">
       <button id="closeCalcBtn" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center">✕</button>
 
@@ -16102,7 +16108,7 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
   </div>
 
   <!-- MODAL: DETAILED ITEM MODAL (CREATURE, PIANTE, POZIONI - NO VALENZA) -->
-  <div id="itemModal" style="display: none;" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+  <div id="itemModal" style="display: none;" class="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div id="itemModalBackdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity cursor-pointer"></div>
     <div class="relative w-full max-w-2xl max-h-[88vh] overflow-y-auto glass-panel rounded-2xl border border-amber-500/40 shadow-2xl p-6 sm:p-7 z-10 flex flex-col justify-between transform scale-95 transition-transform duration-300" id="itemModalCard">
       <div>
@@ -16137,6 +16143,118 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
     </div>
   </div>
 
+  <!-- FLOATING ACTION BUTTON PER CHAT TATTICA -->
+  <button id="fabTacticalChatBtn" class="fixed bottom-6 right-6 z-40 px-4 py-3 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 text-slate-950 font-magic font-bold text-xs sm:text-sm shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 border-2 border-amber-300 ring-4 ring-amber-500/20 fab-glow group cursor-pointer" title="Apri il Grimorio Tattico & Consigliere di Duello">
+    <span class="text-lg group-hover:rotate-12 transition-transform">⚡</span>
+    <span class="hidden sm:inline">Grimorio Tattico</span>
+    <span class="sm:hidden">Consigliere</span>
+  </button>
+
+  <!-- MODAL / DRAWER: GRIMORIO TATTICO & CHAT CONSIGLIERE DI DUELLO -->
+  <div id="tacticalChatDrawer" style="display: none;" class="fixed inset-0 z-50 flex items-center justify-end p-0 sm:p-4 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div id="tacticalChatBackdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity cursor-pointer"></div>
+    
+    <div class="relative w-full sm:max-w-xl md:max-w-2xl h-full sm:h-[92vh] max-h-screen bg-slate-950 sm:rounded-2xl border-l sm:border border-amber-500/40 shadow-2xl flex flex-col z-10 transform translate-x-4 transition-transform duration-300 overflow-hidden" id="tacticalChatCard">
+      
+      <!-- Drawer Header -->
+      <div class="px-5 py-4 border-b border-amber-500/25 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-slate-950 shadow-md">
+            <span class="text-xl">⚡</span>
+          </div>
+          <div>
+            <h3 class="font-magic text-lg font-bold text-slate-100 flex items-center gap-2">
+              Grimorio Tattico
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30 uppercase tracking-widest font-sans font-semibold">Consigliere</span>
+            </h3>
+            <p class="text-xs text-slate-400">Ottimizzazione strategica delle azioni e combo didattiche</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <button type="button" id="toggleChatApiKey" title="Configura Chiave API (Opzionale)" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-amber-300 border border-slate-800 transition text-xs">
+            🔑
+          </button>
+          <button type="button" id="clearChatBtn" title="Azzera Conversazione" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-rose-400 border border-slate-800 transition text-xs">
+            🧹
+          </button>
+          <button type="button" id="closeTacticalChatBtn" class="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center border border-slate-700 transition">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Optional API Key Row (Collapsible) -->
+      <div id="apiKeyConfigRow" class="hidden px-5 py-3 bg-amber-950/30 border-b border-amber-500/20 text-xs shrink-0 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-amber-300 font-semibold flex items-center gap-1.5">
+            <span>🔑</span> Integrazione Gemini API (Opzionale)
+          </span>
+          <span class="text-[10px] text-slate-400">Motore Heuristico Offline attivo di default</span>
+        </div>
+        <div class="flex gap-2">
+          <input type="password" id="geminiApiKeyInput" placeholder="Incolla Google Gemini API Key per risposte estese generative..." class="flex-1 bg-slate-900/90 border border-slate-700 text-slate-200 text-xs rounded-lg px-3 py-1.5 focus:outline-none focus:border-amber-400 font-mono">
+          <button type="button" id="saveApiKeyBtn" class="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold rounded-lg text-xs transition">Salva</button>
+        </div>
+      </div>
+
+      <!-- Discipline Field Selector Bar (Tabs) -->
+      <div class="px-4 py-2.5 bg-slate-900/80 border-b border-slate-800/80 shrink-0">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Campo di Azione:</span>
+          <span id="activeChatFieldLabel" class="text-[11px] text-slate-300 font-medium">Selezionato: <strong class="text-amber-300">Duello Magico</strong></span>
+        </div>
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar" id="chatFieldSelector">
+          <button type="button" data-field="duel" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-amber-500 text-slate-950 shadow-sm font-magic">
+            ⚔️ Duello Magico
+          </button>
+          <button type="button" data-field="potions" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-amber-300 border border-slate-800 font-magic">
+            🧪 Pozioni
+          </button>
+          <button type="button" data-field="creatures" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-amber-300 border border-slate-800 font-magic">
+            🐉 Creature
+          </button>
+          <button type="button" data-field="herbology" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-amber-300 border border-slate-800 font-magic">
+            🌿 Erbologia
+          </button>
+          <button type="button" data-field="runes" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-amber-300 border border-slate-800 font-magic">
+            ᛟ Rune & Aritmanzia
+          </button>
+          <button type="button" data-field="all" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-amber-300 border border-slate-800 font-magic">
+            ✨ Azione Globale
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Suggestion Chips Bar -->
+      <div class="px-4 py-2 bg-slate-950/60 border-b border-slate-900 flex items-center gap-1.5 overflow-x-auto no-scrollbar shrink-0" id="chatSuggestionChips">
+        <!-- Filled dynamically by tacticalChat.js -->
+      </div>
+
+      <!-- Messages Scroll Area -->
+      <div id="chatMessagesContainer" class="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4 bg-gradient-to-b from-slate-950 via-slate-900/40 to-slate-950">
+        <!-- Messages appended dynamically -->
+      </div>
+
+      <!-- Chat Input Footer -->
+      <div class="p-3 sm:p-4 bg-slate-950 border-t border-slate-800/80 shrink-0">
+        <form id="chatForm" class="flex items-center gap-2">
+          <button type="button" id="chatVoiceOrSampleBtn" title="Inserisci suggerimento casuale" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-amber-300 border border-slate-800 transition text-sm shrink-0">
+            🎲
+          </button>
+          <input type="text" id="chatInput" placeholder="Descrivi la situazione o l'azione che vuoi compiere..." class="flex-1 bg-slate-900/90 border border-slate-700/80 text-slate-200 text-xs sm:text-sm rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400/50 transition">
+          <button type="submit" id="chatSendBtn" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-magic font-bold text-xs sm:text-sm transition flex items-center gap-1.5 shadow-md shrink-0">
+            <span>Invia</span>
+            <span>➔</span>
+          </button>
+        </form>
+        <div class="flex items-center justify-between mt-2 text-[10px] text-slate-400 px-1">
+          <span>Premi Invio per inviare • Clicca sui nomi delle magie per aprire la scheda</span>
+          <span class="font-code text-amber-500/80">Offline Engine • 562 Nozioni</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="border-t border-slate-900 py-8 bg-slate-950 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 space-y-2">
@@ -16153,8 +16271,9 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
   </footer>
 
   <!-- SCRIPTS: DATABASE & APP LOGIC -->
-  <script src="spellsData.js?v=2.4"></script>
-  <script src="materieData.js?v=2.4"></script>
-  <script src="app.js?v=2.4"></script>
+  <script src="spellsData.js?v=2.5"></script>
+  <script src="materieData.js?v=2.5"></script>
+  <script src="tacticalChat.js?v=2.5"></script>
+  <script src="app.js?v=2.5"></script>
 </body>
 </html>

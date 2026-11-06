@@ -1571,6 +1571,9 @@ function initPortal() {
       closeSpellModal();
       closeItemModal();
       closeCalculator();
+      if (typeof window.closeTacticalChat === "function") {
+        window.closeTacticalChat();
+      }
     }
   });
 

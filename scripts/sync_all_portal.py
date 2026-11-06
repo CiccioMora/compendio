@@ -196,6 +196,9 @@ with open(f'{BASE_DIR}/spellsData.js', 'r', encoding='utf-8') as f:
 with open(f'{BASE_DIR}/materieData.js', 'r', encoding='utf-8') as f:
     materie_data_content = f.read()
 
+with open(f'{BASE_DIR}/tacticalChat.js', 'r', encoding='utf-8') as f:
+    tactical_chat_content = f.read()
+
 with open(f'{BASE_DIR}/app.js', 'r', encoding='utf-8') as f:
     app_js_content = f.read()
 
@@ -203,22 +206,27 @@ with open(f'{BASE_DIR}/app.js', 'r', encoding='utf-8') as f:
 standalone_html = html
 standalone_html = re.sub(
     r'<link rel="stylesheet" href="style\.css(?:\?[^"]*)?">',
-    f'<style>\n{css_content}\n</style>',
+    lambda m: f'<style>\n{css_content}\n</style>',
     standalone_html
 )
 standalone_html = re.sub(
     r'<script src="spellsData\.js(?:\?[^"]*)?"></script>',
-    f'<script>\n{spells_data_content}\n</script>',
+    lambda m: f'<script>\n{spells_data_content}\n</script>',
     standalone_html
 )
 standalone_html = re.sub(
     r'<script src="materieData\.js(?:\?[^"]*)?"></script>',
-    f'<script>\n{materie_data_content}\n</script>',
+    lambda m: f'<script>\n{materie_data_content}\n</script>',
+    standalone_html
+)
+standalone_html = re.sub(
+    r'<script src="tacticalChat\.js(?:\?[^"]*)?"></script>',
+    lambda m: f'<script>\n{tactical_chat_content}\n</script>',
     standalone_html
 )
 standalone_html = re.sub(
     r'<script src="app\.js(?:\?[^"]*)?"></script>',
-    f'<script>\n{app_js_content}\n</script>',
+    lambda m: f'<script>\n{app_js_content}\n</script>',
     standalone_html
 )
 
