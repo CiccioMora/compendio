@@ -16374,6 +16374,32 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
         </div>
       </div>
 
+      <!-- Tactical Mode & Steps Toolbar -->
+      <div class="px-4 py-2 bg-slate-900/90 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2.5 shrink-0" id="chatModeToolbar">
+        <!-- Mode: Single Move vs Combo -->
+        <div class="flex items-center gap-1.5">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mr-0.5">Risoluzione:</span>
+          <div class="inline-flex rounded-lg p-0.5 bg-slate-950 border border-slate-800 shadow-inner" id="chatModeSelector">
+            <button type="button" data-mode="single" id="modeBtnSingle" class="chat-mode-btn px-2.5 py-1 rounded-md text-[11px] font-semibold transition font-magic text-slate-400 hover:text-amber-300">
+              ⚡ Mossa Singola
+            </button>
+            <button type="button" data-mode="combo" id="modeBtnCombo" class="chat-mode-btn active px-2.5 py-1 rounded-md text-[11px] font-semibold transition font-magic bg-amber-500 text-slate-950 shadow-sm font-bold">
+              🔗 Combo
+            </button>
+          </div>
+        </div>
+
+        <!-- Steps for Combo (2, 3, 4) -->
+        <div class="flex items-center gap-1.5 transition-opacity duration-200" id="comboStepsContainer">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Passaggi:</span>
+          <div class="inline-flex rounded-lg p-0.5 bg-slate-950 border border-slate-800 shadow-inner" id="chatStepsSelector">
+            <button type="button" data-steps="2" class="chat-step-btn px-2 py-0.5 rounded text-[11px] font-medium transition text-slate-400 hover:text-amber-300">2 Passi</button>
+            <button type="button" data-steps="3" class="chat-step-btn active px-2 py-0.5 rounded text-[11px] font-medium transition bg-amber-500 text-slate-950 font-bold">3 Passi</button>
+            <button type="button" data-steps="4" class="chat-step-btn px-2 py-0.5 rounded text-[11px] font-medium transition text-slate-400 hover:text-amber-300">4 Passi</button>
+          </div>
+        </div>
+      </div>
+
       <!-- Quick Suggestion Chips Bar -->
       <div class="px-4 py-2 bg-slate-950/60 border-b border-slate-900 flex items-center gap-1.5 overflow-x-auto no-scrollbar shrink-0" id="chatSuggestionChips">
         <!-- Filled dynamically by tacticalChat.js -->
@@ -28778,6 +28804,8 @@ if (typeof globalThis !== 'undefined') {
 
   // State
   let activeField = "duel";
+  let activeMode = "combo"; // "single" | "combo"
+  let activeSteps = 3;      // 2 | 3 | 4
   let chatHistory = [];
   let isProcessing = false;
 
@@ -28810,11 +28838,176 @@ if (typeof globalThis !== 'undefined') {
     return `<strong>${name}</strong>`;
   }
 
-  // --- KNOWLEDGE & HEURISTIC TACTICAL REASONING ENGINE ---
-  function computeTacticalAdvice(field, query) {
+  // --- ADAPTER FOR SINGLE MOVE OR COMBO (2, 3, 4 STEPS) ---
+  function formatAdviceForModeAndSteps(advice, mode, requestedSteps, field, query) {
+    if (!advice || !advice.bestMove || !Array.isArray(advice.bestMove.steps)) {
+      return advice;
+    }
+
     const q = (query || "").toLowerCase();
-    const spells = getSpells();
-    const materie = getMaterie();
+    const originalSteps = advice.bestMove.steps;
+
+    if (mode === "single") {
+      let chosenIdx = 0;
+      if (originalSteps.length > 1) {
+        const hasDmgQuery = /(?:ustio|brucia|ferit|danno|colp|tagli|fiamm|esplod|fulmin|stord|disarm)/i.test(q);
+        const s1Text = (originalSteps[1].action + " " + originalSteps[1].details).toLowerCase();
+        if (hasDmgQuery && /(?:ustio|brucia|ferit|danno|colp|tagli|fiamm|esplod|fulmin|stord|disarm)/i.test(s1Text)) {
+          chosenIdx = 1;
+        }
+      }
+      const base = originalSteps[chosenIdx] || originalSteps[0];
+      const cleanAction = base.action.replace(/^(?:Fase\s+[^:]+:|Inizio\s+Tattico:|Attacco\s+Decisivo:)\s*/i, "");
+
+      const singleStep = {
+        num: 1,
+        action: `Mossa Risolutiva: ${cleanAction}`,
+        spellLink: base.spellLink,
+        details: base.details
+      };
+
+      return {
+        ...advice,
+        mode: "single",
+        stepsCount: 1,
+        bestMove: {
+          ...advice.bestMove,
+          name: `Azione Singola: ${cleanAction}`,
+          steps: [singleStep],
+          rationale: `Risoluzione immediata in colpo singolo: ${advice.bestMove.rationale}`
+        }
+      };
+    }
+
+    // Mode === "combo"
+    const targetCount = Math.max(2, Math.min(4, Number(requestedSteps) || 3));
+    let newSteps = [];
+
+    if (targetCount === 2) {
+      newSteps = [
+        { ...originalSteps[0], num: 1 },
+        { ...(originalSteps[1] || originalSteps[0]), num: 2 }
+      ];
+    } else if (targetCount === 3) {
+      if (originalSteps.length >= 3) {
+        newSteps = [
+          { ...originalSteps[0], num: 1 },
+          { ...originalSteps[1], num: 2 },
+          { ...originalSteps[2], num: 3 }
+        ];
+      } else {
+        newSteps = [
+          { ...originalSteps[0], num: 1 },
+          { ...(originalSteps[1] || originalSteps[0]), num: 2 },
+          {
+            num: 3,
+            action: "Neutralizzazione di Chiusura",
+            spellLink: formatEntityLink("Expelliarmus", "spell", "expelliarmus"),
+            details: "Approfitta dello sbilanciamento dell'avversario per sferrare un disarmo immediato o bloccare l'azione con un incantesimo di stordimento."
+          }
+        ];
+      }
+    } else if (targetCount === 4) {
+      let s1 = { ...originalSteps[0], num: 1 };
+      let s2 = { ...(originalSteps[1] || originalSteps[0]), num: 2 };
+      let s3 = originalSteps[2]
+        ? { ...originalSteps[2], num: 3 }
+        : {
+            num: 3,
+            action: "Neutralizzazione di Chiusura",
+            spellLink: formatEntityLink("Expelliarmus", "spell", "expelliarmus"),
+            details: "Disarma o stordisci l'avversario approfittando della rottura della sua guardia difensiva."
+          };
+
+      let s4;
+      if (originalSteps[3]) {
+        s4 = { ...originalSteps[3], num: 4 };
+      } else if (field === "duel") {
+        s4 = {
+          num: 4,
+          action: "Confinamento Permanente e Messa in Sicurezza",
+          spellLink: formatEntityLink("Petrificus Totalus", "spell", "petrificus-totalus") + " o " + formatEntityLink("Incarceramus", "spell", "incarceramus"),
+          details: "Per scongiurare qualsiasi contrattacco fisico o recupero della bacchetta caduta, completa la sequenza con <strong>Petrificus Totalus (Valenza 8)</strong> per irrigidire completamente il corpo del rivale o <strong>Incarceramus (Valenza 6)</strong> per avvolgerlo in funi magiche indistruttibili."
+        };
+      } else if (field === "potions") {
+        s4 = {
+          num: 4,
+          action: "Stabilizzazione Post-Trattamento e Monitoraggio",
+          spellLink: formatEntityLink("Pozione Rinvigorente", "potion", "pot-rinvigorente"),
+          details: "Dopo la somministrazione o l'azione primaria, fai assumere una dose di <strong>Pozione Rinvigorente</strong> per ripristinare la vitalità dei tessuti ed eliminare i residui di shock o affaticamento alchemico."
+        };
+      } else if (field === "creatures") {
+        s4 = {
+          num: 4,
+          action: "Confinamento e Segnalazione di Sicurezza",
+          spellLink: formatEntityLink("Impedimenta", "spell", "impedimenta") + " / " + formatEntityLink("Signo", "spell", "signo"),
+          details: "Delimita l'area attorno all'esemplare con un perimetro di sicurezza incantato e contatta un Custode delle Creature Magiche per la custodia definitiva."
+        };
+      } else if (field === "herbology") {
+        s4 = {
+          num: 4,
+          action: "Riposizionamento Conservativo e Sigillo Botanico",
+          spellLink: formatEntityLink("Herbivicus", "spell", "herbivicus"),
+          details: "Riponi il campione o l'esemplare in un contenitore sigillato con terra ricca di sostanze nutritive e stabilizza la temperatura ambientale per non alterarne le proprietà officinali."
+        };
+      } else if (field === "runes") {
+        s4 = {
+          num: 4,
+          action: "Ancoraggio e Sigillatura del Nodo Runico",
+          spellLink: formatEntityLink("Iùngo", "spell", "iungo") + " con " + formatEntityLink("Jera", "rune", "runa-jera"),
+          details: "Incanala <strong>Iùngo</strong> per legare la matrice appena modificata al ciclo naturale rappresentato dalla runa <strong>Jera</strong>, garantendo stabilità eterna e protezione da futuri sovraccarichi."
+        };
+      } else {
+        s4 = {
+          num: 4,
+          action: "Bonifica Ambientale e Verifica Anti-Traccia",
+          spellLink: formatEntityLink("Finite Incantatem", "spell", "finite-incantatem"),
+          details: "Esegui una scansione ad ampio raggio con <strong>Finite Incantatem</strong> per dissipare ogni residuo magico, fumo o tossina dispersa nell'aria, lasciando la zona priva di pericoli latenti."
+        };
+      }
+
+      newSteps = [s1, s2, s3, s4];
+    }
+
+    return {
+      ...advice,
+      mode: "combo",
+      stepsCount: targetCount,
+      bestMove: {
+        ...advice.bestMove,
+        steps: newSteps
+      }
+    };
+  }
+
+  // --- KNOWLEDGE & HEURISTIC TACTICAL REASONING ENGINE ---
+  function computeTacticalAdvice(field, query, options = {}) {
+    const q = (query || "").toLowerCase();
+
+    // Determine requested resolution mode and step count
+    const fallbackMode = typeof activeMode !== "undefined" ? activeMode : "combo";
+    const fallbackSteps = typeof activeSteps !== "undefined" ? activeSteps : 3;
+    let reqMode = (options && options.mode) || fallbackMode;
+    let reqSteps = Number((options && options.steps) || fallbackSteps);
+
+    // Natural language query overrides
+    if (/(?:mossa\s+singola|singola\s+mossa|solo\s+un[ao]\s+mossa|un\s+solo\s+colpo|colpo\s+singolo|singolo\s+incant|1\s+pass|un\s+pass)/i.test(q)) {
+      reqMode = "single";
+      reqSteps = 1;
+    } else if (/(?:2\s+pass|due\s+pass|combo\s+(?:da|a)\s+2)/i.test(q)) {
+      reqMode = "combo";
+      reqSteps = 2;
+    } else if (/(?:4\s+pass|quattro\s+pass|combo\s+(?:da|a)\s+4)/i.test(q)) {
+      reqMode = "combo";
+      reqSteps = 4;
+    } else if (/(?:3\s+pass|tre\s+pass|combo\s+(?:da|a)\s+3)/i.test(q)) {
+      reqMode = "combo";
+      reqSteps = 3;
+    }
+
+    function evaluateRawAdvice(field, query, q) {
+      const spells = getSpells();
+      const materie = getMaterie();
 
     // --- Intent & Effect Feature Extraction ---
     const isExplicitAttack = /(?:voglio|attacc|colpir|lanciar|infligg|provoc|bruciar|atterrar|abbatter|disarmar|far\s+cader|facendolo\s+cader|mandar.*(?:suolo|terra|tappeto))/i.test(q);
@@ -29861,15 +30054,26 @@ if (typeof globalThis !== 'undefined') {
       ],
       warnings: `Verifica sempre che gli incantesimi scelti siano autorizzati per il contesto specifico (Duello: ${spellA.inDuello ? '⚔️ Abilitato' : '⛔ Non da duello'}).`
     };
+    }
+
+    const rawAdvice = evaluateRawAdvice(field, query, q);
+    return formatAdviceForModeAndSteps(rawAdvice, reqMode, reqSteps, field, query);
   }
 
   // --- GEMINI API FALLBACK CLIENT (OPTIONAL POWER-USER INTEGRATION) ---
-  async function callGeminiApi(apiKey, field, query) {
+  async function callGeminiApi(apiKey, field, query, options = {}) {
     const fieldName = CHAT_FIELDS[field] ? CHAT_FIELDS[field].name : "Mondo Magico";
+    const mode = (options && options.mode) || activeMode || "combo";
+    const steps = Number((options && options.steps) || activeSteps || 3);
+    const modeInstruction = mode === "single"
+      ? "L'utente richiede una MOSSA SINGOLA (1 solo incantesimo o azione decisiva immediata, senza passaggi multipli)."
+      : `L'utente richiede una COMBO TATTICA a esattamente ${steps} passaggi sequenziali numerati.`;
+
     const systemPrompt = `Sei il Grimorio Tattico di Hogwarts, un esperto maestro di duelli magici, alchimia delle pozioni, creature ed erbologia dell'Arcane GDR.
 L'utente ti chiede una mossa o combo tattica nel campo "${fieldName}".
+${modeInstruction}
 Fornisci SEMPRE:
-1. "Mossa o Combo Migliore (Scelta Ottimale)": con step numerati, formule esatte (es. Expelliarmus, Aguamenti, Glisseo), Valenza Magica (1-9), e spiegazione chiara del perché funziona.
+1. "${mode === 'single' ? 'Mossa Risolutiva Singola Consigliata' : 'Combo Ottimale Consigliata (' + steps + ' Passaggi)'}": con formule esatte (es. Expelliarmus, Aguamenti, Glisseo), Valenza Magica (1-9), e spiegazione chiara del perché funziona.
 2. "Razionale Tattico & Valenza": spiegazione della logica magica o aritmantica della sequenza.
 3. "Alternative Tattiche": Piano B (alternativa elusiva o sfondamento) e Piano C (soluzione con pozione, pianta o runa).
 4. "Avvertenze & Regole di Duello": se gli incantesimi sono da duello (Sì/No) e controindicazioni.
@@ -29933,9 +30137,20 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
     }
 
     // Structured Advice from Tactical Engine
+    const isSingle = advice.mode === "single";
+    const stepsCount = advice.stepsCount || (advice.bestMove && advice.bestMove.steps ? advice.bestMove.steps.length : 1);
+
+    const modeBadge = isSingle
+      ? `<span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 whitespace-nowrap font-bold flex items-center gap-1 shadow-sm"><span>⚡</span> Mossa Singola</span>`
+      : `<span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 whitespace-nowrap font-bold flex items-center gap-1 shadow-sm"><span>🔗</span> Combo (${stepsCount} Passaggi)</span>`;
+
+    const sectionTitle = isSingle
+      ? `<span>⚡</span> Mossa Risolutiva Singola Consigliata:`
+      : `<span>🎯</span> Combo Ottimale Consigliata (${stepsCount} Passaggi):`;
+
     const stepsHtml = advice.bestMove.steps.map(s => `
       <div class="flex items-start gap-2.5 p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/80">
-        <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
+        <span class="w-5 h-5 rounded-full ${isSingle ? 'bg-amber-500/20 text-amber-300 border-amber-500/40' : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'} border flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
           ${s.num}
         </span>
         <div class="space-y-1 w-full">
@@ -29960,23 +30175,26 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
     return `
       <div class="chat-message assistant-msg p-4 sm:p-5 rounded-2xl bg-slate-900/95 border border-amber-500/35 text-xs text-slate-200 shadow-2xl space-y-3.5 chat-bubble-enter">
         <!-- Header -->
-        <div class="flex items-center justify-between border-b border-slate-800 pb-2.5">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2.5 flex-wrap gap-2">
           <div class="flex items-center gap-2">
             <span class="text-base">🪄</span>
             <span class="font-magic font-bold text-white text-sm sm:text-base tracking-wide">${advice.title}</span>
           </div>
-          <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30 whitespace-nowrap font-medium">
-            ${advice.fieldLabel}
-          </span>
+          <div class="flex items-center gap-1.5 flex-wrap">
+            ${modeBadge}
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 whitespace-nowrap font-medium">
+              ${advice.fieldLabel}
+            </span>
+          </div>
         </div>
 
         <!-- Mossa o Combo Ottimale -->
         <div class="space-y-2">
-          <div class="text-[11px] uppercase tracking-wider font-bold text-emerald-400 flex items-center gap-1.5">
-            <span>🎯</span> Mossa o Combo Ottimale Consigliata:
+          <div class="text-[11px] uppercase tracking-wider font-bold ${isSingle ? 'text-amber-400' : 'text-emerald-400'} flex items-center gap-1.5">
+            ${sectionTitle}
           </div>
-          <div class="p-3 rounded-xl bg-slate-950/90 border border-emerald-500/30 space-y-2">
-            <div class="font-magic font-bold text-emerald-300 text-xs">${advice.bestMove.name}</div>
+          <div class="p-3 rounded-xl bg-slate-950/90 border ${isSingle ? 'border-amber-500/40' : 'border-emerald-500/30'} space-y-2">
+            <div class="font-magic font-bold ${isSingle ? 'text-amber-300' : 'text-emerald-300'} text-xs">${advice.bestMove.name}</div>
             <div class="space-y-2 pt-1">
               ${stepsHtml}
             </div>
@@ -30031,6 +30249,9 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
     const apiKeyInput = document.getElementById("geminiApiKeyInput");
     const saveApiKeyBtn = document.getElementById("saveApiKeyBtn");
     const sampleBtn = document.getElementById("chatVoiceOrSampleBtn");
+    const modeBtns = document.querySelectorAll(".chat-mode-btn");
+    const comboStepsContainer = document.getElementById("comboStepsContainer");
+    const stepBtns = document.querySelectorAll(".chat-step-btn");
 
     if (!drawer || !chatForm) return;
 
@@ -30054,6 +30275,77 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
         alert("Chiave rimossa. Il Grimorio torna al motore offline integrato (100% autonomo).");
       }
       apiKeyRow?.classList.add("hidden");
+    });
+
+    // Resolution Mode and Steps Helpers
+    function updateInputPlaceholder() {
+      if (!chatInput) return;
+      const fieldData = CHAT_FIELDS[activeField] || CHAT_FIELDS.duel;
+      if (activeMode === "single") {
+        chatInput.placeholder = `Descrivi l'azione (fornirò la singola mossa migliore per ${fieldData.name})...`;
+      } else {
+        chatInput.placeholder = `Descrivi la situazione (fornirò una combo a ${activeSteps} passaggi per ${fieldData.name})...`;
+      }
+    }
+
+    function updateModeUI() {
+      modeBtns.forEach(btn => {
+        const isCurrent = btn.dataset.mode === activeMode;
+        btn.classList.toggle("active", isCurrent);
+        btn.classList.toggle("bg-amber-500", isCurrent);
+        btn.classList.toggle("text-slate-950", isCurrent);
+        btn.classList.toggle("shadow-sm", isCurrent);
+        btn.classList.toggle("font-bold", isCurrent);
+        btn.classList.toggle("text-slate-400", !isCurrent);
+      });
+
+      if (comboStepsContainer) {
+        if (activeMode === "single") {
+          comboStepsContainer.classList.add("opacity-30", "pointer-events-none");
+        } else {
+          comboStepsContainer.classList.remove("opacity-30", "pointer-events-none");
+        }
+      }
+
+      updateInputPlaceholder();
+    }
+
+    function updateStepsUI() {
+      stepBtns.forEach(btn => {
+        const stepsNum = parseInt(btn.dataset.steps, 10);
+        const isCurrent = stepsNum === activeSteps;
+        btn.classList.toggle("active", isCurrent);
+        btn.classList.toggle("bg-amber-500", isCurrent);
+        btn.classList.toggle("text-slate-950", isCurrent);
+        btn.classList.toggle("font-bold", isCurrent);
+        btn.classList.toggle("text-slate-400", !isCurrent);
+      });
+
+      updateInputPlaceholder();
+    }
+
+    modeBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const newMode = btn.dataset.mode;
+        if (newMode && (newMode === "single" || newMode === "combo")) {
+          activeMode = newMode;
+          updateModeUI();
+        }
+      });
+    });
+
+    stepBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const steps = parseInt(btn.dataset.steps, 10);
+        if (steps >= 2 && steps <= 4) {
+          activeSteps = steps;
+          if (activeMode === "single") {
+            activeMode = "combo";
+            updateModeUI();
+          }
+          updateStepsUI();
+        }
+      });
     });
 
     // Render suggestion chips
@@ -30093,9 +30385,7 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
         activeFieldLabel.innerHTML = `Selezionato: <strong class="text-amber-300">${CHAT_FIELDS[field].name}</strong>`;
       }
 
-      if (chatInput) {
-        chatInput.placeholder = CHAT_FIELDS[field].placeholder;
-      }
+      updateInputPlaceholder();
 
       renderSuggestionChips();
     }
@@ -30188,10 +30478,17 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       if (!messagesContainer) return;
       const userBubble = document.createElement("div");
       userBubble.className = "chat-message user-msg flex justify-end chat-bubble-enter";
+      const modeTag = activeMode === "single"
+        ? "⚡ Mossa Singola"
+        : `🔗 Combo (${activeSteps} Passi)`;
+
       userBubble.innerHTML = `
         <div class="max-w-[85%] p-3 rounded-2xl bg-gradient-to-r from-amber-600 to-amber-700 text-slate-950 font-medium text-xs shadow-md space-y-0.5">
-          <div class="text-[10px] font-bold uppercase tracking-wider text-amber-950/80">${CHAT_FIELDS[activeField].icon} ${CHAT_FIELDS[activeField].name}</div>
-          <div class="leading-relaxed text-slate-950 font-semibold">${text.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
+          <div class="text-[10px] font-bold uppercase tracking-wider text-amber-950/90 flex items-center justify-between gap-2 border-b border-amber-950/20 pb-0.5">
+            <span>${CHAT_FIELDS[activeField].icon} ${CHAT_FIELDS[activeField].name}</span>
+            <span class="px-1.5 py-0.2 bg-amber-950/20 rounded font-semibold text-[9px]">${modeTag}</span>
+          </div>
+          <div class="leading-relaxed text-slate-950 font-semibold pt-0.5">${text.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
         </div>
       `;
       messagesContainer.appendChild(userBubble);
@@ -30230,7 +30527,7 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       if (sendBtn) sendBtn.disabled = true;
 
       appendUserMessage(text);
-      chatHistory.push({ role: "user", text, field: activeField });
+      chatHistory.push({ role: "user", text, field: activeField, mode: activeMode, steps: activeSteps });
 
       const loader = appendLoadingBubble();
 
@@ -30240,18 +30537,18 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
 
         if (apiKey) {
           try {
-            const geminiRaw = await callGeminiApi(apiKey, activeField, text);
+            const geminiRaw = await callGeminiApi(apiKey, activeField, text, { mode: activeMode, steps: activeSteps });
             responseHtml = renderAssistantResponseHtml(geminiRaw);
           } catch (apiErr) {
             console.warn("Gemini API call failed, falling back to offline tactical engine:", apiErr);
-            const offlineAdvice = computeTacticalAdvice(activeField, text);
+            const offlineAdvice = computeTacticalAdvice(activeField, text, { mode: activeMode, steps: activeSteps });
             responseHtml = renderAssistantResponseHtml(offlineAdvice);
           }
         } else {
           // Instant offline tactical evaluation
           // Small realistic thinking delay (150ms) for magical immersion
           await new Promise(r => setTimeout(r, 160));
-          const offlineAdvice = computeTacticalAdvice(activeField, text);
+          const offlineAdvice = computeTacticalAdvice(activeField, text, { mode: activeMode, steps: activeSteps });
           responseHtml = renderAssistantResponseHtml(offlineAdvice);
         }
 
@@ -30295,8 +30592,23 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       appendWelcomeMessage();
     });
 
-    // Init with default chips
+    // Init UI State & Default Field
+    updateModeUI();
+    updateStepsUI();
     setField("duel");
+  }
+
+  // Export methods globally for integration and tests
+  if (typeof window !== "undefined") {
+    window.TacticalChat = {
+      computeTacticalAdvice,
+      formatAdviceForModeAndSteps,
+      CHAT_FIELDS,
+      getActiveMode: () => activeMode,
+      setActiveMode: (m) => { activeMode = m; },
+      getActiveSteps: () => activeSteps,
+      setActiveSteps: (s) => { activeSteps = s; }
+    };
   }
 
   // Auto-init on DOM readiness

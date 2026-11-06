@@ -7,7 +7,7 @@
   <!-- Tailwind CSS (Gstatic Allowlist per Sandbox Antigravity + CDN Pubblico) -->
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css?v=2.7">
+  <link rel="stylesheet" href="style.css?v=2.8">
 </head>
 <body class="min-h-screen text-slate-200 antialiased selection:bg-amber-500 selection:text-slate-950">
 
@@ -16219,6 +16219,32 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
         </div>
       </div>
 
+      <!-- Tactical Mode & Steps Toolbar -->
+      <div class="px-4 py-2 bg-slate-900/90 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2.5 shrink-0" id="chatModeToolbar">
+        <!-- Mode: Single Move vs Combo -->
+        <div class="flex items-center gap-1.5">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mr-0.5">Risoluzione:</span>
+          <div class="inline-flex rounded-lg p-0.5 bg-slate-950 border border-slate-800 shadow-inner" id="chatModeSelector">
+            <button type="button" data-mode="single" id="modeBtnSingle" class="chat-mode-btn px-2.5 py-1 rounded-md text-[11px] font-semibold transition font-magic text-slate-400 hover:text-amber-300">
+              ⚡ Mossa Singola
+            </button>
+            <button type="button" data-mode="combo" id="modeBtnCombo" class="chat-mode-btn active px-2.5 py-1 rounded-md text-[11px] font-semibold transition font-magic bg-amber-500 text-slate-950 shadow-sm font-bold">
+              🔗 Combo
+            </button>
+          </div>
+        </div>
+
+        <!-- Steps for Combo (2, 3, 4) -->
+        <div class="flex items-center gap-1.5 transition-opacity duration-200" id="comboStepsContainer">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Passaggi:</span>
+          <div class="inline-flex rounded-lg p-0.5 bg-slate-950 border border-slate-800 shadow-inner" id="chatStepsSelector">
+            <button type="button" data-steps="2" class="chat-step-btn px-2 py-0.5 rounded text-[11px] font-medium transition text-slate-400 hover:text-amber-300">2 Passi</button>
+            <button type="button" data-steps="3" class="chat-step-btn active px-2 py-0.5 rounded text-[11px] font-medium transition bg-amber-500 text-slate-950 font-bold">3 Passi</button>
+            <button type="button" data-steps="4" class="chat-step-btn px-2 py-0.5 rounded text-[11px] font-medium transition text-slate-400 hover:text-amber-300">4 Passi</button>
+          </div>
+        </div>
+      </div>
+
       <!-- Quick Suggestion Chips Bar -->
       <div class="px-4 py-2 bg-slate-950/60 border-b border-slate-900 flex items-center gap-1.5 overflow-x-auto no-scrollbar shrink-0" id="chatSuggestionChips">
         <!-- Filled dynamically by tacticalChat.js -->
@@ -16265,9 +16291,9 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
   </footer>
 
   <!-- SCRIPTS: DATABASE & APP LOGIC -->
-  <script src="spellsData.js?v=2.7"></script>
-  <script src="materieData.js?v=2.7"></script>
-  <script src="tacticalChat.js?v=2.7"></script>
-  <script src="app.js?v=2.7"></script>
+  <script src="spellsData.js?v=2.8"></script>
+  <script src="materieData.js?v=2.8"></script>
+  <script src="tacticalChat.js?v=2.8"></script>
+  <script src="app.js?v=2.8"></script>
 </body>
 </html>
