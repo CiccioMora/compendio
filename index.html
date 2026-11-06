@@ -7,7 +7,7 @@
   <!-- Tailwind CSS (Gstatic Allowlist per Sandbox Antigravity + CDN Pubblico) -->
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css?v=2.9">
+  <link rel="stylesheet" href="style.css?v=3.0">
 </head>
 <body class="min-h-screen text-slate-200 antialiased selection:bg-amber-500 selection:text-slate-950">
 
@@ -16195,11 +16195,11 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
       <div class="px-4 py-2.5 bg-slate-900/80 border-b border-slate-800/80 shrink-0">
         <div class="flex items-center justify-between mb-1.5">
           <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Campo di Azione:</span>
-          <span id="activeChatFieldLabel" class="text-[11px] text-slate-300 font-medium">Selezionato: <strong class="text-amber-300">Duello Magico</strong></span>
+          <span id="activeChatFieldLabel" class="text-[11px] text-slate-300 font-medium">Selezionato: <strong class="text-amber-300">Duello</strong></span>
         </div>
         <div class="flex items-center gap-1.5 overflow-x-auto pb-1 thin-scrollbar select-none cursor-grab active:cursor-grabbing" id="chatFieldSelector" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch; touch-action: pan-x;">
           <button type="button" data-field="duel" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-amber-500 text-slate-950 shadow-sm font-magic">
-            ⚔️ Duello Magico
+            ⚔️ Duello
           </button>
           <button type="button" data-field="potions" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-amber-300 border border-slate-800 font-magic">
             🧪 Pozioni
@@ -16216,6 +16216,53 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
           <button type="button" data-field="all" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-amber-300 border border-slate-800 font-magic">
             ✨ Azione Globale
           </button>
+        </div>
+      </div>
+
+      <!-- Duel Configuration Bar (Shown when Campo is 'Duello') -->
+      <div id="duelConfigBar" class="px-4 py-2 bg-slate-900/95 border-b border-slate-800 space-y-2 text-xs shrink-0">
+        <div class="flex flex-wrap items-center justify-between gap-2.5">
+          <!-- Regolamento Duello: Ufficiale vs Non Ufficiale -->
+          <div class="flex items-center gap-1.5">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Regole:</span>
+            <div class="inline-flex rounded-lg p-0.5 bg-slate-950 border border-slate-800 shadow-inner" id="duelOfficialSelector">
+              <button type="button" data-official="true" id="duelBtnOfficial" class="duel-official-btn active px-2.5 py-0.5 rounded text-[11px] font-medium transition bg-amber-500 text-slate-950 font-bold">
+                ⚖️ Ufficiale
+              </button>
+              <button type="button" data-official="false" id="duelBtnUnofficial" class="duel-official-btn px-2.5 py-0.5 rounded text-[11px] font-medium transition text-slate-400 hover:text-amber-300">
+                🏴 Non Ufficiale
+              </button>
+            </div>
+          </div>
+
+          <!-- Tipologia Scontro: Magico, Fisico, Ibrido -->
+          <div class="flex items-center gap-1.5">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Scontro:</span>
+            <div class="inline-flex rounded-lg p-0.5 bg-slate-950 border border-slate-800 shadow-inner" id="duelTypeSelector">
+              <button type="button" data-type="magical" id="duelTypeBtnMagical" class="duel-type-btn active px-2.5 py-0.5 rounded text-[11px] font-medium transition bg-amber-500 text-slate-950 font-bold">
+                🪄 Magico
+              </button>
+              <button type="button" data-type="physical" id="duelTypeBtnPhysical" class="duel-type-btn px-2.5 py-0.5 rounded text-[11px] font-medium transition text-slate-400 hover:text-amber-300">
+                🥊 Fisico
+              </button>
+              <button type="button" data-type="hybrid" id="duelTypeBtnHybrid" class="duel-type-btn px-2.5 py-0.5 rounded text-[11px] font-medium transition text-slate-400 hover:text-amber-300">
+                ⚡ Ibrido
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ruolo Ibrido: chi usa la magia e chi no (visibile solo se Scontro === Ibrido) -->
+        <div id="duelHybridRoleContainer" class="hidden flex flex-wrap items-center gap-2 pt-1.5 border-t border-slate-800/80">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 shrink-0">Assetto Magico:</span>
+          <div class="inline-flex rounded-lg p-0.5 bg-slate-950 border border-slate-800 shadow-inner" id="duelHybridRoleSelector">
+            <button type="button" data-role="user_magic" id="hybridRoleBtnUser" class="duel-role-btn active px-2.5 py-0.5 rounded text-[10px] font-semibold transition bg-amber-500 text-slate-950 font-bold">
+              🪄 Tu Mago vs 🥊 Nemico Fisico
+            </button>
+            <button type="button" data-role="enemy_magic" id="hybridRoleBtnEnemy" class="duel-role-btn px-2.5 py-0.5 rounded text-[10px] font-semibold transition text-slate-400 hover:text-amber-300">
+              🥊 Tu Fisico vs 🪄 Nemico Mago
+            </button>
+          </div>
         </div>
       </div>
 
@@ -16304,9 +16351,9 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
   </footer>
 
   <!-- SCRIPTS: DATABASE & APP LOGIC -->
-  <script src="spellsData.js?v=2.9"></script>
-  <script src="materieData.js?v=2.9"></script>
-  <script src="tacticalChat.js?v=2.9"></script>
-  <script src="app.js?v=2.9"></script>
+  <script src="spellsData.js?v=3.0"></script>
+  <script src="materieData.js?v=3.0"></script>
+  <script src="tacticalChat.js?v=3.0"></script>
+  <script src="app.js?v=3.0"></script>
 </body>
 </html>

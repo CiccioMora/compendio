@@ -16372,11 +16372,11 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
       <div class="px-4 py-2.5 bg-slate-900/80 border-b border-slate-800/80 shrink-0">
         <div class="flex items-center justify-between mb-1.5">
           <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Campo di Azione:</span>
-          <span id="activeChatFieldLabel" class="text-[11px] text-slate-300 font-medium">Selezionato: <strong class="text-amber-300">Duello Magico</strong></span>
+          <span id="activeChatFieldLabel" class="text-[11px] text-slate-300 font-medium">Selezionato: <strong class="text-amber-300">Duello</strong></span>
         </div>
         <div class="flex items-center gap-1.5 overflow-x-auto pb-1 thin-scrollbar select-none cursor-grab active:cursor-grabbing" id="chatFieldSelector" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch; touch-action: pan-x;">
           <button type="button" data-field="duel" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-amber-500 text-slate-950 shadow-sm font-magic">
-            ⚔️ Duello Magico
+            ⚔️ Duello
           </button>
           <button type="button" data-field="potions" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-amber-300 border border-slate-800 font-magic">
             🧪 Pozioni
@@ -16393,6 +16393,53 @@ Frutto dell'approfondita ricerca accademica condotta negli ultimi anni da Khaos 
           <button type="button" data-field="all" class="chat-field-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-amber-300 border border-slate-800 font-magic">
             ✨ Azione Globale
           </button>
+        </div>
+      </div>
+
+      <!-- Duel Configuration Bar (Shown when Campo is 'Duello') -->
+      <div id="duelConfigBar" class="px-4 py-2 bg-slate-900/95 border-b border-slate-800 space-y-2 text-xs shrink-0">
+        <div class="flex flex-wrap items-center justify-between gap-2.5">
+          <!-- Regolamento Duello: Ufficiale vs Non Ufficiale -->
+          <div class="flex items-center gap-1.5">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Regole:</span>
+            <div class="inline-flex rounded-lg p-0.5 bg-slate-950 border border-slate-800 shadow-inner" id="duelOfficialSelector">
+              <button type="button" data-official="true" id="duelBtnOfficial" class="duel-official-btn active px-2.5 py-0.5 rounded text-[11px] font-medium transition bg-amber-500 text-slate-950 font-bold">
+                ⚖️ Ufficiale
+              </button>
+              <button type="button" data-official="false" id="duelBtnUnofficial" class="duel-official-btn px-2.5 py-0.5 rounded text-[11px] font-medium transition text-slate-400 hover:text-amber-300">
+                🏴 Non Ufficiale
+              </button>
+            </div>
+          </div>
+
+          <!-- Tipologia Scontro: Magico, Fisico, Ibrido -->
+          <div class="flex items-center gap-1.5">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Scontro:</span>
+            <div class="inline-flex rounded-lg p-0.5 bg-slate-950 border border-slate-800 shadow-inner" id="duelTypeSelector">
+              <button type="button" data-type="magical" id="duelTypeBtnMagical" class="duel-type-btn active px-2.5 py-0.5 rounded text-[11px] font-medium transition bg-amber-500 text-slate-950 font-bold">
+                🪄 Magico
+              </button>
+              <button type="button" data-type="physical" id="duelTypeBtnPhysical" class="duel-type-btn px-2.5 py-0.5 rounded text-[11px] font-medium transition text-slate-400 hover:text-amber-300">
+                🥊 Fisico
+              </button>
+              <button type="button" data-type="hybrid" id="duelTypeBtnHybrid" class="duel-type-btn px-2.5 py-0.5 rounded text-[11px] font-medium transition text-slate-400 hover:text-amber-300">
+                ⚡ Ibrido
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ruolo Ibrido: chi usa la magia e chi no (visibile solo se Scontro === Ibrido) -->
+        <div id="duelHybridRoleContainer" class="hidden flex flex-wrap items-center gap-2 pt-1.5 border-t border-slate-800/80">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 shrink-0">Assetto Magico:</span>
+          <div class="inline-flex rounded-lg p-0.5 bg-slate-950 border border-slate-800 shadow-inner" id="duelHybridRoleSelector">
+            <button type="button" data-role="user_magic" id="hybridRoleBtnUser" class="duel-role-btn active px-2.5 py-0.5 rounded text-[10px] font-semibold transition bg-amber-500 text-slate-950 font-bold">
+              🪄 Tu Mago vs 🥊 Nemico Fisico
+            </button>
+            <button type="button" data-role="enemy_magic" id="hybridRoleBtnEnemy" class="duel-role-btn px-2.5 py-0.5 rounded text-[10px] font-semibold transition text-slate-400 hover:text-amber-300">
+              🥊 Tu Fisico vs 🪄 Nemico Mago
+            </button>
+          </div>
         </div>
       </div>
 
@@ -28759,7 +28806,7 @@ if (typeof globalThis !== 'undefined') {
   // --- Configuration & Quick Suggestions per Field ---
   const CHAT_FIELDS = {
     duel: {
-      name: "Duello Magico",
+      name: "Duello",
       icon: "⚔️",
       placeholder: "Descrivi la situazione di duello (es. 'L\'avversario usa Protego e mi attacca con fiamme')...",
       chips: [
@@ -28769,6 +28816,30 @@ if (typeof globalThis !== 'undefined') {
         "⚡ Attacco rapido con Valenza Opposta",
         "💨 Fuga ed Evasione da Accerchiamento",
         "🪄 Spezzare un incantesimo di Legame"
+      ],
+      chipsPhysical: [
+        "🥊 Schivata e Disarmo Fisico del Polso",
+        "🥋 Leva Articolare e Proiezione a Terra",
+        "🦵 Spazzata Bassa alla Gamba d'Appoggio",
+        "🧥 Parata con Mantello e Presa al Collo",
+        "💨 Evasione Bassa da Pugno o Carica",
+        "💥 Colpo Rapido al Plesso Solare"
+      ],
+      chipsHybridUserMagic: [
+        "🪄 Bloccare la Carica Fisica con Glisseo e Impedimenta",
+        "❄️ Inabilitazione Motoria con Gambemolli a Distanza",
+        "⛓️ Incarceramus per Confinare l'Assalitore Fisico",
+        "⚡ Stordimento Preventivo con Stupeficium",
+        "💨 Arretramento Veloce con Carpe Retractum",
+        "🛡️ Barriera d'Attrito per Impedire il Corpo a Corpo"
+      ],
+      chipsHybridEnemyMagic: [
+        "🏃 Blitz Ravvicinato e Deviazione del Polso Armato",
+        "📐 Evasione a Zig-Zag per Schivare gli Incantesimi",
+        "💥 Disarmo Fisico della Bacchetta e Atterramento",
+        "🧥 Accecamento con Mantello per Togliere la Mira",
+        "🦵 Spazzata a Terra prima che Lanci l'Incanto",
+        "🥋 Blocco Articolare del Braccio che Impugna la Bacchetta"
       ]
     },
     potions: {
@@ -28839,8 +28910,11 @@ if (typeof globalThis !== 'undefined') {
 
   // State
   let activeField = "duel";
-  let activeMode = "combo"; // "single" | "combo"
-  let activeSteps = 3;      // 2 | 3 | 4
+  let activeMode = "combo";          // "single" | "combo"
+  let activeSteps = 3;               // 2 | 3 | 4
+  let duelOfficial = true;           // true (Ufficiale) | false (Non Ufficiale)
+  let duelType = "magical";          // "magical" | "physical" | "hybrid"
+  let duelHybridRole = "user_magic"; // "user_magic" | "enemy_magic"
   let chatHistory = [];
   let isProcessing = false;
 
@@ -29025,22 +29099,59 @@ if (typeof globalThis !== 'undefined') {
     let reqMode = (options && options.mode) || fallbackMode;
     let reqSteps = Number((options && options.steps) || fallbackSteps);
 
-    // Natural language query overrides
-    if (/(?:mossa\s+singola|singola\s+mossa|solo\s+un[ao]\s+mossa|un\s+solo\s+colpo|colpo\s+singolo|singolo\s+incant|1\s+pass|un\s+pass)/i.test(q)) {
-      reqMode = "single";
-      reqSteps = 1;
-    } else if (/(?:2\s+pass|due\s+pass|combo\s+(?:da|a)\s+2)/i.test(q)) {
-      reqMode = "combo";
-      reqSteps = 2;
-    } else if (/(?:4\s+pass|quattro\s+pass|combo\s+(?:da|a)\s+4)/i.test(q)) {
-      reqMode = "combo";
-      reqSteps = 4;
-    } else if (/(?:3\s+pass|tre\s+pass|combo\s+(?:da|a)\s+3)/i.test(q)) {
-      reqMode = "combo";
-      reqSteps = 3;
+    // Determine duel parameters (Official vs Unofficial, Magical / Physical / Hybrid)
+    const fallbackOfficial = typeof duelOfficial !== "undefined" ? duelOfficial : true;
+    const fallbackDuelType = typeof duelType !== "undefined" ? duelType : "magical";
+    const fallbackHybridRole = typeof duelHybridRole !== "undefined" ? duelHybridRole : "user_magic";
+
+    let reqOfficial = options && options.duelOfficial !== undefined ? !!options.duelOfficial : fallbackOfficial;
+    let reqDuelType = (options && options.duelType) || fallbackDuelType;
+    let reqHybridRole = (options && options.duelHybridRole) || fallbackHybridRole;
+
+    // Natural language query overrides for mode (only if not explicitly set in options)
+    if (!options || (!options.mode && !options.steps)) {
+      if (/(?:mossa\s+singola|singola\s+mossa|solo\s+un[ao]\s+mossa|un\s+solo\s+colpo|colpo\s+singolo|singolo\s+incant|1\s+pass|un\s+pass)/i.test(q)) {
+        reqMode = "single";
+        reqSteps = 1;
+      } else if (/(?:2\s+pass|due\s+pass|combo\s+(?:da|a)\s+2)/i.test(q)) {
+        reqMode = "combo";
+        reqSteps = 2;
+      } else if (/(?:4\s+pass|quattro\s+pass|combo\s+(?:da|a)\s+4)/i.test(q)) {
+        reqMode = "combo";
+        reqSteps = 4;
+      } else if (/(?:3\s+pass|tre\s+pass|combo\s+(?:da|a)\s+3)/i.test(q)) {
+        reqMode = "combo";
+        reqSteps = 3;
+      }
     }
 
-    function evaluateRawAdvice(field, query, q) {
+    // Natural language duel overrides (only if not explicitly set in options)
+    if (!options || options.duelOfficial === undefined) {
+      if (/(?:duello\s+ufficiale|sfida\s+ufficiale|torneo|regolamentar|ufficiale)/i.test(q) && !/(?:non\s+ufficiale|clandestin)/i.test(q)) {
+        reqOfficial = true;
+      } else if (/(?:non\s+ufficiale|clandestin|liber[oa]|senza\s+regol|fuori\s+legge|riss[ae]|strada)/i.test(q)) {
+        reqOfficial = false;
+      }
+    }
+
+    if (!options || !options.duelType) {
+      if (/(?:ibrid|un\s+mago\s+e\s+un\s+babban|uno\s+mago\s+e\s+uno\s+no|tu\s+mago|lui\s+mago|io\s+mago|lui\s+fisico|io\s+fisico|senza\s+bacchetta\s+contro\s+mago|mago\s+contro\s+combattente)/i.test(q)) {
+        reqDuelType = "hybrid";
+        if (!options || !options.duelHybridRole) {
+          if (/(?:io\s+mago|tu\s+mago|io\s+ho\s+la\s+bacchetta|avversario\s+(?:fisico|babbano|bruto|senza\s+magia|a\s+mani\s+nude)|nemico\s+(?:fisico|a\s+mani\s+nude))/i.test(q)) {
+            reqHybridRole = "user_magic";
+          } else if (/(?:io\s+fisico|tu\s+fisico|io\s+senza\s+bacchetta|io\s+disarmato|avversario\s+(?:mago|ha\s+la\s+bacchetta|usa\s+la\s+magia)|nemico\s+mago)/i.test(q)) {
+            reqHybridRole = "enemy_magic";
+          }
+        }
+      } else if (/(?:duello\s+fisic|scontro\s+fisic|corpo\s+a\s+corpo|a\s+mani\s+nude|senza\s+magia|pugni|calci|arti\s+marziali|lotta|sala\s+d'armi)/i.test(q) && !/(?:magi|incant|bacchett)/i.test(q)) {
+        reqDuelType = "physical";
+      } else if (/(?:magic|bacchett|incantesim|protego|duello\s+magico)/i.test(q) && !/(?:ibrid|fisic)/i.test(q)) {
+        reqDuelType = "magical";
+      }
+    }
+
+    function evaluateRawAdvice(field, query, q, reqOfficial, reqDuelType, reqHybridRole) {
       const spells = getSpells();
       const materie = getMaterie();
 
@@ -29106,6 +29217,217 @@ if (typeof globalThis !== 'undefined') {
 
     // 1. DUEL / COMBAT SCENARIOS
     if (field === "duel" || (field === "all" && (q.includes("duell") || q.includes("combatt") || q.includes("protego") || q.includes("attacc") || q.includes("scudo") || q.includes("disarm") || hasBurn || hasFall))) {
+      
+      const duelRegimeLabel = reqOfficial ? '⚖️ Ufficiale' : '🏴 Non Ufficiale';
+      const duelFieldBadge = `⚔️ Duello • ${duelRegimeLabel} • 🪄 Magico`;
+      const duelOfficialWarningSuffix = reqOfficial
+        ? "Regole Ufficiali di Duello: incantesimi pienamente conformi al Codice Didattico di Hogwarts (⚔️ SÌ). Vietate arti oscure o lesioni permanenti."
+        : "Duello Non Ufficiale / Scontro Libero: nessuna limitazione arbitrale. Ammesse magie d'impatto ambientale, trasfigurazioni pesanti e pozioni tattiche da lancio.";
+
+      // A. DUELLO FISICO (Lotta corpo a corpo / Disarmati / Sala d'armi)
+      if (reqDuelType === "physical") {
+        const isDisarmIntent = hasDisarm || /(?:arma|polso|bacchetta|disarm|leva)/i.test(q);
+        const officialRuleText = reqOfficial
+          ? "⚖️ Duello Fisico Ufficiale: Regolamento da Sala d'Armi di Hogwarts. Vietati colpi proibiti (occhi, gola, colpi dopo la dichiarazione di resa). Vittoria all'atterramento netto o resa per leva articolare."
+          : "🏴 Duello Fisico Libero (Non Ufficiale): Nessuna restrizione arbitrale. Sfrutta pareti, manto, oggetti contundenti ed evita l'accerchiamento.";
+
+        if (isDisarmIntent) {
+          return {
+            title: `Duello Fisico: Disarmo da Presa e Atterramento (${reqOfficial ? 'Ufficiale' : 'Libero'})`,
+            fieldLabel: `⚔️ Duello Fisico • ${reqOfficial ? '⚖️ Ufficiale' : '🏴 Non Ufficiale'}`,
+            bestMove: {
+              name: "Sequenza di Lotta: Evasione della Linea ➔ Leva Articolare al Polso ➔ Proiezione",
+              steps: [
+                {
+                  num: 1,
+                  action: "Evasione Angolata dalla Linea di Spinta",
+                  spellLink: "<strong>Biomeccanica di Sala d'Armi</strong>",
+                  details: "Schiva lateralmente di 45 gradi uscendo dalla traiettoria del pugno o dell'arma avversaria con baricentro ribassato, inducendo il rivale a sbilanciarsi sul proprio slancio a vuoto."
+                },
+                {
+                  num: 2,
+                  action: "Presa a Due Mani e Torsione a Leva Esterna",
+                  spellLink: "<strong>Leva Articolare al Polso</strong>",
+                  details: "Afferra l'articolazione del polso del braccio proteso con entrambe le mani: applica una torsione rotatoria verso l'esterno che forza l'apertura istantanea delle dita e disarma qualsiasi oggetto o bacchetta impugnata."
+                },
+                {
+                  num: 3,
+                  action: "Spazzata Circolare e Atterramento al Suolo",
+                  spellLink: "<strong>Spazzata al Tallone</strong>",
+                  details: "Mentre l'avversario cede al dolore articolare, aggancia la sua gamba d'appoggio da dietro con il collo del piede e spingi la spalla opposta: l'avversario stramazza a terra supino senza appigli."
+                },
+                {
+                  num: 4,
+                  action: "Immobilizzazione con Controllo Scapolare",
+                  spellLink: "<strong>Leva al Suolo & Confinamento</strong>",
+                  details: "Fissa il braccio dell'avversario al suolo posizionando il ginocchio dietro la scapola per impedire qualsiasi contrattacco fino alla resa formale."
+                }
+              ],
+              rationale: "Nel combattimento corpo a corpo, la manipolazione della forza d'inerzia avversaria unita a leve articolari chiuse consente di neutralizzare avversari di qualsiasi stazza senza l'ausilio di incantesimi."
+            },
+            alternatives: [
+              {
+                title: "Piano B: Parata con Mantello e Avvolgimento Visivo",
+                desc: "Usa il lembo pesante del mantello da mago per intercettare il colpo e avvolgerlo attorno al capo del rivale, togliendogli la vista prima di una spazzata bassa."
+              },
+              {
+                title: "Piano C: Gomitata d'Incontro al Costato",
+                desc: "Se l'avversario chiude a sorpresa la distanza in clinch, abbassa il gomito e percuoti le costole fluttuanti per rompere la presa e riguadagnare il controllo."
+              }
+            ],
+            warnings: officialRuleText
+          };
+        }
+
+        // Generic physical duel scenario (strike / knockdown / brawling)
+        return {
+          title: `Duello Fisico: Intercettazione e Proiezione Baricentrica (${reqOfficial ? 'Ufficiale' : 'Libero'})`,
+          fieldLabel: `⚔️ Duello Fisico • ${reqOfficial ? '⚖️ Ufficiale' : '🏴 Non Ufficiale'}`,
+          bestMove: {
+            name: "Sequenza Difensiva e Proiezione: Parata d'Avambraccio ➔ Percussione al Plesso ➔ Atterramento sull'Anca",
+            steps: [
+              {
+                num: 1,
+                action: "Deflessione Dinamica del Colpo",
+                spellLink: "<strong>Parata d'Avambraccio Esterno</strong>",
+                details: "Defletti verso l'esterno il colpo o la carica dell'avversario con l'avambraccio flesso ad angolo retto, proteggendo il mento e aprendo la guardia centrale del rivale."
+              },
+              {
+                num: 2,
+                action: "Percussione Controllata al Plesso Solare",
+                spellLink: "<strong>Percussione Cinetica</strong>",
+                details: "Penetra nella guardia aperta con un colpo dritto al plesso solare per contrarre il diaframma dell'avversario e mozzargli momentaneamente il fiato."
+              },
+              {
+                num: 3,
+                action: "Proiezione sull'Anca e Atterramento",
+                spellLink: "<strong>Proiezione Baricentrica</strong>",
+                details: "Posiziona l'anca sotto il baricentro del rivale, tira il braccio agganciato e sollevalo proiettandolo a terra a gambe all'aria."
+              },
+              {
+                num: 4,
+                action: "Messa in Sicurezza e Distanza di Guardia",
+                spellLink: "<strong>Guardia Tattica</strong>",
+                details: "Arretra di due passi mantenendo la posizione di guardia di sala d'armi, ordinando all'avversario al suolo di dichiarare la resa."
+              }
+            ],
+            rationale: "La deflessione esterna rompe l'equilibrio del busto avversario; la successiva proiezione baricentrica usa il peso del contendente contro sé stesso garantendo un atterramento pulito."
+          },
+          alternatives: [
+            {
+              title: "Piano B: Schivata Circolare e Spinta alle Spalle",
+              desc: "Effettua un perno rotatorio sul piede anteriore mentre il rivale carica, spingendolo energicamente tra le scapole per mandarlo a sbattere contro il terreno o la parete."
+            },
+            {
+              title: "Piano C: Blocco Doppio d'Avambraccio in Clinch",
+              desc: "Se l'avversario tenta una presa a due mani, serra i doveri avambracci a cuneo per aprire la sua presa e arretra di scatto."
+            }
+          ],
+          warnings: officialRuleText
+        };
+      }
+
+      // B. DUELLO IBRIDO: TU MAGO VS NEMICO FISICO
+      if (reqDuelType === "hybrid" && reqHybridRole === "user_magic") {
+        return {
+          title: `Duello Ibrido: Controllo e Neutralizzazione a Distanza (Tu Mago vs Nemico Fisico)`,
+          fieldLabel: `⚡ Duello Ibrido • Tu Mago vs Nemico Fisico • ${reqOfficial ? '⚖️ Ufficiale' : '🏴 Non Ufficiale'}`,
+          bestMove: {
+            name: "Sequenza di Arresto Carica: Intercettazione (Glisseo / Impedimenta) ➔ Legame (Incarceramus / Gambemolli) ➔ Schianto",
+            steps: [
+              {
+                num: 1,
+                action: "Arresto Immediato della Carica Fisica",
+                spellLink: formatEntityLink("Glisseo", "spell", "glisseo") + " o " + formatEntityLink("Impedimenta", "spell", "impedimenta"),
+                details: "Mentre l'avversario corre per chiudere la distanza, incanala <strong>Glisseo (V6 - Terra)</strong> sul pavimento per annullare l'attrito e farlo crollare a terra sul proprio slancio, oppure proietta <strong>Impedimenta (V3)</strong> per congelare la sua avanzata cinetica a mezz'aria."
+              },
+              {
+                num: 2,
+                action: "Inabilitazione Motoria a Bersaglio Bloccato",
+                spellLink: formatEntityLink("Locomotor Wibbly", "spell", "locomotor-wibbly") + " o " + formatEntityLink("Incarceramus", "spell", "incarceramus"),
+                details: "Mentre il contendente tenta faticosamente di rialzarsi o avanzare, scaglia <strong>Locomotor Wibbly (V2)</strong> per liquefare i muscoli delle sue gambe come gelatina, o <strong>Incarceramus (V6)</strong> per avvolgerlo con robuste funi magiche."
+              },
+              {
+                num: 3,
+                action: "Neutralizzazione Definitiva a Distanza di Sicurezza",
+                spellLink: formatEntityLink("Stupeficium", "spell", "stupeficium") + " o " + formatEntityLink("Petrificus Totalus", "spell", "petrificus-totalus"),
+                details: "Senza mai avvicinarti a meno di 3 metri, completa lo scontro con <strong>Stupeficium (V7)</strong> per addormentare/stordire il contendente, azzerando ogni minaccia fisica."
+              },
+              {
+                num: 4,
+                action: "Confinamento Runico di Sicurezza",
+                spellLink: formatEntityLink("Signo", "spell", "signo"),
+                details: "Traccia con la bacchetta un cerchio runico di guardia attorno all'avversario per prevenire qualsiasi interferenza o reazione improvvisa."
+              }
+            ],
+            rationale: "La magia gode di portata e velocità supersonica: non permettere mai al contendente fisico di entrare a distanza di presa (sotto 1.5 metri). Neutralizzarlo da lontano azzera il pericolo al 100%."
+          },
+          alternatives: [
+            {
+              title: "Piano B: Barriera di Fumo con Fumos",
+              desc: `Se la carica è rapida, emetti ${formatEntityLink("Fumos", "spell", "fumos")} (V5) e arretra diagonalmente: il nemico fisico non potrà vedere la tua sagoma e andrà a vuoto.`
+            },
+            {
+              title: "Piano C: Disorientamento con Melofors",
+              desc: `Incastra una pesante zucca sulla testa dell'avversario con ${formatEntityLink("Melofors", "spell", "melofors")} (V4): privato della vista e sbilanciato dal peso della zucca, il bruto cesserà l'attacco.`
+            }
+          ],
+          warnings: reqOfficial
+            ? "⚖️ Duello Ibrido Ufficiale: È severamente vietato scagliare sortilegi laceranti (es. Diffindo) o maledizioni lesive permanenti su un avversario che combatte a mani nude. Usare solo incantesimi di contenimento e stordimento non cruenti."
+            : "🏴 Duello Ibrido Libero (Non Ufficiale): Se l'avversario fisico impugna armi da taglio o ha forza sovrumana, puoi usare incanti cinetici pesanti come Bombarda sul terreno per sbalzarlo indietro."
+        };
+      }
+
+      // C. DUELLO IBRIDO: TU FISICO VS NEMICO MAGO
+      if (reqDuelType === "hybrid" && reqHybridRole === "enemy_magic") {
+        return {
+          title: `Duello Ibrido: Tattica di Blitz e Neutralizzazione Bacchetta (Tu Fisico vs Nemico Mago)`,
+          fieldLabel: `⚡ Duello Ibrido • Tu Fisico vs Nemico Mago • ${reqOfficial ? '⚖️ Ufficiale' : '🏴 Non Ufficiale'}`,
+          bestMove: {
+            name: "Strategia Anti-Mago: Corsa Evasiva a Zig-Zag ➔ Blitz Ravvicinato ➔ Deviazione e Disarmo del Polso Armato",
+            steps: [
+              {
+                num: 1,
+                action: "Rottura della Linea di Puntamento con Movimento Evasivo",
+                spellLink: "<strong>Schivata a Spirale / Zig-Zag</strong>",
+                details: "Un mago deve puntare la bacchetta dritto verso di te per colpire. Non correre in linea retta: muoviti a zig-zag con frequenti cambi di livello e baricentro ribassato per togliere al rivale il tempo di collimare la mira."
+              },
+              {
+                num: 2,
+                action: "Blitz Ravvicinato ed Intercettazione del Polso Armato",
+                spellLink: "<strong>Deflessione d'Avambraccio Anti-Bacchetta</strong>",
+                details: "Chiudi fulmineamente la distanza entrando sotto il raggio di puntamento (<1 metro): prima che il mago completi la pronuncia della formula, colpisci dal basso verso l'alto il suo avambraccio armato con il palmo della mano, facendo sparare la scintilla a vuoto verso il soffitto."
+              },
+              {
+                num: 3,
+                action: "Torsione Articolare, Disarmo e Spazzata al Mago",
+                spellLink: "<strong>Torsione a Leva & Caduta Bacchetta</strong>",
+                details: "Afferra saldamente il polso armato del rivale e torcilo verso l'interno costringendolo ad aprire le dita e far cadere la bacchetta al suolo; contemporaneamente falcia la sua gamba d'appoggio per farlo crollare a terra supino."
+              },
+              {
+                num: 4,
+                action: "Calcio di Allontanamento Bacchetta e Controllo a Terra",
+                spellLink: "<strong>Allontanamento Bacchetta & Leva</strong>",
+                details: "Calcia istantaneamente la bacchetta caduta ad almeno 5 metri di distanza e fissa il mago a terra con una presa di leva, ordinandogli la resa."
+              }
+            ],
+            rationale: "Il tempo di emissione di un incantesimo richiede formulazione mentale, allineamento fisico della bacchetta e pronuncia fonetica. A distanza inferiore a 1 metro, la velocità biomeccanica di una presa o di un pugno è più rapida dell'attivazione magica."
+          },
+          alternatives: [
+            {
+              title: "Piano B: Lancio del Mantello per Accecare la Mira",
+              desc: "Togliti il mantello e lancialo sul viso del mago: privato della visuale, l'avversario non oserà lanciare alla cieca e ti darà 2 secondi per chiudere la distanza e placcarlo."
+            },
+            {
+              title: "Piano C: Sfruttamento di Ripari Ambientali e Imboscata",
+              desc: "Se il mago si trova a distanza maggiore di 5 metri, riparati dietro colonne o tavoli solidi per fargli scaricare gli incanti contro gli ostacoli, quindi scatta nell'intervallo tra due lanci."
+            }
+          ],
+          warnings: reqOfficial
+            ? "⚖️ Duello Ibrido Ufficiale: Secondo il codice di sfida mista, il disarmo e l'allontanamento della bacchetta decretano la vittoria immediata del contendente fisico. È vietato colpire ulteriormente il mago disarmato."
+            : "🏴 Duello Ibrido Libero (Non Ufficiale): Priorità assoluta distruggere o scagliare lontano la bacchetta: un mago a terra può tentare un incantesimo di contatto non verbale se riesce a toccare il legno della bacchetta!"
+        };
+      }
       
       // Scenario 1: BURN / FIRE + FALL / KNOCKDOWN (e.g. "voglio attaccare il mio avversario provocandogli bruciature e facendolo cadere al suolo")
       if ((hasBurn || hasFire) && hasFall && (isExplicitAttack || !isExplicitDefense)) {
@@ -30091,7 +30413,7 @@ if (typeof globalThis !== 'undefined') {
     };
     }
 
-    const rawAdvice = evaluateRawAdvice(field, query, q);
+    const rawAdvice = evaluateRawAdvice(field, query, q, reqOfficial, reqDuelType, reqHybridRole);
     return formatAdviceForModeAndSteps(rawAdvice, reqMode, reqSteps, field, query);
   }
 
@@ -30290,6 +30612,11 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
     const modeBtns = document.querySelectorAll(".chat-mode-btn");
     const comboStepsContainer = document.getElementById("comboStepsContainer");
     const stepBtns = document.querySelectorAll(".chat-step-btn");
+    const duelConfigBar = document.getElementById("duelConfigBar");
+    const duelOfficialBtns = document.querySelectorAll(".duel-official-btn");
+    const duelTypeBtns = document.querySelectorAll(".duel-type-btn");
+    const duelHybridRoleContainer = document.getElementById("duelHybridRoleContainer");
+    const duelRoleBtns = document.querySelectorAll(".duel-role-btn");
 
     if (!drawer || !chatForm) return;
 
@@ -30315,14 +30642,108 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       apiKeyRow?.classList.add("hidden");
     });
 
+    // Duel Configuration Helpers
+    function updateDuelConfigUI() {
+      if (!duelConfigBar) return;
+      if (activeField === "duel") {
+        duelConfigBar.classList.remove("hidden");
+      } else {
+        duelConfigBar.classList.add("hidden");
+      }
+
+      duelOfficialBtns.forEach(btn => {
+        const isOfficial = btn.dataset.official === "true";
+        const isActive = isOfficial === duelOfficial;
+        btn.classList.toggle("active", isActive);
+        btn.classList.toggle("bg-amber-500", isActive);
+        btn.classList.toggle("text-slate-950", isActive);
+        btn.classList.toggle("font-bold", isActive);
+        btn.classList.toggle("text-slate-400", !isActive);
+      });
+
+      duelTypeBtns.forEach(btn => {
+        const isCurrent = btn.dataset.type === duelType;
+        btn.classList.toggle("active", isCurrent);
+        btn.classList.toggle("bg-amber-500", isCurrent);
+        btn.classList.toggle("text-slate-950", isCurrent);
+        btn.classList.toggle("font-bold", isCurrent);
+        btn.classList.toggle("text-slate-400", !isCurrent);
+      });
+
+      if (duelHybridRoleContainer) {
+        if (activeField === "duel" && duelType === "hybrid") {
+          duelHybridRoleContainer.classList.remove("hidden");
+        } else {
+          duelHybridRoleContainer.classList.add("hidden");
+        }
+      }
+
+      duelRoleBtns.forEach(btn => {
+        const isCurrent = btn.dataset.role === duelHybridRole;
+        btn.classList.toggle("active", isCurrent);
+        btn.classList.toggle("bg-amber-500", isCurrent);
+        btn.classList.toggle("text-slate-950", isCurrent);
+        btn.classList.toggle("font-bold", isCurrent);
+        btn.classList.toggle("text-slate-400", !isCurrent);
+      });
+
+      updateInputPlaceholder();
+      renderSuggestionChips();
+    }
+
+    duelOfficialBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        duelOfficial = btn.dataset.official === "true";
+        updateDuelConfigUI();
+      });
+    });
+
+    duelTypeBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const t = btn.dataset.type;
+        if (t && ["magical", "physical", "hybrid"].includes(t)) {
+          duelType = t;
+          updateDuelConfigUI();
+        }
+      });
+    });
+
+    duelRoleBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const r = btn.dataset.role;
+        if (r && ["user_magic", "enemy_magic"].includes(r)) {
+          duelHybridRole = r;
+          updateDuelConfigUI();
+        }
+      });
+    });
+
     // Resolution Mode and Steps Helpers
     function updateInputPlaceholder() {
       if (!chatInput) return;
       const fieldData = CHAT_FIELDS[activeField] || CHAT_FIELDS.duel;
-      if (activeMode === "single") {
-        chatInput.placeholder = `Descrivi l'azione (fornirò la singola mossa migliore per ${fieldData.name})...`;
+      if (activeField === "duel") {
+        if (duelType === "magical") {
+          chatInput.placeholder = activeMode === "single"
+            ? `Descrivi l'azione di duello magico ${duelOfficial ? '(ufficiale)' : '(libero)'}... (1 mossa)`
+            : `Descrivi la situazione di duello magico ${duelOfficial ? '(ufficiale)' : '(libero)'}... (combo a ${activeSteps} passi)`;
+        } else if (duelType === "physical") {
+          chatInput.placeholder = activeMode === "single"
+            ? `Descrivi lo scontro corpo a corpo / lotta fisica... (1 mossa)`
+            : `Descrivi la situazione di lotta corpo a corpo... (combo a ${activeSteps} passi)`;
+        } else if (duelType === "hybrid") {
+          if (duelHybridRole === "user_magic") {
+            chatInput.placeholder = `Tu usi la magia vs avversario fisico (descrivi la carica nemica)...`;
+          } else {
+            chatInput.placeholder = `Tu combatti fisicamente vs mago con bacchetta (descrivi l'azione di blitz)...`;
+          }
+        }
       } else {
-        chatInput.placeholder = `Descrivi la situazione (fornirò una combo a ${activeSteps} passaggi per ${fieldData.name})...`;
+        if (activeMode === "single") {
+          chatInput.placeholder = `Descrivi l'azione (fornirò la singola mossa migliore per ${fieldData.name})...`;
+        } else {
+          chatInput.placeholder = `Descrivi la situazione (fornirò una combo a ${activeSteps} passaggi per ${fieldData.name})...`;
+        }
       }
     }
 
@@ -30484,7 +30905,21 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
     function renderSuggestionChips() {
       if (!chipsContainer) return;
       const fieldData = CHAT_FIELDS[activeField] || CHAT_FIELDS.duel;
-      chipsContainer.innerHTML = fieldData.chips.map(chip => `
+      let chipsToRender = fieldData.chips;
+
+      if (activeField === "duel") {
+        if (duelType === "physical") {
+          chipsToRender = fieldData.chipsPhysical || fieldData.chips;
+        } else if (duelType === "hybrid") {
+          if (duelHybridRole === "user_magic") {
+            chipsToRender = fieldData.chipsHybridUserMagic || fieldData.chips;
+          } else {
+            chipsToRender = fieldData.chipsHybridEnemyMagic || fieldData.chips;
+          }
+        }
+      }
+
+      chipsContainer.innerHTML = chipsToRender.map(chip => `
         <button type="button" class="chat-chip px-2.5 py-1 rounded-full bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-amber-300 border border-slate-700/80 hover:border-amber-500/40 text-[11px] font-medium transition whitespace-nowrap shrink-0">
           ${chip}
         </button>
@@ -30520,9 +30955,7 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
         activeFieldLabel.innerHTML = `Selezionato: <strong class="text-amber-300">${CHAT_FIELDS[field].name}</strong>`;
       }
 
-      updateInputPlaceholder();
-
-      renderSuggestionChips();
+      updateDuelConfigUI();
     }
 
     fieldPills.forEach(pill => {
@@ -30618,11 +31051,22 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
         ? "⚡ Mossa Singola"
         : `🔗 Combo (${activeSteps} Passi)`;
 
+      let duelTag = "";
+      if (activeField === "duel") {
+        const off = duelOfficial ? "⚖️ Ufficiale" : "🏴 Non Ufficiale";
+        let typ = "🪄 Magico";
+        if (duelType === "physical") typ = "🥊 Fisico";
+        else if (duelType === "hybrid") {
+          typ = duelHybridRole === "user_magic" ? "⚡ Ibrido (Tu Mago)" : "⚡ Ibrido (Tu Fisico)";
+        }
+        duelTag = ` • ${off} • ${typ}`;
+      }
+
       userBubble.innerHTML = `
         <div class="max-w-[85%] p-3 rounded-2xl bg-gradient-to-r from-amber-600 to-amber-700 text-slate-950 font-medium text-xs shadow-md space-y-0.5">
           <div class="text-[10px] font-bold uppercase tracking-wider text-amber-950/90 flex items-center justify-between gap-2 border-b border-amber-950/20 pb-0.5">
-            <span>${CHAT_FIELDS[activeField].icon} ${CHAT_FIELDS[activeField].name}</span>
-            <span class="px-1.5 py-0.2 bg-amber-950/20 rounded font-semibold text-[9px]">${modeTag}</span>
+            <span>${CHAT_FIELDS[activeField].icon} ${CHAT_FIELDS[activeField].name}${duelTag}</span>
+            <span class="px-1.5 py-0.2 bg-amber-950/20 rounded font-semibold text-[9px] shrink-0">${modeTag}</span>
           </div>
           <div class="leading-relaxed text-slate-950 font-semibold pt-0.5">${text.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
         </div>
@@ -30662,8 +31106,16 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       isProcessing = true;
       if (sendBtn) sendBtn.disabled = true;
 
+      const chatOpts = {
+        mode: activeMode,
+        steps: activeSteps,
+        duelOfficial,
+        duelType,
+        duelHybridRole
+      };
+
       appendUserMessage(text);
-      chatHistory.push({ role: "user", text, field: activeField, mode: activeMode, steps: activeSteps });
+      chatHistory.push({ role: "user", text, field: activeField, ...chatOpts });
 
       const loader = appendLoadingBubble();
 
@@ -30673,18 +31125,18 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
 
         if (apiKey) {
           try {
-            const geminiRaw = await callGeminiApi(apiKey, activeField, text, { mode: activeMode, steps: activeSteps });
+            const geminiRaw = await callGeminiApi(apiKey, activeField, text, chatOpts);
             responseHtml = renderAssistantResponseHtml(geminiRaw);
           } catch (apiErr) {
             console.warn("Gemini API call failed, falling back to offline tactical engine:", apiErr);
-            const offlineAdvice = computeTacticalAdvice(activeField, text, { mode: activeMode, steps: activeSteps });
+            const offlineAdvice = computeTacticalAdvice(activeField, text, chatOpts);
             responseHtml = renderAssistantResponseHtml(offlineAdvice);
           }
         } else {
           // Instant offline tactical evaluation
           // Small realistic thinking delay (150ms) for magical immersion
           await new Promise(r => setTimeout(r, 160));
-          const offlineAdvice = computeTacticalAdvice(activeField, text, { mode: activeMode, steps: activeSteps });
+          const offlineAdvice = computeTacticalAdvice(activeField, text, chatOpts);
           responseHtml = renderAssistantResponseHtml(offlineAdvice);
         }
 
@@ -30731,6 +31183,7 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
     // Init UI State & Default Field
     updateModeUI();
     updateStepsUI();
+    updateDuelConfigUI();
     setField("duel");
   }
 
@@ -30743,7 +31196,13 @@ Rispondi in italiano con tono epico, professionale e didattico. Usa elenchi punt
       getActiveMode: () => activeMode,
       setActiveMode: (m) => { activeMode = m; },
       getActiveSteps: () => activeSteps,
-      setActiveSteps: (s) => { activeSteps = s; }
+      setActiveSteps: (s) => { activeSteps = s; },
+      getDuelOfficial: () => duelOfficial,
+      setDuelOfficial: (o) => { duelOfficial = o; },
+      getDuelType: () => duelType,
+      setDuelType: (t) => { duelType = t; },
+      getDuelHybridRole: () => duelHybridRole,
+      setDuelHybridRole: (r) => { duelHybridRole = r; }
     };
   }
 
