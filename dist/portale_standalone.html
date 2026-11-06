@@ -75,6 +75,14 @@
       transform: scale(0.96);
     }
 
+    /* Sticky Header: 100% Solid & Opaque to eliminate bleed-through of scrolling content */
+    header, .site-header {
+      background-color: #020617 !important;
+      opacity: 1 !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+
     .glass-panel {
       background: rgba(15, 23, 42, 0.82);
       backdrop-filter: blur(12px);
@@ -159,7 +167,7 @@
 <body class="min-h-screen text-slate-200 antialiased selection:bg-amber-500 selection:text-slate-950">
 
   <!-- TOP HEADER / NAV -->
-  <header class="sticky top-0 z-40 border-b border-amber-900/30 glass-panel">
+  <header class="sticky top-0 z-40 border-b border-amber-500/20 bg-slate-950 shadow-xl shadow-black/80 site-header">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 via-amber-700 to-amber-950 flex items-center justify-center border border-amber-400/40 shadow-lg shadow-amber-900/40">
