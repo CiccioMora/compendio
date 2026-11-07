@@ -938,7 +938,7 @@
                 num: 2,
                 action: "Attacco Ustionante al Bersaglio a Terra",
                 spellLink: formatEntityLink("Exulcero", "spell", "exulcero") + " o " + formatEntityLink("Incendio", "spell", "incendio"),
-                details: "Mentre l'avversario è steso al suolo e tenta disperatamente di rialzarsi, scaglia <strong>Exulcero (Valenza 4 - Maledictio VI Anno)</strong>: la stoccata provoca bruciature cutanee dolorose e piaghe simili a bruciature di sigaro sul torso del rivale, oppure usa <strong>Incendio (Valenza 1)</strong> per scatenare getti di fiamme che incendiano le vesti costringendolo a rotolare nel panico."
+                details: "Mentre l'avversario è steso al suolo e tenta disperatamente di rialzarsi, scaglia <strong>Exulcero (Valenza 4 - Maledictio VI Anno)</strong>: la stoccata provoca bruciature cutanee dolorose e piaghe simili a bruciature di sigaro sul torso del rivale, oppure usa <strong>Incendio (Valenza 8 - Fuoco)</strong> per scatenare getti di fiamme che incendiano le vesti costringendolo a rotolare nel panico."
               },
               {
                 num: 3,
@@ -947,7 +947,7 @@
                 details: "Approfitta dell'attimo in cui il bersaglio è a terra in preda al bruciore per sferrare un netto <strong>Expelliarmus (Valenza 2)</strong> al polso della mano armata, strappandogli la bacchetta prima che possa tentare una replica."
               }
             ],
-            rationale: "La combinazione di mobilità annullata (Glisseo V6 / Terra) e danno termico immediato (Exulcero V4 o Incendio V1) garantisce che il secondo colpo vada a segno al 100%: un bersaglio steso a terra non ha appoggio per schivare né equilibrio per sostenere un Protego ortogonale."
+            rationale: "La combinazione di mobilità annullata (Glisseo V6 / Terra) e danno termico immediato (Exulcero V4 o Incendio V8) garantisce che il secondo colpo vada a segno al 100%: un bersaglio steso a terra non ha appoggio per schivare né equilibrio per sostenere un Protego ortogonale."
           },
           alternatives: [
             {
@@ -956,7 +956,7 @@
             },
             {
               title: "Piano C (Variante Liquefazione Muscolare: Gambemolli)",
-              desc: `Applica ${formatEntityLink("Locomotor Wibbly", "spell", "locomotor-wibbly")} (V2) per rendere le gambe del rivale come gelatina facendolo crollare al suolo, e subito dopo scaglia ${formatEntityLink("Incendio", "spell", "incendio")} (V1) sul mantello per completare l'obiettivo.`
+              desc: `Applica ${formatEntityLink("Locomotor Wibbly", "spell", "locomotor-wibbly")} (V2) per rendere le gambe del rivale come gelatina facendolo crollare al suolo, e subito dopo scaglia ${formatEntityLink("Incendio", "spell", "incendio")} (V8) sul mantello per completare l'obiettivo.`
             }
           ],
           warnings: reqOfficial
@@ -1153,7 +1153,7 @@
                 num: 1,
                 action: "Attacco Termico Primario",
                 spellLink: formatEntityLink("Exulcero", "spell", "exulcero") + " o " + formatEntityLink("Incendio", "spell", "incendio"),
-                details: "Scaglia <strong>Exulcero (V4)</strong> per causare bruciature e piaghe dolorose istantanee che costringono il rivale a rompere la guardia, o lancia una fiammata con <strong>Incendio (V1)</strong> mirando alla veste per distrarlo con il fuoco."
+                details: "Scaglia <strong>Exulcero (V4)</strong> per causare bruciature e piaghe dolorose istantanee che costringono il rivale a rompere la guardia, o lancia una fiammata con <strong>Incendio (V8 - Elemento Fuoco)</strong> mirando alla veste per distrarlo con il fuoco."
               },
               {
                 num: 2,
@@ -1173,7 +1173,7 @@
           alternatives: [
             {
               title: "Piano B: Fiammata Spinta con Ventus",
-              desc: `Scaglia ${formatEntityLink("Incendio", "spell", "incendio")} (V1) abbinato a un fendente d'aria di ${formatEntityLink("Ventus", "spell", "ventus")} per espandere il raggio termico su un fronte largo.`
+              desc: `Scaglia ${formatEntityLink("Incendio", "spell", "incendio")} (V8) abbinato a un fendente d'aria di ${formatEntityLink("Ventus", "spell", "ventus")} (V5) per espandere il raggio termico su un fronte largo.`
             },
             {
               title: reqOfficial ? "Piano C: Maledizione Eruzioni Cutanee" : "Piano C: Pozione Sputafuoco / Fuoco di Drago",
@@ -1646,7 +1646,7 @@
                 num: 2,
                 action: "Luce e Calore Concentrato",
                 spellLink: formatEntityLink("Lumos Solem", "spell", "lumos-solem") + " o " + formatEntityLink("Incendio", "spell", "incendio"),
-                details: "Emetti un raggio abbagliante di pura luce solare con <strong>Lumos Solem (V2)</strong> o fiamme con <strong>Incendio (V1)</strong> direttamente sui nodi radicali: la pianta ritirerà i viticci all'istante!"
+                details: "Emetti un raggio abbagliante di pura luce solare con <strong>Lumos Solem (V2)</strong> o fiamme con <strong>Incendio (V8)</strong> direttamente sui nodi radicali: la pianta ritirerà i viticci all'istante!"
               }
             ],
             rationale: "Il Tranello del Diavolo prospera nell'ombra buia e umida; la sua fisiologia vegetale è intollerante ai raggi solari concentrati e al calore del fuoco."

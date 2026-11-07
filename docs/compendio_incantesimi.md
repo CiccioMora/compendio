@@ -97,7 +97,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **III Anno** | **Evocazione di Stormo Uccelli (Avis)** | `Avis` | **6** | 4 | Evocazione / Distrazione / Offensivo | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
 | **III Anno** | **Fattura dei Foruncoli (Furunculus)** | `Furunculus` | **3** | 7 | Fattura Offensiva / Debilitante | ⚔️ SÌ | ᚦ Thurisaz (Pos. 3ª) |
 | **III Anno** | **Filtro di Luce Stellare (Lux Perfluo)** | `Lux Perfluo` | **6** | 4 | Manipolazione della Luce / Filtro Anti-Abbaglio | ⛔ NO | ᚲ Kenaz (Pos. 6ª) |
-| **III Anno** | **Incantesimo Anti-Levitazione e Tellurico (Dominusterra)** | `Dominusterra` | **4** | 6 | Gravitazionale / Tellurico | ⚔️ SÌ | ᚨ Ansuz (Pos. 4ª) |
+| **III Anno** | **Incantesimo Anti-Levitazione e Tellurico (Dominusterra)** | `Dominusterra` | **6** | 4 | Gravitazionale / Tellurico | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
 | **III Anno** | **Incantesimo Anti-Molliccio (Riddikulus)** | `Riddikulus` | **2** | 8 | Difensivo / Anti-Non-Esseri | ⛔ NO | ᚢ Uruz (Pos. 2ª) |
 | **III Anno** | **Incantesimo Congelante (Glacius)** | `Glacius` | **9** | 1 | Offensivo / Elementale Freddo | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
 | **III Anno** | **Incantesimo Congelatore del Moto (Immobilus)** | `Immobilus` | **5** | 5 | Cinetica / Difensivo / Disabilitazione | ⚔️ SÌ | ᚱ Raido (Pos. 5ª) |
@@ -120,7 +120,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **III Anno** | **Incantesimo di Movimento Corpi (Mobilicorpus)** | `Mobilicorpus` | **8** | 2 | Locomozione / Levitazione Medica | ⚔️ SÌ | ᚹ Wunjo (Pos. 8ª) |
 | **III Anno** | **Incantesimo di Ostacolo (Impedimenta)** | `Impedimenta` | **1** | 9 | Difensivo / Controllo Cinetico | ⚔️ SÌ | ᚠ Fehu (Pos. 1ª) |
 | **III Anno** | **Incantesimo di Rettifica Trasfigurativa (Reparifarge)** | `Reparifarge` | **5** | 5 | Detrasfigurazione Correttiva | ⛔ NO | ᚱ Raido (Pos. 5ª) |
-| **III Anno** | **Incantesimo di Scavo (Defodio)** | `Defodio` | **4** | 6 | Modificazione Materica / Scavo | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |
+| **III Anno** | **Incantesimo di Scavo (Defodio)** | `Defodio` | **6** | 4 | Modificazione Materica / Scavo | ⛔ NO | ᚲ Kenaz (Pos. 6ª) |
 | **III Anno** | **Trasfigurazione in Coniglio (Lapifors)** | `Lapifors` | **6** | 4 | Trasfigurazione Bivalente | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
 | **III Anno** | **Trasfigurazione in Volatile (Avifors)** | `Avifors` | **9** | 1 | Trasfigurazione Bivalente | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
 | **IV Anno** | **Animazione Draconica (Draconifors)** | `Draconifors` | **5** | 5 | Litotrasfigurazione / Animazione | ⚔️ SÌ | ᚱ Raido (Pos. 5ª) |

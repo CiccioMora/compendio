@@ -1134,15 +1134,15 @@ var SPELLS_DATA = [
     "duelloNote": "Forza al suolo oggetti o nemici sollevati e provoca una vibrazione sismica nel terreno sotto i piedi del nemico.",
     "movimento": "Stoccata perpendicolare diretta verso il basso contro il suolo.",
     "movimentoSvg": "M 75,35 L 75,115 M 50,115 L 100,115",
-    "descrizione": "Riporta violentemente verso la superficie bersagli sospesi a mezz'aria. Puntato direttamente verso la terra produce un impulso sismico ondulatorio che sbilancia gli avversari.",
+    "descrizione": "Riporta violentemente verso la superficie bersagli sospesi a mezz'aria. Puntato direttamente verso la terra produce un impulso sismico ondulatorio che sbilancia gli avversari. La valenza è forzata per canone al numero 6 (Elemento Terra del Codex Arithmantiae, associato alla formula Adultero e alla runa Kenaz).",
     "etimologia": "Dal latino dominus (padrone) e terra (suolo, terraferma).",
-    "valenza": 4,
+    "valenza": 6,
     "sommaLettere": 58,
-    "valenzaOpposta": 6,
+    "valenzaOpposta": 4,
     "maxRipetizioni": 2,
-    "figuraGeometrica": "Quadrato (Risoluzione / Immanenza)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 58 ridotta a 4). Valenza opposta di simmetria: 6. Figura geometrica operativa: Quadrato (Risoluzione / Immanenza). Limite di reiterazione efficace: 2 volte.",
-    "runeAssociate": "ᚨ Ansuz (Pos. 4ª)"
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica forzata a 6 (Elemento Terra nel Codex Arithmantiae, associato alla formula Adultero e alla runa Kenaz). Valenza opposta di simmetria: 4. Figura geometrica operativa: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 2 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª)"
   },
   {
     "id": "riddikulus",
@@ -1354,14 +1354,14 @@ var SPELLS_DATA = [
     "duelloNote": "Utilizzabile in duello: genera fiammate e barriere di fuoco, o un'esplosione fiammeggiante con rincorsa. Ottimo per liberarsi da piante aggressive come il Tranello del Diavolo.",
     "movimento": "Gesto curvo ascendente che richiama la sagoma sinuosa di una fiamma viva.",
     "movimentoSvg": "M 75,120 C 50,100 45,70 65,55 C 65,40 75,25 75,25 C 75,25 85,40 85,55 C 105,70 100,100 75,120 Z",
-    "descrizione": "Emette una fiammata o proietta lingue di fuoco ardente dalla bacchetta. Impiegato sia nella vita quotidiana sia nel duello difensivo ed offensivo. Contromisure: Aguamenti, Protego, Finite Incantatem.",
+    "descrizione": "Emette una fiammata o proietta lingue di fuoco ardente dalla bacchetta. Impiegato sia nella vita quotidiana sia nel duello difensivo ed offensivo. La valenza è forzata per canone al numero 8 (Elemento Fuoco del Codex Arithmantiae, associato alla formula Plasma e alla runa Wunjo). Contromisure: Aguamenti, Protego, Finite Incantatem.",
     "etimologia": "Dal latino incendere (appiccare fuoco, infiammare).",
     "valenza": 8,
     "sommaLettere": 46,
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica forzata a 8 (Elemento Fuoco nel Codex Arithmantiae, formula Plasma e runa Dagaz). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare. Limite di reiterazione efficace: 8 volte.",
+    "noteAritmantiche": "Valenza Magica forzata a 8 (Elemento Fuoco nel Codex Arithmantiae, associato alla formula Plasma e alla runa Wunjo). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare. Limite di reiterazione efficace: 8 volte.",
     "runeAssociate": "ᚹ Wunjo (Pos. 8ª)"
   },
   {
@@ -1376,7 +1376,7 @@ var SPELLS_DATA = [
     "duelloNote": "Utilizzabile in duello per deflettere proiettili leggeri, sbilanciare l'avversario con violente raffiche d'aria o disperdere nubi tossiche e coltri fumogene.",
     "movimento": "Spirale orizzontale oraria tracciata nell'aria con fendente terminale proteso in avanti.",
     "movimentoSvg": "M 45,75 C 45,45 105,45 105,75 C 105,105 60,105 60,80 L 125,50",
-    "descrizione": "Sortilegio elementale dell'Aria che sprigiona un turbine d'aria impetuoso dalla punta della bacchetta. La valenza è forzata per canone al numero 5 (Elemento Aria del Codex Arithmantiae, associato alla formula Finge e alla runa Hagalaz).",
+    "descrizione": "Sortilegio elementale dell'Aria che sprigiona un turbine d'aria impetuoso dalla punta della bacchetta. La valenza è forzata per canone al numero 5 (Elemento Aria del Codex Arithmantiae, associato alla formula Finge e alla runa Raido).",
     "etimologia": "Dal latino ventus (vento, soffio d'aria, brezza).",
     "valenza": 5,
     "sommaLettere": 20,
@@ -1384,7 +1384,7 @@ var SPELLS_DATA = [
     "maxRipetizioni": 5,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Equilibrio)",
     "runeAssociate": "ᚱ Raido (Pos. 5ª)",
-    "noteAritmantiche": "Valenza Magica forzata a 5 (Elemento Aria nel Codex Arithmantiae, associato alla formula Finge e alla runa Hagalaz). Valenza opposta di simmetria: 5 (simmetria speculare pura). Figura operativa per Signo: Pentagono regolare."
+    "noteAritmantiche": "Valenza Magica forzata a 5 (Elemento Aria nel Codex Arithmantiae, associato alla formula Finge e alla runa Raido). Valenza opposta di simmetria: 5 (simmetria speculare pura). Figura operativa per Signo: Pentagono regolare."
   },
   {
     "id": "orbis",
@@ -1508,7 +1508,7 @@ var SPELLS_DATA = [
     "duelloNote": "Utilizzabile in duello per estinguere fiamme ordinarie o magiche minori, accecare l'avversario con un getto d'acqua pressurizzato o contrastare creature ignee.",
     "movimento": "Movimento a onda fluida da sinistra verso destra terminante con puntamento deciso della punta.",
     "movimentoSvg": "M 35,85 C 55,65 70,105 95,75 L 125,75",
-    "descrizione": "Sortilegio elementale dell'Acqua che proietta un getto d'acqua limpida e potabile dalla punta della bacchetta. La valenza è forzata per canone al numero 1 (Elemento Acqua del Codex Arithmantiae, associato alla formula Coerceo e alla runa Laguz).",
+    "descrizione": "Sortilegio elementale dell'Acqua che proietta un getto d'acqua limpida e potabile dalla punta della bacchetta. La valenza è forzata per canone al numero 1 (Elemento Acqua del Codex Arithmantiae, associato alla formula Coerceo e alla runa Fehu).",
     "etimologia": "Composto dal latino aqua (acqua) e augmentum (accrescimento).",
     "valenza": 1,
     "sommaLettere": 37,
@@ -1516,7 +1516,7 @@ var SPELLS_DATA = [
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Unità / Elemento Acqua)",
     "runeAssociate": "ᚠ Fehu (Pos. 1ª)",
-    "noteAritmantiche": "Valenza Magica forzata a 1 (Elemento Acqua nel Codex Arithmantiae, associato alla formula Coerceo e alla runa Laguz). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza."
+    "noteAritmantiche": "Valenza Magica forzata a 1 (Elemento Acqua nel Codex Arithmantiae, associato alla formula Coerceo e alla runa Fehu). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua)."
   },
   {
     "id": "fulgari",
@@ -1640,15 +1640,15 @@ var SPELLS_DATA = [
     "duelloNote": "Utilizzato dagli Spezzaincantesimi per sbancare roccia, terra friabile e aprire gallerie.",
     "movimento": "Tracciato continuo di una lettera 'e' in corsivo puntata verso il terreno.",
     "movimentoSvg": "M 60,85 C 45,85 45,55 75,55 C 95,55 95,85 60,85 C 60,110 85,110 100,100",
-    "descrizione": "Trasforma l'energia della bacchetta in una scavatrice magica, intagliando o sbancando porzioni di terra e roccia senza richiedere alcuno sforzo manuale.",
+    "descrizione": "Trasforma l'energia della bacchetta in una scavatrice magica, intagliando o sbancando porzioni di terra e roccia senza richiedere alcuno sforzo manuale. La valenza è forzata per canone al numero 6 (Elemento Terra del Codex Arithmantiae, associato alla formula Adultero e alla runa Kenaz).",
     "etimologia": "Dal latino defodio (scavare, sventrare la terra, estrarre).",
-    "valenza": 4,
+    "valenza": 6,
     "sommaLettere": 40,
-    "valenzaOpposta": 6,
+    "valenzaOpposta": 4,
     "maxRipetizioni": 4,
-    "figuraGeometrica": "Quadrato (Risoluzione / Immanenza)",
-    "noteAritmantiche": "Valenza Magica 4 (somma pitagorica 40 ridotta a 4). Valenza opposta di simmetria: 6. Figura geometrica operativa: Quadrato (Risoluzione / Immanenza). Limite di reiterazione efficace: 4 volte.",
-    "runeAssociate": "ᚨ Ansuz (Pos. 4ª)"
+    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
+    "noteAritmantiche": "Valenza Magica forzata a 6 (Elemento Terra nel Codex Arithmantiae, associato alla formula Adultero e alla runa Kenaz). Valenza opposta di simmetria: 4. Figura geometrica operativa: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 4 volte.",
+    "runeAssociate": "ᚲ Kenaz (Pos. 6ª)"
   },
   {
     "id": "lapifors",
@@ -5782,7 +5782,7 @@ var SPELLS_DATA = [
     "valenzaOpposta": 2,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Ottagono regolare (Elemento Fuoco / Infinito)",
-    "noteAritmantiche": "Valenza Magica 8 (somma pitagorica 17 ridotta a 8). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
+    "noteAritmantiche": "Valenza Magica forzata a 8 (Elemento Fuoco nel Codex Arithmantiae, associato alla formula Incendio e alla runa Wunjo). Valenza opposta di simmetria: 2. Figura operativa per Signo: Ottagono regolare (Elemento Fuoco / Infinito). Limite di reiterazione efficace: 1 volte.",
     "runeAssociate": "ᚹ Wunjo (Pos. 8ª)"
   },
   {
@@ -5804,7 +5804,7 @@ var SPELLS_DATA = [
     "valenzaOpposta": 9,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Circonferenza (Elemento Acqua)",
-    "noteAritmantiche": "Valenza Magica 1 (somma pitagorica 37 ridotta a 1). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
+    "noteAritmantiche": "Valenza Magica forzata a 1 (Elemento Acqua nel Codex Arithmantiae, associato alla formula Aguamenti e alla runa Fehu). Valenza opposta di simmetria: 9. Figura operativa per Signo: Circonferenza (Elemento Acqua). Limite di reiterazione efficace: 1 volte.",
     "runeAssociate": "ᚠ Fehu (Pos. 1ª)"
   },
   {
@@ -5826,7 +5826,7 @@ var SPELLS_DATA = [
     "valenzaOpposta": 5,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Pentagono regolare (Elemento Aria / Etere)",
-    "noteAritmantiche": "Valenza Magica 5 (somma pitagorica 32 ridotta a 5). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
+    "noteAritmantiche": "Valenza Magica forzata a 5 (Elemento Aria nel Codex Arithmantiae, associato alla formula Ventus e alla runa Raido). Valenza opposta di simmetria: 5. Figura operativa per Signo: Pentagono regolare (Elemento Aria / Etere). Limite di reiterazione efficace: 1 volte.",
     "runeAssociate": "ᚱ Raido (Pos. 5ª)"
   },
   {
@@ -5848,7 +5848,7 @@ var SPELLS_DATA = [
     "valenzaOpposta": 4,
     "maxRipetizioni": 1,
     "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 33 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
+    "noteAritmantiche": "Valenza Magica forzata a 6 (Elemento Terra nel Codex Arithmantiae, associato alle formule Dominusterra e Defodio e alla runa Kenaz). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 1 volte.",
     "runeAssociate": "ᚲ Kenaz (Pos. 6ª)"
   },
   {
