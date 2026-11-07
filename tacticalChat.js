@@ -1048,7 +1048,7 @@
             },
             {
               title: "Piano C: Annullamento Aritmantico di Simmetria",
-              desc: `Se l'avversario mantiene un Protego a Valenza 2 (Angolo/Dualità), scaglia un incantesimo ad altissima risonanza opposta di Valenza 8 come ${formatEntityLink("Wunjo", "rune", "runa-wunjo")} o ${formatEntityLink("Plasma", "spell", "plasma")} (Elemento Fuoco/Ottagono) per frantumare la matrice geometrica della cupola.`
+              desc: `Se l'avversario mantiene un Protego a Valenza 7 (Ettagono / Massima Opposizione Difensiva), scaglia un incantesimo o runa ad altissima risonanza opposta di Valenza 3 come ${formatEntityLink("Thurisaz", "rune", "runa-thurisaz")} o ${formatEntityLink("Defodio", "spell", "defodio")} (Triangolo / Perforazione) per frantumare la matrice geometrica della cupola.`
             }
           ],
           warnings: "Regola di Duello: Expelliarmus, Glisseo, Avis e Oppugno sono pienamente abilitati in duello ufficiale (⚔️ SÌ). Mantieni sempre la linea di visuale libera e fai attenzione a non colpire giudici o spettatori con detriti."
@@ -1255,10 +1255,10 @@
                 num: 3,
                 action: "Schermo di Barriera Immediato",
                 spellLink: formatEntityLink("Protego", "spell", "protego"),
-                details: "Non rimanere fermo dopo la dissoluzione: alza immediatamente un <strong>Protego (V2)</strong> per impedire che l'avversario approfitti della finestra di vulnerabilità."
+                details: "Non rimanere fermo dopo la dissoluzione: alza immediatamente un <strong>Protego (V7)</strong> per impedire che l'avversario approfitti della finestra di vulnerabilità."
               }
             ],
-            rationale: "Finite Incantatem opera sulla Valenza 6 (Esagono di Terra/Stabilità), che ridistribuisce e disperde la coerenza magica delle trame eteree avversarie."
+            rationale: "Finite Incantatem e Protego operano sulla Valenza 7 (Ettagono regolare / Massima Opposizione Difensiva secondo la dottrina di Bridget Wenlock), che ridistribuisce e neutralizza la coerenza magica delle trame eteree avversarie."
           },
           alternatives: [
             {

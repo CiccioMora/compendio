@@ -68,7 +68,7 @@ Secondo il *Codex Arithmantiae* (Liber Primus, Cap. IV), ogni formula magica rac
 | **I Anno** | **Incantesimo di Taglio (Diffindo)** | `Diffindo` | **4** | 6 | Offensivo / Utilità / Taglio | ⚔️ SÌ | ᚨ Ansuz (Pos. 4ª) |
 | **I Anno** | **Maleficio di Respinta (Flipendo)** | `Flipendo` | **9** | 1 | Offensivo / Respinta | ⚔️ SÌ | ᚺ Hagalaz (Pos. 9ª) |
 | **I Anno** | **Schiantesimo (Stupeficium)** | `Stupeficium` | **7** | 3 | Offensivo / Schiantesimo | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
-| **I Anno** | **Sortilegio Scudo (Protego)** | `Protego` | **6** | 4 | Difensivo | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
+| **I Anno** | **Sortilegio Scudo (Protego)** | `Protego` | **7** | 3 | Difensivo | ⚔️ SÌ | ᚷ Gebo (Pos. 7ª) |
 | **I Anno** | **Sortilegio di Scintille Verdi (Verdimillious)** | `Verdimillious` | **6** | 4 | Offensivo / Tattico / Segnalazione | ⚔️ SÌ | ᚲ Kenaz (Pos. 6ª) |
 | **I Anno** | **Trasfigurazione Materica di Sostanza (Muto)** | `Muto` | **6** | 4 | Trasfigurazione Inanimata di II Livello | ⛔ NO | ᚲ Kenaz (Pos. 6ª) |
 | **I Anno** | **Trasfigurazione Morfologica di Forma (Transfiguro)** | `Transfiguro` | **4** | 6 | Trasfigurazione Inanimata di I Livello | ⛔ NO | ᚨ Ansuz (Pos. 4ª) |

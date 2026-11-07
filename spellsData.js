@@ -498,13 +498,13 @@ var SPELLS_DATA = [
     "movimentoSvg": "M 30,110 C 40,40 110,40 120,110",
     "descrizione": "Genera una barriera translucida invisibile che riflette verso l'esterno gli incantesimi scagliati contro l'incantatore e blocca gli attacchi fisici. Reso celebre nel 1484 dal duello tra Hannah Cockleford e il tiranno Earl di Paunchley a Poppleton.",
     "etimologia": "Dal verbo latino protegere (riparare, difendere, fare da scudo).",
-    "valenza": 6,
+    "valenza": 7,
     "sommaLettere": 42,
-    "valenzaOpposta": 4,
-    "maxRipetizioni": 6,
-    "figuraGeometrica": "Esagono regolare (Elemento Terra / Equilibrio)",
-    "noteAritmantiche": "Valenza Magica 6 (somma pitagorica 42 ridotta a 6). Valenza opposta di simmetria: 4. Figura operativa per Signo: Esagono regolare (Elemento Terra / Equilibrio). Limite di reiterazione efficace: 6 volte.",
-    "runeAssociate": "ᚲ Kenaz (Pos. 6ª)"
+    "valenzaOpposta": 3,
+    "maxRipetizioni": 7,
+    "figuraGeometrica": "Ettagono regolare (Opposizione / Massima Energia Difensiva)",
+    "noteAritmantiche": "Valenza Magica forzata a 7 in accordo con la dottrina di Bridget Wenlock del Codex Arithmantiae (il 7 è il numero sacro della massima energia magica, della difesa per eccellenza e dell'opposizione attiva, come per Finite Incantatem). Somma pitagorica convenzionale: P=7 + R=9 + O=6 + T=2 + E=5 + G=7 + O=6 = 42 ➔ 6 (corrispondente all'Archetipo 6 'Il Protego' per dedizione e scudo protettivo). Valenza opposta di simmetria: 3 (Thurisaz / Triangolo). Figura operativa per Signo: Ettagono regolare. Limite di reiterazione efficace: 7 volte.",
+    "runeAssociate": "ᚷ Gebo (Pos. 7ª)"
   },
   {
     "id": "verdimillious",
